@@ -16,6 +16,4 @@
   
   - 完善学习笔记。
 
-- 在本机运行 [openEuler RISC-V 23.03 自动化测试](https://github.com/brsf11/Tarsier-Internship/blob/main/Testing/0331-23.03testing/README.md)。
-
-
+- 以熟悉工作流为目的，运行 [openEuler RISC-V 23.03 自动化测试](https://github.com/brsf11/Tarsier-Internship/blob/main/Testing/0331-23.03testing/README.md)。
