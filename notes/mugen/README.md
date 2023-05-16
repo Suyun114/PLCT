@@ -119,7 +119,7 @@ mugen 提供了一个调用 QEMU 进行虚拟机测试的脚本 `qemu_test.py`�
 
 用启动脚本启动虚拟机，使用 Git 克隆 mugen 的 repo 到虚拟机下的一个目录（如 `/root/mugen`），再使用 `dep_install.sh` 脚本安装依赖。如果有需要，可以根据具体情况对虚拟机进行一些修改，如 [openEuler RISC-V 23.03 自动化测试说明](https://github.com/brsf11/Tarsier-Internship/blob/main/Testing/0331-23.03testing/README.md) 中提到的情况。
 
-将虚拟机准备完成后，使用 `poweroff` 命令关闭虚拟机，将 `.qcow2` 文件复制一份，起一个诸如 `mugen_ready.qcow2` 之类的名字。
+将虚拟机准备完成后，使用 `poweroff` 命令关闭虚拟机，记下 `.qcow2` 镜像文件的名字。
 
 ### 准备物理机
 
