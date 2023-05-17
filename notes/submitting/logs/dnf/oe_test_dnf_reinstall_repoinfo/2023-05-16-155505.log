@@ -1,0 +1,377 @@
++ source common/common_dnf.sh
+++ source /root/mugen/libs/locallibs/common_lib.sh
++++ python3 --version
++++ '[' 0 -eq 0 ']'
++++ source /root/mugen/libs/locallibs/common_lib_python.sh
++ main
+++ type -t post_test
++ '[' -n function ']'
++ trap post_test EXIT INT HUP TERM
++ rpm -qa
++ grep expect
+++ type -t config_params
++ '[' -n '' ']'
+++ type -t pre_test
++ '[' -n function ']'
++ pre_test
++ LOG_INFO 'Start to prepare the test environment.'
++ message='Start to prepare the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to prepare the test environment.'
+Tue May 16 15:55:07 2023 - INFO  - Start to prepare the test environment.
++ deploy_env
++ OLD_LANG=en_US.UTF-8
++ export LANG=en_US.UTF-8
++ LANG=en_US.UTF-8
++ DNF_INSTALL tree
++ pkgs=tree
++ node=1
++ '[' -z '' ']'
++ tmpfile=
+++ python3 /root/mugen/libs/locallibs/rpm_manage.py install --pkgs tree --node 1 --tempfile ''
++ tmpfile2='Warning: failed loading '\''/etc/yum.repos.d/openEuler.repo'\'', skipping.
+Error: There are no enabled repositories in "/etc/yum.repos.d", "/etc/yum/repos.d", "/etc/distro.repos.d".'
++ '[' -z '' ']'
++ tmpfile='Warning: failed loading '\''/etc/yum.repos.d/openEuler.repo'\'', skipping.
+Error: There are no enabled repositories in "/etc/yum.repos.d", "/etc/yum/repos.d", "/etc/distro.repos.d".'
++ LOG_INFO 'Finish preparing the test environment.'
++ message='Finish preparing the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Finish preparing the test environment.'
+Tue May 16 15:55:20 2023 - INFO  - Finish preparing the test environment.
+++ type -t run_test
++ '[' -n function ']'
++ run_test
++ LOG_INFO 'Start to run test.'
++ message='Start to run test.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to run test.'
+Tue May 16 15:55:20 2023 - INFO  - Start to run test.
++ dnf -y reinstall tree
++ grep Reinstalled
+Warning: failed loading '/etc/yum.repos.d/openEuler.repo', skipping.
+Error: There are no enabled repositories in "/etc/yum.repos.d", "/etc/yum/repos.d", "/etc/distro.repos.d".
++ CHECK_RESULT 1
++ actual_result=1
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 0 -eq 0 ']'
++ test 1x '!=' 0x
++ test -n ''
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_dnf_reinstall_repoinfo.sh line 32'
++ message='oe_test_dnf_reinstall_repoinfo.sh line 32'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_dnf_reinstall_repoinfo.sh line 32'
+Tue May 16 15:55:23 2023 - ERROR - oe_test_dnf_reinstall_repoinfo.sh line 32
++ '[' 0 -eq 1 ']'
++ return 0
++ rpm -q tree
++ grep tree
+package tree is not installed
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ dnf remove -y tree
++ grep Removed
+Warning: failed loading '/etc/yum.repos.d/openEuler.repo', skipping.
+No packages marked for removal.
++ CHECK_RESULT 1
++ actual_result=1
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 0 -eq 0 ']'
++ test 1x '!=' 0x
++ test -n ''
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_dnf_reinstall_repoinfo.sh line 36'
++ message='oe_test_dnf_reinstall_repoinfo.sh line 36'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_dnf_reinstall_repoinfo.sh line 36'
+Tue May 16 15:55:27 2023 - ERROR - oe_test_dnf_reinstall_repoinfo.sh line 36
++ '[' 0 -eq 1 ']'
++ return 0
++ dnf reinstall -y tree
++ grep 'Package tree available, but not installed'
++ CHECK_RESULT 1
++ actual_result=1
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 0 -eq 0 ']'
++ test 1x '!=' 0x
++ test -n ''
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_dnf_reinstall_repoinfo.sh line 38'
++ message='oe_test_dnf_reinstall_repoinfo.sh line 38'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_dnf_reinstall_repoinfo.sh line 38'
+Tue May 16 15:55:30 2023 - ERROR - oe_test_dnf_reinstall_repoinfo.sh line 38
++ '[' 0 -eq 1 ']'
++ return 0
++ dnf --repo=mainline repolist
++ grep mainline
+Warning: failed loading '/etc/yum.repos.d/openEuler.repo', skipping.
+Error: Unknown repo: 'mainline'
++ CHECK_RESULT 1
++ actual_result=1
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 0 -eq 0 ']'
++ test 1x '!=' 0x
++ test -n ''
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_dnf_reinstall_repoinfo.sh line 40'
++ message='oe_test_dnf_reinstall_repoinfo.sh line 40'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_dnf_reinstall_repoinfo.sh line 40'
+Tue May 16 15:55:33 2023 - ERROR - oe_test_dnf_reinstall_repoinfo.sh line 40
++ '[' 0 -eq 1 ']'
++ return 0
+++ dnf --repo=mainline repolist
+++ wc -l
+Warning: failed loading '/etc/yum.repos.d/openEuler.repo', skipping.
+Error: Unknown repo: 'mainline'
++ ret=0
++ CHECK_RESULT 0 2 0
++ actual_result=0
++ expect_result=2
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 2x
++ test -n ''
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_dnf_reinstall_repoinfo.sh line 42'
++ message='oe_test_dnf_reinstall_repoinfo.sh line 42'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_dnf_reinstall_repoinfo.sh line 42'
+Tue May 16 15:55:36 2023 - ERROR - oe_test_dnf_reinstall_repoinfo.sh line 42
++ '[' 0 -eq 1 ']'
++ return 0
++ dnf --repoid=mainline repolist
++ grep mainline
+Warning: failed loading '/etc/yum.repos.d/openEuler.repo', skipping.
+Error: Unknown repo: 'mainline'
++ CHECK_RESULT 1
++ actual_result=1
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 0 -eq 0 ']'
++ test 1x '!=' 0x
++ test -n ''
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_dnf_reinstall_repoinfo.sh line 44'
++ message='oe_test_dnf_reinstall_repoinfo.sh line 44'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_dnf_reinstall_repoinfo.sh line 44'
+Tue May 16 15:55:39 2023 - ERROR - oe_test_dnf_reinstall_repoinfo.sh line 44
++ '[' 0 -eq 1 ']'
++ return 0
++ dnf repoinfo
++ grep Repo-id
+Warning: failed loading '/etc/yum.repos.d/openEuler.repo', skipping.
+No repositories available
++ CHECK_RESULT 1
++ actual_result=1
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 0 -eq 0 ']'
++ test 1x '!=' 0x
++ test -n ''
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_dnf_reinstall_repoinfo.sh line 46'
++ message='oe_test_dnf_reinstall_repoinfo.sh line 46'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_dnf_reinstall_repoinfo.sh line 46'
+Tue May 16 15:55:42 2023 - ERROR - oe_test_dnf_reinstall_repoinfo.sh line 46
++ '[' 0 -eq 1 ']'
++ return 0
++ dnf repolist
++ grep 'repo id'
+Warning: failed loading '/etc/yum.repos.d/openEuler.repo', skipping.
+No repositories available
++ CHECK_RESULT 1
++ actual_result=1
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 0 -eq 0 ']'
++ test 1x '!=' 0x
++ test -n ''
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_dnf_reinstall_repoinfo.sh line 48'
++ message='oe_test_dnf_reinstall_repoinfo.sh line 48'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_dnf_reinstall_repoinfo.sh line 48'
+Tue May 16 15:55:46 2023 - ERROR - oe_test_dnf_reinstall_repoinfo.sh line 48
++ '[' 0 -eq 1 ']'
++ return 0
++ dnf repoquery tree
++ grep tree
+Warning: failed loading '/etc/yum.repos.d/openEuler.repo', skipping.
++ CHECK_RESULT 1
++ actual_result=1
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 0 -eq 0 ']'
++ test 1x '!=' 0x
++ test -n ''
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_dnf_reinstall_repoinfo.sh line 50'
++ message='oe_test_dnf_reinstall_repoinfo.sh line 50'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_dnf_reinstall_repoinfo.sh line 50'
+Tue May 16 15:55:49 2023 - ERROR - oe_test_dnf_reinstall_repoinfo.sh line 50
++ '[' 0 -eq 1 ']'
++ return 0
++ dnf repoquery -all
++ grep /usr/bin/tree
+Warning: failed loading '/etc/yum.repos.d/openEuler.repo', skipping.
++ CHECK_RESULT 1
++ actual_result=1
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 0 -eq 0 ']'
++ test 1x '!=' 0x
++ test -n ''
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_dnf_reinstall_repoinfo.sh line 52'
++ message='oe_test_dnf_reinstall_repoinfo.sh line 52'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_dnf_reinstall_repoinfo.sh line 52'
+Tue May 16 15:55:53 2023 - ERROR - oe_test_dnf_reinstall_repoinfo.sh line 52
++ '[' 0 -eq 1 ']'
++ return 0
++ dnf -y install sysstat
++ rpm -q sysstat
++ grep sysstat
+package sysstat is not installed
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ dnf search vim
++ grep vim-enhanced
+Warning: failed loading '/etc/yum.repos.d/openEuler.repo', skipping.
+Warning: failed loading '/etc/yum.repos.d/openEuler.repo', skipping.
+Error: There are no enabled repositories in "/etc/yum.repos.d", "/etc/yum/repos.d", "/etc/distro.repos.d".
++ CHECK_RESULT 1
++ actual_result=1
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 0 -eq 0 ']'
++ test 1x '!=' 0x
++ test -n ''
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_dnf_reinstall_repoinfo.sh line 57'
++ message='oe_test_dnf_reinstall_repoinfo.sh line 57'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_dnf_reinstall_repoinfo.sh line 57'
+Tue May 16 15:55:56 2023 - ERROR - oe_test_dnf_reinstall_repoinfo.sh line 57
++ '[' 0 -eq 1 ']'
++ return 0
++ dnf update-minimal --assumeno
++ grep 'Complete!'
++ CHECK_RESULT 1
++ actual_result=1
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 0 -eq 0 ']'
++ test 1x '!=' 0x
++ test -n ''
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_dnf_reinstall_repoinfo.sh line 59'
++ message='oe_test_dnf_reinstall_repoinfo.sh line 59'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_dnf_reinstall_repoinfo.sh line 59'
+Tue May 16 15:56:00 2023 - ERROR - oe_test_dnf_reinstall_repoinfo.sh line 59
++ '[' 0 -eq 1 ']'
++ return 0
++ dnf --version
++ grep -B 1 dnf
+4.14.0
+  Installed: dnf-0:4.14.0-13.oe2303.noarch at Fri 31 Mar 2023 08:38:21 AM GMT
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ LOG_INFO 'End of the test.'
++ message='End of the test.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End of the test.'
+Tue May 16 15:56:02 2023 - INFO  - End of the test.
++ CASE_RESULT 0
++ case_re=0
++ test -z 12
++ test 12 -gt 0
++ LOG_ERROR 'failed to execute the case.'
++ message='failed to execute the case.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'failed to execute the case.'
+Tue May 16 15:56:03 2023 - ERROR - failed to execute the case.
++ exit 12
++ post_test
++ LOG_INFO 'Start to restore the test environment.'
++ message='Start to restore the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to restore the test environment.'
+Tue May 16 15:56:03 2023 - INFO  - Start to restore the test environment.
++ clear_env
++ export LANG=en_US.UTF-8
++ LANG=en_US.UTF-8
++ DNF_REMOVE 1 'tree sysstat'
++ node=1
++ pkg_list='tree sysstat'
++ mode=0
++ [[ -z Warning: failed loading '/etc/yum.repos.d/openEuler.repo', skipping.
+Error: There are no enabled repositories in "/etc/yum.repos.d", "/etc/yum/repos.d", "/etc/distro.repos.d". ]]
++ '[' 0 -ne 0 ']'
++ '[' 1 == 0 ']'
++ python3 /root/mugen/libs/locallibs/rpm_manage.py remove --node 1 --pkgs 'tree sysstat' --tempfile 'Warning: failed loading '\''/etc/yum.repos.d/openEuler.repo'\'', skipping.
+Error: There are no enabled repositories in "/etc/yum.repos.d", "/etc/yum/repos.d", "/etc/distro.repos.d".'
+Traceback (most recent call last):
+  File "/root/mugen/libs/locallibs/rpm_manage.py", line 181, in <module>
+    exitcode = rpm_remove(args.node, args.pkgs, args.tempfile)
+  File "/root/mugen/libs/locallibs/rpm_manage.py", line 152, in rpm_remove
+    with open(tmpfile, "r") as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'Warning: failed loading \'/etc/yum.repos.d/openEuler.repo\', skipping.\nError: There are no enabled repositories in "/etc/yum.repos.d", "/etc/yum/repos.d", "/etc/distro.repos.d".'
++ '[' 0 -ne 0 ']'
++ LOG_INFO 'Finish restoring the test environment.'
++ message='Finish restoring the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Finish restoring the test environment.'
+Tue May 16 15:56:06 2023 - INFO  - Finish restoring the test environment.

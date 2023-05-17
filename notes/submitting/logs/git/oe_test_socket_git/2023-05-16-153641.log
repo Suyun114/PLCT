@@ -1,0 +1,241 @@
++ source ../common/common_lib.sh
+++ source /root/mugen/libs/locallibs/common_lib.sh
++++ python3 --version
++++ '[' 0 -eq 0 ']'
++++ source /root/mugen/libs/locallibs/common_lib_python.sh
++ main
+++ type -t post_test
++ '[' -n function ']'
++ trap post_test EXIT INT HUP TERM
++ rpm -qa
++ grep expect
+++ type -t config_params
++ '[' -n '' ']'
+++ type -t pre_test
++ '[' -n function ']'
++ pre_test
++ LOG_INFO 'Start environmental preparation.'
++ message='Start environmental preparation.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start environmental preparation.'
+Tue May 16 15:36:44 2023 - INFO  - Start environmental preparation.
++ DNF_INSTALL git-daemon
++ pkgs=git-daemon
++ node=1
++ '[' -z '' ']'
++ tmpfile=
+++ python3 /root/mugen/libs/locallibs/rpm_manage.py install --pkgs git-daemon --node 1 --tempfile ''
++ tmpfile2=/tmp/tmp_je052g4
++ '[' -z '' ']'
++ tmpfile=/tmp/tmp_je052g4
++ LOG_INFO 'End of environmental preparation!'
++ message='End of environmental preparation!'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End of environmental preparation!'
+Tue May 16 15:37:21 2023 - INFO  - End of environmental preparation!
+++ type -t run_test
++ '[' -n function ']'
++ run_test
++ LOG_INFO 'Start to run test.'
++ message='Start to run test.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to run test.'
+Tue May 16 15:37:21 2023 - INFO  - Start to run test.
++ test_execution git.socket
++ service=git.socket
+++ date '+%Y-%m-%d %T'
++ log_time='2023-05-16 15:37:21'
++ test_restart git.socket
++ service=git.socket
++ systemctl restart git.socket
++ CHECK_RESULT 0 0 0 'git.socket restart failed'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='git.socket restart failed'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ SLEEP_WAIT 5
++ wait_time=5
++ cmd=
++ mode=1
++ python3 /root/mugen/libs/locallibs/sleep_wait.py --time 5 --cmd '' --mode 1
++ systemctl status git.socket
++ grep 'Active: active'
+     Active: active (listening) since Tue 2023-05-16 15:37:22 CST; 5s ago
++ CHECK_RESULT 0 0 0 'git.socket restart failed'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='git.socket restart failed'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ systemctl stop git.socket
++ CHECK_RESULT 0 0 0 'git.socket stop failed'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='git.socket stop failed'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ SLEEP_WAIT 5
++ wait_time=5
++ cmd=
++ mode=1
++ python3 /root/mugen/libs/locallibs/sleep_wait.py --time 5 --cmd '' --mode 1
++ systemctl status git.socket
++ grep 'Active: inactive'
+     Active: inactive (dead)
++ CHECK_RESULT 0 0 0 'git.socket stop failed'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='git.socket stop failed'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ systemctl start git.socket
++ CHECK_RESULT 0 0 0 'git.socket start failed'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='git.socket start failed'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ SLEEP_WAIT 5
++ wait_time=5
++ cmd=
++ mode=1
++ python3 /root/mugen/libs/locallibs/sleep_wait.py --time 5 --cmd '' --mode 1
++ systemctl status git.socket
++ grep 'Active: active'
+     Active: active (listening) since Tue 2023-05-16 15:37:34 CST; 5s ago
++ CHECK_RESULT 0 0 0 'git.socket start failed'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='git.socket start failed'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ test_enabled git.socket
++ service=git.socket
+++ systemctl is-enabled git.socket
++ state=disabled
++ '[' disabled == enabled ']'
++ '[' disabled == disabled ']'
+++ grep 'Created symlink'
+++ systemctl enable git.socket
+++ awk '{print $3}'
++ symlink_file=/etc/systemd/system/sockets.target.wants/git.socket
++ find /etc/systemd/system/sockets.target.wants/git.socket
+/etc/systemd/system/sockets.target.wants/git.socket
++ CHECK_RESULT 0 0 0 'git.socket enable failed'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='git.socket enable failed'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ systemctl disable git.socket
+Removed /etc/systemd/system/sockets.target.wants/git.socket.
++ find /etc/systemd/system/sockets.target.wants/git.socket
+find: ‘/etc/systemd/system/sockets.target.wants/git.socket’: No such file or directory
++ CHECK_RESULT 1 0 1 'git.socket disable failed'
++ actual_result=1
++ expect_result=0
++ mode=1
++ error_log='git.socket disable failed'
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 1 -eq 0 ']'
++ test 1x == 0x
++ return 0
++ journalctl --since '2023-05-16 15:37:21' -u git.socket
++ grep -i 'fail\|error'
++ grep -v -i 'DEBUG\|INFO\|WARNING'
++ CHECK_RESULT 1 0 1 'There is an error message for the log of git.socket'
++ actual_result=1
++ expect_result=0
++ mode=1
++ error_log='There is an error message for the log of git.socket'
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 1 -eq 0 ']'
++ test 1x == 0x
++ return 0
++ systemctl start git.socket
++ systemctl reload git.socket
++ grep 'Job type reload is not applicable for unit git.socket'
+Failed to reload git.socket: Job type reload is not applicable for unit git.socket.
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ systemctl status git.socket
++ grep 'Active: active'
+     Active: active (listening) since Tue 2023-05-16 15:37:34 CST; 12s ago
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ LOG_INFO 'End of the test.'
++ message='End of the test.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End of the test.'
+Tue May 16 15:37:47 2023 - INFO  - End of the test.
++ CASE_RESULT 0
++ case_re=0
++ test -z ''
++ test 0 -eq 0
++ LOG_INFO 'succeed to execute the case.'
++ message='succeed to execute the case.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'succeed to execute the case.'
+Tue May 16 15:37:48 2023 - INFO  - succeed to execute the case.
++ exec_result=
++ exit 0
++ post_test
++ LOG_INFO 'start environment cleanup.'
++ message='start environment cleanup.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'start environment cleanup.'
+Tue May 16 15:37:48 2023 - INFO  - start environment cleanup.
++ DNF_REMOVE
++ node=1
++ pkg_list=
++ mode=0
++ [[ -z /tmp/tmp_je052g4 ]]
++ '[' 0 -ne 0 ']'
++ '[' 1 == 0 ']'
++ python3 /root/mugen/libs/locallibs/rpm_manage.py remove --node 1 --pkgs '' --tempfile /tmp/tmp_je052g4
++ '[' 0 -ne 0 ']'
++ LOG_INFO 'Finish environment cleanup!'
++ message='Finish environment cleanup!'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Finish environment cleanup!'
+Tue May 16 15:38:00 2023 - INFO  - Finish environment cleanup!

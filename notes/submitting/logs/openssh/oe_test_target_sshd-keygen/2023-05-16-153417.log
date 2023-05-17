@@ -1,0 +1,178 @@
++ source ../common/common_lib.sh
+++ source /root/mugen/libs/locallibs/common_lib.sh
++++ python3 --version
++++ '[' 0 -eq 0 ']'
++++ source /root/mugen/libs/locallibs/common_lib_python.sh
++ main
+++ type -t post_test
++ '[' -n '' ']'
++ trap POST_TEST_DEFAULT EXIT INT HUP TERM
++ rpm -qa
++ grep expect
+++ type -t config_params
++ '[' -n '' ']'
+++ type -t pre_test
++ '[' -n '' ']'
+++ type -t run_test
++ '[' -n function ']'
++ run_test
++ LOG_INFO 'Start to run test.'
++ message='Start to run test.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to run test.'
+Tue May 16 15:34:20 2023 - INFO  - Start to run test.
++ test_execution sshd-keygen.target
++ service=sshd-keygen.target
+++ date '+%Y-%m-%d %T'
++ log_time='2023-05-16 15:34:20'
++ test_restart sshd-keygen.target
++ service=sshd-keygen.target
++ systemctl restart sshd-keygen.target
++ CHECK_RESULT 0 0 0 'sshd-keygen.target restart failed'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='sshd-keygen.target restart failed'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ SLEEP_WAIT 5
++ wait_time=5
++ cmd=
++ mode=1
++ python3 /root/mugen/libs/locallibs/sleep_wait.py --time 5 --cmd '' --mode 1
++ systemctl status sshd-keygen.target
++ grep 'Active: active'
+     Active: active since Tue 2023-05-16 15:34:20 CST; 5s ago
++ CHECK_RESULT 0 0 0 'sshd-keygen.target restart failed'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='sshd-keygen.target restart failed'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ systemctl stop sshd-keygen.target
++ CHECK_RESULT 0 0 0 'sshd-keygen.target stop failed'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='sshd-keygen.target stop failed'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ SLEEP_WAIT 5
++ wait_time=5
++ cmd=
++ mode=1
++ python3 /root/mugen/libs/locallibs/sleep_wait.py --time 5 --cmd '' --mode 1
++ systemctl status sshd-keygen.target
++ grep 'Active: inactive'
+     Active: inactive (dead) since Tue 2023-05-16 15:34:26 CST; 5s ago
++ CHECK_RESULT 0 0 0 'sshd-keygen.target stop failed'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='sshd-keygen.target stop failed'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ systemctl start sshd-keygen.target
++ CHECK_RESULT 0 0 0 'sshd-keygen.target start failed'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='sshd-keygen.target start failed'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ SLEEP_WAIT 5
++ wait_time=5
++ cmd=
++ mode=1
++ python3 /root/mugen/libs/locallibs/sleep_wait.py --time 5 --cmd '' --mode 1
++ systemctl status sshd-keygen.target
++ grep 'Active: active'
+     Active: active since Tue 2023-05-16 15:34:32 CST; 5s ago
++ CHECK_RESULT 0 0 0 'sshd-keygen.target start failed'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='sshd-keygen.target start failed'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ test_enabled sshd-keygen.target
++ service=sshd-keygen.target
+++ systemctl is-enabled sshd-keygen.target
++ state=static
++ '[' static == enabled ']'
++ '[' static == disabled ']'
++ '[' static == masked ']'
++ '[' static == static ']'
++ LOG_INFO 'The unit files have no installation config,This means they are not meant to be enabled using systemctl.'
++ message='The unit files have no installation config,This means they are not meant to be enabled using systemctl.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'The unit files have no installation config,This means they are not meant to be enabled using systemctl.'
+Tue May 16 15:34:38 2023 - INFO  - The unit files have no installation config,This means they are not meant to be enabled using systemctl.
++ journalctl --since '2023-05-16 15:34:20' -u sshd-keygen.target
++ grep -i 'fail\|error'
++ grep -v -i 'DEBUG\|INFO\|WARNING'
++ CHECK_RESULT 1 0 1 'There is an error message for the log of sshd-keygen.target'
++ actual_result=1
++ expect_result=0
++ mode=1
++ error_log='There is an error message for the log of sshd-keygen.target'
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 1 -eq 0 ']'
++ test 1x == 0x
++ return 0
++ test_reload sshd-keygen.target
++ service=sshd-keygen.target
++ systemctl start sshd-keygen.target
++ systemctl reload sshd-keygen.target
++ grep 'Job type reload is not applicable'
+Failed to reload sshd-keygen.target: Job type reload is not applicable for unit sshd-keygen.target.
++ CHECK_RESULT 0 0 0 'Job type reload is not applicable for unit sshd-keygen.target'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='Job type reload is not applicable for unit sshd-keygen.target'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ systemctl status sshd-keygen.target
++ grep 'Active: active'
+     Active: active since Tue 2023-05-16 15:34:32 CST; 6s ago
++ LOG_INFO 'End of the test.'
++ message='End of the test.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End of the test.'
+Tue May 16 15:34:39 2023 - INFO  - End of the test.
++ CASE_RESULT 0
++ case_re=0
++ test -z ''
++ test 0 -eq 0
++ LOG_INFO 'succeed to execute the case.'
++ message='succeed to execute the case.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'succeed to execute the case.'
+Tue May 16 15:34:40 2023 - INFO  - succeed to execute the case.
++ exec_result=
++ exit 0
++ POST_TEST_DEFAULT
++ LOG_INFO 'oe_test_target_sshd-keygen.sh post_test'
++ message='oe_test_target_sshd-keygen.sh post_test'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'oe_test_target_sshd-keygen.sh post_test'
+Tue May 16 15:34:40 2023 - INFO  - oe_test_target_sshd-keygen.sh post_test

@@ -1,0 +1,317 @@
++ source /root/mugen/libs/locallibs/common_lib.sh
+++ python3 --version
+++ '[' 0 -eq 0 ']'
+++ source /root/mugen/libs/locallibs/common_lib_python.sh
++ main
+++ type -t post_test
++ '[' -n function ']'
++ trap post_test EXIT INT HUP TERM
++ grep expect
++ rpm -qa
+++ type -t config_params
++ '[' -n '' ']'
+++ type -t pre_test
++ '[' -n function ']'
++ pre_test
++ LOG_INFO 'Start environmental preparation.'
++ message='Start environmental preparation.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start environmental preparation.'
+Tue May 16 16:24:37 2023 - INFO  - Start environmental preparation.
++ DNF_INSTALL fakeroot
++ pkgs=fakeroot
++ node=1
++ '[' -z '' ']'
++ tmpfile=
+++ python3 /root/mugen/libs/locallibs/rpm_manage.py install --pkgs fakeroot --node 1 --tempfile ''
++ tmpfile2='mainline                                        0.0  B/s |   0  B     00:40    
+Errors during downloading metadata for repository '\''mainline'\'':
+  - Curl error (6): Couldn'\''t resolve host name for https://mirror.iscas.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/testing/20230331_openEuler-23.03-V1-riscv64/repo/23.03/mainline/repodata/repomd.xml [Could not resolve host: mirror.iscas.ac.cn]
+Error: Failed to download metadata for repo '\''mainline'\'': Cannot download repomd.xml: Cannot download repodata/repomd.xml: All mirrors were tried'
++ '[' -z '' ']'
++ tmpfile='mainline                                        0.0  B/s |   0  B     00:40    
+Errors during downloading metadata for repository '\''mainline'\'':
+  - Curl error (6): Couldn'\''t resolve host name for https://mirror.iscas.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/testing/20230331_openEuler-23.03-V1-riscv64/repo/23.03/mainline/repodata/repomd.xml [Could not resolve host: mirror.iscas.ac.cn]
+Error: Failed to download metadata for repo '\''mainline'\'': Cannot download repomd.xml: Cannot download repodata/repomd.xml: All mirrors were tried'
++ echo 'echo "hello world"'
++ chmod 777 hello.sh
++ LOG_INFO 'End of environmental preparation!'
++ message='End of environmental preparation!'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End of environmental preparation!'
+Tue May 16 16:26:53 2023 - INFO  - End of environmental preparation!
+++ type -t run_test
++ '[' -n function ']'
++ run_test
++ LOG_INFO 'Start to run test.'
++ message='Start to run test.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to run test.'
+Tue May 16 16:26:54 2023 - INFO  - Start to run test.
++ fakeroot -l /usr/lib64/libfakeroot/libfakeroot-0.so -s hello -u ./hello.sh
++ grep 'hello world'
++ CHECK_RESULT 1 0 0 'Check fakeroot -l -s -u failed'
++ actual_result=1
++ expect_result=0
++ mode=0
++ error_log='Check fakeroot -l -s -u failed'
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 0 -eq 0 ']'
++ test 1x '!=' 0x
++ test -n 'Check fakeroot -l -s -u failed'
++ LOG_ERROR 'Check fakeroot -l -s -u failed'
++ message='Check fakeroot -l -s -u failed'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'Check fakeroot -l -s -u failed'
+Tue May 16 16:26:54 2023 - ERROR - Check fakeroot -l -s -u failed
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_fakeroot_base.sh line 34'
++ message='oe_test_fakeroot_base.sh line 34'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_fakeroot_base.sh line 34'
+Tue May 16 16:26:55 2023 - ERROR - oe_test_fakeroot_base.sh line 34
++ '[' 0 -eq 1 ']'
++ return 0
++ fakeroot --lib /usr/lib64/libfakeroot/libfakeroot-0.so -s hello --unknown-is-real ./hello.sh
++ grep 'hello world'
++ CHECK_RESULT 1 0 0 'Check fakeroot --lib -s --unknown-is-real failed'
++ actual_result=1
++ expect_result=0
++ mode=0
++ error_log='Check fakeroot --lib -s --unknown-is-real failed'
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 0 -eq 0 ']'
++ test 1x '!=' 0x
++ test -n 'Check fakeroot --lib -s --unknown-is-real failed'
++ LOG_ERROR 'Check fakeroot --lib -s --unknown-is-real failed'
++ message='Check fakeroot --lib -s --unknown-is-real failed'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'Check fakeroot --lib -s --unknown-is-real failed'
+Tue May 16 16:26:55 2023 - ERROR - Check fakeroot --lib -s --unknown-is-real failed
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_fakeroot_base.sh line 37'
++ message='oe_test_fakeroot_base.sh line 37'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_fakeroot_base.sh line 37'
+Tue May 16 16:26:56 2023 - ERROR - oe_test_fakeroot_base.sh line 37
++ '[' 0 -eq 1 ']'
++ return 0
++ fakeroot --lib /usr/lib64/libfakeroot/libfakeroot-0.so ./hello.sh -f --foreground --unknown-is-real
++ grep 'hello world'
++ CHECK_RESULT 1 0 0 'Check fakeroot --lib -f --port --save-file --foreground --debug --load --unknown-is-real failed'
++ actual_result=1
++ expect_result=0
++ mode=0
++ error_log='Check fakeroot --lib -f --port --save-file --foreground --debug --load --unknown-is-real failed'
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 0 -eq 0 ']'
++ test 1x '!=' 0x
++ test -n 'Check fakeroot --lib -f --port --save-file --foreground --debug --load --unknown-is-real failed'
++ LOG_ERROR 'Check fakeroot --lib -f --port --save-file --foreground --debug --load --unknown-is-real failed'
++ message='Check fakeroot --lib -f --port --save-file --foreground --debug --load --unknown-is-real failed'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'Check fakeroot --lib -f --port --save-file --foreground --debug --load --unknown-is-real failed'
+Tue May 16 16:26:56 2023 - ERROR - Check fakeroot --lib -f --port --save-file --foreground --debug --load --unknown-is-real failed
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_fakeroot_base.sh line 40'
++ message='oe_test_fakeroot_base.sh line 40'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_fakeroot_base.sh line 40'
+Tue May 16 16:26:57 2023 - ERROR - oe_test_fakeroot_base.sh line 40
++ '[' 0 -eq 1 ']'
++ return 0
++ fakeroot --lib /usr/lib64/libfakeroot/libfakeroot-0.so -i hello --unknown-is-real ./hello.sh
++ grep 'hello world'
++ CHECK_RESULT 1 0 0 'Check fakeroot --lib -i --unknown-is-real failed'
++ actual_result=1
++ expect_result=0
++ mode=0
++ error_log='Check fakeroot --lib -i --unknown-is-real failed'
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 0 -eq 0 ']'
++ test 1x '!=' 0x
++ test -n 'Check fakeroot --lib -i --unknown-is-real failed'
++ LOG_ERROR 'Check fakeroot --lib -i --unknown-is-real failed'
++ message='Check fakeroot --lib -i --unknown-is-real failed'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'Check fakeroot --lib -i --unknown-is-real failed'
+Tue May 16 16:26:57 2023 - ERROR - Check fakeroot --lib -i --unknown-is-real failed
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_fakeroot_base.sh line 43'
++ message='oe_test_fakeroot_base.sh line 43'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_fakeroot_base.sh line 43'
+Tue May 16 16:26:58 2023 - ERROR - oe_test_fakeroot_base.sh line 43
++ '[' 0 -eq 1 ']'
++ return 0
++ fakeroot --lib /usr/lib64/libfakeroot/libfakeroot-0.so ./hello.sh --faked --foreground --unknown-is-real
++ grep 'hello world'
++ CHECK_RESULT 1 0 0 'Check fakeroot --lib --faked --port --save-file --foreground --debug --load --unknown-is-real failed'
++ actual_result=1
++ expect_result=0
++ mode=0
++ error_log='Check fakeroot --lib --faked --port --save-file --foreground --debug --load --unknown-is-real failed'
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 0 -eq 0 ']'
++ test 1x '!=' 0x
++ test -n 'Check fakeroot --lib --faked --port --save-file --foreground --debug --load --unknown-is-real failed'
++ LOG_ERROR 'Check fakeroot --lib --faked --port --save-file --foreground --debug --load --unknown-is-real failed'
++ message='Check fakeroot --lib --faked --port --save-file --foreground --debug --load --unknown-is-real failed'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'Check fakeroot --lib --faked --port --save-file --foreground --debug --load --unknown-is-real failed'
+Tue May 16 16:26:58 2023 - ERROR - Check fakeroot --lib --faked --port --save-file --foreground --debug --load --unknown-is-real failed
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_fakeroot_base.sh line 46'
++ message='oe_test_fakeroot_base.sh line 46'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_fakeroot_base.sh line 46'
+Tue May 16 16:26:59 2023 - ERROR - oe_test_fakeroot_base.sh line 46
++ '[' 0 -eq 1 ']'
++ return 0
++ fakeroot --lib /usr/lib64/libfakeroot/libfakeroot-0.so -b --unknown-is-real ./hello.sh
++ grep 'hello world'
++ CHECK_RESULT 1 0 0 'Check fakeroot --lib -b --unknown-is-real failed'
++ actual_result=1
++ expect_result=0
++ mode=0
++ error_log='Check fakeroot --lib -b --unknown-is-real failed'
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 0 -eq 0 ']'
++ test 1x '!=' 0x
++ test -n 'Check fakeroot --lib -b --unknown-is-real failed'
++ LOG_ERROR 'Check fakeroot --lib -b --unknown-is-real failed'
++ message='Check fakeroot --lib -b --unknown-is-real failed'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'Check fakeroot --lib -b --unknown-is-real failed'
+Tue May 16 16:26:59 2023 - ERROR - Check fakeroot --lib -b --unknown-is-real failed
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_fakeroot_base.sh line 49'
++ message='oe_test_fakeroot_base.sh line 49'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_fakeroot_base.sh line 49'
+Tue May 16 16:27:00 2023 - ERROR - oe_test_fakeroot_base.sh line 49
++ '[' 0 -eq 1 ']'
++ return 0
++ grep 'hello world'
++ fakeroot --lib /usr/lib64/libfakeroot/libfakeroot-0.so --fd-base --unknown-is-real ./hello.sh
++ CHECK_RESULT 1 0 0 'Check fakeroot --lib --fd-base --unknown-is-real failed'
++ actual_result=1
++ expect_result=0
++ mode=0
++ error_log='Check fakeroot --lib --fd-base --unknown-is-real failed'
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 0 -eq 0 ']'
++ test 1x '!=' 0x
++ test -n 'Check fakeroot --lib --fd-base --unknown-is-real failed'
++ LOG_ERROR 'Check fakeroot --lib --fd-base --unknown-is-real failed'
++ message='Check fakeroot --lib --fd-base --unknown-is-real failed'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'Check fakeroot --lib --fd-base --unknown-is-real failed'
+Tue May 16 16:27:00 2023 - ERROR - Check fakeroot --lib --fd-base --unknown-is-real failed
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_fakeroot_base.sh line 52'
++ message='oe_test_fakeroot_base.sh line 52'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_fakeroot_base.sh line 52'
+Tue May 16 16:27:01 2023 - ERROR - oe_test_fakeroot_base.sh line 52
++ '[' 0 -eq 1 ']'
++ return 0
++ fakeroot -l /usr/lib64/libfakeroot/libfakeroot-0.so -- ./hello.sh
++ grep 'hello world'
++ CHECK_RESULT 1 0 0 'Check fakeroot -l -- failed'
++ actual_result=1
++ expect_result=0
++ mode=0
++ error_log='Check fakeroot -l -- failed'
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 0 -eq 0 ']'
++ test 1x '!=' 0x
++ test -n 'Check fakeroot -l -- failed'
++ LOG_ERROR 'Check fakeroot -l -- failed'
++ message='Check fakeroot -l -- failed'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'Check fakeroot -l -- failed'
+Tue May 16 16:27:01 2023 - ERROR - Check fakeroot -l -- failed
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_fakeroot_base.sh line 55'
++ message='oe_test_fakeroot_base.sh line 55'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_fakeroot_base.sh line 55'
+Tue May 16 16:27:02 2023 - ERROR - oe_test_fakeroot_base.sh line 55
++ '[' 0 -eq 1 ']'
++ return 0
++ fakeroot -h
++ grep 'usage: fakeroot'
++ CHECK_RESULT 1 0 0 'Check fakeroot -h failed'
++ actual_result=1
++ expect_result=0
++ mode=0
++ error_log='Check fakeroot -h failed'
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 0 -eq 0 ']'
++ test 1x '!=' 0x
++ test -n 'Check fakeroot -h failed'
++ LOG_ERROR 'Check fakeroot -h failed'
++ message='Check fakeroot -h failed'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'Check fakeroot -h failed'
+Tue May 16 16:27:02 2023 - ERROR - Check fakeroot -h failed
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_fakeroot_base.sh line 58'
++ message='oe_test_fakeroot_base.sh line 58'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_fakeroot_base.sh line 58'
+Tue May 16 16:27:03 2023 - ERROR - oe_test_fakeroot_base.sh line 58
++ '[' 0 -eq 1 ']'
++ return 0
++ fakeroot --help
++ grep 'usage: fakeroot'
++ CHECK_RESULT 1 0 0 'Check fakeroot --help failed'
++ actual_result=1
++ expect_result=0
++ mode=0
++ error_log='Check fakeroot --help failed'
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 0 -eq 0 ']'
++ test 1x '!=' 0x
++ test -n 'Check fakeroot --help failed'
++ LOG_ERROR 'Check fakeroot --help failed'
++ message='Check fakeroot --help failed'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'Check fakeroot --help failed'
+Tue May 16 16:27:03 2023 - ERROR - Check fakeroot --help failed
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_fakeroot_base.sh line 61'
++ message='oe_test_fakeroot_base.sh line 61'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_fakeroot_base.sh line 61'
+Tue May 16 16:27:04 2023 - ERROR - oe_test_fakeroot_base.sh line 61
++ '[' 0 -eq 1 ']'
++ return 0
++ CASE_RESULT 0
++ case_re=0
++ test -z 10
++ test 10 -gt 0
++ LOG_ERROR 'failed to execute the case.'
++ message='failed to execute the case.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'failed to execute the case.'
+Tue May 16 16:27:04 2023 - ERROR - failed to execute the case.
++ exit 10
++ post_test
++ LOG_INFO 'Start to restore the test environment.'
++ message='Start to restore the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to restore the test environment.'
+Tue May 16 16:27:05 2023 - INFO  - Start to restore the test environment.
++ DNF_REMOVE
++ node=1
++ pkg_list=
++ mode=0
++ [[ -z mainline                                        0.0  B/s |   0  B     00:40    
+Errors during downloading metadata for repository 'mainline':
+  - Curl error (6): Couldn't resolve host name for https://mirror.iscas.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/testing/20230331_openEuler-23.03-V1-riscv64/repo/23.03/mainline/repodata/repomd.xml [Could not resolve host: mirror.iscas.ac.cn]
+Error: Failed to download metadata for repo 'mainline': Cannot download repomd.xml: Cannot download repodata/repomd.xml: All mirrors were tried ]]
++ '[' 0 -ne 0 ']'
++ '[' 1 == 0 ']'
++ python3 /root/mugen/libs/locallibs/rpm_manage.py remove --node 1 --pkgs '' --tempfile 'mainline                                        0.0  B/s |   0  B     00:40    
+Errors during downloading metadata for repository '\''mainline'\'':
+  - Curl error (6): Couldn'\''t resolve host name for https://mirror.iscas.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/testing/20230331_openEuler-23.03-V1-riscv64/repo/23.03/mainline/repodata/repomd.xml [Could not resolve host: mirror.iscas.ac.cn]
+Error: Failed to download metadata for repo '\''mainline'\'': Cannot download repomd.xml: Cannot download repodata/repomd.xml: All mirrors were tried'
+Traceback (most recent call last):
+  File "/root/mugen/libs/locallibs/rpm_manage.py", line 181, in <module>
+    exitcode = rpm_remove(args.node, args.pkgs, args.tempfile)
+  File "/root/mugen/libs/locallibs/rpm_manage.py", line 152, in rpm_remove
+    with open(tmpfile, "r") as f:
+FileNotFoundError: [Errno 2] No such file or directory: "mainline                                        0.0  B/s |   0  B     00:40    \nErrors during downloading metadata for repository 'mainline':\n  - Curl error (6): Couldn't resolve host name for https://mirror.iscas.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/testing/20230331_openEuler-23.03-V1-riscv64/repo/23.03/mainline/repodata/repomd.xml [Could not resolve host: mirror.iscas.ac.cn]\nError: Failed to download metadata for repo 'mainline': Cannot download repomd.xml: Cannot download repodata/repomd.xml: All mirrors were tried"
++ '[' 0 -ne 0 ']'
++ rm -rf hello.sh hello
++ LOG_INFO 'Finish restore the test environment.'
++ message='Finish restore the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Finish restore the test environment.'
+Tue May 16 16:27:07 2023 - INFO  - Finish restore the test environment.

@@ -1,0 +1,116 @@
++ source ../common/common_lib.sh
+++ source /root/mugen/libs/locallibs/common_lib.sh
++++ python3 --version
++++ '[' 0 -eq 0 ']'
++++ source /root/mugen/libs/locallibs/common_lib_python.sh
++ main
+++ type -t post_test
++ '[' -n '' ']'
++ trap POST_TEST_DEFAULT EXIT INT HUP TERM
++ rpm -qa
++ grep expect
+++ type -t config_params
++ '[' -n '' ']'
+++ type -t pre_test
++ '[' -n function ']'
++ pre_test
++ LOG_INFO 'Start environmental preparation.'
++ message='Start environmental preparation.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start environmental preparation.'
+Tue May 16 15:34:39 2023 - INFO  - Start environmental preparation.
++ systemctl start nm-cloud-setup.service
++ LOG_INFO 'End of environmental preparation!'
++ message='End of environmental preparation!'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End of environmental preparation!'
+Tue May 16 15:34:41 2023 - INFO  - End of environmental preparation!
+++ type -t run_test
++ '[' -n function ']'
++ run_test
++ LOG_INFO 'Start testing...'
++ message='Start testing...'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start testing...'
+Tue May 16 15:34:41 2023 - INFO  - Start testing...
++ test_oneshot nm-cloud-setup.service 'inactive (dead)'
++ service=nm-cloud-setup.service
++ status='inactive (dead)'
++ systemctl status nm-cloud-setup.service
++ grep Active
++ grep -v 'inactive (dead)'
++ CHECK_RESULT 1 0 1 'There is an error for the status of nm-cloud-setup.service'
++ actual_result=1
++ expect_result=0
++ mode=1
++ error_log='There is an error for the status of nm-cloud-setup.service'
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 1 -eq 0 ']'
++ test 1x == 0x
++ return 0
++ test_enabled nm-cloud-setup.service
++ service=nm-cloud-setup.service
+++ systemctl is-enabled nm-cloud-setup.service
++ state=disabled
++ '[' disabled == enabled ']'
++ '[' disabled == disabled ']'
+++ systemctl enable nm-cloud-setup.service
+++ grep 'Created symlink'
+++ awk '{print $3}'
++ symlink_file=/etc/systemd/system/NetworkManager.service.wants/nm-cloud-setup.service
++ find /etc/systemd/system/NetworkManager.service.wants/nm-cloud-setup.service
+/etc/systemd/system/NetworkManager.service.wants/nm-cloud-setup.service
++ CHECK_RESULT 0 0 0 'nm-cloud-setup.service enable failed'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='nm-cloud-setup.service enable failed'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ systemctl disable nm-cloud-setup.service
+Removed /etc/systemd/system/NetworkManager.service.wants/nm-cloud-setup.service.
++ find /etc/systemd/system/NetworkManager.service.wants/nm-cloud-setup.service
+find: ‘/etc/systemd/system/NetworkManager.service.wants/nm-cloud-setup.service’: No such file or directory
++ CHECK_RESULT 1 0 1 'nm-cloud-setup.service disable failed'
++ actual_result=1
++ expect_result=0
++ mode=1
++ error_log='nm-cloud-setup.service disable failed'
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 1 -eq 0 ']'
++ test 1x == 0x
++ return 0
++ journalctl -u nm-cloud-setup.service
++ grep -i 'fail\|error'
++ grep -v -i 'DEBUG\|INFO\|WARNING'
++ CHECK_RESULT 1 0 1 'There is an error message for the log of nm-cloud-setup.service'
++ actual_result=1
++ expect_result=0
++ mode=1
++ error_log='There is an error message for the log of nm-cloud-setup.service'
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 1 -eq 0 ']'
++ test 1x == 0x
++ return 0
++ LOG_INFO 'Finish test!'
++ message='Finish test!'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Finish test!'
+Tue May 16 15:34:49 2023 - INFO  - Finish test!
++ CASE_RESULT 0
++ case_re=0
++ test -z ''
++ test 0 -eq 0
++ LOG_INFO 'succeed to execute the case.'
++ message='succeed to execute the case.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'succeed to execute the case.'
+Tue May 16 15:34:50 2023 - INFO  - succeed to execute the case.
++ exec_result=
++ exit 0
++ POST_TEST_DEFAULT
++ LOG_INFO 'oe_test_service_nm-cloud-setup.sh post_test'
++ message='oe_test_service_nm-cloud-setup.sh post_test'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'oe_test_service_nm-cloud-setup.sh post_test'
+Tue May 16 15:34:50 2023 - INFO  - oe_test_service_nm-cloud-setup.sh post_test

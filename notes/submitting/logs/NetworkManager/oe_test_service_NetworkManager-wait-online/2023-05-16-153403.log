@@ -1,0 +1,202 @@
++ source ../common/common_lib.sh
+++ source /root/mugen/libs/locallibs/common_lib.sh
++++ python3 --version
++++ '[' 0 -eq 0 ']'
++++ source /root/mugen/libs/locallibs/common_lib_python.sh
++ main
+++ type -t post_test
++ '[' -n '' ']'
++ trap POST_TEST_DEFAULT EXIT INT HUP TERM
++ rpm -qa
++ grep expect
+++ type -t config_params
++ '[' -n '' ']'
+++ type -t pre_test
++ '[' -n '' ']'
+++ type -t run_test
++ '[' -n function ']'
++ run_test
++ LOG_INFO 'Start testing...'
++ message='Start testing...'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start testing...'
+Tue May 16 15:34:05 2023 - INFO  - Start testing...
++ test_execution NetworkManager-wait-online.service
++ service=NetworkManager-wait-online.service
+++ date '+%Y-%m-%d %T'
++ log_time='2023-05-16 15:34:05'
++ test_restart NetworkManager-wait-online.service
++ service=NetworkManager-wait-online.service
++ systemctl restart NetworkManager-wait-online.service
++ CHECK_RESULT 0 0 0 'NetworkManager-wait-online.service restart failed'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='NetworkManager-wait-online.service restart failed'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ SLEEP_WAIT 5
++ wait_time=5
++ cmd=
++ mode=1
++ python3 /root/mugen/libs/locallibs/sleep_wait.py --time 5 --cmd '' --mode 1
++ systemctl status NetworkManager-wait-online.service
++ grep 'Active: active'
+     Active: active (exited) since Tue 2023-05-16 15:34:06 CST; 5s ago
++ CHECK_RESULT 0 0 0 'NetworkManager-wait-online.service restart failed'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='NetworkManager-wait-online.service restart failed'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ systemctl stop NetworkManager-wait-online.service
++ CHECK_RESULT 0 0 0 'NetworkManager-wait-online.service stop failed'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='NetworkManager-wait-online.service stop failed'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ SLEEP_WAIT 5
++ wait_time=5
++ cmd=
++ mode=1
++ python3 /root/mugen/libs/locallibs/sleep_wait.py --time 5 --cmd '' --mode 1
++ systemctl status NetworkManager-wait-online.service
++ grep 'Active: inactive'
+     Active: inactive (dead) since Tue 2023-05-16 15:34:12 CST; 5s ago
++ CHECK_RESULT 0 0 0 'NetworkManager-wait-online.service stop failed'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='NetworkManager-wait-online.service stop failed'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ systemctl start NetworkManager-wait-online.service
++ CHECK_RESULT 0 0 0 'NetworkManager-wait-online.service start failed'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='NetworkManager-wait-online.service start failed'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ SLEEP_WAIT 5
++ wait_time=5
++ cmd=
++ mode=1
++ python3 /root/mugen/libs/locallibs/sleep_wait.py --time 5 --cmd '' --mode 1
++ systemctl status NetworkManager-wait-online.service
++ grep 'Active: active'
+     Active: active (exited) since Tue 2023-05-16 15:34:18 CST; 5s ago
++ CHECK_RESULT 0 0 0 'NetworkManager-wait-online.service start failed'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='NetworkManager-wait-online.service start failed'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ test_enabled NetworkManager-wait-online.service
++ service=NetworkManager-wait-online.service
+++ systemctl is-enabled NetworkManager-wait-online.service
++ state=enabled
++ '[' enabled == enabled ']'
+++ systemctl disable NetworkManager-wait-online.service
+++ grep Removed
+++ awk '{print $2}'
+++ awk '{print substr($0,1,length($0)-1)}'
++ symlink_file=/etc/systemd/system/network-online.target.wants/NetworkManager-wait-online.service
++ find /etc/systemd/system/network-online.target.wants/NetworkManager-wait-online.service
+find: ‘/etc/systemd/system/network-online.target.wants/NetworkManager-wait-online.service’: No such file or directory
++ CHECK_RESULT 1 0 1 'NetworkManager-wait-online.service disable failed'
++ actual_result=1
++ expect_result=0
++ mode=1
++ error_log='NetworkManager-wait-online.service disable failed'
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 1 -eq 0 ']'
++ test 1x == 0x
++ return 0
++ systemctl enable NetworkManager-wait-online.service
+Created symlink /etc/systemd/system/network-online.target.wants/NetworkManager-wait-online.service → /usr/lib/systemd/system/NetworkManager-wait-online.service.
++ find /etc/systemd/system/network-online.target.wants/NetworkManager-wait-online.service
+/etc/systemd/system/network-online.target.wants/NetworkManager-wait-online.service
++ CHECK_RESULT 0 0 0 'NetworkManager-wait-online.service enable failed'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='NetworkManager-wait-online.service enable failed'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ journalctl --since '2023-05-16 15:34:05' -u NetworkManager-wait-online.service
++ grep -i 'fail\|error'
++ grep -v -i 'DEBUG\|INFO\|WARNING'
++ CHECK_RESULT 1 0 1 'There is an error message for the log of NetworkManager-wait-online.service'
++ actual_result=1
++ expect_result=0
++ mode=1
++ error_log='There is an error message for the log of NetworkManager-wait-online.service'
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 1 -eq 0 ']'
++ test 1x == 0x
++ return 0
++ test_reload NetworkManager-wait-online.service
++ service=NetworkManager-wait-online.service
++ systemctl start NetworkManager-wait-online.service
++ systemctl reload NetworkManager-wait-online.service
++ grep 'Job type reload is not applicable'
+Failed to reload NetworkManager-wait-online.service: Job type reload is not applicable for unit NetworkManager-wait-online.service.
++ CHECK_RESULT 0 0 0 'Job type reload is not applicable for unit NetworkManager-wait-online.service'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='Job type reload is not applicable for unit NetworkManager-wait-online.service'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ systemctl status NetworkManager-wait-online.service
++ grep 'Active: active'
+     Active: active (exited) since Tue 2023-05-16 15:34:18 CST; 12s ago
++ LOG_INFO 'Finish test!'
++ message='Finish test!'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Finish test!'
+Tue May 16 15:34:31 2023 - INFO  - Finish test!
++ CASE_RESULT 0
++ case_re=0
++ test -z ''
++ test 0 -eq 0
++ LOG_INFO 'succeed to execute the case.'
++ message='succeed to execute the case.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'succeed to execute the case.'
+Tue May 16 15:34:31 2023 - INFO  - succeed to execute the case.
++ exec_result=
++ exit 0
++ POST_TEST_DEFAULT
++ LOG_INFO 'oe_test_service_NetworkManager-wait-online.sh post_test'
++ message='oe_test_service_NetworkManager-wait-online.sh post_test'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'oe_test_service_NetworkManager-wait-online.sh post_test'
+Tue May 16 15:34:32 2023 - INFO  - oe_test_service_NetworkManager-wait-online.sh post_test

@@ -1,0 +1,101 @@
++ source /root/mugen/libs/locallibs/common_lib.sh
+++ python3 --version
+++ '[' 0 -eq 0 ']'
+++ source /root/mugen/libs/locallibs/common_lib_python.sh
++ main
+++ type -t post_test
++ '[' -n function ']'
++ trap post_test EXIT INT HUP TERM
++ rpm -qa
++ grep expect
+++ type -t config_params
++ '[' -n '' ']'
+++ type -t pre_test
++ '[' -n '' ']'
+++ type -t run_test
++ '[' -n function ']'
++ run_test
++ LOG_INFO 'Start executing testcase.'
++ message='Start executing testcase.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start executing testcase.'
+Tue May 16 15:36:34 2023 - INFO  - Start executing testcase.
++ echo -e 'Host "remote-server1"\nHostName 127.0.0.1\nUser root\nPort 22\n\nHost "remote-server2"\nHostName \nUser root\nPort 22'
++ expect
+spawn ssh remote-server1
+/root/.ssh/config line 7: no argument after keyword "hostname"
+/root/.ssh/config: terminating, 1 bad configuration options
+expect: spawn id exp3 not open
+    while executing
+"expect {
+            "password" {
+                send "openEuler12#$\r"
+            }
+        }"
++ CHECK_RESULT 1
++ actual_result=1
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 0 -eq 0 ']'
++ test 1x '!=' 0x
++ test -n ''
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_sec_jump_login.sh line 41'
++ message='oe_test_sec_jump_login.sh line 41'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_sec_jump_login.sh line 41'
+Tue May 16 15:36:35 2023 - ERROR - oe_test_sec_jump_login.sh line 41
++ '[' 0 -eq 1 ']'
++ return 0
++ expect
+spawn ssh remote-server2
+/root/.ssh/config line 7: no argument after keyword "hostname"
+/root/.ssh/config: terminating, 1 bad configuration options
+expect: spawn id exp3 not open
+    while executing
+"expect {
+            "password" {
+                send "\r"
+            }
+        }"
++ CHECK_RESULT 1
++ actual_result=1
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 0 -eq 0 ']'
++ test 1x '!=' 0x
++ test -n ''
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_sec_jump_login.sh line 59'
++ message='oe_test_sec_jump_login.sh line 59'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_sec_jump_login.sh line 59'
+Tue May 16 15:36:36 2023 - ERROR - oe_test_sec_jump_login.sh line 59
++ '[' 0 -eq 1 ']'
++ return 0
++ LOG_INFO 'Finish testcase execution.'
++ message='Finish testcase execution.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Finish testcase execution.'
+Tue May 16 15:36:36 2023 - INFO  - Finish testcase execution.
++ CASE_RESULT 0
++ case_re=0
++ test -z 2
++ test 2 -gt 0
++ LOG_ERROR 'failed to execute the case.'
++ message='failed to execute the case.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'failed to execute the case.'
+Tue May 16 15:36:37 2023 - ERROR - failed to execute the case.
++ exit 2
++ post_test
++ LOG_INFO 'start environment cleanup.'
++ message='start environment cleanup.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'start environment cleanup.'
+Tue May 16 15:36:38 2023 - INFO  - start environment cleanup.
++ rm /root/.ssh/config
++ LOG_INFO 'Finish environment cleanup!'
++ message='Finish environment cleanup!'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Finish environment cleanup!'
+Tue May 16 15:36:38 2023 - INFO  - Finish environment cleanup!

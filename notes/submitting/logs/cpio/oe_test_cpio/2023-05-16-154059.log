@@ -1,0 +1,308 @@
++ source /root/mugen/libs/locallibs/common_lib.sh
+++ python3 --version
+++ '[' 0 -eq 0 ']'
+++ source /root/mugen/libs/locallibs/common_lib_python.sh
++ main
+++ type -t post_test
++ '[' -n function ']'
++ trap post_test EXIT INT HUP TERM
++ rpm -qa
++ grep expect
+++ type -t config_params
++ '[' -n '' ']'
+++ type -t pre_test
++ '[' -n function ']'
++ pre_test
++ LOG_INFO 'Start to prepare the test environment.'
++ message='Start to prepare the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to prepare the test environment.'
+Tue May 16 15:41:02 2023 - INFO  - Start to prepare the test environment.
++ DNF_INSTALL cpio
++ pkgs=cpio
++ node=1
++ '[' -z '' ']'
++ tmpfile=
+++ python3 /root/mugen/libs/locallibs/rpm_manage.py install --pkgs cpio --node 1 --tempfile ''
+Tue May 16 15:41:16 2023 - INFO  - pkgs:(cpio) is already installed
++ tmpfile2=
++ '[' -z '' ']'
++ tmpfile=
++ mkdir testdir
++ for i in {a..z}
++ echo Test
++ for i in {a..z}
++ echo Test
++ for i in {a..z}
++ echo Test
++ for i in {a..z}
++ echo Test
++ for i in {a..z}
++ echo Test
++ for i in {a..z}
++ echo Test
++ for i in {a..z}
++ echo Test
++ for i in {a..z}
++ echo Test
++ for i in {a..z}
++ echo Test
++ for i in {a..z}
++ echo Test
++ for i in {a..z}
++ echo Test
++ for i in {a..z}
++ echo Test
++ for i in {a..z}
++ echo Test
++ for i in {a..z}
++ echo Test
++ for i in {a..z}
++ echo Test
++ for i in {a..z}
++ echo Test
++ for i in {a..z}
++ echo Test
++ for i in {a..z}
++ echo Test
++ for i in {a..z}
++ echo Test
++ for i in {a..z}
++ echo Test
++ for i in {a..z}
++ echo Test
++ for i in {a..z}
++ echo Test
++ for i in {a..z}
++ echo Test
++ for i in {a..z}
++ echo Test
++ for i in {a..z}
++ echo Test
++ for i in {a..z}
++ echo Test
++ find testdir -type f
++ LOG_INFO 'Finish preparing the test environment.'
++ message='Finish preparing the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Finish preparing the test environment.'
+Tue May 16 15:41:17 2023 - INFO  - Finish preparing the test environment.
+++ type -t run_test
++ '[' -n function ']'
++ run_test
++ LOG_INFO 'Start to run test.'
++ message='Start to run test.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to run test.'
+Tue May 16 15:41:17 2023 - INFO  - Start to run test.
++ LOG_INFO 'test cpio -o option'
++ message='test cpio -o option'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'test cpio -o option'
+Tue May 16 15:41:18 2023 - INFO  - test cpio -o option
++ cpio -o
+3 blocks
++ CHECK_RESULT 0 0 0 'failed to cpio create...'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='failed to cpio create...'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ LOG_INFO 'test cpio -t option'
++ message='test cpio -t option'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'test cpio -t option'
+Tue May 16 15:41:20 2023 - INFO  - test cpio -t option
++ mv filelist filelist_orig
++ cpio -t
+3 blocks
++ CHECK_RESULT 0 0 0 'failed to cpio list...'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='failed to cpio list...'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ diff -r filelist filelist_orig
++ CHECK_RESULT 0 0 0 'cpio list results are inconsistent...'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='cpio list results are inconsistent...'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ LOG_INFO 'test cpio -I option'
++ message='test cpio -I option'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'test cpio -I option'
+Tue May 16 15:41:21 2023 - INFO  - test cpio -I option
++ mv filelist filelist_orig
++ cpio -tI cpio.out
+3 blocks
++ CHECK_RESULT 0 0 0 'failed to cpio option -I...'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='failed to cpio option -I...'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ diff -r filelist filelist_orig
++ CHECK_RESULT 0 0 0 'cpio list with -I results are inconsistent...'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='cpio list with -I results are inconsistent...'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ LOG_INFO 'test cpio -i option'
++ message='test cpio -i option'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'test cpio -i option'
+Tue May 16 15:41:21 2023 - INFO  - test cpio -i option
++ mv testdir testdir_orig
++ mkdir testdir
++ CHECK_RESULT 0 0 0 'failed create testdir...'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='failed create testdir...'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ cpio -i
+3 blocks
++ CHECK_RESULT 0 0 0 'failed to cpio extract...'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='failed to cpio extract...'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ diff -r testdir testdir_orig
++ CHECK_RESULT 0 0 0 'cpio create and extract results are inconsistent...'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='cpio create and extract results are inconsistent...'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ LOG_INFO 'test cpio -u option'
++ message='test cpio -u option'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'test cpio -u option'
+Tue May 16 15:41:22 2023 - INFO  - test cpio -u option
++ for i in {a..z}
++ echo Hello
++ for i in {a..z}
++ echo Hello
++ for i in {a..z}
++ echo Hello
++ for i in {a..z}
++ echo Hello
++ for i in {a..z}
++ echo Hello
++ for i in {a..z}
++ echo Hello
++ for i in {a..z}
++ echo Hello
++ for i in {a..z}
++ echo Hello
++ for i in {a..z}
++ echo Hello
++ for i in {a..z}
++ echo Hello
++ for i in {a..z}
++ echo Hello
++ for i in {a..z}
++ echo Hello
++ for i in {a..z}
++ echo Hello
++ for i in {a..z}
++ echo Hello
++ for i in {a..z}
++ echo Hello
++ for i in {a..z}
++ echo Hello
++ for i in {a..z}
++ echo Hello
++ for i in {a..z}
++ echo Hello
++ for i in {a..z}
++ echo Hello
++ for i in {a..z}
++ echo Hello
++ for i in {a..z}
++ echo Hello
++ for i in {a..z}
++ echo Hello
++ for i in {a..z}
++ echo Hello
++ for i in {a..z}
++ echo Hello
++ for i in {a..z}
++ echo Hello
++ for i in {a..z}
++ echo Hello
++ cpio -iu
+3 blocks
++ CHECK_RESULT 0 0 0 'failed to cpio extract with -u -i option...'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='failed to cpio extract with -u -i option...'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ diff -r testdir testdir_orig
++ CHECK_RESULT 0 0 0 'cpio -i -u option test failed...'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='cpio -i -u option test failed...'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ LOG_INFO 'End of the test.'
++ message='End of the test.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End of the test.'
+Tue May 16 15:41:23 2023 - INFO  - End of the test.
++ CASE_RESULT 0
++ case_re=0
++ test -z ''
++ test 0 -eq 0
++ LOG_INFO 'succeed to execute the case.'
++ message='succeed to execute the case.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'succeed to execute the case.'
+Tue May 16 15:41:23 2023 - INFO  - succeed to execute the case.
++ exec_result=
++ exit 0
++ post_test
++ LOG_INFO 'Start to restore the test environment.'
++ message='Start to restore the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to restore the test environment.'
+Tue May 16 15:41:24 2023 - INFO  - Start to restore the test environment.
++ rm -rf cpio.out filelist filelist_orig testdir testdir_orig
++ LOG_INFO 'Finish restoring the test environment.'
++ message='Finish restoring the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Finish restoring the test environment.'
+Tue May 16 15:41:24 2023 - INFO  - Finish restoring the test environment.

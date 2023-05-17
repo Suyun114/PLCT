@@ -1,0 +1,156 @@
++ source /root/mugen/libs/locallibs/common_lib.sh
+++ python3 --version
+++ '[' 0 -eq 0 ']'
+++ source /root/mugen/libs/locallibs/common_lib_python.sh
++ main
+++ type -t post_test
++ '[' -n function ']'
++ trap post_test EXIT INT HUP TERM
++ rpm -qa
++ grep expect
+++ type -t config_params
++ '[' -n '' ']'
+++ type -t pre_test
++ '[' -n function ']'
++ pre_test
++ LOG_INFO 'Start environmental preparation.'
++ message='Start environmental preparation.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start environmental preparation.'
+Tue May 16 15:32:44 2023 - INFO  - Start environmental preparation.
++ sed -i 's/Ciphers aes128-ctr,aes192-ctr,aes256-ctr,aes128-gcm@openssh.com,aes256-gcm@openssh.com,chacha20-poly1305@openssh.com/Ciphers aes128-ctr/g' /etc/ssh/sshd_config
++ systemctl restart sshd
++ LOG_INFO 'End of environmental preparation!'
++ message='End of environmental preparation!'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End of environmental preparation!'
+Tue May 16 15:32:45 2023 - INFO  - End of environmental preparation!
+++ type -t run_test
++ '[' -n function ']'
++ run_test
++ LOG_INFO 'Start to run test.'
++ message='Start to run test.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to run test.'
+Tue May 16 15:32:46 2023 - INFO  - Start to run test.
++ expect
+spawn ssh -oCiphers=aes128-ctr localhost
+The authenticity of host 'localhost (::1)' can't be established.
+ED25519 key fingerprint is SHA256:7T5f+8KOn9yuMpw9h80S7G/P3m8RlbLAyEduVYLWeAE.
+This key is not known by any other names.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added 'localhost' (ED25519) to the list of known hosts.
+root@localhost's password: 
+Last login: Mon May 15 09:47:17 2023 from 10.0.2.2
+
+
+Welcome to 6.1.8-3.oe2303.riscv64
+
+System information as of time: 	Tue May 16 03:32:48 PM CST 2023
+
+System load: 	[0;33;40m0.66[0m
+Processes: 	109
+Memory used: 	2.4%
+Swap used: 	0.0%
+Usage On: 	16%
+IP address: 	10.0.2.15
+Users online: 	1
+
+
+[root@openeuler-riscv64 ~]# + CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ grep 127.0.0.1 /tmp/log_128
++ CHECK_RESULT 1
++ actual_result=1
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 0 -eq 0 ']'
++ test 1x '!=' 0x
++ test -n ''
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_openssh_cipher.sh line 47'
++ message='oe_test_openssh_cipher.sh line 47'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_openssh_cipher.sh line 47'
+Tue May 16 15:32:57 2023 - ERROR - oe_test_openssh_cipher.sh line 47
++ '[' 0 -eq 1 ']'
++ return 0
++ expect
+spawn ssh -oCiphers=aes256-ctr localhost
+root@localhost's password: 
+Last login: Tue May 16 15:32:47 2023 from ::1
+
+
+Welcome to 6.1.8-3.oe2303.riscv64
+
+System information as of time: 	Tue May 16 03:33:09 PM CST 2023
+
+System load: 	[0;33;40m0.87[0m
+Processes: 	109
+Memory used: 	2.2%
+Swap used: 	0.0%
+Usage On: 	16%
+IP address: 	10.0.2.15
+Users online: 	1
+
+
+[root@openeuler-riscv64 ~]# + CHECK_RESULT 0 1 0
++ actual_result=0
++ expect_result=1
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 1x
++ test -n ''
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_openssh_cipher.sh line 63'
++ message='oe_test_openssh_cipher.sh line 63'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_openssh_cipher.sh line 63'
+Tue May 16 15:33:18 2023 - ERROR - oe_test_openssh_cipher.sh line 63
++ '[' 0 -eq 1 ']'
++ return 0
++ grep 127.0.0.1 /tmp/log_256
++ CHECK_RESULT 1 1 0
++ actual_result=1
++ expect_result=1
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 0 -eq 0 ']'
++ test 1x '!=' 1x
++ return 0
++ LOG_INFO 'End to run test.'
++ message='End to run test.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End to run test.'
+Tue May 16 15:33:18 2023 - INFO  - End to run test.
++ CASE_RESULT 0
++ case_re=0
++ test -z 2
++ test 2 -gt 0
++ LOG_ERROR 'failed to execute the case.'
++ message='failed to execute the case.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'failed to execute the case.'
+Tue May 16 15:33:19 2023 - ERROR - failed to execute the case.
++ exit 2
++ post_test
++ LOG_INFO 'Start to restore the test environment.'
++ message='Start to restore the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to restore the test environment.'
+Tue May 16 15:33:19 2023 - INFO  - Start to restore the test environment.
++ sed -i 's/Ciphers aes128-ctr/Ciphers aes128-ctr,aes192-ctr,aes256-ctr,aes128-gcm@openssh.com,aes256-gcm@openssh.com,chacha20-poly1305@openssh.com/g' /etc/ssh/sshd_config
++ systemctl restart sshd
++ rm -rf /tmp/log_256 /tmp/log_128 /root/.ssh/known_hosts
++ LOG_INFO 'End to restore the test environment.'
++ message='End to restore the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End to restore the test environment.'
+Tue May 16 15:33:20 2023 - INFO  - End to restore the test environment.

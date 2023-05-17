@@ -1,0 +1,105 @@
++ source common/common_dnf.sh
+++ source /root/mugen/libs/locallibs/common_lib.sh
++++ python3 --version
++++ '[' 0 -eq 0 ']'
++++ source /root/mugen/libs/locallibs/common_lib_python.sh
++ main
+++ type -t post_test
++ '[' -n function ']'
++ trap post_test EXIT INT HUP TERM
++ rpm -qa
++ grep expect
+++ type -t config_params
++ '[' -n '' ']'
+++ type -t pre_test
++ '[' -n function ']'
++ pre_test
++ LOG_INFO 'Start to prepare the test environment.'
++ message='Start to prepare the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to prepare the test environment.'
+Tue May 16 16:01:45 2023 - INFO  - Start to prepare the test environment.
++ deploy_env
++ OLD_LANG=en_US.UTF-8
++ export LANG=en_US.UTF-8
++ LANG=en_US.UTF-8
++ dnf list --installed
++ grep @anaconda
++ grep 'arch\|x86_64'
++ awk '{print substr($0, 1, length($0)-1)}'
++ awk -F. 'OFS="."{$NF="";print}'
++ awk '{print $1}'
+Warning: failed loading '/etc/yum.repos.d/openEuler.repo', skipping.
++ dnf repolist
++ grep update
+Warning: failed loading '/etc/yum.repos.d/openEuler.repo', skipping.
+No repositories available
++ LOG_INFO 'Finish preparing the test environment.'
++ message='Finish preparing the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Finish preparing the test environment.'
+Tue May 16 16:01:52 2023 - INFO  - Finish preparing the test environment.
+++ type -t run_test
++ '[' -n function ']'
++ run_test
++ LOG_INFO 'Start to run test.'
++ message='Start to run test.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to run test.'
+Tue May 16 16:01:52 2023 - INFO  - Start to run test.
++ dnf repolist
++ grep update
+Warning: failed loading '/etc/yum.repos.d/openEuler.repo', skipping.
+No repositories available
++ LOG_INFO 'End of the test.'
++ message='End of the test.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End of the test.'
+Tue May 16 16:01:55 2023 - INFO  - End of the test.
++ CASE_RESULT 0
++ case_re=0
++ test -z ''
++ test 0 -eq 0
++ LOG_INFO 'succeed to execute the case.'
++ message='succeed to execute the case.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'succeed to execute the case.'
+Tue May 16 16:01:56 2023 - INFO  - succeed to execute the case.
++ exec_result=
++ exit 0
++ post_test
++ LOG_INFO 'Start to restore the test environment.'
++ message='Start to restore the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to restore the test environment.'
+Tue May 16 16:01:56 2023 - INFO  - Start to restore the test environment.
++ clear_env
++ export LANG=en_US.UTF-8
++ LANG=en_US.UTF-8
++ grep anaconda_list
+Tue May 16 16:31:43 2023 - ERROR - Timeout : Command 'bash -x oe_test_dnf_repeat-upgrade-downgrade.sh' timed out after 1799.9994981070001 seconds
+++ post_test
+++ LOG_INFO 'Start to restore the test environment.'
+++ message='Start to restore the test environment.'
+++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to restore the test environment.'
+Tue May 16 16:31:46 2023 - INFO  - Start to restore the test environment.
+++ clear_env
+++ export LANG=en_US.UTF-8
+++ LANG=en_US.UTF-8
+++ grep anaconda_list
+++ dnf remove -y
+Warning: failed loading '/etc/yum.repos.d/openEuler.repo', skipping.
+No packages marked for removal.
+Dependencies resolved.
+Nothing to do.
+Complete!
+++ rm -f anaconda_list update_pkg_list install_log
+++ LOG_INFO 'Finish restoring the test environment.'
+++ message='Finish restoring the test environment.'
+++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Finish restoring the test environment.'
+Tue May 16 16:31:50 2023 - INFO  - Finish restoring the test environment.
++ dnf remove -y
+Warning: failed loading '/etc/yum.repos.d/openEuler.repo', skipping.
+No packages marked for removal.
+Dependencies resolved.
+Nothing to do.
+Complete!
++ rm -f anaconda_list update_pkg_list install_log
++ LOG_INFO 'Finish restoring the test environment.'
++ message='Finish restoring the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Finish restoring the test environment.'
+Tue May 16 16:31:54 2023 - INFO  - Finish restoring the test environment.

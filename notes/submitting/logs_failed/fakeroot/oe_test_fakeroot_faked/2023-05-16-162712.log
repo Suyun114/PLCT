@@ -1,0 +1,223 @@
++ source /root/mugen/libs/locallibs/common_lib.sh
+++ python3 --version
+++ '[' 0 -eq 0 ']'
+++ source /root/mugen/libs/locallibs/common_lib_python.sh
++ main
+++ type -t post_test
++ '[' -n function ']'
++ trap post_test EXIT INT HUP TERM
++ rpm -qa
++ grep expect
+++ type -t config_params
++ '[' -n '' ']'
+++ type -t pre_test
++ '[' -n function ']'
++ pre_test
++ LOG_INFO 'Start environmental preparation.'
++ message='Start environmental preparation.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start environmental preparation.'
+Tue May 16 16:27:14 2023 - INFO  - Start environmental preparation.
++ DNF_INSTALL fakeroot
++ pkgs=fakeroot
++ node=1
++ '[' -z '' ']'
++ tmpfile=
+++ python3 /root/mugen/libs/locallibs/rpm_manage.py install --pkgs fakeroot --node 1 --tempfile ''
++ tmpfile2='mainline                                        0.0  B/s |   0  B     00:40    
+Errors during downloading metadata for repository '\''mainline'\'':
+  - Curl error (6): Couldn'\''t resolve host name for https://mirror.iscas.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/testing/20230331_openEuler-23.03-V1-riscv64/repo/23.03/mainline/repodata/repomd.xml [Could not resolve host: mirror.iscas.ac.cn]
+Error: Failed to download metadata for repo '\''mainline'\'': Cannot download repomd.xml: Cannot download repodata/repomd.xml: All mirrors were tried'
++ '[' -z '' ']'
++ tmpfile='mainline                                        0.0  B/s |   0  B     00:40    
+Errors during downloading metadata for repository '\''mainline'\'':
+  - Curl error (6): Couldn'\''t resolve host name for https://mirror.iscas.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/testing/20230331_openEuler-23.03-V1-riscv64/repo/23.03/mainline/repodata/repomd.xml [Could not resolve host: mirror.iscas.ac.cn]
+Error: Failed to download metadata for repo '\''mainline'\'': Cannot download repomd.xml: Cannot download repodata/repomd.xml: All mirrors were tried'
++ LOG_INFO 'End of environmental preparation!'
++ message='End of environmental preparation!'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End of environmental preparation!'
+Tue May 16 16:29:29 2023 - INFO  - End of environmental preparation!
+++ type -t run_test
++ '[' -n function ']'
++ run_test
++ LOG_INFO 'Start to run test.'
++ message='Start to run test.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to run test.'
+Tue May 16 16:29:29 2023 - INFO  - Start to run test.
++ echo
++ faked --port 10000 --debug --unknown-is-real --load
++ grep 10000:
+oe_test_fakeroot_faked.sh: line 31: faked: command not found
++ CHECK_RESULT 1 0 0 'Check faked --port --debug --unknown-is-real --load failed'
++ actual_result=1
++ expect_result=0
++ mode=0
++ error_log='Check faked --port --debug --unknown-is-real --load failed'
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 0 -eq 0 ']'
++ test 1x '!=' 0x
++ test -n 'Check faked --port --debug --unknown-is-real --load failed'
++ LOG_ERROR 'Check faked --port --debug --unknown-is-real --load failed'
++ message='Check faked --port --debug --unknown-is-real --load failed'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'Check faked --port --debug --unknown-is-real --load failed'
+Tue May 16 16:29:30 2023 - ERROR - Check faked --port --debug --unknown-is-real --load failed
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_fakeroot_faked.sh line 32'
++ message='oe_test_fakeroot_faked.sh line 32'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_fakeroot_faked.sh line 32'
+Tue May 16 16:29:30 2023 - ERROR - oe_test_fakeroot_faked.sh line 32
++ '[' 0 -eq 1 ']'
++ return 0
++ SLEEP_WAIT 2
++ wait_time=2
++ cmd=
++ mode=1
++ python3 /root/mugen/libs/locallibs/sleep_wait.py --time 2 --cmd '' --mode 1
++ nohup faked --foreground
+++ ps -ef
+++ grep 'faked --foreground'
+++ grep -v grep
+++ awk '{print $2}'
++ grep '' ./info1.log
+nohup: failed to run command 'faked': No such file or directory
++ CHECK_RESULT 0 0 0 'Check faked --foreground failed'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='Check faked --foreground failed'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ faked --cleanup --key --save-file ./info.log
+oe_test_fakeroot_faked.sh: line 39: faked: command not found
+++ ps -ef
+++ grep 'faked --cleanup'
+++ grep -v grep
+++ awk '{print $2}'
++ grep ''
++ CHECK_RESULT 1 0 0 'Check faked --cleanup --key --save-file failed'
++ actual_result=1
++ expect_result=0
++ mode=0
++ error_log='Check faked --cleanup --key --save-file failed'
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 0 -eq 0 ']'
++ test 1x '!=' 0x
++ test -n 'Check faked --cleanup --key --save-file failed'
++ LOG_ERROR 'Check faked --cleanup --key --save-file failed'
++ message='Check faked --cleanup --key --save-file failed'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'Check faked --cleanup --key --save-file failed'
+Tue May 16 16:29:34 2023 - ERROR - Check faked --cleanup --key --save-file failed
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_fakeroot_faked.sh line 40'
++ message='oe_test_fakeroot_faked.sh line 40'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_fakeroot_faked.sh line 40'
+Tue May 16 16:29:34 2023 - ERROR - oe_test_fakeroot_faked.sh line 40
++ '[' 0 -eq 1 ']'
++ return 0
++ fakeroot -v
++ grep 'fakeroot version [[:digit:]]'
++ CHECK_RESULT 1 0 0 'Check fakeroot -v failed'
++ actual_result=1
++ expect_result=0
++ mode=0
++ error_log='Check fakeroot -v failed'
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 0 -eq 0 ']'
++ test 1x '!=' 0x
++ test -n 'Check fakeroot -v failed'
++ LOG_ERROR 'Check fakeroot -v failed'
++ message='Check fakeroot -v failed'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'Check fakeroot -v failed'
+Tue May 16 16:29:35 2023 - ERROR - Check fakeroot -v failed
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_fakeroot_faked.sh line 43'
++ message='oe_test_fakeroot_faked.sh line 43'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_fakeroot_faked.sh line 43'
+Tue May 16 16:29:35 2023 - ERROR - oe_test_fakeroot_faked.sh line 43
++ '[' 0 -eq 1 ']'
++ return 0
++ fakeroot --version
++ grep 'fakeroot version [[:digit:]]'
++ CHECK_RESULT 1 0 0 'Check fakeroot --version failed'
++ actual_result=1
++ expect_result=0
++ mode=0
++ error_log='Check fakeroot --version failed'
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 0 -eq 0 ']'
++ test 1x '!=' 0x
++ test -n 'Check fakeroot --version failed'
++ LOG_ERROR 'Check fakeroot --version failed'
++ message='Check fakeroot --version failed'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'Check fakeroot --version failed'
+Tue May 16 16:29:36 2023 - ERROR - Check fakeroot --version failed
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_fakeroot_faked.sh line 46'
++ message='oe_test_fakeroot_faked.sh line 46'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_fakeroot_faked.sh line 46'
+Tue May 16 16:29:36 2023 - ERROR - oe_test_fakeroot_faked.sh line 46
++ '[' 0 -eq 1 ']'
++ return 0
++ CASE_RESULT 0
++ case_re=0
++ test -z 4
++ test 4 -gt 0
++ LOG_ERROR 'failed to execute the case.'
++ message='failed to execute the case.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'failed to execute the case.'
+Tue May 16 16:29:37 2023 - ERROR - failed to execute the case.
++ exit 4
++ post_test
++ LOG_INFO 'Start to restore the test environment.'
++ message='Start to restore the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to restore the test environment.'
+Tue May 16 16:29:37 2023 - INFO  - Start to restore the test environment.
++ DNF_REMOVE
++ node=1
++ pkg_list=
++ mode=0
++ [[ -z mainline                                        0.0  B/s |   0  B     00:40    
+Errors during downloading metadata for repository 'mainline':
+  - Curl error (6): Couldn't resolve host name for https://mirror.iscas.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/testing/20230331_openEuler-23.03-V1-riscv64/repo/23.03/mainline/repodata/repomd.xml [Could not resolve host: mirror.iscas.ac.cn]
+Error: Failed to download metadata for repo 'mainline': Cannot download repomd.xml: Cannot download repodata/repomd.xml: All mirrors were tried ]]
++ '[' 0 -ne 0 ']'
++ '[' 1 == 0 ']'
++ python3 /root/mugen/libs/locallibs/rpm_manage.py remove --node 1 --pkgs '' --tempfile 'mainline                                        0.0  B/s |   0  B     00:40    
+Errors during downloading metadata for repository '\''mainline'\'':
+  - Curl error (6): Couldn'\''t resolve host name for https://mirror.iscas.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/testing/20230331_openEuler-23.03-V1-riscv64/repo/23.03/mainline/repodata/repomd.xml [Could not resolve host: mirror.iscas.ac.cn]
+Error: Failed to download metadata for repo '\''mainline'\'': Cannot download repomd.xml: Cannot download repodata/repomd.xml: All mirrors were tried'
+Traceback (most recent call last):
+  File "/root/mugen/libs/locallibs/rpm_manage.py", line 181, in <module>
+    exitcode = rpm_remove(args.node, args.pkgs, args.tempfile)
+  File "/root/mugen/libs/locallibs/rpm_manage.py", line 152, in rpm_remove
+    with open(tmpfile, "r") as f:
+FileNotFoundError: [Errno 2] No such file or directory: "mainline                                        0.0  B/s |   0  B     00:40    \nErrors during downloading metadata for repository 'mainline':\n  - Curl error (6): Couldn't resolve host name for https://mirror.iscas.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/testing/20230331_openEuler-23.03-V1-riscv64/repo/23.03/mainline/repodata/repomd.xml [Could not resolve host: mirror.iscas.ac.cn]\nError: Failed to download metadata for repo 'mainline': Cannot download repomd.xml: Cannot download repodata/repomd.xml: All mirrors were tried"
++ '[' 0 -ne 0 ']'
++ ps -ef
++ grep 'faked --port 10000'
++ grep -v grep
++ xargs kill -9
++ awk '{print $2}'
+kill: not enough arguments
++ ps -ef
++ grep 'faked --cleanup --key'
++ grep -v grep
++ xargs kill -9
++ awk '{print $2}'
+kill: not enough arguments
++ ps -ef
++ grep 'faked --foreground'
++ grep -v grep
++ xargs kill -9
++ awk '{print $2}'
+kill: not enough arguments
++ LOG_INFO 'Finish restore the test environment.'
++ message='Finish restore the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Finish restore the test environment.'
+Tue May 16 16:29:40 2023 - INFO  - Finish restore the test environment.

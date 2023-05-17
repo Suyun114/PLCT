@@ -1,0 +1,1548 @@
++ source common/common_dnf.sh
+++ source /root/mugen/libs/locallibs/common_lib.sh
++++ python3 --version
++++ '[' 0 -eq 0 ']'
++++ source /root/mugen/libs/locallibs/common_lib_python.sh
++ main
+++ type -t post_test
++ '[' -n function ']'
++ trap post_test EXIT INT HUP TERM
++ rpm -qa
++ grep expect
+++ type -t config_params
++ '[' -n '' ']'
+++ type -t pre_test
++ '[' -n function ']'
++ pre_test
++ LOG_INFO 'Start to prepare the test environment.'
++ message='Start to prepare the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to prepare the test environment.'
+Tue May 16 15:52:01 2023 - INFO  - Start to prepare the test environment.
++ deploy_env
++ OLD_LANG=en_US.UTF-8
++ export LANG=en_US.UTF-8
++ LANG=en_US.UTF-8
++ LOG_INFO 'Finish preparing the test environment.'
++ message='Finish preparing the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Finish preparing the test environment.'
+Tue May 16 15:52:01 2023 - INFO  - Finish preparing the test environment.
+++ type -t run_test
++ '[' -n function ']'
++ run_test
++ LOG_INFO 'Start to run test.'
++ message='Start to run test.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to run test.'
+Tue May 16 15:52:02 2023 - INFO  - Start to run test.
++ dnf list --all
++ grep riscv64
+Warning: failed loading '/etc/yum.repos.d/openEuler.repo', skipping.
+NetworkManager.riscv64                 1:1.32.12-16.oe2303             @mainline
+NetworkManager-libnm.riscv64           1:1.32.12-16.oe2303             @mainline
+NetworkManager-wifi.riscv64            1:1.32.12-16.oe2303             @mainline
+acl.riscv64                            2.3.1-1.oe2303                  @mainline
+at-spi2-atk.riscv64                    2.38.0-2.oe2303                 @mainline
+at-spi2-core.riscv64                   2.44.1-2.oe2303                 @mainline
+atk.riscv64                            2.38.0-1.oe2303                 @mainline
+attr.riscv64                           2.5.1-4.oe2303                  @mainline
+audit-libs.riscv64                     1:3.0.9-1.oe2303                @mainline
+autogen.riscv64                        5.18.16-3.oe2303                @mainline
+avahi-libs.riscv64                     0.8-14.oe2303                   @mainline
+babeltrace.riscv64                     1.5.8-6.oe2303                  @mainline
+bash.riscv64                           5.1.8-7.oe2303                  @mainline
+bc.riscv64                             1.07.1-12.oe2303                @mainline
+binutils.riscv64                       2.37-14.oe2303                  @mainline
+brotli.riscv64                         1.0.9-3.oe2303                  @mainline
+bsdtar.riscv64                         3.6.1-2.oe2303                  @mainline
+bzip2.riscv64                          1.0.8-7.oe2303                  @mainline
+cairo.riscv64                          1.17.4-3.oe2303                 @mainline
+cairo-gobject.riscv64                  1.17.4-3.oe2303                 @mainline
+chkconfig.riscv64                      1.21-2.oe2303                   @mainline
+colord-libs.riscv64                    1.4.5-4.oe2303                  @mainline
+coreutils.riscv64                      9.0-7.oe2303                    @mainline
+cpio.riscv64                           2.13-7.oe2303                   @mainline
+cpp.riscv64                            10.3.1-25.oe2303                @mainline
+cracklib.riscv64                       2.9.8-1.oe2303                  @mainline
+cronie.riscv64                         1.6.1-3.oe2303                  @mainline
+cups-libs.riscv64                      1:2.4.0-5.oe2303                @mainline
+curl.riscv64                           7.86.0-3.oe2303                 @mainline
+cyrus-sasl-lib.riscv64                 2.1.28-1.oe2303                 @mainline
+dbus.riscv64                           1:1.14.0-2.oe2303               @mainline
+dbus-daemon.riscv64                    1:1.14.0-2.oe2303               @mainline
+dbus-libs.riscv64                      1:1.14.0-2.oe2303               @mainline
+dbus-tools.riscv64                     1:1.14.0-2.oe2303               @mainline
+dconf.riscv64                          0.40.0-3.oe2303                 @mainline
+debugedit.riscv64                      5.0-6.oe2303                    @mainline
+device-mapper.riscv64                  8:1.02.182-1.oe2303             @mainline
+device-mapper-event.riscv64            8:1.02.182-1.oe2303             @mainline
+diffutils.riscv64                      3.9-2.oe2303                    @mainline
+dosfstools.riscv64                     4.2-2.oe2303                    @mainline
+duktape.riscv64                        2.7.0-1.oe2303                  @mainline
+dwz.riscv64                            0.15-1.oe2303                   @mainline
+e2fsprogs.riscv64                      1.46.5-4.oe2303                 @mainline
+elfutils.riscv64                       0.187-10.oe2303                 @mainline
+elfutils-extra.riscv64                 0.187-10.oe2303                 @mainline
+elfutils-libelf.riscv64                0.187-10.oe2303                 @mainline
+elfutils-libs.riscv64                  0.187-10.oe2303                 @mainline
+expat.riscv64                          2.5.0-1.oe2303                  @mainline
+expect.riscv64                         1:5.45.4-7.oe2303               @mainline
+file.riscv64                           5.44-1.oe2303                   @mainline
+file-libs.riscv64                      5.44-1.oe2303                   @mainline
+filesystem.riscv64                     3.16-5.oe2303                   @mainline
+findutils.riscv64                      2:4.9.0-1.oe2303                @mainline
+fontconfig.riscv64                     2.14.2-1.oe2303                 @mainline
+freetype.riscv64                       2.12.1-1.oe2303                 @mainline
+fribidi.riscv64                        1.0.12-1.oe2303                 @mainline
+fuse.riscv64                           2.9.9-11.oe2303                 @mainline
+fuse-common.riscv64                    3.13.0-1.oe2303                 @mainline
+fuse-help.riscv64                      2.9.9-11.oe2303                 @mainline
+gawk.riscv64                           5.2.0-3.oe2303                  @mainline
+gc.riscv64                             8.2.2-1.oe2303                  @mainline
+gcc.riscv64                            10.3.1-25.oe2303                @mainline
+gcc-c++.riscv64                        10.3.1-25.oe2303                @mainline
+gcc-gdb-plugin.riscv64                 10.3.1-25.oe2303                @mainline
+gcr.riscv64                            3.41.1-3.oe2303                 @mainline
+gcr-base.riscv64                       3.41.1-3.oe2303                 @mainline
+gdb.riscv64                            12.1-2.oe2303                   @mainline
+gdb-headless.riscv64                   12.1-2.oe2303                   @mainline
+gdbm.riscv64                           1:1.23-2.oe2303                 @mainline
+gdk-pixbuf2.riscv64                    2.42.10-2.oe2303                @mainline
+gdk-pixbuf2-modules.riscv64            2.42.10-2.oe2303                @mainline
+git.riscv64                            2.39.1-3.oe2303                 @mainline
+git-core.riscv64                       2.39.1-3.oe2303                 @mainline
+glib2.riscv64                          2.74.4-2.oe2303                 @mainline
+glibc.riscv64                          2.36-13.oe2303                  @mainline
+glibc-common.riscv64                   2.36-13.oe2303                  @mainline
+glibc-devel.riscv64                    2.36-13.oe2303                  @mainline
+gmp.riscv64                            1:6.2.1-3.oe2303                @mainline
+gnupg2.riscv64                         2.3.6-3.oe2303                  @mainline
+gnutls.riscv64                         3.7.8-2.oe2303                  @mainline
+gpgme.riscv64                          1.17.0-1.oe2303                 @mainline
+gpm-libs.riscv64                       1.20.7-26.oe2303                @mainline
+graphite2.riscv64                      1.3.14-6.oe2303                 @mainline
+grep.riscv64                           3.8-1.oe2303                    @mainline
+groff-base.riscv64                     1.22.4-12.oe2303                @mainline
+grubby.riscv64                         8.40-30.oe2303                  @mainline
+gtk-update-icon-cache.riscv64          3.24.36-1.oe2303                @mainline
+gtk2.riscv64                           2.24.33-7.oe2303                @mainline
+gtk3.riscv64                           3.24.36-1.oe2303                @mainline
+guile.riscv64                          5:2.2.7-2.oe2303                @mainline
+gzip.riscv64                           1.12-3.oe2303                   @mainline
+harfbuzz.riscv64                       6.0.0-1.oe2303                  @mainline
+hostname.riscv64                       3.23-1.oe2303                   @mainline
+ima-evm-utils-libs.riscv64             1.4-1.oe2303                    @mainline
+info.riscv64                           6.8-5.oe2303                    @mainline
+iproute.riscv64                        1:6.1.0-6.oe2303                @mainline
+iptables-libs.riscv64                  1.8.9-1.oe2303                  @mainline
+iputils.riscv64                        20221126-1.oe2303               @mainline
+jansson.riscv64                        2.14-3.oe2303                   @mainline
+jbigkit-libs.riscv64                   2.1-21.oe2303                   @mainline
+json-c.riscv64                         0.16-2.oe2303                   @mainline
+kbd.riscv64                            2.5.1-1.oe2303                  @mainline
+kernel.riscv64                         6.1.8-3.oe2303                  @mainline
+kernel-devel.riscv64                   6.1.8-3.oe2303                  @mainline
+keyutils-libs.riscv64                  1.6.3-5.oe2303                  @mainline
+kmod.riscv64                           30-2.oe2303                     @mainline
+kmod-libs.riscv64                      30-2.oe2303                     @mainline
+krb5-libs.riscv64                      1.20.1-1.oe2303                 @mainline
+lcms2.riscv64                          2.13.1-2.oe2303                 @mainline
+less.riscv64                           608-4.oe2303                    @mainline
+libX11.riscv64                         1.8.1-3.oe2303                  @mainline
+libXau.riscv64                         1.0.10-1.oe2303                 @mainline
+libXcomposite.riscv64                  0.4.6-1.oe2303                  @mainline
+libXcursor.riscv64                     1.2.1-1.oe2303                  @mainline
+libXdamage.riscv64                     1.1.6-1.oe2303                  @mainline
+libXext.riscv64                        1.3.5-1.oe2303                  @mainline
+libXfixes.riscv64                      6.0.0-2.oe2303                  @mainline
+libXft.riscv64                         2.3.7-1.oe2303                  @mainline
+libXi.riscv64                          1.8-2.oe2303                    @mainline
+libXinerama.riscv64                    1.1.5-1.oe2303                  @mainline
+libXrandr.riscv64                      1.5.3-1.oe2303                  @mainline
+libXrender.riscv64                     0.9.11-1.oe2303                 @mainline
+libXtst.riscv64                        1.2.4-1.oe2303                  @mainline
+libacl.riscv64                         2.3.1-1.oe2303                  @mainline
+libaio.riscv64                         0.3.113-7.oe2303                @mainline
+libarchive.riscv64                     3.6.1-2.oe2303                  @mainline
+libassuan.riscv64                      2.5.5-2.oe2303                  @mainline
+libatomic.riscv64                      10.3.1-25.oe2303                @mainline
+libblkid.riscv64                       2.37.2-14.oe2303                @mainline
+libbpf.riscv64                         2:0.8.1-4.oe2303                @mainline
+libcap.riscv64                         2.66-1.oe2303                   @mainline
+libcap-ng.riscv64                      0.8.3-1.oe2303                  @mainline
+libcomps.riscv64                       0.1.19-1.oe2303                 @mainline
+libcurl.riscv64                        7.86.0-3.oe2303                 @mainline
+libdaemon.riscv64                      0.14-21.oe2303                  @mainline
+libdatrie.riscv64                      0.2.13-1.oe2303                 @mainline
+libdnf.riscv64                         0.69.0-3.oe2303                 @mainline
+libedit.riscv64                        3.1-29.oe2303                   @mainline
+libepoxy.riscv64                       1.5.10-2.oe2303                 @mainline
+libev.riscv64                          4.33-3.oe2303                   @mainline
+libevent.riscv64                       2.1.12-7.oe2303                 @mainline
+libfdisk.riscv64                       2.37.2-14.oe2303                @mainline
+libffi.riscv64                         3.4.4-1.oe2303                  @mainline
+libgcc.riscv64                         10.3.1-25.oe2303                @mainline
+libgcrypt.riscv64                      1.9.4-1.oe2303                  @mainline
+libgomp.riscv64                        10.3.1-25.oe2303                @mainline
+libgpg-error.riscv64                   1.46-1.oe2303                   @mainline
+libgusb.riscv64                        0.3.10-1.oe2303                 @mainline
+libicu.riscv64                         72.1-5.oe2303                   @mainline
+libidn2.riscv64                        2.3.3-2.oe2303                  @mainline
+libjpeg-turbo.riscv64                  2.1.1-3.oe2303                  @mainline
+libksba.riscv64                        1.6.3-1.oe2303                  @mainline
+libmetalink.riscv64                    0.1.3-12.oe2303                 @mainline
+libmnl.riscv64                         1.0.5-1.oe2303                  @mainline
+libmodulemd.riscv64                    2.14.0-1.oe2303                 @mainline
+libmount.riscv64                       2.37.2-14.oe2303                @mainline
+libmpc.riscv64                         1.3.1-1.oe2303                  @mainline
+libndp.riscv64                         1.8-2.oe2303                    @mainline
+libnetfilter_conntrack.riscv64         1.0.9-4.oe2303                  @mainline
+libnfnetlink.riscv64                   1.0.2-1.oe2303                  @mainline
+libnghttp2.riscv64                     1.47.0-3.oe2303                 @mainline
+libnl3.riscv64                         3.7.0-1.oe2303                  @mainline
+libnsl2.riscv64                        2.0.0-5.oe2303                  @mainline
+libpcap.riscv64                        14:1.10.3-1.oe2303              @mainline
+libpipeline.riscv64                    1.5.7-1.oe2303                  @mainline
+libpng.riscv64                         2:1.6.38-2.oe2303               @mainline
+libpsl.riscv64                         0.21.2-1.oe2303                 @mainline
+libpwquality.riscv64                   1.4.5-1.oe2303                  @mainline
+librepo.riscv64                        1.15.1-1.oe2303                 @mainline
+libseccomp.riscv64                     2.5.4-1.oe2303                  @mainline
+libsecret.riscv64                      0.20.5-1.oe2303                 @mainline
+libselinux.riscv64                     3.4-1.oe2303                    @mainline
+libsemanage.riscv64                    3.4-1.oe2303                    @mainline
+libsepol.riscv64                       3.4-1.oe2303                    @mainline
+libsigsegv.riscv64                     2.14-1.oe2303                   @mainline
+libsmartcols.riscv64                   2.37.2-14.oe2303                @mainline
+libsodium.riscv64                      1.0.18-1.oe2303                 @mainline
+libsolv.riscv64                        0.7.22-1.oe2303                 @mainline
+libssh.riscv64                         0.10.4-1.oe2303                 @mainline
+libstdc++.riscv64                      10.3.1-25.oe2303                @mainline
+libstdc++-devel.riscv64                10.3.1-25.oe2303                @mainline
+libtasn1.riscv64                       4.17.0-3.oe2303                 @mainline
+libteam.riscv64                        1.31-2.oe2303                   @mainline
+libthai.riscv64                        0.1.29-1.oe2303                 @mainline
+libtiff.riscv64                        4.5.0-3.oe2303                  @mainline
+libtirpc.riscv64                       1.3.3-2.oe2303                  @mainline
+libtool-ltdl.riscv64                   2.4.7-2.oe2303                  @mainline
+libunistring.riscv64                   1.1-2.oe2303                    @mainline
+libusbx.riscv64                        1.0.26-1.oe2303                 @mainline
+libuser.riscv64                        0.63-5.oe2303                   @mainline
+libutempter.riscv64                    1.2.1-3.oe2303                  @mainline
+libuuid.riscv64                        2.37.2-14.oe2303                @mainline
+libverto.riscv64                       0.3.2-2.oe2303                  @mainline
+libxcb.riscv64                         1.15-1.oe2303                   @mainline
+libxcrypt.riscv64                      4.4.33-1.oe2303                 @mainline
+libxcrypt-devel.riscv64                4.4.33-1.oe2303                 @mainline
+libxkbcommon.riscv64                   1.5.0-1.oe2303                  @mainline
+libxml2.riscv64                        2.9.14-7.oe2303                 @mainline
+libyaml.riscv64                        0.2.5-4.oe2303                  @mainline
+logrotate.riscv64                      3.20.1-1.oe2303                 @mainline
+lrzsz.riscv64                          0.12.20-46.oe2303               @mainline
+lua.riscv64                            5.4.4-1.oe2303                  @mainline
+lvm2.riscv64                           8:2.03.18-1.oe2303              @mainline
+lz4.riscv64                            1.9.4-2.oe2303                  @mainline
+m4.riscv64                             1.4.19-3.oe2303                 @mainline
+make.riscv64                           1:4.4-2.oe2303                  @mainline
+man-db.riscv64                         2.11.0-1.oe2303                 @mainline
+mpfr.riscv64                           4.1.0-3.oe2303                  @mainline
+nano.riscv64                           4.9.3-2.oe2303                  @mainline
+ncurses.riscv64                        6.4-1.oe2303                    @mainline
+ncurses-libs.riscv64                   6.4-1.oe2303                    @mainline
+net-tools.riscv64                      2.10-3.oe2303                   @mainline
+nettle.riscv64                         3.8.1-1.oe2303                  @mainline
+newt.riscv64                           0.52.23-1.oe2303                @mainline
+npth.riscv64                           1.6-7.oe2303                    @mainline
+ntp.riscv64                            4.2.8p15-7.oe2303               @mainline
+openEuler-gpg-keys.riscv64             1.0-3.2.oe2303                  @mainline
+openEuler-release.riscv64              23.03-54.oe2303                 @mainline
+openEuler-repos.riscv64                1.0-3.2.oe2303                  @mainline
+openEuler-rpm-config.riscv64           30-37.oe2303                    @mainline
+openldap.riscv64                       2.6.3-2.oe2303                  @mainline
+openslp.riscv64                        1:2.0.0-27.oe2303               @mainline
+openssh.riscv64                        9.1p1-3.oe2303                  @mainline
+openssh-clients.riscv64                9.1p1-3.oe2303                  @mainline
+openssh-server.riscv64                 9.1p1-3.oe2303                  @mainline
+openssl.riscv64                        1:3.0.8-3.oe2303                @mainline
+openssl-libs.riscv64                   1:3.0.8-3.oe2303                @mainline
+openssl-pkcs11.riscv64                 0.4.12-2.oe2303                 @mainline
+p11-kit.riscv64                        0.24.1-1.oe2303                 @mainline
+p11-kit-trust.riscv64                  0.24.1-1.oe2303                 @mainline
+pam.riscv64                            1.5.2-4.oe2303                  @mainline
+pango.riscv64                          1.50.12-1.oe2303                @mainline
+parted.riscv64                         3.5-1.oe2303                    @mainline
+passwd.riscv64                         0.80-10.oe2303                  @mainline
+patch.riscv64                          2.7.6-20.oe2303                 @mainline
+pcre.riscv64                           8.45-5.oe2303                   @mainline
+pcre2.riscv64                          10.42-1.oe2303                  @mainline
+perl.riscv64                           4:5.34.0-4.oe2303               @mainline
+perl-Compress-Raw-Bzip2.riscv64        2.201-1.oe2303                  @mainline
+perl-Compress-Raw-Zlib.riscv64         1:2.202-1.oe2303                @mainline
+perl-Data-Dumper.riscv64               2.183-2.oe2303                  @mainline
+perl-Devel-PPPort.riscv64              3.63-2.oe2303                   @mainline
+perl-Digest-MD5.riscv64                2.58-2.oe2303                   @mainline
+perl-Digest-SHA.riscv64                1:6.02-8.oe2303                 @mainline
+perl-Encode.riscv64                    4:3.16-2.oe2303                 @mainline
+perl-Encode-devel.riscv64              4:3.16-2.oe2303                 @mainline
+perl-Filter.riscv64                    2:1.64-1.oe2303                 @mainline
+perl-IPC-SysV.riscv64                  2.09-2.oe2303                   @mainline
+perl-MIME-Base64.riscv64               3.16-2.oe2303                   @mainline
+perl-Math-BigInt-FastCalc.riscv64      0.5012-3.oe2303                 @mainline
+perl-Net-SSLeay.riscv64                1.92-2.oe2303                   @mainline
+perl-PathTools.riscv64                 3.80-2.oe2303                   @mainline
+perl-Scalar-List-Utils.riscv64         4:1.60-2.oe2303                 @mainline
+perl-Socket.riscv64                    4:2.032-2.oe2303                @mainline
+perl-Storable.riscv64                  1:3.25-3.oe2303                 @mainline
+perl-Sys-Syslog.riscv64                0.36-2.oe2303                   @mainline
+perl-TermReadKey.riscv64               2.38-2.oe2303                   @mainline
+perl-Time-HiRes.riscv64                4:1.9767-3.oe2303               @mainline
+perl-Unicode-Collate.riscv64           1.31-2.oe2303                   @mainline
+perl-Unicode-Normalize.riscv64         1.28-2.oe2303                   @mainline
+perl-XML-Parser.riscv64                1:2.46-2.oe2303                 @mainline
+perl-devel.riscv64                     4:5.34.0-4.oe2303               @mainline
+perl-libintl-perl.riscv64              1.31-3.oe2303                   @mainline
+perl-libs.riscv64                      4:5.34.0-4.oe2303               @mainline
+perl-threads.riscv64                   2:2.26-2.oe2303                 @mainline
+perl-threads-shared.riscv64            1.62-2.oe2303                   @mainline
+perl-version.riscv64                   8:0.99.29-2.oe2303              @mainline
+pinentry.riscv64                       1.1.1-3.oe2303                  @mainline
+pixman.riscv64                         0.42.2-1.oe2303                 @mainline
+pkgconf.riscv64                        1.8.0-3.oe2303                  @mainline
+polkit.riscv64                         122-2.oe2303                    @mainline
+polkit-libs.riscv64                    122-2.oe2303                    @mainline
+polkit-pkla-compat.riscv64             0.1-21.oe2303                   @mainline
+popt.riscv64                           1.19-2.oe2303                   @mainline
+procps-ng.riscv64                      4.0.2-1.oe2303                  @mainline
+psmisc.riscv64                         23.6-1.oe2303                   @mainline
+python3.riscv64                        3.10.9-1.oe2303                 @mainline
+python3-bcrypt.riscv64                 3.2.0-2.oe2303                  @mainline
+python3-cffi.riscv64                   1.15.1-1.oe2303                 @mainline
+python3-cryptography.riscv64           39.0.0-2.oe2303                 @mainline
+python3-dbus.riscv64                   1.3.2-1.oe2303                  @mainline
+python3-gpgme.riscv64                  1.17.0-1.oe2303                 @mainline
+python3-hawkey.riscv64                 0.69.0-3.oe2303                 @mainline
+python3-libcomps.riscv64               0.1.19-1.oe2303                 @mainline
+python3-libdnf.riscv64                 0.69.0-3.oe2303                 @mainline
+python3-pynacl.riscv64                 1.5.0-1.oe2303                  @mainline
+python3-rpm.riscv64                    4.18.0-6.oe2303                 @mainline
+python3-unbound.riscv64                1.17.0-2.oe2303                 @mainline
+readline.riscv64                       8.2-2.oe2303                    @mainline
+rpm.riscv64                            4.18.0-6.oe2303                 @mainline
+rpm-build.riscv64                      4.18.0-6.oe2303                 @mainline
+rpm-libs.riscv64                       4.18.0-6.oe2303                 @mainline
+screen.riscv64                         1:4.9.0-1.oe2303                @mainline
+sed.riscv64                            4.9-1.oe2303                    @mainline
+shadow.riscv64                         2:4.13-2.oe2303                 @mainline
+shadow-subid-devel.riscv64             2:4.13-2.oe2303                 @mainline
+shared-mime-info.riscv64               2.2-1.oe2303                    @mainline
+slang.riscv64                          2.3.3-1.oe2303                  @mainline
+sqlite.riscv64                         3.37.2-5.oe2303                 @mainline
+sudo.riscv64                           1.9.12p2-3.oe2303               @mainline
+systemd.riscv64                        249-47.oe2303                   @mainline
+systemd-libs.riscv64                   249-47.oe2303                   @mainline
+systemd-timesyncd.riscv64              249-47.oe2303                   @mainline
+systemd-udev.riscv64                   249-47.oe2303                   @mainline
+systemtap-sdt-devel.riscv64            4.5-5.oe2303                    @mainline
+tar.riscv64                            2:1.34-4.oe2303                 @mainline
+tcl.riscv64                            1:8.6.13-2.oe2303               @mainline
+texinfo.riscv64                        6.8-5.oe2303                    @mainline
+thin-provisioning-tools.riscv64        0.9.0-4.oe2303                  @mainline
+timedatex.riscv64                      0.6-3.oe2303                    @mainline
+tmux.riscv64                           3.3a-2.oe2303                   @mainline
+tpm2-tss.riscv64                       3.2.1-2.oe2303                  @mainline
+trousers.riscv64                       0.3.15-1.oe2303                 @mainline
+unbound-libs.riscv64                   1.17.0-2.oe2303                 @mainline
+unzip.riscv64                          6.0-51.oe2303                   @mainline
+util-linux.riscv64                     2.37.2-14.oe2303                @mainline
+vim-common.riscv64                     2:9.0-29.oe2303                 @mainline
+vim-enhanced.riscv64                   2:9.0-29.oe2303                 @mainline
+vim-minimal.riscv64                    2:9.0-29.oe2303                 @mainline
+wayland.riscv64                        1.21.0-2.oe2303                 @mainline
+wget.riscv64                           1.21.3-1.oe2303                 @mainline
+which.riscv64                          2.21-15.oe2303                  @mainline
+wpa_supplicant.riscv64                 1:2.10-1.oe2303                 @mainline
+xz.riscv64                             5.2.10-1.oe2303                 @mainline
+xz-libs.riscv64                        5.2.10-1.oe2303                 @mainline
+xz-lzma-compat.riscv64                 5.2.10-1.oe2303                 @mainline
+zip.riscv64                            3.0-30.oe2303                   @mainline
+zlib.riscv64                           1.2.13-1.oe2303                 @mainline
+zstd.riscv64                           1.5.2-1.oe2303                  @mainline
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ dnf list --installed
++ grep @mainline
+Warning: failed loading '/etc/yum.repos.d/openEuler.repo', skipping.
+NetworkManager.riscv64                 1:1.32.12-16.oe2303             @mainline
+NetworkManager-libnm.riscv64           1:1.32.12-16.oe2303             @mainline
+NetworkManager-wifi.riscv64            1:1.32.12-16.oe2303             @mainline
+acl.riscv64                            2.3.1-1.oe2303                  @mainline
+adwaita-cursor-theme.noarch            43-1.oe2303                     @mainline
+adwaita-icon-theme.noarch              43-1.oe2303                     @mainline
+at-spi2-atk.riscv64                    2.38.0-2.oe2303                 @mainline
+at-spi2-core.riscv64                   2.44.1-2.oe2303                 @mainline
+atk.riscv64                            2.38.0-1.oe2303                 @mainline
+attr.riscv64                           2.5.1-4.oe2303                  @mainline
+audit-libs.riscv64                     1:3.0.9-1.oe2303                @mainline
+autoconf.noarch                        2.71-3.oe2303                   @mainline
+autogen.riscv64                        5.18.16-3.oe2303                @mainline
+avahi-libs.riscv64                     0.8-14.oe2303                   @mainline
+babeltrace.riscv64                     1.5.8-6.oe2303                  @mainline
+basesystem.noarch                      12-3.oe2303                     @mainline
+bash.riscv64                           5.1.8-7.oe2303                  @mainline
+bc.riscv64                             1.07.1-12.oe2303                @mainline
+binutils.riscv64                       2.37-14.oe2303                  @mainline
+brotli.riscv64                         1.0.9-3.oe2303                  @mainline
+bsdtar.riscv64                         3.6.1-2.oe2303                  @mainline
+build.noarch                           20220429-1.oe2303               @mainline
+build-mkbaselibs.noarch                20220429-1.oe2303               @mainline
+bzip2.riscv64                          1.0.8-7.oe2303                  @mainline
+ca-certificates.noarch                 2021.2.52-2.oe2303              @mainline
+cairo.riscv64                          1.17.4-3.oe2303                 @mainline
+cairo-gobject.riscv64                  1.17.4-3.oe2303                 @mainline
+chkconfig.riscv64                      1.21-2.oe2303                   @mainline
+colord-libs.riscv64                    1.4.5-4.oe2303                  @mainline
+coreutils.riscv64                      9.0-7.oe2303                    @mainline
+cpio.riscv64                           2.13-7.oe2303                   @mainline
+cpp.riscv64                            10.3.1-25.oe2303                @mainline
+cracklib.riscv64                       2.9.8-1.oe2303                  @mainline
+cronie.riscv64                         1.6.1-3.oe2303                  @mainline
+crontabs.noarch                        1.11-23.oe2303                  @mainline
+crypto-policies.noarch                 20200619-3.git781bbd4.oe2303    @mainline
+cups-libs.riscv64                      1:2.4.0-5.oe2303                @mainline
+curl.riscv64                           7.86.0-3.oe2303                 @mainline
+cyrus-sasl-lib.riscv64                 2.1.28-1.oe2303                 @mainline
+dbus.riscv64                           1:1.14.0-2.oe2303               @mainline
+dbus-common.noarch                     1:1.14.0-2.oe2303               @mainline
+dbus-daemon.riscv64                    1:1.14.0-2.oe2303               @mainline
+dbus-libs.riscv64                      1:1.14.0-2.oe2303               @mainline
+dbus-tools.riscv64                     1:1.14.0-2.oe2303               @mainline
+dconf.riscv64                          0.40.0-3.oe2303                 @mainline
+debugedit.riscv64                      5.0-6.oe2303                    @mainline
+dejavu-fonts.noarch                    2.37-1.oe2303                   @mainline
+device-mapper.riscv64                  8:1.02.182-1.oe2303             @mainline
+device-mapper-event.riscv64            8:1.02.182-1.oe2303             @mainline
+diffutils.riscv64                      3.9-2.oe2303                    @mainline
+dnf.noarch                             4.14.0-13.oe2303                @mainline
+dnf-data.noarch                        4.14.0-13.oe2303                @mainline
+dnf-plugins-core.noarch                4.3.1-2.oe2303                  @mainline
+dosfstools.riscv64                     4.2-2.oe2303                    @mainline
+duktape.riscv64                        2.7.0-1.oe2303                  @mainline
+dwz.riscv64                            0.15-1.oe2303                   @mainline
+e2fsprogs.riscv64                      1.46.5-4.oe2303                 @mainline
+e2fsprogs-help.noarch                  1.46.5-4.oe2303                 @mainline
+efi-srpm-macros.noarch                 4-9.oe2303                      @mainline
+elfutils.riscv64                       0.187-10.oe2303                 @mainline
+elfutils-default-yama-scope.noarch     0.187-10.oe2303                 @mainline
+elfutils-extra.riscv64                 0.187-10.oe2303                 @mainline
+elfutils-libelf.riscv64                0.187-10.oe2303                 @mainline
+elfutils-libs.riscv64                  0.187-10.oe2303                 @mainline
+emacs-filesystem.noarch                1:28.2-3.oe2303                 @mainline
+expat.riscv64                          2.5.0-1.oe2303                  @mainline
+expect.riscv64                         1:5.45.4-7.oe2303               @mainline
+file.riscv64                           5.44-1.oe2303                   @mainline
+file-libs.riscv64                      5.44-1.oe2303                   @mainline
+filesystem.riscv64                     3.16-5.oe2303                   @mainline
+findutils.riscv64                      2:4.9.0-1.oe2303                @mainline
+fontconfig.riscv64                     2.14.2-1.oe2303                 @mainline
+fonts-filesystem.noarch                4.0.2-1.oe2303                  @mainline
+freetype.riscv64                       2.12.1-1.oe2303                 @mainline
+fribidi.riscv64                        1.0.12-1.oe2303                 @mainline
+fuse.riscv64                           2.9.9-11.oe2303                 @mainline
+fuse-common.riscv64                    3.13.0-1.oe2303                 @mainline
+fuse-help.riscv64                      2.9.9-11.oe2303                 @mainline
+gawk.riscv64                           5.2.0-3.oe2303                  @mainline
+gc.riscv64                             8.2.2-1.oe2303                  @mainline
+gcc.riscv64                            10.3.1-25.oe2303                @mainline
+gcc-c++.riscv64                        10.3.1-25.oe2303                @mainline
+gcc-gdb-plugin.riscv64                 10.3.1-25.oe2303                @mainline
+gcr.riscv64                            3.41.1-3.oe2303                 @mainline
+gcr-base.riscv64                       3.41.1-3.oe2303                 @mainline
+gdb.riscv64                            12.1-2.oe2303                   @mainline
+gdb-headless.riscv64                   12.1-2.oe2303                   @mainline
+gdbm.riscv64                           1:1.23-2.oe2303                 @mainline
+gdk-pixbuf2.riscv64                    2.42.10-2.oe2303                @mainline
+gdk-pixbuf2-modules.riscv64            2.42.10-2.oe2303                @mainline
+git.riscv64                            2.39.1-3.oe2303                 @mainline
+git-core.riscv64                       2.39.1-3.oe2303                 @mainline
+glib2.riscv64                          2.74.4-2.oe2303                 @mainline
+glibc.riscv64                          2.36-13.oe2303                  @mainline
+glibc-common.riscv64                   2.36-13.oe2303                  @mainline
+glibc-devel.riscv64                    2.36-13.oe2303                  @mainline
+gmp.riscv64                            1:6.2.1-3.oe2303                @mainline
+gnupg2.riscv64                         2.3.6-3.oe2303                  @mainline
+gnutls.riscv64                         3.7.8-2.oe2303                  @mainline
+gpgme.riscv64                          1.17.0-1.oe2303                 @mainline
+gpm-libs.riscv64                       1.20.7-26.oe2303                @mainline
+graphite2.riscv64                      1.3.14-6.oe2303                 @mainline
+grep.riscv64                           3.8-1.oe2303                    @mainline
+groff-base.riscv64                     1.22.4-12.oe2303                @mainline
+grubby.riscv64                         8.40-30.oe2303                  @mainline
+gtk-update-icon-cache.riscv64          3.24.36-1.oe2303                @mainline
+gtk2.riscv64                           2.24.33-7.oe2303                @mainline
+gtk3.riscv64                           3.24.36-1.oe2303                @mainline
+guile.riscv64                          5:2.2.7-2.oe2303                @mainline
+gzip.riscv64                           1.12-3.oe2303                   @mainline
+harfbuzz.riscv64                       6.0.0-1.oe2303                  @mainline
+hicolor-icon-theme.noarch              0.17-7.oe2303                   @mainline
+hostname.riscv64                       3.23-1.oe2303                   @mainline
+ima-evm-utils-libs.riscv64             1.4-1.oe2303                    @mainline
+info.riscv64                           6.8-5.oe2303                    @mainline
+iproute.riscv64                        1:6.1.0-6.oe2303                @mainline
+iptables-libs.riscv64                  1.8.9-1.oe2303                  @mainline
+iputils.riscv64                        20221126-1.oe2303               @mainline
+jansson.riscv64                        2.14-3.oe2303                   @mainline
+jbigkit-libs.riscv64                   2.1-21.oe2303                   @mainline
+json-c.riscv64                         0.16-2.oe2303                   @mainline
+kbd.riscv64                            2.5.1-1.oe2303                  @mainline
+kbd-legacy.noarch                      2.5.1-1.oe2303                  @mainline
+kbd-misc.noarch                        2.5.1-1.oe2303                  @mainline
+kernel.riscv64                         6.1.8-3.oe2303                  @mainline
+kernel-devel.riscv64                   6.1.8-3.oe2303                  @mainline
+keyutils-libs.riscv64                  1.6.3-5.oe2303                  @mainline
+kmod.riscv64                           30-2.oe2303                     @mainline
+kmod-libs.riscv64                      30-2.oe2303                     @mainline
+krb5-libs.riscv64                      1.20.1-1.oe2303                 @mainline
+lcms2.riscv64                          2.13.1-2.oe2303                 @mainline
+less.riscv64                           608-4.oe2303                    @mainline
+libX11.riscv64                         1.8.1-3.oe2303                  @mainline
+libXau.riscv64                         1.0.10-1.oe2303                 @mainline
+libXcomposite.riscv64                  0.4.6-1.oe2303                  @mainline
+libXcursor.riscv64                     1.2.1-1.oe2303                  @mainline
+libXdamage.riscv64                     1.1.6-1.oe2303                  @mainline
+libXext.riscv64                        1.3.5-1.oe2303                  @mainline
+libXfixes.riscv64                      6.0.0-2.oe2303                  @mainline
+libXft.riscv64                         2.3.7-1.oe2303                  @mainline
+libXi.riscv64                          1.8-2.oe2303                    @mainline
+libXinerama.riscv64                    1.1.5-1.oe2303                  @mainline
+libXrandr.riscv64                      1.5.3-1.oe2303                  @mainline
+libXrender.riscv64                     0.9.11-1.oe2303                 @mainline
+libXtst.riscv64                        1.2.4-1.oe2303                  @mainline
+libacl.riscv64                         2.3.1-1.oe2303                  @mainline
+libaio.riscv64                         0.3.113-7.oe2303                @mainline
+libarchive.riscv64                     3.6.1-2.oe2303                  @mainline
+libassuan.riscv64                      2.5.5-2.oe2303                  @mainline
+libatomic.riscv64                      10.3.1-25.oe2303                @mainline
+libblkid.riscv64                       2.37.2-14.oe2303                @mainline
+libbpf.riscv64                         2:0.8.1-4.oe2303                @mainline
+libcap.riscv64                         2.66-1.oe2303                   @mainline
+libcap-ng.riscv64                      0.8.3-1.oe2303                  @mainline
+libcomps.riscv64                       0.1.19-1.oe2303                 @mainline
+libcurl.riscv64                        7.86.0-3.oe2303                 @mainline
+libdaemon.riscv64                      0.14-21.oe2303                  @mainline
+libdatrie.riscv64                      0.2.13-1.oe2303                 @mainline
+libdnf.riscv64                         0.69.0-3.oe2303                 @mainline
+libedit.riscv64                        3.1-29.oe2303                   @mainline
+libepoxy.riscv64                       1.5.10-2.oe2303                 @mainline
+libev.riscv64                          4.33-3.oe2303                   @mainline
+libevent.riscv64                       2.1.12-7.oe2303                 @mainline
+libfdisk.riscv64                       2.37.2-14.oe2303                @mainline
+libffi.riscv64                         3.4.4-1.oe2303                  @mainline
+libgcc.riscv64                         10.3.1-25.oe2303                @mainline
+libgcrypt.riscv64                      1.9.4-1.oe2303                  @mainline
+libgomp.riscv64                        10.3.1-25.oe2303                @mainline
+libgpg-error.riscv64                   1.46-1.oe2303                   @mainline
+libgusb.riscv64                        0.3.10-1.oe2303                 @mainline
+libicu.riscv64                         72.1-5.oe2303                   @mainline
+libidn2.riscv64                        2.3.3-2.oe2303                  @mainline
+libjpeg-turbo.riscv64                  2.1.1-3.oe2303                  @mainline
+libksba.riscv64                        1.6.3-1.oe2303                  @mainline
+libmetalink.riscv64                    0.1.3-12.oe2303                 @mainline
+libmnl.riscv64                         1.0.5-1.oe2303                  @mainline
+libmodulemd.riscv64                    2.14.0-1.oe2303                 @mainline
+libmount.riscv64                       2.37.2-14.oe2303                @mainline
+libmpc.riscv64                         1.3.1-1.oe2303                  @mainline
+libndp.riscv64                         1.8-2.oe2303                    @mainline
+libnetfilter_conntrack.riscv64         1.0.9-4.oe2303                  @mainline
+libnfnetlink.riscv64                   1.0.2-1.oe2303                  @mainline
+libnghttp2.riscv64                     1.47.0-3.oe2303                 @mainline
+libnl3.riscv64                         3.7.0-1.oe2303                  @mainline
+libnsl2.riscv64                        2.0.0-5.oe2303                  @mainline
+libpcap.riscv64                        14:1.10.3-1.oe2303              @mainline
+libpipeline.riscv64                    1.5.7-1.oe2303                  @mainline
+libpng.riscv64                         2:1.6.38-2.oe2303               @mainline
+libpsl.riscv64                         0.21.2-1.oe2303                 @mainline
+libpwquality.riscv64                   1.4.5-1.oe2303                  @mainline
+librepo.riscv64                        1.15.1-1.oe2303                 @mainline
+libreport-filesystem.noarch            2.15.2-6.oe2303                 @mainline
+libseccomp.riscv64                     2.5.4-1.oe2303                  @mainline
+libsecret.riscv64                      0.20.5-1.oe2303                 @mainline
+libselinux.riscv64                     3.4-1.oe2303                    @mainline
+libsemanage.riscv64                    3.4-1.oe2303                    @mainline
+libsepol.riscv64                       3.4-1.oe2303                    @mainline
+libsigsegv.riscv64                     2.14-1.oe2303                   @mainline
+libsmartcols.riscv64                   2.37.2-14.oe2303                @mainline
+libsodium.riscv64                      1.0.18-1.oe2303                 @mainline
+libsolv.riscv64                        0.7.22-1.oe2303                 @mainline
+libssh.riscv64                         0.10.4-1.oe2303                 @mainline
+libstdc++.riscv64                      10.3.1-25.oe2303                @mainline
+libstdc++-devel.riscv64                10.3.1-25.oe2303                @mainline
+libtasn1.riscv64                       4.17.0-3.oe2303                 @mainline
+libteam.riscv64                        1.31-2.oe2303                   @mainline
+libthai.riscv64                        0.1.29-1.oe2303                 @mainline
+libtiff.riscv64                        4.5.0-3.oe2303                  @mainline
+libtirpc.riscv64                       1.3.3-2.oe2303                  @mainline
+libtool-ltdl.riscv64                   2.4.7-2.oe2303                  @mainline
+libunistring.riscv64                   1.1-2.oe2303                    @mainline
+libusbx.riscv64                        1.0.26-1.oe2303                 @mainline
+libuser.riscv64                        0.63-5.oe2303                   @mainline
+libutempter.riscv64                    1.2.1-3.oe2303                  @mainline
+libuuid.riscv64                        2.37.2-14.oe2303                @mainline
+libverto.riscv64                       0.3.2-2.oe2303                  @mainline
+libxcb.riscv64                         1.15-1.oe2303                   @mainline
+libxcrypt.riscv64                      4.4.33-1.oe2303                 @mainline
+libxcrypt-devel.riscv64                4.4.33-1.oe2303                 @mainline
+libxkbcommon.riscv64                   1.5.0-1.oe2303                  @mainline
+libxml2.riscv64                        2.9.14-7.oe2303                 @mainline
+libyaml.riscv64                        0.2.5-4.oe2303                  @mainline
+logrotate.riscv64                      3.20.1-1.oe2303                 @mainline
+lrzsz.riscv64                          0.12.20-46.oe2303               @mainline
+lua.riscv64                            5.4.4-1.oe2303                  @mainline
+lvm2.riscv64                           8:2.03.18-1.oe2303              @mainline
+lvm2-help.noarch                       8:2.03.18-1.oe2303              @mainline
+lz4.riscv64                            1.9.4-2.oe2303                  @mainline
+m4.riscv64                             1.4.19-3.oe2303                 @mainline
+make.riscv64                           1:4.4-2.oe2303                  @mainline
+man-db.riscv64                         2.11.0-1.oe2303                 @mainline
+mpfr.riscv64                           4.1.0-3.oe2303                  @mainline
+nano.riscv64                           4.9.3-2.oe2303                  @mainline
+ncurses.riscv64                        6.4-1.oe2303                    @mainline
+ncurses-base.noarch                    6.4-1.oe2303                    @mainline
+ncurses-libs.riscv64                   6.4-1.oe2303                    @mainline
+net-tools.riscv64                      2.10-3.oe2303                   @mainline
+nettle.riscv64                         3.8.1-1.oe2303                  @mainline
+newt.riscv64                           0.52.23-1.oe2303                @mainline
+npth.riscv64                           1.6-7.oe2303                    @mainline
+ntp.riscv64                            4.2.8p15-7.oe2303               @mainline
+ntpstat.noarch                         0.6-4.oe2303                    @mainline
+openEuler-gpg-keys.riscv64             1.0-3.2.oe2303                  @mainline
+openEuler-release.riscv64              23.03-54.oe2303                 @mainline
+openEuler-repos.riscv64                1.0-3.2.oe2303                  @mainline
+openEuler-rpm-config.riscv64           30-37.oe2303                    @mainline
+openldap.riscv64                       2.6.3-2.oe2303                  @mainline
+openslp.riscv64                        1:2.0.0-27.oe2303               @mainline
+openssh.riscv64                        9.1p1-3.oe2303                  @mainline
+openssh-clients.riscv64                9.1p1-3.oe2303                  @mainline
+openssh-server.riscv64                 9.1p1-3.oe2303                  @mainline
+openssl.riscv64                        1:3.0.8-3.oe2303                @mainline
+openssl-libs.riscv64                   1:3.0.8-3.oe2303                @mainline
+openssl-pkcs11.riscv64                 0.4.12-2.oe2303                 @mainline
+p11-kit.riscv64                        0.24.1-1.oe2303                 @mainline
+p11-kit-trust.riscv64                  0.24.1-1.oe2303                 @mainline
+pam.riscv64                            1.5.2-4.oe2303                  @mainline
+pango.riscv64                          1.50.12-1.oe2303                @mainline
+parted.riscv64                         3.5-1.oe2303                    @mainline
+passwd.riscv64                         0.80-10.oe2303                  @mainline
+patch.riscv64                          2.7.6-20.oe2303                 @mainline
+pcre.riscv64                           8.45-5.oe2303                   @mainline
+pcre2.riscv64                          10.42-1.oe2303                  @mainline
+perl.riscv64                           4:5.34.0-4.oe2303               @mainline
+perl-Algorithm-Diff.noarch             1:1.201-2.oe2303                @mainline
+perl-Archive-Tar.noarch                2.40-2.oe2303                   @mainline
+perl-B-Debug.noarch                    1.26-6.oe2303                   @mainline
+perl-CPAN-Meta.noarch                  2.150010-420.oe2303             @mainline
+perl-CPAN-Meta-Requirements.noarch     2.140-420.oe2303                @mainline
+perl-CPAN-Meta-YAML.noarch             0.018-421.oe2303                @mainline
+perl-Carp.noarch                       1.50-419.oe2303                 @mainline
+perl-Class-Inspector.noarch            1.36-2.oe2303                   @mainline
+perl-Compress-Raw-Bzip2.riscv64        2.201-1.oe2303                  @mainline
+perl-Compress-Raw-Zlib.riscv64         1:2.202-1.oe2303                @mainline
+perl-Config-Perl-V.noarch              0.33-2.oe2303                   @mainline
+perl-Data-Dumper.riscv64               2.183-2.oe2303                  @mainline
+perl-Devel-PPPort.riscv64              3.63-2.oe2303                   @mainline
+perl-Digest.noarch                     1.20-3.oe2303                   @mainline
+perl-Digest-MD5.riscv64                2.58-2.oe2303                   @mainline
+perl-Digest-SHA.riscv64                1:6.02-8.oe2303                 @mainline
+perl-Encode.riscv64                    4:3.16-2.oe2303                 @mainline
+perl-Encode-Locale.noarch              1.05-14.oe2303                  @mainline
+perl-Encode-devel.riscv64              4:3.16-2.oe2303                 @mainline
+perl-Env.noarch                        1.04-398.oe2303                 @mainline
+perl-Error.noarch                      1:0.17029-3.oe2303              @mainline
+perl-Exporter.noarch                   5.74-2.oe2303                   @mainline
+perl-ExtUtils-Command.noarch           1:7.62-2.oe2303                 @mainline
+perl-ExtUtils-Install.noarch           2.20-2.oe2303                   @mainline
+perl-ExtUtils-MakeMaker.noarch         1:7.62-2.oe2303                 @mainline
+perl-ExtUtils-Manifest.noarch          1:1.73-2.oe2303                 @mainline
+perl-ExtUtils-ParseXS.noarch           2:3.35-2.oe2303                 @mainline
+perl-File-Fetch.noarch                 1.04-1.oe2303                   @mainline
+perl-File-Path.noarch                  2.18-2.oe2303                   @mainline
+perl-File-ShareDir.noarch              1.118-2.oe2303                  @mainline
+perl-File-Temp.noarch                  1:0.2311-3.oe2303               @mainline
+perl-Filter.riscv64                    2:1.64-1.oe2303                 @mainline
+perl-Filter-Simple.noarch              1:0.94-1.oe2303                 @mainline
+perl-Getopt-Long.noarch                1:2.52-2.oe2303                 @mainline
+perl-Git.noarch                        2.39.1-3.oe2303                 @mainline
+perl-HTTP-Tiny.noarch                  0.080-1.oe2303                  @mainline
+perl-IO-Compress.noarch                2.201-1.oe2303                  @mainline
+perl-IO-Socket-IP.noarch               0.41-3.oe2303                   @mainline
+perl-IO-Socket-SSL.noarch              2.081-1.oe2303                  @mainline
+perl-IPC-Cmd.noarch                    2:1.04-4.oe2303                 @mainline
+perl-IPC-SysV.riscv64                  2.09-2.oe2303                   @mainline
+perl-IPC-System-Simple.noarch          1.30-3.oe2303                   @mainline
+perl-JSON-PP.noarch                    1:4.12-2.oe2303                 @mainline
+perl-Locale-Codes.noarch               3.68-2.oe2303                   @mainline
+perl-Locale-Maketext.noarch            1:1.29-2.oe2303                 @mainline
+perl-MIME-Base64.riscv64               3.16-2.oe2303                   @mainline
+perl-Math-BigInt.noarch                1:1.9998.27-2.oe2303            @mainline
+perl-Math-BigInt-FastCalc.riscv64      0.5012-3.oe2303                 @mainline
+perl-Math-BigRat.noarch                0.2620-2.oe2303                 @mainline
+perl-Module-CoreList.noarch            1:5.20211020-2.oe2303           @mainline
+perl-Module-Load.noarch                1:0.36-2.oe2303                 @mainline
+perl-Module-Load-Conditional.noarch    0.74-2.oe2303                   @mainline
+perl-Module-Metadata.noarch            1.000037-2.oe2303               @mainline
+perl-Mozilla-CA.noarch                 1:20211001-2.oe2303             @mainline
+perl-Net-SSLeay.riscv64                1.92-2.oe2303                   @mainline
+perl-Params-Check.noarch               1:0.38-419.oe2303               @mainline
+perl-PathTools.riscv64                 3.80-2.oe2303                   @mainline
+perl-Perl-OSType.noarch                1.010-422.oe2303                @mainline
+perl-PerlIO-via-QuotedPrint.noarch     0.10-1.oe2303                   @mainline
+perl-Pod-Checker.noarch                4:1.74-2.oe2303                 @mainline
+perl-Pod-Escapes.noarch                1:1.07_01-1.oe2303              @mainline
+perl-Pod-Parser.noarch                 1.63-399.oe2303                 @mainline
+perl-Pod-Perldoc.noarch                1:3.28-5.oe2303                 @mainline
+perl-Pod-Simple.noarch                 1:3.43-2.oe2303                 @mainline
+perl-Pod-Usage.noarch                  4:2.03-2.oe2303                 @mainline
+perl-Scalar-List-Utils.riscv64         4:1.60-2.oe2303                 @mainline
+perl-Socket.riscv64                    4:2.032-2.oe2303                @mainline
+perl-Storable.riscv64                  1:3.25-3.oe2303                 @mainline
+perl-Sys-Syslog.riscv64                0.36-2.oe2303                   @mainline
+perl-Term-ANSIColor.noarch             5.01-2.oe2303                   @mainline
+perl-Term-Cap.noarch                   1.17-511.oe2303                 @mainline
+perl-TermReadKey.riscv64               2.38-2.oe2303                   @mainline
+perl-Test-Harness.noarch               2:3.44-1.oe2303                 @mainline
+perl-Test-Simple.noarch                2:1.302188-2.oe2303             @mainline
+perl-Text-Balanced.noarch              2.06-1.oe2303                   @mainline
+perl-Text-Diff.noarch                  1.45-8.oe2303                   @mainline
+perl-Text-ParseWords.noarch            3.30-420.oe2303                 @mainline
+perl-Text-Tabs+Wrap.noarch             2021.0814-2.oe2303              @mainline
+perl-Text-Unidecode.noarch             1.30-9.oe2303                   @mainline
+perl-Thread-Queue.noarch               3.13-4.oe2303                   @mainline
+perl-Time-HiRes.riscv64                4:1.9767-3.oe2303               @mainline
+perl-Time-Local.noarch                 2:1.300-2.oe2303                @mainline
+perl-TimeDate.noarch                   1:2.33-4.oe2303                 @mainline
+perl-URI.noarch                        5.10-2.oe2303                   @mainline
+perl-Unicode-Collate.riscv64           1.31-2.oe2303                   @mainline
+perl-Unicode-EastAsianWidth.noarch     12.0-2.oe2303                   @mainline
+perl-Unicode-Normalize.riscv64         1.28-2.oe2303                   @mainline
+perl-XML-Parser.riscv64                1:2.46-2.oe2303                 @mainline
+perl-autodie.noarch                    2.34-3.oe2303                   @mainline
+perl-bignum.noarch                     0.63-2.oe2303                   @mainline
+perl-constant.noarch                   1.33-422.oe2303                 @mainline
+perl-devel.riscv64                     4:5.34.0-4.oe2303               @mainline
+perl-experimental.noarch               0.030-1.oe2303                  @mainline
+perl-libintl-perl.riscv64              1.31-3.oe2303                   @mainline
+perl-libnet.noarch                     3.14-2.oe2303                   @mainline
+perl-libs.riscv64                      4:5.34.0-4.oe2303               @mainline
+perl-parent.noarch                     1:0.238-2.oe2303                @mainline
+perl-perlfaq.noarch                    5.20210520-2.oe2303             @mainline
+perl-podlators.noarch                  1:4.14-2.oe2303                 @mainline
+perl-threads.riscv64                   2:2.26-2.oe2303                 @mainline
+perl-threads-shared.riscv64            1.62-2.oe2303                   @mainline
+perl-version.riscv64                   8:0.99.29-2.oe2303              @mainline
+pinentry.riscv64                       1.1.1-3.oe2303                  @mainline
+pixman.riscv64                         0.42.2-1.oe2303                 @mainline
+pkgconf.riscv64                        1.8.0-3.oe2303                  @mainline
+polkit.riscv64                         122-2.oe2303                    @mainline
+polkit-libs.riscv64                    122-2.oe2303                    @mainline
+polkit-pkla-compat.riscv64             0.1-21.oe2303                   @mainline
+popt.riscv64                           1.19-2.oe2303                   @mainline
+procps-ng.riscv64                      4.0.2-1.oe2303                  @mainline
+psmisc.riscv64                         23.6-1.oe2303                   @mainline
+publicsuffix-list.noarch               20211113-3.oe2303               @mainline
+python-pip-wheel.noarch                22.3.1-1.oe2303                 @mainline
+python-setuptools.noarch               60.9.3-2.oe2303                 @mainline
+python3.riscv64                        3.10.9-1.oe2303                 @mainline
+python3-asn1crypto.noarch              1.5.1-1.oe2303                  @mainline
+python3-bcrypt.riscv64                 3.2.0-2.oe2303                  @mainline
+python3-cffi.riscv64                   1.15.1-1.oe2303                 @mainline
+python3-cryptography.riscv64           39.0.0-2.oe2303                 @mainline
+python3-dateutil.noarch                1:2.8.2-3.oe2303                @mainline
+python3-dbus.riscv64                   1.3.2-1.oe2303                  @mainline
+python3-distro.noarch                  1.6.0-2.oe2303                  @mainline
+python3-dnf.noarch                     4.14.0-13.oe2303                @mainline
+python3-dnf-plugins-core.noarch        4.3.1-2.oe2303                  @mainline
+python3-gpgme.riscv64                  1.17.0-1.oe2303                 @mainline
+python3-hawkey.riscv64                 0.69.0-3.oe2303                 @mainline
+python3-idna.noarch                    3.3-2.oe2303                    @mainline
+python3-libcomps.riscv64               0.1.19-1.oe2303                 @mainline
+python3-libdnf.riscv64                 0.69.0-3.oe2303                 @mainline
+python3-paramiko.noarch                2.11.0-1.oe2303                 @mainline
+python3-pip.noarch                     22.3.1-1.oe2303                 @mainline
+python3-ply.noarch                     3.11-3.oe2303                   @mainline
+python3-pyasn1.noarch                  0.4.8-4.oe2303                  @mainline
+python3-pycparser.noarch               2.21-2.oe2303                   @mainline
+python3-pynacl.riscv64                 1.5.0-1.oe2303                  @mainline
+python3-pyparsing.noarch               3.0.7-1.oe2303                  @mainline
+python3-rpm.riscv64                    4.18.0-6.oe2303                 @mainline
+python3-setuptools.noarch              60.9.3-2.oe2303                 @mainline
+python3-six.noarch                     1.16.0-3.oe2303                 @mainline
+python3-unbound.riscv64                1.17.0-2.oe2303                 @mainline
+qt5-srpm-macros.noarch                 5.15.2-1.oe2303                 @mainline
+readline.riscv64                       8.2-2.oe2303                    @mainline
+rootfiles.noarch                       8.1-25.oe2303                   @mainline
+rpm.riscv64                            4.18.0-6.oe2303                 @mainline
+rpm-build.riscv64                      4.18.0-6.oe2303                 @mainline
+rpm-libs.riscv64                       4.18.0-6.oe2303                 @mainline
+screen.riscv64                         1:4.9.0-1.oe2303                @mainline
+sed.riscv64                            4.9-1.oe2303                    @mainline
+setup.noarch                           2.14.3-1.oe2303                 @mainline
+shadow.riscv64                         2:4.13-2.oe2303                 @mainline
+shadow-subid-devel.riscv64             2:4.13-2.oe2303                 @mainline
+shared-mime-info.riscv64               2.2-1.oe2303                    @mainline
+slang.riscv64                          2.3.3-1.oe2303                  @mainline
+sqlite.riscv64                         3.37.2-5.oe2303                 @mainline
+sudo.riscv64                           1.9.12p2-3.oe2303               @mainline
+systemd.riscv64                        249-47.oe2303                   @mainline
+systemd-libs.riscv64                   249-47.oe2303                   @mainline
+systemd-timesyncd.riscv64              249-47.oe2303                   @mainline
+systemd-udev.riscv64                   249-47.oe2303                   @mainline
+systemtap-sdt-devel.riscv64            4.5-5.oe2303                    @mainline
+tar.riscv64                            2:1.34-4.oe2303                 @mainline
+tcl.riscv64                            1:8.6.13-2.oe2303               @mainline
+texinfo.riscv64                        6.8-5.oe2303                    @mainline
+thin-provisioning-tools.riscv64        0.9.0-4.oe2303                  @mainline
+thin-provisioning-tools-help.noarch    0.9.0-4.oe2303                  @mainline
+timedatex.riscv64                      0.6-3.oe2303                    @mainline
+tmux.riscv64                           3.3a-2.oe2303                   @mainline
+tpm2-tss.riscv64                       3.2.1-2.oe2303                  @mainline
+trousers.riscv64                       0.3.15-1.oe2303                 @mainline
+tzdata.noarch                          2022g-3.oe2303                  @mainline
+unbound-libs.riscv64                   1.17.0-2.oe2303                 @mainline
+unzip.riscv64                          6.0-51.oe2303                   @mainline
+util-linux.riscv64                     2.37.2-14.oe2303                @mainline
+vim-common.riscv64                     2:9.0-29.oe2303                 @mainline
+vim-enhanced.riscv64                   2:9.0-29.oe2303                 @mainline
+vim-filesystem.noarch                  2:9.0-29.oe2303                 @mainline
+vim-minimal.riscv64                    2:9.0-29.oe2303                 @mainline
+wayland.riscv64                        1.21.0-2.oe2303                 @mainline
+wget.riscv64                           1.21.3-1.oe2303                 @mainline
+which.riscv64                          2.21-15.oe2303                  @mainline
+wpa_supplicant.riscv64                 1:2.10-1.oe2303                 @mainline
+xkeyboard-config.noarch                2.38-1.oe2303                   @mainline
+xz.riscv64                             5.2.10-1.oe2303                 @mainline
+xz-libs.riscv64                        5.2.10-1.oe2303                 @mainline
+xz-lzma-compat.riscv64                 5.2.10-1.oe2303                 @mainline
+yum.noarch                             4.14.0-13.oe2303                @mainline
+zip.riscv64                            3.0-30.oe2303                   @mainline
+zlib.riscv64                           1.2.13-1.oe2303                 @mainline
+zstd.riscv64                           1.5.2-1.oe2303                  @mainline
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ dnf list --available
++ grep riscv64
+Warning: failed loading '/etc/yum.repos.d/openEuler.repo', skipping.
++ CHECK_RESULT 1
++ actual_result=1
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 0 -eq 0 ']'
++ test 1x '!=' 0x
++ test -n ''
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_dnf_list_mark.sh line 35'
++ message='oe_test_dnf_list_mark.sh line 35'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_dnf_list_mark.sh line 35'
+Tue May 16 15:52:14 2023 - ERROR - oe_test_dnf_list_mark.sh line 35
++ '[' 0 -eq 1 ']'
++ return 0
++ dnf list --extras
+Warning: failed loading '/etc/yum.repos.d/openEuler.repo', skipping.
+Extra Packages
+NetworkManager.riscv64                 1:1.32.12-16.oe2303             @mainline
+NetworkManager-libnm.riscv64           1:1.32.12-16.oe2303             @mainline
+NetworkManager-wifi.riscv64            1:1.32.12-16.oe2303             @mainline
+acl.riscv64                            2.3.1-1.oe2303                  @mainline
+adwaita-cursor-theme.noarch            43-1.oe2303                     @mainline
+adwaita-icon-theme.noarch              43-1.oe2303                     @mainline
+at-spi2-atk.riscv64                    2.38.0-2.oe2303                 @mainline
+at-spi2-core.riscv64                   2.44.1-2.oe2303                 @mainline
+atk.riscv64                            2.38.0-1.oe2303                 @mainline
+attr.riscv64                           2.5.1-4.oe2303                  @mainline
+audit-libs.riscv64                     1:3.0.9-1.oe2303                @mainline
+autoconf.noarch                        2.71-3.oe2303                   @mainline
+autogen.riscv64                        5.18.16-3.oe2303                @mainline
+avahi-libs.riscv64                     0.8-14.oe2303                   @mainline
+babeltrace.riscv64                     1.5.8-6.oe2303                  @mainline
+basesystem.noarch                      12-3.oe2303                     @mainline
+bash.riscv64                           5.1.8-7.oe2303                  @mainline
+bc.riscv64                             1.07.1-12.oe2303                @mainline
+binutils.riscv64                       2.37-14.oe2303                  @mainline
+brotli.riscv64                         1.0.9-3.oe2303                  @mainline
+bsdtar.riscv64                         3.6.1-2.oe2303                  @mainline
+build.noarch                           20220429-1.oe2303               @mainline
+build-mkbaselibs.noarch                20220429-1.oe2303               @mainline
+bzip2.riscv64                          1.0.8-7.oe2303                  @mainline
+ca-certificates.noarch                 2021.2.52-2.oe2303              @mainline
+cairo.riscv64                          1.17.4-3.oe2303                 @mainline
+cairo-gobject.riscv64                  1.17.4-3.oe2303                 @mainline
+chkconfig.riscv64                      1.21-2.oe2303                   @mainline
+colord-libs.riscv64                    1.4.5-4.oe2303                  @mainline
+coreutils.riscv64                      9.0-7.oe2303                    @mainline
+cpio.riscv64                           2.13-7.oe2303                   @mainline
+cpp.riscv64                            10.3.1-25.oe2303                @mainline
+cracklib.riscv64                       2.9.8-1.oe2303                  @mainline
+cronie.riscv64                         1.6.1-3.oe2303                  @mainline
+crontabs.noarch                        1.11-23.oe2303                  @mainline
+crypto-policies.noarch                 20200619-3.git781bbd4.oe2303    @mainline
+cups-libs.riscv64                      1:2.4.0-5.oe2303                @mainline
+curl.riscv64                           7.86.0-3.oe2303                 @mainline
+cyrus-sasl-lib.riscv64                 2.1.28-1.oe2303                 @mainline
+dbus.riscv64                           1:1.14.0-2.oe2303               @mainline
+dbus-common.noarch                     1:1.14.0-2.oe2303               @mainline
+dbus-daemon.riscv64                    1:1.14.0-2.oe2303               @mainline
+dbus-libs.riscv64                      1:1.14.0-2.oe2303               @mainline
+dbus-tools.riscv64                     1:1.14.0-2.oe2303               @mainline
+dconf.riscv64                          0.40.0-3.oe2303                 @mainline
+debugedit.riscv64                      5.0-6.oe2303                    @mainline
+dejavu-fonts.noarch                    2.37-1.oe2303                   @mainline
+device-mapper.riscv64                  8:1.02.182-1.oe2303             @mainline
+device-mapper-event.riscv64            8:1.02.182-1.oe2303             @mainline
+diffutils.riscv64                      3.9-2.oe2303                    @mainline
+dnf.noarch                             4.14.0-13.oe2303                @mainline
+dnf-data.noarch                        4.14.0-13.oe2303                @mainline
+dnf-plugins-core.noarch                4.3.1-2.oe2303                  @mainline
+dosfstools.riscv64                     4.2-2.oe2303                    @mainline
+duktape.riscv64                        2.7.0-1.oe2303                  @mainline
+dwz.riscv64                            0.15-1.oe2303                   @mainline
+e2fsprogs.riscv64                      1.46.5-4.oe2303                 @mainline
+e2fsprogs-help.noarch                  1.46.5-4.oe2303                 @mainline
+efi-srpm-macros.noarch                 4-9.oe2303                      @mainline
+elfutils.riscv64                       0.187-10.oe2303                 @mainline
+elfutils-default-yama-scope.noarch     0.187-10.oe2303                 @mainline
+elfutils-extra.riscv64                 0.187-10.oe2303                 @mainline
+elfutils-libelf.riscv64                0.187-10.oe2303                 @mainline
+elfutils-libs.riscv64                  0.187-10.oe2303                 @mainline
+emacs-filesystem.noarch                1:28.2-3.oe2303                 @mainline
+expat.riscv64                          2.5.0-1.oe2303                  @mainline
+expect.riscv64                         1:5.45.4-7.oe2303               @mainline
+file.riscv64                           5.44-1.oe2303                   @mainline
+file-libs.riscv64                      5.44-1.oe2303                   @mainline
+filesystem.riscv64                     3.16-5.oe2303                   @mainline
+findutils.riscv64                      2:4.9.0-1.oe2303                @mainline
+fontconfig.riscv64                     2.14.2-1.oe2303                 @mainline
+fonts-filesystem.noarch                4.0.2-1.oe2303                  @mainline
+freetype.riscv64                       2.12.1-1.oe2303                 @mainline
+fribidi.riscv64                        1.0.12-1.oe2303                 @mainline
+fuse.riscv64                           2.9.9-11.oe2303                 @mainline
+fuse-common.riscv64                    3.13.0-1.oe2303                 @mainline
+fuse-help.riscv64                      2.9.9-11.oe2303                 @mainline
+gawk.riscv64                           5.2.0-3.oe2303                  @mainline
+gc.riscv64                             8.2.2-1.oe2303                  @mainline
+gcc.riscv64                            10.3.1-25.oe2303                @mainline
+gcc-c++.riscv64                        10.3.1-25.oe2303                @mainline
+gcc-gdb-plugin.riscv64                 10.3.1-25.oe2303                @mainline
+gcr.riscv64                            3.41.1-3.oe2303                 @mainline
+gcr-base.riscv64                       3.41.1-3.oe2303                 @mainline
+gdb.riscv64                            12.1-2.oe2303                   @mainline
+gdb-headless.riscv64                   12.1-2.oe2303                   @mainline
+gdbm.riscv64                           1:1.23-2.oe2303                 @mainline
+gdk-pixbuf2.riscv64                    2.42.10-2.oe2303                @mainline
+gdk-pixbuf2-modules.riscv64            2.42.10-2.oe2303                @mainline
+git.riscv64                            2.39.1-3.oe2303                 @mainline
+git-core.riscv64                       2.39.1-3.oe2303                 @mainline
+glib2.riscv64                          2.74.4-2.oe2303                 @mainline
+glibc.riscv64                          2.36-13.oe2303                  @mainline
+glibc-common.riscv64                   2.36-13.oe2303                  @mainline
+glibc-devel.riscv64                    2.36-13.oe2303                  @mainline
+gmp.riscv64                            1:6.2.1-3.oe2303                @mainline
+gnupg2.riscv64                         2.3.6-3.oe2303                  @mainline
+gnutls.riscv64                         3.7.8-2.oe2303                  @mainline
+gpgme.riscv64                          1.17.0-1.oe2303                 @mainline
+gpm-libs.riscv64                       1.20.7-26.oe2303                @mainline
+graphite2.riscv64                      1.3.14-6.oe2303                 @mainline
+grep.riscv64                           3.8-1.oe2303                    @mainline
+groff-base.riscv64                     1.22.4-12.oe2303                @mainline
+grubby.riscv64                         8.40-30.oe2303                  @mainline
+gtk-update-icon-cache.riscv64          3.24.36-1.oe2303                @mainline
+gtk2.riscv64                           2.24.33-7.oe2303                @mainline
+gtk3.riscv64                           3.24.36-1.oe2303                @mainline
+guile.riscv64                          5:2.2.7-2.oe2303                @mainline
+gzip.riscv64                           1.12-3.oe2303                   @mainline
+harfbuzz.riscv64                       6.0.0-1.oe2303                  @mainline
+hicolor-icon-theme.noarch              0.17-7.oe2303                   @mainline
+hostname.riscv64                       3.23-1.oe2303                   @mainline
+ima-evm-utils-libs.riscv64             1.4-1.oe2303                    @mainline
+info.riscv64                           6.8-5.oe2303                    @mainline
+iproute.riscv64                        1:6.1.0-6.oe2303                @mainline
+iptables-libs.riscv64                  1.8.9-1.oe2303                  @mainline
+iputils.riscv64                        20221126-1.oe2303               @mainline
+jansson.riscv64                        2.14-3.oe2303                   @mainline
+jbigkit-libs.riscv64                   2.1-21.oe2303                   @mainline
+json-c.riscv64                         0.16-2.oe2303                   @mainline
+kbd.riscv64                            2.5.1-1.oe2303                  @mainline
+kbd-legacy.noarch                      2.5.1-1.oe2303                  @mainline
+kbd-misc.noarch                        2.5.1-1.oe2303                  @mainline
+kernel.riscv64                         6.1.8-3.oe2303                  @mainline
+kernel-devel.riscv64                   6.1.8-3.oe2303                  @mainline
+keyutils-libs.riscv64                  1.6.3-5.oe2303                  @mainline
+kmod.riscv64                           30-2.oe2303                     @mainline
+kmod-libs.riscv64                      30-2.oe2303                     @mainline
+krb5-libs.riscv64                      1.20.1-1.oe2303                 @mainline
+lcms2.riscv64                          2.13.1-2.oe2303                 @mainline
+less.riscv64                           608-4.oe2303                    @mainline
+libX11.riscv64                         1.8.1-3.oe2303                  @mainline
+libXau.riscv64                         1.0.10-1.oe2303                 @mainline
+libXcomposite.riscv64                  0.4.6-1.oe2303                  @mainline
+libXcursor.riscv64                     1.2.1-1.oe2303                  @mainline
+libXdamage.riscv64                     1.1.6-1.oe2303                  @mainline
+libXext.riscv64                        1.3.5-1.oe2303                  @mainline
+libXfixes.riscv64                      6.0.0-2.oe2303                  @mainline
+libXft.riscv64                         2.3.7-1.oe2303                  @mainline
+libXi.riscv64                          1.8-2.oe2303                    @mainline
+libXinerama.riscv64                    1.1.5-1.oe2303                  @mainline
+libXrandr.riscv64                      1.5.3-1.oe2303                  @mainline
+libXrender.riscv64                     0.9.11-1.oe2303                 @mainline
+libXtst.riscv64                        1.2.4-1.oe2303                  @mainline
+libacl.riscv64                         2.3.1-1.oe2303                  @mainline
+libaio.riscv64                         0.3.113-7.oe2303                @mainline
+libarchive.riscv64                     3.6.1-2.oe2303                  @mainline
+libassuan.riscv64                      2.5.5-2.oe2303                  @mainline
+libatomic.riscv64                      10.3.1-25.oe2303                @mainline
+libblkid.riscv64                       2.37.2-14.oe2303                @mainline
+libbpf.riscv64                         2:0.8.1-4.oe2303                @mainline
+libcap.riscv64                         2.66-1.oe2303                   @mainline
+libcap-ng.riscv64                      0.8.3-1.oe2303                  @mainline
+libcomps.riscv64                       0.1.19-1.oe2303                 @mainline
+libcurl.riscv64                        7.86.0-3.oe2303                 @mainline
+libdaemon.riscv64                      0.14-21.oe2303                  @mainline
+libdatrie.riscv64                      0.2.13-1.oe2303                 @mainline
+libdnf.riscv64                         0.69.0-3.oe2303                 @mainline
+libedit.riscv64                        3.1-29.oe2303                   @mainline
+libepoxy.riscv64                       1.5.10-2.oe2303                 @mainline
+libev.riscv64                          4.33-3.oe2303                   @mainline
+libevent.riscv64                       2.1.12-7.oe2303                 @mainline
+libfdisk.riscv64                       2.37.2-14.oe2303                @mainline
+libffi.riscv64                         3.4.4-1.oe2303                  @mainline
+libgcc.riscv64                         10.3.1-25.oe2303                @mainline
+libgcrypt.riscv64                      1.9.4-1.oe2303                  @mainline
+libgomp.riscv64                        10.3.1-25.oe2303                @mainline
+libgpg-error.riscv64                   1.46-1.oe2303                   @mainline
+libgusb.riscv64                        0.3.10-1.oe2303                 @mainline
+libicu.riscv64                         72.1-5.oe2303                   @mainline
+libidn2.riscv64                        2.3.3-2.oe2303                  @mainline
+libjpeg-turbo.riscv64                  2.1.1-3.oe2303                  @mainline
+libksba.riscv64                        1.6.3-1.oe2303                  @mainline
+libmetalink.riscv64                    0.1.3-12.oe2303                 @mainline
+libmnl.riscv64                         1.0.5-1.oe2303                  @mainline
+libmodulemd.riscv64                    2.14.0-1.oe2303                 @mainline
+libmount.riscv64                       2.37.2-14.oe2303                @mainline
+libmpc.riscv64                         1.3.1-1.oe2303                  @mainline
+libndp.riscv64                         1.8-2.oe2303                    @mainline
+libnetfilter_conntrack.riscv64         1.0.9-4.oe2303                  @mainline
+libnfnetlink.riscv64                   1.0.2-1.oe2303                  @mainline
+libnghttp2.riscv64                     1.47.0-3.oe2303                 @mainline
+libnl3.riscv64                         3.7.0-1.oe2303                  @mainline
+libnsl2.riscv64                        2.0.0-5.oe2303                  @mainline
+libpcap.riscv64                        14:1.10.3-1.oe2303              @mainline
+libpipeline.riscv64                    1.5.7-1.oe2303                  @mainline
+libpng.riscv64                         2:1.6.38-2.oe2303               @mainline
+libpsl.riscv64                         0.21.2-1.oe2303                 @mainline
+libpwquality.riscv64                   1.4.5-1.oe2303                  @mainline
+librepo.riscv64                        1.15.1-1.oe2303                 @mainline
+libreport-filesystem.noarch            2.15.2-6.oe2303                 @mainline
+libseccomp.riscv64                     2.5.4-1.oe2303                  @mainline
+libsecret.riscv64                      0.20.5-1.oe2303                 @mainline
+libselinux.riscv64                     3.4-1.oe2303                    @mainline
+libsemanage.riscv64                    3.4-1.oe2303                    @mainline
+libsepol.riscv64                       3.4-1.oe2303                    @mainline
+libsigsegv.riscv64                     2.14-1.oe2303                   @mainline
+libsmartcols.riscv64                   2.37.2-14.oe2303                @mainline
+libsodium.riscv64                      1.0.18-1.oe2303                 @mainline
+libsolv.riscv64                        0.7.22-1.oe2303                 @mainline
+libssh.riscv64                         0.10.4-1.oe2303                 @mainline
+libstdc++.riscv64                      10.3.1-25.oe2303                @mainline
+libstdc++-devel.riscv64                10.3.1-25.oe2303                @mainline
+libtasn1.riscv64                       4.17.0-3.oe2303                 @mainline
+libteam.riscv64                        1.31-2.oe2303                   @mainline
+libthai.riscv64                        0.1.29-1.oe2303                 @mainline
+libtiff.riscv64                        4.5.0-3.oe2303                  @mainline
+libtirpc.riscv64                       1.3.3-2.oe2303                  @mainline
+libtool-ltdl.riscv64                   2.4.7-2.oe2303                  @mainline
+libunistring.riscv64                   1.1-2.oe2303                    @mainline
+libusbx.riscv64                        1.0.26-1.oe2303                 @mainline
+libuser.riscv64                        0.63-5.oe2303                   @mainline
+libutempter.riscv64                    1.2.1-3.oe2303                  @mainline
+libuuid.riscv64                        2.37.2-14.oe2303                @mainline
+libverto.riscv64                       0.3.2-2.oe2303                  @mainline
+libxcb.riscv64                         1.15-1.oe2303                   @mainline
+libxcrypt.riscv64                      4.4.33-1.oe2303                 @mainline
+libxcrypt-devel.riscv64                4.4.33-1.oe2303                 @mainline
+libxkbcommon.riscv64                   1.5.0-1.oe2303                  @mainline
+libxml2.riscv64                        2.9.14-7.oe2303                 @mainline
+libyaml.riscv64                        0.2.5-4.oe2303                  @mainline
+logrotate.riscv64                      3.20.1-1.oe2303                 @mainline
+lrzsz.riscv64                          0.12.20-46.oe2303               @mainline
+lua.riscv64                            5.4.4-1.oe2303                  @mainline
+lvm2.riscv64                           8:2.03.18-1.oe2303              @mainline
+lvm2-help.noarch                       8:2.03.18-1.oe2303              @mainline
+lz4.riscv64                            1.9.4-2.oe2303                  @mainline
+m4.riscv64                             1.4.19-3.oe2303                 @mainline
+make.riscv64                           1:4.4-2.oe2303                  @mainline
+man-db.riscv64                         2.11.0-1.oe2303                 @mainline
+mpfr.riscv64                           4.1.0-3.oe2303                  @mainline
+nano.riscv64                           4.9.3-2.oe2303                  @mainline
+ncurses.riscv64                        6.4-1.oe2303                    @mainline
+ncurses-base.noarch                    6.4-1.oe2303                    @mainline
+ncurses-libs.riscv64                   6.4-1.oe2303                    @mainline
+net-tools.riscv64                      2.10-3.oe2303                   @mainline
+nettle.riscv64                         3.8.1-1.oe2303                  @mainline
+newt.riscv64                           0.52.23-1.oe2303                @mainline
+npth.riscv64                           1.6-7.oe2303                    @mainline
+ntp.riscv64                            4.2.8p15-7.oe2303               @mainline
+ntpstat.noarch                         0.6-4.oe2303                    @mainline
+openEuler-gpg-keys.riscv64             1.0-3.2.oe2303                  @mainline
+openEuler-release.riscv64              23.03-54.oe2303                 @mainline
+openEuler-repos.riscv64                1.0-3.2.oe2303                  @mainline
+openEuler-rpm-config.riscv64           30-37.oe2303                    @mainline
+openldap.riscv64                       2.6.3-2.oe2303                  @mainline
+openslp.riscv64                        1:2.0.0-27.oe2303               @mainline
+openssh.riscv64                        9.1p1-3.oe2303                  @mainline
+openssh-clients.riscv64                9.1p1-3.oe2303                  @mainline
+openssh-server.riscv64                 9.1p1-3.oe2303                  @mainline
+openssl.riscv64                        1:3.0.8-3.oe2303                @mainline
+openssl-libs.riscv64                   1:3.0.8-3.oe2303                @mainline
+openssl-pkcs11.riscv64                 0.4.12-2.oe2303                 @mainline
+p11-kit.riscv64                        0.24.1-1.oe2303                 @mainline
+p11-kit-trust.riscv64                  0.24.1-1.oe2303                 @mainline
+pam.riscv64                            1.5.2-4.oe2303                  @mainline
+pango.riscv64                          1.50.12-1.oe2303                @mainline
+parted.riscv64                         3.5-1.oe2303                    @mainline
+passwd.riscv64                         0.80-10.oe2303                  @mainline
+patch.riscv64                          2.7.6-20.oe2303                 @mainline
+pcre.riscv64                           8.45-5.oe2303                   @mainline
+pcre2.riscv64                          10.42-1.oe2303                  @mainline
+perl.riscv64                           4:5.34.0-4.oe2303               @mainline
+perl-Algorithm-Diff.noarch             1:1.201-2.oe2303                @mainline
+perl-Archive-Tar.noarch                2.40-2.oe2303                   @mainline
+perl-B-Debug.noarch                    1.26-6.oe2303                   @mainline
+perl-CPAN-Meta.noarch                  2.150010-420.oe2303             @mainline
+perl-CPAN-Meta-Requirements.noarch     2.140-420.oe2303                @mainline
+perl-CPAN-Meta-YAML.noarch             0.018-421.oe2303                @mainline
+perl-Carp.noarch                       1.50-419.oe2303                 @mainline
+perl-Class-Inspector.noarch            1.36-2.oe2303                   @mainline
+perl-Compress-Raw-Bzip2.riscv64        2.201-1.oe2303                  @mainline
+perl-Compress-Raw-Zlib.riscv64         1:2.202-1.oe2303                @mainline
+perl-Config-Perl-V.noarch              0.33-2.oe2303                   @mainline
+perl-Data-Dumper.riscv64               2.183-2.oe2303                  @mainline
+perl-Devel-PPPort.riscv64              3.63-2.oe2303                   @mainline
+perl-Digest.noarch                     1.20-3.oe2303                   @mainline
+perl-Digest-MD5.riscv64                2.58-2.oe2303                   @mainline
+perl-Digest-SHA.riscv64                1:6.02-8.oe2303                 @mainline
+perl-Encode.riscv64                    4:3.16-2.oe2303                 @mainline
+perl-Encode-Locale.noarch              1.05-14.oe2303                  @mainline
+perl-Encode-devel.riscv64              4:3.16-2.oe2303                 @mainline
+perl-Env.noarch                        1.04-398.oe2303                 @mainline
+perl-Error.noarch                      1:0.17029-3.oe2303              @mainline
+perl-Exporter.noarch                   5.74-2.oe2303                   @mainline
+perl-ExtUtils-Command.noarch           1:7.62-2.oe2303                 @mainline
+perl-ExtUtils-Install.noarch           2.20-2.oe2303                   @mainline
+perl-ExtUtils-MakeMaker.noarch         1:7.62-2.oe2303                 @mainline
+perl-ExtUtils-Manifest.noarch          1:1.73-2.oe2303                 @mainline
+perl-ExtUtils-ParseXS.noarch           2:3.35-2.oe2303                 @mainline
+perl-File-Fetch.noarch                 1.04-1.oe2303                   @mainline
+perl-File-Path.noarch                  2.18-2.oe2303                   @mainline
+perl-File-ShareDir.noarch              1.118-2.oe2303                  @mainline
+perl-File-Temp.noarch                  1:0.2311-3.oe2303               @mainline
+perl-Filter.riscv64                    2:1.64-1.oe2303                 @mainline
+perl-Filter-Simple.noarch              1:0.94-1.oe2303                 @mainline
+perl-Getopt-Long.noarch                1:2.52-2.oe2303                 @mainline
+perl-Git.noarch                        2.39.1-3.oe2303                 @mainline
+perl-HTTP-Tiny.noarch                  0.080-1.oe2303                  @mainline
+perl-IO-Compress.noarch                2.201-1.oe2303                  @mainline
+perl-IO-Socket-IP.noarch               0.41-3.oe2303                   @mainline
+perl-IO-Socket-SSL.noarch              2.081-1.oe2303                  @mainline
+perl-IPC-Cmd.noarch                    2:1.04-4.oe2303                 @mainline
+perl-IPC-SysV.riscv64                  2.09-2.oe2303                   @mainline
+perl-IPC-System-Simple.noarch          1.30-3.oe2303                   @mainline
+perl-JSON-PP.noarch                    1:4.12-2.oe2303                 @mainline
+perl-Locale-Codes.noarch               3.68-2.oe2303                   @mainline
+perl-Locale-Maketext.noarch            1:1.29-2.oe2303                 @mainline
+perl-MIME-Base64.riscv64               3.16-2.oe2303                   @mainline
+perl-Math-BigInt.noarch                1:1.9998.27-2.oe2303            @mainline
+perl-Math-BigInt-FastCalc.riscv64      0.5012-3.oe2303                 @mainline
+perl-Math-BigRat.noarch                0.2620-2.oe2303                 @mainline
+perl-Module-CoreList.noarch            1:5.20211020-2.oe2303           @mainline
+perl-Module-Load.noarch                1:0.36-2.oe2303                 @mainline
+perl-Module-Load-Conditional.noarch    0.74-2.oe2303                   @mainline
+perl-Module-Metadata.noarch            1.000037-2.oe2303               @mainline
+perl-Mozilla-CA.noarch                 1:20211001-2.oe2303             @mainline
+perl-Net-SSLeay.riscv64                1.92-2.oe2303                   @mainline
+perl-Params-Check.noarch               1:0.38-419.oe2303               @mainline
+perl-PathTools.riscv64                 3.80-2.oe2303                   @mainline
+perl-Perl-OSType.noarch                1.010-422.oe2303                @mainline
+perl-PerlIO-via-QuotedPrint.noarch     0.10-1.oe2303                   @mainline
+perl-Pod-Checker.noarch                4:1.74-2.oe2303                 @mainline
+perl-Pod-Escapes.noarch                1:1.07_01-1.oe2303              @mainline
+perl-Pod-Parser.noarch                 1.63-399.oe2303                 @mainline
+perl-Pod-Perldoc.noarch                1:3.28-5.oe2303                 @mainline
+perl-Pod-Simple.noarch                 1:3.43-2.oe2303                 @mainline
+perl-Pod-Usage.noarch                  4:2.03-2.oe2303                 @mainline
+perl-Scalar-List-Utils.riscv64         4:1.60-2.oe2303                 @mainline
+perl-Socket.riscv64                    4:2.032-2.oe2303                @mainline
+perl-Storable.riscv64                  1:3.25-3.oe2303                 @mainline
+perl-Sys-Syslog.riscv64                0.36-2.oe2303                   @mainline
+perl-Term-ANSIColor.noarch             5.01-2.oe2303                   @mainline
+perl-Term-Cap.noarch                   1.17-511.oe2303                 @mainline
+perl-TermReadKey.riscv64               2.38-2.oe2303                   @mainline
+perl-Test-Harness.noarch               2:3.44-1.oe2303                 @mainline
+perl-Test-Simple.noarch                2:1.302188-2.oe2303             @mainline
+perl-Text-Balanced.noarch              2.06-1.oe2303                   @mainline
+perl-Text-Diff.noarch                  1.45-8.oe2303                   @mainline
+perl-Text-ParseWords.noarch            3.30-420.oe2303                 @mainline
+perl-Text-Tabs+Wrap.noarch             2021.0814-2.oe2303              @mainline
+perl-Text-Unidecode.noarch             1.30-9.oe2303                   @mainline
+perl-Thread-Queue.noarch               3.13-4.oe2303                   @mainline
+perl-Time-HiRes.riscv64                4:1.9767-3.oe2303               @mainline
+perl-Time-Local.noarch                 2:1.300-2.oe2303                @mainline
+perl-TimeDate.noarch                   1:2.33-4.oe2303                 @mainline
+perl-URI.noarch                        5.10-2.oe2303                   @mainline
+perl-Unicode-Collate.riscv64           1.31-2.oe2303                   @mainline
+perl-Unicode-EastAsianWidth.noarch     12.0-2.oe2303                   @mainline
+perl-Unicode-Normalize.riscv64         1.28-2.oe2303                   @mainline
+perl-XML-Parser.riscv64                1:2.46-2.oe2303                 @mainline
+perl-autodie.noarch                    2.34-3.oe2303                   @mainline
+perl-bignum.noarch                     0.63-2.oe2303                   @mainline
+perl-constant.noarch                   1.33-422.oe2303                 @mainline
+perl-devel.riscv64                     4:5.34.0-4.oe2303               @mainline
+perl-experimental.noarch               0.030-1.oe2303                  @mainline
+perl-libintl-perl.riscv64              1.31-3.oe2303                   @mainline
+perl-libnet.noarch                     3.14-2.oe2303                   @mainline
+perl-libs.riscv64                      4:5.34.0-4.oe2303               @mainline
+perl-parent.noarch                     1:0.238-2.oe2303                @mainline
+perl-perlfaq.noarch                    5.20210520-2.oe2303             @mainline
+perl-podlators.noarch                  1:4.14-2.oe2303                 @mainline
+perl-threads.riscv64                   2:2.26-2.oe2303                 @mainline
+perl-threads-shared.riscv64            1.62-2.oe2303                   @mainline
+perl-version.riscv64                   8:0.99.29-2.oe2303              @mainline
+pinentry.riscv64                       1.1.1-3.oe2303                  @mainline
+pixman.riscv64                         0.42.2-1.oe2303                 @mainline
+pkgconf.riscv64                        1.8.0-3.oe2303                  @mainline
+polkit.riscv64                         122-2.oe2303                    @mainline
+polkit-libs.riscv64                    122-2.oe2303                    @mainline
+polkit-pkla-compat.riscv64             0.1-21.oe2303                   @mainline
+popt.riscv64                           1.19-2.oe2303                   @mainline
+procps-ng.riscv64                      4.0.2-1.oe2303                  @mainline
+psmisc.riscv64                         23.6-1.oe2303                   @mainline
+publicsuffix-list.noarch               20211113-3.oe2303               @mainline
+python-pip-wheel.noarch                22.3.1-1.oe2303                 @mainline
+python-setuptools.noarch               60.9.3-2.oe2303                 @mainline
+python3.riscv64                        3.10.9-1.oe2303                 @mainline
+python3-asn1crypto.noarch              1.5.1-1.oe2303                  @mainline
+python3-bcrypt.riscv64                 3.2.0-2.oe2303                  @mainline
+python3-cffi.riscv64                   1.15.1-1.oe2303                 @mainline
+python3-cryptography.riscv64           39.0.0-2.oe2303                 @mainline
+python3-dateutil.noarch                1:2.8.2-3.oe2303                @mainline
+python3-dbus.riscv64                   1.3.2-1.oe2303                  @mainline
+python3-distro.noarch                  1.6.0-2.oe2303                  @mainline
+python3-dnf.noarch                     4.14.0-13.oe2303                @mainline
+python3-dnf-plugins-core.noarch        4.3.1-2.oe2303                  @mainline
+python3-gpgme.riscv64                  1.17.0-1.oe2303                 @mainline
+python3-hawkey.riscv64                 0.69.0-3.oe2303                 @mainline
+python3-idna.noarch                    3.3-2.oe2303                    @mainline
+python3-libcomps.riscv64               0.1.19-1.oe2303                 @mainline
+python3-libdnf.riscv64                 0.69.0-3.oe2303                 @mainline
+python3-paramiko.noarch                2.11.0-1.oe2303                 @mainline
+python3-pip.noarch                     22.3.1-1.oe2303                 @mainline
+python3-ply.noarch                     3.11-3.oe2303                   @mainline
+python3-pyasn1.noarch                  0.4.8-4.oe2303                  @mainline
+python3-pycparser.noarch               2.21-2.oe2303                   @mainline
+python3-pynacl.riscv64                 1.5.0-1.oe2303                  @mainline
+python3-pyparsing.noarch               3.0.7-1.oe2303                  @mainline
+python3-rpm.riscv64                    4.18.0-6.oe2303                 @mainline
+python3-setuptools.noarch              60.9.3-2.oe2303                 @mainline
+python3-six.noarch                     1.16.0-3.oe2303                 @mainline
+python3-unbound.riscv64                1.17.0-2.oe2303                 @mainline
+qt5-srpm-macros.noarch                 5.15.2-1.oe2303                 @mainline
+readline.riscv64                       8.2-2.oe2303                    @mainline
+rootfiles.noarch                       8.1-25.oe2303                   @mainline
+rpm.riscv64                            4.18.0-6.oe2303                 @mainline
+rpm-build.riscv64                      4.18.0-6.oe2303                 @mainline
+rpm-libs.riscv64                       4.18.0-6.oe2303                 @mainline
+screen.riscv64                         1:4.9.0-1.oe2303                @mainline
+sed.riscv64                            4.9-1.oe2303                    @mainline
+setup.noarch                           2.14.3-1.oe2303                 @mainline
+shadow.riscv64                         2:4.13-2.oe2303                 @mainline
+shadow-subid-devel.riscv64             2:4.13-2.oe2303                 @mainline
+shared-mime-info.riscv64               2.2-1.oe2303                    @mainline
+slang.riscv64                          2.3.3-1.oe2303                  @mainline
+sqlite.riscv64                         3.37.2-5.oe2303                 @mainline
+sudo.riscv64                           1.9.12p2-3.oe2303               @mainline
+systemd.riscv64                        249-47.oe2303                   @mainline
+systemd-libs.riscv64                   249-47.oe2303                   @mainline
+systemd-timesyncd.riscv64              249-47.oe2303                   @mainline
+systemd-udev.riscv64                   249-47.oe2303                   @mainline
+systemtap-sdt-devel.riscv64            4.5-5.oe2303                    @mainline
+tar.riscv64                            2:1.34-4.oe2303                 @mainline
+tcl.riscv64                            1:8.6.13-2.oe2303               @mainline
+texinfo.riscv64                        6.8-5.oe2303                    @mainline
+thin-provisioning-tools.riscv64        0.9.0-4.oe2303                  @mainline
+thin-provisioning-tools-help.noarch    0.9.0-4.oe2303                  @mainline
+timedatex.riscv64                      0.6-3.oe2303                    @mainline
+tmux.riscv64                           3.3a-2.oe2303                   @mainline
+tpm2-tss.riscv64                       3.2.1-2.oe2303                  @mainline
+trousers.riscv64                       0.3.15-1.oe2303                 @mainline
+tzdata.noarch                          2022g-3.oe2303                  @mainline
+unbound-libs.riscv64                   1.17.0-2.oe2303                 @mainline
+unzip.riscv64                          6.0-51.oe2303                   @mainline
+util-linux.riscv64                     2.37.2-14.oe2303                @mainline
+vim-common.riscv64                     2:9.0-29.oe2303                 @mainline
+vim-enhanced.riscv64                   2:9.0-29.oe2303                 @mainline
+vim-filesystem.noarch                  2:9.0-29.oe2303                 @mainline
+vim-minimal.riscv64                    2:9.0-29.oe2303                 @mainline
+wayland.riscv64                        1.21.0-2.oe2303                 @mainline
+wget.riscv64                           1.21.3-1.oe2303                 @mainline
+which.riscv64                          2.21-15.oe2303                  @mainline
+wpa_supplicant.riscv64                 1:2.10-1.oe2303                 @mainline
+xkeyboard-config.noarch                2.38-1.oe2303                   @mainline
+xz.riscv64                             5.2.10-1.oe2303                 @mainline
+xz-libs.riscv64                        5.2.10-1.oe2303                 @mainline
+xz-lzma-compat.riscv64                 5.2.10-1.oe2303                 @mainline
+yum.noarch                             4.14.0-13.oe2303                @mainline
+zip.riscv64                            3.0-30.oe2303                   @mainline
+zlib.riscv64                           1.2.13-1.oe2303                 @mainline
+zstd.riscv64                           1.5.2-1.oe2303                  @mainline
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ dnf list --obsoletes
+Warning: failed loading '/etc/yum.repos.d/openEuler.repo', skipping.
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ dnf list --recent
+Warning: failed loading '/etc/yum.repos.d/openEuler.repo', skipping.
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ dnf list --updates
++ grep 'Available Upgrades'
+Warning: failed loading '/etc/yum.repos.d/openEuler.repo', skipping.
++ CHECK_RESULT 1
++ actual_result=1
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 0 -eq 0 ']'
++ test 1x '!=' 0x
++ test -n ''
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_dnf_list_mark.sh line 43'
++ message='oe_test_dnf_list_mark.sh line 43'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_dnf_list_mark.sh line 43'
+Tue May 16 15:52:27 2023 - ERROR - oe_test_dnf_list_mark.sh line 43
++ '[' 0 -eq 1 ']'
++ return 0
++ dnf list --upgrades
++ grep 'Available Upgrades'
+Warning: failed loading '/etc/yum.repos.d/openEuler.repo', skipping.
++ CHECK_RESULT 1
++ actual_result=1
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 0 -eq 0 ']'
++ test 1x '!=' 0x
++ test -n ''
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_dnf_list_mark.sh line 45'
++ message='oe_test_dnf_list_mark.sh line 45'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_dnf_list_mark.sh line 45'
+Tue May 16 15:52:31 2023 - ERROR - oe_test_dnf_list_mark.sh line 45
++ '[' 0 -eq 1 ']'
++ return 0
++ dnf list --autoremove
+Warning: failed loading '/etc/yum.repos.d/openEuler.repo', skipping.
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ dnf mark install vim-common
++ grep 'marked as user installed'
+Warning: failed loading '/etc/yum.repos.d/openEuler.repo', skipping.
+vim-common-2:9.0-29.oe2303.riscv64 marked as user installed.
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ dnf -y remove vim
++ grep vim-common
+Warning: failed loading '/etc/yum.repos.d/openEuler.repo', skipping.
++ CHECK_RESULT 1 1 0
++ actual_result=1
++ expect_result=1
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 0 -eq 0 ']'
++ test 1x '!=' 1x
++ return 0
++ dnf list installed
++ grep vim-common
+Warning: failed loading '/etc/yum.repos.d/openEuler.repo', skipping.
+vim-common.riscv64                     2:9.0-29.oe2303                 @mainline
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ dnf mark remove vim-common
++ grep 'unmarked as user installed'
+Warning: failed loading '/etc/yum.repos.d/openEuler.repo', skipping.
+vim-common-2:9.0-29.oe2303.riscv64 unmarked as user installed.
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ dnf -y remove vim-common
+Warning: failed loading '/etc/yum.repos.d/openEuler.repo', skipping.
+Dependencies resolved.
+================================================================================
+ Package              Architecture  Version               Repository       Size
+================================================================================
+Removing:
+ vim-common           riscv64       2:9.0-29.oe2303       @mainline        34 M
+Removing unused dependencies:
+ vim-filesystem       noarch        2:9.0-29.oe2303       @mainline         0  
+
+Transaction Summary
+================================================================================
+Remove  2 Packages
+
+Freed space: 34 M
+Running transaction check
+Transaction check succeeded.
+Running transaction test
+Transaction test succeeded.
+Running transaction
+  Preparing        :                                                        1/1 
+  Erasing          : vim-common-2:9.0-29.oe2303.riscv64                     1/2 
+  Erasing          : vim-filesystem-2:9.0-29.oe2303.noarch                  2/2 
+  Running scriptlet: vim-filesystem-2:9.0-29.oe2303.noarch                  2/2 
+  Verifying        : vim-common-2:9.0-29.oe2303.riscv64                     1/2 
+  Verifying        : vim-filesystem-2:9.0-29.oe2303.noarch                  2/2 
+
+Removed:
+  vim-common-2:9.0-29.oe2303.riscv64    vim-filesystem-2:9.0-29.oe2303.noarch   
+
+Complete!
++ dnf -y install vim
++ grep vim-common
+Warning: failed loading '/etc/yum.repos.d/openEuler.repo', skipping.
+Error: There are no enabled repositories in "/etc/yum.repos.d", "/etc/yum/repos.d", "/etc/distro.repos.d".
++ CHECK_RESULT 1
++ actual_result=1
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 0 -eq 0 ']'
++ test 1x '!=' 0x
++ test -n ''
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_dnf_list_mark.sh line 58'
++ message='oe_test_dnf_list_mark.sh line 58'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_dnf_list_mark.sh line 58'
+Tue May 16 15:53:02 2023 - ERROR - oe_test_dnf_list_mark.sh line 58
++ '[' 0 -eq 1 ']'
++ return 0
++ LOG_INFO 'End of the test.'
++ message='End of the test.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End of the test.'
+Tue May 16 15:53:02 2023 - INFO  - End of the test.
++ CASE_RESULT 0
++ case_re=0
++ test -z 4
++ test 4 -gt 0
++ LOG_ERROR 'failed to execute the case.'
++ message='failed to execute the case.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'failed to execute the case.'
+Tue May 16 15:53:03 2023 - ERROR - failed to execute the case.
++ exit 4
++ post_test
++ LOG_INFO 'Start to restore the test environment.'
++ message='Start to restore the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to restore the test environment.'
+Tue May 16 15:53:03 2023 - INFO  - Start to restore the test environment.
++ clear_env
++ export LANG=en_US.UTF-8
++ LANG=en_US.UTF-8
++ DNF_REMOVE 1 vim-common
++ node=1
++ pkg_list=vim-common
++ mode=0
++ [[ -z '' ]]
++ [[ -z vim-common ]]
++ '[' 0 -ne 0 ']'
++ '[' 1 == 0 ']'
++ python3 /root/mugen/libs/locallibs/rpm_manage.py remove --node 1 --pkgs vim-common --tempfile ''
++ '[' 0 -ne 0 ']'
++ LOG_INFO 'Finish restoring the test environment.'
++ message='Finish restoring the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Finish restoring the test environment.'
+Tue May 16 15:53:09 2023 - INFO  - Finish restoring the test environment.

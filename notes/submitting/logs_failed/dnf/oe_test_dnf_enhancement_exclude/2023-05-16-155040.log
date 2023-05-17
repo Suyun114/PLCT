@@ -1,0 +1,194 @@
++ source common/common_dnf.sh
+++ source /root/mugen/libs/locallibs/common_lib.sh
++++ python3 --version
++++ '[' 0 -eq 0 ']'
++++ source /root/mugen/libs/locallibs/common_lib_python.sh
++ main
+++ type -t post_test
++ '[' -n function ']'
++ trap post_test EXIT INT HUP TERM
++ rpm -qa
++ grep expect
+++ type -t config_params
++ '[' -n '' ']'
+++ type -t pre_test
++ '[' -n function ']'
++ pre_test
++ LOG_INFO 'Start to prepare the test environment.'
++ message='Start to prepare the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to prepare the test environment.'
+Tue May 16 15:50:42 2023 - INFO  - Start to prepare the test environment.
++ deploy_env
++ OLD_LANG=en_US.UTF-8
++ export LANG=en_US.UTF-8
++ LANG=en_US.UTF-8
++ LOG_INFO 'Finish preparing the test environment.'
++ message='Finish preparing the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Finish preparing the test environment.'
+Tue May 16 15:50:43 2023 - INFO  - Finish preparing the test environment.
+++ type -t run_test
++ '[' -n function ']'
++ run_test
++ LOG_INFO 'Start to run test.'
++ message='Start to run test.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to run test.'
+Tue May 16 15:50:43 2023 - INFO  - Start to run test.
++ dnf --enhancement repoquery
+Warning: failed loading '/etc/yum.repos.d/openEuler.repo', skipping.
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ dnf --enhancement updateinfo
+Warning: failed loading '/etc/yum.repos.d/openEuler.repo', skipping.
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ dnf install tree -x tree
++ grep 'filtering for argument: tree'
+Warning: failed loading '/etc/yum.repos.d/openEuler.repo', skipping.
+Error: There are no enabled repositories in "/etc/yum.repos.d", "/etc/yum/repos.d", "/etc/distro.repos.d".
++ CHECK_RESULT 1
++ actual_result=1
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 0 -eq 0 ']'
++ test 1x '!=' 0x
++ test -n ''
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_dnf_enhancement_exclude.sh line 35'
++ message='oe_test_dnf_enhancement_exclude.sh line 35'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_dnf_enhancement_exclude.sh line 35'
+Tue May 16 15:50:53 2023 - ERROR - oe_test_dnf_enhancement_exclude.sh line 35
++ '[' 0 -eq 1 ']'
++ return 0
++ dnf install tree --exclude=tree
++ grep 'filtering for argument: tree'
+Warning: failed loading '/etc/yum.repos.d/openEuler.repo', skipping.
+Error: There are no enabled repositories in "/etc/yum.repos.d", "/etc/yum/repos.d", "/etc/distro.repos.d".
++ CHECK_RESULT 1
++ actual_result=1
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 0 -eq 0 ']'
++ test 1x '!=' 0x
++ test -n ''
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_dnf_enhancement_exclude.sh line 37'
++ message='oe_test_dnf_enhancement_exclude.sh line 37'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_dnf_enhancement_exclude.sh line 37'
+Tue May 16 15:50:56 2023 - ERROR - oe_test_dnf_enhancement_exclude.sh line 37
++ '[' 0 -eq 1 ']'
++ return 0
++ grep repo
+++ arch
++ dnf --forcearch=riscv64 repolist
+Warning: failed loading '/etc/yum.repos.d/openEuler.repo', skipping.
+No repositories available
++ CHECK_RESULT 1
++ actual_result=1
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 0 -eq 0 ']'
++ test 1x '!=' 0x
++ test -n ''
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_dnf_enhancement_exclude.sh line 39'
++ message='oe_test_dnf_enhancement_exclude.sh line 39'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_dnf_enhancement_exclude.sh line 39'
+Tue May 16 15:50:59 2023 - ERROR - oe_test_dnf_enhancement_exclude.sh line 39
++ '[' 0 -eq 1 ']'
++ return 0
++ grep gpgkey /etc/yum.repos.d/openEuler.repo
++ sed -i '/^gpgcheck/c gpgcheck=0' /etc/yum.repos.d/openEuler.repo
++ dnf -y install tree
++ grep Complete
+Warning: failed loading '/etc/yum.repos.d/openEuler.repo', skipping.
+Error: There are no enabled repositories in "/etc/yum.repos.d", "/etc/yum/repos.d", "/etc/distro.repos.d".
++ CHECK_RESULT 1
++ actual_result=1
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 0 -eq 0 ']'
++ test 1x '!=' 0x
++ test -n ''
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_dnf_enhancement_exclude.sh line 46'
++ message='oe_test_dnf_enhancement_exclude.sh line 46'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_dnf_enhancement_exclude.sh line 46'
+Tue May 16 15:51:02 2023 - ERROR - oe_test_dnf_enhancement_exclude.sh line 46
++ '[' 0 -eq 1 ']'
++ return 0
++ rpm -q tree
++ grep tree
+package tree is not installed
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ LOG_INFO 'End of the test.'
++ message='End of the test.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End of the test.'
+Tue May 16 15:51:03 2023 - INFO  - End of the test.
++ CASE_RESULT 0
++ case_re=0
++ test -z 4
++ test 4 -gt 0
++ LOG_ERROR 'failed to execute the case.'
++ message='failed to execute the case.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'failed to execute the case.'
+Tue May 16 15:51:03 2023 - ERROR - failed to execute the case.
++ exit 4
++ post_test
++ LOG_INFO 'Start to restore the test environment.'
++ message='Start to restore the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to restore the test environment.'
+Tue May 16 15:51:04 2023 - INFO  - Start to restore the test environment.
++ clear_env
++ export LANG=en_US.UTF-8
++ LANG=en_US.UTF-8
++ DNF_REMOVE 1 tree
++ node=1
++ pkg_list=tree
++ mode=0
++ [[ -z '' ]]
++ [[ -z tree ]]
++ '[' 0 -ne 0 ']'
++ '[' 1 == 0 ']'
++ python3 /root/mugen/libs/locallibs/rpm_manage.py remove --node 1 --pkgs tree --tempfile ''
++ '[' 0 -ne 0 ']'
++ LOG_INFO 'End of restore the test environment.'
++ message='End of restore the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End of restore the test environment.'
+Tue May 16 15:51:10 2023 - INFO  - End of restore the test environment.

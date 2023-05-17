@@ -1,0 +1,239 @@
++ source ../common/common_lib.sh
+++ source /root/mugen/libs/locallibs/common_lib.sh
++++ python3 --version
++++ '[' 0 -eq 0 ']'
++++ source /root/mugen/libs/locallibs/common_lib_python.sh
++ main
+++ type -t post_test
++ '[' -n '' ']'
++ trap POST_TEST_DEFAULT EXIT INT HUP TERM
++ rpm -qa
++ grep expect
+++ type -t config_params
++ '[' -n '' ']'
+++ type -t pre_test
++ '[' -n '' ']'
+++ type -t run_test
++ '[' -n function ']'
++ run_test
++ LOG_INFO 'Start testing...'
++ message='Start testing...'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start testing...'
+Tue May 16 15:37:29 2023 - INFO  - Start testing...
++ test_execution nis-domainname.service
++ service=nis-domainname.service
+++ date '+%Y-%m-%d %T'
++ log_time='2023-05-16 15:37:29'
++ test_restart nis-domainname.service
++ service=nis-domainname.service
++ systemctl restart nis-domainname.service
++ CHECK_RESULT 0 0 0 'nis-domainname.service restart failed'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='nis-domainname.service restart failed'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ SLEEP_WAIT 5
++ wait_time=5
++ cmd=
++ mode=1
++ python3 /root/mugen/libs/locallibs/sleep_wait.py --time 5 --cmd '' --mode 1
++ systemctl status nis-domainname.service
++ grep 'Active: active'
++ CHECK_RESULT 1 0 0 'nis-domainname.service restart failed'
++ actual_result=1
++ expect_result=0
++ mode=0
++ error_log='nis-domainname.service restart failed'
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 0 -eq 0 ']'
++ test 1x '!=' 0x
++ test -n 'nis-domainname.service restart failed'
++ LOG_ERROR 'nis-domainname.service restart failed'
++ message='nis-domainname.service restart failed'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'nis-domainname.service restart failed'
+Tue May 16 15:37:36 2023 - ERROR - nis-domainname.service restart failed
++ (( exec_result++ ))
++ LOG_ERROR '../common/common_lib.sh line 37'
++ message='../common/common_lib.sh line 37'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message '../common/common_lib.sh line 37'
+Tue May 16 15:37:36 2023 - ERROR - ../common/common_lib.sh line 37
++ '[' 0 -eq 1 ']'
++ return 0
++ systemctl stop nis-domainname.service
++ CHECK_RESULT 0 0 0 'nis-domainname.service stop failed'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='nis-domainname.service stop failed'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ SLEEP_WAIT 5
++ wait_time=5
++ cmd=
++ mode=1
++ python3 /root/mugen/libs/locallibs/sleep_wait.py --time 5 --cmd '' --mode 1
++ systemctl status nis-domainname.service
++ grep 'Active: inactive'
+     Active: inactive (dead)
++ CHECK_RESULT 0 0 0 'nis-domainname.service stop failed'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='nis-domainname.service stop failed'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ systemctl start nis-domainname.service
++ CHECK_RESULT 0 0 0 'nis-domainname.service start failed'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='nis-domainname.service start failed'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ SLEEP_WAIT 5
++ wait_time=5
++ cmd=
++ mode=1
++ python3 /root/mugen/libs/locallibs/sleep_wait.py --time 5 --cmd '' --mode 1
++ systemctl status nis-domainname.service
++ grep 'Active: active'
++ CHECK_RESULT 1 0 0 'nis-domainname.service start failed'
++ actual_result=1
++ expect_result=0
++ mode=0
++ error_log='nis-domainname.service start failed'
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 0 -eq 0 ']'
++ test 1x '!=' 0x
++ test -n 'nis-domainname.service start failed'
++ LOG_ERROR 'nis-domainname.service start failed'
++ message='nis-domainname.service start failed'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'nis-domainname.service start failed'
+Tue May 16 15:37:50 2023 - ERROR - nis-domainname.service start failed
++ (( exec_result++ ))
++ LOG_ERROR '../common/common_lib.sh line 47'
++ message='../common/common_lib.sh line 47'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message '../common/common_lib.sh line 47'
+Tue May 16 15:37:50 2023 - ERROR - ../common/common_lib.sh line 47
++ '[' 0 -eq 1 ']'
++ return 0
++ test_enabled nis-domainname.service
++ service=nis-domainname.service
+++ systemctl is-enabled nis-domainname.service
++ state=disabled
++ '[' disabled == enabled ']'
++ '[' disabled == disabled ']'
+++ systemctl enable nis-domainname.service
+++ grep 'Created symlink'
+++ awk '{print $3}'
++ symlink_file=/etc/systemd/system/sysinit.target.wants/nis-domainname.service
++ find /etc/systemd/system/sysinit.target.wants/nis-domainname.service
+/etc/systemd/system/sysinit.target.wants/nis-domainname.service
++ CHECK_RESULT 0 0 0 'nis-domainname.service enable failed'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='nis-domainname.service enable failed'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ systemctl disable nis-domainname.service
+Removed /etc/systemd/system/sysinit.target.wants/nis-domainname.service.
++ find /etc/systemd/system/sysinit.target.wants/nis-domainname.service
+find: ‘/etc/systemd/system/sysinit.target.wants/nis-domainname.service’: No such file or directory
++ CHECK_RESULT 1 0 1 'nis-domainname.service disable failed'
++ actual_result=1
++ expect_result=0
++ mode=1
++ error_log='nis-domainname.service disable failed'
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 1 -eq 0 ']'
++ test 1x == 0x
++ return 0
++ journalctl --since '2023-05-16 15:37:29' -u nis-domainname.service
++ grep -i 'fail\|error'
++ grep -v -i 'DEBUG\|INFO\|WARNING'
++ CHECK_RESULT 1 0 1 'There is an error message for the log of nis-domainname.service'
++ actual_result=1
++ expect_result=0
++ mode=1
++ error_log='There is an error message for the log of nis-domainname.service'
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 1 -eq 0 ']'
++ test 1x == 0x
++ return 0
++ test_reload nis-domainname.service
++ service=nis-domainname.service
++ systemctl start nis-domainname.service
++ systemctl reload nis-domainname.service
++ grep 'Job type reload is not applicable'
+Failed to reload nis-domainname.service: Job type reload is not applicable for unit nis-domainname.service.
++ CHECK_RESULT 0 0 0 'Job type reload is not applicable for unit nis-domainname.service'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='Job type reload is not applicable for unit nis-domainname.service'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ systemctl status nis-domainname.service
++ grep 'Active: active'
++ systemctl status nis-domainname.service
++ grep 'inactive (dead)'
+     Active: inactive (dead)
++ systemctl status nis-domainname.service
++ grep 'Condition check'
++ grep skip
+May 16 15:37:29 openeuler-riscv64 systemd[1]: Condition check resulted in Read and set NIS domainname from /etc/sysconfig/network being skipped.
+May 16 15:37:42 openeuler-riscv64 systemd[1]: Condition check resulted in Read and set NIS domainname from /etc/sysconfig/network being skipped.
+May 16 15:37:58 openeuler-riscv64 systemd[1]: Condition check resulted in Read and set NIS domainname from /etc/sysconfig/network being skipped.
++ CHECK_RESULT 0 0 0 'nis-domainname.service reload causes the service status to change'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='nis-domainname.service reload causes the service status to change'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ LOG_INFO 'Finish test!'
++ message='Finish test!'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Finish test!'
+Tue May 16 15:37:59 2023 - INFO  - Finish test!
++ CASE_RESULT 0
++ case_re=0
++ test -z 2
++ test 2 -gt 0
++ LOG_ERROR 'failed to execute the case.'
++ message='failed to execute the case.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'failed to execute the case.'
+Tue May 16 15:37:59 2023 - ERROR - failed to execute the case.
++ exit 2
++ POST_TEST_DEFAULT
++ LOG_INFO 'oe_test_service_nis-domainname.sh post_test'
++ message='oe_test_service_nis-domainname.sh post_test'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'oe_test_service_nis-domainname.sh post_test'
+Tue May 16 15:38:00 2023 - INFO  - oe_test_service_nis-domainname.sh post_test

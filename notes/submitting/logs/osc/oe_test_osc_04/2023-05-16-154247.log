@@ -1,0 +1,950 @@
++ source common/common_osc.sh
+++ source /root/mugen/libs/locallibs/common_lib.sh
++++ python3 --version
++++ '[' 0 -eq 0 ']'
++++ source /root/mugen/libs/locallibs/common_lib_python.sh
++ main
+++ type -t post_test
++ '[' -n function ']'
++ trap post_test EXIT INT HUP TERM
++ rpm -qa
++ grep expect
+++ type -t config_params
++ '[' -n function ']'
++ config_params
++ LOG_INFO 'Start to config params of the case.'
++ message='Start to config params of the case.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to config params of the case.'
+Tue May 16 15:42:50 2023 - INFO  - Start to config params of the case.
++ deploy_env
++ cat
++ branches_path=home:test666:branches:openEuler:Mainline
++++ dirname oe_test_osc_04.sh
+++ cd .
+++ pwd
++ currentDir=/root/mugen/testcases/cli-test/osc
++ LOG_INFO 'End to config params of the case.'
++ message='End to config params of the case.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End to config params of the case.'
+Tue May 16 15:42:51 2023 - INFO  - End to config params of the case.
+++ type -t pre_test
++ '[' -n function ']'
++ pre_test
++ LOG_INFO 'Start to prepare the test environment.'
++ message='Start to prepare the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to prepare the test environment.'
+Tue May 16 15:42:51 2023 - INFO  - Start to prepare the test environment.
++ DNF_INSTALL osc
++ pkgs=osc
++ node=1
++ '[' -z '' ']'
++ tmpfile=
+++ python3 /root/mugen/libs/locallibs/rpm_manage.py install --pkgs osc --node 1 --tempfile ''
+Tue May 16 15:42:58 2023 - INFO  - pkgs:(osc) is already installed
++ tmpfile2=
++ '[' -z '' ']'
++ tmpfile=
++ osc checkout home:test666:branches:openEuler:Mainline
++ grep revision
+WARNING: SSL certificate checks disabled. Connection is insecure!
+
+At revision 5645.
++ cd home:test666:branches:openEuler:Mainline
+++ cat /root/.oscrc
+++ grep user
+++ awk -F = '{print $NF}'
++ user_name=test666
++ LOG_INFO 'End to prepare the test environment.'
++ message='End to prepare the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End to prepare the test environment.'
+Tue May 16 15:43:10 2023 - INFO  - End to prepare the test environment.
+++ type -t run_test
++ '[' -n function ']'
++ run_test
++ LOG_INFO 'Start to run test.'
++ message='Start to run test.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to run test.'
+Tue May 16 15:43:11 2023 - INFO  - Start to run test.
++ osc mkpac xzz
++ grep xzz
+A    xzz
++ osc commit -m 'create new package'
++ grep Sending
+WARNING: SSL certificate checks disabled. Connection is insecure!
+
+Sending meta data...
+Sending    xzz
++ osc token
+WARNING: SSL certificate checks disabled. Connection is insecure!
+
+<directory count="638">
+  <entry id="646" string="wwZfcoYk5pb78DwM1MGaQkR9" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="648" string="u31MFk9JtMAHy4XRKeZdeibG" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="650" string="aay3GVqrHM53Vf9g6unu8vBi" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="652" string="q6qFQ7NTkNogQXfGGUr7kfJ8" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="654" string="F3TVYQyBF5srPP31SPtULwVF" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="656" string="w8JpSnzyFy3CLuAqZvVFB12P" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="658" string="u17572QmyeNge4L5ZjDuUa1Q" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="660" string="nxykjdab1qC2ZN897b3okN2T" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="662" string="DdRFJTKjAzUzYpnidVnEdtbV" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="664" string="vXhf9SUq6PWvDJQ7Es8ReQMv" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="666" string="MFtRyReCM1ZryyCqtSLMBKpk" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="668" string="MhUnjLTLCDjMvbyuEAsmZirh" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="670" string="wWFg3SrLTBZircRYCE6ZVUvu" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="672" string="wKwSvvmTMQHFKgydTtrchtty" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="674" string="ECc3r3xs84CXp9JqheeGfQmv" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="676" string="ocuvAvRzVFpp8vXoPtz2Ntdz" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="678" string="FEjMaCP1PCkUUQkRZjoqmmMV" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="680" string="T9D2a2tCy4GRqgAKU9jJbLvW" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="682" string="s9CSQCSSABzz2g9bAxqRGptX" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="684" string="aFh4Kp8agaT1tWxpCuPC222N" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="686" string="nGJtZRfpnxAfuurfAfPphEDV" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="688" string="Y7Lje6mhd73mEZJenzC849da" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="690" string="kqnWvuvPLaihGhrri9CGWqm8" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="692" string="9qBqCBPmzZsbNhD63ZQ4rnn5" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="694" string="DKRbi2CENgNU5UM1kdxQerfH" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="696" string="mF38fGAdvctn5kuigBNFJheU" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="698" string="zEfcLGBrAc7wyqJpYzke5cHh" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="700" string="jkYoSftUNAYwcKdyQsDq8ujb" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="702" string="v84TTanZuoYdqkBSyz71ksXA" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="704" string="2Vpb1nZAWBoQ9h6bu9Zrp9gA" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="706" string="3C2DHo51aefdQGejxWdx67nt" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="708" string="3gJ8AKwKnC7B4mhC7q7jDHGC" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="710" string="enfRY2uczXD3c99rY5qKJ1tJ" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="712" string="NodCHGj7PbNe5FBehJcmrePa" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="716" string="S8daHkyTVuohTv8suqbmSg4f" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="718" string="2UKHzYsnvRUxu1UnKaSQmPMK" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="720" string="QcNY25bk8MtqUtfkSZRKmBB7" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="722" string="G2sT44k95K1E6LPPjSXgeh4o" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="724" string="JhQ3dbfNWohw1r4y3JaWdoA7" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="726" string="mDscD3tVe9DdNWf8WWc641zM" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="728" string="2pSywBKiQ79iqmvphTPCAqGS" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="730" string="2wsEuuBDTv8QyGxdwzCSfeDS" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="732" string="zFg8tN6vi2DnvmpDQDV127XW" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="734" string="6mbdNmxPa47Et7JyJxhznB3z" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="736" string="aD1y8FBTNMtkEDE1paRrTj8N" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="738" string="xBdLBCJj9waUHtRTiXggYKHX" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="740" string="dwwHwzHw6Sjex8urG2sw658E" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="742" string="G9ayeiV2cuib1jVaCDNJatV5" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="744" string="rAbLejVr5Z5D9YomxivqySJX" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="746" string="axSzqyyNUpbqAsjp3famFDcb" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="748" string="hJst11caop4epX6b5hLu5A2X" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="750" string="RAg1wyBcipVoZWs14sDM1qfY" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="752" string="hQhVwrd9Eec1qnwP33aQGCwc" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="754" string="23SKGCDzswnqjMZyRUogUyfu" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="756" string="9afMQ4CLaisXi96Y3ESM28qH" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="758" string="opL6WdW97eSXq9qhNFw89cTa" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="760" string="KkKx3Mzt5tyNyB4rRzU23gAp" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="762" string="MnE9GQBFnSAMVvuH4dKfiwyR" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="764" string="hnmt4ngfK7vowEn4oJVsW7pC" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="766" string="NHh5uG36eu4i2U1tDkeAiVgE" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="768" string="APZzQwjqdpQXAryJ3xu3rZYD" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="770" string="PBNCAPtp8acGD98dQ63TZPt6" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="772" string="ZeGmT2HjEdxdMyaNVhdqJVpy" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="774" string="NoGfWKseaxzca8zkiCN7qD8d" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="776" string="cqsSDAfWyWbrKZAMiTvDhKZn" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="778" string="jnHDn7MuQX2zUgZ7HC2uLV3S" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="780" string="8vCirV91iRjjwefP7sBGK7HC" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="782" string="cyYXcf8TMcFHNVQCidp1EvJw" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="784" string="usM795XxmjFjEn1FpZx71xzi" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="786" string="mMQhoZ8hgf6UzQvRGphgcejx" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="788" string="KNRNDPoXMAqR7wZBJCoAALe8" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="790" string="822BaaYHEdMipwKJWSeYmfyR" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="792" string="woHRtfUVyWvTNd5NaTqMAQoy" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="794" string="A9ho91BPXxzor4K536aRwM8b" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="796" string="rv21qccPD8ybzZAymxVJU9Nr" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="798" string="u42uvYJorTfzYyuf7GbAs13v" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="800" string="SUYcxxSwb6iF7Z2cTxMkoqLR" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="802" string="SEC3hW6zs8Ec7yRrxXrvGVAd" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="804" string="VC123Pe2oKotbTkWWNa6iQhT" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="806" string="FoPDSs9fcAxFx7crZygAA1bu" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="808" string="LuSUhi5HCsFpHx1reXnV5CEB" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="810" string="DMPsWYNE6qXhgkEYRzU7YaGg" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="812" string="WAzN8kxM97tsLM3BLRYTMB6t" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="815" string="AhfZ63UQMXQw7yuTsmnVCug4" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="817" string="4Yswh5t3fgb3WZV52pgt42WR" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="819" string="pZ6xg2yKpCtUknaUe9XhYue1" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="821" string="rAyxL6eBw4xuajDcxz9UeXbf" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="823" string="EaKiVtSwqB5gJLXWCUGmUJ6h" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="825" string="4fstPPhZBQs7wXFcTobQ1oMf" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="827" string="KnKtg5LdmzWg4ets3PXpJZgU" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="829" string="CuCidEgLhsfYvNxhFBxZt88E" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="831" string="9apZgcaxWDmLbZFCUDDBbSwZ" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="833" string="UE157JB667e3oN9FhsAAM4AU" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="835" string="ZHYxJhhLZbJ4yDUoHQFLVnEm" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="837" string="NwN69JiJY2CYLQHh19WkB6s5" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="839" string="suTPr12K26Gka3RGCqVnfiHP" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="841" string="sgqHFNV6CRgt4DpKHcHwGDqu" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="843" string="mhQ7AZwRLFRnkEkazipgWirN" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="845" string="5kaY9g5RXRBgNv8bnCndGepz" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="847" string="CzxQsFLzvzGQAiewZDBJE1c7" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="849" string="ihPf7RL61FD8itXZdHEpdmVh" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="851" string="NGEjCGtd7w7HSa2CemVbDUKY" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="853" string="XKptE18CFwb2x2X3m43hET79" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="855" string="3WjZRzvpqSVATPaFAxaHBiKH" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="857" string="D9Hm39oomwSv7xFXGR5civAf" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="859" string="JL52QhKDKFB3CrmNEc8Y4h6k" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="861" string="akvwhx9r1dGrjDHR7ZTPUiPT" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="865" string="XRjwtriQQXYFq8JbohhCrfZ8" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="867" string="zDbwQKYR6dUZCMVM1LiFP5rG" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="869" string="nLmqfg6rT3TayLaXyA45C44B" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="871" string="YzwtuVDTpqkcmHYiXAAgYpFo" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="873" string="dxFJVzwyHoSbh7cptcrjTpaX" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="875" string="XdKBjnqzMNVKzYMBjdEeUgHQ" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="877" string="4tmqsvaB6AmDxzz2mTz2PGdL" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="879" string="oTTTe6aiVHrG259L78jHegXk" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="881" string="99gXWbqCv86pHri2wind6HVY" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="883" string="RMTFR1aiYtd5mxmfRUrTShty" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="885" string="Rt7btPw7CBEz31RkFt6zFvoe" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="887" string="dEe8jfCcEni3sQuCosyuBkvD" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="889" string="3t4NxdaC8r6eh6aG5wfRzQHM" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="891" string="La7c8hZDQuZ8FDanP7JztU9M" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="893" string="zgpKJbj6pogzvYnomdFLr1NW" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="895" string="31CYwUdMxLEZCG6PdpgpvzSF" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="897" string="bFcnmKYomwMhuWEZc5w1jk6m" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="899" string="kpjyAkAvpQPV161tbp1AkVqZ" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="901" string="mxKHKnJ3Bap3aDR9utsvDS9V" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="903" string="XD2X9gKfPEcegJnZdR6y1UYF" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="905" string="LcmUkBxxbFn3hACiL7mpUwYg" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="907" string="ngAosxUJuiRFPpdmjmeLDVsC" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="909" string="uXywDfKaynV184CrLShF9bC3" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="911" string="rKGbTFPWA47AT3rDsoYRruPX" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="913" string="bvGfk9YqokiQV8TDEHvpRrXG" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="915" string="UC3jDMfozpfMuM3y8DvDRRPH" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="917" string="GrXojwucM3jYGtd39Q8XvEdc" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="919" string="RijLxk7kJZx1WT3LoYwMdAqo" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="921" string="pwJ3dPdXhA7uuYhsvk8cpewM" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="923" string="C78Sk7fXJyTHMPnZTU75kSpP" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="925" string="JB6gCAYUSKQrYpJaXeBDGgEW" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="927" string="wm1hf7TRwX3dCLhPaM5GhfNT" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="929" string="Zseu7q5ZvfyCYGKkqbM8z3r8" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="931" string="679cgAdUcFjYBkvkNNbNU9wW" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="933" string="249S7hMGcdNfMD5iU4aDWzZU" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="935" string="4jUHQmpMy28ujCAGtxAcyExb" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="937" string="BbxdkNuDT4DsfvpBbUmC6Szg" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="939" string="vdfhVfukkRbtojSXzZoe9DYH" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="941" string="9niDoFfugDjA53qE5PzdvMr6" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="943" string="K3rf3zMyy5Dhtgj36ecdtwnu" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="945" string="VEBEE4B8BFTB3XMjeQD5g67D" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="947" string="CkFsFJdWZfj1siaEy89uH2YS" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="949" string="snxoX2T71zguLs2g6srLzct8" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="951" string="doWZtGYjKMDr61V3zUwjN6kh" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="953" string="AUtbAs1kJRQJ374S6pmFu6T4" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="955" string="jqSDnRC3J5MDWjhGFtE7kNNC" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="957" string="gWF29MmscvdU2eMoC6kwSyxB" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="959" string="ZjBf4G7BmAB8YeJAWc2aYRUC" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="961" string="pgBT4QS7sjfPEvqPPCtEsk1i" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="963" string="TnSwjr6kQkqCXB7PKUdQzbSu" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="965" string="1dF7WEEAfwrDdUbH4U42vhHd" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="967" string="M5DFSRdZGoABNc5ntWeySYn7" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="969" string="4UscMQ1EoedAaHL8dR7vRcme" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="971" string="T9hMy7xmM7EXaUANPkwbgiZ8" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="973" string="F9ziAmeK7jgG5kCTXjGm6P58" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="975" string="crBQ7BiJAKLAwHBmAyyt5NMB" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="977" string="JxKBRz1kM53V1kEEKeuezh4g" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="979" string="gXBKrXoNgriLtxsrmZUHBxK9" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="981" string="hQQWVdm3G6FPATS3TV3NWkP9" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="983" string="PBudSyc8mfZeJvJ81hq9GERZ" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="985" string="FxisTP2a5evreUuYCLL3UpdT" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="987" string="LU1ytHZfpFnNsiRbNyP7bUCy" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="989" string="kbGW7hADJskMPpGPhXZQdAuf" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="991" string="6EbzN3nwViQcBA8Npz4n1FjU" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="993" string="sRPtVTFk5WLWgg7jpSbN14Kd" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="995" string="V9Bsgxrcpnnw3M6tKq1FqauJ" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="997" string="bSQUFh4GUUcQ94edS2QnePMf" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="999" string="LRWa9pBo7ffjdz8WJ4U8quLx" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1001" string="sSnVwrA9gybWZ6jQk5u4NyD8" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1003" string="C2UAVz6DmjLdE5LMRzEfzYNw" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1005" string="qZprsGToFrQjmKWzaYJhtYRs" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1007" string="CzAuFybz6rzKzXxYqn9BANH2" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1009" string="huAJG4rdgLgUYEAZ3i1RYckf" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1011" string="vtiBdB1RSPqeqKhjD2YkN9Ut" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1013" string="Fhem7UtUAC4YjcxWDSba4QJe" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1015" string="2kWoGToVTsPi6Q2AmFJEnDQo" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1017" string="NvrRHfD39Jxa3NwJhefo65Md" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1019" string="RQYwLVupFb18wobwGG5ab59C" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1021" string="X8EddgQs18VB5yo4vSx4U5DD" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1023" string="CZbB8yBQfcabmMVeSxzSsSTM" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1026" string="oPycU94G5K6XLjBmjvRzx8pW" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1028" string="DwNkxyGaNFG42gSuaFd7NQFz" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1030" string="gQy2un6EuqwkE1PRfGQy9SwE" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1032" string="ZySWquMaSczVmSguCjAMUHMa" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1034" string="nYRvFCmLYDK5yWZDdnRamu63" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1036" string="JomexzoC82XHXkHks7KZwf8J" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1038" string="vUDoRmR2t7rCRZWW2MLCi1G1" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1040" string="aoUe2BVynYofKheAMHH8WEzs" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1042" string="WBFuaC99weAFtbbLDu2Eu1Nv" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1044" string="j8iGbRpmTaoT1d9pqNdJpck4" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1046" string="XNuk2FKhoPS2ZM1rAU6nV127" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1048" string="z8qhWoRDK6wVDX775jmQEQyj" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1050" string="H238uSc3PUqXLqXTcnknon33" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1052" string="QN6tEaQtUYkUXgpPwrXAvrnW" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1054" string="XjtQvn2SgH5o9uZSjFstKu4C" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1056" string="XyT34Fuf5V2aLkVEojJHfaKL" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1058" string="AKABU4MGyU6vsYmiFEsDVX8d" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1060" string="MwGXqzRoUnf18ekiqtxZ91NC" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1062" string="7ZzuwU6Gr2Hzjvnob7nZz3RX" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1064" string="ZZKD1WwTEYzmpjZ3jBtmReud" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1066" string="ej47cPj6STobDbrEGsRsDLtN" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1068" string="rferB8zGcRi48utYXtE1yGfE" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1070" string="LaDiYW4SY6X3haZBCuqH9FbT" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1072" string="Lr3zMnhHPaNaTbmeNTqQhqMY" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1074" string="qap15JgKuKUww6Yn2o6mwn5n" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1076" string="yT4UPEeGWkYF6qk6shATnjHA" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1077" string="idiNt8tKjGRj1h8Sf7CHtGbo" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1078" string="Y5jGsQmNnt95gx8aUfEZDUgA" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1080" string="UgwvK6ZGibPKaJLfCCANcUWx" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1082" string="rhDzpjCSTrQU9M8KGr9xz1cE" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1084" string="ykRjSmubXTCSNGRRYWbyLRcr" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1086" string="bLDK1svcghxz2fMhrXTncqMn" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1088" string="4AY2oHTpjhPVg9JFFM929dKt" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1090" string="oQr1EqfkwLry42JNNsGqKJkh" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1092" string="c96HfwpjL48noSX8vFPmVyzk" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1094" string="6gwn6D4TgCR67Vw2oT4Fhbks" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1096" string="BFCvRfQDvmL1bRU9kwe8GBss" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1098" string="iwCs59e1WaKAf4EkW9BYtepF" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1100" string="TPpLNdwLxK5WnhoWhtpG1SLw" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1102" string="wr44nwWPVjG9rX1sAptpewhp" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1104" string="i9nmCscuBqgnhJB6bfXtGDY8" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1106" string="dSn8VH8ezYJ5NZ8mm3KVDAcH" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1108" string="vdvkeqWgpXZVcnfwLGsFve5J" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1110" string="4wpJcHy4KEsE48PnUMGZ29Ng" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1112" string="prb6iSNdt4fXCFdUS2ywtUip" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1114" string="dC4UGvYj9b62Cj98L93gU99V" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1116" string="z28QKEyxsf25CdPnAy5EaN75" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1118" string="HEexSW45LDYGVZ1fdN9HZRvq" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1120" string="FGfSyYXS4u2ctQCAueFBqCbg" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1122" string="XyGid715YDZVNkgi7RVL3iHC" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1124" string="HMYaZU6PcxtwSCDik4p6cf2X" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1126" string="R51YZKhW997P5j16EKC1X7jL" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1128" string="w3aQfCDJ8Ku993kBjpBBrJHL" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1130" string="yhb9tXBAEXjJ9Q3iLboQRJur" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1132" string="ToGtMbuL8yhrzpkhkhqtNo5v" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1134" string="4mFLCmodMedcfvCzzrNeLttN" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1136" string="y4KEjBDjx3Df1TYD3MMbkjLP" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1138" string="QRjqvgUtTFgkdUYfsuQh1JUv" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1140" string="8dPxyAi9XpaNEMfVAu5Fgbf6" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1142" string="jatTY2MkFvCyaCgCBc6dEFQo" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1144" string="d6ULFYWLfcieRZgSm7L3tAfz" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1146" string="udfxkiFAwtqvi2bVUHWg57Q3" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1148" string="kESy61bogtRgctNWgaLKTYPV" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1150" string="Xi2MjLyL2prkJLwFPtJp9otC" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1152" string="gLqmYPCTvphTbSvisqD5oM7s" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1154" string="m4Na5bHXyt6dZFz6vHU5HTA4" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1156" string="ZiFfeFGmGfVG4Qh3b13qHU66" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1158" string="ZYpsD1wqZkMQYCJyh2PCuPdF" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1160" string="CiiKU5GqyZr9k1w7YmYXdLXW" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1162" string="wfPdy5W8vw2dnLCSRdgEhXrU" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1164" string="HwowBRXuLuSjhcKY9hNMWX6o" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1166" string="uAcXxbo4zKq3JipgzFR5hLFC" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1168" string="p7PE7P5Dg2tCjW9bL2DDrgKz" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1170" string="JgXKs4dyMDj6MtRf6qkbjNpv" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1172" string="ZznPUDN9jSMc4fbEVp5bsBQz" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1174" string="vxxXyCZ3o7HBFf6MRCMEH2By" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1176" string="5QMkrNh2UmBY5gEoFsNY47kK" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1178" string="ZPMPJq7ocgVtRCNet6Phh2uM" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1180" string="UskyKPWiQ2dnmGbi4qACqzww" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1182" string="e8jdo7XEx8P7BRYhBwudVZxa" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1184" string="FmMXwFxDftHkcynJPCgcNNFF" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1186" string="k9KnfgFizJZeSCoSS2RJS1SP" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1188" string="DYvP3UaA4r3LqJqC9sXCwg8w" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1190" string="scVhfkf7rZBG7EoU3aCrb6zE" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1192" string="TjH9SpY8HLrPDWqB4yNyfq97" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1194" string="6cjFZJoBMT3i6ivZgLRpcqwd" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1196" string="FmYdnhrPG3kZtW5kSLfsweHv" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1198" string="gAoFxnDyhuD43QiwMooPCg7M" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1200" string="d4xkEP9qLziqJAZzQteTEAxd" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1202" string="oGrfz8RRoPY15diVytoNu3vC" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1204" string="UQ7ptkRMys4J364GvH1W44QV" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1206" string="Q18GpdbmXtTEH3PJwk5xWnF6" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1208" string="HW3yXhjJuEbbgtf7X8YLZJ5C" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1210" string="Ba5ZYqfeAdaF8gfqxd1Bwpy8" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1212" string="qtQvXEZgDFutN3qmZr9xjX3W" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1214" string="oGnGcdtAmy7cfT8X6UiSdh85" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1216" string="EtjKuiqqbJse21iLk4YJL8Uh" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1218" string="nzf9kqTSEwvUjakRkHN37MDa" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1220" string="ScFMPo5BREcVUf2vsDvd9b4g" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1222" string="8526brVqztHzenHG1vLsMr4M" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1224" string="p3VxsW8qTzDDw1Rb3ScrEPrw" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1226" string="pADpWaZYr9NEy6V7UK2UKtG3" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1228" string="WoXQXC9nX9a6PiZ8BphNmXcj" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1230" string="AEjR1ccAyQUgW6aWC45jJjd6" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1232" string="iUPZb3SN5YmEgCLM7HMeeXMq" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1234" string="L11oYCp2TkQZCfNJDFWgetwg" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1236" string="H8zqJKMPdU7PwtKA85Ku1v3u" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1238" string="QiVtKVDGjTGmagrW3p7CaSWS" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1240" string="8DaDsFkENkLfWekoN34v466u" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1242" string="zns1EB8HpzrmcdsMGdrsnErP" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1244" string="trxGJTv5HuGFKMLgNQLKC42w" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1246" string="3Rwfz5j9ijnFyAtcPSz2cTa7" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1248" string="hoPZ14KAcWBjbwBAw1wvEDkQ" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1250" string="yHg44jwLN2SbCh4SkZF9CdTG" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1252" string="EMPdqFEZbcN2e5xhzvYm3owd" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1254" string="PdArEr7BUe3UiTrpLGfcL8AH" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1256" string="Z59jXrmbBTnUE6fsfsHDuRrk" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1258" string="9g9b8KJJXrFTFMtjfmWZzU3r" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1260" string="ayzs83Ai2nuU8QLsoaPYxnSb" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1262" string="96MfuJfcfSarzDnmTf4BxrWn" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1264" string="EMRJCZAVjNJB4W32xqjJ48FQ" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1266" string="pUwnnQZJzrWRwgoXeqW8NnPP" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1268" string="2kFvY5ntYWN2JCGCyrSazAZc" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1270" string="Qz8Me8wUQ3648kP8GLyuErGH" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1272" string="GongcqMnA5XFMpYMAxUL7p4R" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1274" string="gkPeDiCWbBwLzXVKUXHD3zEP" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1276" string="kphRTFnt8HWadbCgtePwD31J" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1278" string="keEJkN1NvJzGBAjVXBm4kqXP" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1280" string="57G7bXMtArvuh1QAuvH8zTit" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1282" string="KQyYRvyrC2fb51TqKVDJNwAL" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1284" string="VnfDx6aiKUtFkTgodq8VwZ9o" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1286" string="SEpbQoRhRVsEoTEj5VAEKv6S" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1288" string="Qr8JvJMCKQYX73qQtXFiTuXQ" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1290" string="mk1BjnkNDo4Vo7PtoD8kw4X5" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1292" string="X3CYFZaYan73tPmChpAq55zg" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1294" string="ReN6y5BcPauVT7zz1L9ETEfU" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1297" string="KubgrYCZ8J6Sn1cDeBs1S22Q" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1299" string="9pMi3vLhjGqdfvrVnxFSiAyt" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1301" string="7A4tBzkTgSynjAdwSkf7gWAr" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1303" string="epSbvmEzFGUvFerk6YeWEJ9U" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1305" string="vofDPnLZJrW8FgeKSpKGTpPE" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1307" string="VjxuJrvQZmQ3wBLd5i8htcxi" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1309" string="XPx5eJt1wHdU33nJXkkm2bzZ" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1311" string="2gZYDETzZdabRnGQc6JG7jit" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1313" string="nHJHbg25TSs1y469vVQCRWfj" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1315" string="nLSzGzqNYFXFmkUMFdGnCd2c" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1317" string="gYrQKAWfbyijPLQaZ9XxYfoZ" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1319" string="sHBijdDqWt4yPkarzpDDbM1b" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1321" string="wgUyfzJ6UzQyzUumFcbn6oL9" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1323" string="x5HPFBKZGpWmFJUmKbEE8SoK" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1325" string="XNu7366sftgcbZCqHZqEqU1n" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1327" string="EjDzLaVoJ77ufRp9cXeKz2SW" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1329" string="Mz4okep6mzNCzKA5gepuYgoi" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1331" string="gijG6qSQREm9hBcWdZq9dK9u" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1333" string="n7RExuP1YrMkih2YLJSgw5u6" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1335" string="rpEWHq54aEbJ9CMfL9KQFxY9" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1337" string="SMhRMsKVFnXHACunwUEMfFLP" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1339" string="gVBCbCWs5bFAWcJMLp8mcuaw" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1341" string="bJ6m4mew26rdhKAwNbwXoYoZ" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1343" string="xEujRJwgH4ypEcxNM5fDEonr" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1344" string="98jWPXRYUjBzjfVxxbQRsSid" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1345" string="kGr5co2N4WhHcuT9NxsvM4c3" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1347" string="4zZ7yxinwLZRFWZhEc7U8KpG" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1350" string="gdHJoeTyuMwa2poPcibAR2HG" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1352" string="sjvhWYBtjJcdA7LrGF1EtAEp" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1353" string="mvXWhJ4Gh7kmidESvNLqkvZv" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1354" string="Ed5nMTi54ocfJKEYHQNaao49" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1356" string="edQf86DTEoiznq3UJC63c8XF" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1358" string="2dmd2rajmRHBewRLgf7qfJBL" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1360" string="kqkCrtw7sfeDcVLRNKrD695a" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1362" string="r8g3p7EcNFTD4k1XuTRCNHfj" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1364" string="Yh8J1cQKLSNaBrq1RWsY4jyW" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1366" string="1kg3sJZYXxuwam1YMApN3Nf5" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1368" string="FLpVBsBe8XvSbmmvnmbFAYyi" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1370" string="fSmuDF4CdV5g3adkB41Gv8ZT" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1372" string="74fRemEtbdae95KJbfFBtL5V" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1374" string="epnazvEbzb942K6WDFd24ooH" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1376" string="ibdmd1zPqfSC1hMUy9WRurig" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1378" string="AQKL4GtWNSDJVNKvZEMFZzhZ" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1380" string="1tJgks8det1m8m7fcx1GtU6a" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1382" string="t9ECKaKRq2JjK8PfxNgdrHt9" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1384" string="vo2JcsfPG8NBNPdrgQXNwFLg" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1386" string="y41o32WhzodkAqLFpBcUNESt" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1388" string="BaPpq4eFAVEg4VZWDXj7ADHs" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1390" string="pDpR46YyaGgLCvKBNaoSntNS" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1392" string="7PPmQDM3V5XK7WAFP7Zc11Sn" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1394" string="MkqUfYNmDnhC8magTRVVcrWB" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1396" string="QVyzXQutTypcTHbNFZ52C8QX" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1398" string="ruEVqPjWUf3DLnYDXdTyQuur" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1400" string="YSjE4kaLFDK69VtxKzcJiUcU" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1402" string="BuiBz81huL2gmxAu9xuPNFNo" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1404" string="khmsoyzwfkcxif16AeqVSepp" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1406" string="zcyE9aKF86KTjzvcU65Gi1G9" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1408" string="DVoiT8kuStaNLpxAHBWQkd8f" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1410" string="BKT8pNVYz6hQCaqSed9xiLWh" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1412" string="6ABn3p2jAsC8WhmLPo3X1X7V" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1414" string="tepzKputURVuZUZA9BrwNr29" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1416" string="SRe2eoySeUWXJH7ozkuPvG4H" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1418" string="FnPdD68NLNNgXchzx2Nibm5E" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1420" string="PvaQJqnQx5zNUGzVKsvppWM6" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1422" string="cCdw7bkPorzQ8KsxrbJEiDxQ" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1424" string="fio9UJCCexQFKrbSbZf5oQfJ" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1426" string="VmAW9YJJPBhLptdTkA1RSFX9" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1428" string="wkWDKfHnPZY7eMoezF1VmZam" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1430" string="KD3LP3e8WUbExK3BWLyqVToh" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1432" string="7mjdo7h4HMojPSfdPdxGEDdP" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1434" string="F3sro6mr3QyQ1xTxHWJiURnD" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1436" string="kvtc53CU9zFV1njqnT8nRtHi" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1438" string="krih4Q5fNZqKbFspWS3gWCmC" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1440" string="SeoRD87Fw72VCaVUrEomZsmL" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1442" string="r24XkoqrVXngpM6BQ6rvbgxZ" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1444" string="YgLiBGFyvgoUFmuSBCn6njvj" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1446" string="TZeV8Azj6etaUjXfj1yK4sBs" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1448" string="skQcerCsdpmLmHQ6wHed6M4B" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1450" string="ow9kbtLPHcNx8wwGVhuXpRNQ" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1452" string="VsdrFVVf3aXp872WKyEQdZg3" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1454" string="SGc8GfUH6izh1fQqf3vjApJW" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1456" string="AKUvVfifrVcYq8v8mFZauwbh" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1458" string="b9FQqus8cuLeDUYeF9eGSdfz" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1460" string="Zq7WfeWNFDZzb2J4RAaqJHh2" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1462" string="G3z1MSdZ8imTXbFFt5UNPj5Q" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1464" string="xRBpgDWkLLYDXcznL16kjJiE" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1466" string="mJGDwFWA3C939qKFu38ooQPA" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1468" string="3a5AaSqxsPDrxohKMre8h5kZ" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1470" string="YLkXRNampUzG4ExiGvKJk21H" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1472" string="ah9YmVZq1UxH67YPRbQXKwPq" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1474" string="X11qQAYKQmJwadUiUVF7dSSW" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1476" string="kE5QSLxc915wwusyDAC7mph4" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1478" string="fRK47N6fu8pHnoA8JsJx39J7" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1480" string="bh7zG5SP1tbfZnJFQszPUKYL" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1482" string="5zvPsoVCRziTTkxH4U7vr7hF" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1484" string="VYXhUqTZ9WbR164HR1wa8tHV" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1486" string="JjCXMkG8TaC9N2iG7hcJo7aV" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1488" string="CNn4esT8oEzSCMhDk7KQrga7" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1490" string="NUkvkpmwTXQYpatNWsNBkx1D" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1492" string="fuPCbEzp2PCP8ZoipKcnJ2Hn" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1494" string="ztfUEvMaCUgWZmg6c4X1FuGQ" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1496" string="5LZ3U2K34pLqaVzkpGQXa7SG" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1498" string="QYCzME8H27aARsPCvGVYxPgU" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1500" string="Rg6ZRNc14pQhLbbDW7NCeA6z" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1502" string="vppWpEEkAF7NM2KphftTN6rz" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1504" string="8PysX7LPnxFv2eVva2XHx22u" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1506" string="ShVnhWw9QDt6cs6pGV6GxFLU" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1508" string="S9XakwfRMNZzYqKxDVcTae8D" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1510" string="L3a3gLAGmYRmWQX4HqEcThcD" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1512" string="nmf6oncsZmw9vvK51tvXmMLj" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1514" string="VChXyWMwNPJeWUo9SDXCy7kY" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1516" string="VaHy2GrDrLnKvfbXSbz1i9PJ" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1518" string="tqyYDutM6PCrCqQeBsR7qsRD" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1520" string="STRFqPxzqhywz8Mi5pHLmZT3" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1522" string="1khprAAx7P2jKcRzHQzG3ZbG" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1524" string="3cknyRqCBRcqktV422KN5pUj" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1526" string="3m3JtMWfYg3NPJGNtrHs2FZr" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1528" string="8hLrg8HmM9jybTELEpZ85CY7" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1530" string="whPXhW6YHM7QNxokuGL9dg7X" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1532" string="rojrEqEXGNNKr3i86FD5c81o" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1534" string="m53qEyf9nAjJ5xpRJEjyothG" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1536" string="gs3hvmAdNzSYykTWktBura1d" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1538" string="kNLSk96PzA5doySvcQAmnijm" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1540" string="rdB94YGWVaubomsFqE6uZ9iX" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1542" string="utDZFhoURFqP8qG93qieiv5U" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1544" string="tzDHr3X899bb22f98NT8o3sN" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1546" string="8YNCbmpTHDZ3k8W6L9votnMb" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1548" string="K2EnM7HFSsWnxRxMwzGoY97V" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1550" string="2tGBw5hVCcaQ7uU1GFiA4EiU" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1552" string="frVvwaBnDt7jWjPJJgQhbCqQ" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1554" string="ibLRvyaeMJzt9MhQaZ33YjJV" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1556" string="itXqq9gJWo61C58BSJydU1TT" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1558" string="nRV5CQUg1DVuU8UCqAePCeq3" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1560" string="qR294vtNXLrG6MEP3LYWRPcH" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1562" string="3H8ouhZwxuj398AswmeJQDPh" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1564" string="5Jz9C46DyuUJnn1TMyERR3MA" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1566" string="wDC5Nz2SRyPnKZZGh8gp25rQ" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1568" string="2dx11jQzEu6FPvRH74HsyqAT" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1570" string="SDqC1tuHS5XAAJcSrMVikgFi" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1572" string="5c3n56dkLFPX9dDeWtJDADtK" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1574" string="8oYcKBu4YKTPB6LR5bGEPsCX" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1576" string="DC6jVasYhJbmmur7rSPkXvWa" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1578" string="irZaKYSnRE8ARDPKJmiBPXyR" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1580" string="ZeXJ3wDrBPV3RvM4coBVLHRf" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1582" string="91RTLcMnDTFSKwuGbnTqh9oi" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1584" string="deVfxMgSR9arvxjWoXgN9Cg4" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1586" string="fCT81aTdHkq8wFgmJ7Pm86wm" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1588" string="r11BB1UoTL4ATp3LjXxNnXD7" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1590" string="FELvSVFW4XUEZfiGHvZBdin3" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1592" string="si5e9vVU1aCKnCMkpY7Ta6s7" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1594" string="s19yaCX1noqk4FfrgRbqkWYS" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1596" string="NgJ7RWxKZNL8szciMXAALJ86" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1598" string="dDqjtdRQqxovkkfdV3KLfKum" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1600" string="7PmeXo1CozcnqN8bFAEEoas2" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1602" string="qSfrbjN2Uz5gmvnqxzFGgcZw" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1604" string="4agQqWtuJX8s9C5KUeuyqSEf" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1606" string="ukLLwxUuznZLkMHNnDcyyZhG" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1608" string="odBcGBu3Jie9dR6xfkPDJcaX" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1610" string="oCT1hUBvUFQBbdEsRPtdXbs1" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1612" string="TVE1AuDWYxUuYGYj2Nk9bzw1" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1613" string="ctsfSVEid5kKooUVFnwgZNwy" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1614" string="dq7Tvu7Mo8biyMsn1Aek5NbF" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1616" string="B6c6w7hDVArbZHi8nfovQzgG" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1618" string="zeXuGrjt5auuYMmoPa3dPtNQ" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1620" string="VhE3zW45Pku97v4eFkbWpBvg" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1622" string="xoJke4uCAhsY9h71dpM6ghYA" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1624" string="zsXj8KFWQvK6dWWkXdSvnTRZ" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1626" string="aSVuUUx2Hq7H18fQoLyXjSDf" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1628" string="SmjA6vCiXcTtzky1owavBWVo" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1630" string="sKtqm6CHbvjBwf6ExVqZe2H2" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1632" string="N3NGKAmxx95YR9jfnuskDXfi" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1634" string="LofZ6CynT7PF9bvtv9CFBtoG" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1637" string="egFxSbDqkQpT3SVXNvHkLMoL" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1639" string="HjpZmzZgmTqKYa6FQ6PUbXdQ" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1641" string="RX1vXvzu11L5mweVg4kqpag6" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1643" string="fE1b3rqLq3MPVFWfUxvX9oJs" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1645" string="vzYZsXEQZT2Pr7He3XENDGpb" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1647" string="6Vxp44DtabLCGvJZVybgUv8T" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1649" string="WZGQajgox2XWfzqmKTQPaHTZ" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1652" string="mqkVjbawkKASpcGFwwj3cM4z" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1654" string="jHzLgMceWH1TVFR6cmS6XTtc" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1656" string="Z21qJQCaP29Lvo3GBRhoro1o" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1658" string="63J9LLRsGuevzmPHaT5LS1Bs" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1660" string="Ebu9T8gJ5z8xg3GhuxUy3Sog" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1662" string="JBTAZkQ97z6qN5Pi7ScMdmmi" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1664" string="8kcak7pgcCnacwaULDMUMtqL" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1666" string="vCHDENzEoy8DLuq1iA7rDY6j" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1668" string="1EJZNkWrurGgyZxDXLvH8QRu" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1670" string="4RwMt2wvWHv9U9fKcRqsd4NG" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1672" string="gS6DkM19QAhkXcNopSEkUxDu" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1674" string="VosgvoV5rB3vqeATS89oEz4y" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1676" string="JCGGDNFdLsi4WLToR5uazV3R" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1678" string="aMKoYNb2up9D7txx2mqJMVj7" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1680" string="eURoBhH2mwqdf112cGf3Pucd" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1682" string="aLR5mqz7qo3tRyDtbEDWU2wp" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1684" string="U9Jd4zLsCUC5QMaQpJ3S5Xrg" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1686" string="7re8ryCXXSwh6gCVwkYCMzQo" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1688" string="yiz454zQCCsPRDMLByysaqPT" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1690" string="g4FBGCbwcwzsYCz22vKRLsUW" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1692" string="XH7M4o7aM2axKmZN4M5YJJsJ" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1694" string="z6CDWd84LE5EG3hdfSGrfQdb" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1697" string="dGjsEQp8h8s6D1xioQpmpqbj" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1699" string="ErmTuv4WC71hUPaTAwFJMgg9" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1703" string="2jZaRuEVSkbB9LfUUkVpNzMV" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1705" string="zGECFV6DJx6YBcK7NS6cFky2" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1707" string="aa5jxmwoKrtoQx33i93ui8iK" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1709" string="8xUA2XymToKKK3rBWToWGv1p" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1711" string="Rat6bk6bEwpNAcSbPt8kSnuT" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1713" string="gDnPziTDCApKQDVitth4HAHZ" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1715" string="XFLK4HQ2sKqu4FoHGQTPJj9h" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1717" string="NW7gximsFVCzgGJBgsATd7ts" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1719" string="VVRsM7n1v6M2xk1PNff9J3yz" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1721" string="9VDzfmWDUSnmbkExNPjpwsF4" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1723" string="n5dkFyEMuaFemTdwFabqLLAt" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1727" string="58Ee4t8weEZTgU4Y7XZ6Lqu1" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1730" string="11xX9Rj4oxELTF7zfqZgzVjf" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1732" string="staNEseAoBobtmpwzg9k6P3N" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1734" string="bAq78A7Gx9JvXD8yWSM4DnYd" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1736" string="bXd2ywZNdnUg5sJGaqf36KG9" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1738" string="vZnyyEKGX7QyrsfkouWDbdHJ" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1740" string="Ndj4yBNAGdAmacLUqmHGivfE" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1742" string="ZtBN29oRT6Ua9mtgVzk1yy2K" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1744" string="ggzn3mN17TtJuPTPTa1wESey" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1746" string="yVGBcixSPAnqZDaJeZvryGpV" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1748" string="XZ7Uy6KG4ckicnhcsnUnDWpU" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1750" string="Wto3sGzJpzqGXpzWiQoMiuiB" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1752" string="5Cc5YJHMv8a2Jnvuj4ow2QtS" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1754" string="nHx8My5osuLBH14x49ZtBq2S" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1756" string="iPKa2xbU8MYxkrYbjqyTXN7v" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1758" string="Bmc9phmkJQrjwHomr8KHShkE" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1760" string="LogR6b3sZjzEj7BYLJAMu5ZP" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1762" string="YzxgYFexwCQAnoWpmURXztps" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1764" string="3Ksk9zabGb2PiwKSGYh8t3u6" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1766" string="JKS9upfQ58rtrAqgSU8ssdcF" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1768" string="9btMmBGYyRaRnmvV7crbZvza" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1770" string="5UUfW39CjVbPLT3vsYD8axQb" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1772" string="yqGxg7uR2GWie71rewf9Qpy7" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1774" string="VTuHM8aZChYpKt8v37GZhfXA" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1776" string="3W3sXfzhACA7wUsyNM2VZfzV" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1778" string="U76k6k1Wp1xGsJdEU8djRGQK" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1780" string="kVAMLTFdf1ogaEyqMDBxCr7p" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1782" string="jagXpHuFND8Bq97PWiqwLtcM" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1784" string="CTBuEmP6ETQABddJGuwLSQf1" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1786" string="u2S2guUyfTE9tret5MxRuiEC" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1788" string="srh7vcHLNBVhasSvscT5BJ2D" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1790" string="fYtyVGA9AdJJCr4tGY7PebSY" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1792" string="oC8tPEm9daEsnMXe6ouBJ943" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1794" string="4wjzFnuZEddT8izUpaUEyY9o" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1796" string="xd1tDgty2uC5azTYpWyCb7zf" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1798" string="VxuKSP1BRkPL5doHXZGVXXMY" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1800" string="N5DZZuYmPyNXwRbxfsQzQ6pr" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1802" string="Hp2QHXn299UVzs3y6RLZcUnu" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1805" string="TZQMe78RTsPLPMiGse1Z6p6j" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1807" string="FGrCpiA57CPHDfFLhubtW64j" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1809" string="dz2zQHmtYqFAMQr8V3LrCH8S" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1811" string="YELxiDhR51iYRKtUnhjkCELQ" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1813" string="kps5BhHziK3dne5Fqb4d6Mxo" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1815" string="jVemSxguaAZ4b8xmf2uNBPK4" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1817" string="196jvXHM7ayJqxtBGHfTrjxh" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1819" string="8A2wA9jCnds1eVjuPdyMZGuC" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1821" string="PEi4BPDEFDQ5WK46qNRPU6bn" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1823" string="kvz3yKDSMhQptQf2qhUjYtNp" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1825" string="aNBQKk2KUWTKDBHuLFEo4LFq" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1827" string="RoboQwGSDRkEwnGYsL2EqtsR" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1829" string="DsdzSPHoVbLX4hTtcFqEYtpN" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1831" string="qged2kLhEcRfT4tLWT3VscD1" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1833" string="w5gPzG64Z8QaErZ3GYRvEdc7" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1835" string="Xh1pevWgvkRyHKj1JVo1qhDc" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1837" string="X4s9a9kGAagNK4BCx8u1chgt" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1839" string="KLNE9xHYq4tDLbFKiMG4ZKp4" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1841" string="kRr4PdKgzBffh1tDeo13LoN6" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1843" string="VGiio3aY8tWZLZ8BJojbAink" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1845" string="bqRB5NGzczzwJqrSzVGrtFdQ" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1847" string="rCYM7Qn4UUqMtYnsXpXrpfFC" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1850" string="u8RvHorzptymsF9YVT6rAz2H" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1852" string="HmxuedFWpzB95mYKWyXLoUpW" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1854" string="orSLtqJaJxzf1VKvnX7FTtT4" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1856" string="mFHWw42Kc3RZDJJmMPxEtqBx" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1858" string="xMhMuvfF3XaSho5fBhAjUBQZ" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1860" string="FHS9NUXRu88AB1ZR8LUQDdx3" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1862" string="fnCDm6QPNBsjF2tZejG7sxjs" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1864" string="596tJdWmJZp6LtZX3uvBZgJ3" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1866" string="3t5zVPc3LiMebLaG2zKYTFmF" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1868" string="au48fTkHjzWcbzU25mTjbAnY" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1870" string="7zNy6pF726m2Jr3ULkMMV2ho" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1872" string="iQguRNjGY7pSNdDWXKSbnrNq" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1874" string="ySpfuLs916eXUciu3j4Az5Ak" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1876" string="BdPWpGS5u8AtoWS4J7Jn88cs" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1878" string="1mW6p4zAW7GBt1JVY7njr2gM" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1880" string="rHEbiSpjAGpj8m1wxEi1hu6j" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1882" string="Dj7Dd8B8EM5fz8CFu5z28EsQ" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1884" string="295uTh8k7EwYvmAkNU8TWXNZ" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1886" string="ZmwosGNsmmnw6pxTEr5HGDM9" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1888" string="zAvogwZ372YBivN4D5xt4NvJ" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1890" string="pCce28LNdFKbNZorFbZuFXSp" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1892" string="KjXd7mVwSfqTXxEBwsso67NS" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1894" string="v1arEsALRy8itD6Y21tCkbxy" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1896" string="YoEf6MNUWFMRmcDBUH4z7n5W" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1898" string="DJrGxwWYpgyfCXThr6Tw3dyz" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1900" string="fw3GeVVpbVSmbFQVLjM9E116" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1902" string="KntRQ4czmkWnUhTMJ1zBRMLk" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1904" string="DPoKouibnf7uvDUefbmFHJaU" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1906" string="z9tcoxxuJPNJXpNgbrifvbg9" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1908" string="GfMuj2i6WG1cccdwyRC8pL9k" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1910" string="HYk4TaKxMkhpiVzn4VUkfnap" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1912" string="5DmKYbCmM4GNZ7B1UQhdH8xN" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1914" string="8ua4ARUvuXDtq9ohd7GvZfmY" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1916" string="RkjfxJQbdP9rt9V5y5RSENDn" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1918" string="i66w7VpLc13HyytBccaFKyqE" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1920" string="hraFzATfLY6w4MoyqiP5yFdL" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1922" string="DMaXmt5zddWovrJVxRLAuM9w" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1924" string="cpKuArkhxfkVMcyFuQjtPfXw" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1927" string="NvR3fPup5JdCqpuKpfJffBQ1" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1929" string="WuWPq4G2TtWAEXiMaMCvynJH" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+  <entry id="1931" string="3P9K78b1iZHXBDT8tkQB4b4D" kind="runservice" project="home:test666:branches:openEuler:Mainline" package="zjl"/>
+</directory>
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ osc whois
++ grep test666
+WARNING: SSL certificate checks disabled. Connection is insecure!
+
+test666: "-" <15091825550@163.com>
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ osc copypac openEuler:Mainline glibc home:test666:branches:openEuler:Mainline glibc
++ grep comment
+WARNING: SSL certificate checks disabled. Connection is insecure!
+
+Server returned an error: HTTP Error 404: Not Found
+openEuler:Mainline/glibc
++ CHECK_RESULT 1
++ actual_result=1
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 0 -eq 0 ']'
++ test 1x '!=' 0x
++ test -n ''
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_osc_04.sh line 45'
++ message='oe_test_osc_04.sh line 45'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_osc_04.sh line 45'
+Tue May 16 15:43:39 2023 - ERROR - oe_test_osc_04.sh line 45
++ '[' 0 -eq 1 ']'
++ return 0
++ osc up
++ grep 'checking out new package'
+WARNING: SSL certificate checks disabled. Connection is insecure!
+
++ CHECK_RESULT 1
++ actual_result=1
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 0 -eq 0 ']'
++ test 1x '!=' 0x
++ test -n ''
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_osc_04.sh line 47'
++ message='oe_test_osc_04.sh line 47'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_osc_04.sh line 47'
+Tue May 16 15:43:46 2023 - ERROR - oe_test_osc_04.sh line 47
++ '[' 0 -eq 1 ']'
++ return 0
++ osc aggregatepac openEuler:Mainline chrpath home:test666:branches:openEuler:Mainline xzz
++ grep 'Creating _aggregate'
+WARNING: SSL certificate checks disabled. Connection is insecure!
+
+Creating _aggregate... Done.
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ osc up
++ grep Updating
+WARNING: SSL certificate checks disabled. Connection is insecure!
+
+Updating zjl
+Updating xzz
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ osc linkpac openEuler:Mainline chrpath home:test666:branches:openEuler:Mainline xzz
++ grep 'Creating _link'
+WARNING: SSL certificate checks disabled. Connection is insecure!
+
+Server returned an error: HTTP Error 404: Not Found
+openEuler:Mainline/chrpath
+Creating _link... 
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ osc up
++ grep Updating
+WARNING: SSL certificate checks disabled. Connection is insecure!
+
+Updating zjl
+Updating xzz
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ cd xzz
++ '[' '' = aarch64 ']'
++ osc linktobranch
++ grep revision
+WARNING: SSL certificate checks disabled. Connection is insecure!
+
+no _link file inside project 'home:test666:branches:openEuler:Mainline' package 'xzz'
++ CHECK_RESULT 1
++ actual_result=1
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 0 -eq 0 ']'
++ test 1x '!=' 0x
++ test -n ''
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_osc_04.sh line 62'
++ message='oe_test_osc_04.sh line 62'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_osc_04.sh line 62'
+Tue May 16 15:44:16 2023 - ERROR - oe_test_osc_04.sh line 62
++ '[' 0 -eq 1 ']'
++ return 0
++ osc pdiff
+WARNING: SSL certificate checks disabled. Connection is insecure!
+
+Guessed that openEuler:Mainline/xzz is the parent package.
+Server returned an error: HTTP Error 404: Not Found
+openEuler:Mainline/xzz
++ CHECK_RESULT 1
++ actual_result=1
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 0 -eq 0 ']'
++ test 1x '!=' 0x
++ test -n ''
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_osc_04.sh line 64'
++ message='oe_test_osc_04.sh line 64'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_osc_04.sh line 64'
+Tue May 16 15:44:22 2023 - ERROR - oe_test_osc_04.sh line 64
++ '[' 0 -eq 1 ']'
++ return 0
++ cd ..
++ osc rdelete home:test666:branches:openEuler:Mainline glibc -m 'delete package_glibc'
+WARNING: SSL certificate checks disabled. Connection is insecure!
+
+Server returned an error: HTTP Error 404: Not Found
+home:test666:branches:openEuler:Mainline/glibc
++ osc rdelete home:test666:branches:openEuler:Mainline xzz -m 'delete package_xzz'
+WARNING: SSL certificate checks disabled. Connection is insecure!
+
++ osc commit -n
+WARNING: SSL certificate checks disabled. Connection is insecure!
+
+nothing to do for package zjl
+Server returned an error: HTTP Error 404: Not Found
+home:test666:branches:openEuler:Mainline/xzz
++ LOG_INFO 'End to run test.'
++ message='End to run test.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End to run test.'
+Tue May 16 15:44:39 2023 - INFO  - End to run test.
++ CASE_RESULT 0
++ case_re=0
++ test -z 4
++ test 4 -gt 0
++ LOG_ERROR 'failed to execute the case.'
++ message='failed to execute the case.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'failed to execute the case.'
+Tue May 16 15:44:39 2023 - ERROR - failed to execute the case.
++ exit 4
++ post_test
++ LOG_INFO 'Start to restore the test environment.'
++ message='Start to restore the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to restore the test environment.'
+Tue May 16 15:44:40 2023 - INFO  - Start to restore the test environment.
++ clear_env
++ cd /root/mugen/testcases/cli-test/osc
++ rm -rf home:test666:branches:openEuler:Mainline /root/.oscrc
++ DNF_REMOVE
++ node=1
++ pkg_list=
++ mode=0
++ [[ -z '' ]]
++ [[ -z '' ]]
++ LOG_WARN 'no thing to do.'
++ message='no thing to do.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level warn --message 'no thing to do.'
+Tue May 16 15:44:40 2023 - WARN  - no thing to do.
++ return 0
++ LOG_INFO 'End to restore the test environment.'
++ message='End to restore the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End to restore the test environment.'
+Tue May 16 15:44:41 2023 - INFO  - End to restore the test environment.

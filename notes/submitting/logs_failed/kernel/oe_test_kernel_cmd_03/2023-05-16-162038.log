@@ -1,0 +1,202 @@
++ source /root/mugen/libs/locallibs/common_lib.sh
+++ python3 --version
+++ '[' 0 -eq 0 ']'
+++ source /root/mugen/libs/locallibs/common_lib_python.sh
++ main
+++ type -t post_test
++ '[' -n function ']'
++ trap post_test EXIT INT HUP TERM
++ rpm -qa
++ grep expect
+++ type -t config_params
++ '[' -n '' ']'
+++ type -t pre_test
++ '[' -n function ']'
++ pre_test
++ LOG_INFO 'Start to prepare the test environment.'
++ message='Start to prepare the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to prepare the test environment.'
+Tue May 16 16:20:40 2023 - INFO  - Start to prepare the test environment.
++ DNF_INSTALL 'kernel-tools perf bpftool jq'
++ pkgs='kernel-tools perf bpftool jq'
++ node=1
++ '[' -z '' ']'
++ tmpfile=
+++ python3 /root/mugen/libs/locallibs/rpm_manage.py install --pkgs 'kernel-tools perf bpftool jq' --node 1 --tempfile ''
++ tmpfile2='mainline                                        0.0  B/s |   0  B     00:40    
+Errors during downloading metadata for repository '\''mainline'\'':
+  - Curl error (6): Couldn'\''t resolve host name for https://mirror.iscas.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/testing/20230331_openEuler-23.03-V1-riscv64/repo/23.03/mainline/repodata/repomd.xml [Could not resolve host: mirror.iscas.ac.cn]
+Error: Failed to download metadata for repo '\''mainline'\'': Cannot download repomd.xml: Cannot download repodata/repomd.xml: All mirrors were tried'
++ '[' -z '' ']'
++ tmpfile='mainline                                        0.0  B/s |   0  B     00:40    
+Errors during downloading metadata for repository '\''mainline'\'':
+  - Curl error (6): Couldn'\''t resolve host name for https://mirror.iscas.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/testing/20230331_openEuler-23.03-V1-riscv64/repo/23.03/mainline/repodata/repomd.xml [Could not resolve host: mirror.iscas.ac.cn]
+Error: Failed to download metadata for repo '\''mainline'\'': Cannot download repomd.xml: Cannot download repodata/repomd.xml: All mirrors were tried'
++ LOG_INFO 'End to prepare the test environment.'
++ message='End to prepare the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End to prepare the test environment.'
+Tue May 16 16:22:55 2023 - INFO  - End to prepare the test environment.
+++ type -t run_test
++ '[' -n function ']'
++ run_test
++ LOG_INFO 'Start to run test.'
++ message='Start to run test.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to run test.'
+Tue May 16 16:22:56 2023 - INFO  - Start to run test.
++ perf -h
++ grep usage
+oe_test_kernel_cmd_03.sh: line 28: perf: command not found
++ CHECK_RESULT 1
++ actual_result=1
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 0 -eq 0 ']'
++ test 1x '!=' 0x
++ test -n ''
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_kernel_cmd_03.sh line 29'
++ message='oe_test_kernel_cmd_03.sh line 29'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_kernel_cmd_03.sh line 29'
+Tue May 16 16:22:57 2023 - ERROR - oe_test_kernel_cmd_03.sh line 29
++ '[' 0 -eq 1 ']'
++ return 0
++ perf version
++ grep 'perf version'
+oe_test_kernel_cmd_03.sh: line 30: perf: command not found
++ CHECK_RESULT 1
++ actual_result=1
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 0 -eq 0 ']'
++ test 1x '!=' 0x
++ test -n ''
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_kernel_cmd_03.sh line 31'
++ message='oe_test_kernel_cmd_03.sh line 31'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_kernel_cmd_03.sh line 31'
+Tue May 16 16:22:57 2023 - ERROR - oe_test_kernel_cmd_03.sh line 31
++ '[' 0 -eq 1 ']'
++ return 0
++ perf list
++ awk -F: '/Tracepoint event/ { lib[$1]++ } END { for (l in lib){ printf " %-16s %d\n", l, lib[l] } }'
+oe_test_kernel_cmd_03.sh: line 32: perf: command not found
++ sort
++ column
++ printf '#include<stdio.h>
+int main()
+{
+        printf("Hello,wolrd!\\n");
+        return 0;
+}'
++ gcc hello.c
++ perf stat -e task-clock ./a.out
++ grep 'Hello,wolrd!'
+oe_test_kernel_cmd_03.sh: line 40: perf: command not found
++ CHECK_RESULT 1
++ actual_result=1
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 0 -eq 0 ']'
++ test 1x '!=' 0x
++ test -n ''
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_kernel_cmd_03.sh line 41'
++ message='oe_test_kernel_cmd_03.sh line 41'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_kernel_cmd_03.sh line 41'
+Tue May 16 16:22:59 2023 - ERROR - oe_test_kernel_cmd_03.sh line 41
++ '[' 0 -eq 1 ']'
++ return 0
+++ perf stat -r 5 ./a.out
+++ grep -c 'Hello,wolrd!'
+oe_test_kernel_cmd_03.sh: line 42: perf: command not found
++ ret=0
++ CHECK_RESULT 0 5
++ actual_result=0
++ expect_result=5
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 5x
++ test -n ''
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_kernel_cmd_03.sh line 43'
++ message='oe_test_kernel_cmd_03.sh line 43'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_kernel_cmd_03.sh line 43'
+Tue May 16 16:23:00 2023 - ERROR - oe_test_kernel_cmd_03.sh line 43
++ '[' 0 -eq 1 ']'
++ return 0
++ perf stat -d ./a.out
++ grep 'Hello,wolrd!'
+oe_test_kernel_cmd_03.sh: line 44: perf: command not found
++ CHECK_RESULT 1
++ actual_result=1
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 0 -eq 0 ']'
++ test 1x '!=' 0x
++ test -n ''
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_kernel_cmd_03.sh line 45'
++ message='oe_test_kernel_cmd_03.sh line 45'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_kernel_cmd_03.sh line 45'
+Tue May 16 16:23:00 2023 - ERROR - oe_test_kernel_cmd_03.sh line 45
++ '[' 0 -eq 1 ']'
++ return 0
++ LOG_INFO 'End of the test.'
++ message='End of the test.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End of the test.'
+Tue May 16 16:23:01 2023 - INFO  - End of the test.
++ CASE_RESULT 0
++ case_re=0
++ test -z 5
++ test 5 -gt 0
++ LOG_ERROR 'failed to execute the case.'
++ message='failed to execute the case.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'failed to execute the case.'
+Tue May 16 16:23:01 2023 - ERROR - failed to execute the case.
++ exit 5
++ post_test
++ LOG_INFO 'Start to restore the tet environment.'
++ message='Start to restore the tet environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to restore the tet environment.'
+Tue May 16 16:23:02 2023 - INFO  - Start to restore the tet environment.
++ DNF_REMOVE
++ node=1
++ pkg_list=
++ mode=0
++ [[ -z mainline                                        0.0  B/s |   0  B     00:40    
+Errors during downloading metadata for repository 'mainline':
+  - Curl error (6): Couldn't resolve host name for https://mirror.iscas.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/testing/20230331_openEuler-23.03-V1-riscv64/repo/23.03/mainline/repodata/repomd.xml [Could not resolve host: mirror.iscas.ac.cn]
+Error: Failed to download metadata for repo 'mainline': Cannot download repomd.xml: Cannot download repodata/repomd.xml: All mirrors were tried ]]
++ '[' 0 -ne 0 ']'
++ '[' 1 == 0 ']'
++ python3 /root/mugen/libs/locallibs/rpm_manage.py remove --node 1 --pkgs '' --tempfile 'mainline                                        0.0  B/s |   0  B     00:40    
+Errors during downloading metadata for repository '\''mainline'\'':
+  - Curl error (6): Couldn'\''t resolve host name for https://mirror.iscas.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/testing/20230331_openEuler-23.03-V1-riscv64/repo/23.03/mainline/repodata/repomd.xml [Could not resolve host: mirror.iscas.ac.cn]
+Error: Failed to download metadata for repo '\''mainline'\'': Cannot download repomd.xml: Cannot download repodata/repomd.xml: All mirrors were tried'
+Traceback (most recent call last):
+  File "/root/mugen/libs/locallibs/rpm_manage.py", line 181, in <module>
+    exitcode = rpm_remove(args.node, args.pkgs, args.tempfile)
+  File "/root/mugen/libs/locallibs/rpm_manage.py", line 152, in rpm_remove
+    with open(tmpfile, "r") as f:
+FileNotFoundError: [Errno 2] No such file or directory: "mainline                                        0.0  B/s |   0  B     00:40    \nErrors during downloading metadata for repository 'mainline':\n  - Curl error (6): Couldn't resolve host name for https://mirror.iscas.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/testing/20230331_openEuler-23.03-V1-riscv64/repo/23.03/mainline/repodata/repomd.xml [Could not resolve host: mirror.iscas.ac.cn]\nError: Failed to download metadata for repo 'mainline': Cannot download repomd.xml: Cannot download repodata/repomd.xml: All mirrors were tried"
++ '[' 0 -ne 0 ']'
++ rm -rf hello.c a.out
++ LOG_INFO 'Finish to restore the tet environment.'
++ message='Finish to restore the tet environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Finish to restore the tet environment.'
+Tue May 16 16:23:04 2023 - INFO  - Finish to restore the tet environment.

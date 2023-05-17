@@ -1,0 +1,342 @@
++ source ../common/common_lib.sh
+++ source /root/mugen/libs/locallibs/common_lib.sh
++++ python3 --version
++++ '[' 0 -eq 0 ']'
++++ source /root/mugen/libs/locallibs/common_lib_python.sh
++ main
+++ type -t post_test
++ '[' -n function ']'
++ trap post_test EXIT INT HUP TERM
++ rpm -qa
++ grep expect
+++ type -t config_params
++ '[' -n '' ']'
+++ type -t pre_test
++ '[' -n function ']'
++ pre_test
++ LOG_INFO 'Start environmental preparation.'
++ message='Start environmental preparation.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start environmental preparation.'
+Tue May 16 15:33:34 2023 - INFO  - Start environmental preparation.
++ DNF_INSTALL net-tools
++ pkgs=net-tools
++ node=1
++ '[' -z '' ']'
++ tmpfile=
+++ python3 /root/mugen/libs/locallibs/rpm_manage.py install --pkgs net-tools --node 1 --tempfile ''
+Tue May 16 15:33:41 2023 - INFO  - pkgs:(net-tools) is already installed
++ tmpfile2=
++ '[' -z '' ']'
++ tmpfile=
++ LOG_INFO 'End of environmental preparation!'
++ message='End of environmental preparation!'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End of environmental preparation!'
+Tue May 16 15:33:41 2023 - INFO  - End of environmental preparation!
+++ type -t run_test
++ '[' -n function ']'
++ run_test
++ LOG_INFO 'Start testing...'
++ message='Start testing...'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start testing...'
+Tue May 16 15:33:42 2023 - INFO  - Start testing...
++ netstat --help
++ grep 'usage: netstat'
+    inet (DARPA Internet) inet6 (IPv6) ax25 (AMPR AX.25) 
+    netrom (AMPR NET/ROM) rose (AMPR ROSE) ipx (Novell IPX) 
+    ddp (Appletalk DDP) x25 (CCITT X.25) 
+usage: netstat [-vWeenNcCF] [<Af>] -r         netstat {-V|--version|-h|--help}
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ netstat -V
++ grep net-tools
++ grep '[0-9]'
+net-tools 2.10
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ netstat -a
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State      
+tcp        0      0 0.0.0.0:ssh             0.0.0.0:*               LISTEN     
+tcp        0      0 openeuler-riscv64:37154 124.16.138.126:https    TIME_WAIT  
+tcp        0      0 openeuler-riscv64:37166 124.16.138.126:https    TIME_WAIT  
+tcp        0      0 openeuler-riscv64:ssh   _gateway:49356          ESTABLISHED
+tcp        0      0 openeuler-riscv64:ssh   _gateway:49294          ESTABLISHED
+tcp        0      0 openeuler-riscv64:37128 124.16.138.126:https    TIME_WAIT  
+tcp        0      0 openeuler-riscv64:37144 124.16.138.126:https    TIME_WAIT  
+tcp        0      0 openeuler-riscv64:59898 124.16.138.126:https    TIME_WAIT  
+tcp        0      0 openeuler-riscv64:37148 124.16.138.126:https    TIME_WAIT  
+tcp6       0      0 [::]:ssh                [::]:*                  LISTEN     
+udp        0      0 openeuler-riscv6:bootpc _gateway:bootps         ESTABLISHED
+raw6       0      0 [::]:ipv6-icmp          [::]:*                  7          
+Active UNIX domain sockets (servers and established)
+Proto RefCnt Flags       Type       State         I-Node   Path
+unix  3      [ ]         STREAM     CONNECTED     9048     /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     9494     
+unix  3      [ ]         STREAM     CONNECTED     724      
+unix  3      [ ]         DGRAM      CONNECTED     8859     
+unix  3      [ ]         STREAM     CONNECTED     9074     
+unix  2      [ ]         DGRAM      CONNECTED     636      
+unix  3      [ ]         DGRAM      CONNECTED     8857     /run/systemd/notify
+unix  2      [ ]         DGRAM                    8858     /run/systemd/cgroups-agent
+unix  2      [ ACC ]     STREAM     LISTENING     8861     /run/systemd/private
+unix  2      [ ACC ]     STREAM     LISTENING     8863     /run/systemd/userdb/io.systemd.DynamicUser
+unix  2      [ ACC ]     STREAM     LISTENING     8864     /run/systemd/io.system.ManagedOOM
+unix  3      [ ]         DGRAM      CONNECTED     7432     
+unix  2      [ ACC ]     STREAM     LISTENING     8874     /run/lvm/lvmpolld.socket
+unix  2      [ ACC ]     SEQPACKET  LISTENING     8876     /run/systemd/coredump
+unix  6      [ ]         DGRAM      CONNECTED     8878     /run/systemd/journal/dev-log
+unix  6      [ ]         DGRAM      CONNECTED     8880     /run/systemd/journal/socket
+unix  3      [ ]         STREAM     CONNECTED     739      
+unix  2      [ ACC ]     STREAM     LISTENING     8882     /run/systemd/journal/stdout
+unix  2      [ ACC ]     SEQPACKET  LISTENING     8884     /run/udev/control
+unix  3      [ ]         STREAM     CONNECTED     742      /run/dbus/system_bus_socket
+unix  2      [ ]         DGRAM      CONNECTED     8975     
+unix  3      [ ]         STREAM     CONNECTED     7460     
+unix  2      [ ]         DGRAM      CONNECTED     7428     
+unix  2      [ ACC ]     STREAM     LISTENING     8948     /run/systemd/journal/io.systemd.journal
+unix  3      [ ]         STREAM     CONNECTED     762      
+unix  3      [ ]         STREAM     CONNECTED     7472     
+unix  2      [ ]         DGRAM      CONNECTED     9407     
+unix  3      [ ]         DGRAM      CONNECTED     7433     
+unix  3      [ ]         DGRAM      CONNECTED     640      
+unix  3      [ ]         STREAM     CONNECTED     9171     
+unix  3      [ ]         STREAM     CONNECTED     9040     /run/systemd/journal/stdout
+unix  3      [ ]         DGRAM      CONNECTED     8860     
+unix  3      [ ]         STREAM     CONNECTED     745      /run/dbus/system_bus_socket
+unix  2      [ ]         DGRAM      CONNECTED     9063     
+unix  3      [ ]         STREAM     CONNECTED     755      
+unix  2      [ ]         DGRAM      CONNECTED     750      
+unix  2      [ ]         DGRAM      CONNECTED     9491     
+unix  3      [ ]         STREAM     CONNECTED     9031     /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     741      /run/dbus/system_bus_socket
+unix  2      [ ]         DGRAM                    7477     
+unix  3      [ ]         DGRAM      CONNECTED     641      
+unix  3      [ ]         STREAM     CONNECTED     7493     /run/systemd/journal/stdout
+unix  3      [ ]         DGRAM      CONNECTED     7434     
+unix  3      [ ]         STREAM     CONNECTED     7408     
+unix  3      [ ]         STREAM     CONNECTED     627      
+unix  2      [ ]         STREAM     CONNECTED     9470     
+unix  2      [ ]         DGRAM      CONNECTED     7290     
+unix  2      [ ACC ]     STREAM     LISTENING     9369     /run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     9495     
+unix  3      [ ]         STREAM     CONNECTED     7478     
+unix  3      [ ]         STREAM     CONNECTED     7484     /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     9146     /run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     9388     
+unix  3      [ ]         STREAM     CONNECTED     744      /run/dbus/system_bus_socket
+unix  3      [ ]         DGRAM      CONNECTED     7435     
+unix  3      [ ]         STREAM     CONNECTED     7336     /run/systemd/journal/stdout
+unix  2      [ ]         DGRAM      CONNECTED     7743     
+unix  3      [ ]         STREAM     CONNECTED     738      
+unix  3      [ ]         STREAM     CONNECTED     9051     /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     7464     
+unix  3      [ ]         STREAM     CONNECTED     9172     
+unix  3      [ ]         STREAM     CONNECTED     9402     
+Active Bluetooth connections (servers and established)
+Proto  Destination       Source            State         PSM DCID   SCID      IMTU    OMTU Security
+Proto  Destination       Source            State     Channel
++ CHECK_RESULT 0 0 0 'Show all sockets fail'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='Show all sockets fail'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ netstat -apu
++ grep 'Active Internet connections'
+Active Internet connections (servers and established)
++ CHECK_RESULT 0 0 0 'Show udp sockets fail'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='Show udp sockets fail'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ netstat -apt
++ grep 'Active Internet connections'
+Active Internet connections (servers and established)
++ CHECK_RESULT 0 0 0 'Show tcp sockets fail'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='Show tcp sockets fail'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ netstat -i
++ grep 'Kernel Interface table'
+Kernel Interface table
++ CHECK_RESULT 0 0 0 'Display a table of all network interfaces fail'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='Display a table of all network interfaces fail'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ netstat -g
++ grep 'IPv6/IPv4 Group Memberships'
+IPv6/IPv4 Group Memberships
++ CHECK_RESULT 0 0 0 'Display multicast group membership information fail'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='Display multicast group membership information fail'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ netstat -s
+Ip:
+    Forwarding: 2
+    232 total packets received
+    1 with invalid addresses
+    0 forwarded
+    0 incoming packets discarded
+    230 incoming packets delivered
+    168 requests sent out
+    20 dropped because of missing route
+Icmp:
+    0 ICMP messages received
+    0 input ICMP message failed
+    ICMP input histogram:
+    19 ICMP messages sent
+    0 ICMP messages failed
+    ICMP output histogram:
+        destination unreachable: 19
+IcmpMsg:
+        OutType3: 19
+Tcp:
+    6 active connection openings
+    4 passive connection openings
+    0 failed connection attempts
+    2 connection resets received
+    2 connections established
+    121 segments received
+    116 segments sent out
+    0 segments retransmitted
+    0 bad segments received
+    0 resets sent
+Udp:
+    33 packets received
+    66 packets to unknown port received
+    0 packet receive errors
+    33 packets sent
+    0 receive buffer errors
+    0 send buffer errors
+UdpLite:
+TcpExt:
+    6 TCP sockets finished time wait in fast timer
+    7 delayed acks sent
+    6 packet headers predicted
+    12 acknowledgments not containing data payload received
+    48 predicted acknowledgments
+    IPReversePathFilter: 1
+    TCPRcvCoalesce: 8
+    TCPOrigDataSent: 56
+    TCPDelivered: 62
+IpExt:
+    InOctets: 77900
+    OutOctets: 24310
+    InNoECTPkts: 256
++ CHECK_RESULT 0 0 0 'Display summary statistics for each protocol fail'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='Display summary statistics for each protocol fail'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ netstat -l
+Active Internet connections (only servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State      
+tcp        0      0 0.0.0.0:ssh             0.0.0.0:*               LISTEN     
+tcp6       0      0 [::]:ssh                [::]:*                  LISTEN     
+raw6       0      0 [::]:ipv6-icmp          [::]:*                  7          
+Active UNIX domain sockets (only servers)
+Proto RefCnt Flags       Type       State         I-Node   Path
+unix  2      [ ACC ]     STREAM     LISTENING     8861     /run/systemd/private
+unix  2      [ ACC ]     STREAM     LISTENING     8863     /run/systemd/userdb/io.systemd.DynamicUser
+unix  2      [ ACC ]     STREAM     LISTENING     8864     /run/systemd/io.system.ManagedOOM
+unix  2      [ ACC ]     STREAM     LISTENING     8874     /run/lvm/lvmpolld.socket
+unix  2      [ ACC ]     SEQPACKET  LISTENING     8876     /run/systemd/coredump
+unix  2      [ ACC ]     STREAM     LISTENING     8882     /run/systemd/journal/stdout
+unix  2      [ ACC ]     SEQPACKET  LISTENING     8884     /run/udev/control
+unix  2      [ ACC ]     STREAM     LISTENING     8948     /run/systemd/journal/io.systemd.journal
+unix  2      [ ACC ]     STREAM     LISTENING     9369     /run/dbus/system_bus_socket
+Active Bluetooth connections (only servers)
+Proto  Destination       Source            State         PSM DCID   SCID      IMTU    OMTU Security
+Proto  Destination       Source            State     Channel
++ CHECK_RESULT 0 0 0 'Show only listening sockets fail'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='Show only listening sockets fail'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ LOG_INFO 'Finish test!'
++ message='Finish test!'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Finish test!'
+Tue May 16 15:34:00 2023 - INFO  - Finish test!
++ CASE_RESULT 0
++ case_re=0
++ test -z ''
++ test 0 -eq 0
++ LOG_INFO 'succeed to execute the case.'
++ message='succeed to execute the case.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'succeed to execute the case.'
+Tue May 16 15:34:00 2023 - INFO  - succeed to execute the case.
++ exec_result=
++ exit 0
++ post_test
++ LOG_INFO 'start environment cleanup.'
++ message='start environment cleanup.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'start environment cleanup.'
+Tue May 16 15:34:01 2023 - INFO  - start environment cleanup.
++ DNF_REMOVE
++ node=1
++ pkg_list=
++ mode=0
++ [[ -z '' ]]
++ [[ -z '' ]]
++ LOG_WARN 'no thing to do.'
++ message='no thing to do.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level warn --message 'no thing to do.'
+Tue May 16 15:34:02 2023 - WARN  - no thing to do.
++ return 0
++ LOG_INFO 'Finish environment cleanup!'
++ message='Finish environment cleanup!'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Finish environment cleanup!'
+Tue May 16 15:34:02 2023 - INFO  - Finish environment cleanup!

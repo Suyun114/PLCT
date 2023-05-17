@@ -1,0 +1,247 @@
++ source common/common_osc.sh
+++ source /root/mugen/libs/locallibs/common_lib.sh
++++ python3 --version
++++ '[' 0 -eq 0 ']'
++++ source /root/mugen/libs/locallibs/common_lib_python.sh
++ main
+++ type -t post_test
++ '[' -n function ']'
++ trap post_test EXIT INT HUP TERM
++ rpm -qa
++ grep expect
+++ type -t config_params
++ '[' -n function ']'
++ config_params
++ LOG_INFO 'Start to config params of the case.'
++ message='Start to config params of the case.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to config params of the case.'
+Tue May 16 15:41:37 2023 - INFO  - Start to config params of the case.
++ deploy_env
++ cat
++ branches_path=home:test666:branches:openEuler:Mainline
++++ dirname oe_test_osc_03.sh
+++ cd .
+++ pwd
++ currentDir=/root/mugen/testcases/cli-test/osc
++ LOG_INFO 'End to config params of the case.'
++ message='End to config params of the case.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End to config params of the case.'
+Tue May 16 15:41:38 2023 - INFO  - End to config params of the case.
+++ type -t pre_test
++ '[' -n function ']'
++ pre_test
++ LOG_INFO 'Start to prepare the test environment.'
++ message='Start to prepare the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to prepare the test environment.'
+Tue May 16 15:41:39 2023 - INFO  - Start to prepare the test environment.
++ DNF_INSTALL osc
++ pkgs=osc
++ node=1
++ '[' -z '' ']'
++ tmpfile=
+++ python3 /root/mugen/libs/locallibs/rpm_manage.py install --pkgs osc --node 1 --tempfile ''
+Tue May 16 15:41:45 2023 - INFO  - pkgs:(osc) is already installed
++ tmpfile2=
++ '[' -z '' ']'
++ tmpfile=
++ osc checkout home:test666:branches:openEuler:Mainline
++ grep revision
+WARNING: SSL certificate checks disabled. Connection is insecure!
+
+At revision 5645.
++ cd home:test666:branches:openEuler:Mainline
++ LOG_INFO 'End to prepare the test environment.'
++ message='End to prepare the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End to prepare the test environment.'
+Tue May 16 15:41:57 2023 - INFO  - End to prepare the test environment.
+++ type -t run_test
++ '[' -n function ']'
++ run_test
++ LOG_INFO 'Start to run test.'
++ message='Start to run test.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to run test.'
+Tue May 16 15:41:58 2023 - INFO  - Start to run test.
++ osc pr
+WARNING: SSL certificate checks disabled. Connection is insecure!
+
+
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ SLEEP_WAIT 3 'test -f osc_rdiff.log' 2
++ wait_time=3
++ cmd='test -f osc_rdiff.log'
++ nohup osc rdiff home:test666:branches:openEuler:Mainline zjl
++ mode=2
++ python3 /root/mugen/libs/locallibs/sleep_wait.py --time 3 --cmd 'test -f osc_rdiff.log' --mode 2
+
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ osc results home:test666:branches:openEuler:Mainline
+WARNING: SSL certificate checks disabled. Connection is insecure!
+
+
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ osc search --project home:test666:branches:openEuler:Mainline
++ grep Project
+WARNING: SSL certificate checks disabled. Connection is insecure!
+
+# Project
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ osc search --package zjl
++ grep Package
+WARNING: SSL certificate checks disabled. Connection is insecure!
+
+# Project                                 # Package
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ osc search -m -v
++ grep maintainer
+WARNING: SSL certificate checks disabled. Connection is insecure!
+
+matches for 'test666 (maintainer)' in projects:
+No matches found for 'test666 (maintainer)' in packages
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ osc search -m -V
++ grep maintainer
+WARNING: SSL certificate checks disabled. Connection is insecure!
+
+matches for 'test666 (maintainer)' in projects:
+No matches found for 'test666 (maintainer)' in packages
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ osc search --title zjl
++ grep Package
+WARNING: SSL certificate checks disabled. Connection is insecure!
+
+# Project                                 # Package
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ osc search --description zjl_description
++ grep Package
+WARNING: SSL certificate checks disabled. Connection is insecure!
+
+# Project                                 # Package
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ LOG_INFO 'End to run test.'
++ message='End to run test.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End to run test.'
+Tue May 16 15:42:41 2023 - INFO  - End to run test.
++ CASE_RESULT 0
++ case_re=0
++ test -z ''
++ test 0 -eq 0
++ LOG_INFO 'succeed to execute the case.'
++ message='succeed to execute the case.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'succeed to execute the case.'
+Tue May 16 15:42:41 2023 - INFO  - succeed to execute the case.
++ exec_result=
++ exit 0
++ post_test
++ LOG_INFO 'Start to restore the test environment.'
++ message='Start to restore the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to restore the test environment.'
+Tue May 16 15:42:42 2023 - INFO  - Start to restore the test environment.
++ clear_env
++ cd /root/mugen/testcases/cli-test/osc
++ rm -rf home:test666:branches:openEuler:Mainline /root/.oscrc
++ DNF_REMOVE
++ node=1
++ pkg_list=
++ mode=0
++ [[ -z '' ]]
++ [[ -z '' ]]
++ LOG_WARN 'no thing to do.'
++ message='no thing to do.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level warn --message 'no thing to do.'
+Tue May 16 15:42:42 2023 - WARN  - no thing to do.
++ return 0
++ LOG_INFO 'End to restore the test environment.'
++ message='End to restore the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End to restore the test environment.'
+Tue May 16 15:42:43 2023 - INFO  - End to restore the test environment.

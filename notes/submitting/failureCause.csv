@@ -1,0 +1,29 @@
+﻿测试套/软件包名,测试用例名,日志文件,原因,broken testcase,pkg not found,preinstall absent,kernel module absent,file missing,systemd unit restart failure,systemd unit runtime error,systemd unit enable failure,timeout
+binutils,oe_test_binutils_objcopy,2023-05-16-15:42:12.log,broken testcase,1,0,0,0,0,0,0,0,0
+dnf,oe_test_dnf_all-repos,2023-05-16-15:36:37.log,,0,0,0,0,0,0,0,0,0
+dnf,oe_test_dnf_check_diffenert-packages,2023-05-16-15:42:18.log,,0,0,0,0,0,0,0,0,0
+dnf,oe_test_dnf_enabled_enablerepo,2023-05-16-15:48:22.log,,0,0,0,0,0,0,0,0,0
+dnf,oe_test_dnf_enhancement_exclude,2023-05-16-15:50:40.log,,0,0,0,0,0,0,0,0,0
+dnf,oe_test_dnf_list_mark,2023-05-16-15:51:59.log,,0,0,0,0,0,0,0,0,0
+dnf,oe_test_dnf_nobest_nodocs_nogpgcheck,2023-05-16-15:53:13.log,,0,0,0,0,0,0,0,0,0
+dnf,oe_test_dnf_priority,2023-05-16-15:53:53.log,,0,0,0,0,0,0,0,0,0
+dnf,oe_test_dnf_provides_randomwait,2023-05-16-15:54:20.log,,0,0,0,0,0,0,0,0,0
+dnf,oe_test_dnf_reinstall_repoinfo,2023-05-16-15:55:05.log,,0,0,0,0,0,0,0,0,0
+dnf,oe_test_dnf_repeat-install,2023-05-16-15:56:10.log,,0,0,0,0,0,0,0,0,0
+dnf,oe_test_dnf_repeat-upgrade-downgrade,2023-05-16-16:01:42.log,timeout,0,0,0,0,0,0,0,0,1
+fakeroot,oe_test_fakeroot_base,2023-05-16-16:24:35.log,,0,0,0,0,0,0,0,0,0
+fakeroot,oe_test_fakeroot_faked,2023-05-16-16:27:12.log,,0,0,0,0,0,0,0,0,0
+hostname,oe_test_service_nis-domainname,2023-05-16-15:37:27.log,systemd unit restart failure,0,0,0,0,0,1,0,0,0
+iputils,oe_test_service_ninfod,2023-05-16-15:38:47.log,systemd unit restart failure,0,0,0,0,0,1,0,0,0
+iputils,oe_test_service_rdisc,2023-05-16-15:39:40.log,systemd unit restart failure,0,0,0,0,0,1,0,0,0
+kernel,oe_test_kernel_cmd_01,2023-05-16-16:15:34.log,,0,0,0,0,0,0,0,0,0
+kernel,oe_test_kernel_cmd_02,2023-05-16-16:18:07.log,,0,0,0,0,0,0,0,0,0
+kernel,oe_test_kernel_cmd_03,2023-05-16-16:20:38.log,,0,0,0,0,0,0,0,0,0
+kernel,oe_test_service_cpupower,2023-05-16-16:23:09.log,systemd unit restart failure,0,0,0,0,0,1,0,0,0
+net-tools,oe_test_net-tools_ipmaddr,2023-05-16-15:34:30.log,,0,0,0,0,0,0,0,0,0
+net-tools,oe_test_net-tools_route,2023-05-16-15:34:07.log,,0,0,0,0,0,0,0,0,0
+openssh,oe_test_openssh_cipher,2023-05-16-15:32:41.log,,0,0,0,0,0,0,0,0,0
+openssh,oe_test_sec_jump_login,2023-05-16-15:36:32.log,,0,0,0,0,0,0,0,0,0
+openssh,oe_test_sec_ssh,2023-05-16-15:35:01.log,,0,0,0,0,0,0,0,0,0
+osc,oe_test_osc_04,2023-05-16-15:42:47.log,,0,0,0,0,0,0,0,0,0
+osc,oe_test_osc_build,2023-05-16-15:49:47.log,,0,0,0,0,0,0,0,0,0

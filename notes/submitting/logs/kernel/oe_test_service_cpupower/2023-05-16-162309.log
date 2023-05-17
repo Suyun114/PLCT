@@ -1,0 +1,285 @@
++ source ../common/common_lib.sh
+++ source /root/mugen/libs/locallibs/common_lib.sh
++++ python3 --version
++++ '[' 0 -eq 0 ']'
++++ source /root/mugen/libs/locallibs/common_lib_python.sh
++ main
+++ type -t post_test
++ '[' -n function ']'
++ trap post_test EXIT INT HUP TERM
++ rpm -qa
++ grep expect
+++ type -t config_params
++ '[' -n '' ']'
+++ type -t pre_test
++ '[' -n function ']'
++ pre_test
++ LOG_INFO 'Start environmental preparation.'
++ message='Start environmental preparation.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start environmental preparation.'
+Tue May 16 16:23:11 2023 - INFO  - Start environmental preparation.
++ grep -v SP1 /etc/openEuler-release
+openEuler release 23.03
++ sed -i s/ondemand/powersave/g /etc/sysconfig/cpupower
+sed: can't read /etc/sysconfig/cpupower: No such file or directory
++ LOG_INFO 'End of environmental preparation!'
++ message='End of environmental preparation!'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End of environmental preparation!'
+Tue May 16 16:23:12 2023 - INFO  - End of environmental preparation!
+++ type -t run_test
++ '[' -n function ']'
++ run_test
++ LOG_INFO 'Start testing...'
++ message='Start testing...'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start testing...'
+Tue May 16 16:23:12 2023 - INFO  - Start testing...
++ hostnamectl
++ grep Virtualization
++ test_execution cpupower.service
++ service=cpupower.service
+++ date '+%Y-%m-%d %T'
++ log_time='2023-05-16 16:23:13'
++ test_restart cpupower.service
++ service=cpupower.service
++ systemctl restart cpupower.service
+Failed to restart cpupower.service: Unit cpupower.service not found.
++ CHECK_RESULT 5 0 0 'cpupower.service restart failed'
++ actual_result=5
++ expect_result=0
++ mode=0
++ error_log='cpupower.service restart failed'
++ exit_mode=0
++ '[' -z 5 ']'
++ '[' 0 -eq 0 ']'
++ test 5x '!=' 0x
++ test -n 'cpupower.service restart failed'
++ LOG_ERROR 'cpupower.service restart failed'
++ message='cpupower.service restart failed'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'cpupower.service restart failed'
+Tue May 16 16:23:14 2023 - ERROR - cpupower.service restart failed
++ (( exec_result++ ))
++ LOG_ERROR '../common/common_lib.sh line 34'
++ message='../common/common_lib.sh line 34'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message '../common/common_lib.sh line 34'
+Tue May 16 16:23:14 2023 - ERROR - ../common/common_lib.sh line 34
++ '[' 0 -eq 1 ']'
++ return 0
++ SLEEP_WAIT 5
++ wait_time=5
++ cmd=
++ mode=1
++ python3 /root/mugen/libs/locallibs/sleep_wait.py --time 5 --cmd '' --mode 1
++ systemctl status cpupower.service
++ grep 'Active: active'
+Unit cpupower.service could not be found.
++ CHECK_RESULT 1 0 0 'cpupower.service restart failed'
++ actual_result=1
++ expect_result=0
++ mode=0
++ error_log='cpupower.service restart failed'
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 0 -eq 0 ']'
++ test 1x '!=' 0x
++ test -n 'cpupower.service restart failed'
++ LOG_ERROR 'cpupower.service restart failed'
++ message='cpupower.service restart failed'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'cpupower.service restart failed'
+Tue May 16 16:23:20 2023 - ERROR - cpupower.service restart failed
++ (( exec_result++ ))
++ LOG_ERROR '../common/common_lib.sh line 37'
++ message='../common/common_lib.sh line 37'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message '../common/common_lib.sh line 37'
+Tue May 16 16:23:21 2023 - ERROR - ../common/common_lib.sh line 37
++ '[' 0 -eq 1 ']'
++ return 0
++ systemctl stop cpupower.service
+Failed to stop cpupower.service: Unit cpupower.service not loaded.
++ CHECK_RESULT 5 0 0 'cpupower.service stop failed'
++ actual_result=5
++ expect_result=0
++ mode=0
++ error_log='cpupower.service stop failed'
++ exit_mode=0
++ '[' -z 5 ']'
++ '[' 0 -eq 0 ']'
++ test 5x '!=' 0x
++ test -n 'cpupower.service stop failed'
++ LOG_ERROR 'cpupower.service stop failed'
++ message='cpupower.service stop failed'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'cpupower.service stop failed'
+Tue May 16 16:23:21 2023 - ERROR - cpupower.service stop failed
++ (( exec_result++ ))
++ LOG_ERROR '../common/common_lib.sh line 39'
++ message='../common/common_lib.sh line 39'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message '../common/common_lib.sh line 39'
+Tue May 16 16:23:22 2023 - ERROR - ../common/common_lib.sh line 39
++ '[' 0 -eq 1 ']'
++ return 0
++ SLEEP_WAIT 5
++ wait_time=5
++ cmd=
++ mode=1
++ python3 /root/mugen/libs/locallibs/sleep_wait.py --time 5 --cmd '' --mode 1
++ systemctl status cpupower.service
++ grep 'Active: inactive'
+Unit cpupower.service could not be found.
++ CHECK_RESULT 1 0 0 'cpupower.service stop failed'
++ actual_result=1
++ expect_result=0
++ mode=0
++ error_log='cpupower.service stop failed'
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 0 -eq 0 ']'
++ test 1x '!=' 0x
++ test -n 'cpupower.service stop failed'
++ LOG_ERROR 'cpupower.service stop failed'
++ message='cpupower.service stop failed'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'cpupower.service stop failed'
+Tue May 16 16:23:28 2023 - ERROR - cpupower.service stop failed
++ (( exec_result++ ))
++ LOG_ERROR '../common/common_lib.sh line 42'
++ message='../common/common_lib.sh line 42'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message '../common/common_lib.sh line 42'
+Tue May 16 16:23:29 2023 - ERROR - ../common/common_lib.sh line 42
++ '[' 0 -eq 1 ']'
++ return 0
++ systemctl start cpupower.service
+Failed to start cpupower.service: Unit cpupower.service not found.
++ CHECK_RESULT 5 0 0 'cpupower.service start failed'
++ actual_result=5
++ expect_result=0
++ mode=0
++ error_log='cpupower.service start failed'
++ exit_mode=0
++ '[' -z 5 ']'
++ '[' 0 -eq 0 ']'
++ test 5x '!=' 0x
++ test -n 'cpupower.service start failed'
++ LOG_ERROR 'cpupower.service start failed'
++ message='cpupower.service start failed'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'cpupower.service start failed'
+Tue May 16 16:23:29 2023 - ERROR - cpupower.service start failed
++ (( exec_result++ ))
++ LOG_ERROR '../common/common_lib.sh line 44'
++ message='../common/common_lib.sh line 44'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message '../common/common_lib.sh line 44'
+Tue May 16 16:23:30 2023 - ERROR - ../common/common_lib.sh line 44
++ '[' 0 -eq 1 ']'
++ return 0
++ SLEEP_WAIT 5
++ wait_time=5
++ cmd=
++ mode=1
++ python3 /root/mugen/libs/locallibs/sleep_wait.py --time 5 --cmd '' --mode 1
++ systemctl status cpupower.service
++ grep 'Active: active'
+Unit cpupower.service could not be found.
++ CHECK_RESULT 1 0 0 'cpupower.service start failed'
++ actual_result=1
++ expect_result=0
++ mode=0
++ error_log='cpupower.service start failed'
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 0 -eq 0 ']'
++ test 1x '!=' 0x
++ test -n 'cpupower.service start failed'
++ LOG_ERROR 'cpupower.service start failed'
++ message='cpupower.service start failed'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'cpupower.service start failed'
+Tue May 16 16:23:36 2023 - ERROR - cpupower.service start failed
++ (( exec_result++ ))
++ LOG_ERROR '../common/common_lib.sh line 47'
++ message='../common/common_lib.sh line 47'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message '../common/common_lib.sh line 47'
+Tue May 16 16:23:36 2023 - ERROR - ../common/common_lib.sh line 47
++ '[' 0 -eq 1 ']'
++ return 0
++ test_enabled cpupower.service
++ service=cpupower.service
+++ systemctl is-enabled cpupower.service
+Failed to get unit file state for cpupower.service: No such file or directory
++ state=
++ '[' '' == enabled ']'
++ '[' '' == disabled ']'
++ '[' '' == masked ']'
++ '[' '' == static ']'
++ LOG_INFO 'Unit is indirect, ignoring.'
++ message='Unit is indirect, ignoring.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Unit is indirect, ignoring.'
+Tue May 16 16:23:37 2023 - INFO  - Unit is indirect, ignoring.
++ journalctl --since '2023-05-16 16:23:13' -u cpupower.service
++ grep -i 'fail\|error'
++ grep -v -i 'DEBUG\|INFO\|WARNING'
++ CHECK_RESULT 1 0 1 'There is an error message for the log of cpupower.service'
++ actual_result=1
++ expect_result=0
++ mode=1
++ error_log='There is an error message for the log of cpupower.service'
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 1 -eq 0 ']'
++ test 1x == 0x
++ return 0
++ test_reload cpupower.service
++ service=cpupower.service
++ systemctl start cpupower.service
+Failed to start cpupower.service: Unit cpupower.service not found.
++ systemctl reload cpupower.service
++ grep 'Job type reload is not applicable'
++ CHECK_RESULT 1 0 0 'Job type reload is not applicable for unit cpupower.service'
++ actual_result=1
++ expect_result=0
++ mode=0
++ error_log='Job type reload is not applicable for unit cpupower.service'
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 0 -eq 0 ']'
++ test 1x '!=' 0x
++ test -n 'Job type reload is not applicable for unit cpupower.service'
++ LOG_ERROR 'Job type reload is not applicable for unit cpupower.service'
++ message='Job type reload is not applicable for unit cpupower.service'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'Job type reload is not applicable for unit cpupower.service'
+Tue May 16 16:23:38 2023 - ERROR - Job type reload is not applicable for unit cpupower.service
++ (( exec_result++ ))
++ LOG_ERROR '../common/common_lib.sh line 91'
++ message='../common/common_lib.sh line 91'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message '../common/common_lib.sh line 91'
+Tue May 16 16:23:38 2023 - ERROR - ../common/common_lib.sh line 91
++ '[' 0 -eq 1 ']'
++ return 0
++ systemctl status cpupower.service
++ grep 'Active: active'
+Unit cpupower.service could not be found.
++ systemctl status cpupower.service
++ grep 'inactive (dead)'
+Unit cpupower.service could not be found.
++ return 1
++ LOG_INFO 'Finish test!'
++ message='Finish test!'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Finish test!'
+Tue May 16 16:23:39 2023 - INFO  - Finish test!
++ CASE_RESULT 0
++ case_re=0
++ test -z 7
++ test 7 -gt 0
++ LOG_ERROR 'failed to execute the case.'
++ message='failed to execute the case.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'failed to execute the case.'
+Tue May 16 16:23:40 2023 - ERROR - failed to execute the case.
++ exit 7
++ post_test
++ LOG_INFO 'Start to restore the tet environment.'
++ message='Start to restore the tet environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to restore the tet environment.'
+Tue May 16 16:23:40 2023 - INFO  - Start to restore the tet environment.
++ grep -v SP1 /etc/openEuler-release
+openEuler release 23.03
++ sed -i s/powersave/ondemand/g /etc/sysconfig/cpupower
+sed: can't read /etc/sysconfig/cpupower: No such file or directory
++ LOG_INFO 'Finish to restore the tet environment.'
++ message='Finish to restore the tet environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Finish to restore the tet environment.'
+Tue May 16 16:23:41 2023 - INFO  - Finish to restore the tet environment.

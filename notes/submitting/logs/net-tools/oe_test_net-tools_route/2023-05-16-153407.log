@@ -1,0 +1,240 @@
++ source ../common/common_lib.sh
+++ source /root/mugen/libs/locallibs/common_lib.sh
++++ python3 --version
++++ '[' 0 -eq 0 ']'
++++ source /root/mugen/libs/locallibs/common_lib_python.sh
++ main
+++ type -t post_test
++ '[' -n function ']'
++ trap post_test EXIT INT HUP TERM
++ rpm -qa
++ grep expect
+++ type -t config_params
++ '[' -n '' ']'
+++ type -t pre_test
++ '[' -n function ']'
++ pre_test
++ LOG_INFO 'Start environmental preparation.'
++ message='Start environmental preparation.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start environmental preparation.'
+Tue May 16 15:34:09 2023 - INFO  - Start environmental preparation.
++ DNF_INSTALL net-tools
++ pkgs=net-tools
++ node=1
++ '[' -z '' ']'
++ tmpfile=
+++ python3 /root/mugen/libs/locallibs/rpm_manage.py install --pkgs net-tools --node 1 --tempfile ''
+Tue May 16 15:34:16 2023 - INFO  - pkgs:(net-tools) is already installed
++ tmpfile2=
++ '[' -z '' ']'
++ tmpfile=
++ LOG_INFO 'End of environmental preparation!'
++ message='End of environmental preparation!'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End of environmental preparation!'
+Tue May 16 15:34:16 2023 - INFO  - End of environmental preparation!
+++ type -t run_test
++ '[' -n function ']'
++ run_test
++ LOG_INFO 'Start testing...'
++ message='Start testing...'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start testing...'
+Tue May 16 15:34:17 2023 - INFO  - Start testing...
++ route
++ grep default
++ grep ''
++ grep _gateway
+default         _gateway        0.0.0.0         UG    100    0        0 eth0
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
+++ ip route
+++ grep 'default via'
+++ grep -Eo '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}'
++ local ip_gateway=10.0.2.2
++ route -n
++ grep 10.0.2.2
+0.0.0.0         10.0.2.2        0.0.0.0         UG    100    0        0 eth0
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ route -n
++ grep _gateway
++ CHECK_RESULT 1 1
++ actual_result=1
++ expect_result=1
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 0 -eq 0 ']'
++ test 1x '!=' 1x
++ return 0
++ route add -net 192.168.0.0 netmask 255.255.255.0 dev ''
+SIOCADDRT: No such device
++ CHECK_RESULT 7 0 0 'Add route fail'
++ actual_result=7
++ expect_result=0
++ mode=0
++ error_log='Add route fail'
++ exit_mode=0
++ '[' -z 7 ']'
++ '[' 0 -eq 0 ']'
++ test 7x '!=' 0x
++ test -n 'Add route fail'
++ LOG_ERROR 'Add route fail'
++ message='Add route fail'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'Add route fail'
+Tue May 16 15:34:19 2023 - ERROR - Add route fail
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_net-tools_route.sh line 38'
++ message='oe_test_net-tools_route.sh line 38'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_net-tools_route.sh line 38'
+Tue May 16 15:34:19 2023 - ERROR - oe_test_net-tools_route.sh line 38
++ '[' 0 -eq 1 ']'
++ return 0
++ route del -net 192.168.0.0 netmask 255.255.255.0
+SIOCDELRT: No such process
++ CHECK_RESULT 7 0 0 'Delete route fail'
++ actual_result=7
++ expect_result=0
++ mode=0
++ error_log='Delete route fail'
++ exit_mode=0
++ '[' -z 7 ']'
++ '[' 0 -eq 0 ']'
++ test 7x '!=' 0x
++ test -n 'Delete route fail'
++ LOG_ERROR 'Delete route fail'
++ message='Delete route fail'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'Delete route fail'
+Tue May 16 15:34:20 2023 - ERROR - Delete route fail
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_net-tools_route.sh line 40'
++ message='oe_test_net-tools_route.sh line 40'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_net-tools_route.sh line 40'
+Tue May 16 15:34:20 2023 - ERROR - oe_test_net-tools_route.sh line 40
++ '[' 0 -eq 1 ']'
++ return 0
++ route add default gw 10.0.2.2 dev '' metric 1000
+SIOCADDRT: No such device
++ CHECK_RESULT 7 0 0 'Add default route fail'
++ actual_result=7
++ expect_result=0
++ mode=0
++ error_log='Add default route fail'
++ exit_mode=0
++ '[' -z 7 ']'
++ '[' 0 -eq 0 ']'
++ test 7x '!=' 0x
++ test -n 'Add default route fail'
++ LOG_ERROR 'Add default route fail'
++ message='Add default route fail'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'Add default route fail'
+Tue May 16 15:34:21 2023 - ERROR - Add default route fail
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_net-tools_route.sh line 42'
++ message='oe_test_net-tools_route.sh line 42'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_net-tools_route.sh line 42'
+Tue May 16 15:34:21 2023 - ERROR - oe_test_net-tools_route.sh line 42
++ '[' 0 -eq 1 ']'
++ return 0
++ route del default gw 10.0.2.2 dev '' metric 1000
+SIOCDELRT: No such device
++ CHECK_RESULT 7 0 0 'Delete default route fail'
++ actual_result=7
++ expect_result=0
++ mode=0
++ error_log='Delete default route fail'
++ exit_mode=0
++ '[' -z 7 ']'
++ '[' 0 -eq 0 ']'
++ test 7x '!=' 0x
++ test -n 'Delete default route fail'
++ LOG_ERROR 'Delete default route fail'
++ message='Delete default route fail'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'Delete default route fail'
+Tue May 16 15:34:22 2023 - ERROR - Delete default route fail
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_net-tools_route.sh line 44'
++ message='oe_test_net-tools_route.sh line 44'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_net-tools_route.sh line 44'
+Tue May 16 15:34:22 2023 - ERROR - oe_test_net-tools_route.sh line 44
++ '[' 0 -eq 1 ']'
++ return 0
++ route -h
++ grep 'Usage: route'
+    inet (DARPA Internet) inet6 (IPv6) ax25 (AMPR AX.25) 
+    netrom (AMPR NET/ROM) rose (AMPR ROSE) ipx (Novell IPX) 
+    ddp (Appletalk DDP) x25 (CCITT X.25) 
+Usage: route [-nNvee] [-FC] [<AF>]           List kernel routing tables
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ route -V
++ grep net-tools
++ grep '[0-9]'
+net-tools 2.10
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ LOG_INFO 'Finish test!'
++ message='Finish test!'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Finish test!'
+Tue May 16 15:34:23 2023 - INFO  - Finish test!
++ CASE_RESULT 0
++ case_re=0
++ test -z 4
++ test 4 -gt 0
++ LOG_ERROR 'failed to execute the case.'
++ message='failed to execute the case.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'failed to execute the case.'
+Tue May 16 15:34:24 2023 - ERROR - failed to execute the case.
++ exit 4
++ post_test
++ LOG_INFO 'start environment cleanup.'
++ message='start environment cleanup.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'start environment cleanup.'
+Tue May 16 15:34:24 2023 - INFO  - start environment cleanup.
++ DNF_REMOVE
++ node=1
++ pkg_list=
++ mode=0
++ [[ -z '' ]]
++ [[ -z '' ]]
++ LOG_WARN 'no thing to do.'
++ message='no thing to do.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level warn --message 'no thing to do.'
+Tue May 16 15:34:25 2023 - WARN  - no thing to do.
++ return 0
++ LOG_INFO 'Finish environment cleanup!'
++ message='Finish environment cleanup!'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Finish environment cleanup!'
+Tue May 16 15:34:25 2023 - INFO  - Finish environment cleanup!

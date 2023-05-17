@@ -1,0 +1,169 @@
++ source common/common_dnf.sh
+++ source /root/mugen/libs/locallibs/common_lib.sh
++++ python3 --version
++++ '[' 0 -eq 0 ']'
++++ source /root/mugen/libs/locallibs/common_lib_python.sh
++ main
+++ type -t post_test
++ '[' -n function ']'
++ trap post_test EXIT INT HUP TERM
++ rpm -qa
++ grep expect
+++ type -t config_params
++ '[' -n '' ']'
+++ type -t pre_test
++ '[' -n function ']'
++ pre_test
++ LOG_INFO 'Start to prepare the test environment.'
++ message='Start to prepare the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to prepare the test environment.'
+Tue May 16 15:53:55 2023 - INFO  - Start to prepare the test environment.
++ deploy_env
++ OLD_LANG=en_US.UTF-8
++ export LANG=en_US.UTF-8
++ LANG=en_US.UTF-8
+++ grep gpgcheck
+++ grep -nA4 name=mainline /etc/yum.repos.d/openEuler.repo
+++ awk -F - '{print $1}'
++ line1=
+++ grep -nA4 name=epol /etc/yum.repos.d/openEuler.repo
+++ grep gpgcheck
+++ awk -F - '{print $1}'
++ line2=
++ dnf list --installed
++ grep @mainline
++ grep 'arch\|'
++ awk '{print substr($0, 1, length($0)-1)}'
++ awk -F. 'OFS="."{$NF="";print}'
++ grep -E 'x86_64|riscv'
+Warning: failed loading '/etc/yum.repos.d/openEuler.repo', skipping.
++ dnf list --available --repo=mainline
++ grep 'arch\|'
++ grep -E 'x86_64|riscv'
++ awk '{print substr($0, 1, length($0)-1)}'
++ awk -F . 'OFS="."{$NF="";print}'
++ awk '{print $1}'
+Warning: failed loading '/etc/yum.repos.d/openEuler.repo', skipping.
+Error: Unknown repo: 'mainline'
++ epol_list=($(dnf list --available --repo=epol | grep "arch\|" | grep -E "x86_64|riscv" | awk '{print $1}' | awk -F . 'OFS="."{$NF="";print}' | awk '{print substr($0, 1, length($0)-1)}'))
+++ dnf list --available --repo=epol
+++ grep 'arch\|'
+++ grep -E 'x86_64|riscv'
+++ awk -F . 'OFS="."{$NF="";print}'
+++ awk '{print substr($0, 1, length($0)-1)}'
+++ awk '{print $1}'
+Warning: failed loading '/etc/yum.repos.d/openEuler.repo', skipping.
+Error: Unknown repo: 'epol'
++ sed -i ' apriority=2' /etc/yum.repos.d/openEuler.repo
++ sed -i ' apriority=1' /etc/yum.repos.d/openEuler.repo
++ LOG_INFO 'Finish preparing the test environment.'
++ message='Finish preparing the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Finish preparing the test environment.'
+Tue May 16 15:54:05 2023 - INFO  - Finish preparing the test environment.
+++ type -t run_test
++ '[' -n function ']'
++ run_test
++ LOG_INFO 'Start to run test.'
++ message='Start to run test.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to run test.'
+Tue May 16 15:54:06 2023 - INFO  - Start to run test.
++ dnf -y install
++ grep 'Complete!'
+usage: dnf install [-c [config file]] [-q] [-v] [--version]
+                   [--installroot [path]] [--nodocs] [--noplugins]
+                   [--enableplugin [plugin]] [--disableplugin [plugin]]
+                   [--releasever RELEASEVER] [--setopt SETOPTS]
+                   [--skip-broken] [-h] [--allowerasing] [-b | --nobest] [-C]
+                   [-R [minutes]] [-d [debug level]] [--debugsolver]
+                   [--showduplicates] [-e ERRORLEVEL] [--obsoletes]
+                   [--rpmverbosity [debug level name]] [-y] [--assumeno]
+                   [--enablerepo [repo]] [--disablerepo [repo] | --repo
+                   [repo]] [--enable | --disable] [-x [package]]
+                   [--disableexcludes [repo]] [--repofrompath [repo,path]]
+                   [--noautoremove] [--nogpgcheck] [--color COLOR] [--refresh]
+                   [-4] [-6] [--destdir DESTDIR] [--downloadonly]
+                   [--comment COMMENT] [--bugfix] [--enhancement]
+                   [--newpackage] [--security] [--advisory ADVISORY]
+                   [--bz BUGZILLA] [--cve CVES]
+                   [--sec-severity {Critical,Important,Moderate,Low}]
+                   [--forcearch ARCH]
+                   PACKAGE [PACKAGE ...]
+dnf install: error: the following arguments are required: PACKAGE
++ CHECK_RESULT 1
++ actual_result=1
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 0 -eq 0 ']'
++ test 1x '!=' 0x
++ test -n ''
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_dnf_priority.sh line 47'
++ message='oe_test_dnf_priority.sh line 47'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_dnf_priority.sh line 47'
+Tue May 16 15:54:09 2023 - ERROR - oe_test_dnf_priority.sh line 47
++ '[' 0 -eq 1 ']'
++ return 0
++ grep
++ dnf list --installed
++ grep @epol
+Usage: grep [OPTION]... PATTERNS [FILE]...
+Try 'grep --help' for more information.
+Warning: failed loading '/etc/yum.repos.d/openEuler.repo', skipping.
++ CHECK_RESULT 1
++ actual_result=1
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 0 -eq 0 ']'
++ test 1x '!=' 0x
++ test -n ''
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_dnf_priority.sh line 49'
++ message='oe_test_dnf_priority.sh line 49'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_dnf_priority.sh line 49'
+Tue May 16 15:54:14 2023 - ERROR - oe_test_dnf_priority.sh line 49
++ '[' 0 -eq 1 ']'
++ return 0
++ LOG_INFO 'End of the test.'
++ message='End of the test.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End of the test.'
+Tue May 16 15:54:14 2023 - INFO  - End of the test.
++ CASE_RESULT 0
++ case_re=0
++ test -z 2
++ test 2 -gt 0
++ LOG_ERROR 'failed to execute the case.'
++ message='failed to execute the case.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'failed to execute the case.'
+Tue May 16 15:54:15 2023 - ERROR - failed to execute the case.
++ exit 2
++ post_test
++ LOG_INFO 'Start to restore the test environment.'
++ message='Start to restore the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to restore the test environment.'
+Tue May 16 15:54:15 2023 - INFO  - Start to restore the test environment.
++ clear_env
++ export LANG=en_US.UTF-8
++ LANG=en_US.UTF-8
++ sed -ie /priority=/d /etc/yum.repos.d/openEuler.repo
++ DNF_REMOVE 1
++ node=1
++ pkg_list=
++ mode=0
++ [[ -z '' ]]
++ [[ -z '' ]]
++ LOG_WARN 'no thing to do.'
++ message='no thing to do.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level warn --message 'no thing to do.'
+Tue May 16 15:54:16 2023 - WARN  - no thing to do.
++ return 0
++ rm -rf anaconda_list mainline_pkg_list
++ LOG_INFO 'End of restore the test environment.'
++ message='End of restore the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End of restore the test environment.'
+Tue May 16 15:54:16 2023 - INFO  - End of restore the test environment.

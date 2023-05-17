@@ -1,0 +1,209 @@
++ source ../common/common_lib.sh
+++ source /root/mugen/libs/locallibs/common_lib.sh
++++ python3 --version
++++ '[' 0 -eq 0 ']'
++++ source /root/mugen/libs/locallibs/common_lib_python.sh
++ main
+++ type -t post_test
++ '[' -n function ']'
++ trap post_test EXIT INT HUP TERM
++ rpm -qa
++ grep expect
+++ type -t config_params
++ '[' -n '' ']'
+++ type -t pre_test
++ '[' -n function ']'
++ pre_test
++ LOG_INFO 'Start environmental preparation.'
++ message='Start environmental preparation.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start environmental preparation.'
+Tue May 16 15:34:32 2023 - INFO  - Start environmental preparation.
++ DNF_INSTALL net-tools
++ pkgs=net-tools
++ node=1
++ '[' -z '' ']'
++ tmpfile=
+++ python3 /root/mugen/libs/locallibs/rpm_manage.py install --pkgs net-tools --node 1 --tempfile ''
+Tue May 16 15:34:39 2023 - INFO  - pkgs:(net-tools) is already installed
++ tmpfile2=
++ '[' -z '' ']'
++ tmpfile=
++ LOG_INFO 'End of environmental preparation!'
++ message='End of environmental preparation!'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End of environmental preparation!'
+Tue May 16 15:34:40 2023 - INFO  - End of environmental preparation!
+++ type -t run_test
++ '[' -n function ']'
++ run_test
++ LOG_INFO 'Start testing...'
++ message='Start testing...'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start testing...'
+Tue May 16 15:34:40 2023 - INFO  - Start testing...
++ ipmaddr show dev ''
+Usage: ipmaddr [ add | del ] MULTIADDR dev STRING
+       ipmaddr show [ dev STRING ] [ ipv4 | ipv6 | link | all ]
+       ipmaddr -V | -version
++ CHECK_RESULT 3 0 0 'Display multiaddr fail'
++ actual_result=3
++ expect_result=0
++ mode=0
++ error_log='Display multiaddr fail'
++ exit_mode=0
++ '[' -z 3 ']'
++ '[' 0 -eq 0 ']'
++ test 3x '!=' 0x
++ test -n 'Display multiaddr fail'
++ LOG_ERROR 'Display multiaddr fail'
++ message='Display multiaddr fail'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'Display multiaddr fail'
+Tue May 16 15:34:41 2023 - ERROR - Display multiaddr fail
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_net-tools_ipmaddr.sh line 31'
++ message='oe_test_net-tools_ipmaddr.sh line 31'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_net-tools_ipmaddr.sh line 31'
+Tue May 16 15:34:42 2023 - ERROR - oe_test_net-tools_ipmaddr.sh line 31
++ '[' 0 -eq 1 ']'
++ return 0
++ ipmaddr add 33:44:00:00:00:01 dev ''
+Usage: ipmaddr [ add | del ] MULTIADDR dev STRING
+       ipmaddr show [ dev STRING ] [ ipv4 | ipv6 | link | all ]
+       ipmaddr -V | -version
++ CHECK_RESULT 3
++ actual_result=3
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 3 ']'
++ '[' 0 -eq 0 ']'
++ test 3x '!=' 0x
++ test -n ''
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_net-tools_ipmaddr.sh line 33'
++ message='oe_test_net-tools_ipmaddr.sh line 33'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_net-tools_ipmaddr.sh line 33'
+Tue May 16 15:34:42 2023 - ERROR - oe_test_net-tools_ipmaddr.sh line 33
++ '[' 0 -eq 1 ']'
++ return 0
++ ipmaddr show dev ''
++ grep 33:44:00:00:00:01
+Usage: ipmaddr [ add | del ] MULTIADDR dev STRING
+       ipmaddr show [ dev STRING ] [ ipv4 | ipv6 | link | all ]
+       ipmaddr -V | -version
++ CHECK_RESULT 1 0 0 'Add multiaddr fail'
++ actual_result=1
++ expect_result=0
++ mode=0
++ error_log='Add multiaddr fail'
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 0 -eq 0 ']'
++ test 1x '!=' 0x
++ test -n 'Add multiaddr fail'
++ LOG_ERROR 'Add multiaddr fail'
++ message='Add multiaddr fail'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'Add multiaddr fail'
+Tue May 16 15:34:43 2023 - ERROR - Add multiaddr fail
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_net-tools_ipmaddr.sh line 35'
++ message='oe_test_net-tools_ipmaddr.sh line 35'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_net-tools_ipmaddr.sh line 35'
+Tue May 16 15:34:44 2023 - ERROR - oe_test_net-tools_ipmaddr.sh line 35
++ '[' 0 -eq 1 ']'
++ return 0
++ ipmaddr del 33:44:00:00:00:01 dev ''
+Usage: ipmaddr [ add | del ] MULTIADDR dev STRING
+       ipmaddr show [ dev STRING ] [ ipv4 | ipv6 | link | all ]
+       ipmaddr -V | -version
++ CHECK_RESULT 3
++ actual_result=3
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 3 ']'
++ '[' 0 -eq 0 ']'
++ test 3x '!=' 0x
++ test -n ''
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_net-tools_ipmaddr.sh line 37'
++ message='oe_test_net-tools_ipmaddr.sh line 37'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_net-tools_ipmaddr.sh line 37'
+Tue May 16 15:34:44 2023 - ERROR - oe_test_net-tools_ipmaddr.sh line 37
++ '[' 0 -eq 1 ']'
++ return 0
++ ipmaddr show dev ''
++ grep 33:44:00:00:00:01
+Usage: ipmaddr [ add | del ] MULTIADDR dev STRING
+       ipmaddr show [ dev STRING ] [ ipv4 | ipv6 | link | all ]
+       ipmaddr -V | -version
++ CHECK_RESULT 1 1 0 'Delete multiaddr fail'
++ actual_result=1
++ expect_result=1
++ mode=0
++ error_log='Delete multiaddr fail'
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 0 -eq 0 ']'
++ test 1x '!=' 1x
++ return 0
++ ipmaddr -V
++ grep net-tools
++ grep '[0-9]'
+net-tools 2.10
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ ipmaddr -h
++ grep 'Usage: ipmaddr'
+Usage: ipmaddr [ add | del ] MULTIADDR dev STRING
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ LOG_INFO 'Finish test!'
++ message='Finish test!'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Finish test!'
+Tue May 16 15:34:45 2023 - INFO  - Finish test!
++ CASE_RESULT 0
++ case_re=0
++ test -z 4
++ test 4 -gt 0
++ LOG_ERROR 'failed to execute the case.'
++ message='failed to execute the case.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'failed to execute the case.'
+Tue May 16 15:34:45 2023 - ERROR - failed to execute the case.
++ exit 4
++ post_test
++ LOG_INFO 'start environment cleanup.'
++ message='start environment cleanup.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'start environment cleanup.'
+Tue May 16 15:34:46 2023 - INFO  - start environment cleanup.
++ DNF_REMOVE
++ node=1
++ pkg_list=
++ mode=0
++ [[ -z '' ]]
++ [[ -z '' ]]
++ LOG_WARN 'no thing to do.'
++ message='no thing to do.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level warn --message 'no thing to do.'
+Tue May 16 15:34:46 2023 - WARN  - no thing to do.
++ return 0
++ LOG_INFO 'Finish environment cleanup!'
++ message='Finish environment cleanup!'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Finish environment cleanup!'
+Tue May 16 15:34:47 2023 - INFO  - Finish environment cleanup!
