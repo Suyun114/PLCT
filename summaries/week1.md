@@ -4,7 +4,7 @@
 
 - 学习使用 mugen。
   
-  - 创建 [mugen 学习笔记](https://github.com/Suyun114/plct/tree/main/notes/mugen)。
+  - 创建 [mugen 学习笔记](https://github.com/Suyun114/PLCT/tree/main/notes/mugen)。
   
   - 以练习为目的编写 GCC 测试套（作为学习笔记的附件）。
 
