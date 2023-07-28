@@ -31,10 +31,11 @@ mugen 是 openEuler 社区使用的测试框架。
 然后就可以开始测试了：
 
 - `bash mugen.sh -a`：执行所有测试用例。
-
+  
 - `bash mugen.sh -f testsuite`：执行指定测试套。
-
+  
 - `bash mugen.sh -f testsuite -r testcase`：执行指定测试用例。
+  
 
 ## 编写测试套
 
@@ -72,12 +73,13 @@ source ${OET_PATH}/libs/locallibs/common_lib.sh
 然后，编写 `config_params`、`pre_test`、`run_test`、`post_test` 四个函数，分别处理：
 
 - 测试前需要预加载的数据、参数配置
-
+  
 - 测试对象、测试需要的工具等测试准备
-
+  
 - 测试的具体内容的执行
-
+  
 - 测试后的收尾工作，如测试环境的恢复
+  
 
 最后，使用以下命令开始测试：
 
@@ -117,7 +119,7 @@ mugen 提供了一个调用 QEMU 进行虚拟机测试的脚本 `qemu_test.py`�
 
 从软件源下载待测试的系统的镜像（`.qcow2.zst` 文件，需要使用 `unzstd` 命令解压为 `.zst` 文件）、引导加载程序（`fw_payload_oe_uboot_*.bin`）和启动脚本（`start_vm.sh`），保存到同一个目录中。
 
-用启动脚本启动虚拟机，使用 Git 克隆 mugen 的 repo 到虚拟机下的一个目录（如 `/root/mugen`），再使用 `dep_install.sh` 脚本安装依赖。如果有需要，可以根据具体情况对虚拟机进行一些修改，如 [openEuler RISC-V 23.03 自动化测试说明](https://github.com/brsf11/Tarsier-Internship/blob/main/Testing/0331-23.03testing/README.md) 中提到的情况。
+用启动脚本启动虚拟机，使用 Git 克隆 mugen 的 repo 到虚拟机下的一个目录（如 `/root/mugen`），再使用 `dep_install.sh` 脚本安装依赖。如果有需要，可以根据具体情况对虚拟机进行一些修改，如 [openEuler RISC-V 23.03 自动化测试说明](https://github.com/brsf11/Tarsier-Internship/blob/main/Testing/0331-23.03testing/README.md) 中提到的情况；还比如进行网络测试时需要安装 `lshw` 包。
 
 将虚拟机准备完成后，使用 `poweroff` 命令关闭虚拟机，记下 `.qcow2` 镜像文件的名字。
 
@@ -126,6 +128,14 @@ mugen 提供了一个调用 QEMU 进行虚拟机测试的脚本 `qemu_test.py`�
 在物理机（不一定要运行 openEuler）上使用 Git 克隆 mugen 的 repo。这里不需要使用 `dep_install.sh` 安装依赖。
 
 `qemu_test.py` 依赖 `paramiko` 这个 Python 库，可以使用 pip 安装，也可以直接使用操作系统上的包管理器安装。如 Arch Linux 可以使用 pacman 安装 `python-paramiko` 包。
+
+如果进行网络测试，需要使用 [`tapsetup.sh`](https://github.com/KotorinMinami/plct-working/blob/main/qemu-tap-bridge/tapsetup.sh) 脚本配置好网桥和 TAP 网卡。该脚本需要 `bridge-utils` 和 `uml-utilities` 软件包。以下是一个范例
+
+```shell-session
+$ sudo bash tapsetup.sh 10.198.101.1 50 br0 $(whoami)
+```
+
+其中，`10.198.101.1` 为网桥的 IP（脚本会自动为 IP 添加 `/24`），`50` 为 TAP 网卡个数，`br0` 为网桥的网卡名称，最后一个参数为允许使用该 TAP 网卡的用户名，如果将这里使用 `$(whoami)` 获取当前用户名。
 
 ### 编写配置文件
 
@@ -147,6 +157,10 @@ mugen 提供了一个调用 QEMU 进行虚拟机测试的脚本 `qemu_test.py`�
     "mugenDir":"/root/mugen",              // 在虚拟机中 mugen 所在的目录
     "listFile":"lists/list_test",          // 需要测试的测试套列表文件
     "generate":1                           // 是否将测试套保存到物理机上
+    "addNic": 1,                           // 是否添加网卡
+    "multiMachine": 1,                     // 是否使用多台机器进行测试
+    "tap num": 50,                         // 可以使用的 TAP 网卡数量
+    "bridge ip": "10.198.101.114"          // 用于测试的网桥的 IP
 }
 ```
 
@@ -163,25 +177,27 @@ $ python qemu_test.py -F config.json
 测试完成后，可以在工作目录下的以下文件夹找到与测试有关的信息：
 
 - `suite2cases_out`：被测试的测试套。
-
+  
 - `exec_log`：测试套在运行时产生的日志。
-
+  
 - `logs`：测试用例在运行时产生的日志。
+  
 
 ### Troubleshooting
 
-在进行测试的过程中，如果在运行脚本较长时间之后，脚本没有输出测试日志和测试结果，而只是持续输出线程信息（如 `Thread 0 is alive`），这个时候可以尝试使用 SSH 连接到配置文件中配置的 SSH 端口（如上文中的 `12055`），若 SSH 无法正常连接，则说明脚本运行失败。
+在进行测试的过程中，如果在运行脚本较长时间之后，脚本没有输出测试日志和测试结果，而只是持续输出线程信息（如 `Thread 0 is alive`），这个时候可以尝试使用 SSH 连接到配置文件中配置的 SSH 端口（如上文中的 `12055`）。也可以使用 `top` 等工具判断 QEMU 是否正在运行。若均不正常，则说明脚本运行失败。
 
 这个时候可以使用 <kbd>Ctrl</kbd>+<kbd>C</kbd> 关闭脚本，检查工作目录下的 `logs` 目录来判断有那些测试套已经测试完毕，再从列表文件中删除已经测试完毕的测试套，最后重新运行脚本开始测试。
 
 ## 附件
 
 - `gcc.json`：对 GCC 进行测试的测试套，应当存放在 `suitecases` 目录下。
-
+  
 - `gcc_01.sh`：对 GCC 进行测试的测试用例，应当存放在 `testcases/gcc` 目录下。
+  
 
 ## TODO
 
 - `DNF_INSTALL` 和 `DNF_REMOVE` 的高级用法。
-
+  
 - 使用 Python 编写测试用例。
