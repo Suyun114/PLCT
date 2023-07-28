@@ -1,0 +1,364 @@
++ source /root/mugen/libs/locallibs/common_lib.sh
+++ python3 --version
+++ '[' 0 -eq 0 ']'
+++ source /root/mugen/libs/locallibs/common_lib_python.sh
++ main
+++ type -t post_test
++ '[' -n function ']'
++ trap post_test EXIT INT HUP TERM
++ grep expect
++ rpm -qa
+++ type -t config_params
++ '[' -n '' ']'
+++ type -t pre_test
++ '[' -n function ']'
++ pre_test
++ LOG_INFO 'Start to prepare the test environment.'
++ message='Start to prepare the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to prepare the test environment.'
+Thu Jul 27 17:20:40 2023 - INFO  - Start to prepare the test environment.
++ DNF_INSTALL 'uuid vim'
++ pkgs='uuid vim'
++ node=1
++ '[' -z '' ']'
++ tmpfile=
+++ python3 /root/mugen/libs/locallibs/rpm_manage.py install --pkgs 'uuid vim' --node 1 --tempfile ''
++ tmpfile2='Last metadata expiration check: 0:44:59 ago on Thu 27 Jul 2023 04:37:11 PM CST.
+Package vim-enhanced-2:9.0-29.oe2303.riscv64 is already installed.
+Dependencies resolved.
+================================================================================
+ Package            Architecture  Version                  Repository      Size
+================================================================================
+Installing:
+ uuid               riscv64       1.6.2-47.oe2303          mainline        40 k
+Upgrading:
+ vim-common         riscv64       2:9.0-30.oe2303          mainline       7.6 M
+ vim-enhanced       riscv64       2:9.0-30.oe2303          mainline       1.5 M
+
+Transaction Summary
+================================================================================
+Install  1 Package
+Upgrade  2 Packages
+
+Total size: 9.2 M
+Total download size: 9.2 M
+Downloading Packages:
+Waiting for process with pid 1185 to finish.
+[SKIPPED] uuid-1.6.2-47.oe2303.riscv64.rpm: Already downloaded                 
+[SKIPPED] vim-common-9.0-30.oe2303.riscv64.rpm: Already downloaded             
+[SKIPPED] vim-enhanced-9.0-30.oe2303.riscv64.rpm: Already downloaded           
+Running transaction check
+Waiting for process with pid 1185 to finish.
+The downloaded packages were saved in cache until the next successful transaction.
+You can remove cached packages by executing '\''dnf clean packages'\''.
+Error: An rpm exception occurred: package not installed'
++ '[' -z '' ']'
++ tmpfile='Last metadata expiration check: 0:44:59 ago on Thu 27 Jul 2023 04:37:11 PM CST.
+Package vim-enhanced-2:9.0-29.oe2303.riscv64 is already installed.
+Dependencies resolved.
+================================================================================
+ Package            Architecture  Version                  Repository      Size
+================================================================================
+Installing:
+ uuid               riscv64       1.6.2-47.oe2303          mainline        40 k
+Upgrading:
+ vim-common         riscv64       2:9.0-30.oe2303          mainline       7.6 M
+ vim-enhanced       riscv64       2:9.0-30.oe2303          mainline       1.5 M
+
+Transaction Summary
+================================================================================
+Install  1 Package
+Upgrade  2 Packages
+
+Total size: 9.2 M
+Total download size: 9.2 M
+Downloading Packages:
+Waiting for process with pid 1185 to finish.
+[SKIPPED] uuid-1.6.2-47.oe2303.riscv64.rpm: Already downloaded                 
+[SKIPPED] vim-common-9.0-30.oe2303.riscv64.rpm: Already downloaded             
+[SKIPPED] vim-enhanced-9.0-30.oe2303.riscv64.rpm: Already downloaded           
+Running transaction check
+Waiting for process with pid 1185 to finish.
+The downloaded packages were saved in cache until the next successful transaction.
+You can remove cached packages by executing '\''dnf clean packages'\''.
+Error: An rpm exception occurred: package not installed'
++ LOG_INFO 'Finish preparing the test environment.'
++ message='Finish preparing the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Finish preparing the test environment.'
+Thu Jul 27 17:23:25 2023 - INFO  - Finish preparing the test environment.
+++ type -t run_test
++ '[' -n function ']'
++ run_test
++ LOG_INFO 'Start to run test.'
++ message='Start to run test.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to run test.'
+Thu Jul 27 17:23:27 2023 - INFO  - Start to run test.
++ grep -
++ uuid
+3e81c054-2c5f-11ee-9d11-525400114501
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ uuid -v4
++ grep -
+954fe0cf-798e-4a76-914b-38b89cf8d926
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ uuid -v3 ns:URL http://www.baidu.com
++ grep -
+2f67490d-55a4-395e-b540-457195f7aa95
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ uuid -v5 ns:URL http://www.baidu.com
++ grep -
+6bd69026-2b9c-5629-82dd-f92f408b660e
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
+++ uuid
+++ awk -F - '{print $5}'
++ mac_id=525400114501
++ grep 525400114501
++ uuid -m
++ CHECK_RESULT 1 1
++ actual_result=1
++ expect_result=1
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 0 -eq 0 ']'
++ test 1x '!=' 1x
++ return 0
++ uuid -n 10
++ wc -l
++ grep 10
+10
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ uuid -n 10 -1
+3f1bb3d0-2c5f-11ee-a240-525400114501
+3f1c5aba-2c5f-11ee-80f7-525400114501
+3f1c63de-2c5f-11ee-9081-525400114501
+3f1c69c4-2c5f-11ee-a0e3-525400114501
+3f1c6de8-2c5f-11ee-ab69-525400114501
+3f1c727a-2c5f-11ee-af3c-525400114501
+3f1c75d6-2c5f-11ee-a29f-525400114501
+3f1c790a-2c5f-11ee-bf29-525400114501
+3f1c7c3e-2c5f-11ee-b52f-525400114501
+3f1c7f90-2c5f-11ee-96cd-525400114501
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ uuid -F BIN
++ xxd
++ grep RT
+00000000: 3f2c 3b10 2c5f 11ee a125 5254 0011 4501  ?,;.,_...%RT..E.
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ uuid -F STR
++ grep -
+3f4e8666-2c5f-11ee-9382-525400114501
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ uuid -F SIV
++ grep -
++ CHECK_RESULT 1 1
++ actual_result=1
++ expect_result=1
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 0 -eq 0 ']'
++ test 1x '!=' 1x
++ return 0
++ uuid -o uuid_file
++ grep - uuid_file
+3f8353aa-2c5f-11ee-9b11-525400114501
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
+++ cat uuid_file
++ id=3f8353aa-2c5f-11ee-9b11-525400114501
++ uuid -d 3f8353aa-2c5f-11ee-9b11-525400114501
+encode: STR:     3f8353aa-2c5f-11ee-9b11-525400114501
+        SIV:     84423251545434765992591592134661981441
+decode: variant: DCE 1.1, ISO/IEC 11578:1996
+        version: 1 (time and node based)
+        content: time:  2023-07-27 09:23:29.415057.0 UTC
+                 clock: 6929 (usually random)
+                 node:  52:54:00:11:45:01 (local unicast)
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ LOG_INFO 'End of the test.'
++ message='End of the test.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End of the test.'
+Thu Jul 27 17:23:31 2023 - INFO  - End of the test.
++ CASE_RESULT 0
++ case_re=0
++ test -z ''
++ test 0 -eq 0
++ LOG_INFO 'succeed to execute the case.'
++ message='succeed to execute the case.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'succeed to execute the case.'
+Thu Jul 27 17:23:33 2023 - INFO  - succeed to execute the case.
++ exec_result=
++ exit 0
++ post_test
++ LOG_INFO 'Start to restore the test environment.'
++ message='Start to restore the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to restore the test environment.'
+Thu Jul 27 17:23:35 2023 - INFO  - Start to restore the test environment.
++ DNF_REMOVE
++ node=1
++ pkg_list=
++ mode=0
++ [[ -z Last metadata expiration check: 0:44:59 ago on Thu 27 Jul 2023 04:37:11 PM CST.
+Package vim-enhanced-2:9.0-29.oe2303.riscv64 is already installed.
+Dependencies resolved.
+================================================================================
+ Package            Architecture  Version                  Repository      Size
+================================================================================
+Installing:
+ uuid               riscv64       1.6.2-47.oe2303          mainline        40 k
+Upgrading:
+ vim-common         riscv64       2:9.0-30.oe2303          mainline       7.6 M
+ vim-enhanced       riscv64       2:9.0-30.oe2303          mainline       1.5 M
+
+Transaction Summary
+================================================================================
+Install  1 Package
+Upgrade  2 Packages
+
+Total size: 9.2 M
+Total download size: 9.2 M
+Downloading Packages:
+Waiting for process with pid 1185 to finish.
+[SKIPPED] uuid-1.6.2-47.oe2303.riscv64.rpm: Already downloaded                 
+[SKIPPED] vim-common-9.0-30.oe2303.riscv64.rpm: Already downloaded             
+[SKIPPED] vim-enhanced-9.0-30.oe2303.riscv64.rpm: Already downloaded           
+Running transaction check
+Waiting for process with pid 1185 to finish.
+The downloaded packages were saved in cache until the next successful transaction.
+You can remove cached packages by executing 'dnf clean packages'.
+Error: An rpm exception occurred: package not installed ]]
++ '[' 0 -ne 0 ']'
++ '[' 1 == 0 ']'
++ python3 /root/mugen/libs/locallibs/rpm_manage.py remove --node 1 --pkgs '' --tempfile 'Last metadata expiration check: 0:44:59 ago on Thu 27 Jul 2023 04:37:11 PM CST.
+Package vim-enhanced-2:9.0-29.oe2303.riscv64 is already installed.
+Dependencies resolved.
+================================================================================
+ Package            Architecture  Version                  Repository      Size
+================================================================================
+Installing:
+ uuid               riscv64       1.6.2-47.oe2303          mainline        40 k
+Upgrading:
+ vim-common         riscv64       2:9.0-30.oe2303          mainline       7.6 M
+ vim-enhanced       riscv64       2:9.0-30.oe2303          mainline       1.5 M
+
+Transaction Summary
+================================================================================
+Install  1 Package
+Upgrade  2 Packages
+
+Total size: 9.2 M
+Total download size: 9.2 M
+Downloading Packages:
+Waiting for process with pid 1185 to finish.
+[SKIPPED] uuid-1.6.2-47.oe2303.riscv64.rpm: Already downloaded                 
+[SKIPPED] vim-common-9.0-30.oe2303.riscv64.rpm: Already downloaded             
+[SKIPPED] vim-enhanced-9.0-30.oe2303.riscv64.rpm: Already downloaded           
+Running transaction check
+Waiting for process with pid 1185 to finish.
+The downloaded packages were saved in cache until the next successful transaction.
+You can remove cached packages by executing '\''dnf clean packages'\''.
+Error: An rpm exception occurred: package not installed'
+Traceback (most recent call last):
+  File "/root/mugen/libs/locallibs/rpm_manage.py", line 192, in <module>
+    exitcode = rpm_remove(args.node, args.pkgs, args.tempfile)
+  File "/root/mugen/libs/locallibs/rpm_manage.py", line 163, in rpm_remove
+    with open(tmpfile, "r") as f:
+OSError: [Errno 36] File name too long: "Last metadata expiration check: 0:44:59 ago on Thu 27 Jul 2023 04:37:11 PM CST.\nPackage vim-enhanced-2:9.0-29.oe2303.riscv64 is already installed.\nDependencies resolved.\n================================================================================\n Package            Architecture  Version                  Repository      Size\n================================================================================\nInstalling:\n uuid               riscv64       1.6.2-47.oe2303          mainline        40 k\nUpgrading:\n vim-common         riscv64       2:9.0-30.oe2303          mainline       7.6 M\n vim-enhanced       riscv64       2:9.0-30.oe2303          mainline       1.5 M\n\nTransaction Summary\n================================================================================\nInstall  1 Package\nUpgrade  2 Packages\n\nTotal size: 9.2 M\nTotal download size: 9.2 M\nDownloading Packages:\nWaiting for process with pid 1185 to finish.\n[SKIPPED] uuid-1.6.2-47.oe2303.riscv64.rpm: Already downloaded                 \n[SKIPPED] vim-common-9.0-30.oe2303.riscv64.rpm: Already downloaded             \n[SKIPPED] vim-enhanced-9.0-30.oe2303.riscv64.rpm: Already downloaded           \nRunning transaction check\nWaiting for process with pid 1185 to finish.\nThe downloaded packages were saved in cache until the next successful transaction.\nYou can remove cached packages by executing 'dnf clean packages'.\nError: An rpm exception occurred: package not installed"
++ '[' 0 -ne 0 ']'
++ rm -rf uuid_file
++ LOG_INFO 'Finish restoring the test environment.'
++ message='Finish restoring the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Finish restoring the test environment.'
+Thu Jul 27 17:23:45 2023 - INFO  - Finish restoring the test environment.

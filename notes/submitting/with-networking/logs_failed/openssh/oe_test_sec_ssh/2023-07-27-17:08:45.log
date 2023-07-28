@@ -1,0 +1,166 @@
++ source /root/mugen/libs/locallibs/common_lib.sh
+++ python3 --version
+++ '[' 0 -eq 0 ']'
+++ source /root/mugen/libs/locallibs/common_lib_python.sh
++ main
+++ type -t post_test
++ '[' -n function ']'
++ trap post_test EXIT INT HUP TERM
++ rpm -qa
++ grep expect
+++ type -t config_params
++ '[' -n '' ']'
+++ type -t pre_test
++ '[' -n function ']'
++ pre_test
++ LOG_INFO 'Start environmental preparation.'
++ message='Start environmental preparation.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start environmental preparation.'
+Thu Jul 27 17:08:51 2023 - INFO  - Start environmental preparation.
++ DNF_INSTALL setroubleshoot-server
++ pkgs=setroubleshoot-server
++ node=1
++ '[' -z '' ']'
++ tmpfile=
+++ python3 /root/mugen/libs/locallibs/rpm_manage.py install --pkgs setroubleshoot-server --node 1 --tempfile ''
++ tmpfile2=/tmp/tmpkamkuuw9
++ '[' -z '' ']'
++ tmpfile=/tmp/tmpkamkuuw9
++ systemctl start firewalld
+Failed to start firewalld.service: Unit firewalld.service not found.
++ LOG_INFO 'End of environmental preparation!'
++ message='End of environmental preparation!'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End of environmental preparation!'
+Thu Jul 27 17:10:36 2023 - INFO  - End of environmental preparation!
+++ type -t run_test
++ '[' -n function ']'
++ run_test
++ LOG_INFO 'Start executing testcase.'
++ message='Start executing testcase.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start executing testcase.'
+Thu Jul 27 17:10:37 2023 - INFO  - Start executing testcase.
++ grep '^PasswordAuthentication yes' /etc/ssh/sshd_config
+PasswordAuthentication yes
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ semanage port --delete -t ssh_port_t -p tcp 36
+ValueError: SELinux policy is not managed or store cannot be accessed.
++ CHECK_RESULT 1
++ actual_result=1
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 0 -eq 0 ']'
++ test 1x '!=' 0x
++ test -n ''
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_sec_ssh.sh line 33'
++ message='oe_test_sec_ssh.sh line 33'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_sec_ssh.sh line 33'
+Thu Jul 27 17:10:47 2023 - ERROR - oe_test_sec_ssh.sh line 33
++ '[' 0 -eq 1 ']'
++ return 0
++ semanage port -a -t ssh_port_t -p tcp 36
+ValueError: SELinux policy is not managed or store cannot be accessed.
++ CHECK_RESULT 1
++ actual_result=1
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 0 -eq 0 ']'
++ test 1x '!=' 0x
++ test -n ''
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_sec_ssh.sh line 35'
++ message='oe_test_sec_ssh.sh line 35'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_sec_ssh.sh line 35'
+Thu Jul 27 17:10:56 2023 - ERROR - oe_test_sec_ssh.sh line 35
++ '[' 0 -eq 1 ']'
++ return 0
++ firewall-cmd --remove-port 36/tcp
+oe_test_sec_ssh.sh: line 36: firewall-cmd: command not found
++ firewall-cmd --add-port 36/tcp
+oe_test_sec_ssh.sh: line 37: firewall-cmd: command not found
++ CHECK_RESULT 127
++ actual_result=127
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 127 ']'
++ '[' 0 -eq 0 ']'
++ test 127x '!=' 0x
++ test -n ''
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_sec_ssh.sh line 38'
++ message='oe_test_sec_ssh.sh line 38'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_sec_ssh.sh line 38'
+Thu Jul 27 17:10:57 2023 - ERROR - oe_test_sec_ssh.sh line 38
++ '[' 0 -eq 1 ']'
++ return 0
++ firewall-cmd --runtime-to-permanent
+oe_test_sec_ssh.sh: line 39: firewall-cmd: command not found
++ CHECK_RESULT 127
++ actual_result=127
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 127 ']'
++ '[' 0 -eq 0 ']'
++ test 127x '!=' 0x
++ test -n ''
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_sec_ssh.sh line 40'
++ message='oe_test_sec_ssh.sh line 40'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_sec_ssh.sh line 40'
+Thu Jul 27 17:10:58 2023 - ERROR - oe_test_sec_ssh.sh line 40
++ '[' 0 -eq 1 ']'
++ return 0
++ LOG_INFO 'Finish testcase execution.'
++ message='Finish testcase execution.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Finish testcase execution.'
+Thu Jul 27 17:11:00 2023 - INFO  - Finish testcase execution.
++ CASE_RESULT 0
++ case_re=0
++ test -z 4
++ test 4 -gt 0
++ LOG_ERROR 'failed to execute the case.'
++ message='failed to execute the case.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'failed to execute the case.'
+Thu Jul 27 17:11:01 2023 - ERROR - failed to execute the case.
++ exit 4
++ post_test
++ LOG_INFO 'start environment cleanup.'
++ message='start environment cleanup.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'start environment cleanup.'
+Thu Jul 27 17:11:02 2023 - INFO  - start environment cleanup.
++ firewall-cmd --remove-port 36/tcp
+oe_test_sec_ssh.sh: line 46: firewall-cmd: command not found
++ firewall-cmd --runtime-to-permanent
+oe_test_sec_ssh.sh: line 47: firewall-cmd: command not found
++ DNF_REMOVE
++ node=1
++ pkg_list=
++ mode=0
++ [[ -z /tmp/tmpkamkuuw9 ]]
++ '[' 0 -ne 0 ']'
++ '[' 1 == 0 ']'
++ python3 /root/mugen/libs/locallibs/rpm_manage.py remove --node 1 --pkgs '' --tempfile /tmp/tmpkamkuuw9
++ '[' 0 -ne 0 ']'
++ LOG_INFO 'Finish environment cleanup!'
++ message='Finish environment cleanup!'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Finish environment cleanup!'
+Thu Jul 27 17:11:43 2023 - INFO  - Finish environment cleanup!

@@ -1,0 +1,585 @@
++ source ../common/common_cmake.sh
+++ source /root/mugen/libs/locallibs/common_lib.sh
++++ python3 --version
++++ '[' 0 -eq 0 ']'
++++ source /root/mugen/libs/locallibs/common_lib_python.sh
++ main
+++ type -t post_test
++ '[' -n function ']'
++ trap post_test EXIT INT HUP TERM
++ rpm -qa
++ grep expect
+++ type -t config_params
++ '[' -n '' ']'
+++ type -t pre_test
++ '[' -n function ']'
++ pre_test
++ LOG_INFO 'Start to prepare the test environment.'
++ message='Start to prepare the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to prepare the test environment.'
+Thu Jul 27 18:19:30 2023 - INFO  - Start to prepare the test environment.
++ deploy_env
++ DNF_INSTALL 'cmake gcc-c++ ninja-build make'
++ pkgs='cmake gcc-c++ ninja-build make'
++ node=1
++ '[' -z '' ']'
++ tmpfile=
+++ python3 /root/mugen/libs/locallibs/rpm_manage.py install --pkgs 'cmake gcc-c++ ninja-build make' --node 1 --tempfile ''
+Thu Jul 27 18:19:47 2023 - INFO  - pkgs:(cmake gcc-c++ ninja-build make) is already installed
++ tmpfile2=
++ '[' -z '' ']'
++ tmpfile=
++ mkdir build
++ cd build
++ LOG_INFO 'Finish preparing the test environment.'
++ message='Finish preparing the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Finish preparing the test environment.'
+Thu Jul 27 18:19:49 2023 - INFO  - Finish preparing the test environment.
+++ type -t run_test
++ '[' -n function ']'
++ run_test
++ LOG_INFO 'Start to run test.'
++ message='Start to run test.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to run test.'
+Thu Jul 27 18:19:50 2023 - INFO  - Start to run test.
++ ctest --help
++ grep -E 'Usage|ctest \[options\]'
+Usage
+  ctest [options]
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ ctest --version
++ grep 'ctest version'
+ctest version 3.24.3
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ cmake ..
+CMake Deprecation Warning at CMakeLists.txt:1 (CMAKE_MINIMUM_REQUIRED):
+  Compatibility with CMake < 2.8.12 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value or use a ...<max> suffix to tell
+  CMake that the project does not need compatibility with older versions.
+
+
+-- The C compiler identification is GNU 10.3.1
+-- The CXX compiler identification is GNU 10.3.1
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /root/mugen/testcases/cli-test/cmake/oe_test_ctest/build
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ test -d CMakeFiles
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ test -f cmake_install.cmake -a -f CMakeCache.txt -a -f Makefile -a -f CTestTestfile.cmake
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ make
++ grep 'Built target my_test'
+[100%] Built target my_test
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ test -f my_test
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ ctest -C Debug
++ grep '100% tests passed'
+100% tests passed, 0 tests failed out of 2
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ test -d Testing
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ ctest --verbose
++ grep -E 'UpdateCTestConfiguration|Test command:|100% tests passed'
+UpdateCTestConfiguration  from :/root/mugen/testcases/cli-test/cmake/oe_test_ctest/build/DartConfiguration.tcl
+UpdateCTestConfiguration  from :/root/mugen/testcases/cli-test/cmake/oe_test_ctest/build/DartConfiguration.tcl
+1: Test command: /root/mugen/testcases/cli-test/cmake/oe_test_ctest/build/my_test "1" "2"
+2: Test command: /root/mugen/testcases/cli-test/cmake/oe_test_ctest/build/my_test "1" "3"
+100% tests passed, 0 tests failed out of 2
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ ctest --extra-verbose
++ grep -E 'UpdateCTestConfiguration|Test command:|100% tests passed'
+UpdateCTestConfiguration  from :/root/mugen/testcases/cli-test/cmake/oe_test_ctest/build/DartConfiguration.tcl
+UpdateCTestConfiguration  from :/root/mugen/testcases/cli-test/cmake/oe_test_ctest/build/DartConfiguration.tcl
+1: Test command: /root/mugen/testcases/cli-test/cmake/oe_test_ctest/build/my_test "1" "2"
+2: Test command: /root/mugen/testcases/cli-test/cmake/oe_test_ctest/build/my_test "1" "3"
+100% tests passed, 0 tests failed out of 2
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ ctest --debug
++ grep -E 'Constructing a list of tests|Done constructing a list of tests|Updating test list for fixtures|Added 0 tests to meet fixture requirements|100% tests passed|Total Test time (real)'
+/home/abuild/rpmbuild/BUILD/cmake-3.24.3/Source/CTest/cmCTestTestHandler.cxx:1782 Constructing a list of tests
+/home/abuild/rpmbuild/BUILD/cmake-3.24.3/Source/CTest/cmCTestTestHandler.cxx:1833 Done constructing a list of tests
+/home/abuild/rpmbuild/BUILD/cmake-3.24.3/Source/CTest/cmCTestTestHandler.cxx:977 Updating test list for fixtures
+/home/abuild/rpmbuild/BUILD/cmake-3.24.3/Source/CTest/cmCTestTestHandler.cxx:1200 Added 0 tests to meet fixture requirements
+100% tests passed, 0 tests failed out of 2
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ ctest --output-on-failure
++ grep '100% tests passed'
+100% tests passed, 0 tests failed out of 2
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ ctest -F
++ grep '100% tests passed'
+100% tests passed, 0 tests failed out of 2
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ ctest -j 1
++ grep '100% tests passed'
+100% tests passed, 0 tests failed out of 2
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ ctest -Q
++ grep '100% tests passed'
++ CHECK_RESULT 1 1
++ actual_result=1
++ expect_result=1
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 0 -eq 0 ']'
++ test 1x '!=' 1x
++ return 0
++ ctest -O result
+Test project /root/mugen/testcases/cli-test/cmake/oe_test_ctest/build
+    Start 1: test_run2
+1/2 Test #1: test_run2 ........................   Passed    0.08 sec
+    Start 2: test_1_plus_3
+2/2 Test #2: test_1_plus_3 ....................   Passed    0.07 sec
+
+100% tests passed, 0 tests failed out of 2
+
+Total Test time (real) =   0.28 sec
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ grep -E '\[HANDLER_OUTPUT\]|100% tests passed' result
+[HANDLER_OUTPUT] 
+100% tests passed, 0 tests failed out of 2
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ ctest -N
++ grep 'Total Tests: 2'
+Total Tests: 2
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ ctest -N -E test_1_plus_3
++ grep -E 'Test #1: test_run2|Total Tests: 1'
+  Test #1: test_run2
+Total Tests: 1
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ ctest -R test_run2
++ grep '1/1 Test #1: test_run2'
+1/1 Test #1: test_run2 ........................   Passed    0.09 sec
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ ctest --build-and-test
++ grep '100% tests passed'
+100% tests passed, 0 tests failed out of 2
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ ctest --build-target .
++ grep '100% tests passed'
+100% tests passed, 0 tests failed out of 2
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ ctest --build-nocmake
++ grep '100% tests passed'
+100% tests passed, 0 tests failed out of 2
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ ctest -build-run-dir .
++ grep '100% tests passed'
+100% tests passed, 0 tests failed out of 2
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ ctest --build-two-config
++ grep '100% tests passed'
+100% tests passed, 0 tests failed out of 2
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ grep '100% tests passed'
++ ctest --build-exe-dir .
+100% tests passed, 0 tests failed out of 2
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ grep '100% tests passed'
++ ctest --build-generator 'Unix Makefiles'
+100% tests passed, 0 tests failed out of 2
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ ctest --build-generator-toolset 'Visual Studio'
++ grep '100% tests passed'
+100% tests passed, 0 tests failed out of 2
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ ctest --build-project my_test
++ grep '100% tests passed'
+100% tests passed, 0 tests failed out of 2
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ ctest --print-labels
++ grep Labels
+No Labels Exist
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ ctest --timeout 0.0001
++ grep -E '0% tests passed, 2 tests failed out of 2|1 - test_run2 \(Timeout\)|2 - test_1_plus_3 \(Timeout\)'
+Errors while running CTest
+Output from these tests are in: /root/mugen/testcases/cli-test/cmake/oe_test_ctest/build/Testing/Temporary/LastTest.log
+Use "--rerun-failed --output-on-failure" to re-run the failed cases verbosely.
+0% tests passed, 2 tests failed out of 2
+	  1 - test_run2 (Timeout)
+	  2 - test_1_plus_3 (Timeout)
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ ctest --stop-time 0.001
++ grep '100% tests passed'
+100% tests passed, 0 tests failed out of 2
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ ctest --http1.0
++ grep '100% tests passed'
+100% tests passed, 0 tests failed out of 2
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ ctest --no-compress-output
++ grep '100% tests passed'
+100% tests passed, 0 tests failed out of 2
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ LOG_INFO 'End of the test.'
++ message='End of the test.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End of the test.'
+Thu Jul 27 18:20:33 2023 - INFO  - End of the test.
++ CASE_RESULT 0
++ case_re=0
++ test -z ''
++ test 0 -eq 0
++ LOG_INFO 'succeed to execute the case.'
++ message='succeed to execute the case.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'succeed to execute the case.'
+Thu Jul 27 18:20:34 2023 - INFO  - succeed to execute the case.
++ exec_result=
++ exit 0
++ post_test
++ LOG_INFO 'Start to restore the test environment.'
++ message='Start to restore the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to restore the test environment.'
+Thu Jul 27 18:20:35 2023 - INFO  - Start to restore the test environment.
++ clear_env
++++ dirname oe_test_ctest.sh
+++ cd .
+++ pwd
++ currentDir=/root/mugen/testcases/cli-test/cmake/oe_test_ctest/build
+++ echo /root/mugen/testcases/cli-test/cmake/oe_test_ctest/build
+++ awk -F / '{print $NF}'
++ currentName=build
++ test buildx = buildx
++ cd ..
+++ ls
+++ grep -vE '\.sh|\.c|\.cpp|\.txt'
++ roc=build
++ rm -rf build
++ DNF_REMOVE
++ node=1
++ pkg_list=
++ mode=0
++ [[ -z '' ]]
++ [[ -z '' ]]
++ LOG_WARN 'no thing to do.'
++ message='no thing to do.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level warn --message 'no thing to do.'
+Thu Jul 27 18:20:37 2023 - WARN  - no thing to do.
++ return 0
++ LOG_INFO 'Finish restoring the test environment.'
++ message='Finish restoring the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Finish restoring the test environment.'
+Thu Jul 27 18:20:39 2023 - INFO  - Finish restoring the test environment.

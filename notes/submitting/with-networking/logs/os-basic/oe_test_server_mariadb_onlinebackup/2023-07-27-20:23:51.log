@@ -1,0 +1,325 @@
++ source /root/mugen/libs/locallibs/common_lib.sh
+++ python3 --version
+++ '[' 0 -eq 0 ']'
+++ source /root/mugen/libs/locallibs/common_lib_python.sh
++ main
+++ type -t post_test
++ '[' -n function ']'
++ trap post_test EXIT INT HUP TERM
++ rpm -qa
++ grep expect
+++ type -t config_params
++ '[' -n '' ']'
+++ type -t pre_test
++ '[' -n function ']'
++ pre_test
++ LOG_INFO 'Start to prepare the test environment.'
++ message='Start to prepare the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to prepare the test environment.'
+Thu Jul 27 20:23:57 2023 - INFO  - Start to prepare the test environment.
++ DNF_INSTALL 'mariadb-server mariadb-backup'
++ pkgs='mariadb-server mariadb-backup'
++ node=1
++ '[' -z '' ']'
++ tmpfile=
+++ python3 /root/mugen/libs/locallibs/rpm_manage.py install --pkgs 'mariadb-server mariadb-backup' --node 1 --tempfile ''
++ tmpfile2=/tmp/tmpeb500pj_
++ '[' -z '' ']'
++ tmpfile=/tmp/tmpeb500pj_
++ rm -rf /var/lib/mysql/aria_log.00000001 /var/lib/mysql/aria_log_control /var/lib/mysql/databaseexample /var/lib/mysql/ib_buffer_pool /var/lib/mysql/ibdata1 /var/lib/mysql/ib_logfile0 /var/lib/mysql/multi-master.info /var/lib/mysql/mysql /var/lib/mysql/mysql_upgrade_info /var/lib/mysql/performance_schema
++ systemctl start mariadb.service
++ systemctl status mariadb.service
++ grep running
+     Active: active (running) since Thu 2023-07-27 20:27:19 CST; 412ms ago
++ mysqladmin -uroot password 'openEuler12#$'
++ LOG_INFO 'End to prepare the test environment.'
++ message='End to prepare the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End to prepare the test environment.'
+Thu Jul 27 20:27:21 2023 - INFO  - End to prepare the test environment.
+++ type -t run_test
++ '[' -n function ']'
++ run_test
++ LOG_INFO 'Start to run test.'
++ message='Start to run test.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to run test.'
+Thu Jul 27 20:27:23 2023 - INFO  - Start to run test.
++ echo '[xtrabackup]'
++ echo user=myuser
++ echo password=mypassword
++ mkdir /home/backup
++ mariabackup --backup --target-dir /home/backup --user root --password 'openEuler12#$'
+[00] 2023-07-27 20:27:23 Connecting to MySQL server host: localhost, user: root, password: set, port: not set, socket: not set
+[00] 2023-07-27 20:27:24 Using server version 10.5.16-MariaDB
+mariabackup based on MariaDB server 10.5.16-MariaDB Linux (riscv64)
+[00] 2023-07-27 20:27:24 uses posix_fadvise().
+[00] 2023-07-27 20:27:24 cd to /var/lib/mysql/
+[00] 2023-07-27 20:27:24 open files limit requested 0, set to 1024
+[00] 2023-07-27 20:27:24 mariabackup: using the following InnoDB configuration:
+[00] 2023-07-27 20:27:24 innodb_data_home_dir = 
+[00] 2023-07-27 20:27:24 innodb_data_file_path = ibdata1:12M:autoextend
+[00] 2023-07-27 20:27:24 innodb_log_group_home_dir = ./
+[00] 2023-07-27 20:27:24 InnoDB: Using Linux native AIO
+2023-07-27 20:27:24 0 [Note] InnoDB: Number of pools: 1
+[00] 2023-07-27 20:27:24 mariabackup: Generating a list of tablespaces
+[00] 2023-07-27 20:27:24 >> log scanned up to (45118)
+[01] 2023-07-27 20:27:24 Copying ibdata1 to /home/backup/ibdata1
+[00] 2023-07-27 20:27:25 >> log scanned up to (45118)
+[01] 2023-07-27 20:27:25         ...done
+[01] 2023-07-27 20:27:25 Copying ./mysql/transaction_registry.ibd to /home/backup/mysql/transaction_registry.ibd
+[01] 2023-07-27 20:27:25         ...done
+[01] 2023-07-27 20:27:25 Copying ./mysql/innodb_table_stats.ibd to /home/backup/mysql/innodb_table_stats.ibd
+[01] 2023-07-27 20:27:25         ...done
+[01] 2023-07-27 20:27:25 Copying ./mysql/gtid_slave_pos.ibd to /home/backup/mysql/gtid_slave_pos.ibd
+[01] 2023-07-27 20:27:25         ...done
+[01] 2023-07-27 20:27:25 Copying ./mysql/innodb_index_stats.ibd to /home/backup/mysql/innodb_index_stats.ibd
+[01] 2023-07-27 20:27:25         ...done
+[00] 2023-07-27 20:27:26 >> log scanned up to (45118)
+[00] 2023-07-27 20:27:26 Acquiring BACKUP LOCKS...
+[00] 2023-07-27 20:27:26 Starting to backup non-InnoDB tables and files
+[01] 2023-07-27 20:27:26 Copying ./mysql/servers.MAD to /home/backup/mysql/servers.MAD
+[01] 2023-07-27 20:27:26         ...done
+[01] 2023-07-27 20:27:26 Copying ./mysql/table_stats.MAI to /home/backup/mysql/table_stats.MAI
+[01] 2023-07-27 20:27:26         ...done
+[01] 2023-07-27 20:27:26 Copying ./mysql/index_stats.frm to /home/backup/mysql/index_stats.frm
+[01] 2023-07-27 20:27:26         ...done
+[01] 2023-07-27 20:27:26 Copying ./mysql/db.MAD to /home/backup/mysql/db.MAD
+[01] 2023-07-27 20:27:26         ...done
+[01] 2023-07-27 20:27:26 Copying ./mysql/time_zone_name.MAI to /home/backup/mysql/time_zone_name.MAI
+[01] 2023-07-27 20:27:26         ...done
+[01] 2023-07-27 20:27:26 Copying ./mysql/time_zone.MAI to /home/backup/mysql/time_zone.MAI
+[01] 2023-07-27 20:27:26         ...done
+[01] 2023-07-27 20:27:26 Copying ./mysql/time_zone_leap_second.MAD to /home/backup/mysql/time_zone_leap_second.MAD
+[01] 2023-07-27 20:27:26         ...done
+[01] 2023-07-27 20:27:26 Copying ./mysql/time_zone_name.frm to /home/backup/mysql/time_zone_name.frm
+[01] 2023-07-27 20:27:26         ...done
+[01] 2023-07-27 20:27:26 Copying ./mysql/columns_priv.frm to /home/backup/mysql/columns_priv.frm
+[01] 2023-07-27 20:27:26         ...done
+[01] 2023-07-27 20:27:26 Copying ./mysql/procs_priv.MAD to /home/backup/mysql/procs_priv.MAD
+[01] 2023-07-27 20:27:26         ...done
+[01] 2023-07-27 20:27:26 Copying ./mysql/help_category.MAD to /home/backup/mysql/help_category.MAD
+[01] 2023-07-27 20:27:26         ...done
+[01] 2023-07-27 20:27:26 Copying ./mysql/func.frm to /home/backup/mysql/func.frm
+[01] 2023-07-27 20:27:26         ...done
+[01] 2023-07-27 20:27:26 Copying ./mysql/time_zone_transition_type.frm to /home/backup/mysql/time_zone_transition_type.frm
+[01] 2023-07-27 20:27:26         ...done
+[01] 2023-07-27 20:27:26 Copying ./mysql/help_keyword.MAI to /home/backup/mysql/help_keyword.MAI
+[01] 2023-07-27 20:27:26         ...done
+[01] 2023-07-27 20:27:26 Copying ./mysql/tables_priv.frm to /home/backup/mysql/tables_priv.frm
+[01] 2023-07-27 20:27:26         ...done
+[01] 2023-07-27 20:27:26 Copying ./mysql/table_stats.MAD to /home/backup/mysql/table_stats.MAD
+[01] 2023-07-27 20:27:26         ...done
+[01] 2023-07-27 20:27:26 Copying ./mysql/general_log.CSV to /home/backup/mysql/general_log.CSV
+[01] 2023-07-27 20:27:26         ...done
+[01] 2023-07-27 20:27:26 Copying ./mysql/roles_mapping.MAD to /home/backup/mysql/roles_mapping.MAD
+[01] 2023-07-27 20:27:26         ...done
+[01] 2023-07-27 20:27:26 Copying ./mysql/user.frm to /home/backup/mysql/user.frm
+[01] 2023-07-27 20:27:26         ...done
+[01] 2023-07-27 20:27:26 Copying ./mysql/plugin.frm to /home/backup/mysql/plugin.frm
+[01] 2023-07-27 20:27:26         ...done
+[01] 2023-07-27 20:27:26 Copying ./mysql/help_category.MAI to /home/backup/mysql/help_category.MAI
+[01] 2023-07-27 20:27:26         ...done
+[01] 2023-07-27 20:27:26 Copying ./mysql/event.MAI to /home/backup/mysql/event.MAI
+[01] 2023-07-27 20:27:26         ...done
+[01] 2023-07-27 20:27:26 Copying ./mysql/global_priv.MAD to /home/backup/mysql/global_priv.MAD
+[01] 2023-07-27 20:27:26         ...done
+[01] 2023-07-27 20:27:26 Copying ./mysql/slow_log.CSV to /home/backup/mysql/slow_log.CSV
+[01] 2023-07-27 20:27:26         ...done
+[01] 2023-07-27 20:27:26 Copying ./mysql/proc.MAI to /home/backup/mysql/proc.MAI
+[01] 2023-07-27 20:27:26         ...done
+[01] 2023-07-27 20:27:26 Copying ./mysql/columns_priv.MAI to /home/backup/mysql/columns_priv.MAI
+[01] 2023-07-27 20:27:26         ...done
+[01] 2023-07-27 20:27:26 Copying ./mysql/help_topic.MAI to /home/backup/mysql/help_topic.MAI
+[01] 2023-07-27 20:27:26         ...done
+[01] 2023-07-27 20:27:26 Copying ./mysql/time_zone_transition.frm to /home/backup/mysql/time_zone_transition.frm
+[01] 2023-07-27 20:27:26         ...done
+[01] 2023-07-27 20:27:26 Copying ./mysql/servers.frm to /home/backup/mysql/servers.frm
+[01] 2023-07-27 20:27:26         ...done
+[01] 2023-07-27 20:27:26 Copying ./mysql/proxies_priv.MAD to /home/backup/mysql/proxies_priv.MAD
+[01] 2023-07-27 20:27:26         ...done
+[01] 2023-07-27 20:27:26 Copying ./mysql/plugin.MAI to /home/backup/mysql/plugin.MAI
+[01] 2023-07-27 20:27:26         ...done
+[01] 2023-07-27 20:27:26 Copying ./mysql/help_relation.frm to /home/backup/mysql/help_relation.frm
+[01] 2023-07-27 20:27:26         ...done
+[01] 2023-07-27 20:27:26 Copying ./mysql/time_zone_leap_second.frm to /home/backup/mysql/time_zone_leap_second.frm
+[01] 2023-07-27 20:27:26         ...done
+[01] 2023-07-27 20:27:26 Copying ./mysql/slow_log.CSM to /home/backup/mysql/slow_log.CSM
+[01] 2023-07-27 20:27:26         ...done
+[01] 2023-07-27 20:27:26 Copying ./mysql/help_topic.frm to /home/backup/mysql/help_topic.frm
+[01] 2023-07-27 20:27:26         ...done
+[01] 2023-07-27 20:27:26 Copying ./mysql/general_log.CSM to /home/backup/mysql/general_log.CSM
+[01] 2023-07-27 20:27:26         ...done
+[01] 2023-07-27 20:27:26 Copying ./mysql/column_stats.frm to /home/backup/mysql/column_stats.frm
+[01] 2023-07-27 20:27:26         ...done
+[01] 2023-07-27 20:27:26 Copying ./mysql/global_priv.frm to /home/backup/mysql/global_priv.frm
+[01] 2023-07-27 20:27:26         ...done
+[01] 2023-07-27 20:27:26 Copying ./mysql/roles_mapping.frm to /home/backup/mysql/roles_mapping.frm
+[01] 2023-07-27 20:27:26         ...done
+[01] 2023-07-27 20:27:26 Copying ./mysql/event.frm to /home/backup/mysql/event.frm
+[01] 2023-07-27 20:27:26         ...done
+[01] 2023-07-27 20:27:26 Copying ./mysql/db.frm to /home/backup/mysql/db.frm
+[01] 2023-07-27 20:27:26         ...done
+[01] 2023-07-27 20:27:27 Copying ./mysql/help_keyword.frm to /home/backup/mysql/help_keyword.frm
+[01] 2023-07-27 20:27:27         ...done
+[01] 2023-07-27 20:27:27 Copying ./mysql/time_zone.frm to /home/backup/mysql/time_zone.frm
+[01] 2023-07-27 20:27:27         ...done
+[01] 2023-07-27 20:27:27 Copying ./mysql/innodb_index_stats.frm to /home/backup/mysql/innodb_index_stats.frm
+[01] 2023-07-27 20:27:27         ...done
+[01] 2023-07-27 20:27:27 Copying ./mysql/index_stats.MAI to /home/backup/mysql/index_stats.MAI
+[01] 2023-07-27 20:27:27         ...done
+[01] 2023-07-27 20:27:27 Copying ./mysql/event.MAD to /home/backup/mysql/event.MAD
+[01] 2023-07-27 20:27:27         ...done
+[01] 2023-07-27 20:27:27 Copying ./mysql/help_relation.MAI to /home/backup/mysql/help_relation.MAI
+[01] 2023-07-27 20:27:27         ...done
+[01] 2023-07-27 20:27:27 Copying ./mysql/proxies_priv.frm to /home/backup/mysql/proxies_priv.frm
+[01] 2023-07-27 20:27:27         ...done
+[01] 2023-07-27 20:27:27 Copying ./mysql/tables_priv.MAI to /home/backup/mysql/tables_priv.MAI
+[01] 2023-07-27 20:27:27         ...done
+[01] 2023-07-27 20:27:27 Copying ./mysql/column_stats.MAD to /home/backup/mysql/column_stats.MAD
+[01] 2023-07-27 20:27:27         ...done
+[01] 2023-07-27 20:27:27 Copying ./mysql/column_stats.MAI to /home/backup/mysql/column_stats.MAI
+[01] 2023-07-27 20:27:27         ...done
+[01] 2023-07-27 20:27:27 Copying ./mysql/procs_priv.frm to /home/backup/mysql/procs_priv.frm
+[01] 2023-07-27 20:27:27         ...done
+[01] 2023-07-27 20:27:27 Copying ./mysql/help_topic.MAD to /home/backup/mysql/help_topic.MAD
+[01] 2023-07-27 20:27:27         ...done
+[01] 2023-07-27 20:27:27 Copying ./mysql/table_stats.frm to /home/backup/mysql/table_stats.frm
+[01] 2023-07-27 20:27:27         ...done
+[01] 2023-07-27 20:27:27 Copying ./mysql/slow_log.frm to /home/backup/mysql/slow_log.frm
+[01] 2023-07-27 20:27:27         ...done
+[01] 2023-07-27 20:27:27 Copying ./mysql/gtid_slave_pos.frm to /home/backup/mysql/gtid_slave_pos.frm
+[01] 2023-07-27 20:27:27         ...done
+[01] 2023-07-27 20:27:27 Copying ./mysql/func.MAD to /home/backup/mysql/func.MAD
+[01] 2023-07-27 20:27:27         ...done
+[01] 2023-07-27 20:27:27 Copying ./mysql/columns_priv.MAD to /home/backup/mysql/columns_priv.MAD
+[01] 2023-07-27 20:27:27         ...done
+[01] 2023-07-27 20:27:27 Copying ./mysql/index_stats.MAD to /home/backup/mysql/index_stats.MAD
+[01] 2023-07-27 20:27:27         ...done
+[01] 2023-07-27 20:27:27 Copying ./mysql/global_priv.MAI to /home/backup/mysql/global_priv.MAI
+[01] 2023-07-27 20:27:27         ...done
+[01] 2023-07-27 20:27:27 Copying ./mysql/func.MAI to /home/backup/mysql/func.MAI
+[01] 2023-07-27 20:27:27         ...done
+[01] 2023-07-27 20:27:27 Copying ./mysql/time_zone_transition.MAI to /home/backup/mysql/time_zone_transition.MAI
+[01] 2023-07-27 20:27:27         ...done
+[01] 2023-07-27 20:27:27 Copying ./mysql/proc.MAD to /home/backup/mysql/proc.MAD
+[01] 2023-07-27 20:27:27         ...done
+[01] 2023-07-27 20:27:27 Copying ./mysql/proxies_priv.MAI to /home/backup/mysql/proxies_priv.MAI
+[01] 2023-07-27 20:27:27         ...done
+[01] 2023-07-27 20:27:27 Copying ./mysql/time_zone_name.MAD to /home/backup/mysql/time_zone_name.MAD
+[01] 2023-07-27 20:27:27         ...done
+[01] 2023-07-27 20:27:27 Copying ./mysql/help_category.frm to /home/backup/mysql/help_category.frm
+[01] 2023-07-27 20:27:27         ...done
+[01] 2023-07-27 20:27:27 Copying ./mysql/time_zone_transition_type.MAD to /home/backup/mysql/time_zone_transition_type.MAD
+[01] 2023-07-27 20:27:27         ...done
+[01] 2023-07-27 20:27:27 Copying ./mysql/db.MAI to /home/backup/mysql/db.MAI
+[01] 2023-07-27 20:27:27         ...done
+[01] 2023-07-27 20:27:27 Copying ./mysql/db.opt to /home/backup/mysql/db.opt
+[01] 2023-07-27 20:27:27         ...done
+[01] 2023-07-27 20:27:27 Copying ./mysql/tables_priv.MAD to /home/backup/mysql/tables_priv.MAD
+[01] 2023-07-27 20:27:27         ...done
+[01] 2023-07-27 20:27:27 Copying ./mysql/roles_mapping.MAI to /home/backup/mysql/roles_mapping.MAI
+[01] 2023-07-27 20:27:27         ...done
+[01] 2023-07-27 20:27:27 Copying ./mysql/general_log.frm to /home/backup/mysql/general_log.frm
+[01] 2023-07-27 20:27:27         ...done
+[01] 2023-07-27 20:27:27 Copying ./mysql/proc.frm to /home/backup/mysql/proc.frm
+[01] 2023-07-27 20:27:27         ...done
+[01] 2023-07-27 20:27:27 Copying ./mysql/time_zone_transition_type.MAI to /home/backup/mysql/time_zone_transition_type.MAI
+[01] 2023-07-27 20:27:27         ...done
+[01] 2023-07-27 20:27:27 Copying ./mysql/help_relation.MAD to /home/backup/mysql/help_relation.MAD
+[01] 2023-07-27 20:27:27         ...done
+[01] 2023-07-27 20:27:27 Copying ./mysql/help_keyword.MAD to /home/backup/mysql/help_keyword.MAD
+[01] 2023-07-27 20:27:27         ...done
+[01] 2023-07-27 20:27:27 Copying ./mysql/time_zone_leap_second.MAI to /home/backup/mysql/time_zone_leap_second.MAI
+[01] 2023-07-27 20:27:27         ...done
+[01] 2023-07-27 20:27:27 Copying ./mysql/servers.MAI to /home/backup/mysql/servers.MAI
+[01] 2023-07-27 20:27:27         ...done
+[01] 2023-07-27 20:27:27 Copying ./mysql/innodb_table_stats.frm to /home/backup/mysql/innodb_table_stats.frm
+[01] 2023-07-27 20:27:27         ...done
+[01] 2023-07-27 20:27:27 Copying ./mysql/time_zone.MAD to /home/backup/mysql/time_zone.MAD
+[01] 2023-07-27 20:27:27         ...done
+[01] 2023-07-27 20:27:27 Copying ./mysql/plugin.MAD to /home/backup/mysql/plugin.MAD
+[01] 2023-07-27 20:27:27         ...done
+[01] 2023-07-27 20:27:27 Copying ./mysql/time_zone_transition.MAD to /home/backup/mysql/time_zone_transition.MAD
+[01] 2023-07-27 20:27:27         ...done
+[01] 2023-07-27 20:27:27 Copying ./mysql/transaction_registry.frm to /home/backup/mysql/transaction_registry.frm
+[01] 2023-07-27 20:27:27         ...done
+[01] 2023-07-27 20:27:27 Copying ./mysql/procs_priv.MAI to /home/backup/mysql/procs_priv.MAI
+[01] 2023-07-27 20:27:27         ...done
+[01] 2023-07-27 20:27:27 Copying ./performance_schema/db.opt to /home/backup/performance_schema/db.opt
+[01] 2023-07-27 20:27:27         ...done
+[00] 2023-07-27 20:27:27 Finished backing up non-InnoDB tables and files
+[01] 2023-07-27 20:27:27 Copying ./aria_log_control to /home/backup/aria_log_control
+[01] 2023-07-27 20:27:27         ...done
+[01] 2023-07-27 20:27:27 Copying ./aria_log.00000001 to /home/backup/aria_log.00000001
+[01] 2023-07-27 20:27:27         ...done
+[00] 2023-07-27 20:27:27 Waiting for log copy thread to read lsn 45118
+[00] 2023-07-27 20:27:27 >> log scanned up to (45118)
+[00] 2023-07-27 20:27:27 Executing FLUSH NO_WRITE_TO_BINLOG ENGINE LOGS...
+[00] 2023-07-27 20:27:27 mariabackup: The latest check point (for incremental): '45106'
+mariabackup: Stopping log copying thread.[00] 2023-07-27 20:27:27 >> log scanned up to (45118)
+
+[00] 2023-07-27 20:27:27 >> log scanned up to (45118)
+[00] 2023-07-27 20:27:27 Executing BACKUP STAGE END
+[00] 2023-07-27 20:27:27 All tables unlocked
+[00] 2023-07-27 20:27:27 Copying /var/lib/mysql/ib_buffer_pool to /home/backup/ib_buffer_pool
+[00] 2023-07-27 20:27:27         ...done
+[00] 2023-07-27 20:27:27 Backup created in directory '/home/backup/'
+[00] 2023-07-27 20:27:27 Writing backup-my.cnf
+[00] 2023-07-27 20:27:27         ...done
+[00] 2023-07-27 20:27:27 Writing xtrabackup_info
+[00] 2023-07-27 20:27:27         ...done
+[00] 2023-07-27 20:27:27 Redo log (from LSN 45106 to 45118) was copied.
+[00] 2023-07-27 20:27:28 completed OK!
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ ls -l /home/backup/aria_log.00000001 /home/backup/aria_log_control /home/backup/backup-my.cnf /home/backup/ib_buffer_pool /home/backup/ibdata1 /home/backup/ib_logfile0 /home/backup/mysql /home/backup/performance_schema /home/backup/xtrabackup_checkpoints /home/backup/xtrabackup_info
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ LOG_INFO 'End to run test.'
++ message='End to run test.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End to run test.'
+Thu Jul 27 20:27:29 2023 - INFO  - End to run test.
++ CASE_RESULT 0
++ case_re=0
++ test -z ''
++ test 0 -eq 0
++ LOG_INFO 'succeed to execute the case.'
++ message='succeed to execute the case.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'succeed to execute the case.'
+Thu Jul 27 20:27:30 2023 - INFO  - succeed to execute the case.
++ exec_result=
++ exit 0
++ post_test
++ LOG_INFO 'Start to restore the test environment.'
++ message='Start to restore the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to restore the test environment.'
+Thu Jul 27 20:27:32 2023 - INFO  - Start to restore the test environment.
++ rm -rf /etc/my.cnf.d/mariabackup.cnf /home/backup /var/lib/mysql
++ DNF_REMOVE
++ node=1
++ pkg_list=
++ mode=0
++ [[ -z /tmp/tmpeb500pj_ ]]
++ '[' 0 -ne 0 ']'
++ '[' 1 == 0 ']'
++ python3 /root/mugen/libs/locallibs/rpm_manage.py remove --node 1 --pkgs '' --tempfile /tmp/tmpeb500pj_
++ '[' 0 -ne 0 ']'
++ LOG_INFO 'End to restore the test environment.'
++ message='End to restore the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End to restore the test environment.'
+Thu Jul 27 20:28:09 2023 - INFO  - End to restore the test environment.

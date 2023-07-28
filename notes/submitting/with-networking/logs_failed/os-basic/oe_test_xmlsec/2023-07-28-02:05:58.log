@@ -1,0 +1,172 @@
++ source /root/mugen/libs/locallibs/common_lib.sh
+++ python3 --version
+++ '[' 0 -eq 0 ']'
+++ source /root/mugen/libs/locallibs/common_lib_python.sh
++ main
+++ type -t post_test
++ '[' -n function ']'
++ trap post_test EXIT INT HUP TERM
++ rpm -qa
++ grep expect
+++ type -t config_params
++ '[' -n '' ']'
+++ type -t pre_test
++ '[' -n function ']'
++ pre_test
++ LOG_INFO 'Start to prepare the test environment.'
++ message='Start to prepare the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to prepare the test environment.'
+Fri Jul 28 02:06:05 2023 - INFO  - Start to prepare the test environment.
++ DNF_INSTALL 'xmlsec1 xmlsec1-openssl xmlsec1-openssl-devel libxml2 libxslt'
++ pkgs='xmlsec1 xmlsec1-openssl xmlsec1-openssl-devel libxml2 libxslt'
++ node=1
++ '[' -z '' ']'
++ tmpfile=
+++ python3 /root/mugen/libs/locallibs/rpm_manage.py install --pkgs 'xmlsec1 xmlsec1-openssl xmlsec1-openssl-devel libxml2 libxslt' --node 1 --tempfile ''
++ tmpfile2=/tmp/tmpsikiue8z
++ '[' -z '' ']'
++ tmpfile=/tmp/tmpsikiue8z
+++ pwd
++ pwd=/root/mugen/testcases/system-test/system-integration/os-basic/oe_test_xmlsec
++ LOG_INFO 'End to prepare the test environment.'
++ message='End to prepare the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End to prepare the test environment.'
+Fri Jul 28 02:08:27 2023 - INFO  - End to prepare the test environment.
+++ type -t run_test
++ '[' -n function ']'
++ run_test
++ LOG_INFO 'Start to run test.'
++ message='Start to run test.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to run test.'
+Fri Jul 28 02:08:28 2023 - INFO  - Start to run test.
++ ln -s /usr/include/libxml2/libxml/ /usr/include/
++ CHECK_RESULT 0 0 0 'execution failed'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='execution failed'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ ln -s /usr/include/xmlsec1/xmlsec/ /usr/include/
++ CHECK_RESULT 0 0 0 'execution failed'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='execution failed'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ unzip xmlsec1.zip
+Archive:  xmlsec1.zip
+   creating: xmlsec1/
+  inflating: xmlsec1/rsakey.pem      
+  inflating: xmlsec1/sign.c          
+  inflating: xmlsec1/sign1-tmpl.xml  
++ cd xmlsec1
+++ xml2-config --cflags --libs
+++ xslt-config --cflags --libs
++ gcc -I/usr/include/libxml2 -lxml2 -lz -llzma -lm -I/usr/include/libxml2 -lxslt -lxml2 -lm -lxmlsec1 -g -D__XMLSEC_FUNCTION__=__FUNCTION__ -DXMLSEC_NO_XKMS=1 -DXMLSEC_CRYPTO_OPENSSL -DXMLSEC_CRYPTO_DYNAMIC_LOADING=1 -DUNIX_SOCKETS -DXMLSEC_NO_SIZE_T sign.c -o sign1
+In file included from /usr/include/bits/posix1_lim.h:161,
+                 from /usr/include/limits.h:195,
+                 from /usr/lib/gcc/riscv64-linux-gnu/10.3.1/include/limits.h:195,
+                 from /usr/lib/gcc/riscv64-linux-gnu/10.3.1/include/syslimits.h:7,
+                 from /usr/lib/gcc/riscv64-linux-gnu/10.3.1/include/limits.h:34,
+                 from /usr/include/libxml2/libxml/tree.h:16,
+                 from sign.c:24:
+/usr/include/bits/local_lim.h:38:10: fatal error: linux/limits.h: No such file or directory
+   38 | #include <linux/limits.h>
+      |          ^~~~~~~~~~~~~~~~
+compilation terminated.
++ CHECK_RESULT 1 0 0 'execution failed'
++ actual_result=1
++ expect_result=0
++ mode=0
++ error_log='execution failed'
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 0 -eq 0 ']'
++ test 1x '!=' 0x
++ test -n 'execution failed'
++ LOG_ERROR 'execution failed'
++ message='execution failed'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'execution failed'
+Fri Jul 28 02:08:31 2023 - ERROR - execution failed
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_xmlsec.sh line 38'
++ message='oe_test_xmlsec.sh line 38'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_xmlsec.sh line 38'
+Fri Jul 28 02:08:33 2023 - ERROR - oe_test_xmlsec.sh line 38
++ '[' 0 -eq 1 ']'
++ return 0
++ ./sign1 sign1-tmpl.xml rsakey.pem
+oe_test_xmlsec.sh: line 39: ./sign1: No such file or directory
++ CHECK_RESULT 127 0 0 'execution failed'
++ actual_result=127
++ expect_result=0
++ mode=0
++ error_log='execution failed'
++ exit_mode=0
++ '[' -z 127 ']'
++ '[' 0 -eq 0 ']'
++ test 127x '!=' 0x
++ test -n 'execution failed'
++ LOG_ERROR 'execution failed'
++ message='execution failed'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'execution failed'
+Fri Jul 28 02:08:34 2023 - ERROR - execution failed
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_xmlsec.sh line 40'
++ message='oe_test_xmlsec.sh line 40'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_xmlsec.sh line 40'
+Fri Jul 28 02:08:35 2023 - ERROR - oe_test_xmlsec.sh line 40
++ '[' 0 -eq 1 ']'
++ return 0
++ cat sign1-res.xml
++ CHECK_RESULT 0 0 0 'execution failed'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='execution failed'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ LOG_INFO 'End to run test.'
++ message='End to run test.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End to run test.'
+Fri Jul 28 02:08:37 2023 - INFO  - End to run test.
++ CASE_RESULT 0
++ case_re=0
++ test -z 2
++ test 2 -gt 0
++ LOG_ERROR 'failed to execute the case.'
++ message='failed to execute the case.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'failed to execute the case.'
+Fri Jul 28 02:08:38 2023 - ERROR - failed to execute the case.
++ exit 2
++ post_test
++ LOG_INFO 'Start to restore the test environment.'
++ message='Start to restore the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to restore the test environment.'
+Fri Jul 28 02:08:40 2023 - INFO  - Start to restore the test environment.
++ cd /root/mugen/testcases/system-test/system-integration/os-basic/oe_test_xmlsec
++ rm -rf xmlsec1 /usr/include/libxml /usr/include/xmlsec
++ DNF_REMOVE
++ node=1
++ pkg_list=
++ mode=0
++ [[ -z /tmp/tmpsikiue8z ]]
++ '[' 0 -ne 0 ']'
++ '[' 1 == 0 ']'
++ python3 /root/mugen/libs/locallibs/rpm_manage.py remove --node 1 --pkgs '' --tempfile /tmp/tmpsikiue8z
++ '[' 0 -ne 0 ']'
++ LOG_INFO 'End to restore the test environment.'
++ message='End to restore the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End to restore the test environment.'
+Fri Jul 28 02:09:31 2023 - INFO  - End to restore the test environment.

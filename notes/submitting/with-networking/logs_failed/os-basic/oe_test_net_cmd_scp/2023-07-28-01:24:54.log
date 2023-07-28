@@ -1,0 +1,204 @@
++ source /root/mugen/libs/locallibs/common_lib.sh
+++ python3 --version
+++ '[' 0 -eq 0 ']'
+++ source /root/mugen/libs/locallibs/common_lib_python.sh
++ main
+++ type -t post_test
++ '[' -n function ']'
++ trap post_test EXIT INT HUP TERM
++ grep expect
++ rpm -qa
+++ type -t config_params
++ '[' -n '' ']'
+++ type -t pre_test
++ '[' -n function ']'
++ pre_test
++ LOG_INFO 'Start to pre test.'
++ message='Start to pre test.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to pre test.'
+Fri Jul 28 01:25:01 2023 - INFO  - Start to pre test.
+++ mktemp
++ testfile=/tmp/tmp.fRRAKTG8x8
+++ mktemp -d
++ testdir=/tmp/tmp.od3ezdNxNA
++ LOG_INFO 'Start to pre test.'
++ message='Start to pre test.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to pre test.'
+Fri Jul 28 01:25:02 2023 - INFO  - Start to pre test.
+++ type -t run_test
++ '[' -n function ']'
++ run_test
++ LOG_INFO 'Start to run test.'
++ message='Start to run test.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to run test.'
+Fri Jul 28 01:25:04 2023 - INFO  - Start to run test.
++ SSH_SCP /tmp/tmp.fRRAKTG8x8 root@:/tmp ''
++ src=/tmp/tmp.fRRAKTG8x8
++ dest=root@:/tmp
++ remotepasswd=
++ connport=22
++ bash /root/mugen/libs/locallibs/sshscp.sh -p '' -o 22 -s /tmp/tmp.fRRAKTG8x8 -d root@:/tmp
+Fri Jul 28 01:25:05 2023 - WARN  - the connect port using the default configuration
+spawn scp -P 22 -r /tmp/tmp.fRRAKTG8x8 root@:/tmp
+ssh: Could not resolve hostname : Name or service not known
+scp: Connection closed
++ ret=255
++ test 255 -ne 0
++ LOG_ERROR 'Failed in remote SCP operation: 255'
++ message='Failed in remote SCP operation: 255'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'Failed in remote SCP operation: 255'
+Fri Jul 28 01:25:08 2023 - ERROR - Failed in remote SCP operation: 255
++ return 255
++ CHECK_RESULT 255
++ actual_result=255
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 255 ']'
++ '[' 0 -eq 0 ']'
++ test 255x '!=' 0x
++ test -n ''
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_net_cmd_scp.sh line 30'
++ message='oe_test_net_cmd_scp.sh line 30'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_net_cmd_scp.sh line 30'
+Fri Jul 28 01:25:09 2023 - ERROR - oe_test_net_cmd_scp.sh line 30
++ '[' 0 -eq 1 ']'
++ return 0
++ SSH_CMD 'test -f /tmp/tmp.fRRAKTG8x8'
++ cmd='test -f /tmp/tmp.fRRAKTG8x8'
++ remoteip=
++ remotepasswd='openEuler12#$'
++ remoteuser=root
++ timeout=300
++ connport=22
++ bash /root/mugen/libs/locallibs/sshcmd.sh -c 'test -f /tmp/tmp.fRRAKTG8x8' -i '' -u root -p 'openEuler12#$' -t 300 -o 22
+Usage: sshcmd.sh -c "command" -i "remote machinet ip" [-u login_user] [-p login_password] [-o port] [-t timeout]+ ret=1
++ test 1 -ne 0
++ LOG_ERROR 'Failed in remote CMD operation:1'
++ message='Failed in remote CMD operation:1'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'Failed in remote CMD operation:1'
+Fri Jul 28 01:25:11 2023 - ERROR - Failed in remote CMD operation:1
++ return 1
++ CHECK_RESULT 1
++ actual_result=1
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 0 -eq 0 ']'
++ test 1x '!=' 0x
++ test -n ''
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_net_cmd_scp.sh line 32'
++ message='oe_test_net_cmd_scp.sh line 32'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_net_cmd_scp.sh line 32'
+Fri Jul 28 01:25:13 2023 - ERROR - oe_test_net_cmd_scp.sh line 32
++ '[' 0 -eq 1 ']'
++ return 0
++ SSH_SCP /tmp/tmp.od3ezdNxNA root@:/tmp ''
++ src=/tmp/tmp.od3ezdNxNA
++ dest=root@:/tmp
++ remotepasswd=
++ connport=22
++ bash /root/mugen/libs/locallibs/sshscp.sh -p '' -o 22 -s /tmp/tmp.od3ezdNxNA -d root@:/tmp
+Fri Jul 28 01:25:14 2023 - WARN  - the connect port using the default configuration
+spawn scp -P 22 -r /tmp/tmp.od3ezdNxNA root@:/tmp
+ssh: Could not resolve hostname : Name or service not known
+scp: Connection closed
++ ret=255
++ test 255 -ne 0
++ LOG_ERROR 'Failed in remote SCP operation: 255'
++ message='Failed in remote SCP operation: 255'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'Failed in remote SCP operation: 255'
+Fri Jul 28 01:25:16 2023 - ERROR - Failed in remote SCP operation: 255
++ return 255
++ CHECK_RESULT 255
++ actual_result=255
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 255 ']'
++ '[' 0 -eq 0 ']'
++ test 255x '!=' 0x
++ test -n ''
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_net_cmd_scp.sh line 34'
++ message='oe_test_net_cmd_scp.sh line 34'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_net_cmd_scp.sh line 34'
+Fri Jul 28 01:25:18 2023 - ERROR - oe_test_net_cmd_scp.sh line 34
++ '[' 0 -eq 1 ']'
++ return 0
++ SSH_CMD 'test -d /tmp/tmp.od3ezdNxNA'
++ cmd='test -d /tmp/tmp.od3ezdNxNA'
++ remoteip=
++ remotepasswd='openEuler12#$'
++ remoteuser=root
++ timeout=300
++ connport=22
++ bash /root/mugen/libs/locallibs/sshcmd.sh -c 'test -d /tmp/tmp.od3ezdNxNA' -i '' -u root -p 'openEuler12#$' -t 300 -o 22
+Usage: sshcmd.sh -c "command" -i "remote machinet ip" [-u login_user] [-p login_password] [-o port] [-t timeout]+ ret=1
++ test 1 -ne 0
++ LOG_ERROR 'Failed in remote CMD operation:1'
++ message='Failed in remote CMD operation:1'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'Failed in remote CMD operation:1'
+Fri Jul 28 01:25:19 2023 - ERROR - Failed in remote CMD operation:1
++ return 1
++ CHECK_RESULT 1
++ actual_result=1
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 0 -eq 0 ']'
++ test 1x '!=' 0x
++ test -n ''
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_net_cmd_scp.sh line 36'
++ message='oe_test_net_cmd_scp.sh line 36'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_net_cmd_scp.sh line 36'
+Fri Jul 28 01:25:20 2023 - ERROR - oe_test_net_cmd_scp.sh line 36
++ '[' 0 -eq 1 ']'
++ return 0
++ LOG_INFO 'End to run test.'
++ message='End to run test.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End to run test.'
+Fri Jul 28 01:25:22 2023 - INFO  - End to run test.
++ CASE_RESULT 0
++ case_re=0
++ test -z 4
++ test 4 -gt 0
++ LOG_ERROR 'failed to execute the case.'
++ message='failed to execute the case.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'failed to execute the case.'
+Fri Jul 28 01:25:23 2023 - ERROR - failed to execute the case.
++ exit 4
++ post_test
++ LOG_INFO 'Start to restore the test environment.'
++ message='Start to restore the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to restore the test environment.'
+Fri Jul 28 01:25:24 2023 - INFO  - Start to restore the test environment.
++ rm -rf /tmp/tmp.od3ezdNxNA /tmp/tmp.fRRAKTG8x8
++ SSH_CMD 'rm -rf /tmp/tmp.fRRAKTG8x8'
++ cmd='rm -rf /tmp/tmp.fRRAKTG8x8'
++ remoteip=
++ remotepasswd='openEuler12#$'
++ remoteuser=root
++ timeout=300
++ connport=22
++ bash /root/mugen/libs/locallibs/sshcmd.sh -c 'rm -rf /tmp/tmp.fRRAKTG8x8' -i '' -u root -p 'openEuler12#$' -t 300 -o 22
+Usage: sshcmd.sh -c "command" -i "remote machinet ip" [-u login_user] [-p login_password] [-o port] [-t timeout]+ ret=1
++ test 1 -ne 0
++ LOG_ERROR 'Failed in remote CMD operation:1'
++ message='Failed in remote CMD operation:1'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'Failed in remote CMD operation:1'
+Fri Jul 28 01:25:26 2023 - ERROR - Failed in remote CMD operation:1
++ return 1
++ LOG_INFO 'End to restore the test environment.'
++ message='End to restore the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End to restore the test environment.'
+Fri Jul 28 01:25:27 2023 - INFO  - End to restore the test environment.

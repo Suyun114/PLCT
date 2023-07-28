@@ -1,0 +1,130 @@
++ source ../common/net_lib.sh
+++ source /root/mugen/libs/locallibs/common_lib.sh
++++ python3 --version
++++ '[' 0 -eq 0 ']'
++++ source /root/mugen/libs/locallibs/common_lib_python.sh
++ main
+++ type -t post_test
++ '[' -n function ']'
++ trap post_test EXIT INT HUP TERM
++ rpm -qa
++ grep expect
+++ type -t config_params
++ '[' -n function ']'
++ config_params
++ LOG_INFO 'Start loading data!'
++ message='Start loading data!'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start loading data!'
+Thu Jul 27 23:41:44 2023 - INFO  - Start loading data!
++ get_free_eth 1
++ local num_eth=1
++ echo 10.198.101.114
+10.198.101.114
+++ python3 /root/mugen/libs/locallibs/get_test_device.py --node 1 --device nic
+Thu Jul 27 23:42:01 2023 - INFO  - pkgs:(lshw) is already installed
++ NODE1_NIC='eth0 eth1 eth2 eth3'
++ LOCAL_ETH=(${NODE1_NIC[@]/$(ip route | grep ${NODE1_IPV4} | awk '{print$3}')/})
+++ ip route
+++ grep 10.198.101.1
+++ awk '{print$3}'
+../common/net_lib.sh: line 26: ip: command not found
++ '[' 4 -ge 1 ']'
++ local_eth1=eth0
++ LOG_INFO 'Loading data is complete!'
++ message='Loading data is complete!'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Loading data is complete!'
+Thu Jul 27 23:42:16 2023 - INFO  - Loading data is complete!
+++ type -t pre_test
++ '[' -n function ']'
++ pre_test
++ LOG_INFO 'Start to prepare the test environment.'
++ message='Start to prepare the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to prepare the test environment.'
+Thu Jul 27 23:42:18 2023 - INFO  - Start to prepare the test environment.
++ DNF_INSTALL 'chrony ntpstat'
++ pkgs='chrony ntpstat'
++ node=1
++ '[' -z '' ']'
++ tmpfile=
+++ python3 /root/mugen/libs/locallibs/rpm_manage.py install --pkgs 'chrony ntpstat' --node 1 --tempfile ''
++ tmpfile2=/tmp/tmpj_6vrf_o
++ '[' -z '' ']'
++ tmpfile=/tmp/tmpj_6vrf_o
++ systemctl start chronyd
++ LOG_INFO 'End to prepare the test environment.'
++ message='End to prepare the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End to prepare the test environment.'
+Thu Jul 27 23:43:38 2023 - INFO  - End to prepare the test environment.
+++ type -t run_test
++ '[' -n function ']'
++ run_test
++ LOG_INFO 'Start to run test.'
++ message='Start to run test.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to run test.'
+Thu Jul 27 23:43:39 2023 - INFO  - Start to run test.
++ systemctl status chronyd
++ grep running
+     Active: active (running) since Thu 2023-07-27 23:43:37 CST; 3s ago
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
+++ ethtool -T eth0
+++ grep -iE 'Capabilities|PTP|Hardware'
+++ wc -l
+oe_test_ethtool.sh: line 39: ethtool: command not found
++ CHECK_RESULT 0 4
++ actual_result=0
++ expect_result=4
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 4x
++ test -n ''
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_ethtool.sh line 39'
++ message='oe_test_ethtool.sh line 39'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_ethtool.sh line 39'
+Thu Jul 27 23:43:42 2023 - ERROR - oe_test_ethtool.sh line 39
++ '[' 0 -eq 1 ']'
++ return 0
++ LOG_INFO 'End to run test.'
++ message='End to run test.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End to run test.'
+Thu Jul 27 23:43:43 2023 - INFO  - End to run test.
++ CASE_RESULT 0
++ case_re=0
++ test -z 1
++ test 1 -gt 0
++ LOG_ERROR 'failed to execute the case.'
++ message='failed to execute the case.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'failed to execute the case.'
+Thu Jul 27 23:43:44 2023 - ERROR - failed to execute the case.
++ exit 1
++ post_test
++ LOG_INFO 'Start to restore the test environment.'
++ message='Start to restore the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to restore the test environment.'
+Thu Jul 27 23:45:40 2023 - INFO  - Start to restore the test environment.
++ systemctl stop chronyd
++ DNF_REMOVE
++ node=1
++ pkg_list=
++ mode=0
++ [[ -z /tmp/tmpj_6vrf_o ]]
++ '[' 0 -ne 0 ']'
++ '[' 1 == 0 ']'
++ python3 /root/mugen/libs/locallibs/rpm_manage.py remove --node 1 --pkgs '' --tempfile /tmp/tmpj_6vrf_o
++ '[' 0 -ne 0 ']'
++ LOG_INFO 'End to restore the test environment.'
++ message='End to restore the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End to restore the test environment.'
+Thu Jul 27 23:46:12 2023 - INFO  - End to restore the test environment.

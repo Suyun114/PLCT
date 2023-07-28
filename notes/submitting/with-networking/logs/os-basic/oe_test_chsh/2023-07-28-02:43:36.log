@@ -1,0 +1,138 @@
++ source /root/mugen/libs/locallibs/common_lib.sh
+++ python3 --version
+++ '[' 0 -eq 0 ']'
+++ source /root/mugen/libs/locallibs/common_lib_python.sh
++ main
+++ type -t post_test
++ '[' -n function ']'
++ trap post_test EXIT INT HUP TERM
++ rpm -qa
++ grep expect
+++ type -t config_params
++ '[' -n '' ']'
+++ type -t pre_test
++ '[' -n function ']'
++ pre_test
++ LOG_INFO 'Start to prepare the test environment.'
++ message='Start to prepare the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to prepare the test environment.'
+Fri Jul 28 02:43:42 2023 - INFO  - Start to prepare the test environment.
++ DNF_INSTALL util-linux-user
++ pkgs=util-linux-user
++ node=1
++ '[' -z '' ']'
++ tmpfile=
+++ python3 /root/mugen/libs/locallibs/rpm_manage.py install --pkgs util-linux-user --node 1 --tempfile ''
++ tmpfile2=/tmp/tmptci5vv37
++ '[' -z '' ']'
++ tmpfile=/tmp/tmptci5vv37
++ LOG_INFO 'End to prepare the test environment.'
++ message='End to prepare the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End to prepare the test environment.'
+Fri Jul 28 02:44:49 2023 - INFO  - End to prepare the test environment.
+++ type -t run_test
++ '[' -n function ']'
++ run_test
++ LOG_INFO 'Start to run test.'
++ message='Start to run test.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to run test.'
+Fri Jul 28 02:44:50 2023 - INFO  - Start to run test.
++ chsh -h
++ grep 用法
++ CHECK_RESULT 1 0 0 'Failed to check the display of help information'
++ actual_result=1
++ expect_result=0
++ mode=0
++ error_log='Failed to check the display of help information'
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 0 -eq 0 ']'
++ test 1x '!=' 0x
++ test -n 'Failed to check the display of help information'
++ LOG_ERROR 'Failed to check the display of help information'
++ message='Failed to check the display of help information'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'Failed to check the display of help information'
+Fri Jul 28 02:44:52 2023 - ERROR - Failed to check the display of help information
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_chsh.sh line 31'
++ message='oe_test_chsh.sh line 31'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_chsh.sh line 31'
+Fri Jul 28 02:44:53 2023 - ERROR - oe_test_chsh.sh line 31
++ '[' 0 -eq 1 ']'
++ return 0
++ chsh -l
++ grep bin
+/bin/sh
+/bin/bash
+/usr/bin/sh
+/usr/bin/bash
+/usr/bin/tmux
+/bin/tmux
++ CHECK_RESULT 0 0 0 'Failed to check shell list'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='Failed to check shell list'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ chsh -s /bin/zsh
+chsh: "/bin/zsh" does not exist
+Changing shell for root.
++ CHECK_RESULT 1 0 0 'Shell change failed'
++ actual_result=1
++ expect_result=0
++ mode=0
++ error_log='Shell change failed'
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 0 -eq 0 ']'
++ test 1x '!=' 0x
++ test -n 'Shell change failed'
++ LOG_ERROR 'Shell change failed'
++ message='Shell change failed'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'Shell change failed'
+Fri Jul 28 02:44:55 2023 - ERROR - Shell change failed
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_chsh.sh line 35'
++ message='oe_test_chsh.sh line 35'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_chsh.sh line 35'
+Fri Jul 28 02:44:56 2023 - ERROR - oe_test_chsh.sh line 35
++ '[' 0 -eq 1 ']'
++ return 0
++ LOG_INFO 'End to run test.'
++ message='End to run test.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End to run test.'
+Fri Jul 28 02:44:58 2023 - INFO  - End to run test.
++ CASE_RESULT 0
++ case_re=0
++ test -z 2
++ test 2 -gt 0
++ LOG_ERROR 'failed to execute the case.'
++ message='failed to execute the case.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'failed to execute the case.'
+Fri Jul 28 02:44:59 2023 - ERROR - failed to execute the case.
++ exit 2
++ post_test
++ LOG_INFO 'start environment cleanup.'
++ message='start environment cleanup.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'start environment cleanup.'
+Fri Jul 28 02:45:00 2023 - INFO  - start environment cleanup.
++ chsh -s /bin/bash
+chsh: Shell not changed.
+Changing shell for root.
++ DNF_REMOVE
++ node=1
++ pkg_list=
++ mode=0
++ [[ -z /tmp/tmptci5vv37 ]]
++ '[' 0 -ne 0 ']'
++ '[' 1 == 0 ']'
++ python3 /root/mugen/libs/locallibs/rpm_manage.py remove --node 1 --pkgs '' --tempfile /tmp/tmptci5vv37
++ '[' 0 -ne 0 ']'
++ LOG_INFO 'Finish environment cleanup!'
++ message='Finish environment cleanup!'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Finish environment cleanup!'
+Fri Jul 28 02:45:19 2023 - INFO  - Finish environment cleanup!

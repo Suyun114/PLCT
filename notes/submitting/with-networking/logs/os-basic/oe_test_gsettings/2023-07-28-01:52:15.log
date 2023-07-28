@@ -1,0 +1,161 @@
++ source /root/mugen/libs/locallibs/common_lib.sh
+++ python3 --version
+++ '[' 0 -eq 0 ']'
+++ source /root/mugen/libs/locallibs/common_lib_python.sh
++ main
+++ type -t post_test
++ '[' -n function ']'
++ trap post_test EXIT INT HUP TERM
++ rpm -qa
++ grep expect
+++ type -t config_params
++ '[' -n '' ']'
+++ type -t pre_test
++ '[' -n function ']'
++ pre_test
++ LOG_INFO 'Start environmental preparation.'
++ message='Start environmental preparation.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start environmental preparation.'
+Fri Jul 28 01:52:21 2023 - INFO  - Start environmental preparation.
++ LOG_INFO 'End of environmental preparation!'
++ message='End of environmental preparation!'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End of environmental preparation!'
+Fri Jul 28 01:52:22 2023 - INFO  - End of environmental preparation!
+++ type -t run_test
++ '[' -n function ']'
++ run_test
++ LOG_INFO 'Start to run test.'
++ message='Start to run test.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to run test.'
+Fri Jul 28 01:52:24 2023 - INFO  - Start to run test.
++ gsettings list-schemas
+org.fedoraproject.FirewallConfig
+org.gnome.crypto.pgp
+org.gtk.Settings.ColorChooser
+org.gtk.Settings.Debug
+org.gtk.Settings.EmojiChooser
+org.gtk.Settings.FileChooser
+org.gtk.exampleapp
++ CHECK_RESULT 0 0 0 'gsettings list-schemas error'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='gsettings list-schemas error'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ gsettings list-relocatable-schemas
++ CHECK_RESULT 0 0 0 'gsettings list-relocatable-schemas error'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='gsettings list-relocatable-schemas error'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ gsettings list-recursively
+org.fedoraproject.FirewallConfig show-active-bindings true
+org.fedoraproject.FirewallConfig show-direct false
+org.fedoraproject.FirewallConfig show-helpers false
+org.fedoraproject.FirewallConfig show-icmp-types false
+org.fedoraproject.FirewallConfig show-ipsets true
+org.fedoraproject.FirewallConfig show-lockdown-whitelist false
+org.gnome.crypto.pgp ascii-armor true
+org.gnome.crypto.pgp default-key ''
+org.gnome.crypto.pgp encrypt-to-self true
+org.gnome.crypto.pgp keyservers ['ldap://keyserver.pgp.com', 'hkps://keys.openpgp.org']
+org.gnome.crypto.pgp last-signer ''
+org.gnome.crypto.pgp sort-recipients-by 'name'
+org.gtk.Settings.ColorChooser custom-colors @a(dddd) []
+org.gtk.Settings.ColorChooser selected-color (false, 1.0, 1.0, 1.0, 1.0)
+org.gtk.Settings.Debug enable-inspector-keybinding false
+org.gtk.Settings.Debug inspector-warning true
+org.gtk.Settings.EmojiChooser recent-emoji @a((auss)u) []
+org.gtk.Settings.FileChooser clock-format '24h'
+org.gtk.Settings.FileChooser date-format 'regular'
+org.gtk.Settings.FileChooser expand-folders false
+org.gtk.Settings.FileChooser last-folder-uri ''
+org.gtk.Settings.FileChooser location-mode 'path-bar'
+org.gtk.Settings.FileChooser show-hidden false
+org.gtk.Settings.FileChooser show-size-column true
+org.gtk.Settings.FileChooser show-type-column true
+org.gtk.Settings.FileChooser sidebar-width 148
+org.gtk.Settings.FileChooser sort-column 'name'
+org.gtk.Settings.FileChooser sort-directories-first false
+org.gtk.Settings.FileChooser sort-order 'ascending'
+org.gtk.Settings.FileChooser startup-mode 'recent'
+org.gtk.Settings.FileChooser type-format 'category'
+org.gtk.Settings.FileChooser window-position (-1, -1)
+org.gtk.Settings.FileChooser window-size (-1, -1)
+org.gtk.exampleapp font 'Monospace 12'
+org.gtk.exampleapp show-words false
+org.gtk.exampleapp transition 'none'
++ CHECK_RESULT 0 0 0 'gsettings list-recursively error'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='gsettings list-recursively error'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
+++ gsettings list-schemas
+++ tail -n 1
++ t_schema=org.gtk.exampleapp
++ gsettings list-keys org.gtk.exampleapp
+font
+show-words
+transition
++ CHECK_RESULT 0 0 0 'gsettings list-keys error'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='gsettings list-keys error'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
+++ gsettings list-keys org.gtk.exampleapp
+++ tail -n 1
++ t_key=transition
++ gsettings get org.gtk.exampleapp transition
+'none'
++ CHECK_RESULT 0 0 0 'gsettings get key value error'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='gsettings get key value error'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ LOG_INFO 'End to run test.'
++ message='End to run test.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End to run test.'
+Fri Jul 28 01:52:27 2023 - INFO  - End to run test.
++ CASE_RESULT 0
++ case_re=0
++ test -z ''
++ test 0 -eq 0
++ LOG_INFO 'succeed to execute the case.'
++ message='succeed to execute the case.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'succeed to execute the case.'
+Fri Jul 28 01:52:28 2023 - INFO  - succeed to execute the case.
++ exec_result=
++ exit 0
++ post_test
++ LOG_INFO 'start environment cleanup.'
++ message='start environment cleanup.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'start environment cleanup.'
+Fri Jul 28 01:52:30 2023 - INFO  - start environment cleanup.
++ LOG_INFO 'Finish environment cleanup!'
++ message='Finish environment cleanup!'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Finish environment cleanup!'
+Fri Jul 28 01:52:32 2023 - INFO  - Finish environment cleanup!

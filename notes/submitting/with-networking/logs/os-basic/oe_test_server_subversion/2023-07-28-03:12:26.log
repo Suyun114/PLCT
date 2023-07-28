@@ -1,0 +1,148 @@
++ source /root/mugen/libs/locallibs/common_lib.sh
+++ python3 --version
+++ '[' 0 -eq 0 ']'
+++ source /root/mugen/libs/locallibs/common_lib_python.sh
++ main
+++ type -t post_test
++ '[' -n function ']'
++ trap post_test EXIT INT HUP TERM
++ rpm -qa
++ grep expect
+++ type -t config_params
++ '[' -n '' ']'
+++ type -t pre_test
++ '[' -n function ']'
++ pre_test
++ LOG_INFO 'Start environment preparation.'
++ message='Start environment preparation.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start environment preparation.'
+Fri Jul 28 03:12:33 2023 - INFO  - Start environment preparation.
++ DNF_INSTALL subversion
++ pkgs=subversion
++ node=1
++ '[' -z '' ']'
++ tmpfile=
+++ python3 /root/mugen/libs/locallibs/rpm_manage.py install --pkgs subversion --node 1 --tempfile ''
++ tmpfile2=/tmp/tmpo5q7acfu
++ '[' -z '' ']'
++ tmpfile=/tmp/tmpo5q7acfu
++ /usr/bin/svnserve -d
++ mkdir -p /var/svn/repos/project
++ LOG_INFO 'End of environmental preparation!'
++ message='End of environmental preparation!'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End of environmental preparation!'
+Fri Jul 28 03:14:18 2023 - INFO  - End of environmental preparation!
+++ type -t run_test
++ '[' -n function ']'
++ run_test
++ LOG_INFO 'Start testing...'
++ message='Start testing...'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start testing...'
+Fri Jul 28 03:14:19 2023 - INFO  - Start testing...
++ svnadmin create /var/svn/repos/project
++ svn mkdir file:///var/svn/repos/project/trunk -m create
+Committing transaction...
+Committed revision 1.
++ CHECK_RESULT 0 0 0 'Failed to create repos'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='Failed to create repos'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ svn mkdir file:///var/svn/repos/project/branches -m create
+Committing transaction...
+Committed revision 2.
++ CHECK_RESULT 0 0 0 'Failed to create branch'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='Failed to create branch'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ svn mkdir file:///var/svn/repos/project/tags -m create
+Committing transaction...
+Committed revision 3.
++ CHECK_RESULT 0 0 0 'Failed to create label'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='Failed to create label'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ mkdir -p /home/project
++ echo test
++ svn import /home/project file:///var/svn/repos/project/trunk -m 'initial import'
+Adding         /home/project/test.txt
+Committing transaction...
+Committed revision 4.
++ CHECK_RESULT 0 0 0 'Import file failed'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='Import file failed'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ svn list file:///var/svn/repos/project/trunk
++ grep test.txt
+test.txt
++ CHECK_RESULT 0 0 0 'Can'\''t find this file'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='Can'\''t find this file'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ LOG_INFO 'Finish test!'
++ message='Finish test!'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Finish test!'
+Fri Jul 28 03:14:24 2023 - INFO  - Finish test!
++ CASE_RESULT 0
++ case_re=0
++ test -z ''
++ test 0 -eq 0
++ LOG_INFO 'succeed to execute the case.'
++ message='succeed to execute the case.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'succeed to execute the case.'
+Fri Jul 28 03:14:26 2023 - INFO  - succeed to execute the case.
++ exec_result=
++ exit 0
++ post_test
++ LOG_INFO 'start environment cleanup.'
++ message='start environment cleanup.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'start environment cleanup.'
+Fri Jul 28 03:14:27 2023 - INFO  - start environment cleanup.
++ svn delete file:///var/svn/repos/project/trunk -m test.txt --force-log
+Committing transaction...
+Committed revision 5.
++ rm -rf /home/project /var/svn/repos/project
++ pgrep svnserve
++ xargs kill -9
++ DNF_REMOVE
++ node=1
++ pkg_list=
++ mode=0
++ [[ -z /tmp/tmpo5q7acfu ]]
++ '[' 0 -ne 0 ']'
++ '[' 1 == 0 ']'
++ python3 /root/mugen/libs/locallibs/rpm_manage.py remove --node 1 --pkgs '' --tempfile /tmp/tmpo5q7acfu
++ '[' 0 -ne 0 ']'
++ LOG_INFO 'Finish environment cleanup!'
++ message='Finish environment cleanup!'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Finish environment cleanup!'
+Fri Jul 28 03:15:07 2023 - INFO  - Finish environment cleanup!

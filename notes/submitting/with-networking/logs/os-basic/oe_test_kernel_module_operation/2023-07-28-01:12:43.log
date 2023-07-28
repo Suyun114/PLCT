@@ -1,0 +1,116 @@
++ source /root/mugen/libs/locallibs/common_lib.sh
+++ python3 --version
+++ '[' 0 -eq 0 ']'
+++ source /root/mugen/libs/locallibs/common_lib_python.sh
++ main
+++ type -t post_test
++ '[' -n function ']'
++ trap post_test EXIT INT HUP TERM
++ rpm -qa
++ grep expect
+++ type -t config_params
++ '[' -n '' ']'
+++ type -t pre_test
++ '[' -n '' ']'
+++ type -t run_test
++ '[' -n function ']'
++ run_test
++ LOG_INFO 'Start executing testcase.'
++ message='Start executing testcase.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start executing testcase.'
+Fri Jul 28 01:12:50 2023 - INFO  - Start executing testcase.
++ modprobe -r raid0
+modprobe: FATAL: Module raid0 not found.
++ CHECK_RESULT 1
++ actual_result=1
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 0 -eq 0 ']'
++ test 1x '!=' 0x
++ test -n ''
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_kernel_module_operation.sh line 24'
++ message='oe_test_kernel_module_operation.sh line 24'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_kernel_module_operation.sh line 24'
+Fri Jul 28 01:12:51 2023 - ERROR - oe_test_kernel_module_operation.sh line 24
++ '[' 0 -eq 1 ']'
++ return 0
++ modprobe raid0
+modprobe: FATAL: Module raid0 not found in directory /lib/modules/6.1.8-3.oe2303.riscv64
++ CHECK_RESULT 1
++ actual_result=1
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 0 -eq 0 ']'
++ test 1x '!=' 0x
++ test -n ''
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_kernel_module_operation.sh line 26'
++ message='oe_test_kernel_module_operation.sh line 26'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_kernel_module_operation.sh line 26'
+Fri Jul 28 01:12:53 2023 - ERROR - oe_test_kernel_module_operation.sh line 26
++ '[' 0 -eq 1 ']'
++ return 0
++ lsmod
++ grep raid0
++ CHECK_RESULT 1
++ actual_result=1
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 0 -eq 0 ']'
++ test 1x '!=' 0x
++ test -n ''
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_kernel_module_operation.sh line 28'
++ message='oe_test_kernel_module_operation.sh line 28'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_kernel_module_operation.sh line 28'
+Fri Jul 28 01:12:54 2023 - ERROR - oe_test_kernel_module_operation.sh line 28
++ '[' 0 -eq 1 ']'
++ return 0
++ modprobe -r raid0
+modprobe: FATAL: Module raid0 not found.
++ grep raid0
++ lsmod
++ CHECK_RESULT 1 1
++ actual_result=1
++ expect_result=1
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 0 -eq 0 ']'
++ test 1x '!=' 1x
++ return 0
++ LOG_INFO 'End of testcase execution.'
++ message='End of testcase execution.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End of testcase execution.'
+Fri Jul 28 01:12:56 2023 - INFO  - End of testcase execution.
++ CASE_RESULT 0
++ case_re=0
++ test -z 3
++ test 3 -gt 0
++ LOG_ERROR 'failed to execute the case.'
++ message='failed to execute the case.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'failed to execute the case.'
+Fri Jul 28 01:12:57 2023 - ERROR - failed to execute the case.
++ exit 3
++ post_test
++ LOG_INFO 'start environment cleanup.'
++ message='start environment cleanup.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'start environment cleanup.'
+Fri Jul 28 01:12:58 2023 - INFO  - start environment cleanup.
++ modprobe raid0
+modprobe: FATAL: Module raid0 not found in directory /lib/modules/6.1.8-3.oe2303.riscv64
++ LOG_INFO 'Finish environment cleanup.'
++ message='Finish environment cleanup.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Finish environment cleanup.'
+Fri Jul 28 01:13:00 2023 - INFO  - Finish environment cleanup.

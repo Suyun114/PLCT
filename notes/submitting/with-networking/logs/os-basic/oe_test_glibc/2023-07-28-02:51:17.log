@@ -1,0 +1,106 @@
++ source /root/mugen/libs/locallibs/common_lib.sh
+++ python3 --version
+++ '[' 0 -eq 0 ']'
+++ source /root/mugen/libs/locallibs/common_lib_python.sh
++ main
+++ type -t post_test
++ '[' -n function ']'
++ trap post_test EXIT INT HUP TERM
++ rpm -qa
++ grep expect
+++ type -t config_params
++ '[' -n '' ']'
+++ type -t pre_test
++ '[' -n function ']'
++ pre_test
++ LOG_INFO 'Start to prepare the test environment.'
++ message='Start to prepare the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to prepare the test environment.'
+Fri Jul 28 02:51:24 2023 - INFO  - Start to prepare the test environment.
+++ pwd
++ pwd=/root/mugen/testcases/system-test/system-integration/os-basic/oe_test_glibc
++ mkdir glibc_test
++ cd glibc_test
++ LOG_INFO 'End to prepare the test environment.'
++ message='End to prepare the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End to prepare the test environment.'
+Fri Jul 28 02:51:25 2023 - INFO  - End to prepare the test environment.
+++ type -t run_test
++ '[' -n function ']'
++ run_test
++ LOG_INFO 'Start to run test.'
++ message='Start to run test.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to run test.'
+Fri Jul 28 02:51:27 2023 - INFO  - Start to run test.
+++ rpm -qa glibc
++ version=glibc-2.36-13.oe2303.riscv64
++ CHECK_RESULT 0 0 0 'Check glibc version'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='Check glibc version'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ cat
++ CHECK_RESULT 0 0 0 'Fail to create glibc-version.c'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='Fail to create glibc-version.c'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ gcc glibc-version.c
++ CHECK_RESULT 0 0 0 'Error,fail to create a.out'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='Error,fail to create a.out'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ ./a.out
++ grep 2.36
+GNU lib version:2.36
++ CHECK_RESULT 0 0 0 'Error,fail to run a.out'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='Error,fail to run a.out'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ LOG_INFO 'End to run test.'
++ message='End to run test.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End to run test.'
+Fri Jul 28 02:51:33 2023 - INFO  - End to run test.
++ CASE_RESULT 0
++ case_re=0
++ test -z ''
++ test 0 -eq 0
++ LOG_INFO 'succeed to execute the case.'
++ message='succeed to execute the case.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'succeed to execute the case.'
+Fri Jul 28 02:51:34 2023 - INFO  - succeed to execute the case.
++ exec_result=
++ exit 0
++ post_test
++ LOG_INFO 'Start to restore the test environment.'
++ message='Start to restore the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to restore the test environment.'
+Fri Jul 28 02:51:36 2023 - INFO  - Start to restore the test environment.
++ cd /root/mugen/testcases/system-test/system-integration/os-basic/oe_test_glibc
++ rm -rf glibc_test/
++ LOG_INFO 'End to restore the test environment.'
++ message='End to restore the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End to restore the test environment.'
+Fri Jul 28 02:51:37 2023 - INFO  - End to restore the test environment.

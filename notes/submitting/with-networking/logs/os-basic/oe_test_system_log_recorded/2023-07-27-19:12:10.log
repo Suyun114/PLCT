@@ -1,0 +1,112 @@
++ source /root/mugen/libs/locallibs/common_lib.sh
+++ python3 --version
+++ '[' 0 -eq 0 ']'
+++ source /root/mugen/libs/locallibs/common_lib_python.sh
++ main
+++ type -t post_test
++ '[' -n function ']'
++ trap post_test EXIT INT HUP TERM
++ rpm -qa
++ grep expect
+++ type -t config_params
++ '[' -n '' ']'
+++ type -t pre_test
++ '[' -n '' ']'
+++ type -t run_test
++ '[' -n function ']'
++ run_test
++ LOG_INFO 'Start executing testcase.'
++ message='Start executing testcase.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start executing testcase.'
+Thu Jul 27 19:12:16 2023 - INFO  - Start executing testcase.
++ grep Storage /etc/systemd/journald.conf
++ grep -E 'Storage=auto|Storage=persistent'
+#Storage=auto
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
+++ ls /run/log/journal/
++ folder=
++ cp -r /run/log/journal/ /run/log/journal/bak
+cp: cannot copy a directory, '/run/log/journal/', into itself, '/run/log/journal/bak'
++ rm -rf /run/log/journal/
++ systemctl restart systemd-journald.service
++ '[' '!' -d /run/log/journal/ ']'
++ (( exec_result++ ))
++ cp -r /run/log/journal/bak /run/log/journal/
+cp: cannot stat '/run/log/journal/bak': No such file or directory
+++ ls -la /run/log/journal/
+++ grep journal
+++ grep '^-'
+++ wc -l
+ls: cannot access '/run/log/journal/': No such file or directory
++ CHECK_RESULT 0 1
++ actual_result=0
++ expect_result=1
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 1x
++ test -n ''
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_system_log_recorded.sh line 33'
++ message='oe_test_system_log_recorded.sh line 33'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_system_log_recorded.sh line 33'
+Thu Jul 27 19:12:20 2023 - ERROR - oe_test_system_log_recorded.sh line 33
++ '[' 0 -eq 1 ']'
++ return 0
++ sudo journalctl --file /run/log/journal//system.journal
+Failed to open files: No such file or directory
+++ ls -l systemlog1
+++ awk '{print $5}'
++ logsize=0
++ test 0 -gt 0
++ CHECK_RESULT 1
++ actual_result=1
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 0 -eq 0 ']'
++ test 1x '!=' 0x
++ test -n ''
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_system_log_recorded.sh line 37'
++ message='oe_test_system_log_recorded.sh line 37'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_system_log_recorded.sh line 37'
+Thu Jul 27 19:12:22 2023 - ERROR - oe_test_system_log_recorded.sh line 37
++ '[' 0 -eq 1 ']'
++ return 0
++ LOG_INFO 'End of testcase execution.'
++ message='End of testcase execution.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End of testcase execution.'
+Thu Jul 27 19:12:23 2023 - INFO  - End of testcase execution.
++ CASE_RESULT 0
++ case_re=0
++ test -z 3
++ test 3 -gt 0
++ LOG_ERROR 'failed to execute the case.'
++ message='failed to execute the case.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'failed to execute the case.'
+Thu Jul 27 19:12:25 2023 - ERROR - failed to execute the case.
++ exit 3
++ post_test
++ LOG_INFO 'start environment cleanup.'
++ message='start environment cleanup.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'start environment cleanup.'
+Thu Jul 27 19:12:26 2023 - INFO  - start environment cleanup.
++ rm -rf /run/log/journal/bak systemlog1
++ LOG_INFO 'Finish environment cleanup.'
++ message='Finish environment cleanup.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Finish environment cleanup.'
+Thu Jul 27 19:12:27 2023 - INFO  - Finish environment cleanup.

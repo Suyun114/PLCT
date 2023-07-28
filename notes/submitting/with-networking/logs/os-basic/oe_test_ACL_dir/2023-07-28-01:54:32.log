@@ -1,0 +1,98 @@
++ source /root/mugen/libs/locallibs/common_lib.sh
+++ python3 --version
+++ '[' 0 -eq 0 ']'
+++ source /root/mugen/libs/locallibs/common_lib_python.sh
++ main
+++ type -t post_test
++ '[' -n function ']'
++ trap post_test EXIT INT HUP TERM
++ rpm -qa
++ grep expect
+++ type -t config_params
++ '[' -n '' ']'
+++ type -t pre_test
++ '[' -n function ']'
++ pre_test
++ LOG_INFO 'Start to prepare the test environment.'
++ message='Start to prepare the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to prepare the test environment.'
+Fri Jul 28 01:54:39 2023 - INFO  - Start to prepare the test environment.
++ useradd ace
++ useradd uos1
++ echo 'ace:deepin12#$'
++ chpasswd
++ echo 'uos1:deepin12#$'
++ chpasswd
++ chmod 755 /home/uos1
++ LOG_INFO 'End to prepare the test environment.'
++ message='End to prepare the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End to prepare the test environment.'
+Fri Jul 28 01:54:43 2023 - INFO  - End to prepare the test environment.
+++ type -t run_test
++ '[' -n function ']'
++ run_test
++ LOG_INFO 'start to run test.'
++ message='start to run test.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'start to run test.'
+Fri Jul 28 01:54:44 2023 - INFO  - start to run test.
++ su - uos1 -c 'mkdir /home/uos1/test115216'
++ su - uos1 -c 'chmod 000 /home/uos1/test115216'
++ su - uos1 -c 'cd /home/uos1/test115216'
+-bash: line 1: cd: /home/uos1/test115216: Permission denied
++ CHECK_RESULT 1 0 1 'uos can not access dir test115216，please modify'
++ actual_result=1
++ expect_result=0
++ mode=1
++ error_log='uos can not access dir test115216，please modify'
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 1 -eq 0 ']'
++ test 1x == 0x
++ return 0
++ su - uos1 -c 'setfacl -m u:ace:--x /home/uos1/test115216'
++ CHECK_RESULT 0 0 0 'setfacl set fail'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='setfacl set fail'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ su - ace -c 'cd /home/uos1/test115216'
++ CHECK_RESULT 0 0 0 'ace don'\''t access test115216'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='ace don'\''t access test115216'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ LOG_INFO 'End to run test.'
++ message='End to run test.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End to run test.'
+Fri Jul 28 01:55:07 2023 - INFO  - End to run test.
++ CASE_RESULT 0
++ case_re=0
++ test -z ''
++ test 0 -eq 0
++ LOG_INFO 'succeed to execute the case.'
++ message='succeed to execute the case.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'succeed to execute the case.'
+Fri Jul 28 01:55:08 2023 - INFO  - succeed to execute the case.
++ exec_result=
++ exit 0
++ post_test
++ LOG_INFO 'start environment cleanup.'
++ message='start environment cleanup.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'start environment cleanup.'
+Fri Jul 28 01:55:09 2023 - INFO  - start environment cleanup.
++ userdel -rf ace
++ userdel -rf uos1
++ LOG_INFO 'Finish environment cleanup!'
++ message='Finish environment cleanup!'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Finish environment cleanup!'
+Fri Jul 28 01:55:12 2023 - INFO  - Finish environment cleanup!

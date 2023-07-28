@@ -1,0 +1,213 @@
++ source /root/mugen/libs/locallibs/common_lib.sh
+++ python3 --version
+++ '[' 0 -eq 0 ']'
+++ source /root/mugen/libs/locallibs/common_lib_python.sh
++ main
+++ type -t post_test
++ '[' -n function ']'
++ trap post_test EXIT INT HUP TERM
++ rpm -qa
++ grep expect
+++ type -t config_params
++ '[' -n '' ']'
+++ type -t pre_test
++ '[' -n function ']'
++ pre_test
++ LOG_INFO 'Start to prepare the test environment.'
++ message='Start to prepare the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to prepare the test environment.'
+Thu Jul 27 16:59:07 2023 - INFO  - Start to prepare the test environment.
++ SSH_CMD '
+    sed -i '\''s/#Port 22/Port 50000/g'\'' /etc/ssh/sshd_config
+    systemctl restart sshd
+    systemctl stop firewalld
+    ' '' '' ''
++ cmd='
+    sed -i '\''s/#Port 22/Port 50000/g'\'' /etc/ssh/sshd_config
+    systemctl restart sshd
+    systemctl stop firewalld
+    '
++ remoteip=
++ remotepasswd=
++ remoteuser=
++ timeout=300
++ connport=22
++ bash /root/mugen/libs/locallibs/sshcmd.sh -c '
+    sed -i '\''s/#Port 22/Port 50000/g'\'' /etc/ssh/sshd_config
+    systemctl restart sshd
+    systemctl stop firewalld
+    ' -i '' -u '' -p '' -t 300 -o 22
+Usage: sshcmd.sh -c "command" -i "remote machinet ip" [-u login_user] [-p login_password] [-o port] [-t timeout]+ ret=1
++ test 1 -ne 0
++ LOG_ERROR 'Failed in remote CMD operation:1'
++ message='Failed in remote CMD operation:1'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'Failed in remote CMD operation:1'
+Thu Jul 27 16:59:08 2023 - ERROR - Failed in remote CMD operation:1
++ return 1
++ LOG_INFO 'End to prepare the test environment.'
++ message='End to prepare the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End to prepare the test environment.'
+Thu Jul 27 16:59:09 2023 - INFO  - End to prepare the test environment.
+++ type -t run_test
++ '[' -n function ']'
++ run_test
++ LOG_INFO 'Start to run test.'
++ message='Start to run test.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to run test.'
+Thu Jul 27 16:59:11 2023 - INFO  - Start to run test.
++ expect
+spawn scp -P 50000 @:/etc/openEuler-latest /tmp/openEuler-latest
+ssh: Could not resolve hostname : Name or service not known
+scp: Connection closed
+expect: spawn id exp3 not open
+    while executing
+"expect {
+            "password" {
+                send "\r"
+            }
+        }"
++ CHECK_RESULT 1
++ actual_result=1
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 0 -eq 0 ']'
++ test 1x '!=' 0x
++ test -n ''
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_openssh_scp_P.sh line 46'
++ message='oe_test_openssh_scp_P.sh line 46'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_openssh_scp_P.sh line 46'
+Thu Jul 27 16:59:13 2023 - ERROR - oe_test_openssh_scp_P.sh line 46
++ '[' 0 -eq 1 ']'
++ return 0
++ grep openEuler /tmp/openEuler-latest
+grep: /tmp/openEuler-latest: No such file or directory
++ CHECK_RESULT 2
++ actual_result=2
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 2 ']'
++ '[' 0 -eq 0 ']'
++ test 2x '!=' 0x
++ test -n ''
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_openssh_scp_P.sh line 48'
++ message='oe_test_openssh_scp_P.sh line 48'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_openssh_scp_P.sh line 48'
+Thu Jul 27 16:59:15 2023 - ERROR - oe_test_openssh_scp_P.sh line 48
++ '[' 0 -eq 1 ']'
++ return 0
++ expect
+spawn scp -P 50000 /etc/openEuler-latest @:/tmp/openEuler-latest
+ssh: Could not resolve hostname : Name or service not known
+scp: Connection closed
+expect: spawn id exp3 not open
+    while executing
+"expect {
+            "password" {
+                send "\r"
+            }
+        }"
++ CHECK_RESULT 1
++ actual_result=1
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 0 -eq 0 ']'
++ test 1x '!=' 0x
++ test -n ''
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_openssh_scp_P.sh line 63'
++ message='oe_test_openssh_scp_P.sh line 63'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_openssh_scp_P.sh line 63'
+Thu Jul 27 16:59:17 2023 - ERROR - oe_test_openssh_scp_P.sh line 63
++ '[' 0 -eq 1 ']'
++ return 0
++ SSH_CMD 'grep openEuler /tmp/openEuler-latest' '' '' '' 15 50000
++ cmd='grep openEuler /tmp/openEuler-latest'
++ remoteip=
++ remotepasswd=
++ remoteuser=
++ timeout=15
++ connport=50000
++ bash /root/mugen/libs/locallibs/sshcmd.sh -c 'grep openEuler /tmp/openEuler-latest' -i '' -u '' -p '' -t 15 -o 50000
+Usage: sshcmd.sh -c "command" -i "remote machinet ip" [-u login_user] [-p login_password] [-o port] [-t timeout]+ ret=1
++ test 1 -ne 0
++ LOG_ERROR 'Failed in remote CMD operation:1'
++ message='Failed in remote CMD operation:1'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'Failed in remote CMD operation:1'
+Thu Jul 27 16:59:19 2023 - ERROR - Failed in remote CMD operation:1
++ return 1
++ CHECK_RESULT 1
++ actual_result=1
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 0 -eq 0 ']'
++ test 1x '!=' 0x
++ test -n ''
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_openssh_scp_P.sh line 65'
++ message='oe_test_openssh_scp_P.sh line 65'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_openssh_scp_P.sh line 65'
+Thu Jul 27 16:59:20 2023 - ERROR - oe_test_openssh_scp_P.sh line 65
++ '[' 0 -eq 1 ']'
++ return 0
++ LOG_INFO 'End to run test.'
++ message='End to run test.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End to run test.'
+Thu Jul 27 16:59:21 2023 - INFO  - End to run test.
++ CASE_RESULT 0
++ case_re=0
++ test -z 4
++ test 4 -gt 0
++ LOG_ERROR 'failed to execute the case.'
++ message='failed to execute the case.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'failed to execute the case.'
+Thu Jul 27 16:59:22 2023 - ERROR - failed to execute the case.
++ exit 4
++ post_test
++ LOG_INFO 'Start to restore the test environment.'
++ message='Start to restore the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to restore the test environment.'
+Thu Jul 27 16:59:23 2023 - INFO  - Start to restore the test environment.
++ SSH_CMD '
+    sed -i '\''s/Port 50000/#Port 22/g'\'' /etc/ssh/sshd_config
+    systemctl restart sshd
+    systemctl start firewalld
+    ' '' '' '' 15 50000
++ cmd='
+    sed -i '\''s/Port 50000/#Port 22/g'\'' /etc/ssh/sshd_config
+    systemctl restart sshd
+    systemctl start firewalld
+    '
++ remoteip=
++ remotepasswd=
++ remoteuser=
++ timeout=15
++ connport=50000
++ bash /root/mugen/libs/locallibs/sshcmd.sh -c '
+    sed -i '\''s/Port 50000/#Port 22/g'\'' /etc/ssh/sshd_config
+    systemctl restart sshd
+    systemctl start firewalld
+    ' -i '' -u '' -p '' -t 15 -o 50000
+Usage: sshcmd.sh -c "command" -i "remote machinet ip" [-u login_user] [-p login_password] [-o port] [-t timeout]+ ret=1
++ test 1 -ne 0
++ LOG_ERROR 'Failed in remote CMD operation:1'
++ message='Failed in remote CMD operation:1'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'Failed in remote CMD operation:1'
+Thu Jul 27 16:59:25 2023 - ERROR - Failed in remote CMD operation:1
++ return 1
++ LOG_INFO 'End to restore the test environment.'
++ message='End to restore the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End to restore the test environment.'
+Thu Jul 27 16:59:26 2023 - INFO  - End to restore the test environment.

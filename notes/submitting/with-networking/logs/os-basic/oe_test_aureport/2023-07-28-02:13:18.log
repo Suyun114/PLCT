@@ -1,0 +1,164 @@
++ source /root/mugen/libs/locallibs/common_lib.sh
+++ python3 --version
+++ '[' 0 -eq 0 ']'
+++ source /root/mugen/libs/locallibs/common_lib_python.sh
++ main
+++ type -t post_test
++ '[' -n '' ']'
++ trap POST_TEST_DEFAULT EXIT INT HUP TERM
++ rpm -qa
++ grep expect
+++ type -t config_params
++ '[' -n '' ']'
+++ type -t pre_test
++ '[' -n '' ']'
+++ type -t run_test
++ '[' -n function ']'
++ run_test
++ LOG_INFO 'start to run test.'
++ message='start to run test.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'start to run test.'
+Fri Jul 28 02:13:24 2023 - INFO  - start to run test.
++ aureport
++ grep 'Summary Report'
+Fri Jul 28 02:43:19 2023 - ERROR - Timeout : Command 'bash -x oe_test_aureport.sh' timed out after 1799.998712800003 seconds
+Summary Report
+++ POST_TEST_DEFAULT
+++ LOG_INFO 'oe_test_aureport.sh post_test'
+++ message='oe_test_aureport.sh post_test'
+++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'oe_test_aureport.sh post_test'
+Fri Jul 28 03:18:43 2023 - INFO  - oe_test_aureport.sh post_test
++ CHECK_RESULT 0 0 0 'aureport summary fail'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='aureport summary fail'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ aureport -a
++ grep 'AVC Report'
+AVC Report
++ CHECK_RESULT 0 0 0 'aureport AVC fail'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='aureport AVC fail'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ aureport -au
++ grep 'Authentication Report'
+Authentication Report
++ CHECK_RESULT 0 0 0 'aureport Authentication fail'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='aureport Authentication fail'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ aureport -e
++ grep 'Event Report'
+Event Report
++ CHECK_RESULT 0 0 0 'aureport Event fail'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='aureport Event fail'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ aureport -if /var/log/audit/audit.log
++ grep 'Summary Report'
+stat: No such file or directory
+Summary Report
++ CHECK_RESULT 0 0 0 'don'\''t dispaly Summary Report'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='don'\''t dispaly Summary Report'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ aureport -l -i
++ grep 'Login Report'
+Login Report
++ CHECK_RESULT 0 0 0 'don'\''t dispaly Login Report'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='don'\''t dispaly Login Report'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ aureport --failed
++ grep 'Failed Summary Report'
+Failed Summary Report
++ CHECK_RESULT 0 0 0 'don'\''t dispaly Failed Summary Report'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='don'\''t dispaly Failed Summary Report'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ aureport --success
++ grep 'Success Summary Report'
+Success Summary Report
++ CHECK_RESULT 0 0 0 'don'\''t dispaly Success Summary Report'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='don'\''t dispaly Success Summary Report'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ aureport --help
++ grep usage
+usage: aureport [options]
++ CHECK_RESULT 0 0 0 'don'\''t dispaly usage'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='don'\''t dispaly usage'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ LOG_INFO 'End to run test.'
++ message='End to run test.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End to run test.'
+Fri Jul 28 03:18:45 2023 - INFO  - End to run test.
++ CASE_RESULT 0
++ case_re=0
++ test -z ''
++ test 0 -eq 0
++ LOG_INFO 'succeed to execute the case.'
++ message='succeed to execute the case.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'succeed to execute the case.'
+Fri Jul 28 03:18:46 2023 - INFO  - succeed to execute the case.
++ exec_result=
++ exit 0
++ POST_TEST_DEFAULT
++ LOG_INFO 'oe_test_aureport.sh post_test'
++ message='oe_test_aureport.sh post_test'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'oe_test_aureport.sh post_test'
+Fri Jul 28 03:18:48 2023 - INFO  - oe_test_aureport.sh post_test

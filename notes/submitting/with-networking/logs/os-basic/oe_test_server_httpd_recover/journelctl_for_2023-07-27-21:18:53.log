@@ -1,0 +1,2039 @@
+Jul 27 20:56:08 openeuler-riscv64 [RPM][19048]: erase mariadb-server-4:10.5.16-3.oe2303.riscv64: success
+Jul 27 20:56:08 openeuler-riscv64 [RPM][19048]: erase mariadb-4:10.5.16-3.oe2303.riscv64: success
+Jul 27 20:56:08 openeuler-riscv64 [RPM][19048]: erase iproute-1:6.1.0-7.oe2303.riscv64: success
+Jul 27 20:56:09 openeuler-riscv64 [RPM][19048]: erase mariadb-server-utils-4:10.5.16-3.oe2303.riscv64: success
+Jul 27 20:56:09 openeuler-riscv64 [RPM][19048]: erase mariadb-errmsg-4:10.5.16-3.oe2303.riscv64: success
+Jul 27 20:56:09 openeuler-riscv64 [RPM][19048]: erase perl-DBD-MariaDB-1.22-1.oe2303.riscv64: success
+Jul 27 20:56:09 openeuler-riscv64 [RPM][19048]: erase mariadb-common-4:10.5.16-3.oe2303.riscv64: success
+Jul 27 20:56:09 openeuler-riscv64 [RPM][19048]: erase greatsql-mysql-config-8.0.25-16.7.oe2303.oe2303.riscv64: success
+Jul 27 20:56:09 openeuler-riscv64 [RPM][19048]: erase mariadb-connector-c-3.1.13-7.oe2303.riscv64: success
+Jul 27 20:56:10 openeuler-riscv64 [RPM][19048]: erase perl-DBI-1.643-3.oe2303.riscv64: success
+Jul 27 20:56:10 openeuler-riscv64 [RPM][19048]: erase libbpf-2:0.8.1-5.oe2303.riscv64: success
+Jul 27 20:56:11 openeuler-riscv64 systemd[1]: Started /usr/bin/systemctl start man-db-cache-update.
+░░ Subject: A start job for unit run-rc5c2bb65b99a406780a1dfa68e781780.service has finished successfully
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A start job for unit run-rc5c2bb65b99a406780a1dfa68e781780.service has finished successfully.
+░░ 
+░░ The job identifier is 14981.
+Jul 27 20:56:11 openeuler-riscv64 [RPM][19048]: Transaction ID 64c2695b finished: 0
+Jul 27 20:56:11 openeuler-riscv64 systemctl[19076]: [/usr/bin/systemctl start man-db-cache-update] called by PID 1 (/sbin/init)
+Jul 27 20:56:11 openeuler-riscv64 systemd[1]: Starting man-db-cache-update.service...
+░░ Subject: A start job for unit man-db-cache-update.service has begun execution
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A start job for unit man-db-cache-update.service has begun execution.
+░░ 
+░░ The job identifier is 15044.
+Jul 27 20:56:14 openeuler-riscv64 systemd[1]: man-db-cache-update.service: Deactivated successfully.
+░░ Subject: Unit succeeded
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ The unit man-db-cache-update.service has successfully entered the 'dead' state.
+Jul 27 20:56:14 openeuler-riscv64 systemd[1]: Finished man-db-cache-update.service.
+░░ Subject: A start job for unit man-db-cache-update.service has finished successfully
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A start job for unit man-db-cache-update.service has finished successfully.
+░░ 
+░░ The job identifier is 15044.
+Jul 27 20:56:15 openeuler-riscv64 systemd[1]: run-rc5c2bb65b99a406780a1dfa68e781780.service: Deactivated successfully.
+░░ Subject: Unit succeeded
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ The unit run-rc5c2bb65b99a406780a1dfa68e781780.service has successfully entered the 'dead' state.
+Jul 27 20:56:21 openeuler-riscv64 sudo[18594]: pam_unix(sudo:session): session closed for user root
+Jul 27 20:56:22 openeuler-riscv64 sudo[19102]:     root : PWD=/root/mugen ; USER=root ; COMMAND=/usr/bin/bash mugen.sh -f os-basic -r oe_test_server_mariadb_backupDB -x
+Jul 27 20:56:22 openeuler-riscv64 sudo[19102]: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=0)
+Jul 27 20:56:47 openeuler-riscv64 sshd[18752]: Received disconnect from 10.0.2.2 port 58374:11: disconnected by user
+Jul 27 20:56:47 openeuler-riscv64 sshd[18752]: Disconnected from user root 10.0.2.2 port 58374
+Jul 27 20:56:47 openeuler-riscv64 sshd[18750]: pam_unix(sshd:session): session closed for user root
+Jul 27 20:58:03 openeuler-riscv64 [RPM][19181]: Transaction ID 64c269d6 started
+Jul 27 20:58:03 openeuler-riscv64 [RPM][19181]: install mariadb-connector-c-3.1.13-7.oe2303.riscv64: success
+Jul 27 20:58:04 openeuler-riscv64 [RPM][19181]: install mariadb-connector-c-3.1.13-7.oe2303.riscv64: success
+Jul 27 20:58:06 openeuler-riscv64 [RPM][19181]: install perl-DBI-1.643-3.oe2303.riscv64: success
+Jul 27 20:58:06 openeuler-riscv64 [RPM][19181]: install greatsql-mysql-config-8.0.25-16.7.oe2303.oe2303.riscv64: success
+Jul 27 20:58:06 openeuler-riscv64 [RPM][19181]: install mariadb-common-4:10.5.16-3.oe2303.riscv64: success
+Jul 27 20:58:07 openeuler-riscv64 [RPM][19181]: install mariadb-errmsg-4:10.5.16-3.oe2303.riscv64: success
+Jul 27 20:58:08 openeuler-riscv64 [RPM][19181]: install perl-DBD-MariaDB-1.22-1.oe2303.riscv64: success
+Jul 27 20:58:08 openeuler-riscv64 [RPM][19181]: install libbpf-2:0.8.1-5.oe2303.riscv64: success
+Jul 27 20:58:09 openeuler-riscv64 [RPM][19181]: install iproute-1:6.1.0-7.oe2303.riscv64: success
+Jul 27 20:58:23 openeuler-riscv64 [RPM][19181]: install mariadb-4:10.5.16-3.oe2303.riscv64: success
+Jul 27 20:58:35 openeuler-riscv64 [RPM][19181]: install mariadb-backup-4:10.5.16-3.oe2303.riscv64: success
+Jul 27 20:58:35 openeuler-riscv64 [RPM][19181]: install mariadb-gssapi-server-4:10.5.16-3.oe2303.riscv64: success
+Jul 27 20:58:37 openeuler-riscv64 [RPM][19181]: install mariadb-server-utils-4:10.5.16-3.oe2303.riscv64: success
+Jul 27 20:58:38 openeuler-riscv64 useradd[19189]: failed adding user 'mysql', exit code: 9
+Jul 27 20:59:15 openeuler-riscv64 systemctl[19191]: [/usr/bin/systemctl --no-reload preset mariadb.service] called by PID 19190 (/bin/sh /var/tmp/rpm-tmp.PzzJox 1)
+Jul 27 20:59:15 openeuler-riscv64 [RPM][19181]: install mariadb-server-4:10.5.16-3.oe2303.riscv64: success
+Jul 27 20:59:17 openeuler-riscv64 systemd[1]: Started /usr/bin/systemctl start man-db-cache-update.
+░░ Subject: A start job for unit run-r0513dfb3f24d45f9aef8341b6bc3db54.service has finished successfully
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A start job for unit run-r0513dfb3f24d45f9aef8341b6bc3db54.service has finished successfully.
+░░ 
+░░ The job identifier is 15047.
+Jul 27 20:59:17 openeuler-riscv64 systemctl[19196]: [/usr/bin/systemctl start man-db-cache-update] called by PID 1 (/sbin/init)
+Jul 27 20:59:17 openeuler-riscv64 systemctl[19198]: [/usr/bin/systemctl daemon-reload] called by PID 19197 (/bin/sh /var/tmp/rpm-tmp.WRwdES 0)
+Jul 27 20:59:17 openeuler-riscv64 systemd[1]: Starting man-db-cache-update.service...
+░░ Subject: A start job for unit man-db-cache-update.service has begun execution
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A start job for unit man-db-cache-update.service has begun execution.
+░░ 
+░░ The job identifier is 15110.
+Jul 27 20:59:18 openeuler-riscv64 systemd[1]: Reloading.
+Jul 27 20:59:21 openeuler-riscv64 systemd[1]: /usr/lib/systemd/system/dbus.socket:5: ListenStream= references a path below legacy directory /var/run/, updating /var/run/dbus/system_bus_socket → /run/dbus/system_bus_socket; please update the unit file accordingly.
+Jul 27 20:59:27 openeuler-riscv64 systemd[1]: man-db-cache-update.service: Deactivated successfully.
+░░ Subject: Unit succeeded
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ The unit man-db-cache-update.service has successfully entered the 'dead' state.
+Jul 27 20:59:27 openeuler-riscv64 systemd[1]: Finished man-db-cache-update.service.
+░░ Subject: A start job for unit man-db-cache-update.service has finished successfully
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A start job for unit man-db-cache-update.service has finished successfully.
+░░ 
+░░ The job identifier is 15110.
+Jul 27 20:59:28 openeuler-riscv64 systemd[1]: run-r0513dfb3f24d45f9aef8341b6bc3db54.service: Deactivated successfully.
+░░ Subject: Unit succeeded
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ The unit run-r0513dfb3f24d45f9aef8341b6bc3db54.service has successfully entered the 'dead' state.
+Jul 27 20:59:28 openeuler-riscv64 [RPM][19181]: install mariadb-connector-c-3.1.13-7.oe2303.riscv64: success
+Jul 27 20:59:28 openeuler-riscv64 [RPM][19181]: install perl-DBI-1.643-3.oe2303.riscv64: success
+Jul 27 20:59:28 openeuler-riscv64 [RPM][19181]: install greatsql-mysql-config-8.0.25-16.7.oe2303.oe2303.riscv64: success
+Jul 27 20:59:28 openeuler-riscv64 [RPM][19181]: install mariadb-common-4:10.5.16-3.oe2303.riscv64: success
+Jul 27 20:59:28 openeuler-riscv64 [RPM][19181]: install mariadb-errmsg-4:10.5.16-3.oe2303.riscv64: success
+Jul 27 20:59:28 openeuler-riscv64 [RPM][19181]: install perl-DBD-MariaDB-1.22-1.oe2303.riscv64: success
+Jul 27 20:59:28 openeuler-riscv64 [RPM][19181]: install libbpf-2:0.8.1-5.oe2303.riscv64: success
+Jul 27 20:59:28 openeuler-riscv64 [RPM][19181]: install iproute-1:6.1.0-7.oe2303.riscv64: success
+Jul 27 20:59:28 openeuler-riscv64 [RPM][19181]: install mariadb-4:10.5.16-3.oe2303.riscv64: success
+Jul 27 20:59:28 openeuler-riscv64 [RPM][19181]: install mariadb-backup-4:10.5.16-3.oe2303.riscv64: success
+Jul 27 20:59:28 openeuler-riscv64 [RPM][19181]: install mariadb-gssapi-server-4:10.5.16-3.oe2303.riscv64: success
+Jul 27 20:59:28 openeuler-riscv64 [RPM][19181]: install mariadb-server-utils-4:10.5.16-3.oe2303.riscv64: success
+Jul 27 20:59:28 openeuler-riscv64 [RPM][19181]: install mariadb-server-4:10.5.16-3.oe2303.riscv64: success
+Jul 27 20:59:28 openeuler-riscv64 [RPM][19181]: Transaction ID 64c269d6 finished: 0
+Jul 27 20:59:33 openeuler-riscv64 systemctl[19231]: [systemctl start mariadb.service] called by PID 19149 (bash -x oe_test_server_mariadb_backupDB.sh)
+Jul 27 20:59:33 openeuler-riscv64 systemd[1]: Starting MariaDB 10.5.15 database server...
+░░ Subject: A start job for unit mariadb.service has begun execution
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A start job for unit mariadb.service has begun execution.
+░░ 
+░░ The job identifier is 15113.
+Jul 27 20:59:38 openeuler-riscv64 mariadb-prepare-db-dir[19255]: Initializing MariaDB database
+Jul 27 20:59:48 openeuler-riscv64 mariadb-prepare-db-dir[19293]: Two all-privilege accounts were created.
+Jul 27 20:59:48 openeuler-riscv64 mariadb-prepare-db-dir[19293]: One is root@localhost, it has no password, but you need to
+Jul 27 20:59:48 openeuler-riscv64 mariadb-prepare-db-dir[19293]: be system 'root' user to connect. Use, for example, sudo mysql
+Jul 27 20:59:48 openeuler-riscv64 mariadb-prepare-db-dir[19293]: The second is mysql@localhost, it has no password either, but
+Jul 27 20:59:48 openeuler-riscv64 mariadb-prepare-db-dir[19293]: you need to be the system 'mysql' user to connect.
+Jul 27 20:59:48 openeuler-riscv64 mariadb-prepare-db-dir[19293]: After connecting you can set the password, if you would need to be
+Jul 27 20:59:48 openeuler-riscv64 mariadb-prepare-db-dir[19293]: able to connect as any of these users with a password and without sudo
+Jul 27 20:59:48 openeuler-riscv64 mariadb-prepare-db-dir[19293]: See the MariaDB Knowledgebase at https://mariadb.com/kb
+Jul 27 20:59:48 openeuler-riscv64 mariadb-prepare-db-dir[19293]: Please report any problems at https://mariadb.org/jira
+Jul 27 20:59:48 openeuler-riscv64 mariadb-prepare-db-dir[19293]: The latest information about MariaDB is available at https://mariadb.org/.
+Jul 27 20:59:48 openeuler-riscv64 mariadb-prepare-db-dir[19293]: Consider joining MariaDB's strong and vibrant community:
+Jul 27 20:59:48 openeuler-riscv64 mariadb-prepare-db-dir[19293]: https://mariadb.org/get-involved/
+Jul 27 20:59:49 openeuler-riscv64 mariadbd[19341]: 2023-07-27 20:59:49 0 [Note] /usr/libexec/mariadbd (mysqld 10.5.16-MariaDB) starting as process 19341 ...
+Jul 27 20:59:51 openeuler-riscv64 NetworkManager[270]: <info>  [1690462791.8430] policy: auto-activating connection 'Wired connection 2' (ef61f214-000f-3cf6-8b37-6b717fb363ec)
+Jul 27 20:59:51 openeuler-riscv64 NetworkManager[270]: <info>  [1690462791.9141] device (eth1): Activation: starting connection 'Wired connection 2' (ef61f214-000f-3cf6-8b37-6b717fb363ec)
+Jul 27 20:59:51 openeuler-riscv64 NetworkManager[270]: <info>  [1690462791.9214] device (eth1): state change: disconnected -> prepare (reason 'none', sys-iface-state: 'managed')
+Jul 27 20:59:51 openeuler-riscv64 NetworkManager[270]: <info>  [1690462791.9535] device (eth1): state change: prepare -> config (reason 'none', sys-iface-state: 'managed')
+Jul 27 20:59:51 openeuler-riscv64 NetworkManager[270]: <info>  [1690462791.9785] device (eth1): state change: config -> ip-config (reason 'none', sys-iface-state: 'managed')
+Jul 27 20:59:51 openeuler-riscv64 NetworkManager[270]: <info>  [1690462791.9972] dhcp4 (eth1): activation: beginning transaction (timeout in 45 seconds)
+Jul 27 20:59:52 openeuler-riscv64 systemd[1]: Started MariaDB 10.5.15 database server.
+░░ Subject: A start job for unit mariadb.service has finished successfully
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A start job for unit mariadb.service has finished successfully.
+░░ 
+░░ The job identifier is 15113.
+Jul 27 20:59:52 openeuler-riscv64 NetworkManager[270]: <info>  [1690462792.8233] policy: auto-activating connection 'Wired connection 3' (71d59045-f2a0-32fa-8ba9-93a6576f5e87)
+Jul 27 20:59:52 openeuler-riscv64 NetworkManager[270]: <info>  [1690462792.8409] device (eth2): Activation: starting connection 'Wired connection 3' (71d59045-f2a0-32fa-8ba9-93a6576f5e87)
+Jul 27 20:59:52 openeuler-riscv64 NetworkManager[270]: <info>  [1690462792.8491] device (eth2): state change: disconnected -> prepare (reason 'none', sys-iface-state: 'managed')
+Jul 27 20:59:52 openeuler-riscv64 NetworkManager[270]: <info>  [1690462792.8892] device (eth2): state change: prepare -> config (reason 'none', sys-iface-state: 'managed')
+Jul 27 20:59:52 openeuler-riscv64 NetworkManager[270]: <info>  [1690462792.9073] device (eth2): state change: config -> ip-config (reason 'none', sys-iface-state: 'managed')
+Jul 27 20:59:52 openeuler-riscv64 NetworkManager[270]: <info>  [1690462792.9172] dhcp4 (eth2): activation: beginning transaction (timeout in 45 seconds)
+Jul 27 20:59:56 openeuler-riscv64 ntpd[5555]: Listen normally on 56 eth1 [fe80::edfb:237f:711:e1ee%3]:123
+Jul 27 20:59:56 openeuler-riscv64 ntpd[5555]: Listen normally on 57 eth2 [fe80::5c34:cef6:6655:3c3c%4]:123
+Jul 27 20:59:56 openeuler-riscv64 ntpd[5555]: new interface(s) found: waking up resolver
+Jul 27 21:00:19 openeuler-riscv64 [RPM][19413]: Transaction ID 64c26a62 started
+Jul 27 21:00:20 openeuler-riscv64 [RPM][19413]: erase mariadb-gssapi-server-4:10.5.16-3.oe2303.riscv64: success
+Jul 27 21:00:20 openeuler-riscv64 [RPM][19413]: erase mariadb-backup-4:10.5.16-3.oe2303.riscv64: success
+Jul 27 21:00:20 openeuler-riscv64 [RPM][19413]: erase mariadb-server-4:10.5.16-3.oe2303.riscv64: success
+Jul 27 21:00:20 openeuler-riscv64 [RPM][19413]: erase mariadb-4:10.5.16-3.oe2303.riscv64: success
+Jul 27 21:00:20 openeuler-riscv64 [RPM][19413]: erase iproute-1:6.1.0-7.oe2303.riscv64: success
+Jul 27 21:00:20 openeuler-riscv64 [RPM][19413]: erase mariadb-server-utils-4:10.5.16-3.oe2303.riscv64: success
+Jul 27 21:00:20 openeuler-riscv64 [RPM][19413]: erase mariadb-errmsg-4:10.5.16-3.oe2303.riscv64: success
+Jul 27 21:00:20 openeuler-riscv64 [RPM][19413]: erase perl-DBD-MariaDB-1.22-1.oe2303.riscv64: success
+Jul 27 21:00:20 openeuler-riscv64 [RPM][19413]: erase mariadb-common-4:10.5.16-3.oe2303.riscv64: success
+Jul 27 21:00:20 openeuler-riscv64 [RPM][19413]: erase greatsql-mysql-config-8.0.25-16.7.oe2303.oe2303.riscv64: success
+Jul 27 21:00:20 openeuler-riscv64 [RPM][19413]: erase mariadb-connector-c-3.1.13-7.oe2303.riscv64: success
+Jul 27 21:00:20 openeuler-riscv64 [RPM][19413]: erase perl-DBI-1.643-3.oe2303.riscv64: success
+Jul 27 21:00:20 openeuler-riscv64 [RPM][19413]: erase libbpf-2:0.8.1-5.oe2303.riscv64: success
+Jul 27 21:00:20 openeuler-riscv64 [RPM][19413]: erase mariadb-gssapi-server-4:10.5.16-3.oe2303.riscv64: success
+Jul 27 21:00:20 openeuler-riscv64 [RPM][19413]: erase mariadb-backup-4:10.5.16-3.oe2303.riscv64: success
+Jul 27 21:00:21 openeuler-riscv64 systemctl[19419]: [/usr/bin/systemctl --no-reload --now disable mariadb.service] called by PID 19418 (/bin/sh /var/tmp/rpm-tmp.13gcYg 0)
+Jul 27 21:00:21 openeuler-riscv64 systemd[1]: Stopping MariaDB 10.5.15 database server...
+░░ Subject: A stop job for unit mariadb.service has begun execution
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A stop job for unit mariadb.service has begun execution.
+░░ 
+░░ The job identifier is 15176.
+Jul 27 21:00:22 openeuler-riscv64 systemd[1]: mariadb.service: Deactivated successfully.
+░░ Subject: Unit succeeded
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ The unit mariadb.service has successfully entered the 'dead' state.
+Jul 27 21:00:22 openeuler-riscv64 systemd[1]: Stopped MariaDB 10.5.15 database server.
+░░ Subject: A stop job for unit mariadb.service has finished
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A stop job for unit mariadb.service has finished.
+░░ 
+░░ The job identifier is 15176 and the job result is done.
+Jul 27 21:00:23 openeuler-riscv64 systemctl[19426]: [/usr/bin/systemctl daemon-reload] called by PID 19424 (/bin/sh /var/tmp/rpm-tmp.F3y47L 0)
+Jul 27 21:00:23 openeuler-riscv64 systemd[1]: Reloading.
+Jul 27 21:00:26 openeuler-riscv64 systemd[1]: /usr/lib/systemd/system/dbus.socket:5: ListenStream= references a path below legacy directory /var/run/, updating /var/run/dbus/system_bus_socket → /run/dbus/system_bus_socket; please update the unit file accordingly.
+Jul 27 21:00:32 openeuler-riscv64 [RPM][19413]: erase mariadb-server-4:10.5.16-3.oe2303.riscv64: success
+Jul 27 21:00:32 openeuler-riscv64 [RPM][19413]: erase mariadb-4:10.5.16-3.oe2303.riscv64: success
+Jul 27 21:00:32 openeuler-riscv64 [RPM][19413]: erase iproute-1:6.1.0-7.oe2303.riscv64: success
+Jul 27 21:00:32 openeuler-riscv64 [RPM][19413]: erase mariadb-server-utils-4:10.5.16-3.oe2303.riscv64: success
+Jul 27 21:00:32 openeuler-riscv64 [RPM][19413]: erase mariadb-errmsg-4:10.5.16-3.oe2303.riscv64: success
+Jul 27 21:00:32 openeuler-riscv64 [RPM][19413]: erase perl-DBD-MariaDB-1.22-1.oe2303.riscv64: success
+Jul 27 21:00:33 openeuler-riscv64 [RPM][19413]: erase mariadb-common-4:10.5.16-3.oe2303.riscv64: success
+Jul 27 21:00:33 openeuler-riscv64 [RPM][19413]: erase greatsql-mysql-config-8.0.25-16.7.oe2303.oe2303.riscv64: success
+Jul 27 21:00:33 openeuler-riscv64 [RPM][19413]: erase mariadb-connector-c-3.1.13-7.oe2303.riscv64: success
+Jul 27 21:00:33 openeuler-riscv64 [RPM][19413]: erase perl-DBI-1.643-3.oe2303.riscv64: success
+Jul 27 21:00:34 openeuler-riscv64 [RPM][19413]: erase libbpf-2:0.8.1-5.oe2303.riscv64: success
+Jul 27 21:00:34 openeuler-riscv64 systemd[1]: Started /usr/bin/systemctl start man-db-cache-update.
+░░ Subject: A start job for unit run-re06a217ef28f4bbea909e36c39023894.service has finished successfully
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A start job for unit run-re06a217ef28f4bbea909e36c39023894.service has finished successfully.
+░░ 
+░░ The job identifier is 15177.
+Jul 27 21:00:34 openeuler-riscv64 [RPM][19413]: Transaction ID 64c26a62 finished: 0
+Jul 27 21:00:35 openeuler-riscv64 systemctl[19442]: [/usr/bin/systemctl start man-db-cache-update] called by PID 1 (/sbin/init)
+Jul 27 21:00:35 openeuler-riscv64 systemd[1]: Starting man-db-cache-update.service...
+░░ Subject: A start job for unit man-db-cache-update.service has begun execution
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A start job for unit man-db-cache-update.service has begun execution.
+░░ 
+░░ The job identifier is 15240.
+Jul 27 21:00:36 openeuler-riscv64 NetworkManager[270]: <warn>  [1690462836.8263] dhcp4 (eth1): request timed out
+Jul 27 21:00:36 openeuler-riscv64 NetworkManager[270]: <info>  [1690462836.8299] dhcp4 (eth1): state changed unknown -> timeout
+Jul 27 21:00:36 openeuler-riscv64 NetworkManager[270]: <info>  [1690462836.8390] device (eth1): state change: ip-config -> failed (reason 'ip-config-unavailable', sys-iface-state: 'managed')
+Jul 27 21:00:36 openeuler-riscv64 NetworkManager[270]: <warn>  [1690462836.8883] device (eth1): Activation: failed for connection 'Wired connection 2'
+Jul 27 21:00:36 openeuler-riscv64 NetworkManager[270]: <info>  [1690462836.9023] device (eth1): state change: failed -> disconnected (reason 'none', sys-iface-state: 'managed')
+Jul 27 21:00:36 openeuler-riscv64 NetworkManager[270]: <info>  [1690462836.9775] dhcp4 (eth1): canceled DHCP transaction
+Jul 27 21:00:36 openeuler-riscv64 NetworkManager[270]: <info>  [1690462836.9811] dhcp4 (eth1): state changed timeout -> terminated
+Jul 27 21:00:37 openeuler-riscv64 NetworkManager[270]: <info>  [1690462837.0722] policy: auto-activating connection 'Wired connection 2' (ef61f214-000f-3cf6-8b37-6b717fb363ec)
+Jul 27 21:00:37 openeuler-riscv64 NetworkManager[270]: <info>  [1690462837.1086] device (eth1): Activation: starting connection 'Wired connection 2' (ef61f214-000f-3cf6-8b37-6b717fb363ec)
+Jul 27 21:00:37 openeuler-riscv64 NetworkManager[270]: <info>  [1690462837.1183] device (eth1): state change: disconnected -> prepare (reason 'none', sys-iface-state: 'managed')
+Jul 27 21:00:37 openeuler-riscv64 NetworkManager[270]: <info>  [1690462837.1329] device (eth1): state change: prepare -> config (reason 'none', sys-iface-state: 'managed')
+Jul 27 21:00:37 openeuler-riscv64 NetworkManager[270]: <info>  [1690462837.1499] device (eth1): state change: config -> ip-config (reason 'none', sys-iface-state: 'managed')
+Jul 27 21:00:37 openeuler-riscv64 NetworkManager[270]: <info>  [1690462837.1601] dhcp4 (eth1): activation: beginning transaction (timeout in 45 seconds)
+Jul 27 21:00:37 openeuler-riscv64 systemd[1]: man-db-cache-update.service: Deactivated successfully.
+░░ Subject: Unit succeeded
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ The unit man-db-cache-update.service has successfully entered the 'dead' state.
+Jul 27 21:00:37 openeuler-riscv64 systemd[1]: Finished man-db-cache-update.service.
+░░ Subject: A start job for unit man-db-cache-update.service has finished successfully
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A start job for unit man-db-cache-update.service has finished successfully.
+░░ 
+░░ The job identifier is 15240.
+Jul 27 21:00:37 openeuler-riscv64 NetworkManager[270]: <warn>  [1690462837.8252] dhcp4 (eth2): request timed out
+Jul 27 21:00:37 openeuler-riscv64 NetworkManager[270]: <info>  [1690462837.8259] dhcp4 (eth2): state changed unknown -> timeout
+Jul 27 21:00:37 openeuler-riscv64 NetworkManager[270]: <info>  [1690462837.8274] device (eth2): state change: ip-config -> failed (reason 'ip-config-unavailable', sys-iface-state: 'managed')
+Jul 27 21:00:37 openeuler-riscv64 NetworkManager[270]: <warn>  [1690462837.8370] device (eth2): Activation: failed for connection 'Wired connection 3'
+Jul 27 21:00:37 openeuler-riscv64 NetworkManager[270]: <info>  [1690462837.8412] device (eth2): state change: failed -> disconnected (reason 'none', sys-iface-state: 'managed')
+Jul 27 21:00:37 openeuler-riscv64 NetworkManager[270]: <info>  [1690462837.8811] dhcp4 (eth2): canceled DHCP transaction
+Jul 27 21:00:37 openeuler-riscv64 NetworkManager[270]: <info>  [1690462837.8818] dhcp4 (eth2): state changed timeout -> terminated
+Jul 27 21:00:37 openeuler-riscv64 NetworkManager[270]: <info>  [1690462837.9061] policy: auto-activating connection 'Wired connection 3' (71d59045-f2a0-32fa-8ba9-93a6576f5e87)
+Jul 27 21:00:37 openeuler-riscv64 NetworkManager[270]: <info>  [1690462837.9225] device (eth2): Activation: starting connection 'Wired connection 3' (71d59045-f2a0-32fa-8ba9-93a6576f5e87)
+Jul 27 21:00:37 openeuler-riscv64 NetworkManager[270]: <info>  [1690462837.9249] device (eth2): state change: disconnected -> prepare (reason 'none', sys-iface-state: 'managed')
+Jul 27 21:00:37 openeuler-riscv64 NetworkManager[270]: <info>  [1690462837.9308] device (eth2): state change: prepare -> config (reason 'none', sys-iface-state: 'managed')
+Jul 27 21:00:37 openeuler-riscv64 NetworkManager[270]: <info>  [1690462837.9392] device (eth2): state change: config -> ip-config (reason 'none', sys-iface-state: 'managed')
+Jul 27 21:00:37 openeuler-riscv64 NetworkManager[270]: <info>  [1690462837.9480] dhcp4 (eth2): activation: beginning transaction (timeout in 45 seconds)
+Jul 27 21:00:38 openeuler-riscv64 systemd[1]: run-re06a217ef28f4bbea909e36c39023894.service: Deactivated successfully.
+░░ Subject: Unit succeeded
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ The unit run-re06a217ef28f4bbea909e36c39023894.service has successfully entered the 'dead' state.
+Jul 27 21:00:44 openeuler-riscv64 sudo[19102]: pam_unix(sudo:session): session closed for user root
+Jul 27 21:00:45 openeuler-riscv64 sudo[19467]:     root : PWD=/root/mugen ; USER=root ; COMMAND=/usr/bin/bash mugen.sh -f os-basic -r oe_test_server_mariadb_backup -x
+Jul 27 21:00:45 openeuler-riscv64 sudo[19467]: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=0)
+Jul 27 21:01:01 openeuler-riscv64 CROND[19524]: (root) CMD (run-parts /etc/cron.hourly)
+Jul 27 21:01:02 openeuler-riscv64 run-parts[19527]: (/etc/cron.hourly) starting 0anacron
+Jul 27 21:01:02 openeuler-riscv64 run-parts[19533]: (/etc/cron.hourly) finished 0anacron
+Jul 27 21:01:02 openeuler-riscv64 CROND[19523]: (root) CMDEND (run-parts /etc/cron.hourly)
+Jul 27 21:01:22 openeuler-riscv64 NetworkManager[270]: <warn>  [1690462882.8376] dhcp4 (eth1): request timed out
+Jul 27 21:01:22 openeuler-riscv64 NetworkManager[270]: <info>  [1690462882.8388] dhcp4 (eth1): state changed unknown -> timeout
+Jul 27 21:01:22 openeuler-riscv64 NetworkManager[270]: <warn>  [1690462882.8404] dhcp4 (eth2): request timed out
+Jul 27 21:01:22 openeuler-riscv64 NetworkManager[270]: <info>  [1690462882.8421] dhcp4 (eth2): state changed unknown -> timeout
+Jul 27 21:01:22 openeuler-riscv64 NetworkManager[270]: <info>  [1690462882.8443] device (eth1): state change: ip-config -> failed (reason 'ip-config-unavailable', sys-iface-state: 'managed')
+Jul 27 21:01:22 openeuler-riscv64 NetworkManager[270]: <warn>  [1690462882.8567] device (eth1): Activation: failed for connection 'Wired connection 2'
+Jul 27 21:01:22 openeuler-riscv64 NetworkManager[270]: <info>  [1690462882.8580] device (eth2): state change: ip-config -> failed (reason 'ip-config-unavailable', sys-iface-state: 'managed')
+Jul 27 21:01:22 openeuler-riscv64 NetworkManager[270]: <warn>  [1690462882.8692] device (eth2): Activation: failed for connection 'Wired connection 3'
+Jul 27 21:01:22 openeuler-riscv64 NetworkManager[270]: <info>  [1690462882.8746] device (eth1): state change: failed -> disconnected (reason 'none', sys-iface-state: 'managed')
+Jul 27 21:01:22 openeuler-riscv64 NetworkManager[270]: <info>  [1690462882.9050] dhcp4 (eth1): canceled DHCP transaction
+Jul 27 21:01:22 openeuler-riscv64 NetworkManager[270]: <info>  [1690462882.9057] dhcp4 (eth1): state changed timeout -> terminated
+Jul 27 21:01:22 openeuler-riscv64 NetworkManager[270]: <info>  [1690462882.9236] device (eth2): state change: failed -> disconnected (reason 'none', sys-iface-state: 'managed')
+Jul 27 21:01:22 openeuler-riscv64 NetworkManager[270]: <info>  [1690462882.9570] dhcp4 (eth2): canceled DHCP transaction
+Jul 27 21:01:22 openeuler-riscv64 NetworkManager[270]: <info>  [1690462882.9576] dhcp4 (eth2): state changed timeout -> terminated
+Jul 27 21:01:22 openeuler-riscv64 NetworkManager[270]: <info>  [1690462882.9801] policy: auto-activating connection 'Wired connection 2' (ef61f214-000f-3cf6-8b37-6b717fb363ec)
+Jul 27 21:01:22 openeuler-riscv64 NetworkManager[270]: <info>  [1690462882.9884] policy: auto-activating connection 'Wired connection 3' (71d59045-f2a0-32fa-8ba9-93a6576f5e87)
+Jul 27 21:01:23 openeuler-riscv64 NetworkManager[270]: <info>  [1690462883.0002] device (eth1): Activation: starting connection 'Wired connection 2' (ef61f214-000f-3cf6-8b37-6b717fb363ec)
+Jul 27 21:01:23 openeuler-riscv64 NetworkManager[270]: <info>  [1690462883.0059] device (eth2): Activation: starting connection 'Wired connection 3' (71d59045-f2a0-32fa-8ba9-93a6576f5e87)
+Jul 27 21:01:23 openeuler-riscv64 NetworkManager[270]: <info>  [1690462883.0084] device (eth1): state change: disconnected -> prepare (reason 'none', sys-iface-state: 'managed')
+Jul 27 21:01:23 openeuler-riscv64 NetworkManager[270]: <info>  [1690462883.0151] device (eth1): state change: prepare -> config (reason 'none', sys-iface-state: 'managed')
+Jul 27 21:01:23 openeuler-riscv64 NetworkManager[270]: <info>  [1690462883.0233] device (eth2): state change: disconnected -> prepare (reason 'none', sys-iface-state: 'managed')
+Jul 27 21:01:23 openeuler-riscv64 NetworkManager[270]: <info>  [1690462883.0303] device (eth2): state change: prepare -> config (reason 'none', sys-iface-state: 'managed')
+Jul 27 21:01:23 openeuler-riscv64 NetworkManager[270]: <info>  [1690462883.0394] device (eth1): state change: config -> ip-config (reason 'none', sys-iface-state: 'managed')
+Jul 27 21:01:23 openeuler-riscv64 NetworkManager[270]: <info>  [1690462883.0452] dhcp4 (eth1): activation: beginning transaction (timeout in 45 seconds)
+Jul 27 21:01:23 openeuler-riscv64 NetworkManager[270]: <info>  [1690462883.0690] device (eth2): state change: config -> ip-config (reason 'none', sys-iface-state: 'managed')
+Jul 27 21:01:23 openeuler-riscv64 NetworkManager[270]: <info>  [1690462883.0806] dhcp4 (eth2): activation: beginning transaction (timeout in 45 seconds)
+Jul 27 21:02:07 openeuler-riscv64 NetworkManager[270]: <warn>  [1690462927.8370] dhcp4 (eth1): request timed out
+Jul 27 21:02:07 openeuler-riscv64 NetworkManager[270]: <info>  [1690462927.8378] dhcp4 (eth1): state changed unknown -> timeout
+Jul 27 21:02:07 openeuler-riscv64 NetworkManager[270]: <info>  [1690462927.8392] device (eth1): state change: ip-config -> failed (reason 'ip-config-unavailable', sys-iface-state: 'managed')
+Jul 27 21:02:07 openeuler-riscv64 NetworkManager[270]: <warn>  [1690462927.8639] device (eth1): Activation: failed for connection 'Wired connection 2'
+Jul 27 21:02:07 openeuler-riscv64 NetworkManager[270]: <info>  [1690462927.8733] device (eth1): state change: failed -> disconnected (reason 'none', sys-iface-state: 'managed')
+Jul 27 21:02:07 openeuler-riscv64 NetworkManager[270]: <info>  [1690462927.9096] dhcp4 (eth1): canceled DHCP transaction
+Jul 27 21:02:07 openeuler-riscv64 NetworkManager[270]: <info>  [1690462927.9103] dhcp4 (eth1): state changed timeout -> terminated
+Jul 27 21:02:07 openeuler-riscv64 NetworkManager[270]: <info>  [1690462927.9514] policy: auto-activating connection 'Wired connection 2' (ef61f214-000f-3cf6-8b37-6b717fb363ec)
+Jul 27 21:02:07 openeuler-riscv64 NetworkManager[270]: <info>  [1690462927.9604] device (eth1): Activation: starting connection 'Wired connection 2' (ef61f214-000f-3cf6-8b37-6b717fb363ec)
+Jul 27 21:02:07 openeuler-riscv64 NetworkManager[270]: <info>  [1690462927.9637] device (eth1): state change: disconnected -> prepare (reason 'none', sys-iface-state: 'managed')
+Jul 27 21:02:07 openeuler-riscv64 NetworkManager[270]: <info>  [1690462927.9708] device (eth1): state change: prepare -> config (reason 'none', sys-iface-state: 'managed')
+Jul 27 21:02:07 openeuler-riscv64 NetworkManager[270]: <info>  [1690462927.9807] device (eth1): state change: config -> ip-config (reason 'none', sys-iface-state: 'managed')
+Jul 27 21:02:07 openeuler-riscv64 NetworkManager[270]: <info>  [1690462927.9870] dhcp4 (eth1): activation: beginning transaction (timeout in 45 seconds)
+Jul 27 21:02:08 openeuler-riscv64 NetworkManager[270]: <warn>  [1690462928.8252] dhcp4 (eth2): request timed out
+Jul 27 21:02:08 openeuler-riscv64 NetworkManager[270]: <info>  [1690462928.8259] dhcp4 (eth2): state changed unknown -> timeout
+Jul 27 21:02:08 openeuler-riscv64 NetworkManager[270]: <info>  [1690462928.8278] device (eth2): state change: ip-config -> failed (reason 'ip-config-unavailable', sys-iface-state: 'managed')
+Jul 27 21:02:08 openeuler-riscv64 NetworkManager[270]: <warn>  [1690462928.8423] device (eth2): Activation: failed for connection 'Wired connection 3'
+Jul 27 21:02:08 openeuler-riscv64 NetworkManager[270]: <info>  [1690462928.8514] device (eth2): state change: failed -> disconnected (reason 'none', sys-iface-state: 'managed')
+Jul 27 21:02:08 openeuler-riscv64 NetworkManager[270]: <info>  [1690462928.9011] dhcp4 (eth2): canceled DHCP transaction
+Jul 27 21:02:08 openeuler-riscv64 NetworkManager[270]: <info>  [1690462928.9018] dhcp4 (eth2): state changed timeout -> terminated
+Jul 27 21:02:08 openeuler-riscv64 NetworkManager[270]: <info>  [1690462928.9263] policy: auto-activating connection 'Wired connection 3' (71d59045-f2a0-32fa-8ba9-93a6576f5e87)
+Jul 27 21:02:08 openeuler-riscv64 NetworkManager[270]: <info>  [1690462928.9343] device (eth2): Activation: starting connection 'Wired connection 3' (71d59045-f2a0-32fa-8ba9-93a6576f5e87)
+Jul 27 21:02:08 openeuler-riscv64 NetworkManager[270]: <info>  [1690462928.9371] device (eth2): state change: disconnected -> prepare (reason 'none', sys-iface-state: 'managed')
+Jul 27 21:02:08 openeuler-riscv64 NetworkManager[270]: <info>  [1690462928.9434] device (eth2): state change: prepare -> config (reason 'none', sys-iface-state: 'managed')
+Jul 27 21:02:08 openeuler-riscv64 NetworkManager[270]: <info>  [1690462928.9537] device (eth2): state change: config -> ip-config (reason 'none', sys-iface-state: 'managed')
+Jul 27 21:02:08 openeuler-riscv64 NetworkManager[270]: <info>  [1690462928.9591] dhcp4 (eth2): activation: beginning transaction (timeout in 45 seconds)
+Jul 27 21:02:29 openeuler-riscv64 [RPM][19557]: Transaction ID 64c26ae0 started
+Jul 27 21:02:29 openeuler-riscv64 [RPM][19557]: install mariadb-connector-c-3.1.13-7.oe2303.riscv64: success
+Jul 27 21:02:30 openeuler-riscv64 [RPM][19557]: install mariadb-connector-c-3.1.13-7.oe2303.riscv64: success
+Jul 27 21:02:32 openeuler-riscv64 [RPM][19557]: install perl-DBI-1.643-3.oe2303.riscv64: success
+Jul 27 21:02:32 openeuler-riscv64 [RPM][19557]: install greatsql-mysql-config-8.0.25-16.7.oe2303.oe2303.riscv64: success
+Jul 27 21:02:32 openeuler-riscv64 [RPM][19557]: install mariadb-common-4:10.5.16-3.oe2303.riscv64: success
+Jul 27 21:02:33 openeuler-riscv64 [RPM][19557]: install mariadb-errmsg-4:10.5.16-3.oe2303.riscv64: success
+Jul 27 21:02:34 openeuler-riscv64 [RPM][19557]: install perl-DBD-MariaDB-1.22-1.oe2303.riscv64: success
+Jul 27 21:02:34 openeuler-riscv64 [RPM][19557]: install libbpf-2:0.8.1-5.oe2303.riscv64: success
+Jul 27 21:02:35 openeuler-riscv64 [RPM][19557]: install iproute-1:6.1.0-7.oe2303.riscv64: success
+Jul 27 21:02:49 openeuler-riscv64 [RPM][19557]: install mariadb-4:10.5.16-3.oe2303.riscv64: success
+Jul 27 21:02:52 openeuler-riscv64 NetworkManager[270]: <warn>  [1690462972.8389] dhcp4 (eth1): request timed out
+Jul 27 21:02:52 openeuler-riscv64 NetworkManager[270]: <info>  [1690462972.8425] dhcp4 (eth1): state changed unknown -> timeout
+Jul 27 21:02:52 openeuler-riscv64 NetworkManager[270]: <info>  [1690462972.8630] device (eth1): state change: ip-config -> failed (reason 'ip-config-unavailable', sys-iface-state: 'managed')
+Jul 27 21:02:52 openeuler-riscv64 NetworkManager[270]: <warn>  [1690462972.9207] device (eth1): Activation: failed for connection 'Wired connection 2'
+Jul 27 21:02:52 openeuler-riscv64 NetworkManager[270]: <info>  [1690462972.9356] device (eth1): state change: failed -> disconnected (reason 'none', sys-iface-state: 'managed')
+Jul 27 21:02:53 openeuler-riscv64 NetworkManager[270]: <info>  [1690462973.0055] dhcp4 (eth1): canceled DHCP transaction
+Jul 27 21:02:53 openeuler-riscv64 NetworkManager[270]: <info>  [1690462973.0089] dhcp4 (eth1): state changed timeout -> terminated
+Jul 27 21:02:53 openeuler-riscv64 NetworkManager[270]: <warn>  [1690462973.8250] dhcp4 (eth2): request timed out
+Jul 27 21:02:53 openeuler-riscv64 NetworkManager[270]: <info>  [1690462973.8257] dhcp4 (eth2): state changed unknown -> timeout
+Jul 27 21:02:53 openeuler-riscv64 NetworkManager[270]: <info>  [1690462973.8283] device (eth2): state change: ip-config -> failed (reason 'ip-config-unavailable', sys-iface-state: 'managed')
+Jul 27 21:02:53 openeuler-riscv64 NetworkManager[270]: <warn>  [1690462973.8363] device (eth2): Activation: failed for connection 'Wired connection 3'
+Jul 27 21:02:53 openeuler-riscv64 NetworkManager[270]: <info>  [1690462973.8421] device (eth2): state change: failed -> disconnected (reason 'none', sys-iface-state: 'managed')
+Jul 27 21:02:53 openeuler-riscv64 NetworkManager[270]: <info>  [1690462973.8650] dhcp4 (eth2): canceled DHCP transaction
+Jul 27 21:02:53 openeuler-riscv64 NetworkManager[270]: <info>  [1690462973.8657] dhcp4 (eth2): state changed timeout -> terminated
+Jul 27 21:02:55 openeuler-riscv64 ntpd[5555]: Deleting interface #56 eth1, fe80::edfb:237f:711:e1ee%3#123, interface stats: received=0, sent=0, dropped=0, active_time=179 secs
+Jul 27 21:02:55 openeuler-riscv64 ntpd[5555]: Deleting interface #57 eth2, fe80::5c34:cef6:6655:3c3c%4#123, interface stats: received=0, sent=0, dropped=0, active_time=179 secs
+Jul 27 21:03:00 openeuler-riscv64 [RPM][19557]: install mariadb-backup-4:10.5.16-3.oe2303.riscv64: success
+Jul 27 21:03:01 openeuler-riscv64 [RPM][19557]: install mariadb-gssapi-server-4:10.5.16-3.oe2303.riscv64: success
+Jul 27 21:03:03 openeuler-riscv64 [RPM][19557]: install mariadb-server-utils-4:10.5.16-3.oe2303.riscv64: success
+Jul 27 21:03:04 openeuler-riscv64 useradd[19565]: failed adding user 'mysql', exit code: 9
+Jul 27 21:03:40 openeuler-riscv64 systemctl[19567]: [/usr/bin/systemctl --no-reload preset mariadb.service] called by PID 19566 (/bin/sh /var/tmp/rpm-tmp.hzfaF0 1)
+Jul 27 21:03:40 openeuler-riscv64 [RPM][19557]: install mariadb-server-4:10.5.16-3.oe2303.riscv64: success
+Jul 27 21:03:42 openeuler-riscv64 systemd[1]: Started /usr/bin/systemctl start man-db-cache-update.
+░░ Subject: A start job for unit run-rdc42c45771754fcf9396857e1ae737ab.service has finished successfully
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A start job for unit run-rdc42c45771754fcf9396857e1ae737ab.service has finished successfully.
+░░ 
+░░ The job identifier is 15243.
+Jul 27 21:03:42 openeuler-riscv64 systemctl[19572]: [/usr/bin/systemctl start man-db-cache-update] called by PID 1 (/sbin/init)
+Jul 27 21:03:42 openeuler-riscv64 systemctl[19574]: [/usr/bin/systemctl daemon-reload] called by PID 19573 (/bin/sh /var/tmp/rpm-tmp.YDJz7H 0)
+Jul 27 21:03:42 openeuler-riscv64 systemd[1]: Starting man-db-cache-update.service...
+░░ Subject: A start job for unit man-db-cache-update.service has begun execution
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A start job for unit man-db-cache-update.service has begun execution.
+░░ 
+░░ The job identifier is 15306.
+Jul 27 21:03:43 openeuler-riscv64 systemd[1]: Reloading.
+Jul 27 21:03:46 openeuler-riscv64 systemd[1]: /usr/lib/systemd/system/dbus.socket:5: ListenStream= references a path below legacy directory /var/run/, updating /var/run/dbus/system_bus_socket → /run/dbus/system_bus_socket; please update the unit file accordingly.
+Jul 27 21:03:52 openeuler-riscv64 systemd[1]: man-db-cache-update.service: Deactivated successfully.
+░░ Subject: Unit succeeded
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ The unit man-db-cache-update.service has successfully entered the 'dead' state.
+Jul 27 21:03:52 openeuler-riscv64 systemd[1]: Finished man-db-cache-update.service.
+░░ Subject: A start job for unit man-db-cache-update.service has finished successfully
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A start job for unit man-db-cache-update.service has finished successfully.
+░░ 
+░░ The job identifier is 15306.
+Jul 27 21:03:52 openeuler-riscv64 systemd[1]: run-rdc42c45771754fcf9396857e1ae737ab.service: Deactivated successfully.
+░░ Subject: Unit succeeded
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ The unit run-rdc42c45771754fcf9396857e1ae737ab.service has successfully entered the 'dead' state.
+Jul 27 21:03:53 openeuler-riscv64 [RPM][19557]: install mariadb-connector-c-3.1.13-7.oe2303.riscv64: success
+Jul 27 21:03:53 openeuler-riscv64 [RPM][19557]: install perl-DBI-1.643-3.oe2303.riscv64: success
+Jul 27 21:03:53 openeuler-riscv64 [RPM][19557]: install greatsql-mysql-config-8.0.25-16.7.oe2303.oe2303.riscv64: success
+Jul 27 21:03:53 openeuler-riscv64 [RPM][19557]: install mariadb-common-4:10.5.16-3.oe2303.riscv64: success
+Jul 27 21:03:53 openeuler-riscv64 [RPM][19557]: install mariadb-errmsg-4:10.5.16-3.oe2303.riscv64: success
+Jul 27 21:03:53 openeuler-riscv64 [RPM][19557]: install perl-DBD-MariaDB-1.22-1.oe2303.riscv64: success
+Jul 27 21:03:53 openeuler-riscv64 [RPM][19557]: install libbpf-2:0.8.1-5.oe2303.riscv64: success
+Jul 27 21:03:53 openeuler-riscv64 [RPM][19557]: install iproute-1:6.1.0-7.oe2303.riscv64: success
+Jul 27 21:03:53 openeuler-riscv64 [RPM][19557]: install mariadb-4:10.5.16-3.oe2303.riscv64: success
+Jul 27 21:03:53 openeuler-riscv64 [RPM][19557]: install mariadb-backup-4:10.5.16-3.oe2303.riscv64: success
+Jul 27 21:03:53 openeuler-riscv64 [RPM][19557]: install mariadb-gssapi-server-4:10.5.16-3.oe2303.riscv64: success
+Jul 27 21:03:53 openeuler-riscv64 [RPM][19557]: install mariadb-server-utils-4:10.5.16-3.oe2303.riscv64: success
+Jul 27 21:03:53 openeuler-riscv64 [RPM][19557]: install mariadb-server-4:10.5.16-3.oe2303.riscv64: success
+Jul 27 21:03:53 openeuler-riscv64 [RPM][19557]: Transaction ID 64c26ae0 finished: 0
+Jul 27 21:03:58 openeuler-riscv64 systemctl[19603]: [systemctl start mariadb.service] called by PID 19514 (bash -x oe_test_server_mariadb_backup.sh)
+Jul 27 21:03:58 openeuler-riscv64 systemd[1]: Starting MariaDB 10.5.15 database server...
+░░ Subject: A start job for unit mariadb.service has begun execution
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A start job for unit mariadb.service has begun execution.
+░░ 
+░░ The job identifier is 15309.
+Jul 27 21:04:03 openeuler-riscv64 mariadb-prepare-db-dir[19627]: Initializing MariaDB database
+Jul 27 21:04:14 openeuler-riscv64 mariadb-prepare-db-dir[19665]: Two all-privilege accounts were created.
+Jul 27 21:04:14 openeuler-riscv64 mariadb-prepare-db-dir[19665]: One is root@localhost, it has no password, but you need to
+Jul 27 21:04:14 openeuler-riscv64 mariadb-prepare-db-dir[19665]: be system 'root' user to connect. Use, for example, sudo mysql
+Jul 27 21:04:14 openeuler-riscv64 mariadb-prepare-db-dir[19665]: The second is mysql@localhost, it has no password either, but
+Jul 27 21:04:14 openeuler-riscv64 mariadb-prepare-db-dir[19665]: you need to be the system 'mysql' user to connect.
+Jul 27 21:04:14 openeuler-riscv64 mariadb-prepare-db-dir[19665]: After connecting you can set the password, if you would need to be
+Jul 27 21:04:14 openeuler-riscv64 mariadb-prepare-db-dir[19665]: able to connect as any of these users with a password and without sudo
+Jul 27 21:04:14 openeuler-riscv64 mariadb-prepare-db-dir[19665]: See the MariaDB Knowledgebase at https://mariadb.com/kb
+Jul 27 21:04:14 openeuler-riscv64 mariadb-prepare-db-dir[19665]: Please report any problems at https://mariadb.org/jira
+Jul 27 21:04:14 openeuler-riscv64 mariadb-prepare-db-dir[19665]: The latest information about MariaDB is available at https://mariadb.org/.
+Jul 27 21:04:14 openeuler-riscv64 mariadb-prepare-db-dir[19665]: Consider joining MariaDB's strong and vibrant community:
+Jul 27 21:04:14 openeuler-riscv64 mariadb-prepare-db-dir[19665]: https://mariadb.org/get-involved/
+Jul 27 21:04:15 openeuler-riscv64 mariadbd[19713]: 2023-07-27 21:04:15 0 [Note] /usr/libexec/mariadbd (mysqld 10.5.16-MariaDB) starting as process 19713 ...
+Jul 27 21:04:19 openeuler-riscv64 systemd[1]: Started MariaDB 10.5.15 database server.
+░░ Subject: A start job for unit mariadb.service has finished successfully
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A start job for unit mariadb.service has finished successfully.
+░░ 
+░░ The job identifier is 15309.
+Jul 27 21:04:22 openeuler-riscv64 systemctl[19767]: [systemctl stop mariadb] called by PID 19514 (bash -x oe_test_server_mariadb_backup.sh)
+Jul 27 21:04:22 openeuler-riscv64 systemd[1]: Stopping MariaDB 10.5.15 database server...
+░░ Subject: A stop job for unit mariadb.service has begun execution
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A stop job for unit mariadb.service has begun execution.
+░░ 
+░░ The job identifier is 15372.
+Jul 27 21:04:23 openeuler-riscv64 systemd[1]: mariadb.service: Deactivated successfully.
+░░ Subject: Unit succeeded
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ The unit mariadb.service has successfully entered the 'dead' state.
+Jul 27 21:04:23 openeuler-riscv64 systemd[1]: Stopped MariaDB 10.5.15 database server.
+░░ Subject: A stop job for unit mariadb.service has finished
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A stop job for unit mariadb.service has finished.
+░░ 
+░░ The job identifier is 15372 and the job result is done.
+Jul 27 21:04:26 openeuler-riscv64 systemctl[19775]: [systemctl start mariadb] called by PID 19514 (bash -x oe_test_server_mariadb_backup.sh)
+Jul 27 21:04:27 openeuler-riscv64 systemd[1]: Starting MariaDB 10.5.15 database server...
+░░ Subject: A start job for unit mariadb.service has begun execution
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A start job for unit mariadb.service has begun execution.
+░░ 
+░░ The job identifier is 15373.
+Jul 27 21:04:32 openeuler-riscv64 mariadb-prepare-db-dir[19799]: Database MariaDB is probably initialized in /var/lib/mysql already, nothing is done.
+Jul 27 21:04:32 openeuler-riscv64 mariadb-prepare-db-dir[19799]: If this is not the case, make sure the /var/lib/mysql is empty before running mariadb-prepare-db-dir.
+Jul 27 21:04:32 openeuler-riscv64 mariadbd[19835]: 2023-07-27 21:04:32 0 [Note] /usr/libexec/mariadbd (mysqld 10.5.16-MariaDB) starting as process 19835 ...
+Jul 27 21:04:36 openeuler-riscv64 systemd[1]: Started MariaDB 10.5.15 database server.
+░░ Subject: A start job for unit mariadb.service has finished successfully
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A start job for unit mariadb.service has finished successfully.
+░░ 
+░░ The job identifier is 15373.
+Jul 27 21:04:56 openeuler-riscv64 [RPM][19892]: Transaction ID 64c26b78 started
+Jul 27 21:04:57 openeuler-riscv64 [RPM][19892]: erase mariadb-gssapi-server-4:10.5.16-3.oe2303.riscv64: success
+Jul 27 21:04:57 openeuler-riscv64 [RPM][19892]: erase mariadb-backup-4:10.5.16-3.oe2303.riscv64: success
+Jul 27 21:04:57 openeuler-riscv64 [RPM][19892]: erase mariadb-server-4:10.5.16-3.oe2303.riscv64: success
+Jul 27 21:04:57 openeuler-riscv64 [RPM][19892]: erase mariadb-4:10.5.16-3.oe2303.riscv64: success
+Jul 27 21:04:57 openeuler-riscv64 [RPM][19892]: erase iproute-1:6.1.0-7.oe2303.riscv64: success
+Jul 27 21:04:57 openeuler-riscv64 [RPM][19892]: erase mariadb-server-utils-4:10.5.16-3.oe2303.riscv64: success
+Jul 27 21:04:57 openeuler-riscv64 [RPM][19892]: erase mariadb-errmsg-4:10.5.16-3.oe2303.riscv64: success
+Jul 27 21:04:57 openeuler-riscv64 [RPM][19892]: erase perl-DBD-MariaDB-1.22-1.oe2303.riscv64: success
+Jul 27 21:04:57 openeuler-riscv64 [RPM][19892]: erase mariadb-common-4:10.5.16-3.oe2303.riscv64: success
+Jul 27 21:04:57 openeuler-riscv64 [RPM][19892]: erase greatsql-mysql-config-8.0.25-16.7.oe2303.oe2303.riscv64: success
+Jul 27 21:04:57 openeuler-riscv64 [RPM][19892]: erase mariadb-connector-c-3.1.13-7.oe2303.riscv64: success
+Jul 27 21:04:57 openeuler-riscv64 [RPM][19892]: erase perl-DBI-1.643-3.oe2303.riscv64: success
+Jul 27 21:04:57 openeuler-riscv64 [RPM][19892]: erase libbpf-2:0.8.1-5.oe2303.riscv64: success
+Jul 27 21:04:57 openeuler-riscv64 [RPM][19892]: erase mariadb-gssapi-server-4:10.5.16-3.oe2303.riscv64: success
+Jul 27 21:04:57 openeuler-riscv64 [RPM][19892]: erase mariadb-backup-4:10.5.16-3.oe2303.riscv64: success
+Jul 27 21:04:58 openeuler-riscv64 systemctl[19897]: [/usr/bin/systemctl --no-reload --now disable mariadb.service] called by PID 19896 (/bin/sh /var/tmp/rpm-tmp.fPklmA 0)
+Jul 27 21:04:58 openeuler-riscv64 systemd[1]: Stopping MariaDB 10.5.15 database server...
+░░ Subject: A stop job for unit mariadb.service has begun execution
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A stop job for unit mariadb.service has begun execution.
+░░ 
+░░ The job identifier is 15436.
+Jul 27 21:04:59 openeuler-riscv64 systemd[1]: mariadb.service: Deactivated successfully.
+░░ Subject: Unit succeeded
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ The unit mariadb.service has successfully entered the 'dead' state.
+Jul 27 21:04:59 openeuler-riscv64 systemd[1]: Stopped MariaDB 10.5.15 database server.
+░░ Subject: A stop job for unit mariadb.service has finished
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A stop job for unit mariadb.service has finished.
+░░ 
+░░ The job identifier is 15436 and the job result is done.
+Jul 27 21:05:00 openeuler-riscv64 systemctl[19905]: [/usr/bin/systemctl daemon-reload] called by PID 19903 (/bin/sh /var/tmp/rpm-tmp.NHSdJH 0)
+Jul 27 21:05:00 openeuler-riscv64 systemd[1]: Reloading.
+Jul 27 21:05:03 openeuler-riscv64 systemd[1]: /usr/lib/systemd/system/dbus.socket:5: ListenStream= references a path below legacy directory /var/run/, updating /var/run/dbus/system_bus_socket → /run/dbus/system_bus_socket; please update the unit file accordingly.
+Jul 27 21:05:08 openeuler-riscv64 [RPM][19892]: erase mariadb-server-4:10.5.16-3.oe2303.riscv64: success
+Jul 27 21:05:09 openeuler-riscv64 [RPM][19892]: erase mariadb-4:10.5.16-3.oe2303.riscv64: success
+Jul 27 21:05:09 openeuler-riscv64 [RPM][19892]: erase iproute-1:6.1.0-7.oe2303.riscv64: success
+Jul 27 21:05:09 openeuler-riscv64 [RPM][19892]: erase mariadb-server-utils-4:10.5.16-3.oe2303.riscv64: success
+Jul 27 21:05:09 openeuler-riscv64 [RPM][19892]: erase mariadb-errmsg-4:10.5.16-3.oe2303.riscv64: success
+Jul 27 21:05:09 openeuler-riscv64 [RPM][19892]: erase perl-DBD-MariaDB-1.22-1.oe2303.riscv64: success
+Jul 27 21:05:10 openeuler-riscv64 [RPM][19892]: erase mariadb-common-4:10.5.16-3.oe2303.riscv64: success
+Jul 27 21:05:10 openeuler-riscv64 [RPM][19892]: erase greatsql-mysql-config-8.0.25-16.7.oe2303.oe2303.riscv64: success
+Jul 27 21:05:10 openeuler-riscv64 [RPM][19892]: erase mariadb-connector-c-3.1.13-7.oe2303.riscv64: success
+Jul 27 21:05:11 openeuler-riscv64 [RPM][19892]: erase perl-DBI-1.643-3.oe2303.riscv64: success
+Jul 27 21:05:11 openeuler-riscv64 [RPM][19892]: erase libbpf-2:0.8.1-5.oe2303.riscv64: success
+Jul 27 21:05:11 openeuler-riscv64 systemd[1]: Started /usr/bin/systemctl start man-db-cache-update.
+░░ Subject: A start job for unit run-r5aaace0c7e3445b1be408264af7ca8d5.service has finished successfully
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A start job for unit run-r5aaace0c7e3445b1be408264af7ca8d5.service has finished successfully.
+░░ 
+░░ The job identifier is 15437.
+Jul 27 21:05:12 openeuler-riscv64 [RPM][19892]: Transaction ID 64c26b78 finished: 0
+Jul 27 21:05:12 openeuler-riscv64 systemctl[19921]: [/usr/bin/systemctl start man-db-cache-update] called by PID 1 (/sbin/init)
+Jul 27 21:05:12 openeuler-riscv64 systemd[1]: Starting man-db-cache-update.service...
+░░ Subject: A start job for unit man-db-cache-update.service has begun execution
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A start job for unit man-db-cache-update.service has begun execution.
+░░ 
+░░ The job identifier is 15500.
+Jul 27 21:05:14 openeuler-riscv64 systemd[1]: man-db-cache-update.service: Deactivated successfully.
+░░ Subject: Unit succeeded
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ The unit man-db-cache-update.service has successfully entered the 'dead' state.
+Jul 27 21:05:14 openeuler-riscv64 systemd[1]: Finished man-db-cache-update.service.
+░░ Subject: A start job for unit man-db-cache-update.service has finished successfully
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A start job for unit man-db-cache-update.service has finished successfully.
+░░ 
+░░ The job identifier is 15500.
+Jul 27 21:05:15 openeuler-riscv64 systemd[1]: run-r5aaace0c7e3445b1be408264af7ca8d5.service: Deactivated successfully.
+░░ Subject: Unit succeeded
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ The unit run-r5aaace0c7e3445b1be408264af7ca8d5.service has successfully entered the 'dead' state.
+Jul 27 21:05:22 openeuler-riscv64 sudo[19467]: pam_unix(sudo:session): session closed for user root
+Jul 27 21:05:23 openeuler-riscv64 sudo[19946]:     root : PWD=/root/mugen ; USER=root ; COMMAND=/usr/bin/bash mugen.sh -f os-basic -r oe_test_server_httpd_tls -x
+Jul 27 21:05:23 openeuler-riscv64 sudo[19946]: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=0)
+Jul 27 21:06:45 openeuler-riscv64 [RPM][20025]: Transaction ID 64c26be4 started
+Jul 27 21:06:45 openeuler-riscv64 [RPM][20025]: install mariadb-connector-c-3.1.13-7.oe2303.riscv64: success
+Jul 27 21:06:46 openeuler-riscv64 [RPM][20025]: install apr-1.7.0-5.oe2303.riscv64: success
+Jul 27 21:06:47 openeuler-riscv64 [RPM][20025]: install httpd-filesystem-2.4.55-1.oe2303.noarch: success
+Jul 27 21:06:47 openeuler-riscv64 [RPM][20025]: install openEuler-logos-httpd-1.0-8.oe2303.noarch: success
+Jul 27 21:06:47 openeuler-riscv64 [RPM][20025]: install mariadb-connector-c-3.1.13-7.oe2303.riscv64: success
+Jul 27 21:06:48 openeuler-riscv64 [RPM][20025]: install apr-util-1.6.1-14.oe2303.riscv64: success
+Jul 27 21:06:48 openeuler-riscv64 [RPM][20025]: install httpd-tools-2.4.55-1.oe2303.riscv64: success
+Jul 27 21:06:49 openeuler-riscv64 [RPM][20025]: install mailcap-2.1.53-3.oe2303.noarch: success
+Jul 27 21:06:49 openeuler-riscv64 [RPM][20025]: install mod_http2-2.0.3-1.oe2303.riscv64: success
+Jul 27 21:06:53 openeuler-riscv64 systemctl[20039]: [/usr/bin/systemctl --no-reload preset httpd.service htcacheclean.service httpd.socket] called by PID 20038 (/bin/sh /var/tmp/rpm-tmp.3lN8AG 1)
+Jul 27 21:06:53 openeuler-riscv64 [RPM][20025]: install httpd-2.4.55-1.oe2303.riscv64: success
+Jul 27 21:06:54 openeuler-riscv64 [RPM][20025]: install libtalloc-2.3.4-1.oe2303.riscv64: success
+Jul 27 21:06:54 openeuler-riscv64 [RPM][20025]: install ding-libs-0.6.1-45.oe2303.riscv64: success
+Jul 27 21:06:54 openeuler-riscv64 [RPM][20025]: install sscg-3.0.3-1.oe2303.riscv64: success
+Jul 27 21:06:55 openeuler-riscv64 [RPM][20025]: install mod_ssl-1:2.4.55-1.oe2303.riscv64: success
+Jul 27 21:06:55 openeuler-riscv64 systemctl[20043]: [/bin/systemctl --no-block try-restart httpd.service htcacheclean.service] called by PID 20042 (/bin/sh /var/tmp/rpm-tmp.GwlYVb 1)
+Jul 27 21:06:55 openeuler-riscv64 [RPM][20025]: install httpd-2.4.55-1.oe2303.riscv64: success
+Jul 27 21:06:57 openeuler-riscv64 systemd[1]: Started /usr/bin/systemctl start man-db-cache-update.
+░░ Subject: A start job for unit run-r261d7978aa464270ab2bd5a412455770.service has finished successfully
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A start job for unit run-r261d7978aa464270ab2bd5a412455770.service has finished successfully.
+░░ 
+░░ The job identifier is 15505.
+Jul 27 21:06:57 openeuler-riscv64 systemctl[20048]: [/usr/bin/systemctl start man-db-cache-update] called by PID 1 (/sbin/init)
+Jul 27 21:06:58 openeuler-riscv64 systemctl[20050]: [/usr/bin/systemctl daemon-reload] called by PID 20049 (/bin/sh /var/tmp/rpm-tmp.GsV8EO 0)
+Jul 27 21:06:58 openeuler-riscv64 systemd[1]: Starting man-db-cache-update.service...
+░░ Subject: A start job for unit man-db-cache-update.service has begun execution
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A start job for unit man-db-cache-update.service has begun execution.
+░░ 
+░░ The job identifier is 15568.
+Jul 27 21:06:58 openeuler-riscv64 systemd[1]: Reloading.
+Jul 27 21:07:01 openeuler-riscv64 systemd[1]: /usr/lib/systemd/system/dbus.socket:5: ListenStream= references a path below legacy directory /var/run/, updating /var/run/dbus/system_bus_socket → /run/dbus/system_bus_socket; please update the unit file accordingly.
+Jul 27 21:07:07 openeuler-riscv64 systemd[1]: man-db-cache-update.service: Deactivated successfully.
+░░ Subject: Unit succeeded
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ The unit man-db-cache-update.service has successfully entered the 'dead' state.
+Jul 27 21:07:07 openeuler-riscv64 systemd[1]: Finished man-db-cache-update.service.
+░░ Subject: A start job for unit man-db-cache-update.service has finished successfully
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A start job for unit man-db-cache-update.service has finished successfully.
+░░ 
+░░ The job identifier is 15568.
+Jul 27 21:07:08 openeuler-riscv64 [RPM][20025]: install apr-1.7.0-5.oe2303.riscv64: success
+Jul 27 21:07:08 openeuler-riscv64 [RPM][20025]: install httpd-filesystem-2.4.55-1.oe2303.noarch: success
+Jul 27 21:07:08 openeuler-riscv64 [RPM][20025]: install openEuler-logos-httpd-1.0-8.oe2303.noarch: success
+Jul 27 21:07:08 openeuler-riscv64 [RPM][20025]: install mariadb-connector-c-3.1.13-7.oe2303.riscv64: success
+Jul 27 21:07:08 openeuler-riscv64 [RPM][20025]: install apr-util-1.6.1-14.oe2303.riscv64: success
+Jul 27 21:07:08 openeuler-riscv64 [RPM][20025]: install httpd-tools-2.4.55-1.oe2303.riscv64: success
+Jul 27 21:07:08 openeuler-riscv64 [RPM][20025]: install mailcap-2.1.53-3.oe2303.noarch: success
+Jul 27 21:07:08 openeuler-riscv64 [RPM][20025]: install mod_http2-2.0.3-1.oe2303.riscv64: success
+Jul 27 21:07:08 openeuler-riscv64 [RPM][20025]: install httpd-2.4.55-1.oe2303.riscv64: success
+Jul 27 21:07:08 openeuler-riscv64 [RPM][20025]: install libtalloc-2.3.4-1.oe2303.riscv64: success
+Jul 27 21:07:08 openeuler-riscv64 [RPM][20025]: install ding-libs-0.6.1-45.oe2303.riscv64: success
+Jul 27 21:07:08 openeuler-riscv64 [RPM][20025]: install sscg-3.0.3-1.oe2303.riscv64: success
+Jul 27 21:07:08 openeuler-riscv64 [RPM][20025]: install mod_ssl-1:2.4.55-1.oe2303.riscv64: success
+Jul 27 21:07:08 openeuler-riscv64 [RPM][20025]: Transaction ID 64c26be4 finished: 0
+Jul 27 21:07:08 openeuler-riscv64 systemd[1]: run-r261d7978aa464270ab2bd5a412455770.service: Deactivated successfully.
+░░ Subject: Unit succeeded
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ The unit run-r261d7978aa464270ab2bd5a412455770.service has successfully entered the 'dead' state.
+Jul 27 21:07:14 openeuler-riscv64 systemctl[20080]: [systemctl enable httpd] called by PID 19993 (bash -x oe_test_server_httpd_tls.sh)
+Jul 27 21:07:15 openeuler-riscv64 systemd[1]: Reloading.
+Jul 27 21:07:18 openeuler-riscv64 systemd[1]: /usr/lib/systemd/system/dbus.socket:5: ListenStream= references a path below legacy directory /var/run/, updating /var/run/dbus/system_bus_socket → /run/dbus/system_bus_socket; please update the unit file accordingly.
+Jul 27 21:07:23 openeuler-riscv64 systemctl[20091]: [systemctl start httpd] called by PID 19993 (bash -x oe_test_server_httpd_tls.sh)
+Jul 27 21:07:23 openeuler-riscv64 systemd[1]: Starting One-time temporary TLS key generation for httpd.service...
+░░ Subject: A start job for unit httpd-init.service has begun execution
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A start job for unit httpd-init.service has begun execution.
+░░ 
+░░ The job identifier is 15634.
+Jul 27 21:07:52 openeuler-riscv64 NetworkManager[270]: <info>  [1690463272.8642] policy: auto-activating connection 'Wired connection 2' (ef61f214-000f-3cf6-8b37-6b717fb363ec)
+Jul 27 21:07:52 openeuler-riscv64 NetworkManager[270]: <info>  [1690463272.9211] device (eth1): Activation: starting connection 'Wired connection 2' (ef61f214-000f-3cf6-8b37-6b717fb363ec)
+Jul 27 21:07:52 openeuler-riscv64 NetworkManager[270]: <info>  [1690463272.9262] device (eth1): state change: disconnected -> prepare (reason 'none', sys-iface-state: 'managed')
+Jul 27 21:07:52 openeuler-riscv64 NetworkManager[270]: <info>  [1690463272.9773] device (eth1): state change: prepare -> config (reason 'none', sys-iface-state: 'managed')
+Jul 27 21:07:53 openeuler-riscv64 NetworkManager[270]: <info>  [1690463273.0236] device (eth1): state change: config -> ip-config (reason 'none', sys-iface-state: 'managed')
+Jul 27 21:07:53 openeuler-riscv64 NetworkManager[270]: <info>  [1690463273.0423] dhcp4 (eth1): activation: beginning transaction (timeout in 45 seconds)
+Jul 27 21:07:53 openeuler-riscv64 NetworkManager[270]: <info>  [1690463273.8263] policy: auto-activating connection 'Wired connection 3' (71d59045-f2a0-32fa-8ba9-93a6576f5e87)
+Jul 27 21:07:53 openeuler-riscv64 NetworkManager[270]: <info>  [1690463273.8385] device (eth2): Activation: starting connection 'Wired connection 3' (71d59045-f2a0-32fa-8ba9-93a6576f5e87)
+Jul 27 21:07:53 openeuler-riscv64 NetworkManager[270]: <info>  [1690463273.8433] device (eth2): state change: disconnected -> prepare (reason 'none', sys-iface-state: 'managed')
+Jul 27 21:07:53 openeuler-riscv64 NetworkManager[270]: <info>  [1690463273.8650] device (eth2): state change: prepare -> config (reason 'none', sys-iface-state: 'managed')
+Jul 27 21:07:53 openeuler-riscv64 NetworkManager[270]: <info>  [1690463273.8874] device (eth2): state change: config -> ip-config (reason 'none', sys-iface-state: 'managed')
+Jul 27 21:07:53 openeuler-riscv64 NetworkManager[270]: <info>  [1690463273.9009] dhcp4 (eth2): activation: beginning transaction (timeout in 45 seconds)
+Jul 27 21:07:56 openeuler-riscv64 ntpd[5555]: Listen normally on 58 eth1 [fe80::edfb:237f:711:e1ee%3]:123
+Jul 27 21:07:56 openeuler-riscv64 ntpd[5555]: Listen normally on 59 eth2 [fe80::5c34:cef6:6655:3c3c%4]:123
+Jul 27 21:07:56 openeuler-riscv64 ntpd[5555]: new interface(s) found: waking up resolver
+Jul 27 21:08:13 openeuler-riscv64 systemd[1]: httpd-init.service: Deactivated successfully.
+░░ Subject: Unit succeeded
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ The unit httpd-init.service has successfully entered the 'dead' state.
+Jul 27 21:08:13 openeuler-riscv64 systemd[1]: Finished One-time temporary TLS key generation for httpd.service.
+░░ Subject: A start job for unit httpd-init.service has finished successfully
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A start job for unit httpd-init.service has finished successfully.
+░░ 
+░░ The job identifier is 15634.
+Jul 27 21:08:13 openeuler-riscv64 systemd[1]: Starting The Apache HTTP Server...
+░░ Subject: A start job for unit httpd.service has begun execution
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A start job for unit httpd.service has begun execution.
+░░ 
+░░ The job identifier is 15571.
+Jul 27 21:08:15 openeuler-riscv64 httpd[20098]: AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using fe80::4cc1:c5d3:b0b3:9cc8%eth0. Set the 'ServerName' directive globally to suppress this message
+Jul 27 21:08:15 openeuler-riscv64 systemd[1]: Started The Apache HTTP Server.
+░░ Subject: A start job for unit httpd.service has finished successfully
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A start job for unit httpd.service has finished successfully.
+░░ 
+░░ The job identifier is 15571.
+Jul 27 21:08:19 openeuler-riscv64 systemctl[20283]: [systemctl restart httpd] called by PID 19993 (bash -x oe_test_server_httpd_tls.sh)
+Jul 27 21:08:19 openeuler-riscv64 systemd[1]: Stopping The Apache HTTP Server...
+░░ Subject: A stop job for unit httpd.service has begun execution
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A stop job for unit httpd.service has begun execution.
+░░ 
+░░ The job identifier is 15636.
+Jul 27 21:08:20 openeuler-riscv64 systemd[1]: httpd.service: Deactivated successfully.
+░░ Subject: Unit succeeded
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ The unit httpd.service has successfully entered the 'dead' state.
+Jul 27 21:08:20 openeuler-riscv64 systemd[1]: Stopped The Apache HTTP Server.
+░░ Subject: A stop job for unit httpd.service has finished
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A stop job for unit httpd.service has finished.
+░░ 
+░░ The job identifier is 15636 and the job result is done.
+Jul 27 21:08:20 openeuler-riscv64 systemd[1]: Condition check resulted in One-time temporary TLS key generation for httpd.service being skipped.
+░░ Subject: A start job for unit httpd-init.service has finished successfully
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A start job for unit httpd-init.service has finished successfully.
+░░ 
+░░ The job identifier is 15699.
+Jul 27 21:08:20 openeuler-riscv64 systemd[1]: Starting The Apache HTTP Server...
+░░ Subject: A start job for unit httpd.service has begun execution
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A start job for unit httpd.service has begun execution.
+░░ 
+░░ The job identifier is 15636.
+Jul 27 21:08:22 openeuler-riscv64 httpd[20287]: AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using fe80::4cc1:c5d3:b0b3:9cc8%eth0. Set the 'ServerName' directive globally to suppress this message
+Jul 27 21:08:22 openeuler-riscv64 systemd[1]: Started The Apache HTTP Server.
+░░ Subject: A start job for unit httpd.service has finished successfully
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A start job for unit httpd.service has finished successfully.
+░░ 
+░░ The job identifier is 15636.
+Jul 27 21:08:29 openeuler-riscv64 systemctl[20526]: [systemctl reload httpd] called by PID 19993 (bash -x oe_test_server_httpd_tls.sh)
+Jul 27 21:08:29 openeuler-riscv64 systemd[1]: Reloading The Apache HTTP Server...
+░░ Subject: A reload job for unit httpd.service has begun execution
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A reload job for unit httpd.service has begun execution.
+░░ 
+░░ The job identifier is 15701.
+Jul 27 21:08:30 openeuler-riscv64 httpd[20527]: AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using fe80::4cc1:c5d3:b0b3:9cc8%eth0. Set the 'ServerName' directive globally to suppress this message
+Jul 27 21:08:31 openeuler-riscv64 systemd[1]: Reloaded The Apache HTTP Server.
+░░ Subject: A reload job for unit httpd.service has finished
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A reload job for unit httpd.service has finished.
+░░ 
+░░ The job identifier is 15701 and the job result is done.
+Jul 27 21:08:31 openeuler-riscv64 systemctl[20528]: [systemctl stop httpd] called by PID 19993 (bash -x oe_test_server_httpd_tls.sh)
+Jul 27 21:08:31 openeuler-riscv64 systemd[1]: Stopping The Apache HTTP Server...
+░░ Subject: A stop job for unit httpd.service has begun execution
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A stop job for unit httpd.service has begun execution.
+░░ 
+░░ The job identifier is 15702.
+Jul 27 21:08:32 openeuler-riscv64 systemd[1]: httpd.service: Deactivated successfully.
+░░ Subject: Unit succeeded
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ The unit httpd.service has successfully entered the 'dead' state.
+Jul 27 21:08:32 openeuler-riscv64 systemd[1]: Stopped The Apache HTTP Server.
+░░ Subject: A stop job for unit httpd.service has finished
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A stop job for unit httpd.service has finished.
+░░ 
+░░ The job identifier is 15702 and the job result is done.
+Jul 27 21:08:37 openeuler-riscv64 NetworkManager[270]: <warn>  [1690463317.8281] dhcp4 (eth1): request timed out
+Jul 27 21:08:37 openeuler-riscv64 NetworkManager[270]: <info>  [1690463317.8412] dhcp4 (eth1): state changed unknown -> timeout
+Jul 27 21:08:37 openeuler-riscv64 NetworkManager[270]: <info>  [1690463317.8615] device (eth1): state change: ip-config -> failed (reason 'ip-config-unavailable', sys-iface-state: 'managed')
+Jul 27 21:08:37 openeuler-riscv64 NetworkManager[270]: <warn>  [1690463317.9318] device (eth1): Activation: failed for connection 'Wired connection 2'
+Jul 27 21:08:37 openeuler-riscv64 NetworkManager[270]: <info>  [1690463317.9451] device (eth1): state change: failed -> disconnected (reason 'none', sys-iface-state: 'managed')
+Jul 27 21:08:38 openeuler-riscv64 NetworkManager[270]: <info>  [1690463318.0133] dhcp4 (eth1): canceled DHCP transaction
+Jul 27 21:08:38 openeuler-riscv64 NetworkManager[270]: <info>  [1690463318.0140] dhcp4 (eth1): state changed timeout -> terminated
+Jul 27 21:08:38 openeuler-riscv64 NetworkManager[270]: <info>  [1690463318.0911] policy: auto-activating connection 'Wired connection 2' (ef61f214-000f-3cf6-8b37-6b717fb363ec)
+Jul 27 21:08:38 openeuler-riscv64 NetworkManager[270]: <info>  [1690463318.1151] device (eth1): Activation: starting connection 'Wired connection 2' (ef61f214-000f-3cf6-8b37-6b717fb363ec)
+Jul 27 21:08:38 openeuler-riscv64 NetworkManager[270]: <info>  [1690463318.1185] device (eth1): state change: disconnected -> prepare (reason 'none', sys-iface-state: 'managed')
+Jul 27 21:08:38 openeuler-riscv64 NetworkManager[270]: <info>  [1690463318.1283] device (eth1): state change: prepare -> config (reason 'none', sys-iface-state: 'managed')
+Jul 27 21:08:38 openeuler-riscv64 NetworkManager[270]: <info>  [1690463318.1456] device (eth1): state change: config -> ip-config (reason 'none', sys-iface-state: 'managed')
+Jul 27 21:08:38 openeuler-riscv64 NetworkManager[270]: <info>  [1690463318.1542] dhcp4 (eth1): activation: beginning transaction (timeout in 45 seconds)
+Jul 27 21:08:38 openeuler-riscv64 NetworkManager[270]: <warn>  [1690463318.8251] dhcp4 (eth2): request timed out
+Jul 27 21:08:38 openeuler-riscv64 NetworkManager[270]: <info>  [1690463318.8259] dhcp4 (eth2): state changed unknown -> timeout
+Jul 27 21:08:38 openeuler-riscv64 NetworkManager[270]: <info>  [1690463318.8276] device (eth2): state change: ip-config -> failed (reason 'ip-config-unavailable', sys-iface-state: 'managed')
+Jul 27 21:08:38 openeuler-riscv64 NetworkManager[270]: <warn>  [1690463318.8352] device (eth2): Activation: failed for connection 'Wired connection 3'
+Jul 27 21:08:38 openeuler-riscv64 NetworkManager[270]: <info>  [1690463318.8415] device (eth2): state change: failed -> disconnected (reason 'none', sys-iface-state: 'managed')
+Jul 27 21:08:38 openeuler-riscv64 NetworkManager[270]: <info>  [1690463318.8770] dhcp4 (eth2): canceled DHCP transaction
+Jul 27 21:08:38 openeuler-riscv64 NetworkManager[270]: <info>  [1690463318.8778] dhcp4 (eth2): state changed timeout -> terminated
+Jul 27 21:08:38 openeuler-riscv64 NetworkManager[270]: <info>  [1690463318.9039] policy: auto-activating connection 'Wired connection 3' (71d59045-f2a0-32fa-8ba9-93a6576f5e87)
+Jul 27 21:08:38 openeuler-riscv64 NetworkManager[270]: <info>  [1690463318.9116] device (eth2): Activation: starting connection 'Wired connection 3' (71d59045-f2a0-32fa-8ba9-93a6576f5e87)
+Jul 27 21:08:38 openeuler-riscv64 NetworkManager[270]: <info>  [1690463318.9148] device (eth2): state change: disconnected -> prepare (reason 'none', sys-iface-state: 'managed')
+Jul 27 21:08:38 openeuler-riscv64 NetworkManager[270]: <info>  [1690463318.9212] device (eth2): state change: prepare -> config (reason 'none', sys-iface-state: 'managed')
+Jul 27 21:08:38 openeuler-riscv64 NetworkManager[270]: <info>  [1690463318.9296] device (eth2): state change: config -> ip-config (reason 'none', sys-iface-state: 'managed')
+Jul 27 21:08:38 openeuler-riscv64 NetworkManager[270]: <info>  [1690463318.9348] dhcp4 (eth2): activation: beginning transaction (timeout in 45 seconds)
+Jul 27 21:08:48 openeuler-riscv64 [RPM][20535]: Transaction ID 64c26c60 started
+Jul 27 21:08:49 openeuler-riscv64 [RPM][20535]: erase mod_ssl-1:2.4.55-1.oe2303.riscv64: success
+Jul 27 21:08:49 openeuler-riscv64 [RPM][20535]: erase httpd-2.4.55-1.oe2303.riscv64: success
+Jul 27 21:08:49 openeuler-riscv64 [RPM][20535]: erase sscg-3.0.3-1.oe2303.riscv64: success
+Jul 27 21:08:49 openeuler-riscv64 [RPM][20535]: erase httpd-filesystem-2.4.55-1.oe2303.noarch: success
+Jul 27 21:08:49 openeuler-riscv64 [RPM][20535]: erase mailcap-2.1.53-3.oe2303.noarch: success
+Jul 27 21:08:49 openeuler-riscv64 [RPM][20535]: erase openEuler-logos-httpd-1.0-8.oe2303.noarch: success
+Jul 27 21:08:49 openeuler-riscv64 [RPM][20535]: erase httpd-tools-2.4.55-1.oe2303.riscv64: success
+Jul 27 21:08:49 openeuler-riscv64 [RPM][20535]: erase apr-util-1.6.1-14.oe2303.riscv64: success
+Jul 27 21:08:49 openeuler-riscv64 [RPM][20535]: erase apr-1.7.0-5.oe2303.riscv64: success
+Jul 27 21:08:49 openeuler-riscv64 [RPM][20535]: erase mariadb-connector-c-3.1.13-7.oe2303.riscv64: success
+Jul 27 21:08:49 openeuler-riscv64 [RPM][20535]: erase ding-libs-0.6.1-45.oe2303.riscv64: success
+Jul 27 21:08:49 openeuler-riscv64 [RPM][20535]: erase libtalloc-2.3.4-1.oe2303.riscv64: success
+Jul 27 21:08:49 openeuler-riscv64 [RPM][20535]: erase mod_http2-2.0.3-1.oe2303.riscv64: success
+Jul 27 21:08:50 openeuler-riscv64 systemctl[20541]: [/usr/bin/systemctl daemon-reload] called by PID 20539 (/bin/sh /var/tmp/rpm-tmp.1MtOXw 0)
+Jul 27 21:08:50 openeuler-riscv64 systemd[1]: Reloading.
+Jul 27 21:08:53 openeuler-riscv64 systemd[1]: /usr/lib/systemd/system/dbus.socket:5: ListenStream= references a path below legacy directory /var/run/, updating /var/run/dbus/system_bus_socket → /run/dbus/system_bus_socket; please update the unit file accordingly.
+Jul 27 21:08:58 openeuler-riscv64 [RPM][20535]: erase mod_ssl-1:2.4.55-1.oe2303.riscv64: success
+Jul 27 21:08:59 openeuler-riscv64 systemctl[20553]: [/usr/bin/systemctl --no-reload --now disable httpd.service htcacheclean.service httpd.socket] called by PID 20552 (/bin/sh /var/tmp/rpm-tmp.1xaCEw 0)
+Jul 27 21:09:01 openeuler-riscv64 [RPM][20535]: erase httpd-2.4.55-1.oe2303.riscv64: success
+Jul 27 21:09:02 openeuler-riscv64 [RPM][20535]: erase sscg-3.0.3-1.oe2303.riscv64: success
+Jul 27 21:09:02 openeuler-riscv64 [RPM][20535]: erase httpd-filesystem-2.4.55-1.oe2303.noarch: success
+Jul 27 21:09:03 openeuler-riscv64 [RPM][20535]: erase mailcap-2.1.53-3.oe2303.noarch: success
+Jul 27 21:09:03 openeuler-riscv64 [RPM][20535]: erase openEuler-logos-httpd-1.0-8.oe2303.noarch: success
+Jul 27 21:09:03 openeuler-riscv64 [RPM][20535]: erase httpd-tools-2.4.55-1.oe2303.riscv64: success
+Jul 27 21:09:04 openeuler-riscv64 [RPM][20535]: erase apr-util-1.6.1-14.oe2303.riscv64: success
+Jul 27 21:09:04 openeuler-riscv64 [RPM][20535]: erase apr-1.7.0-5.oe2303.riscv64: success
+Jul 27 21:09:04 openeuler-riscv64 [RPM][20535]: erase mariadb-connector-c-3.1.13-7.oe2303.riscv64: success
+Jul 27 21:09:05 openeuler-riscv64 [RPM][20535]: erase ding-libs-0.6.1-45.oe2303.riscv64: success
+Jul 27 21:09:05 openeuler-riscv64 [RPM][20535]: erase libtalloc-2.3.4-1.oe2303.riscv64: success
+Jul 27 21:09:05 openeuler-riscv64 [RPM][20535]: erase mod_http2-2.0.3-1.oe2303.riscv64: success
+Jul 27 21:09:06 openeuler-riscv64 systemd[1]: Started /usr/bin/systemctl start man-db-cache-update.
+░░ Subject: A start job for unit run-r048a25b9de174523ab36b4436ad80cba.service has finished successfully
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A start job for unit run-r048a25b9de174523ab36b4436ad80cba.service has finished successfully.
+░░ 
+░░ The job identifier is 15706.
+Jul 27 21:09:06 openeuler-riscv64 [RPM][20535]: Transaction ID 64c26c60 finished: 0
+Jul 27 21:09:06 openeuler-riscv64 systemctl[20567]: [/usr/bin/systemctl start man-db-cache-update] called by PID 1 (/sbin/init)
+Jul 27 21:09:06 openeuler-riscv64 systemd[1]: Starting man-db-cache-update.service...
+░░ Subject: A start job for unit man-db-cache-update.service has begun execution
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A start job for unit man-db-cache-update.service has begun execution.
+░░ 
+░░ The job identifier is 15769.
+Jul 27 21:09:09 openeuler-riscv64 systemd[1]: man-db-cache-update.service: Deactivated successfully.
+░░ Subject: Unit succeeded
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ The unit man-db-cache-update.service has successfully entered the 'dead' state.
+Jul 27 21:09:09 openeuler-riscv64 systemd[1]: Finished man-db-cache-update.service.
+░░ Subject: A start job for unit man-db-cache-update.service has finished successfully
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A start job for unit man-db-cache-update.service has finished successfully.
+░░ 
+░░ The job identifier is 15769.
+Jul 27 21:09:10 openeuler-riscv64 systemd[1]: run-r048a25b9de174523ab36b4436ad80cba.service: Deactivated successfully.
+░░ Subject: Unit succeeded
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ The unit run-r048a25b9de174523ab36b4436ad80cba.service has successfully entered the 'dead' state.
+Jul 27 21:09:15 openeuler-riscv64 sudo[19946]: pam_unix(sudo:session): session closed for user root
+Jul 27 21:09:16 openeuler-riscv64 sudo[20591]:     root : PWD=/root/mugen ; USER=root ; COMMAND=/usr/bin/bash mugen.sh -f os-basic -r oe_test_server_httpd_restart -x
+Jul 27 21:09:16 openeuler-riscv64 sudo[20591]: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=0)
+Jul 27 21:09:23 openeuler-riscv64 NetworkManager[270]: <warn>  [1690463363.8251] dhcp4 (eth1): request timed out
+Jul 27 21:09:23 openeuler-riscv64 NetworkManager[270]: <info>  [1690463363.8260] dhcp4 (eth1): state changed unknown -> timeout
+Jul 27 21:09:23 openeuler-riscv64 NetworkManager[270]: <warn>  [1690463363.8268] dhcp4 (eth2): request timed out
+Jul 27 21:09:23 openeuler-riscv64 NetworkManager[270]: <info>  [1690463363.8277] dhcp4 (eth2): state changed unknown -> timeout
+Jul 27 21:09:23 openeuler-riscv64 NetworkManager[270]: <info>  [1690463363.8291] device (eth1): state change: ip-config -> failed (reason 'ip-config-unavailable', sys-iface-state: 'managed')
+Jul 27 21:09:23 openeuler-riscv64 NetworkManager[270]: <warn>  [1690463363.8377] device (eth1): Activation: failed for connection 'Wired connection 2'
+Jul 27 21:09:23 openeuler-riscv64 NetworkManager[270]: <info>  [1690463363.8385] device (eth2): state change: ip-config -> failed (reason 'ip-config-unavailable', sys-iface-state: 'managed')
+Jul 27 21:09:23 openeuler-riscv64 NetworkManager[270]: <warn>  [1690463363.8448] device (eth2): Activation: failed for connection 'Wired connection 3'
+Jul 27 21:09:23 openeuler-riscv64 NetworkManager[270]: <info>  [1690463363.8509] device (eth1): state change: failed -> disconnected (reason 'none', sys-iface-state: 'managed')
+Jul 27 21:09:23 openeuler-riscv64 NetworkManager[270]: <info>  [1690463363.8770] dhcp4 (eth1): canceled DHCP transaction
+Jul 27 21:09:23 openeuler-riscv64 NetworkManager[270]: <info>  [1690463363.8777] dhcp4 (eth1): state changed timeout -> terminated
+Jul 27 21:09:23 openeuler-riscv64 NetworkManager[270]: <info>  [1690463363.8943] device (eth2): state change: failed -> disconnected (reason 'none', sys-iface-state: 'managed')
+Jul 27 21:09:23 openeuler-riscv64 NetworkManager[270]: <info>  [1690463363.9210] dhcp4 (eth2): canceled DHCP transaction
+Jul 27 21:09:23 openeuler-riscv64 NetworkManager[270]: <info>  [1690463363.9217] dhcp4 (eth2): state changed timeout -> terminated
+Jul 27 21:09:23 openeuler-riscv64 NetworkManager[270]: <info>  [1690463363.9452] policy: auto-activating connection 'Wired connection 2' (ef61f214-000f-3cf6-8b37-6b717fb363ec)
+Jul 27 21:09:23 openeuler-riscv64 NetworkManager[270]: <info>  [1690463363.9547] policy: auto-activating connection 'Wired connection 3' (71d59045-f2a0-32fa-8ba9-93a6576f5e87)
+Jul 27 21:09:23 openeuler-riscv64 NetworkManager[270]: <info>  [1690463363.9623] device (eth1): Activation: starting connection 'Wired connection 2' (ef61f214-000f-3cf6-8b37-6b717fb363ec)
+Jul 27 21:09:23 openeuler-riscv64 NetworkManager[270]: <info>  [1690463363.9672] device (eth2): Activation: starting connection 'Wired connection 3' (71d59045-f2a0-32fa-8ba9-93a6576f5e87)
+Jul 27 21:09:23 openeuler-riscv64 NetworkManager[270]: <info>  [1690463363.9696] device (eth1): state change: disconnected -> prepare (reason 'none', sys-iface-state: 'managed')
+Jul 27 21:09:23 openeuler-riscv64 NetworkManager[270]: <info>  [1690463363.9757] device (eth1): state change: prepare -> config (reason 'none', sys-iface-state: 'managed')
+Jul 27 21:09:23 openeuler-riscv64 NetworkManager[270]: <info>  [1690463363.9839] device (eth2): state change: disconnected -> prepare (reason 'none', sys-iface-state: 'managed')
+Jul 27 21:09:23 openeuler-riscv64 NetworkManager[270]: <info>  [1690463363.9904] device (eth2): state change: prepare -> config (reason 'none', sys-iface-state: 'managed')
+Jul 27 21:09:23 openeuler-riscv64 NetworkManager[270]: <info>  [1690463363.9989] device (eth1): state change: config -> ip-config (reason 'none', sys-iface-state: 'managed')
+Jul 27 21:09:24 openeuler-riscv64 NetworkManager[270]: <info>  [1690463364.0036] dhcp4 (eth1): activation: beginning transaction (timeout in 45 seconds)
+Jul 27 21:09:24 openeuler-riscv64 NetworkManager[270]: <info>  [1690463364.0242] device (eth2): state change: config -> ip-config (reason 'none', sys-iface-state: 'managed')
+Jul 27 21:09:24 openeuler-riscv64 NetworkManager[270]: <info>  [1690463364.0354] dhcp4 (eth2): activation: beginning transaction (timeout in 45 seconds)
+Jul 27 21:10:08 openeuler-riscv64 NetworkManager[270]: <warn>  [1690463408.8251] dhcp4 (eth1): request timed out
+Jul 27 21:10:08 openeuler-riscv64 NetworkManager[270]: <info>  [1690463408.8259] dhcp4 (eth1): state changed unknown -> timeout
+Jul 27 21:10:08 openeuler-riscv64 NetworkManager[270]: <warn>  [1690463408.8266] dhcp4 (eth2): request timed out
+Jul 27 21:10:08 openeuler-riscv64 NetworkManager[270]: <info>  [1690463408.8271] dhcp4 (eth2): state changed unknown -> timeout
+Jul 27 21:10:08 openeuler-riscv64 NetworkManager[270]: <info>  [1690463408.8282] device (eth1): state change: ip-config -> failed (reason 'ip-config-unavailable', sys-iface-state: 'managed')
+Jul 27 21:10:08 openeuler-riscv64 NetworkManager[270]: <warn>  [1690463408.8440] device (eth1): Activation: failed for connection 'Wired connection 2'
+Jul 27 21:10:08 openeuler-riscv64 NetworkManager[270]: <info>  [1690463408.8463] device (eth2): state change: ip-config -> failed (reason 'ip-config-unavailable', sys-iface-state: 'managed')
+Jul 27 21:10:08 openeuler-riscv64 NetworkManager[270]: <warn>  [1690463408.8618] device (eth2): Activation: failed for connection 'Wired connection 3'
+Jul 27 21:10:08 openeuler-riscv64 NetworkManager[270]: <info>  [1690463408.8752] device (eth1): state change: failed -> disconnected (reason 'none', sys-iface-state: 'managed')
+Jul 27 21:10:08 openeuler-riscv64 NetworkManager[270]: <info>  [1690463408.9049] dhcp4 (eth1): canceled DHCP transaction
+Jul 27 21:10:08 openeuler-riscv64 NetworkManager[270]: <info>  [1690463408.9057] dhcp4 (eth1): state changed timeout -> terminated
+Jul 27 21:10:08 openeuler-riscv64 NetworkManager[270]: <info>  [1690463408.9356] device (eth2): state change: failed -> disconnected (reason 'none', sys-iface-state: 'managed')
+Jul 27 21:10:08 openeuler-riscv64 NetworkManager[270]: <info>  [1690463408.9569] dhcp4 (eth2): canceled DHCP transaction
+Jul 27 21:10:08 openeuler-riscv64 NetworkManager[270]: <info>  [1690463408.9576] dhcp4 (eth2): state changed timeout -> terminated
+Jul 27 21:10:08 openeuler-riscv64 NetworkManager[270]: <info>  [1690463408.9978] policy: auto-activating connection 'Wired connection 2' (ef61f214-000f-3cf6-8b37-6b717fb363ec)
+Jul 27 21:10:09 openeuler-riscv64 NetworkManager[270]: <info>  [1690463409.0226] policy: auto-activating connection 'Wired connection 3' (71d59045-f2a0-32fa-8ba9-93a6576f5e87)
+Jul 27 21:10:09 openeuler-riscv64 NetworkManager[270]: <info>  [1690463409.0344] device (eth1): Activation: starting connection 'Wired connection 2' (ef61f214-000f-3cf6-8b37-6b717fb363ec)
+Jul 27 21:10:09 openeuler-riscv64 NetworkManager[270]: <info>  [1690463409.0410] device (eth2): Activation: starting connection 'Wired connection 3' (71d59045-f2a0-32fa-8ba9-93a6576f5e87)
+Jul 27 21:10:09 openeuler-riscv64 NetworkManager[270]: <info>  [1690463409.0448] device (eth1): state change: disconnected -> prepare (reason 'none', sys-iface-state: 'managed')
+Jul 27 21:10:09 openeuler-riscv64 NetworkManager[270]: <info>  [1690463409.0554] device (eth1): state change: prepare -> config (reason 'none', sys-iface-state: 'managed')
+Jul 27 21:10:09 openeuler-riscv64 NetworkManager[270]: <info>  [1690463409.0657] device (eth2): state change: disconnected -> prepare (reason 'none', sys-iface-state: 'managed')
+Jul 27 21:10:09 openeuler-riscv64 NetworkManager[270]: <info>  [1690463409.0717] device (eth2): state change: prepare -> config (reason 'none', sys-iface-state: 'managed')
+Jul 27 21:10:09 openeuler-riscv64 NetworkManager[270]: <info>  [1690463409.0802] device (eth1): state change: config -> ip-config (reason 'none', sys-iface-state: 'managed')
+Jul 27 21:10:09 openeuler-riscv64 NetworkManager[270]: <info>  [1690463409.0858] dhcp4 (eth1): activation: beginning transaction (timeout in 45 seconds)
+Jul 27 21:10:09 openeuler-riscv64 NetworkManager[270]: <info>  [1690463409.1068] device (eth2): state change: config -> ip-config (reason 'none', sys-iface-state: 'managed')
+Jul 27 21:10:09 openeuler-riscv64 NetworkManager[270]: <info>  [1690463409.1133] dhcp4 (eth2): activation: beginning transaction (timeout in 45 seconds)
+Jul 27 21:10:36 openeuler-riscv64 [RPM][20670]: Transaction ID 64c26ccb started
+Jul 27 21:10:36 openeuler-riscv64 [RPM][20670]: install mariadb-connector-c-3.1.13-7.oe2303.riscv64: success
+Jul 27 21:10:37 openeuler-riscv64 [RPM][20670]: install apr-1.7.0-5.oe2303.riscv64: success
+Jul 27 21:10:38 openeuler-riscv64 [RPM][20670]: install openEuler-logos-httpd-1.0-8.oe2303.noarch: success
+Jul 27 21:10:38 openeuler-riscv64 [RPM][20670]: install mariadb-connector-c-3.1.13-7.oe2303.riscv64: success
+Jul 27 21:10:39 openeuler-riscv64 [RPM][20670]: install apr-util-1.6.1-14.oe2303.riscv64: success
+Jul 27 21:10:39 openeuler-riscv64 [RPM][20670]: install httpd-tools-2.4.55-1.oe2303.riscv64: success
+Jul 27 21:10:40 openeuler-riscv64 [RPM][20670]: install mailcap-2.1.53-3.oe2303.noarch: success
+Jul 27 21:10:40 openeuler-riscv64 [RPM][20670]: install httpd-filesystem-2.4.55-1.oe2303.noarch: success
+Jul 27 21:10:40 openeuler-riscv64 [RPM][20670]: install mod_http2-2.0.3-1.oe2303.riscv64: success
+Jul 27 21:10:44 openeuler-riscv64 systemctl[20685]: [/usr/bin/systemctl --no-reload preset httpd.service htcacheclean.service httpd.socket] called by PID 20684 (/bin/sh /var/tmp/rpm-tmp.jqOmNB 1)
+Jul 27 21:10:44 openeuler-riscv64 [RPM][20670]: install httpd-2.4.55-1.oe2303.riscv64: success
+Jul 27 21:10:45 openeuler-riscv64 systemctl[20687]: [/bin/systemctl --no-block try-restart httpd.service htcacheclean.service] called by PID 20686 (/bin/sh /var/tmp/rpm-tmp.qLJqiz 1)
+Jul 27 21:10:45 openeuler-riscv64 [RPM][20670]: install httpd-2.4.55-1.oe2303.riscv64: success
+Jul 27 21:10:47 openeuler-riscv64 systemd[1]: Started /usr/bin/systemctl start man-db-cache-update.
+░░ Subject: A start job for unit run-r3e9478f4f2344ca7ac1a59e1cf79c375.service has finished successfully
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A start job for unit run-r3e9478f4f2344ca7ac1a59e1cf79c375.service has finished successfully.
+░░ 
+░░ The job identifier is 15774.
+Jul 27 21:10:47 openeuler-riscv64 systemctl[20692]: [/usr/bin/systemctl start man-db-cache-update] called by PID 1 (/sbin/init)
+Jul 27 21:10:48 openeuler-riscv64 systemctl[20694]: [/usr/bin/systemctl daemon-reload] called by PID 20693 (/bin/sh /var/tmp/rpm-tmp.4kUGtK 0)
+Jul 27 21:10:48 openeuler-riscv64 systemd[1]: Starting man-db-cache-update.service...
+░░ Subject: A start job for unit man-db-cache-update.service has begun execution
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A start job for unit man-db-cache-update.service has begun execution.
+░░ 
+░░ The job identifier is 15837.
+Jul 27 21:10:48 openeuler-riscv64 systemd[1]: Reloading.
+Jul 27 21:10:52 openeuler-riscv64 systemd[1]: /usr/lib/systemd/system/dbus.socket:5: ListenStream= references a path below legacy directory /var/run/, updating /var/run/dbus/system_bus_socket → /run/dbus/system_bus_socket; please update the unit file accordingly.
+Jul 27 21:10:54 openeuler-riscv64 NetworkManager[270]: <warn>  [1690463454.8384] dhcp4 (eth1): request timed out
+Jul 27 21:10:54 openeuler-riscv64 NetworkManager[270]: <info>  [1690463454.8436] dhcp4 (eth1): state changed unknown -> timeout
+Jul 27 21:10:54 openeuler-riscv64 NetworkManager[270]: <warn>  [1690463454.8621] dhcp4 (eth2): request timed out
+Jul 27 21:10:54 openeuler-riscv64 NetworkManager[270]: <info>  [1690463454.8684] dhcp4 (eth2): state changed unknown -> timeout
+Jul 27 21:10:54 openeuler-riscv64 NetworkManager[270]: <info>  [1690463454.8808] device (eth1): state change: ip-config -> failed (reason 'ip-config-unavailable', sys-iface-state: 'managed')
+Jul 27 21:10:54 openeuler-riscv64 NetworkManager[270]: <warn>  [1690463454.9446] device (eth1): Activation: failed for connection 'Wired connection 2'
+Jul 27 21:10:54 openeuler-riscv64 NetworkManager[270]: <info>  [1690463454.9467] device (eth2): state change: ip-config -> failed (reason 'ip-config-unavailable', sys-iface-state: 'managed')
+Jul 27 21:10:54 openeuler-riscv64 NetworkManager[270]: <warn>  [1690463454.9631] device (eth2): Activation: failed for connection 'Wired connection 3'
+Jul 27 21:10:54 openeuler-riscv64 NetworkManager[270]: <info>  [1690463454.9799] device (eth1): state change: failed -> disconnected (reason 'none', sys-iface-state: 'managed')
+Jul 27 21:10:55 openeuler-riscv64 NetworkManager[270]: <info>  [1690463455.0493] dhcp4 (eth1): canceled DHCP transaction
+Jul 27 21:10:55 openeuler-riscv64 NetworkManager[270]: <info>  [1690463455.0500] dhcp4 (eth1): state changed timeout -> terminated
+Jul 27 21:10:55 openeuler-riscv64 NetworkManager[270]: <info>  [1690463455.1007] device (eth2): state change: failed -> disconnected (reason 'none', sys-iface-state: 'managed')
+Jul 27 21:10:55 openeuler-riscv64 NetworkManager[270]: <info>  [1690463455.1289] dhcp4 (eth2): canceled DHCP transaction
+Jul 27 21:10:55 openeuler-riscv64 NetworkManager[270]: <info>  [1690463455.1299] dhcp4 (eth2): state changed timeout -> terminated
+Jul 27 21:10:56 openeuler-riscv64 ntpd[5555]: Deleting interface #58 eth1, fe80::edfb:237f:711:e1ee%3#123, interface stats: received=0, sent=0, dropped=0, active_time=180 secs
+Jul 27 21:10:56 openeuler-riscv64 ntpd[5555]: Deleting interface #59 eth2, fe80::5c34:cef6:6655:3c3c%4#123, interface stats: received=0, sent=0, dropped=0, active_time=180 secs
+Jul 27 21:10:57 openeuler-riscv64 systemd[1]: man-db-cache-update.service: Deactivated successfully.
+░░ Subject: Unit succeeded
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ The unit man-db-cache-update.service has successfully entered the 'dead' state.
+Jul 27 21:10:57 openeuler-riscv64 systemd[1]: Finished man-db-cache-update.service.
+░░ Subject: A start job for unit man-db-cache-update.service has finished successfully
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A start job for unit man-db-cache-update.service has finished successfully.
+░░ 
+░░ The job identifier is 15837.
+Jul 27 21:10:58 openeuler-riscv64 [RPM][20670]: install apr-1.7.0-5.oe2303.riscv64: success
+Jul 27 21:10:58 openeuler-riscv64 [RPM][20670]: install openEuler-logos-httpd-1.0-8.oe2303.noarch: success
+Jul 27 21:10:58 openeuler-riscv64 [RPM][20670]: install mariadb-connector-c-3.1.13-7.oe2303.riscv64: success
+Jul 27 21:10:58 openeuler-riscv64 [RPM][20670]: install apr-util-1.6.1-14.oe2303.riscv64: success
+Jul 27 21:10:58 openeuler-riscv64 [RPM][20670]: install httpd-tools-2.4.55-1.oe2303.riscv64: success
+Jul 27 21:10:58 openeuler-riscv64 [RPM][20670]: install mailcap-2.1.53-3.oe2303.noarch: success
+Jul 27 21:10:58 openeuler-riscv64 [RPM][20670]: install httpd-filesystem-2.4.55-1.oe2303.noarch: success
+Jul 27 21:10:58 openeuler-riscv64 [RPM][20670]: install mod_http2-2.0.3-1.oe2303.riscv64: success
+Jul 27 21:10:58 openeuler-riscv64 [RPM][20670]: install httpd-2.4.55-1.oe2303.riscv64: success
+Jul 27 21:10:58 openeuler-riscv64 [RPM][20670]: Transaction ID 64c26ccb finished: 0
+Jul 27 21:10:59 openeuler-riscv64 systemd[1]: run-r3e9478f4f2344ca7ac1a59e1cf79c375.service: Deactivated successfully.
+░░ Subject: Unit succeeded
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ The unit run-r3e9478f4f2344ca7ac1a59e1cf79c375.service has successfully entered the 'dead' state.
+Jul 27 21:11:05 openeuler-riscv64 systemctl[20724]: [systemctl enable httpd] called by PID 20638 (bash -x oe_test_server_httpd_restart.sh)
+Jul 27 21:11:06 openeuler-riscv64 systemd[1]: Reloading.
+Jul 27 21:11:09 openeuler-riscv64 systemd[1]: /usr/lib/systemd/system/dbus.socket:5: ListenStream= references a path below legacy directory /var/run/, updating /var/run/dbus/system_bus_socket → /run/dbus/system_bus_socket; please update the unit file accordingly.
+Jul 27 21:11:14 openeuler-riscv64 systemctl[20735]: [systemctl start httpd] called by PID 20638 (bash -x oe_test_server_httpd_restart.sh)
+Jul 27 21:11:14 openeuler-riscv64 systemd[1]: Starting The Apache HTTP Server...
+░░ Subject: A start job for unit httpd.service has begun execution
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A start job for unit httpd.service has begun execution.
+░░ 
+░░ The job identifier is 15840.
+Jul 27 21:11:16 openeuler-riscv64 httpd[20736]: AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using fe80::4cc1:c5d3:b0b3:9cc8%eth0. Set the 'ServerName' directive globally to suppress this message
+Jul 27 21:11:16 openeuler-riscv64 systemd[1]: Started The Apache HTTP Server.
+░░ Subject: A start job for unit httpd.service has finished successfully
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A start job for unit httpd.service has finished successfully.
+░░ 
+░░ The job identifier is 15840.
+Jul 27 21:11:25 openeuler-riscv64 systemctl[20919]: [systemctl stop httpd] called by PID 20638 (bash -x oe_test_server_httpd_restart.sh)
+Jul 27 21:11:25 openeuler-riscv64 systemd[1]: Stopping The Apache HTTP Server...
+░░ Subject: A stop job for unit httpd.service has begun execution
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A stop job for unit httpd.service has begun execution.
+░░ 
+░░ The job identifier is 15904.
+Jul 27 21:11:27 openeuler-riscv64 systemd[1]: httpd.service: Deactivated successfully.
+░░ Subject: Unit succeeded
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ The unit httpd.service has successfully entered the 'dead' state.
+Jul 27 21:11:27 openeuler-riscv64 systemd[1]: Stopped The Apache HTTP Server.
+░░ Subject: A stop job for unit httpd.service has finished
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A stop job for unit httpd.service has finished.
+░░ 
+░░ The job identifier is 15904 and the job result is done.
+Jul 27 21:11:27 openeuler-riscv64 systemctl[20925]: [systemctl disable httpd] called by PID 20638 (bash -x oe_test_server_httpd_restart.sh)
+Jul 27 21:11:27 openeuler-riscv64 systemd[1]: Reloading.
+Jul 27 21:11:31 openeuler-riscv64 systemd[1]: /usr/lib/systemd/system/dbus.socket:5: ListenStream= references a path below legacy directory /var/run/, updating /var/run/dbus/system_bus_socket → /run/dbus/system_bus_socket; please update the unit file accordingly.
+Jul 27 21:11:37 openeuler-riscv64 systemctl[20938]: [systemctl restart httpd] called by PID 20638 (bash -x oe_test_server_httpd_restart.sh)
+Jul 27 21:11:37 openeuler-riscv64 systemd[1]: Starting The Apache HTTP Server...
+░░ Subject: A start job for unit httpd.service has begun execution
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A start job for unit httpd.service has begun execution.
+░░ 
+░░ The job identifier is 15905.
+Jul 27 21:11:38 openeuler-riscv64 httpd[20939]: AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using fe80::4cc1:c5d3:b0b3:9cc8%eth0. Set the 'ServerName' directive globally to suppress this message
+Jul 27 21:11:38 openeuler-riscv64 systemd[1]: Started The Apache HTTP Server.
+░░ Subject: A start job for unit httpd.service has finished successfully
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A start job for unit httpd.service has finished successfully.
+░░ 
+░░ The job identifier is 15905.
+Jul 27 21:11:48 openeuler-riscv64 systemctl[21122]: [systemctl enable httpd] called by PID 20638 (bash -x oe_test_server_httpd_restart.sh)
+Jul 27 21:11:48 openeuler-riscv64 systemd[1]: Reloading.
+Jul 27 21:11:51 openeuler-riscv64 systemd[1]: /usr/lib/systemd/system/dbus.socket:5: ListenStream= references a path below legacy directory /var/run/, updating /var/run/dbus/system_bus_socket → /run/dbus/system_bus_socket; please update the unit file accordingly.
+Jul 27 21:11:57 openeuler-riscv64 systemctl[21133]: [systemctl start httpd] called by PID 20638 (bash -x oe_test_server_httpd_restart.sh)
+Jul 27 21:12:06 openeuler-riscv64 systemctl[21137]: [systemctl stop httpd] called by PID 20638 (bash -x oe_test_server_httpd_restart.sh)
+Jul 27 21:12:06 openeuler-riscv64 systemd[1]: Stopping The Apache HTTP Server...
+░░ Subject: A stop job for unit httpd.service has begun execution
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A stop job for unit httpd.service has begun execution.
+░░ 
+░░ The job identifier is 16032.
+Jul 27 21:12:07 openeuler-riscv64 systemd[1]: httpd.service: Deactivated successfully.
+░░ Subject: Unit succeeded
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ The unit httpd.service has successfully entered the 'dead' state.
+Jul 27 21:12:07 openeuler-riscv64 systemd[1]: Stopped The Apache HTTP Server.
+░░ Subject: A stop job for unit httpd.service has finished
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A stop job for unit httpd.service has finished.
+░░ 
+░░ The job identifier is 16032 and the job result is done.
+Jul 27 21:12:08 openeuler-riscv64 systemctl[21144]: [systemctl disable httpd] called by PID 20638 (bash -x oe_test_server_httpd_restart.sh)
+Jul 27 21:12:08 openeuler-riscv64 systemd[1]: Reloading.
+Jul 27 21:12:11 openeuler-riscv64 systemd[1]: /usr/lib/systemd/system/dbus.socket:5: ListenStream= references a path below legacy directory /var/run/, updating /var/run/dbus/system_bus_socket → /run/dbus/system_bus_socket; please update the unit file accordingly.
+Jul 27 21:12:17 openeuler-riscv64 systemctl[21157]: [systemctl restart httpd] called by PID 20638 (bash -x oe_test_server_httpd_restart.sh)
+Jul 27 21:12:18 openeuler-riscv64 systemd[1]: Starting The Apache HTTP Server...
+░░ Subject: A start job for unit httpd.service has begun execution
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A start job for unit httpd.service has begun execution.
+░░ 
+░░ The job identifier is 16033.
+Jul 27 21:12:19 openeuler-riscv64 httpd[21158]: AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using fe80::4cc1:c5d3:b0b3:9cc8%eth0. Set the 'ServerName' directive globally to suppress this message
+Jul 27 21:12:19 openeuler-riscv64 systemd[1]: Started The Apache HTTP Server.
+░░ Subject: A start job for unit httpd.service has finished successfully
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A start job for unit httpd.service has finished successfully.
+░░ 
+░░ The job identifier is 16033.
+Jul 27 21:12:29 openeuler-riscv64 systemctl[21341]: [systemctl enable httpd] called by PID 20638 (bash -x oe_test_server_httpd_restart.sh)
+Jul 27 21:12:29 openeuler-riscv64 systemd[1]: Reloading.
+Jul 27 21:12:32 openeuler-riscv64 systemd[1]: /usr/lib/systemd/system/dbus.socket:5: ListenStream= references a path below legacy directory /var/run/, updating /var/run/dbus/system_bus_socket → /run/dbus/system_bus_socket; please update the unit file accordingly.
+Jul 27 21:12:37 openeuler-riscv64 systemctl[21352]: [systemctl start httpd] called by PID 20638 (bash -x oe_test_server_httpd_restart.sh)
+Jul 27 21:12:47 openeuler-riscv64 systemctl[21356]: [systemctl stop httpd] called by PID 20638 (bash -x oe_test_server_httpd_restart.sh)
+Jul 27 21:12:47 openeuler-riscv64 systemd[1]: Stopping The Apache HTTP Server...
+░░ Subject: A stop job for unit httpd.service has begun execution
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A stop job for unit httpd.service has begun execution.
+░░ 
+░░ The job identifier is 16160.
+Jul 27 21:12:48 openeuler-riscv64 systemd[1]: httpd.service: Deactivated successfully.
+░░ Subject: Unit succeeded
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ The unit httpd.service has successfully entered the 'dead' state.
+Jul 27 21:12:48 openeuler-riscv64 systemd[1]: Stopped The Apache HTTP Server.
+░░ Subject: A stop job for unit httpd.service has finished
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A stop job for unit httpd.service has finished.
+░░ 
+░░ The job identifier is 16160 and the job result is done.
+Jul 27 21:12:49 openeuler-riscv64 systemctl[21363]: [systemctl disable httpd] called by PID 20638 (bash -x oe_test_server_httpd_restart.sh)
+Jul 27 21:12:49 openeuler-riscv64 systemd[1]: Reloading.
+Jul 27 21:12:52 openeuler-riscv64 systemd[1]: /usr/lib/systemd/system/dbus.socket:5: ListenStream= references a path below legacy directory /var/run/, updating /var/run/dbus/system_bus_socket → /run/dbus/system_bus_socket; please update the unit file accordingly.
+Jul 27 21:12:58 openeuler-riscv64 systemctl[21376]: [systemctl restart httpd] called by PID 20638 (bash -x oe_test_server_httpd_restart.sh)
+Jul 27 21:12:58 openeuler-riscv64 systemd[1]: Starting The Apache HTTP Server...
+░░ Subject: A start job for unit httpd.service has begun execution
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A start job for unit httpd.service has begun execution.
+░░ 
+░░ The job identifier is 16161.
+Jul 27 21:13:00 openeuler-riscv64 httpd[21377]: AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using fe80::4cc1:c5d3:b0b3:9cc8%eth0. Set the 'ServerName' directive globally to suppress this message
+Jul 27 21:13:00 openeuler-riscv64 systemd[1]: Started The Apache HTTP Server.
+░░ Subject: A start job for unit httpd.service has finished successfully
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A start job for unit httpd.service has finished successfully.
+░░ 
+░░ The job identifier is 16161.
+Jul 27 21:13:10 openeuler-riscv64 systemctl[21560]: [systemctl enable httpd] called by PID 20638 (bash -x oe_test_server_httpd_restart.sh)
+Jul 27 21:13:10 openeuler-riscv64 systemd[1]: Reloading.
+Jul 27 21:13:13 openeuler-riscv64 systemd[1]: /usr/lib/systemd/system/dbus.socket:5: ListenStream= references a path below legacy directory /var/run/, updating /var/run/dbus/system_bus_socket → /run/dbus/system_bus_socket; please update the unit file accordingly.
+Jul 27 21:13:19 openeuler-riscv64 systemctl[21571]: [systemctl start httpd] called by PID 20638 (bash -x oe_test_server_httpd_restart.sh)
+Jul 27 21:13:28 openeuler-riscv64 systemctl[21575]: [systemctl stop httpd] called by PID 20638 (bash -x oe_test_server_httpd_restart.sh)
+Jul 27 21:13:28 openeuler-riscv64 systemd[1]: Stopping The Apache HTTP Server...
+░░ Subject: A stop job for unit httpd.service has begun execution
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A stop job for unit httpd.service has begun execution.
+░░ 
+░░ The job identifier is 16288.
+Jul 27 21:13:29 openeuler-riscv64 systemd[1]: httpd.service: Deactivated successfully.
+░░ Subject: Unit succeeded
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ The unit httpd.service has successfully entered the 'dead' state.
+Jul 27 21:13:29 openeuler-riscv64 systemd[1]: Stopped The Apache HTTP Server.
+░░ Subject: A stop job for unit httpd.service has finished
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A stop job for unit httpd.service has finished.
+░░ 
+░░ The job identifier is 16288 and the job result is done.
+Jul 27 21:13:30 openeuler-riscv64 systemctl[21581]: [systemctl disable httpd] called by PID 20638 (bash -x oe_test_server_httpd_restart.sh)
+Jul 27 21:13:30 openeuler-riscv64 systemd[1]: Reloading.
+Jul 27 21:13:34 openeuler-riscv64 systemd[1]: /usr/lib/systemd/system/dbus.socket:5: ListenStream= references a path below legacy directory /var/run/, updating /var/run/dbus/system_bus_socket → /run/dbus/system_bus_socket; please update the unit file accordingly.
+Jul 27 21:13:40 openeuler-riscv64 systemctl[21594]: [systemctl restart httpd] called by PID 20638 (bash -x oe_test_server_httpd_restart.sh)
+Jul 27 21:13:40 openeuler-riscv64 systemd[1]: Starting The Apache HTTP Server...
+░░ Subject: A start job for unit httpd.service has begun execution
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A start job for unit httpd.service has begun execution.
+░░ 
+░░ The job identifier is 16289.
+Jul 27 21:13:42 openeuler-riscv64 httpd[21595]: AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using fe80::4cc1:c5d3:b0b3:9cc8%eth0. Set the 'ServerName' directive globally to suppress this message
+Jul 27 21:13:42 openeuler-riscv64 systemd[1]: Started The Apache HTTP Server.
+░░ Subject: A start job for unit httpd.service has finished successfully
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A start job for unit httpd.service has finished successfully.
+░░ 
+░░ The job identifier is 16289.
+Jul 27 21:13:51 openeuler-riscv64 systemctl[21778]: [systemctl enable httpd] called by PID 20638 (bash -x oe_test_server_httpd_restart.sh)
+Jul 27 21:13:51 openeuler-riscv64 systemd[1]: Reloading.
+Jul 27 21:13:55 openeuler-riscv64 systemd[1]: /usr/lib/systemd/system/dbus.socket:5: ListenStream= references a path below legacy directory /var/run/, updating /var/run/dbus/system_bus_socket → /run/dbus/system_bus_socket; please update the unit file accordingly.
+Jul 27 21:14:01 openeuler-riscv64 systemd[1]: Starting dnf makecache...
+░░ Subject: A start job for unit dnf-makecache.service has begun execution
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A start job for unit dnf-makecache.service has begun execution.
+░░ 
+░░ The job identifier is 16353.
+Jul 27 21:14:01 openeuler-riscv64 systemctl[21789]: [systemctl start httpd] called by PID 20638 (bash -x oe_test_server_httpd_restart.sh)
+Jul 27 21:14:09 openeuler-riscv64 dnf[21790]: Metadata cache refreshed recently.
+Jul 27 21:14:10 openeuler-riscv64 systemd[1]: dnf-makecache.service: Deactivated successfully.
+░░ Subject: Unit succeeded
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ The unit dnf-makecache.service has successfully entered the 'dead' state.
+Jul 27 21:14:10 openeuler-riscv64 systemd[1]: Finished dnf makecache.
+░░ Subject: A start job for unit dnf-makecache.service has finished successfully
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A start job for unit dnf-makecache.service has finished successfully.
+░░ 
+░░ The job identifier is 16353.
+Jul 27 21:14:11 openeuler-riscv64 systemctl[21795]: [systemctl stop httpd] called by PID 20638 (bash -x oe_test_server_httpd_restart.sh)
+Jul 27 21:14:11 openeuler-riscv64 systemd[1]: Stopping The Apache HTTP Server...
+░░ Subject: A stop job for unit httpd.service has begun execution
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A stop job for unit httpd.service has begun execution.
+░░ 
+░░ The job identifier is 16479.
+Jul 27 21:14:12 openeuler-riscv64 systemd[1]: httpd.service: Deactivated successfully.
+░░ Subject: Unit succeeded
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ The unit httpd.service has successfully entered the 'dead' state.
+Jul 27 21:14:12 openeuler-riscv64 systemd[1]: Stopped The Apache HTTP Server.
+░░ Subject: A stop job for unit httpd.service has finished
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A stop job for unit httpd.service has finished.
+░░ 
+░░ The job identifier is 16479 and the job result is done.
+Jul 27 21:14:13 openeuler-riscv64 systemctl[21801]: [systemctl disable httpd] called by PID 20638 (bash -x oe_test_server_httpd_restart.sh)
+Jul 27 21:14:13 openeuler-riscv64 systemd[1]: Reloading.
+Jul 27 21:14:17 openeuler-riscv64 systemd[1]: /usr/lib/systemd/system/dbus.socket:5: ListenStream= references a path below legacy directory /var/run/, updating /var/run/dbus/system_bus_socket → /run/dbus/system_bus_socket; please update the unit file accordingly.
+Jul 27 21:14:23 openeuler-riscv64 systemctl[21814]: [systemctl restart httpd] called by PID 20638 (bash -x oe_test_server_httpd_restart.sh)
+Jul 27 21:14:23 openeuler-riscv64 systemd[1]: Starting The Apache HTTP Server...
+░░ Subject: A start job for unit httpd.service has begun execution
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A start job for unit httpd.service has begun execution.
+░░ 
+░░ The job identifier is 16480.
+Jul 27 21:14:24 openeuler-riscv64 httpd[21815]: AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using fe80::4cc1:c5d3:b0b3:9cc8%eth0. Set the 'ServerName' directive globally to suppress this message
+Jul 27 21:14:24 openeuler-riscv64 systemd[1]: Started The Apache HTTP Server.
+░░ Subject: A start job for unit httpd.service has finished successfully
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A start job for unit httpd.service has finished successfully.
+░░ 
+░░ The job identifier is 16480.
+Jul 27 21:14:34 openeuler-riscv64 systemctl[21998]: [systemctl enable httpd] called by PID 20638 (bash -x oe_test_server_httpd_restart.sh)
+Jul 27 21:14:34 openeuler-riscv64 systemd[1]: Reloading.
+Jul 27 21:14:37 openeuler-riscv64 systemd[1]: /usr/lib/systemd/system/dbus.socket:5: ListenStream= references a path below legacy directory /var/run/, updating /var/run/dbus/system_bus_socket → /run/dbus/system_bus_socket; please update the unit file accordingly.
+Jul 27 21:14:43 openeuler-riscv64 systemctl[22009]: [systemctl start httpd] called by PID 20638 (bash -x oe_test_server_httpd_restart.sh)
+Jul 27 21:14:52 openeuler-riscv64 systemctl[22013]: [systemctl stop httpd] called by PID 20638 (bash -x oe_test_server_httpd_restart.sh)
+Jul 27 21:14:52 openeuler-riscv64 systemd[1]: Stopping The Apache HTTP Server...
+░░ Subject: A stop job for unit httpd.service has begun execution
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A stop job for unit httpd.service has begun execution.
+░░ 
+░░ The job identifier is 16607.
+Jul 27 21:14:53 openeuler-riscv64 systemd[1]: httpd.service: Deactivated successfully.
+░░ Subject: Unit succeeded
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ The unit httpd.service has successfully entered the 'dead' state.
+Jul 27 21:14:53 openeuler-riscv64 systemd[1]: Stopped The Apache HTTP Server.
+░░ Subject: A stop job for unit httpd.service has finished
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A stop job for unit httpd.service has finished.
+░░ 
+░░ The job identifier is 16607 and the job result is done.
+Jul 27 21:14:54 openeuler-riscv64 systemctl[22020]: [systemctl disable httpd] called by PID 20638 (bash -x oe_test_server_httpd_restart.sh)
+Jul 27 21:14:54 openeuler-riscv64 systemd[1]: Reloading.
+Jul 27 21:14:58 openeuler-riscv64 systemd[1]: /usr/lib/systemd/system/dbus.socket:5: ListenStream= references a path below legacy directory /var/run/, updating /var/run/dbus/system_bus_socket → /run/dbus/system_bus_socket; please update the unit file accordingly.
+Jul 27 21:15:04 openeuler-riscv64 systemctl[22033]: [systemctl restart httpd] called by PID 20638 (bash -x oe_test_server_httpd_restart.sh)
+Jul 27 21:15:04 openeuler-riscv64 systemd[1]: Starting The Apache HTTP Server...
+░░ Subject: A start job for unit httpd.service has begun execution
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A start job for unit httpd.service has begun execution.
+░░ 
+░░ The job identifier is 16608.
+Jul 27 21:15:06 openeuler-riscv64 httpd[22034]: AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using fe80::4cc1:c5d3:b0b3:9cc8%eth0. Set the 'ServerName' directive globally to suppress this message
+Jul 27 21:15:06 openeuler-riscv64 systemd[1]: Started The Apache HTTP Server.
+░░ Subject: A start job for unit httpd.service has finished successfully
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A start job for unit httpd.service has finished successfully.
+░░ 
+░░ The job identifier is 16608.
+Jul 27 21:15:15 openeuler-riscv64 systemctl[22217]: [systemctl enable httpd] called by PID 20638 (bash -x oe_test_server_httpd_restart.sh)
+Jul 27 21:15:16 openeuler-riscv64 systemd[1]: Reloading.
+Jul 27 21:15:19 openeuler-riscv64 systemd[1]: /usr/lib/systemd/system/dbus.socket:5: ListenStream= references a path below legacy directory /var/run/, updating /var/run/dbus/system_bus_socket → /run/dbus/system_bus_socket; please update the unit file accordingly.
+Jul 27 21:15:24 openeuler-riscv64 systemctl[22228]: [systemctl start httpd] called by PID 20638 (bash -x oe_test_server_httpd_restart.sh)
+Jul 27 21:15:34 openeuler-riscv64 systemctl[22232]: [systemctl stop httpd] called by PID 20638 (bash -x oe_test_server_httpd_restart.sh)
+Jul 27 21:15:34 openeuler-riscv64 systemd[1]: Stopping The Apache HTTP Server...
+░░ Subject: A stop job for unit httpd.service has begun execution
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A stop job for unit httpd.service has begun execution.
+░░ 
+░░ The job identifier is 16735.
+Jul 27 21:15:35 openeuler-riscv64 systemd[1]: httpd.service: Deactivated successfully.
+░░ Subject: Unit succeeded
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ The unit httpd.service has successfully entered the 'dead' state.
+Jul 27 21:15:35 openeuler-riscv64 systemd[1]: Stopped The Apache HTTP Server.
+░░ Subject: A stop job for unit httpd.service has finished
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A stop job for unit httpd.service has finished.
+░░ 
+░░ The job identifier is 16735 and the job result is done.
+Jul 27 21:15:36 openeuler-riscv64 systemctl[22238]: [systemctl disable httpd] called by PID 20638 (bash -x oe_test_server_httpd_restart.sh)
+Jul 27 21:15:36 openeuler-riscv64 systemd[1]: Reloading.
+Jul 27 21:15:39 openeuler-riscv64 systemd[1]: /usr/lib/systemd/system/dbus.socket:5: ListenStream= references a path below legacy directory /var/run/, updating /var/run/dbus/system_bus_socket → /run/dbus/system_bus_socket; please update the unit file accordingly.
+Jul 27 21:15:45 openeuler-riscv64 systemctl[22252]: [systemctl restart httpd] called by PID 20638 (bash -x oe_test_server_httpd_restart.sh)
+Jul 27 21:15:45 openeuler-riscv64 systemd[1]: Starting The Apache HTTP Server...
+░░ Subject: A start job for unit httpd.service has begun execution
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A start job for unit httpd.service has begun execution.
+░░ 
+░░ The job identifier is 16736.
+Jul 27 21:15:47 openeuler-riscv64 httpd[22253]: AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using fe80::4cc1:c5d3:b0b3:9cc8%eth0. Set the 'ServerName' directive globally to suppress this message
+Jul 27 21:15:47 openeuler-riscv64 systemd[1]: Started The Apache HTTP Server.
+░░ Subject: A start job for unit httpd.service has finished successfully
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A start job for unit httpd.service has finished successfully.
+░░ 
+░░ The job identifier is 16736.
+Jul 27 21:15:54 openeuler-riscv64 NetworkManager[270]: <info>  [1690463754.8777] policy: auto-activating connection 'Wired connection 2' (ef61f214-000f-3cf6-8b37-6b717fb363ec)
+Jul 27 21:15:54 openeuler-riscv64 NetworkManager[270]: <info>  [1690463754.9427] policy: auto-activating connection 'Wired connection 3' (71d59045-f2a0-32fa-8ba9-93a6576f5e87)
+Jul 27 21:15:54 openeuler-riscv64 NetworkManager[270]: <info>  [1690463754.9952] device (eth1): Activation: starting connection 'Wired connection 2' (ef61f214-000f-3cf6-8b37-6b717fb363ec)
+Jul 27 21:15:55 openeuler-riscv64 NetworkManager[270]: <info>  [1690463755.0229] device (eth2): Activation: starting connection 'Wired connection 3' (71d59045-f2a0-32fa-8ba9-93a6576f5e87)
+Jul 27 21:15:55 openeuler-riscv64 NetworkManager[270]: <info>  [1690463755.0355] device (eth1): state change: disconnected -> prepare (reason 'none', sys-iface-state: 'managed')
+Jul 27 21:15:55 openeuler-riscv64 NetworkManager[270]: <info>  [1690463755.0792] device (eth1): state change: prepare -> config (reason 'none', sys-iface-state: 'managed')
+Jul 27 21:15:55 openeuler-riscv64 NetworkManager[270]: <info>  [1690463755.1158] device (eth2): state change: disconnected -> prepare (reason 'none', sys-iface-state: 'managed')
+Jul 27 21:15:55 openeuler-riscv64 NetworkManager[270]: <info>  [1690463755.1297] device (eth2): state change: prepare -> config (reason 'none', sys-iface-state: 'managed')
+Jul 27 21:15:55 openeuler-riscv64 NetworkManager[270]: <info>  [1690463755.1511] device (eth1): state change: config -> ip-config (reason 'none', sys-iface-state: 'managed')
+Jul 27 21:15:55 openeuler-riscv64 NetworkManager[270]: <info>  [1690463755.1675] dhcp4 (eth1): activation: beginning transaction (timeout in 45 seconds)
+Jul 27 21:15:55 openeuler-riscv64 NetworkManager[270]: <info>  [1690463755.2529] device (eth2): state change: config -> ip-config (reason 'none', sys-iface-state: 'managed')
+Jul 27 21:15:55 openeuler-riscv64 NetworkManager[270]: <info>  [1690463755.2652] dhcp4 (eth2): activation: beginning transaction (timeout in 45 seconds)
+Jul 27 21:15:56 openeuler-riscv64 systemctl[22436]: [systemctl enable httpd] called by PID 20638 (bash -x oe_test_server_httpd_restart.sh)
+Jul 27 21:15:56 openeuler-riscv64 systemd[1]: Reloading.
+Jul 27 21:15:58 openeuler-riscv64 ntpd[5555]: Listen normally on 60 eth1 [fe80::edfb:237f:711:e1ee%3]:123
+Jul 27 21:15:58 openeuler-riscv64 ntpd[5555]: Listen normally on 61 eth2 [fe80::5c34:cef6:6655:3c3c%4]:123
+Jul 27 21:15:58 openeuler-riscv64 ntpd[5555]: new interface(s) found: waking up resolver
+Jul 27 21:16:00 openeuler-riscv64 systemd[1]: /usr/lib/systemd/system/dbus.socket:5: ListenStream= references a path below legacy directory /var/run/, updating /var/run/dbus/system_bus_socket → /run/dbus/system_bus_socket; please update the unit file accordingly.
+Jul 27 21:16:06 openeuler-riscv64 systemctl[22447]: [systemctl start httpd] called by PID 20638 (bash -x oe_test_server_httpd_restart.sh)
+Jul 27 21:16:15 openeuler-riscv64 systemctl[22451]: [systemctl stop httpd] called by PID 20638 (bash -x oe_test_server_httpd_restart.sh)
+Jul 27 21:16:15 openeuler-riscv64 systemd[1]: Stopping The Apache HTTP Server...
+░░ Subject: A stop job for unit httpd.service has begun execution
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A stop job for unit httpd.service has begun execution.
+░░ 
+░░ The job identifier is 16863.
+Jul 27 21:16:16 openeuler-riscv64 systemd[1]: httpd.service: Deactivated successfully.
+░░ Subject: Unit succeeded
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ The unit httpd.service has successfully entered the 'dead' state.
+Jul 27 21:16:16 openeuler-riscv64 systemd[1]: Stopped The Apache HTTP Server.
+░░ Subject: A stop job for unit httpd.service has finished
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A stop job for unit httpd.service has finished.
+░░ 
+░░ The job identifier is 16863 and the job result is done.
+Jul 27 21:16:17 openeuler-riscv64 systemctl[22457]: [systemctl disable httpd] called by PID 20638 (bash -x oe_test_server_httpd_restart.sh)
+Jul 27 21:16:17 openeuler-riscv64 systemd[1]: Reloading.
+Jul 27 21:16:20 openeuler-riscv64 systemd[1]: /usr/lib/systemd/system/dbus.socket:5: ListenStream= references a path below legacy directory /var/run/, updating /var/run/dbus/system_bus_socket → /run/dbus/system_bus_socket; please update the unit file accordingly.
+Jul 27 21:16:26 openeuler-riscv64 systemctl[22471]: [systemctl restart httpd] called by PID 20638 (bash -x oe_test_server_httpd_restart.sh)
+Jul 27 21:16:26 openeuler-riscv64 systemd[1]: Starting The Apache HTTP Server...
+░░ Subject: A start job for unit httpd.service has begun execution
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A start job for unit httpd.service has begun execution.
+░░ 
+░░ The job identifier is 16864.
+Jul 27 21:16:27 openeuler-riscv64 httpd[22472]: AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using fe80::4cc1:c5d3:b0b3:9cc8%eth0. Set the 'ServerName' directive globally to suppress this message
+Jul 27 21:16:27 openeuler-riscv64 systemd[1]: Started The Apache HTTP Server.
+░░ Subject: A start job for unit httpd.service has finished successfully
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A start job for unit httpd.service has finished successfully.
+░░ 
+░░ The job identifier is 16864.
+Jul 27 21:16:37 openeuler-riscv64 systemctl[22655]: [systemctl enable httpd] called by PID 20638 (bash -x oe_test_server_httpd_restart.sh)
+Jul 27 21:16:37 openeuler-riscv64 systemd[1]: Reloading.
+Jul 27 21:16:40 openeuler-riscv64 systemd[1]: /usr/lib/systemd/system/dbus.socket:5: ListenStream= references a path below legacy directory /var/run/, updating /var/run/dbus/system_bus_socket → /run/dbus/system_bus_socket; please update the unit file accordingly.
+Jul 27 21:16:40 openeuler-riscv64 NetworkManager[270]: <warn>  [1690463800.8252] dhcp4 (eth1): request timed out
+Jul 27 21:16:40 openeuler-riscv64 NetworkManager[270]: <info>  [1690463800.8262] dhcp4 (eth1): state changed unknown -> timeout
+Jul 27 21:16:40 openeuler-riscv64 NetworkManager[270]: <warn>  [1690463800.8274] dhcp4 (eth2): request timed out
+Jul 27 21:16:40 openeuler-riscv64 NetworkManager[270]: <info>  [1690463800.8282] dhcp4 (eth2): state changed unknown -> timeout
+Jul 27 21:16:40 openeuler-riscv64 NetworkManager[270]: <info>  [1690463800.8298] device (eth1): state change: ip-config -> failed (reason 'ip-config-unavailable', sys-iface-state: 'managed')
+Jul 27 21:16:40 openeuler-riscv64 NetworkManager[270]: <warn>  [1690463800.8376] device (eth1): Activation: failed for connection 'Wired connection 2'
+Jul 27 21:16:40 openeuler-riscv64 NetworkManager[270]: <info>  [1690463800.8386] device (eth2): state change: ip-config -> failed (reason 'ip-config-unavailable', sys-iface-state: 'managed')
+Jul 27 21:16:40 openeuler-riscv64 NetworkManager[270]: <warn>  [1690463800.8441] device (eth2): Activation: failed for connection 'Wired connection 3'
+Jul 27 21:16:40 openeuler-riscv64 NetworkManager[270]: <info>  [1690463800.8506] device (eth1): state change: failed -> disconnected (reason 'none', sys-iface-state: 'managed')
+Jul 27 21:16:40 openeuler-riscv64 NetworkManager[270]: <info>  [1690463800.8814] dhcp4 (eth1): canceled DHCP transaction
+Jul 27 21:16:40 openeuler-riscv64 NetworkManager[270]: <info>  [1690463800.8821] dhcp4 (eth1): state changed timeout -> terminated
+Jul 27 21:16:40 openeuler-riscv64 NetworkManager[270]: <info>  [1690463800.9230] device (eth2): state change: failed -> disconnected (reason 'none', sys-iface-state: 'managed')
+Jul 27 21:16:40 openeuler-riscv64 NetworkManager[270]: <info>  [1690463800.9450] dhcp4 (eth2): canceled DHCP transaction
+Jul 27 21:16:40 openeuler-riscv64 NetworkManager[270]: <info>  [1690463800.9457] dhcp4 (eth2): state changed timeout -> terminated
+Jul 27 21:16:40 openeuler-riscv64 NetworkManager[270]: <info>  [1690463800.9785] policy: auto-activating connection 'Wired connection 2' (ef61f214-000f-3cf6-8b37-6b717fb363ec)
+Jul 27 21:16:40 openeuler-riscv64 NetworkManager[270]: <info>  [1690463800.9943] policy: auto-activating connection 'Wired connection 3' (71d59045-f2a0-32fa-8ba9-93a6576f5e87)
+Jul 27 21:16:41 openeuler-riscv64 NetworkManager[270]: <info>  [1690463801.0025] device (eth1): Activation: starting connection 'Wired connection 2' (ef61f214-000f-3cf6-8b37-6b717fb363ec)
+Jul 27 21:16:41 openeuler-riscv64 NetworkManager[270]: <info>  [1690463801.0076] device (eth2): Activation: starting connection 'Wired connection 3' (71d59045-f2a0-32fa-8ba9-93a6576f5e87)
+Jul 27 21:16:41 openeuler-riscv64 NetworkManager[270]: <info>  [1690463801.0102] device (eth1): state change: disconnected -> prepare (reason 'none', sys-iface-state: 'managed')
+Jul 27 21:16:41 openeuler-riscv64 NetworkManager[270]: <info>  [1690463801.0161] device (eth1): state change: prepare -> config (reason 'none', sys-iface-state: 'managed')
+Jul 27 21:16:41 openeuler-riscv64 NetworkManager[270]: <info>  [1690463801.0240] device (eth2): state change: disconnected -> prepare (reason 'none', sys-iface-state: 'managed')
+Jul 27 21:16:41 openeuler-riscv64 NetworkManager[270]: <info>  [1690463801.0299] device (eth2): state change: prepare -> config (reason 'none', sys-iface-state: 'managed')
+Jul 27 21:16:41 openeuler-riscv64 NetworkManager[270]: <info>  [1690463801.0392] device (eth1): state change: config -> ip-config (reason 'none', sys-iface-state: 'managed')
+Jul 27 21:16:41 openeuler-riscv64 NetworkManager[270]: <info>  [1690463801.0452] dhcp4 (eth1): activation: beginning transaction (timeout in 45 seconds)
+Jul 27 21:16:41 openeuler-riscv64 NetworkManager[270]: <info>  [1690463801.0692] device (eth2): state change: config -> ip-config (reason 'none', sys-iface-state: 'managed')
+Jul 27 21:16:41 openeuler-riscv64 NetworkManager[270]: <info>  [1690463801.0752] dhcp4 (eth2): activation: beginning transaction (timeout in 45 seconds)
+Jul 27 21:16:45 openeuler-riscv64 systemctl[22666]: [systemctl start httpd] called by PID 20638 (bash -x oe_test_server_httpd_restart.sh)
+Jul 27 21:16:54 openeuler-riscv64 systemctl[22670]: [systemctl stop httpd] called by PID 20638 (bash -x oe_test_server_httpd_restart.sh)
+Jul 27 21:16:55 openeuler-riscv64 systemd[1]: Stopping The Apache HTTP Server...
+░░ Subject: A stop job for unit httpd.service has begun execution
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A stop job for unit httpd.service has begun execution.
+░░ 
+░░ The job identifier is 16991.
+Jul 27 21:16:56 openeuler-riscv64 systemd[1]: httpd.service: Deactivated successfully.
+░░ Subject: Unit succeeded
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ The unit httpd.service has successfully entered the 'dead' state.
+Jul 27 21:16:56 openeuler-riscv64 systemd[1]: Stopped The Apache HTTP Server.
+░░ Subject: A stop job for unit httpd.service has finished
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A stop job for unit httpd.service has finished.
+░░ 
+░░ The job identifier is 16991 and the job result is done.
+Jul 27 21:16:56 openeuler-riscv64 systemctl[22676]: [systemctl disable httpd] called by PID 20638 (bash -x oe_test_server_httpd_restart.sh)
+Jul 27 21:16:57 openeuler-riscv64 systemd[1]: Reloading.
+Jul 27 21:17:00 openeuler-riscv64 systemd[1]: /usr/lib/systemd/system/dbus.socket:5: ListenStream= references a path below legacy directory /var/run/, updating /var/run/dbus/system_bus_socket → /run/dbus/system_bus_socket; please update the unit file accordingly.
+Jul 27 21:17:05 openeuler-riscv64 systemctl[22689]: [systemctl restart httpd] called by PID 20638 (bash -x oe_test_server_httpd_restart.sh)
+Jul 27 21:17:05 openeuler-riscv64 systemd[1]: Starting The Apache HTTP Server...
+░░ Subject: A start job for unit httpd.service has begun execution
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A start job for unit httpd.service has begun execution.
+░░ 
+░░ The job identifier is 16992.
+Jul 27 21:17:07 openeuler-riscv64 httpd[22690]: AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using fe80::4cc1:c5d3:b0b3:9cc8%eth0. Set the 'ServerName' directive globally to suppress this message
+Jul 27 21:17:07 openeuler-riscv64 systemd[1]: Started The Apache HTTP Server.
+░░ Subject: A start job for unit httpd.service has finished successfully
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A start job for unit httpd.service has finished successfully.
+░░ 
+░░ The job identifier is 16992.
+Jul 27 21:17:17 openeuler-riscv64 systemctl[22873]: [systemctl enable httpd] called by PID 20638 (bash -x oe_test_server_httpd_restart.sh)
+Jul 27 21:17:17 openeuler-riscv64 systemd[1]: Reloading.
+Jul 27 21:17:20 openeuler-riscv64 systemd[1]: /usr/lib/systemd/system/dbus.socket:5: ListenStream= references a path below legacy directory /var/run/, updating /var/run/dbus/system_bus_socket → /run/dbus/system_bus_socket; please update the unit file accordingly.
+Jul 27 21:17:25 openeuler-riscv64 systemctl[22884]: [systemctl start httpd] called by PID 20638 (bash -x oe_test_server_httpd_restart.sh)
+Jul 27 21:17:25 openeuler-riscv64 NetworkManager[270]: <warn>  [1690463845.8251] dhcp4 (eth1): request timed out
+Jul 27 21:17:25 openeuler-riscv64 NetworkManager[270]: <info>  [1690463845.8261] dhcp4 (eth1): state changed unknown -> timeout
+Jul 27 21:17:25 openeuler-riscv64 NetworkManager[270]: <info>  [1690463845.8275] device (eth1): state change: ip-config -> failed (reason 'ip-config-unavailable', sys-iface-state: 'managed')
+Jul 27 21:17:25 openeuler-riscv64 NetworkManager[270]: <warn>  [1690463845.8366] device (eth1): Activation: failed for connection 'Wired connection 2'
+Jul 27 21:17:25 openeuler-riscv64 NetworkManager[270]: <info>  [1690463845.8407] device (eth1): state change: failed -> disconnected (reason 'none', sys-iface-state: 'managed')
+Jul 27 21:17:25 openeuler-riscv64 NetworkManager[270]: <info>  [1690463845.8650] dhcp4 (eth1): canceled DHCP transaction
+Jul 27 21:17:25 openeuler-riscv64 NetworkManager[270]: <info>  [1690463845.8658] dhcp4 (eth1): state changed timeout -> terminated
+Jul 27 21:17:25 openeuler-riscv64 NetworkManager[270]: <info>  [1690463845.8922] policy: auto-activating connection 'Wired connection 2' (ef61f214-000f-3cf6-8b37-6b717fb363ec)
+Jul 27 21:17:25 openeuler-riscv64 NetworkManager[270]: <info>  [1690463845.9001] device (eth1): Activation: starting connection 'Wired connection 2' (ef61f214-000f-3cf6-8b37-6b717fb363ec)
+Jul 27 21:17:25 openeuler-riscv64 NetworkManager[270]: <info>  [1690463845.9027] device (eth1): state change: disconnected -> prepare (reason 'none', sys-iface-state: 'managed')
+Jul 27 21:17:25 openeuler-riscv64 NetworkManager[270]: <info>  [1690463845.9099] device (eth1): state change: prepare -> config (reason 'none', sys-iface-state: 'managed')
+Jul 27 21:17:25 openeuler-riscv64 NetworkManager[270]: <info>  [1690463845.9193] device (eth1): state change: config -> ip-config (reason 'none', sys-iface-state: 'managed')
+Jul 27 21:17:25 openeuler-riscv64 NetworkManager[270]: <info>  [1690463845.9250] dhcp4 (eth1): activation: beginning transaction (timeout in 45 seconds)
+Jul 27 21:17:26 openeuler-riscv64 NetworkManager[270]: <warn>  [1690463846.8251] dhcp4 (eth2): request timed out
+Jul 27 21:17:26 openeuler-riscv64 NetworkManager[270]: <info>  [1690463846.8259] dhcp4 (eth2): state changed unknown -> timeout
+Jul 27 21:17:26 openeuler-riscv64 NetworkManager[270]: <info>  [1690463846.8273] device (eth2): state change: ip-config -> failed (reason 'ip-config-unavailable', sys-iface-state: 'managed')
+Jul 27 21:17:26 openeuler-riscv64 NetworkManager[270]: <warn>  [1690463846.8351] device (eth2): Activation: failed for connection 'Wired connection 3'
+Jul 27 21:17:26 openeuler-riscv64 NetworkManager[270]: <info>  [1690463846.8392] device (eth2): state change: failed -> disconnected (reason 'none', sys-iface-state: 'managed')
+Jul 27 21:17:26 openeuler-riscv64 NetworkManager[270]: <info>  [1690463846.8733] dhcp4 (eth2): canceled DHCP transaction
+Jul 27 21:17:26 openeuler-riscv64 NetworkManager[270]: <info>  [1690463846.8739] dhcp4 (eth2): state changed timeout -> terminated
+Jul 27 21:17:26 openeuler-riscv64 NetworkManager[270]: <info>  [1690463846.8978] policy: auto-activating connection 'Wired connection 3' (71d59045-f2a0-32fa-8ba9-93a6576f5e87)
+Jul 27 21:17:26 openeuler-riscv64 NetworkManager[270]: <info>  [1690463846.9071] device (eth2): Activation: starting connection 'Wired connection 3' (71d59045-f2a0-32fa-8ba9-93a6576f5e87)
+Jul 27 21:17:26 openeuler-riscv64 NetworkManager[270]: <info>  [1690463846.9095] device (eth2): state change: disconnected -> prepare (reason 'none', sys-iface-state: 'managed')
+Jul 27 21:17:26 openeuler-riscv64 NetworkManager[270]: <info>  [1690463846.9169] device (eth2): state change: prepare -> config (reason 'none', sys-iface-state: 'managed')
+Jul 27 21:17:26 openeuler-riscv64 NetworkManager[270]: <info>  [1690463846.9253] device (eth2): state change: config -> ip-config (reason 'none', sys-iface-state: 'managed')
+Jul 27 21:17:26 openeuler-riscv64 NetworkManager[270]: <info>  [1690463846.9301] dhcp4 (eth2): activation: beginning transaction (timeout in 45 seconds)
+Jul 27 21:17:34 openeuler-riscv64 systemctl[22888]: [systemctl stop httpd] called by PID 20638 (bash -x oe_test_server_httpd_restart.sh)
+Jul 27 21:17:35 openeuler-riscv64 systemd[1]: Stopping The Apache HTTP Server...
+░░ Subject: A stop job for unit httpd.service has begun execution
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A stop job for unit httpd.service has begun execution.
+░░ 
+░░ The job identifier is 17119.
+Jul 27 21:17:36 openeuler-riscv64 systemd[1]: httpd.service: Deactivated successfully.
+░░ Subject: Unit succeeded
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ The unit httpd.service has successfully entered the 'dead' state.
+Jul 27 21:17:36 openeuler-riscv64 systemd[1]: Stopped The Apache HTTP Server.
+░░ Subject: A stop job for unit httpd.service has finished
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A stop job for unit httpd.service has finished.
+░░ 
+░░ The job identifier is 17119 and the job result is done.
+Jul 27 21:17:36 openeuler-riscv64 systemctl[22896]: [systemctl disable httpd] called by PID 20638 (bash -x oe_test_server_httpd_restart.sh)
+Jul 27 21:17:37 openeuler-riscv64 systemd[1]: Reloading.
+Jul 27 21:17:40 openeuler-riscv64 systemd[1]: /usr/lib/systemd/system/dbus.socket:5: ListenStream= references a path below legacy directory /var/run/, updating /var/run/dbus/system_bus_socket → /run/dbus/system_bus_socket; please update the unit file accordingly.
+Jul 27 21:17:45 openeuler-riscv64 systemctl[22909]: [systemctl restart httpd] called by PID 20638 (bash -x oe_test_server_httpd_restart.sh)
+Jul 27 21:17:45 openeuler-riscv64 systemd[1]: Starting The Apache HTTP Server...
+░░ Subject: A start job for unit httpd.service has begun execution
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A start job for unit httpd.service has begun execution.
+░░ 
+░░ The job identifier is 17120.
+Jul 27 21:17:47 openeuler-riscv64 httpd[22910]: AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using fe80::4cc1:c5d3:b0b3:9cc8%eth0. Set the 'ServerName' directive globally to suppress this message
+Jul 27 21:17:47 openeuler-riscv64 systemd[1]: Started The Apache HTTP Server.
+░░ Subject: A start job for unit httpd.service has finished successfully
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A start job for unit httpd.service has finished successfully.
+░░ 
+░░ The job identifier is 17120.
+Jul 27 21:18:01 openeuler-riscv64 systemctl[23096]: [systemctl stop httpd] called by PID 20638 (bash -x oe_test_server_httpd_restart.sh)
+Jul 27 21:18:01 openeuler-riscv64 systemd[1]: Stopping The Apache HTTP Server...
+░░ Subject: A stop job for unit httpd.service has begun execution
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A stop job for unit httpd.service has begun execution.
+░░ 
+░░ The job identifier is 17184.
+Jul 27 21:18:02 openeuler-riscv64 systemd[1]: httpd.service: Deactivated successfully.
+░░ Subject: Unit succeeded
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ The unit httpd.service has successfully entered the 'dead' state.
+Jul 27 21:18:03 openeuler-riscv64 systemd[1]: Stopped The Apache HTTP Server.
+░░ Subject: A stop job for unit httpd.service has finished
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A stop job for unit httpd.service has finished.
+░░ 
+░░ The job identifier is 17184 and the job result is done.
+Jul 27 21:18:10 openeuler-riscv64 NetworkManager[270]: <warn>  [1690463890.8274] dhcp4 (eth1): request timed out
+Jul 27 21:18:10 openeuler-riscv64 NetworkManager[270]: <info>  [1690463890.8314] dhcp4 (eth1): state changed unknown -> timeout
+Jul 27 21:18:10 openeuler-riscv64 NetworkManager[270]: <info>  [1690463890.8479] device (eth1): state change: ip-config -> failed (reason 'ip-config-unavailable', sys-iface-state: 'managed')
+Jul 27 21:18:10 openeuler-riscv64 NetworkManager[270]: <warn>  [1690463890.8823] device (eth1): Activation: failed for connection 'Wired connection 2'
+Jul 27 21:18:10 openeuler-riscv64 NetworkManager[270]: <info>  [1690463890.9060] device (eth1): state change: failed -> disconnected (reason 'none', sys-iface-state: 'managed')
+Jul 27 21:18:10 openeuler-riscv64 NetworkManager[270]: <info>  [1690463890.9735] dhcp4 (eth1): canceled DHCP transaction
+Jul 27 21:18:10 openeuler-riscv64 NetworkManager[270]: <info>  [1690463890.9743] dhcp4 (eth1): state changed timeout -> terminated
+Jul 27 21:18:11 openeuler-riscv64 NetworkManager[270]: <info>  [1690463891.0512] policy: auto-activating connection 'Wired connection 2' (ef61f214-000f-3cf6-8b37-6b717fb363ec)
+Jul 27 21:18:11 openeuler-riscv64 NetworkManager[270]: <info>  [1690463891.0743] device (eth1): Activation: starting connection 'Wired connection 2' (ef61f214-000f-3cf6-8b37-6b717fb363ec)
+Jul 27 21:18:11 openeuler-riscv64 NetworkManager[270]: <info>  [1690463891.0775] device (eth1): state change: disconnected -> prepare (reason 'none', sys-iface-state: 'managed')
+Jul 27 21:18:11 openeuler-riscv64 NetworkManager[270]: <info>  [1690463891.0861] device (eth1): state change: prepare -> config (reason 'none', sys-iface-state: 'managed')
+Jul 27 21:18:11 openeuler-riscv64 NetworkManager[270]: <info>  [1690463891.1044] device (eth1): state change: config -> ip-config (reason 'none', sys-iface-state: 'managed')
+Jul 27 21:18:11 openeuler-riscv64 NetworkManager[270]: <info>  [1690463891.1133] dhcp4 (eth1): activation: beginning transaction (timeout in 45 seconds)
+Jul 27 21:18:11 openeuler-riscv64 NetworkManager[270]: <warn>  [1690463891.8254] dhcp4 (eth2): request timed out
+Jul 27 21:18:11 openeuler-riscv64 NetworkManager[270]: <info>  [1690463891.8264] dhcp4 (eth2): state changed unknown -> timeout
+Jul 27 21:18:11 openeuler-riscv64 NetworkManager[270]: <info>  [1690463891.8284] device (eth2): state change: ip-config -> failed (reason 'ip-config-unavailable', sys-iface-state: 'managed')
+Jul 27 21:18:11 openeuler-riscv64 NetworkManager[270]: <warn>  [1690463891.8424] device (eth2): Activation: failed for connection 'Wired connection 3'
+Jul 27 21:18:11 openeuler-riscv64 NetworkManager[270]: <info>  [1690463891.8514] device (eth2): state change: failed -> disconnected (reason 'none', sys-iface-state: 'managed')
+Jul 27 21:18:11 openeuler-riscv64 NetworkManager[270]: <info>  [1690463891.8850] dhcp4 (eth2): canceled DHCP transaction
+Jul 27 21:18:11 openeuler-riscv64 NetworkManager[270]: <info>  [1690463891.8862] dhcp4 (eth2): state changed timeout -> terminated
+Jul 27 21:18:11 openeuler-riscv64 NetworkManager[270]: <info>  [1690463891.9256] policy: auto-activating connection 'Wired connection 3' (71d59045-f2a0-32fa-8ba9-93a6576f5e87)
+Jul 27 21:18:11 openeuler-riscv64 NetworkManager[270]: <info>  [1690463891.9340] device (eth2): Activation: starting connection 'Wired connection 3' (71d59045-f2a0-32fa-8ba9-93a6576f5e87)
+Jul 27 21:18:11 openeuler-riscv64 NetworkManager[270]: <info>  [1690463891.9364] device (eth2): state change: disconnected -> prepare (reason 'none', sys-iface-state: 'managed')
+Jul 27 21:18:11 openeuler-riscv64 NetworkManager[270]: <info>  [1690463891.9424] device (eth2): state change: prepare -> config (reason 'none', sys-iface-state: 'managed')
+Jul 27 21:18:11 openeuler-riscv64 NetworkManager[270]: <info>  [1690463891.9511] device (eth2): state change: config -> ip-config (reason 'none', sys-iface-state: 'managed')
+Jul 27 21:18:11 openeuler-riscv64 NetworkManager[270]: <info>  [1690463891.9559] dhcp4 (eth2): activation: beginning transaction (timeout in 45 seconds)
+Jul 27 21:18:19 openeuler-riscv64 [RPM][23101]: Transaction ID 64c26e9b started
+Jul 27 21:18:20 openeuler-riscv64 [RPM][23101]: erase httpd-2.4.55-1.oe2303.riscv64: success
+Jul 27 21:18:20 openeuler-riscv64 [RPM][23101]: erase httpd-filesystem-2.4.55-1.oe2303.noarch: success
+Jul 27 21:18:20 openeuler-riscv64 [RPM][23101]: erase mailcap-2.1.53-3.oe2303.noarch: success
+Jul 27 21:18:20 openeuler-riscv64 [RPM][23101]: erase openEuler-logos-httpd-1.0-8.oe2303.noarch: success
+Jul 27 21:18:20 openeuler-riscv64 [RPM][23101]: erase httpd-tools-2.4.55-1.oe2303.riscv64: success
+Jul 27 21:18:20 openeuler-riscv64 [RPM][23101]: erase apr-util-1.6.1-14.oe2303.riscv64: success
+Jul 27 21:18:20 openeuler-riscv64 [RPM][23101]: erase apr-1.7.0-5.oe2303.riscv64: success
+Jul 27 21:18:20 openeuler-riscv64 [RPM][23101]: erase mariadb-connector-c-3.1.13-7.oe2303.riscv64: success
+Jul 27 21:18:20 openeuler-riscv64 [RPM][23101]: erase mod_http2-2.0.3-1.oe2303.riscv64: success
+Jul 27 21:18:21 openeuler-riscv64 systemctl[23106]: [/usr/bin/systemctl --no-reload --now disable httpd.service htcacheclean.service httpd.socket] called by PID 23105 (/bin/sh /var/tmp/rpm-tmp.bVwBgl 0)
+Jul 27 21:18:23 openeuler-riscv64 systemctl[23109]: [/usr/bin/systemctl daemon-reload] called by PID 23107 (/bin/sh /var/tmp/rpm-tmp.trUvxS 0)
+Jul 27 21:18:23 openeuler-riscv64 systemd[1]: Reloading.
+Jul 27 21:18:26 openeuler-riscv64 systemd[1]: /usr/lib/systemd/system/dbus.socket:5: ListenStream= references a path below legacy directory /var/run/, updating /var/run/dbus/system_bus_socket → /run/dbus/system_bus_socket; please update the unit file accordingly.
+Jul 27 21:18:31 openeuler-riscv64 [RPM][23101]: erase httpd-2.4.55-1.oe2303.riscv64: success
+Jul 27 21:18:32 openeuler-riscv64 [RPM][23101]: erase httpd-filesystem-2.4.55-1.oe2303.noarch: success
+Jul 27 21:18:32 openeuler-riscv64 [RPM][23101]: erase mailcap-2.1.53-3.oe2303.noarch: success
+Jul 27 21:18:32 openeuler-riscv64 [RPM][23101]: erase openEuler-logos-httpd-1.0-8.oe2303.noarch: success
+Jul 27 21:18:33 openeuler-riscv64 [RPM][23101]: erase httpd-tools-2.4.55-1.oe2303.riscv64: success
+Jul 27 21:18:33 openeuler-riscv64 [RPM][23101]: erase apr-util-1.6.1-14.oe2303.riscv64: success
+Jul 27 21:18:34 openeuler-riscv64 [RPM][23101]: erase apr-1.7.0-5.oe2303.riscv64: success
+Jul 27 21:18:34 openeuler-riscv64 [RPM][23101]: erase mariadb-connector-c-3.1.13-7.oe2303.riscv64: success
+Jul 27 21:18:34 openeuler-riscv64 [RPM][23101]: erase mod_http2-2.0.3-1.oe2303.riscv64: success
+Jul 27 21:18:35 openeuler-riscv64 systemd[1]: Started /usr/bin/systemctl start man-db-cache-update.
+░░ Subject: A start job for unit run-r714cd587c99a4815a4ed0641b2334574.service has finished successfully
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A start job for unit run-r714cd587c99a4815a4ed0641b2334574.service has finished successfully.
+░░ 
+░░ The job identifier is 17188.
+Jul 27 21:18:35 openeuler-riscv64 [RPM][23101]: Transaction ID 64c26e9b finished: 0
+Jul 27 21:18:35 openeuler-riscv64 systemctl[23130]: [/usr/bin/systemctl start man-db-cache-update] called by PID 1 (/sbin/init)
+Jul 27 21:18:35 openeuler-riscv64 systemd[1]: Starting man-db-cache-update.service...
+░░ Subject: A start job for unit man-db-cache-update.service has begun execution
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A start job for unit man-db-cache-update.service has begun execution.
+░░ 
+░░ The job identifier is 17251.
+Jul 27 21:18:38 openeuler-riscv64 systemd[1]: man-db-cache-update.service: Deactivated successfully.
+░░ Subject: Unit succeeded
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ The unit man-db-cache-update.service has successfully entered the 'dead' state.
+Jul 27 21:18:38 openeuler-riscv64 systemd[1]: Finished man-db-cache-update.service.
+░░ Subject: A start job for unit man-db-cache-update.service has finished successfully
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A start job for unit man-db-cache-update.service has finished successfully.
+░░ 
+░░ The job identifier is 17251.
+Jul 27 21:18:38 openeuler-riscv64 systemd[1]: run-r714cd587c99a4815a4ed0641b2334574.service: Deactivated successfully.
+░░ Subject: Unit succeeded
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ The unit run-r714cd587c99a4815a4ed0641b2334574.service has successfully entered the 'dead' state.
+Jul 27 21:18:44 openeuler-riscv64 sudo[20591]: pam_unix(sudo:session): session closed for user root
+Jul 27 21:18:45 openeuler-riscv64 sudo[23157]:     root : PWD=/root/mugen ; USER=root ; COMMAND=/usr/bin/bash mugen.sh -f os-basic -r oe_test_server_httpd_recover -x
+Jul 27 21:18:45 openeuler-riscv64 sudo[23157]: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=0)
+Jul 27 21:18:56 openeuler-riscv64 NetworkManager[270]: <warn>  [1690463936.8372] dhcp4 (eth1): request timed out
+Jul 27 21:18:56 openeuler-riscv64 NetworkManager[270]: <info>  [1690463936.8381] dhcp4 (eth1): state changed unknown -> timeout
+Jul 27 21:18:56 openeuler-riscv64 NetworkManager[270]: <warn>  [1690463936.8391] dhcp4 (eth2): request timed out
+Jul 27 21:18:56 openeuler-riscv64 NetworkManager[270]: <info>  [1690463936.8400] dhcp4 (eth2): state changed unknown -> timeout
+Jul 27 21:18:56 openeuler-riscv64 NetworkManager[270]: <info>  [1690463936.8417] device (eth1): state change: ip-config -> failed (reason 'ip-config-unavailable', sys-iface-state: 'managed')
+Jul 27 21:18:56 openeuler-riscv64 NetworkManager[270]: <warn>  [1690463936.8484] device (eth1): Activation: failed for connection 'Wired connection 2'
+Jul 27 21:18:56 openeuler-riscv64 NetworkManager[270]: <info>  [1690463936.8493] device (eth2): state change: ip-config -> failed (reason 'ip-config-unavailable', sys-iface-state: 'managed')
+Jul 27 21:18:56 openeuler-riscv64 NetworkManager[270]: <warn>  [1690463936.8567] device (eth2): Activation: failed for connection 'Wired connection 3'
+Jul 27 21:18:56 openeuler-riscv64 NetworkManager[270]: <info>  [1690463936.8634] device (eth1): state change: failed -> disconnected (reason 'none', sys-iface-state: 'managed')
+Jul 27 21:18:56 openeuler-riscv64 NetworkManager[270]: <info>  [1690463936.8968] dhcp4 (eth1): canceled DHCP transaction
+Jul 27 21:18:56 openeuler-riscv64 NetworkManager[270]: <info>  [1690463936.8976] dhcp4 (eth1): state changed timeout -> terminated
+Jul 27 21:18:56 openeuler-riscv64 NetworkManager[270]: <info>  [1690463936.9265] device (eth2): state change: failed -> disconnected (reason 'none', sys-iface-state: 'managed')
+Jul 27 21:18:56 openeuler-riscv64 NetworkManager[270]: <info>  [1690463936.9489] dhcp4 (eth2): canceled DHCP transaction
+Jul 27 21:18:56 openeuler-riscv64 NetworkManager[270]: <info>  [1690463936.9496] dhcp4 (eth2): state changed timeout -> terminated
+Jul 27 21:18:58 openeuler-riscv64 ntpd[5555]: Deleting interface #60 eth1, fe80::edfb:237f:711:e1ee%3#123, interface stats: received=0, sent=0, dropped=0, active_time=180 secs
+Jul 27 21:18:58 openeuler-riscv64 ntpd[5555]: Deleting interface #61 eth2, fe80::5c34:cef6:6655:3c3c%4#123, interface stats: received=0, sent=0, dropped=0, active_time=180 secs
+Jul 27 21:20:04 openeuler-riscv64 [RPM][23236]: Transaction ID 64c26f03 started
+Jul 27 21:20:04 openeuler-riscv64 [RPM][23236]: install mariadb-connector-c-3.1.13-7.oe2303.riscv64: success
+Jul 27 21:20:05 openeuler-riscv64 [RPM][23236]: install apr-1.7.0-5.oe2303.riscv64: success
+Jul 27 21:20:06 openeuler-riscv64 [RPM][23236]: install openEuler-logos-httpd-1.0-8.oe2303.noarch: success
+Jul 27 21:20:06 openeuler-riscv64 [RPM][23236]: install mariadb-connector-c-3.1.13-7.oe2303.riscv64: success
+Jul 27 21:20:07 openeuler-riscv64 [RPM][23236]: install apr-util-1.6.1-14.oe2303.riscv64: success
+Jul 27 21:20:07 openeuler-riscv64 [RPM][23236]: install httpd-tools-2.4.55-1.oe2303.riscv64: success
+Jul 27 21:20:08 openeuler-riscv64 [RPM][23236]: install mailcap-2.1.53-3.oe2303.noarch: success
+Jul 27 21:20:08 openeuler-riscv64 [RPM][23236]: install httpd-filesystem-2.4.55-1.oe2303.noarch: success
+Jul 27 21:20:09 openeuler-riscv64 [RPM][23236]: install mod_http2-2.0.3-1.oe2303.riscv64: success
+Jul 27 21:20:12 openeuler-riscv64 systemctl[23250]: [/usr/bin/systemctl --no-reload preset httpd.service htcacheclean.service httpd.socket] called by PID 23249 (/bin/sh /var/tmp/rpm-tmp.Vfjanh 1)
+Jul 27 21:20:13 openeuler-riscv64 [RPM][23236]: install httpd-2.4.55-1.oe2303.riscv64: success
+Jul 27 21:20:13 openeuler-riscv64 systemctl[23252]: [/bin/systemctl --no-block try-restart httpd.service htcacheclean.service] called by PID 23251 (/bin/sh /var/tmp/rpm-tmp.qm8T5i 1)
+Jul 27 21:20:14 openeuler-riscv64 [RPM][23236]: install httpd-2.4.55-1.oe2303.riscv64: success
+Jul 27 21:20:16 openeuler-riscv64 systemd[1]: Started /usr/bin/systemctl start man-db-cache-update.
+░░ Subject: A start job for unit run-rbde8937ae48e4941a6c7dd57730967bb.service has finished successfully
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A start job for unit run-rbde8937ae48e4941a6c7dd57730967bb.service has finished successfully.
+░░ 
+░░ The job identifier is 17256.
+Jul 27 21:20:16 openeuler-riscv64 systemctl[23257]: [/usr/bin/systemctl start man-db-cache-update] called by PID 1 (/sbin/init)
+Jul 27 21:20:16 openeuler-riscv64 systemctl[23259]: [/usr/bin/systemctl daemon-reload] called by PID 23258 (/bin/sh /var/tmp/rpm-tmp.2dJu4N 0)
+Jul 27 21:20:16 openeuler-riscv64 systemd[1]: Starting man-db-cache-update.service...
+░░ Subject: A start job for unit man-db-cache-update.service has begun execution
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A start job for unit man-db-cache-update.service has begun execution.
+░░ 
+░░ The job identifier is 17319.
+Jul 27 21:20:17 openeuler-riscv64 systemd[1]: Reloading.
+Jul 27 21:20:20 openeuler-riscv64 systemd[1]: /usr/lib/systemd/system/dbus.socket:5: ListenStream= references a path below legacy directory /var/run/, updating /var/run/dbus/system_bus_socket → /run/dbus/system_bus_socket; please update the unit file accordingly.
+Jul 27 21:20:25 openeuler-riscv64 systemd[1]: man-db-cache-update.service: Deactivated successfully.
+░░ Subject: Unit succeeded
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ The unit man-db-cache-update.service has successfully entered the 'dead' state.
+Jul 27 21:20:26 openeuler-riscv64 systemd[1]: Finished man-db-cache-update.service.
+░░ Subject: A start job for unit man-db-cache-update.service has finished successfully
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A start job for unit man-db-cache-update.service has finished successfully.
+░░ 
+░░ The job identifier is 17319.
+Jul 27 21:20:26 openeuler-riscv64 [RPM][23236]: install apr-1.7.0-5.oe2303.riscv64: success
+Jul 27 21:20:26 openeuler-riscv64 [RPM][23236]: install openEuler-logos-httpd-1.0-8.oe2303.noarch: success
+Jul 27 21:20:26 openeuler-riscv64 [RPM][23236]: install mariadb-connector-c-3.1.13-7.oe2303.riscv64: success
+Jul 27 21:20:26 openeuler-riscv64 [RPM][23236]: install apr-util-1.6.1-14.oe2303.riscv64: success
+Jul 27 21:20:26 openeuler-riscv64 [RPM][23236]: install httpd-tools-2.4.55-1.oe2303.riscv64: success
+Jul 27 21:20:26 openeuler-riscv64 [RPM][23236]: install mailcap-2.1.53-3.oe2303.noarch: success
+Jul 27 21:20:26 openeuler-riscv64 [RPM][23236]: install httpd-filesystem-2.4.55-1.oe2303.noarch: success
+Jul 27 21:20:26 openeuler-riscv64 [RPM][23236]: install mod_http2-2.0.3-1.oe2303.riscv64: success
+Jul 27 21:20:26 openeuler-riscv64 [RPM][23236]: install httpd-2.4.55-1.oe2303.riscv64: success
+Jul 27 21:20:26 openeuler-riscv64 [RPM][23236]: Transaction ID 64c26f03 finished: 0
+Jul 27 21:20:26 openeuler-riscv64 systemd[1]: run-rbde8937ae48e4941a6c7dd57730967bb.service: Deactivated successfully.
+░░ Subject: Unit succeeded
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ The unit run-rbde8937ae48e4941a6c7dd57730967bb.service has successfully entered the 'dead' state.
+Jul 27 21:20:31 openeuler-riscv64 sshd[23286]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=10.0.2.2  user=root
+Jul 27 21:20:33 openeuler-riscv64 sshd[23286]: Failed password for root from 10.0.2.2 port 38738 ssh2
+Jul 27 21:20:33 openeuler-riscv64 systemctl[23292]: [systemctl restart httpd] called by PID 23204 (bash -x oe_test_server_httpd_recover.sh)
+Jul 27 21:20:34 openeuler-riscv64 systemd[1]: Starting The Apache HTTP Server...
+░░ Subject: A start job for unit httpd.service has begun execution
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A start job for unit httpd.service has begun execution.
+░░ 
+░░ The job identifier is 17322.
+Jul 27 21:20:35 openeuler-riscv64 httpd[23293]: AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using fe80::4cc1:c5d3:b0b3:9cc8%eth0. Set the 'ServerName' directive globally to suppress this message
+Jul 27 21:20:35 openeuler-riscv64 systemd[1]: Started The Apache HTTP Server.
+░░ Subject: A start job for unit httpd.service has finished successfully
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A start job for unit httpd.service has finished successfully.
+░░ 
+░░ The job identifier is 17322.
+Jul 27 21:20:41 openeuler-riscv64 sshd[23286]: Accepted password for root from 10.0.2.2 port 38738 ssh2
+Jul 27 21:20:41 openeuler-riscv64 sshd[23286]: pam_unix(sshd:session): session opened for user root(uid=0) by (uid=0)
+Jul 27 21:20:42 openeuler-riscv64 dbus-daemon[264]: [system] Activating via systemd: service name='org.freedesktop.hostname1' unit='dbus-org.freedesktop.hostname1.service' requested by ':1.174' (uid=0 pid=23479 comm="/usr/bin/hostnamectl --transient")
+Jul 27 21:20:42 openeuler-riscv64 systemd[1]: Starting Hostname Service...
+░░ Subject: A start job for unit systemd-hostnamed.service has begun execution
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A start job for unit systemd-hostnamed.service has begun execution.
+░░ 
+░░ The job identifier is 17386.
+Jul 27 21:20:44 openeuler-riscv64 dbus-daemon[264]: [system] Successfully activated service 'org.freedesktop.hostname1'
+Jul 27 21:20:44 openeuler-riscv64 systemd[1]: Started Hostname Service.
+░░ Subject: A start job for unit systemd-hostnamed.service has finished successfully
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A start job for unit systemd-hostnamed.service has finished successfully.
+░░ 
+░░ The job identifier is 17386.
+Jul 27 21:20:47 openeuler-riscv64 systemctl[23507]: [systemctl restart httpd] called by PID 23204 (bash -x oe_test_server_httpd_recover.sh)
+Jul 27 21:20:47 openeuler-riscv64 systemd[1]: Stopping The Apache HTTP Server...
+░░ Subject: A stop job for unit httpd.service has begun execution
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A stop job for unit httpd.service has begun execution.
+░░ 
+░░ The job identifier is 17450.
+Jul 27 21:20:48 openeuler-riscv64 systemd[1]: httpd.service: Deactivated successfully.
+░░ Subject: Unit succeeded
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ The unit httpd.service has successfully entered the 'dead' state.
+Jul 27 21:20:48 openeuler-riscv64 systemd[1]: Stopped The Apache HTTP Server.
+░░ Subject: A stop job for unit httpd.service has finished
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A stop job for unit httpd.service has finished.
+░░ 
+░░ The job identifier is 17450 and the job result is done.
+Jul 27 21:20:48 openeuler-riscv64 systemd[1]: Starting The Apache HTTP Server...
+░░ Subject: A start job for unit httpd.service has begun execution
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A start job for unit httpd.service has begun execution.
+░░ 
+░░ The job identifier is 17450.
+Jul 27 21:20:49 openeuler-riscv64 httpd[23532]: httpd: Could not open configuration file /etc/httpd/conf/httpd.conf: No such file or directory
+Jul 27 21:20:49 openeuler-riscv64 systemd[1]: httpd.service: Main process exited, code=exited, status=1/FAILURE
+░░ Subject: Unit process exited
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ An ExecStart= process belonging to unit httpd.service has exited.
+░░ 
+░░ The process' exit code is 'exited' and its exit status is 1.
+Jul 27 21:20:49 openeuler-riscv64 systemd[1]: httpd.service: Failed with result 'exit-code'.
+░░ Subject: Unit failed
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ The unit httpd.service has entered the 'failed' state with result 'exit-code'.
+Jul 27 21:20:49 openeuler-riscv64 systemd[1]: Failed to start The Apache HTTP Server.
+░░ Subject: A start job for unit httpd.service has failed
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A start job for unit httpd.service has finished with a failure.
+░░ 
+░░ The job identifier is 17450 and the job result is failed.
+Jul 27 21:20:50 openeuler-riscv64 systemctl[23547]: [systemctl restart httpd.service] called by PID 23204 (bash -x oe_test_server_httpd_recover.sh)
+Jul 27 21:20:50 openeuler-riscv64 systemd[1]: Starting The Apache HTTP Server...
+░░ Subject: A start job for unit httpd.service has begun execution
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A start job for unit httpd.service has begun execution.
+░░ 
+░░ The job identifier is 17513.
+Jul 27 21:20:52 openeuler-riscv64 httpd[23548]: AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using fe80::4cc1:c5d3:b0b3:9cc8%eth0. Set the 'ServerName' directive globally to suppress this message
+Jul 27 21:20:52 openeuler-riscv64 systemd[1]: Started The Apache HTTP Server.
+░░ Subject: A start job for unit httpd.service has finished successfully
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A start job for unit httpd.service has finished successfully.
+░░ 
+░░ The job identifier is 17513.
+Jul 27 21:21:01 openeuler-riscv64 systemctl[23729]: [systemctl start httpd] called by PID 23204 (bash -x oe_test_server_httpd_recover.sh)
+Jul 27 21:21:14 openeuler-riscv64 systemctl[23740]: [systemctl stop httpd] called by PID 23204 (bash -x oe_test_server_httpd_recover.sh)
+Jul 27 21:21:14 openeuler-riscv64 systemd[1]: Stopping The Apache HTTP Server...
+░░ Subject: A stop job for unit httpd.service has begun execution
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A stop job for unit httpd.service has begun execution.
+░░ 
+░░ The job identifier is 17640.
+Jul 27 21:21:15 openeuler-riscv64 systemd[1]: systemd-hostnamed.service: Deactivated successfully.
+░░ Subject: Unit succeeded
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ The unit systemd-hostnamed.service has successfully entered the 'dead' state.
+Jul 27 21:21:15 openeuler-riscv64 systemd[1]: httpd.service: Deactivated successfully.
+░░ Subject: Unit succeeded
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ The unit httpd.service has successfully entered the 'dead' state.
+Jul 27 21:21:15 openeuler-riscv64 systemd[1]: Stopped The Apache HTTP Server.
+░░ Subject: A stop job for unit httpd.service has finished
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A stop job for unit httpd.service has finished.
+░░ 
+░░ The job identifier is 17640 and the job result is done.
+Jul 27 21:21:31 openeuler-riscv64 [RPM][23750]: Transaction ID 64c26f5b started
+Jul 27 21:21:32 openeuler-riscv64 [RPM][23750]: erase httpd-2.4.55-1.oe2303.riscv64: success
+Jul 27 21:21:32 openeuler-riscv64 [RPM][23750]: erase httpd-filesystem-2.4.55-1.oe2303.noarch: success
+Jul 27 21:21:32 openeuler-riscv64 [RPM][23750]: erase mailcap-2.1.53-3.oe2303.noarch: success
+Jul 27 21:21:32 openeuler-riscv64 [RPM][23750]: erase openEuler-logos-httpd-1.0-8.oe2303.noarch: success
+Jul 27 21:21:32 openeuler-riscv64 [RPM][23750]: erase httpd-tools-2.4.55-1.oe2303.riscv64: success
+Jul 27 21:21:32 openeuler-riscv64 [RPM][23750]: erase apr-util-1.6.1-14.oe2303.riscv64: success
+Jul 27 21:21:32 openeuler-riscv64 [RPM][23750]: erase apr-1.7.0-5.oe2303.riscv64: success
+Jul 27 21:21:32 openeuler-riscv64 [RPM][23750]: erase mariadb-connector-c-3.1.13-7.oe2303.riscv64: success
+Jul 27 21:21:32 openeuler-riscv64 [RPM][23750]: erase mod_http2-2.0.3-1.oe2303.riscv64: success
+Jul 27 21:21:33 openeuler-riscv64 systemctl[23755]: [/usr/bin/systemctl --no-reload --now disable httpd.service htcacheclean.service httpd.socket] called by PID 23754 (/bin/sh /var/tmp/rpm-tmp.L5ygYW 0)
+Jul 27 21:21:35 openeuler-riscv64 systemctl[23758]: [/usr/bin/systemctl daemon-reload] called by PID 23756 (/bin/sh /var/tmp/rpm-tmp.3JCA9U 0)
+Jul 27 21:21:35 openeuler-riscv64 systemd[1]: Reloading.
+Jul 27 21:21:38 openeuler-riscv64 systemd[1]: /usr/lib/systemd/system/dbus.socket:5: ListenStream= references a path below legacy directory /var/run/, updating /var/run/dbus/system_bus_socket → /run/dbus/system_bus_socket; please update the unit file accordingly.
+Jul 27 21:21:44 openeuler-riscv64 [RPM][23750]: erase httpd-2.4.55-1.oe2303.riscv64: success
+Jul 27 21:21:44 openeuler-riscv64 [RPM][23750]: erase httpd-filesystem-2.4.55-1.oe2303.noarch: success
+Jul 27 21:21:45 openeuler-riscv64 [RPM][23750]: erase mailcap-2.1.53-3.oe2303.noarch: success
+Jul 27 21:21:45 openeuler-riscv64 [RPM][23750]: erase openEuler-logos-httpd-1.0-8.oe2303.noarch: success
+Jul 27 21:21:45 openeuler-riscv64 [RPM][23750]: erase httpd-tools-2.4.55-1.oe2303.riscv64: success
+Jul 27 21:21:46 openeuler-riscv64 [RPM][23750]: erase apr-util-1.6.1-14.oe2303.riscv64: success
+Jul 27 21:21:46 openeuler-riscv64 [RPM][23750]: erase apr-1.7.0-5.oe2303.riscv64: success
+Jul 27 21:21:46 openeuler-riscv64 [RPM][23750]: erase mariadb-connector-c-3.1.13-7.oe2303.riscv64: success
+Jul 27 21:21:47 openeuler-riscv64 [RPM][23750]: erase mod_http2-2.0.3-1.oe2303.riscv64: success
+Jul 27 21:21:47 openeuler-riscv64 systemd[1]: Started /usr/bin/systemctl start man-db-cache-update.
+░░ Subject: A start job for unit run-r8921463d784841608695d4f4176f6590.service has finished successfully
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A start job for unit run-r8921463d784841608695d4f4176f6590.service has finished successfully.
+░░ 
+░░ The job identifier is 17644.
+Jul 27 21:21:48 openeuler-riscv64 [RPM][23750]: Transaction ID 64c26f5b finished: 0
+Jul 27 21:21:48 openeuler-riscv64 systemctl[23779]: [/usr/bin/systemctl start man-db-cache-update] called by PID 1 (/sbin/init)
+Jul 27 21:21:48 openeuler-riscv64 systemd[1]: Starting man-db-cache-update.service...
+░░ Subject: A start job for unit man-db-cache-update.service has begun execution
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A start job for unit man-db-cache-update.service has begun execution.
+░░ 
+░░ The job identifier is 17707.
+Jul 27 21:21:50 openeuler-riscv64 systemd[1]: man-db-cache-update.service: Deactivated successfully.
+░░ Subject: Unit succeeded
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ The unit man-db-cache-update.service has successfully entered the 'dead' state.
+Jul 27 21:21:50 openeuler-riscv64 systemd[1]: Finished man-db-cache-update.service.
+░░ Subject: A start job for unit man-db-cache-update.service has finished successfully
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A start job for unit man-db-cache-update.service has finished successfully.
+░░ 
+░░ The job identifier is 17707.
+Jul 27 21:21:51 openeuler-riscv64 systemd[1]: system.slice: Failed to delete controller cgroups /system.slice, ignoring: Device or resource busy
+Jul 27 21:21:51 openeuler-riscv64 systemd[1]: run-r8921463d784841608695d4f4176f6590.service: Deactivated successfully.
+░░ Subject: Unit succeeded
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ The unit run-r8921463d784841608695d4f4176f6590.service has successfully entered the 'dead' state.
+Jul 27 21:21:57 openeuler-riscv64 sudo[23157]: pam_unix(sudo:session): session closed for user root
+Jul 27 21:21:58 openeuler-riscv64 sudo[23799]:     root : PWD=/root/mugen ; USER=root ; COMMAND=/usr/bin/journalctl -xe --no-pager
+Jul 27 21:21:58 openeuler-riscv64 sudo[23799]: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=0)

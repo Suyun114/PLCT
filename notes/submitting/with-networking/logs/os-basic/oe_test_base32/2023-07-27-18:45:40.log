@@ -1,0 +1,130 @@
++ source /root/mugen/libs/locallibs/common_lib.sh
+++ python3 --version
+++ '[' 0 -eq 0 ']'
+++ source /root/mugen/libs/locallibs/common_lib_python.sh
++ main
+++ type -t post_test
++ '[' -n function ']'
++ trap post_test EXIT INT HUP TERM
++ rpm -qa
++ grep expect
+++ type -t config_params
++ '[' -n '' ']'
+++ type -t pre_test
++ '[' -n function ']'
++ pre_test
++ LOG_INFO 'Start to prepare the test environment.'
++ message='Start to prepare the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to prepare the test environment.'
+Thu Jul 27 18:45:46 2023 - INFO  - Start to prepare the test environment.
++ OLD_LANG=en_US.UTF-8
++ export LANG=en_US.UTF-8
++ LANG=en_US.UTF-8
++ LOG_INFO 'End to prepare the test environment.'
++ message='End to prepare the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End to prepare the test environment.'
+Thu Jul 27 18:45:48 2023 - INFO  - End to prepare the test environment.
+++ type -t run_test
++ '[' -n function ']'
++ run_test
++ LOG_INFO 'Start to run test.'
++ message='Start to run test.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to run test.'
+Thu Jul 27 18:45:49 2023 - INFO  - Start to run test.
++ echo password
++ grep OBQXG43XN5ZGICQ=
++ base32
+OBQXG43XN5ZGICQ=
++ CHECK_RESULT 0 0 0 'encryption failure'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='encryption failure'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ echo OBQXG43XN5ZGICQ=
++ grep password
++ base32 -d
+password
++ CHECK_RESULT 0 0 0 'decryption failure'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='decryption failure'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ echo OBQXG43XN5ZGICQ=
++ base32 -i
++ grep J5BFCWCHGQZVQTRVLJDUSQ2RHUFA====
+J5BFCWCHGQZVQTRVLJDUSQ2RHUFA====
++ CHECK_RESULT 0 0 0 'failed to check parameter -i'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='failed to check parameter -i'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ base32 --version
++ grep Copyright
+Copyright (C) 2021 Free Software Foundation, Inc.
++ CHECK_RESULT 0 0 0 'check version fail'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='check version fail'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ base32 --help
++ grep base32
+Usage: base32 [OPTION]... [FILE]
+The data are encoded as described for the base32 alphabet in RFC 4648.
+the formal base32 alphabet.  Use --ignore-garbage to attempt to recover
+Full documentation <https://www.gnu.org/software/coreutils/base32>
+or available locally via: info '(coreutils) base32 invocation'
++ CHECK_RESULT 0 0 0 'check help fail'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='check help fail'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ LOG_INFO 'End to run test.'
++ message='End to run test.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End to run test.'
+Thu Jul 27 18:45:51 2023 - INFO  - End to run test.
++ CASE_RESULT 0
++ case_re=0
++ test -z ''
++ test 0 -eq 0
++ LOG_INFO 'succeed to execute the case.'
++ message='succeed to execute the case.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'succeed to execute the case.'
+Thu Jul 27 18:45:52 2023 - INFO  - succeed to execute the case.
++ exec_result=
++ exit 0
++ post_test
++ LOG_INFO 'start environment cleanup.'
++ message='start environment cleanup.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'start environment cleanup.'
+Thu Jul 27 18:45:54 2023 - INFO  - start environment cleanup.
++ export LANG=en_US.UTF-8
++ LANG=en_US.UTF-8
++ LOG_INFO 'Finish environment cleanup!'
++ message='Finish environment cleanup!'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Finish environment cleanup!'
+Thu Jul 27 18:45:55 2023 - INFO  - Finish environment cleanup!

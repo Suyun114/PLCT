@@ -1,0 +1,126 @@
++ source /root/mugen/libs/locallibs/common_lib.sh
+++ python3 --version
+++ '[' 0 -eq 0 ']'
+++ source /root/mugen/libs/locallibs/common_lib_python.sh
++ main
+++ type -t post_test
++ '[' -n function ']'
++ trap post_test EXIT INT HUP TERM
++ rpm -qa
++ grep expect
+++ type -t config_params
++ '[' -n '' ']'
+++ type -t pre_test
++ '[' -n function ']'
++ pre_test
++ LOG_INFO 'Start to prepare the test environment.'
++ message='Start to prepare the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to prepare the test environment.'
+Fri Jul 28 01:22:33 2023 - INFO  - Start to prepare the test environment.
+++ localectl status
+++ grep -i Keymap
+++ awk -F ' ' '{print$3}'
++ now_keymap=n/a
++ LOG_INFO 'End to prepare the test environment.'
++ message='End to prepare the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End to prepare the test environment.'
+Fri Jul 28 01:22:39 2023 - INFO  - End to prepare the test environment.
+++ type -t run_test
++ '[' -n function ']'
++ run_test
++ LOG_INFO 'Start to run test.'
++ message='Start to run test.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to run test.'
+Fri Jul 28 01:22:40 2023 - INFO  - Start to run test.
++ grep nodeadkeys
++ localectl list-keymaps
+at-nodeadkeys
+be-nodeadkeys
+br-nodeadkeys
+ch-de_nodeadkeys
+ch-fr_nodeadkeys
+de-latin1-nodeadkeys
+de-mac_nodeadkeys
+de-nodeadkeys
+de-ro_nodeadkeys
+dk-mac_nodeadkeys
+dk-nodeadkeys
+ee-nodeadkeys
+es-nodeadkeys
+et-nodeadkeys
+fi-nodeadkeys
+fo-nodeadkeys
+fr-latin9_nodeadkeys
+fr-nodeadkeys
+fr-oss_nodeadkeys
+hu-nodeadkeys
+it-nodeadkeys
+latam-nodeadkeys
+mac-de-latin1-nodeadkeys
+no-mac_nodeadkeys
+no-nodeadkeys
+no-smi_nodeadkeys
+pt-mac_nodeadkeys
+pt-nodeadkeys
+se-nodeadkeys
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ localectl set-keymap be-oss
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ grep -i Keymap
++ localectl status
++ grep be-oss
++ awk -F ' ' '{print$3}'
+be-oss
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ LOG_INFO 'End to run test.'
++ message='End to run test.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End to run test.'
+Fri Jul 28 01:22:43 2023 - INFO  - End to run test.
++ CASE_RESULT 0
++ case_re=0
++ test -z ''
++ test 0 -eq 0
++ LOG_INFO 'succeed to execute the case.'
++ message='succeed to execute the case.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'succeed to execute the case.'
+Fri Jul 28 01:22:44 2023 - INFO  - succeed to execute the case.
++ exec_result=
++ exit 0
++ post_test
++ LOG_INFO 'Start to restore the test environment.'
++ message='Start to restore the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to restore the test environment.'
+Fri Jul 28 01:22:45 2023 - INFO  - Start to restore the test environment.
++ localectl set-keymap n/a
+Failed to set keymap: Failed to check keymap n/a: Invalid argument
++ LOG_INFO 'End to restore the test environment.'
++ message='End to restore the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End to restore the test environment.'
+Fri Jul 28 01:22:47 2023 - INFO  - End to restore the test environment.

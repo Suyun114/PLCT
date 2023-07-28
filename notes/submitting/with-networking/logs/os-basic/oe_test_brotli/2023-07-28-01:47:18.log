@@ -1,0 +1,124 @@
++ source /root/mugen/libs/locallibs/common_lib.sh
+++ python3 --version
+++ '[' 0 -eq 0 ']'
+++ source /root/mugen/libs/locallibs/common_lib_python.sh
++ main
+++ type -t post_test
++ '[' -n function ']'
++ trap post_test EXIT INT HUP TERM
++ rpm -qa
++ grep expect
+++ type -t config_params
++ '[' -n '' ']'
+++ type -t pre_test
++ '[' -n function ']'
++ pre_test
++ LOG_INFO 'Start environmental preparation.'
++ message='Start environmental preparation.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start environmental preparation.'
+Fri Jul 28 01:47:24 2023 - INFO  - Start environmental preparation.
++ LOG_INFO 'End of environmental preparation!'
++ message='End of environmental preparation!'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End of environmental preparation!'
+Fri Jul 28 01:47:25 2023 - INFO  - End of environmental preparation!
+++ type -t run_test
++ '[' -n function ']'
++ run_test
++ LOG_INFO 'Start to run test.'
++ message='Start to run test.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to run test.'
+Fri Jul 28 01:47:27 2023 - INFO  - Start to run test.
++ brotli -V
+brotli 1.0.9
++ CHECK_RESULT 0 0 0 'check brotli version error'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='check brotli version error'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ touch test.tar
++ ls test.tar
+test.tar
++ CHECK_RESULT 0 0 0 'check test.tar after touch error'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='check test.tar after touch error'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ brotli -q 11 -j -f test.tar
++ CHECK_RESULT 0 0 0 'excute brotli -q error'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='excute brotli -q error'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ test -e test.tar.br
++ CHECK_RESULT 0 0 0 'check test.tar.br file error'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='check test.tar.br file error'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ rm -rf test.tar
++ brotli -d test.tar.br
++ CHECK_RESULT 0 0 0 'excute brotli -d error'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='excute brotli -d error'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ test -e test.tar
++ CHECK_RESULT 0 0 0 'check test.tar file error'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='check test.tar file error'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ LOG_INFO 'End to run test.'
++ message='End to run test.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End to run test.'
+Fri Jul 28 01:47:28 2023 - INFO  - End to run test.
++ CASE_RESULT 0
++ case_re=0
++ test -z ''
++ test 0 -eq 0
++ LOG_INFO 'succeed to execute the case.'
++ message='succeed to execute the case.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'succeed to execute the case.'
+Fri Jul 28 01:47:30 2023 - INFO  - succeed to execute the case.
++ exec_result=
++ exit 0
++ post_test
++ LOG_INFO 'start environment cleanup.'
++ message='start environment cleanup.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'start environment cleanup.'
+Fri Jul 28 01:47:31 2023 - INFO  - start environment cleanup.
++ rm -rf test.tar test.tar.br
++ LOG_INFO 'Finish environment cleanup!'
++ message='Finish environment cleanup!'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Finish environment cleanup!'
+Fri Jul 28 01:47:32 2023 - INFO  - Finish environment cleanup!

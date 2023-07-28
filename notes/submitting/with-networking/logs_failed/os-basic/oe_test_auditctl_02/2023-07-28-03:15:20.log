@@ -1,0 +1,100 @@
++ source /root/mugen/libs/locallibs/common_lib.sh
+++ python3 --version
+++ '[' 0 -eq 0 ']'
+++ source /root/mugen/libs/locallibs/common_lib_python.sh
++ main
+++ type -t post_test
++ '[' -n function ']'
++ trap post_test EXIT INT HUP TERM
++ rpm -qa
++ grep expect
+++ type -t config_params
++ '[' -n '' ']'
+++ type -t pre_test
++ '[' -n '' ']'
+++ type -t run_test
++ '[' -n function ']'
++ run_test
++ LOG_INFO 'Start testing...'
++ message='Start testing...'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start testing...'
+Fri Jul 28 03:15:26 2023 - INFO  - Start testing...
++ service auditd start
+oe_test_auditctl_02.sh: line 24: service: command not found
++ service auditd status
++ grep -i running
+oe_test_auditctl_02.sh: line 25: service: command not found
++ CHECK_RESULT 1 0 0 'Service startup failed'
++ actual_result=1
++ expect_result=0
++ mode=0
++ error_log='Service startup failed'
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 0 -eq 0 ']'
++ test 1x '!=' 0x
++ test -n 'Service startup failed'
++ LOG_ERROR 'Service startup failed'
++ message='Service startup failed'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'Service startup failed'
+Fri Jul 28 03:15:28 2023 - ERROR - Service startup failed
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_auditctl_02.sh line 26'
++ message='oe_test_auditctl_02.sh line 26'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_auditctl_02.sh line 26'
+Fri Jul 28 03:15:29 2023 - ERROR - oe_test_auditctl_02.sh line 26
++ '[' 0 -eq 1 ']'
++ return 0
++ auditctl -l
++ grep -i 'No rules'
+No rules
++ CHECK_RESULT 0 0 0 'Existence rule'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='Existence rule'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ auditctl -w /etc/passwd -k password-file -p rwxa
++ auditctl -l
++ grep passwd
+-w /etc/passwd -p rwxa -k password-file
++ CHECK_RESULT 0 0 0 'No rules'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='No rules'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ LOG_INFO 'Finish test!'
++ message='Finish test!'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Finish test!'
+Fri Jul 28 03:15:31 2023 - INFO  - Finish test!
++ CASE_RESULT 0
++ case_re=0
++ test -z 1
++ test 1 -gt 0
++ LOG_ERROR 'failed to execute the case.'
++ message='failed to execute the case.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'failed to execute the case.'
+Fri Jul 28 03:15:32 2023 - ERROR - failed to execute the case.
++ exit 1
++ post_test
++ LOG_INFO 'Start to restore the tet environment.'
++ message='Start to restore the tet environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to restore the tet environment.'
+Fri Jul 28 03:15:33 2023 - INFO  - Start to restore the tet environment.
++ auditctl -D
+No rules
++ service auditd stop
+oe_test_auditctl_02.sh: line 38: service: command not found
++ LOG_INFO 'Finish to restore the tet environment.'
++ message='Finish to restore the tet environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Finish to restore the tet environment.'
+Fri Jul 28 03:15:35 2023 - INFO  - Finish to restore the tet environment.

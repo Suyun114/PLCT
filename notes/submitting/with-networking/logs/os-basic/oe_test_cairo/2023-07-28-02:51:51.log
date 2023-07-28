@@ -1,0 +1,113 @@
++ source /root/mugen/libs/locallibs/common_lib.sh
+++ python3 --version
+++ '[' 0 -eq 0 ']'
+++ source /root/mugen/libs/locallibs/common_lib_python.sh
++ main
+++ type -t post_test
++ '[' -n function ']'
++ trap post_test EXIT INT HUP TERM
++ rpm -qa
++ grep expect
+++ type -t config_params
++ '[' -n '' ']'
+++ type -t pre_test
++ '[' -n function ']'
++ pre_test
++ LOG_INFO 'Start to prepare the test environment.'
++ message='Start to prepare the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to prepare the test environment.'
+Fri Jul 28 02:51:57 2023 - INFO  - Start to prepare the test environment.
++ DNF_INSTALL cairo-devel
++ pkgs=cairo-devel
++ node=1
++ '[' -z '' ']'
++ tmpfile=
+++ python3 /root/mugen/libs/locallibs/rpm_manage.py install --pkgs cairo-devel --node 1 --tempfile ''
++ tmpfile2=/tmp/tmpe5r4h0f4
++ '[' -z '' ']'
++ tmpfile=/tmp/tmpe5r4h0f4
+++ pwd
++ pwd=/root/mugen/testcases/system-test/system-integration/os-basic/oe_test_cairo
++ mkdir cairo_test/
++ cd cairo_test/
++ LOG_INFO 'End to prepare the test environment.'
++ message='End to prepare the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End to prepare the test environment.'
+Fri Jul 28 02:59:32 2023 - INFO  - End to prepare the test environment.
+++ type -t run_test
++ '[' -n function ']'
++ run_test
++ LOG_INFO 'Start to run test.'
++ message='Start to run test.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to run test.'
+Fri Jul 28 02:59:34 2023 - INFO  - Start to run test.
++ cat
++ CHECK_RESULT 0 0 0 'Fail to cairo_test.c'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='Fail to cairo_test.c'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
+++ pkg-config --cflags --libs cairo
++ gcc -o cairo_test1 -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-4 -pthread -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/libxml2 -lcairo cairo_test.c
++ CHECK_RESULT 0 0 0 'Error,check the file cairo_test.c'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='Error,check the file cairo_test.c'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ ls
++ grep cairo_test1
+cairo_test1
++ CHECK_RESULT 0 0 0 'Error,fail to create cairo_test1'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='Error,fail to create cairo_test1'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ LOG_INFO 'End to run test.'
++ message='End to run test.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End to run test.'
+Fri Jul 28 02:59:38 2023 - INFO  - End to run test.
++ CASE_RESULT 0
++ case_re=0
++ test -z ''
++ test 0 -eq 0
++ LOG_INFO 'succeed to execute the case.'
++ message='succeed to execute the case.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'succeed to execute the case.'
+Fri Jul 28 02:59:39 2023 - INFO  - succeed to execute the case.
++ exec_result=
++ exit 0
++ post_test
++ LOG_INFO 'Start to restore the test environment.'
++ message='Start to restore the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to restore the test environment.'
+Fri Jul 28 02:59:41 2023 - INFO  - Start to restore the test environment.
++ DNF_REMOVE
++ node=1
++ pkg_list=
++ mode=0
++ [[ -z /tmp/tmpe5r4h0f4 ]]
++ '[' 0 -ne 0 ']'
++ '[' 1 == 0 ']'
++ python3 /root/mugen/libs/locallibs/rpm_manage.py remove --node 1 --pkgs '' --tempfile /tmp/tmpe5r4h0f4
++ '[' 0 -ne 0 ']'
++ cd /root/mugen/testcases/system-test/system-integration/os-basic/oe_test_cairo
++ rm -rf cairo_test/
++ LOG_INFO 'End to restore the test environment.'
++ message='End to restore the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End to restore the test environment.'
+Fri Jul 28 03:02:10 2023 - INFO  - End to restore the test environment.

@@ -1,0 +1,127 @@
++ source /root/mugen/libs/locallibs/common_lib.sh
+++ python3 --version
+++ '[' 0 -eq 0 ']'
+++ source /root/mugen/libs/locallibs/common_lib_python.sh
++ main
+++ type -t post_test
++ '[' -n '' ']'
++ trap POST_TEST_DEFAULT EXIT INT HUP TERM
++ rpm -qa
++ grep expect
+++ type -t config_params
++ '[' -n '' ']'
+++ type -t pre_test
++ '[' -n '' ']'
+++ type -t run_test
++ '[' -n function ']'
++ run_test
++ LOG_INFO 'Start to run test.'
++ message='Start to run test.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to run test.'
+Thu Jul 27 16:58:39 2023 - INFO  - Start to run test.
++ SSH_CMD '
+    sed -i '\''s/#Port 22/Port 50000/g'\'' /etc/ssh/sshd_config
+    systemctl restart sshd
+    systemctl stop firewalld
+    ' '' '' ''
++ cmd='
+    sed -i '\''s/#Port 22/Port 50000/g'\'' /etc/ssh/sshd_config
+    systemctl restart sshd
+    systemctl stop firewalld
+    '
++ remoteip=
++ remotepasswd=
++ remoteuser=
++ timeout=300
++ connport=22
++ bash /root/mugen/libs/locallibs/sshcmd.sh -c '
+    sed -i '\''s/#Port 22/Port 50000/g'\'' /etc/ssh/sshd_config
+    systemctl restart sshd
+    systemctl stop firewalld
+    ' -i '' -u '' -p '' -t 300 -o 22
+Usage: sshcmd.sh -c "command" -i "remote machinet ip" [-u login_user] [-p login_password] [-o port] [-t timeout]+ ret=1
++ test 1 -ne 0
++ LOG_ERROR 'Failed in remote CMD operation:1'
++ message='Failed in remote CMD operation:1'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'Failed in remote CMD operation:1'
+Thu Jul 27 16:58:41 2023 - ERROR - Failed in remote CMD operation:1
++ return 1
++ CHECK_RESULT 1
++ actual_result=1
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 0 -eq 0 ']'
++ test 1x '!=' 0x
++ test -n ''
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_openssh_port.sh line 27'
++ message='oe_test_openssh_port.sh line 27'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_openssh_port.sh line 27'
+Thu Jul 27 16:58:42 2023 - ERROR - oe_test_openssh_port.sh line 27
++ '[' 0 -eq 1 ']'
++ return 0
++ SSH_CMD '
+    sed -i '\''s/Port 50000/#Port 22/g'\'' /etc/ssh/sshd_config
+    systemctl restart sshd
+    systemctl start firewalld
+    ' '' '' '' 15 50000
++ cmd='
+    sed -i '\''s/Port 50000/#Port 22/g'\'' /etc/ssh/sshd_config
+    systemctl restart sshd
+    systemctl start firewalld
+    '
++ remoteip=
++ remotepasswd=
++ remoteuser=
++ timeout=15
++ connport=50000
++ bash /root/mugen/libs/locallibs/sshcmd.sh -c '
+    sed -i '\''s/Port 50000/#Port 22/g'\'' /etc/ssh/sshd_config
+    systemctl restart sshd
+    systemctl start firewalld
+    ' -i '' -u '' -p '' -t 15 -o 50000
+Usage: sshcmd.sh -c "command" -i "remote machinet ip" [-u login_user] [-p login_password] [-o port] [-t timeout]+ ret=1
++ test 1 -ne 0
++ LOG_ERROR 'Failed in remote CMD operation:1'
++ message='Failed in remote CMD operation:1'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'Failed in remote CMD operation:1'
+Thu Jul 27 16:58:44 2023 - ERROR - Failed in remote CMD operation:1
++ return 1
++ CHECK_RESULT 1
++ actual_result=1
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 0 -eq 0 ']'
++ test 1x '!=' 0x
++ test -n ''
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_openssh_port.sh line 33'
++ message='oe_test_openssh_port.sh line 33'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_openssh_port.sh line 33'
+Thu Jul 27 16:58:45 2023 - ERROR - oe_test_openssh_port.sh line 33
++ '[' 0 -eq 1 ']'
++ return 0
++ LOG_INFO 'End to run test.'
++ message='End to run test.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End to run test.'
+Thu Jul 27 16:58:46 2023 - INFO  - End to run test.
++ CASE_RESULT 0
++ case_re=0
++ test -z 2
++ test 2 -gt 0
++ LOG_ERROR 'failed to execute the case.'
++ message='failed to execute the case.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'failed to execute the case.'
+Thu Jul 27 16:58:47 2023 - ERROR - failed to execute the case.
++ exit 2
++ POST_TEST_DEFAULT
++ LOG_INFO 'oe_test_openssh_port.sh post_test'
++ message='oe_test_openssh_port.sh post_test'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'oe_test_openssh_port.sh post_test'
+Thu Jul 27 16:58:49 2023 - INFO  - oe_test_openssh_port.sh post_test

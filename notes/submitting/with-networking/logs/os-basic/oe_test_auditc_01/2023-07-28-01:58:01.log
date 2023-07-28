@@ -1,0 +1,117 @@
++ source /root/mugen/libs/locallibs/common_lib.sh
+++ python3 --version
+++ '[' 0 -eq 0 ']'
+++ source /root/mugen/libs/locallibs/common_lib_python.sh
++ main
+++ type -t post_test
++ '[' -n function ']'
++ trap post_test EXIT INT HUP TERM
++ rpm -qa
++ grep expect
+++ type -t config_params
++ '[' -n '' ']'
+++ type -t pre_test
++ '[' -n '' ']'
+++ type -t run_test
++ '[' -n function ']'
++ run_test
+++ auditctl -e 0
+++ grep enabled
+++ awk '{print $2}'
++ out_e0=0
++ CHECK_RESULT 0 0 0 'auditctl -e 0 setting failure'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='auditctl -e 0 setting failure'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
+++ auditctl -s
+++ grep enabled
+++ awk '{print $2}'
++ out_s0=0
++ CHECK_RESULT 0 0 0 'auditctl -s display failure'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='auditctl -s display failure'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
+++ auditctl -e 1
+++ grep enabled
+++ awk '{print $2}'
++ out_e1=1
++ CHECK_RESULT 1 1 0 'auditctl -e 1 setting failure'
++ actual_result=1
++ expect_result=1
++ mode=0
++ error_log='auditctl -e 1 setting failure'
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 0 -eq 0 ']'
++ test 1x '!=' 1x
++ return 0
+++ auditctl -s
+++ grep enabled
+++ awk '{print $2}'
++ out_s1=1
++ CHECK_RESULT 1 1 0 'auditctl -s display failure'
++ actual_result=1
++ expect_result=1
++ mode=0
++ error_log='auditctl -s display failure'
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 0 -eq 0 ']'
++ test 1x '!=' 1x
++ return 0
++ touch /tmp/test_auditctl
++ autrace /bin/cat /tmp/test_auditctl
++ grep 'Trace complete'
+Trace complete. You can locate the records with 'ausearch -i -p 43021'
++ CHECK_RESULT 0 0 0 'record generation failure'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='record generation failure'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ CASE_RESULT 0
++ case_re=0
++ test -z ''
++ test 0 -eq 0
++ LOG_INFO 'succeed to execute the case.'
++ message='succeed to execute the case.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'succeed to execute the case.'
+Fri Jul 28 01:58:11 2023 - INFO  - succeed to execute the case.
++ exec_result=
++ exit 0
++ post_test
++ LOG_INFO 'start environment cleanup.'
++ message='start environment cleanup.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'start environment cleanup.'
+Fri Jul 28 01:58:12 2023 - INFO  - start environment cleanup.
++ auditctl -e 0
+enabled 0
+failure 1
+pid 0
+rate_limit 0
+backlog_limit 64
+lost 0
+backlog 4
+backlog_wait_time 15000
+backlog_wait_time_actual 0
++ rm -rf /tmp/test_auditctl
++ LOG_INFO 'Finish environment cleanup!'
++ message='Finish environment cleanup!'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Finish environment cleanup!'
+Fri Jul 28 01:58:14 2023 - INFO  - Finish environment cleanup!

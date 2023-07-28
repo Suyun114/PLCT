@@ -1,0 +1,115 @@
++ source /root/mugen/libs/locallibs/common_lib.sh
+++ python3 --version
+++ '[' 0 -eq 0 ']'
+++ source /root/mugen/libs/locallibs/common_lib_python.sh
++ main
+++ type -t post_test
++ '[' -n '' ']'
++ trap POST_TEST_DEFAULT EXIT INT HUP TERM
++ rpm -qa
++ grep expect
+++ type -t config_params
++ '[' -n '' ']'
+++ type -t pre_test
++ '[' -n '' ']'
+++ type -t run_test
++ '[' -n function ']'
++ run_test
++ LOG_INFO 'start to run test.'
++ message='start to run test.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'start to run test.'
+Fri Jul 28 03:17:30 2023 - INFO  - start to run test.
++ expect
+spawn /usr/bin/secret-tool store --label 'My special login' my-login test
+Password: 
+secret-tool: Cannot autolaunch D-Bus without X11 $DISPLAY
++ CHECK_RESULT 0 0 0 'store secret fail'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='store secret fail'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ /usr/bin/secret-tool lookup my-login test
++ grep 123
+secret-tool: Cannot autolaunch D-Bus without X11 $DISPLAY
++ CHECK_RESULT 1 0 0 'lookup secret fail'
++ actual_result=1
++ expect_result=0
++ mode=0
++ error_log='lookup secret fail'
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 0 -eq 0 ']'
++ test 1x '!=' 0x
++ test -n 'lookup secret fail'
++ LOG_ERROR 'lookup secret fail'
++ message='lookup secret fail'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'lookup secret fail'
+Fri Jul 28 03:17:33 2023 - ERROR - lookup secret fail
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_libsecret.sh line 30'
++ message='oe_test_libsecret.sh line 30'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_libsecret.sh line 30'
+Fri Jul 28 03:17:35 2023 - ERROR - oe_test_libsecret.sh line 30
++ '[' 0 -eq 1 ']'
++ return 0
++ /usr/bin/secret-tool search my-login test
++ grep 'secret = 123'
+secret-tool: Cannot autolaunch D-Bus without X11 $DISPLAY
++ CHECK_RESULT 1 0 0 'search secret fail'
++ actual_result=1
++ expect_result=0
++ mode=0
++ error_log='search secret fail'
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 0 -eq 0 ']'
++ test 1x '!=' 0x
++ test -n 'search secret fail'
++ LOG_ERROR 'search secret fail'
++ message='search secret fail'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'search secret fail'
+Fri Jul 28 03:17:36 2023 - ERROR - search secret fail
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_libsecret.sh line 32'
++ message='oe_test_libsecret.sh line 32'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_libsecret.sh line 32'
+Fri Jul 28 03:17:38 2023 - ERROR - oe_test_libsecret.sh line 32
++ '[' 0 -eq 1 ']'
++ return 0
++ /usr/bin/secret-tool clear my-login test
+secret-tool: Cannot autolaunch D-Bus without X11 $DISPLAY
++ /usr/bin/secret-tool lookup my-login test
+secret-tool: Cannot autolaunch D-Bus without X11 $DISPLAY
++ CHECK_RESULT 1 0 1 'secret clear fail'
++ actual_result=1
++ expect_result=0
++ mode=1
++ error_log='secret clear fail'
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 1 -eq 0 ']'
++ test 1x == 0x
++ return 0
++ LOG_INFO 'End to run test.'
++ message='End to run test.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End to run test.'
+Fri Jul 28 03:17:39 2023 - INFO  - End to run test.
++ CASE_RESULT 0
++ case_re=0
++ test -z 2
++ test 2 -gt 0
++ LOG_ERROR 'failed to execute the case.'
++ message='failed to execute the case.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'failed to execute the case.'
+Fri Jul 28 03:17:41 2023 - ERROR - failed to execute the case.
++ exit 2
++ POST_TEST_DEFAULT
++ LOG_INFO 'oe_test_libsecret.sh post_test'
++ message='oe_test_libsecret.sh post_test'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'oe_test_libsecret.sh post_test'
+Fri Jul 28 03:17:42 2023 - INFO  - oe_test_libsecret.sh post_test

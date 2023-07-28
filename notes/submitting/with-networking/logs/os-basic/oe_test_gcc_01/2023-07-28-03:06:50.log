@@ -1,0 +1,160 @@
++ source /root/mugen/libs/locallibs/common_lib.sh
+++ python3 --version
+++ '[' 0 -eq 0 ']'
+++ source /root/mugen/libs/locallibs/common_lib_python.sh
++ main
+++ type -t post_test
++ '[' -n function ']'
++ trap post_test EXIT INT HUP TERM
++ rpm -qa
++ grep expect
+++ type -t config_params
++ '[' -n '' ']'
+++ type -t pre_test
++ '[' -n function ']'
++ pre_test
++ LOG_INFO 'Start environment preparation.'
++ message='Start environment preparation.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start environment preparation.'
+Fri Jul 28 03:06:56 2023 - INFO  - Start environment preparation.
++ DNF_INSTALL gcc
++ pkgs=gcc
++ node=1
++ '[' -z '' ']'
++ tmpfile=
+++ python3 /root/mugen/libs/locallibs/rpm_manage.py install --pkgs gcc --node 1 --tempfile ''
+Fri Jul 28 03:07:14 2023 - INFO  - pkgs:(gcc) is already installed
++ tmpfile2=
++ '[' -z '' ']'
++ tmpfile=
++ mkdir /tmp/gcc_test
+++ echo en_US.UTF-8
++ lang=en_US.UTF-8
++ LANG=en_US.UTF-8
++ LOG_INFO 'End of environmental preparation!'
++ message='End of environmental preparation!'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End of environmental preparation!'
+Fri Jul 28 03:07:16 2023 - INFO  - End of environmental preparation!
+++ type -t run_test
++ '[' -n function ']'
++ run_test
++ cat
++ gcc -Wall main.c -o main
++ grep 'warning: ‘i’ is used uninitialized in this function' /tmp/gcc_test/log1
+main.c:6:4: warning: ‘i’ is used uninitialized in this function [-Wuninitialized]
++ CHECK_RESULT 0 0 0 'Warning display failure'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='Warning display failure'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ gcc -Wall -Werror main.c -o main
++ grep 'error: ‘i’ is used uninitialized in this function' /tmp/gcc_test/log2
+main.c:6:4: error: ‘i’ is used uninitialized in this function [-Werror=uninitialized]
++ CHECK_RESULT 0 0 0 'Error display failure'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='Error display failure'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ ./main
+
+ The Geek Stuff [0]
++ gcc -save-temps main.c
++ grep 'warning: ‘i’ is used uninitialized in this function' /tmp/gcc_test/log3
++ gcc -save-temps main.c
++ file=("a.out" "main.i" "main.o" "main.s")
++ for i in ${file[@]}
++ test -f a.out
++ CHECK_RESULT 0 0 0 'File does not exist'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='File does not exist'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ for i in ${file[@]}
++ test -f main.i
++ CHECK_RESULT 0 0 0 'File does not exist'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='File does not exist'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ for i in ${file[@]}
++ test -f main.o
++ CHECK_RESULT 0 0 0 'File does not exist'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='File does not exist'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ for i in ${file[@]}
++ test -f main.s
++ CHECK_RESULT 0 0 0 'File does not exist'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='File does not exist'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ gcc -Wall -v main.c -o main
++ grep 'gcc version' /tmp/gcc_test/log4
+gcc version 10.3.1 (GCC) 
++ CHECK_RESULT 0 0 0 'gcc version not found'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='gcc version not found'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ CASE_RESULT 0
++ case_re=0
++ test -z ''
++ test 0 -eq 0
++ LOG_INFO 'succeed to execute the case.'
++ message='succeed to execute the case.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'succeed to execute the case.'
+Fri Jul 28 03:07:26 2023 - INFO  - succeed to execute the case.
++ exec_result=
++ exit 0
++ post_test
++ DNF_REMOVE
++ node=1
++ pkg_list=
++ mode=0
++ [[ -z '' ]]
++ [[ -z '' ]]
++ LOG_WARN 'no thing to do.'
++ message='no thing to do.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level warn --message 'no thing to do.'
+Fri Jul 28 03:07:28 2023 - WARN  - no thing to do.
++ return 0
++ LANG=en_US.UTF-8
++ rm -rf /tmp/gcc_test
++ rm -rf a.out main main.c main.i main.o main.s

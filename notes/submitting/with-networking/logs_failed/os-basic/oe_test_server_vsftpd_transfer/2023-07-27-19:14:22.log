@@ -1,0 +1,107 @@
++ source /root/mugen/libs/locallibs/common_lib.sh
+++ python3 --version
+++ '[' 0 -eq 0 ']'
+++ source /root/mugen/libs/locallibs/common_lib_python.sh
++ main
+++ type -t post_test
++ '[' -n function ']'
++ trap post_test EXIT INT HUP TERM
++ rpm -qa
++ grep expect
+++ type -t config_params
++ '[' -n function ']'
++ config_params
++ LOG_INFO 'Start loading data!'
++ message='Start loading data!'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start loading data!'
+Thu Jul 27 19:14:28 2023 - INFO  - Start loading data!
++ SSH_CMD 'lsblk > /tmp/diskfile'
++ cmd='lsblk > /tmp/diskfile'
++ remoteip=
++ remotepasswd='openEuler12#$'
++ remoteuser=root
++ timeout=300
++ connport=22
++ bash /root/mugen/libs/locallibs/sshcmd.sh -c 'lsblk > /tmp/diskfile' -i '' -u root -p 'openEuler12#$' -t 300 -o 22
+Usage: sshcmd.sh -c "command" -i "remote machinet ip" [-u login_user] [-p login_password] [-o port] [-t timeout]+ ret=1
++ test 1 -ne 0
++ LOG_ERROR 'Failed in remote CMD operation:1'
++ message='Failed in remote CMD operation:1'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'Failed in remote CMD operation:1'
+Thu Jul 27 19:14:31 2023 - ERROR - Failed in remote CMD operation:1
++ return 1
++ SSH_SCP @:/tmp/diskfile ./diskfile ''
++ src=@:/tmp/diskfile
++ dest=./diskfile
++ remotepasswd=
++ connport=22
++ bash /root/mugen/libs/locallibs/sshscp.sh -p '' -o 22 -s @:/tmp/diskfile -d ./diskfile
+Thu Jul 27 19:14:32 2023 - WARN  - the connect port using the default configuration
+spawn scp -P 22 -r @:/tmp/diskfile ./diskfile
+ssh: Could not resolve hostname : Name or service not known
+scp: Connection closed
++ ret=255
++ test 255 -ne 0
++ LOG_ERROR 'Failed in remote SCP operation: 255'
++ message='Failed in remote SCP operation: 255'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'Failed in remote SCP operation: 255'
+Thu Jul 27 19:14:35 2023 - ERROR - Failed in remote SCP operation: 255
++ return 255
++ disk_list=($(awk '{print$1" "$6}' diskfile | grep disk | awk '{print$1}'))
+++ awk '{print$1" "$6}' diskfile
+++ grep disk
+++ awk '{print$1}'
+awk: fatal: cannot open file `diskfile' for reading: No such file or directory
++ '[' 0 -ge 1 ']'
++ exit 1
++ post_test
++ LOG_INFO 'Start to restore the test environment.'
++ message='Start to restore the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to restore the test environment.'
+Thu Jul 27 19:14:36 2023 - INFO  - Start to restore the test environment.
++ SSH_CMD '
+    umount /var/ftp/pub/
+    mv /etc/vsftpd/ftpusers.bak /etc/vsftpd/ftpusers
+    mv /etc/vsftpd/user_list.bak /etc/vsftpd/user_list
+    rm -rf /var/ftp/pub/upload_file1.txt
+    yum remove -y vsftpd'
++ cmd='
+    umount /var/ftp/pub/
+    mv /etc/vsftpd/ftpusers.bak /etc/vsftpd/ftpusers
+    mv /etc/vsftpd/user_list.bak /etc/vsftpd/user_list
+    rm -rf /var/ftp/pub/upload_file1.txt
+    yum remove -y vsftpd'
++ remoteip=
++ remotepasswd='openEuler12#$'
++ remoteuser=root
++ timeout=300
++ connport=22
++ bash /root/mugen/libs/locallibs/sshcmd.sh -c '
+    umount /var/ftp/pub/
+    mv /etc/vsftpd/ftpusers.bak /etc/vsftpd/ftpusers
+    mv /etc/vsftpd/user_list.bak /etc/vsftpd/user_list
+    rm -rf /var/ftp/pub/upload_file1.txt
+    yum remove -y vsftpd' -i '' -u root -p 'openEuler12#$' -t 300 -o 22
+Usage: sshcmd.sh -c "command" -i "remote machinet ip" [-u login_user] [-p login_password] [-o port] [-t timeout]+ ret=1
++ test 1 -ne 0
++ LOG_ERROR 'Failed in remote CMD operation:1'
++ message='Failed in remote CMD operation:1'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'Failed in remote CMD operation:1'
+Thu Jul 27 19:14:38 2023 - ERROR - Failed in remote CMD operation:1
++ return 1
++ rm -rf /root/ftptest/ /tmp/diskfile ./diskfile
++ DNF_REMOVE
++ node=1
++ pkg_list=
++ mode=0
++ [[ -z '' ]]
++ [[ -z '' ]]
++ LOG_WARN 'no thing to do.'
++ message='no thing to do.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level warn --message 'no thing to do.'
+Thu Jul 27 19:14:39 2023 - WARN  - no thing to do.
++ return 0
++ LOG_INFO 'End to restore the test environment.'
++ message='End to restore the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End to restore the test environment.'
+Thu Jul 27 19:14:41 2023 - INFO  - End to restore the test environment.

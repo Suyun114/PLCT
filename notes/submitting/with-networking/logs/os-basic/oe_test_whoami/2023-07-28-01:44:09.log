@@ -1,0 +1,69 @@
++ source /root/mugen/libs/locallibs/common_lib.sh
+++ python3 --version
+++ '[' 0 -eq 0 ']'
+++ source /root/mugen/libs/locallibs/common_lib_python.sh
++ main
+++ type -t post_test
++ '[' -n function ']'
++ trap post_test EXIT INT HUP TERM
++ rpm -qa
++ grep expect
+++ type -t config_params
++ '[' -n '' ']'
+++ type -t pre_test
++ '[' -n function ']'
++ pre_test
++ LOG_INFO 'env configure'
++ message='env configure'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'env configure'
+Fri Jul 28 01:44:15 2023 - INFO  - env configure
++ useradd tester
++ echo 'openeuler12#$'
++ passwd --stdin tester
+Changing password for user tester.
+passwd: all authentication tokens updated successfully.
+++ type -t run_test
++ '[' -n function ']'
++ run_test
++ whoami
++ grep root
+root
++ CHECK_RESULT 0 0 0 'exec '\''check user'\'' failed'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='exec '\''check user'\'' failed'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ su -c whoami tester
++ grep tester
+tester
++ CHECK_RESULT 0 0 0 'exec '\''check user'\'' failed'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='exec '\''check user'\'' failed'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ CASE_RESULT 0
++ case_re=0
++ test -z ''
++ test 0 -eq 0
++ LOG_INFO 'succeed to execute the case.'
++ message='succeed to execute the case.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'succeed to execute the case.'
+Fri Jul 28 01:44:19 2023 - INFO  - succeed to execute the case.
++ exec_result=
++ exit 0
++ post_test
++ LOG_INFO 'start environment cleanup.'
++ message='start environment cleanup.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'start environment cleanup.'
+Fri Jul 28 01:44:20 2023 - INFO  - start environment cleanup.
++ userdel -rf tester

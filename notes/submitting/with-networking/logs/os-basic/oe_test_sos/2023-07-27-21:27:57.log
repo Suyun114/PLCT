@@ -1,0 +1,559 @@
++ source /root/mugen/libs/locallibs/common_lib.sh
+++ python3 --version
+++ '[' 0 -eq 0 ']'
+++ source /root/mugen/libs/locallibs/common_lib_python.sh
++ main
+++ type -t post_test
++ '[' -n function ']'
++ trap post_test EXIT INT HUP TERM
++ rpm -qa
++ grep expect
+++ type -t config_params
++ '[' -n '' ']'
+++ type -t pre_test
++ '[' -n function ']'
++ pre_test
++ LOG_INFO 'Start environment preparation.'
++ message='Start environment preparation.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start environment preparation.'
+Thu Jul 27 21:28:03 2023 - INFO  - Start environment preparation.
++ DNF_INSTALL sos
++ pkgs=sos
++ node=1
++ '[' -z '' ']'
++ tmpfile=
+++ python3 /root/mugen/libs/locallibs/rpm_manage.py install --pkgs sos --node 1 --tempfile ''
++ tmpfile2=/tmp/tmpcny__9he
++ '[' -z '' ']'
++ tmpfile=/tmp/tmpcny__9he
++ rm -rf '/var/tmp/*.tar.xz'
++ LOG_INFO 'End of environmental preparation!'
++ message='End of environmental preparation!'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End of environmental preparation!'
+Thu Jul 27 21:29:20 2023 - INFO  - End of environmental preparation!
+++ type -t run_test
++ '[' -n function ']'
++ run_test
++ LOG_INFO 'Start testing...'
++ message='Start testing...'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start testing...'
+Thu Jul 27 21:29:21 2023 - INFO  - Start testing...
++ sosreport -l
+Please note the 'sosreport' command has been deprecated in favor of the new 'sos' command, E.G. 'sos report'.
+Redirecting to 'sos report -l'
+
+sosreport (version 4.4)
+
+The following plugins are currently enabled:
+
+ alternatives         System alternatives
+ anacron              Anacron job scheduling service
+ auditd               Audit daemon information
+ block                Block device information
+ cgroups              Control groups subsystem
+ console              Console and keyboard information
+ cron                 Cron job scheduler
+ crypto               System crypto services information
+ date                 Basic system time information
+ dbus                 D-Bus message bus
+ devicemapper         device-mapper framework
+ devices              devices specific commands
+ dnf                  dnf package manager
+ ebpf                 eBPF tool
+ filesys              Local file systems
+ firewall_tables      firewall tables
+ firewalld            Firewall daemon
+ hardware             General hardware information
+ host                 Host information
+ hts                  Red Hat Hardware Test Suite
+ i18n                 Internationalization
+ jars                 Collect information about available Java archives
+ kernel               Linux kernel
+ krb5                 Kerberos authentication
+ kvm                  Kernel virtual machine
+ ldap                 LDAP configuration
+ libraries            Dynamic shared libraries
+ libvirt              libvirt virtualization API
+ login                login information
+ logrotate            LogRotate service
+ logs                 System logs
+ lvm2                 Logical Volume Manager 2
+ md                   MD RAID subsystem
+ memory               Memory configuration and use
+ multipath            Device-mapper multipath tools
+ networking           Network and networking devices configuration
+ networkmanager       NetworkManager service configuration
+ nis                  Network Information Service
+ ntb                  Linux PCI-Express Non-Transparent Bridge
+ ntp                  Network Time Protocol
+ openhpi              Open Hardware Platform Interface
+ openssl              OpenSSL configuration
+ pam                  Pluggable Authentication Modules
+ pci                  PCI devices
+ perl                 Perl runtime
+ process              process information
+ processor            CPU information
+ python               Python runtime
+ release              Linux release information
+ rpm                  RPM Package Manager
+ scsi                 SCSI devices
+ selinux              SELinux access control
+ services             System services
+ sos_extras           Collect extra data defined in /etc/sos/extras.d
+ soundcard            Sound devices
+ ssh                  Secure shell service
+ sudo                 Sudo command execution
+ system               core system information
+ systemd              System management daemon
+ sysvipc              SysV IPC
+ udev                 udev dynamic device management
+ unbound              Unbound DNS resolver
+ unpackaged           Collects a list of files that are not handled by the package manager
+ usb                  USB devices
+ vsftpd               Vsftpd server
+ x11                  X windowing system
+ xen                  Xen virtualization
+ xfs                  XFS filesystem
+
+The following plugins are currently disabled:
+
+ abrt                 inactive       Automatic Bug Reporting Tool
+ acpid                inactive       ACPI daemon information
+ activemq             inactive       ActiveMQ message broker
+ anaconda             inactive       Anaconda installer
+ ansible              inactive       Ansible configuration management
+ apache               inactive       Apache http daemon
+ arcconf              inactive       arcconf Integrated RAID adapter information
+ ata                  inactive       ATA and IDE information
+ atomichost           inactive       Atomic Host
+ autofs               inactive       Autofs on-demand automounter
+ azure                inactive       Microsoft Azure client
+ bcache               inactive       Bcache statistics
+ boom                 inactive       Configuration data for the boom boot manager.
+ boot                 inactive       Bootloader information
+ btrfs                inactive       Btrfs filesystem
+ buildah              inactive       Buildah container and image builder
+ candlepin            inactive       Candlepin entitlement management
+ ceph_ansible         inactive       CEPH distributed storage - Ansible installer
+ ceph_common          inactive       CEPH common
+ ceph_mds             inactive       CEPH mds
+ ceph_mgr             inactive       CEPH mgr
+ ceph_mon             inactive       CEPH mon
+ ceph_osd             inactive       CEPH osd
+ ceph_rgw             inactive       CEPH rgw
+ chrony               inactive       Chrony clock (for Network time protocol)
+ cifs                 inactive       SMB file system information
+ clear_containers     inactive       Intel(R) Clear Containers configuration
+ cloud_init           inactive       cloud-init instance configurations
+ cman                 inactive       cman based Red Hat Cluster High Availability
+ cobbler              inactive       Cobbler installation server
+ cockpit              inactive       Cockpit Web Service
+ collectd             inactive       Collectd config collector
+ collectl             inactive       Collectl data
+ composer             inactive       Lorax Composer
+ conntrack            inactive       conntrack - netfilter connection tracking
+ container_log        inactive       All logs under /var/log/containers
+ containers_common    inactive       Common container configs under {/etc,/usr/share}/containers
+ convert2rhel         inactive       Convert2RHEL
+ corosync             inactive       Corosync cluster engine
+ crio                 inactive       CRI-O containers
+ cs                   inactive       Certificate System and Dogtag
+ ctdb                 inactive       Samba Clustered TDB
+ cups                 inactive       CUPS IPP print service
+ dellrac              inactive       Dell Remote Access Controller Administration
+ dhcp                 inactive       DHCP daemon
+ discovery            inactive       Discovery inspection and reporting tool
+ distupgrade          inactive       Distribution upgrade data
+ dlm                  inactive       DLM (Distributed lock manager)
+ dmraid               inactive       dmraid software RAID
+ docker               inactive       Docker containers
+ docker_distribution  inactive       Docker Distribution
+ dovecot              inactive       Dovecot IMAP and POP3
+ dracut               inactive       Dracut initramfs generator
+ drbd                 inactive       Distributed Replicated Block Device (DRBD)
+ ds                   inactive       Directory Server
+ elastic              inactive       ElasticSearch service
+ etcd                 inactive       etcd plugin
+ fcoe                 inactive       Fibre Channel over Ethernet
+ fibrechannel         inactive       Collect information on fibrechannel devices
+ flatpak              inactive       Flatpak
+ foreman              inactive       Foreman/Satellite systems management
+ foreman_installer    inactive       Foreman installer and maintainer
+ foreman_proxy        inactive       Foreman Smart Proxy systems management
+ frr                  inactive       Frr routing service
+ fwupd                inactive       fwupd information
+ gcp                  inactive       Google Cloud Platform
+ gdm                  inactive       GNOME display manager
+ gfs2                 inactive       GFS2 (Global Filesystem 2)
+ gluster              inactive       GlusterFS storage
+ gluster_block        inactive       Gluster Block
+ gnocchi              inactive       Gnocchi - Metric as a service
+ grafana              inactive       Fetch Grafana configuration, logs and CLI output
+ grub                 inactive       GRUB bootloader
+ grub2                inactive       GRUB2 bootloader
+ gssproxy             inactive       GSSAPI Proxy
+ haproxy              inactive       HAProxy load balancer
+ hpasm                inactive       HP Advanced Server Management
+ hpssm                inactive       HP Smart Storage Management
+ hyperv               inactive       Microsoft Hyper-V client information
+ infiniband           inactive       Infiniband information
+ insights             inactive       Red Hat Insights configuration and client
+ ipa                  inactive       Identity, policy, audit
+ ipmitool             inactive       IpmiTool hardware information
+ iprconfig            inactive       IBM Power RAID storage adapter configuration information
+ ipvs                 inactive       Linux IP virtual server
+ iscsi                inactive       iSCSI initiator
+ iscsitarget          inactive       iSCSI target
+ java                 inactive       Java runtime
+ kata_containers      inactive       Kata Containers configuration
+ kdump                inactive       Kdump crash dumps
+ keepalived           inactive       Keepalived routing server
+ kernelrt             inactive       Realtime kernel variant
+ keyutils             inactive       Kernel key ring
+ kimchi               inactive       kimchi-related information
+ kpatch               inactive       Kpatch information
+ kubernetes           inactive       Kubernetes container orchestration platform
+ leapp                inactive       Leapp upgrade handling tool
+ libreswan            inactive       Libreswan IPsec
+ lightdm              inactive       Light Display Manager
+ lilo                 inactive       Lilo bootloader
+ lstopo               inactive       Machine topology information
+ lustre               inactive       Lustre filesystem
+ manageiq             inactive       ManageIQ/CloudForms related information
+ megacli              inactive       LSI MegaRAID devices
+ memcached            inactive       memcached distributed memory caching system
+ migration_results    inactive       Information about conversions and upgrades
+ mongodb              inactive       MongoDB document database
+ monit                inactive       Monit monitoring daemon
+ mpt                  inactive       LSI Message Passing Technology
+ mssql                inactive       Microsoft SQL Server on Linux
+ mvcli                inactive       mvCLI Integrated RAID adapter information
+ mysql                inactive       MySQL and MariaDB RDBMS
+ named                inactive       BIND named server
+ navicli              inactive       EMC Navicli
+ nfs                  inactive       Network file system information
+ nfsganesha           inactive       NFS-Ganesha file server information
+ nginx                inactive       nginx http daemon
+ nodejs               inactive       NodeJS runtime version
+ npm                  inactive       Information from available npm modules
+ nscd                 inactive       Name service caching daemon
+ nss                  inactive       Network Security Services configuration
+ numa                 inactive       NUMA state and configuration
+ nvidia               inactive       Nvidia GPU information
+ nvme                 inactive       Collect config and system information about NVMe devices
+ nvmetcli             inactive       Collect config and system information for nvmetcli
+ oddjob               inactive       OddJob task scheduler
+ omnipath_client      inactive       OmniPath Tools and Fast Fabric Client
+ omnipath_manager     inactive       OmniPath Fabric Manager
+ omsa                 inactive       Dell OpenManage Server Administrator (OMSA)
+ opencl               inactive       OpenCL
+ opencontrail         inactive       OpenContrail SDN
+ opendaylight         inactive       OpenDaylight network manager
+ opengl               inactive       OpenGL
+ openshift            inactive       Openshift Container Platform 4.x
+ openshift_ovn        inactive       Openshift OVN
+ openstack_ansible    inactive       OpenStack-Ansible
+ openstack_aodh       inactive       OpenStack Alarm service
+ openstack_ceilometer inactive       Openstack Ceilometer
+ openstack_cinder     inactive       OpenStack cinder
+ openstack_database   inactive       Openstack Database Information
+ openstack_designate  inactive       Openstack Designate
+ openstack_glance     inactive       OpenStack Glance
+ openstack_heat       inactive       OpenStack Heat
+ openstack_horizon    inactive       OpenStack Horizon
+ openstack_instack    inactive       OpenStack Instack
+ openstack_ironic     inactive       OpenStack Ironic
+ openstack_keystone   inactive       OpenStack Keystone
+ openstack_manila     inactive       OpenStack Manila information for Red Hat distributions
+ openstack_neutron    inactive       OpenStack Networking
+ openstack_nova       inactive       OpenStack Nova
+ openstack_novajoin   inactive       OpenStack Novajoin
+ openstack_octavia    inactive       Openstack Octavia
+ openstack_placement  inactive       OpenStack Placement
+ openstack_sahara     inactive       OpenStack Sahara information for Red Hat distributions
+ openstack_swift      inactive       OpenStack Swift
+ openstack_tripleo    inactive       Installation information from OpenStack Installer
+ openstack_trove      inactive       OpenStack Trove
+ opensvc              inactive       OpenSVC cluster and services (config and state collection)
+ openvswitch          inactive       OpenVSwitch networking
+ origin               inactive       OpenShift Enterprise / OpenShift Container Platform
+ os_net_config        inactive       OpenStack Net Config
+ ostree               inactive       OSTree
+ ovirt                inactive       oVirt Engine
+ ovirt_engine_backup  inactive       oVirt Engine database backup
+ ovirt_hosted_engine  inactive       oVirt Hosted Engine
+ ovirt_imageio        inactive       oVirt Image I/O Daemon / Proxy
+ ovirt_node           inactive       oVirt Node specific information
+ ovirt_provider_ovn   inactive       oVirt OVN Provider
+ ovn_central          inactive       OVN Northd
+ ovn_host             inactive       OVN Controller
+ pacemaker            inactive       Pacemaker high-availability cluster resource manager
+ pcp                  inactive       Performance Co-Pilot data
+ perccli              inactive       PowerEdge RAID Controller management
+ peripety             inactive       Peripety Storage Event Monitor
+ pmem                 inactive       Persistent Memory Devices
+ podman               inactive       Podman containers
+ postfix              inactive       Postfix smtp server
+ postgresql           inactive       PostgreSQL RDBMS
+ powerpath            inactive       EMC PowerPath
+ powerpc              inactive       IBM Power systems
+ ppp                  inactive       Point-to-point protocol
+ psacct               inactive       Process accounting information
+ ptp                  inactive       Precision time protocol
+ pulp                 inactive       Pulp platform
+ pulpcore             inactive       Pulp-3 aka pulpcore
+ puppet               inactive       Puppet service
+ pxe                  inactive       PXE service
+ qaucli               inactive       QLogic information
+ qpid                 inactive       Qpid messaging
+ qpid_dispatch        inactive       Qpid dispatch router
+ qt                   inactive       QT widget toolkit
+ quagga               inactive       Quagga routing service
+ rabbitmq             inactive       RabbitMQ messaging service
+ radius               inactive       RADIUS service information
+ rasdaemon            inactive       rasdaemon kernel trace event monitor
+ rear                 inactive       Relax and Recover
+ redis                inactive       Redis, in-memory data structure store
+ rhcos                inactive       Red Hat CoreOS
+ rhui                 inactive       Red Hat Update Infrastructure
+ rhv_analyzer         inactive       RHV Log Collector Analyzer
+ rpmostree            inactive       rpm-ostree image/package system
+ ruby                 inactive       Ruby runtime
+ s390                 inactive       IBM S/390
+ salt                 inactive       Salt
+ saltmaster           inactive       Salt Master
+ samba                inactive       Samba Windows interoperability
+ sanlock              inactive       SANlock daemon
+ saphana              inactive       SAP HANA
+ sapnw                inactive       SAP NetWeaver
+ sar                  inactive       System Activity Reporter
+ sas3ircu             inactive       SAS-3 Integrated RAID adapter information
+ seagate_ses          inactive       Seagate SES status
+ sendmail             inactive       sendmail service
+ shmcli               inactive       Dell Server Hardware Manager
+ skydive              inactive       Skydive network topology and protocol analyzer
+ smartcard            inactive       PKCS#11 smart cards
+ smclient             inactive       SANtricity storage device
+ snap                 inactive       Snap packages
+ snapper              inactive       System snapper
+ snmp                 inactive       Simple network management protocol
+ squid                inactive       Squid caching proxy
+ ssmtp                inactive       sSMTP information
+ sssd                 inactive       System security service daemon
+ storageconsole       inactive       Red Hat Storage Console
+ storcli              inactive       LSI MegaRAID devices
+ stratis              inactive       Stratis Storage
+ subscription_manager inactive       subscription-manager information
+ sunrpc               inactive       Sun RPC service
+ symcli               inactive       EMC Symcli
+ systemtap            inactive       SystemTap dynamic instrumentation
+ targetcli            inactive       TargetCLI TCM/LIO configuration
+ teamd                inactive       Network Interface Teaming
+ tftpserver           inactive       TFTP Server information
+ tigervnc             inactive       TigerVNC server configuration
+ tomcat               inactive       Apache Tomcat Server
+ tuned                inactive       Tuned system tuning daemon
+ udisks               inactive       udisks disk manager
+ ufw                  inactive       Uncomplicated FireWall
+ usbguard             inactive       USB device usage policy
+ validation_framework inactive       Logs provided by the Validation Framework
+ vdo                  inactive       Virtual Data Optimizer
+ vdsm                 inactive       VDSM - Virtual Desktop and Server Manager
+ veritas              inactive       Veritas software
+ vhostmd              inactive       vhostmd virtualization metrics collection
+ virsh                inactive       client for libvirt virtualization API
+ virtwho              inactive       Virt-Who agent
+ vmware               inactive       VMWare client information
+ vulkan               inactive       Vulkan
+ watchdog             inactive       Watchdog information.
+ wireless             inactive       Wireless Device Information
+ xdp                  inactive       XDP program information
+ xinetd               inactive       xinetd information
+ zfs                  inactive       ZFS filesystem
+ zvm                  inactive       IBM z/VM information
+
+The following options are available for ALL plugins:
+ timeout                   300             Timeout in seconds for plugin to finish all collections
+ cmd-timeout               300             Timeout in seconds for individual commands to finish
+ postproc                  True            Enable post-processing of collected data
+
+The following plugin options are available:
+ dnf.history-info          off             collect detailed transaction history
+ ebpf.namespaces           0               Number of namespaces to collect, 0 for unlimited
+ filesys.lsof              off             collect information on all open files
+ filesys.dumpe2fs          off             dump filesystem info
+ filesys.frag              off             collect filesystem fragmentation status
+ jars.append_locations                     colon-delimited list of additional JAR paths
+ jars.all_known_locations  off             scan all known paths
+ kernel.with-timer         off             gather /proc/timer* statistics
+ kernel.trace              off             gather /sys/kernel/debug/tracing/trace file
+ libraries.ldconfigv       off             collect verbose ldconfig output
+ lvm2.lvmdump              off             collect an lvmdump tarball
+ lvm2.lvmdump-am           off             attempt to collect lvmdump with advanced options and raw metadata
+ networking.traceroute     off             collect a traceroute to www.example.com
+ networking.namespace_pattern                 Specific namespace names or patterns to collect, whitespace delimited.
+ networking.namespaces     0               Number of namespaces to collect, 0 for unlimited
+ networking.ethtool_namespaces on              Toggle if ethtool commands should be run for each namespace
+ networking.eepromdump     off             Toggle collection of 'ethtool -e' for NICs
+ process.lsof              on              collect info on all open files
+ process.lsof-threads      off             collect threads' open file info if supported
+ process.smaps             off             collect /proc/*/smaps files
+ process.samples           20              number of iotop samples to collect
+ process.numprocs          2048            number of process to collect /proc data of
+ python.hashes             off             collect hashes for all python files
+ rpm.rpmq                  on              query package information with rpm -q
+ rpm.rpmva                 off             verify all packages
+ rpm.rpmdb                 off             collect /var/lib/rpm
+ selinux.fixfiles          off             collect incorrect file context labels
+ services.servicestatus    off             collect status of all running services
+
+ Profiles: boot, container, debug, desktop, hardware, identity, java, 
+           kernel, memory, network, openshift, packagemanager, perl, 
+           security, services, storage, sysmgmt, system, virt, 
+           webserver
+
+ 20 profiles, 68 plugins
+
++ CHECK_RESULT 0 0 0 'sosreport -l failed'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='sosreport -l failed'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ sosreport -l
++ grep plugins
+The following plugins are currently enabled:
+The following plugins are currently disabled:
+The following options are available for ALL plugins:
+ 20 profiles, 68 plugins
++ CHECK_RESULT 0 0 0 'sosreport -l | grep plugins failed'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='sosreport -l | grep plugins failed'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ expect
+spawn sosreport
+Please note the 'sosreport' command has been deprecated in favor of the new 'sos' command, E.G. 'sos report'.
+Redirecting to 'sos report '
+
+sosreport (version 4.4)
+
+This command will collect system configuration and diagnostic
+information from this openEuler system.
+
+For more information on The openEuler Project visit:
+
+        Distribution Website : https://openeuler.org/
+
+The generated archive may contain data considered sensitive and its
+content should be reviewed by the originating organization before being
+passed to any third party.
+
+No changes will be made to system configuration.
+
+
+Press ENTER to continue, or CTRL-C to quit.
+Thu Jul 27 21:57:58 2023 - ERROR - Timeout : Command 'bash -x oe_test_sos.sh' timed out after 1799.9979748000005 seconds
+++ post_test
+++ LOG_INFO 'start environment cleanup.'
+++ message='start environment cleanup.'
+++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'start environment cleanup.'
+Thu Jul 27 22:01:11 2023 - INFO  - start environment cleanup.
+++ DNF_REMOVE
+++ node=1
+++ pkg_list=
+++ mode=0
+++ [[ -z /tmp/tmpcny__9he ]]
+++ '[' 0 -ne 0 ']'
+++ '[' 1 == 0 ']'
+++ python3 /root/mugen/libs/locallibs/rpm_manage.py remove --node 1 --pkgs '' --tempfile /tmp/tmpcny__9he
+++ '[' 0 -ne 0 ']'
+++ LOG_INFO 'Finish environment cleanup!'
+++ message='Finish environment cleanup!'
+++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Finish environment cleanup!'
+Thu Jul 27 22:01:38 2023 - INFO  - Finish environment cleanup!
++ test -f '/var/tmp/sosreport-*.tar.xz'
++ CHECK_RESULT 1 0 0 'compression failed'
++ actual_result=1
++ expect_result=0
++ mode=0
++ error_log='compression failed'
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 0 -eq 0 ']'
++ test 1x '!=' 0x
++ test -n 'compression failed'
++ LOG_ERROR 'compression failed'
++ message='compression failed'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'compression failed'
+Thu Jul 27 22:01:39 2023 - ERROR - compression failed
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_sos.sh line 51'
++ message='oe_test_sos.sh line 51'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_sos.sh line 51'
+Thu Jul 27 22:01:41 2023 - ERROR - oe_test_sos.sh line 51
++ '[' 0 -eq 1 ']'
++ return 0
++ xz -d '/var/tmp/*.tar.xz'
+xz: /var/tmp/*.tar.xz: No such file or directory
++ CHECK_RESULT 1 0 0 'xz -d /var/tmp/*.tar.xz failed'
++ actual_result=1
++ expect_result=0
++ mode=0
++ error_log='xz -d /var/tmp/*.tar.xz failed'
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 0 -eq 0 ']'
++ test 1x '!=' 0x
++ test -n 'xz -d /var/tmp/*.tar.xz failed'
++ LOG_ERROR 'xz -d /var/tmp/*.tar.xz failed'
++ message='xz -d /var/tmp/*.tar.xz failed'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'xz -d /var/tmp/*.tar.xz failed'
+Thu Jul 27 22:01:42 2023 - ERROR - xz -d /var/tmp/*.tar.xz failed
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_sos.sh line 53'
++ message='oe_test_sos.sh line 53'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_sos.sh line 53'
+Thu Jul 27 22:01:43 2023 - ERROR - oe_test_sos.sh line 53
++ '[' 0 -eq 1 ']'
++ return 0
++ LOG_INFO 'Finish test!'
++ message='Finish test!'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Finish test!'
+Thu Jul 27 22:01:45 2023 - INFO  - Finish test!
++ CASE_RESULT 0
++ case_re=0
++ test -z 2
++ test 2 -gt 0
++ LOG_ERROR 'failed to execute the case.'
++ message='failed to execute the case.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'failed to execute the case.'
+Thu Jul 27 22:01:46 2023 - ERROR - failed to execute the case.
++ exit 2
++ post_test
++ LOG_INFO 'start environment cleanup.'
++ message='start environment cleanup.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'start environment cleanup.'
+Thu Jul 27 22:01:47 2023 - INFO  - start environment cleanup.
++ DNF_REMOVE
++ node=1
++ pkg_list=
++ mode=0
++ [[ -z /tmp/tmpcny__9he ]]
++ '[' 0 -ne 0 ']'
++ '[' 1 == 0 ']'
++ python3 /root/mugen/libs/locallibs/rpm_manage.py remove --node 1 --pkgs '' --tempfile /tmp/tmpcny__9he
++ '[' 0 -ne 0 ']'
++ LOG_INFO 'Finish environment cleanup!'
++ message='Finish environment cleanup!'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Finish environment cleanup!'
+Thu Jul 27 22:02:04 2023 - INFO  - Finish environment cleanup!

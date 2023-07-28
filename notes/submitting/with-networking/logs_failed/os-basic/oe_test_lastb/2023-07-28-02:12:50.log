@@ -1,0 +1,103 @@
++ source /root/mugen/libs/locallibs/common_lib.sh
+++ python3 --version
+++ '[' 0 -eq 0 ']'
+++ source /root/mugen/libs/locallibs/common_lib_python.sh
++ main
+++ type -t post_test
++ '[' -n '' ']'
++ trap POST_TEST_DEFAULT EXIT INT HUP TERM
++ rpm -qa
++ grep expect
+++ type -t config_params
++ '[' -n '' ']'
+++ type -t pre_test
++ '[' -n '' ']'
+++ type -t run_test
++ '[' -n function ']'
++ run_test
++ LOG_INFO 'Start to run test.'
++ message='Start to run test.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to run test.'
+Fri Jul 28 02:12:57 2023 - INFO  - Start to run test.
++ lastb
++ grep -i btmp
+btmp begins Thu Jul 27 16:47:47 2023
++ CHECK_RESULT 0 0 0 'display failed'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='display failed'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ lastb -n 5
+root     ssh:notty    10.0.2.2         Thu Jul 27 21:20 - 21:20  (00:00)
+root     ttyS0                         Thu Jul 27 16:47 - 16:47  (00:00)
+
+btmp begins Thu Jul 27 16:47:47 2023
++ CHECK_RESULT 0 0 0 'display failed'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='display failed'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ lastb -h
++ grep 用法
++ CHECK_RESULT 1 0 0 'display failed'
++ actual_result=1
++ expect_result=0
++ mode=0
++ error_log='display failed'
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 0 -eq 0 ']'
++ test 1x '!=' 0x
++ test -n 'display failed'
++ LOG_ERROR 'display failed'
++ message='display failed'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'display failed'
+Fri Jul 28 02:12:58 2023 - ERROR - display failed
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_lastb.sh line 29'
++ message='oe_test_lastb.sh line 29'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_lastb.sh line 29'
+Fri Jul 28 02:13:00 2023 - ERROR - oe_test_lastb.sh line 29
++ '[' 0 -eq 1 ']'
++ return 0
++ lastb -V
++ grep -i lastb
+lastb from util-linux 2.37.2
++ CHECK_RESULT 0 0 0 'display failed'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='display failed'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ LOG_INFO 'End to run test.'
++ message='End to run test.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End to run test.'
+Fri Jul 28 02:13:01 2023 - INFO  - End to run test.
++ CASE_RESULT 0
++ case_re=0
++ test -z 1
++ test 1 -gt 0
++ LOG_ERROR 'failed to execute the case.'
++ message='failed to execute the case.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'failed to execute the case.'
+Fri Jul 28 02:13:02 2023 - ERROR - failed to execute the case.
++ exit 1
++ POST_TEST_DEFAULT
++ LOG_INFO 'oe_test_lastb.sh post_test'
++ message='oe_test_lastb.sh post_test'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'oe_test_lastb.sh post_test'
+Fri Jul 28 02:13:04 2023 - INFO  - oe_test_lastb.sh post_test

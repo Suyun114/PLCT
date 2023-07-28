@@ -1,0 +1,224 @@
++ source /root/mugen/libs/locallibs/common_lib.sh
+++ python3 --version
+++ '[' 0 -eq 0 ']'
+++ source /root/mugen/libs/locallibs/common_lib_python.sh
++ main
+++ type -t post_test
++ '[' -n function ']'
++ trap post_test EXIT INT HUP TERM
++ rpm -qa
++ grep expect
+++ type -t config_params
++ '[' -n '' ']'
+++ type -t pre_test
++ '[' -n function ']'
++ pre_test
++ LOG_INFO 'Start to prepare the test environment.'
++ message='Start to prepare the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to prepare the test environment.'
+Thu Jul 27 18:46:14 2023 - INFO  - Start to prepare the test environment.
++ OLD_LANG=en_US.UTF-8
++ export LANG=en_US.UTF-8
++ LANG=en_US.UTF-8
++ LOG_INFO 'End to prepare the test environment.'
++ message='End to prepare the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End to prepare the test environment.'
+Thu Jul 27 18:46:16 2023 - INFO  - End to prepare the test environment.
+++ type -t run_test
++ '[' -n function ']'
++ run_test
++ LOG_INFO 'Start to run test.'
++ message='Start to run test.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to run test.'
+Thu Jul 27 18:46:17 2023 - INFO  - Start to run test.
++ catman 1
++ grep ab
+catman: cannot read database /var/cache/man/index.db: No such file or directory
++ CHECK_RESULT 1 0 0 'failed to process Section 1'
++ actual_result=1
++ expect_result=0
++ mode=0
++ error_log='failed to process Section 1'
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 0 -eq 0 ']'
++ test 1x '!=' 0x
++ test -n 'failed to process Section 1'
++ LOG_ERROR 'failed to process Section 1'
++ message='failed to process Section 1'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'failed to process Section 1'
+Thu Jul 27 18:46:18 2023 - ERROR - failed to process Section 1
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_catman.sh line 32'
++ message='oe_test_catman.sh line 32'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_catman.sh line 32'
+Thu Jul 27 18:46:20 2023 - ERROR - oe_test_catman.sh line 32
++ '[' 0 -eq 1 ']'
++ return 0
++ catman -d
++ grep man
+sections: 1
+sections: n
+sections: l
+sections: 8
+sections: 3
+sections: 0
+sections: 2
+sections: 5
+sections: 4
+sections: 9
+sections: 6
+sections: 7
+From the config file /etc/man_db.conf:
+  Mandatory mandir `/usr/man'.
+  Mandatory mandir `/usr/share/man'.
+  Mandatory mandir `/usr/local/share/man'.
+  Path `/bin' mapped to mandir `/usr/share/man'.
+  Path `/usr/bin' mapped to mandir `/usr/share/man'.
+  Path `/sbin' mapped to mandir `/usr/share/man'.
+  Path `/usr/sbin' mapped to mandir `/usr/share/man'.
+  Path `/usr/local/bin' mapped to mandir `/usr/local/man'.
+  Path `/usr/local/bin' mapped to mandir `/usr/local/share/man'.
+  Path `/usr/local/sbin' mapped to mandir `/usr/local/man'.
+  Path `/usr/local/sbin' mapped to mandir `/usr/local/share/man'.
+  Path `/usr/X11R6/bin' mapped to mandir `/usr/X11R6/man'.
+  Path `/usr/bin/X11' mapped to mandir `/usr/X11R6/man'.
+  Path `/usr/games' mapped to mandir `/usr/share/man'.
+  Path `/opt/bin' mapped to mandir `/opt/man'.
+  Path `/opt/sbin' mapped to mandir `/opt/man'.
+  Global mandir `/usr/man', catdir `/var/cache/man/fsstnd'.
+  Global mandir `/usr/share/man', catdir `/var/cache/man'.
+  Global mandir `/usr/local/man', catdir `/var/cache/man/oldlocal'.
+  Global mandir `/usr/local/share/man', catdir `/var/cache/man/local'.
+  Global mandir `/usr/X11R6/man', catdir `/var/cache/man/X11R6'.
+  Global mandir `/opt/man', catdir `/var/cache/man/opt'.
+  Global mandir `/snap/man', catdir `/var/cache/man/snap'.
+  Added sections: `1', `1p', `8', `2', `3', `3p', `4', `5', `6', `7', `9', `0p', `n', `l', `p', `o', `1x', `2x', `3x', `4x', `5x', `6x', `7x', `8x'.
+path directory /usr/local/sbin is in the config file
+warning: /usr/local/man: No such file or directory
+  adding /usr/local/share/man to manpath
+path directory /usr/local/bin is in the config file
+warning: /usr/local/man: No such file or directory
+path directory /usr/sbin is in the config file
+  adding /usr/share/man to manpath
+path directory /usr/bin is in the config file
+path directory /sbin is in the config file
+path directory /bin is in the config file
+adding mandatory man directories
+warning: /usr/man: No such file or directory
+warning: /usr/man: No such file or directory
+adding /usr/share/man to manpathlist
+warning: /usr/local/man: No such file or directory
+adding /usr/local/share/man to manpathlist
+warning: /usr/X11R6/man: No such file or directory
+warning: /opt/man: No such file or directory
+warning: /snap/man: No such file or directory
+final search path = /usr/share/man:/usr/local/share/man
+catman: cannot read database /var/cache/man/index.db: No such file or directory
++ CHECK_RESULT 1 0 0 'description Failed to print debugging information'
++ actual_result=1
++ expect_result=0
++ mode=0
++ error_log='description Failed to print debugging information'
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 0 -eq 0 ']'
++ test 1x '!=' 0x
++ test -n 'description Failed to print debugging information'
++ LOG_ERROR 'description Failed to print debugging information'
++ message='description Failed to print debugging information'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'description Failed to print debugging information'
+Thu Jul 27 18:46:21 2023 - ERROR - description Failed to print debugging information
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_catman.sh line 34'
++ message='oe_test_catman.sh line 34'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_catman.sh line 34'
+Thu Jul 27 18:46:22 2023 - ERROR - oe_test_catman.sh line 34
++ '[' 0 -eq 1 ']'
++ return 0
++ catman -C 1
++ grep -E 'ab.*aio'
+catman: cannot read database /var/cache/man/index.db: No such file or directory
++ CHECK_RESULT 1 0 0 'failed to set the file using this user'
++ actual_result=1
++ expect_result=0
++ mode=0
++ error_log='failed to set the file using this user'
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 0 -eq 0 ']'
++ test 1x '!=' 0x
++ test -n 'failed to set the file using this user'
++ LOG_ERROR 'failed to set the file using this user'
++ message='failed to set the file using this user'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'failed to set the file using this user'
+Thu Jul 27 18:46:24 2023 - ERROR - failed to set the file using this user
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_catman.sh line 36'
++ message='oe_test_catman.sh line 36'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_catman.sh line 36'
+Thu Jul 27 18:46:25 2023 - ERROR - oe_test_catman.sh line 36
++ '[' 0 -eq 1 ']'
++ return 0
++ catman -M /home/
+catman: cannot read database /home//index.db: No such file or directory
++ CHECK_RESULT 0 0 0 'failed to set path'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='failed to set path'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ catman -V
++ grep catman
+catman 2.11.0
++ CHECK_RESULT 0 0 0 'check version fail'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='check version fail'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ grep catman
++ catman '-?'
+Usage: catman [OPTION...] [SECTION...]
++ CHECK_RESULT 0 0 0 'check help message fail'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='check help message fail'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ LOG_INFO 'End to run test.'
++ message='End to run test.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End to run test.'
+Thu Jul 27 18:46:27 2023 - INFO  - End to run test.
++ CASE_RESULT 0
++ case_re=0
++ test -z 3
++ test 3 -gt 0
++ LOG_ERROR 'failed to execute the case.'
++ message='failed to execute the case.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'failed to execute the case.'
+Thu Jul 27 18:46:28 2023 - ERROR - failed to execute the case.
++ exit 3
++ post_test
++ LOG_INFO 'start environment cleanup.'
++ message='start environment cleanup.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'start environment cleanup.'
+Thu Jul 27 18:46:29 2023 - INFO  - start environment cleanup.
++ export LANG=en_US.UTF-8
++ LANG=en_US.UTF-8
++ LOG_INFO 'Finish environment cleanup!'
++ message='Finish environment cleanup!'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Finish environment cleanup!'
+Thu Jul 27 18:46:31 2023 - INFO  - Finish environment cleanup!

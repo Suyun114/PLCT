@@ -1,0 +1,348 @@
++ source /root/mugen/libs/locallibs/common_lib.sh
+++ python3 --version
+++ '[' 0 -eq 0 ']'
+++ source /root/mugen/libs/locallibs/common_lib_python.sh
++ main
+++ type -t post_test
++ '[' -n '' ']'
++ trap POST_TEST_DEFAULT EXIT INT HUP TERM
++ rpm -qa
++ grep expect
+++ type -t config_params
++ '[' -n '' ']'
+++ type -t pre_test
++ '[' -n '' ']'
+++ type -t run_test
++ '[' -n function ']'
++ run_test
++ LOG_INFO 'Start to run test.'
++ message='Start to run test.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to run test.'
+Fri Jul 28 01:33:09 2023 - INFO  - Start to run test.
++ nmcli connection add type bond con-name bond0 ifname bond0 bond.options mode=active-backup
++ grep 'successfully added'
+Connection 'bond0' (344bd5e4-4b18-43a7-9291-dc0a96953bbe) successfully added.
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ nmcli connection add type bond con-name bond0 ifname bond0 bond.options mode=active-backup,miimon=1000
++ grep 'successfully added'
+Warning: There is another connection with the name 'bond0'. Reference the connection by its uuid '830d7ba3-1396-4d0a-a255-78af8c5449c0'
+Connection 'bond0' (830d7ba3-1396-4d0a-a255-78af8c5449c0) successfully added.
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ nmcli connection modify bond0 ipv4.address 192.0.2.1/24
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ nmcli connection modify bond0 ipv4.gateway 192.0.2.254
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ nmcli connection modify bond0 ipv4.dns 192.0.2.253
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ nmcli connection modify bond0 ipv4.dns-search example.com
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ nmcli connection modify bond0 ipv4.method manual
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ nmcli connection modify bond0 ipv6.address 2001:db8::1/32
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ nmcli connection modify bond0 ipv6.gateway 2001:db8::fffe
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ nmcli connection modify bond0 ipv6.dns 2001:db8::fffd
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ nmcli connection modify bond0 ipv6.dns-search example.com
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ nmcli connection modify bond0 ipv6.method manual
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ nmcli device
++ grep bond0
++ CHECK_RESULT 1
++ actual_result=1
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 0 -eq 0 ']'
++ test 1x '!=' 0x
++ test -n ''
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_nmcli_set_bond.sh line 49'
++ message='oe_test_nmcli_set_bond.sh line 49'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_nmcli_set_bond.sh line 49'
+Fri Jul 28 01:33:23 2023 - ERROR - oe_test_nmcli_set_bond.sh line 49
++ '[' 0 -eq 1 ']'
++ return 0
++ nmcli connection add type ethernet slave-type bond con-name bond0-port1 ifname enp4s0 master bond0
++ grep 'successfully added'
+Connection 'bond0-port1' (24d0a761-55e4-4848-8ab3-79d438548a4e) successfully added.
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ nmcli connection add type ethernet slave-type bond con-name bond0-port2 ifname enp5s0 master bond0
++ grep 'successfully added'
+Connection 'bond0-port2' (954d753e-c22e-4ca7-91f1-8163f34070fd) successfully added.
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ nmcli connection up bond0
++ grep 'Connection successfully'
+Error: Connection activation failed: bond0 failed to create resources: Failed to create bond interface 'bond0' for 'bond0': Operation not supported
++ CHECK_RESULT 1
++ actual_result=1
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 0 -eq 0 ']'
++ test 1x '!=' 0x
++ test -n ''
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_nmcli_set_bond.sh line 55'
++ message='oe_test_nmcli_set_bond.sh line 55'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_nmcli_set_bond.sh line 55'
+Fri Jul 28 01:33:27 2023 - ERROR - oe_test_nmcli_set_bond.sh line 55
++ '[' 0 -eq 1 ']'
++ return 0
++ nmcli device
++ grep bond0
++ grep connected
++ CHECK_RESULT 1
++ actual_result=1
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 0 -eq 0 ']'
++ test 1x '!=' 0x
++ test -n ''
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_nmcli_set_bond.sh line 57'
++ message='oe_test_nmcli_set_bond.sh line 57'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_nmcli_set_bond.sh line 57'
+Fri Jul 28 01:33:29 2023 - ERROR - oe_test_nmcli_set_bond.sh line 57
++ '[' 0 -eq 1 ']'
++ return 0
++ nmcli con
+NAME                UUID                                  TYPE      DEVICE 
+ethernet            344fea04-a550-4084-9dc1-527550926dcb  ethernet  eth2   
+Wired connection 4  5ce903a0-1496-3245-8736-f9b198819017  ethernet  eth3   
+bond0               344bd5e4-4b18-43a7-9291-dc0a96953bbe  bond      --     
+bond0               830d7ba3-1396-4d0a-a255-78af8c5449c0  bond      --     
+bond0-port1         24d0a761-55e4-4848-8ab3-79d438548a4e  ethernet  --     
+bond0-port2         954d753e-c22e-4ca7-91f1-8163f34070fd  ethernet  --     
+Wired connection 1  5315db38-9102-3975-b9ad-fa717ea7d2f1  ethernet  --     
+Wired connection 2  ef61f214-000f-3cf6-8b37-6b717fb363ec  ethernet  --     
+Wired connection 3  71d59045-f2a0-32fa-8ba9-93a6576f5e87  ethernet  --     
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ nmcli connection modify bond0 connection.autoconnect-slaves 1
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ nmcli connection up bond0
++ grep 'Connection successfully'
+Error: Connection activation failed: bond0 failed to create resources: Failed to create bond interface 'bond0' for 'bond0': Operation not supported
++ CHECK_RESULT 1
++ actual_result=1
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 0 -eq 0 ']'
++ test 1x '!=' 0x
++ test -n ''
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_nmcli_set_bond.sh line 63'
++ message='oe_test_nmcli_set_bond.sh line 63'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_nmcli_set_bond.sh line 63'
+Fri Jul 28 01:33:33 2023 - ERROR - oe_test_nmcli_set_bond.sh line 63
++ '[' 0 -eq 1 ']'
++ return 0
++ grep active-backup /proc/net/bonding/bond0
+grep: /proc/net/bonding/bond0: No such file or directory
++ CHECK_RESULT 2
++ actual_result=2
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 2 ']'
++ '[' 0 -eq 0 ']'
++ test 2x '!=' 0x
++ test -n ''
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_nmcli_set_bond.sh line 65'
++ message='oe_test_nmcli_set_bond.sh line 65'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_nmcli_set_bond.sh line 65'
+Fri Jul 28 01:33:34 2023 - ERROR - oe_test_nmcli_set_bond.sh line 65
++ '[' 0 -eq 1 ']'
++ return 0
++ nmcli con del bond0-port1 bond0-port2 bond0
++ grep 'successfully deleted'
+Connection 'bond0-port1' (24d0a761-55e4-4848-8ab3-79d438548a4e) successfully deleted.
+Connection 'bond0-port2' (954d753e-c22e-4ca7-91f1-8163f34070fd) successfully deleted.
+Connection 'bond0' (344bd5e4-4b18-43a7-9291-dc0a96953bbe) successfully deleted.
+Connection 'bond0' (830d7ba3-1396-4d0a-a255-78af8c5449c0) successfully deleted.
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ LOG_INFO 'End to run test.'
++ message='End to run test.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End to run test.'
+Fri Jul 28 01:33:36 2023 - INFO  - End to run test.
++ CASE_RESULT 0
++ case_re=0
++ test -z 5
++ test 5 -gt 0
++ LOG_ERROR 'failed to execute the case.'
++ message='failed to execute the case.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'failed to execute the case.'
+Fri Jul 28 01:33:37 2023 - ERROR - failed to execute the case.
++ exit 5
++ POST_TEST_DEFAULT
++ LOG_INFO 'oe_test_nmcli_set_bond.sh post_test'
++ message='oe_test_nmcli_set_bond.sh post_test'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'oe_test_nmcli_set_bond.sh post_test'
+Fri Jul 28 01:33:39 2023 - INFO  - oe_test_nmcli_set_bond.sh post_test

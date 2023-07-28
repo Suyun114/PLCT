@@ -1,0 +1,112 @@
++ source /root/mugen/libs/locallibs/common_lib.sh
+++ python3 --version
+++ '[' 0 -eq 0 ']'
+++ source /root/mugen/libs/locallibs/common_lib_python.sh
++ main
+++ type -t post_test
++ '[' -n function ']'
++ trap post_test EXIT INT HUP TERM
++ rpm -qa
++ grep expect
+++ type -t config_params
++ '[' -n '' ']'
+++ type -t pre_test
++ '[' -n function ']'
++ pre_test
++ LOG_INFO 'Start to prepare the test environment.'
++ message='Start to prepare the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to prepare the test environment.'
+Fri Jul 28 01:55:58 2023 - INFO  - Start to prepare the test environment.
++ touch a b a.c b.c c.c d.c
++ LOG_INFO 'End to prepare the test environment.'
++ message='End to prepare the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End to prepare the test environment.'
+Fri Jul 28 01:55:59 2023 - INFO  - End to prepare the test environment.
+++ type -t run_test
++ '[' -n function ']'
++ run_test
++ LOG_INFO 'Start to run test.'
++ message='Start to run test.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to run test.'
+Fri Jul 28 01:56:01 2023 - INFO  - Start to run test.
++ ar rv one.bak a b
+ar: creating one.bak
+a - a
+a - b
++ CHECK_RESULT 0 0 0 'check one.bak creation fail'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='check one.bak creation fail'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ ar rv two.bak a.c b.c c.c d.c
+ar: creating two.bak
+a - a.c
+a - b.c
+a - c.c
+a - d.c
++ CHECK_RESULT 0 0 0 'check two.bak creation fail'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='check two.bak creation fail'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ ar t two.bak
++ grep -E '[a.c|b.c|c.c|d.c]'
+a.c
+b.c
+c.c
+d.c
++ CHECK_RESULT 0 0 0 'check file fail'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='check file fail'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ ar d two.bak a.c b.c c.c
++ CHECK_RESULT 0 0 0 'check file delete fail'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='check file delete fail'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ LOG_INFO 'End to run test.'
++ message='End to run test.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End to run test.'
+Fri Jul 28 01:56:02 2023 - INFO  - End to run test.
++ CASE_RESULT 0
++ case_re=0
++ test -z ''
++ test 0 -eq 0
++ LOG_INFO 'succeed to execute the case.'
++ message='succeed to execute the case.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'succeed to execute the case.'
+Fri Jul 28 01:56:04 2023 - INFO  - succeed to execute the case.
++ exec_result=
++ exit 0
++ post_test
++ LOG_INFO 'Start to restore the test environment.'
++ message='Start to restore the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to restore the test environment.'
+Fri Jul 28 01:56:05 2023 - INFO  - Start to restore the test environment.
++ rm -rf a b a.c b.c c.c d.c one.bak two.bak
++ LOG_INFO 'End to restore the test environment.'
++ message='End to restore the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End to restore the test environment.'
+Fri Jul 28 01:56:06 2023 - INFO  - End to restore the test environment.

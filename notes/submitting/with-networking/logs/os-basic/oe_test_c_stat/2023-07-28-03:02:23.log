@@ -1,0 +1,147 @@
++ source /root/mugen/libs/locallibs/common_lib.sh
+++ python3 --version
+++ '[' 0 -eq 0 ']'
+++ source /root/mugen/libs/locallibs/common_lib_python.sh
++ main
+++ type -t post_test
++ '[' -n function ']'
++ trap post_test EXIT INT HUP TERM
++ rpm -qa
++ grep expect
+++ type -t config_params
++ '[' -n '' ']'
+++ type -t pre_test
++ '[' -n function ']'
++ pre_test
++ LOG_INFO 'Start to prepare the test environment.'
++ message='Start to prepare the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to prepare the test environment.'
+Fri Jul 28 03:02:30 2023 - INFO  - Start to prepare the test environment.
+++ pwd
++ pwd=/root/mugen/testcases/system-test/system-integration/os-basic/oe_test_c_stat
++ mkdir c_stat_test
++ cd c_stat_test
++ LOG_INFO 'End to prepare the test environment.'
++ message='End to prepare the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End to prepare the test environment.'
+Fri Jul 28 03:02:31 2023 - INFO  - End to prepare the test environment.
+++ type -t run_test
++ '[' -n function ']'
++ run_test
++ LOG_INFO 'Start to run test.'
++ message='Start to run test.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to run test.'
+Fri Jul 28 03:02:33 2023 - INFO  - Start to run test.
++ cat
++ CHECK_RESULT 0 0 0 'Fail to create haha.c'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='Fail to create haha.c'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ cat
++ CHECK_RESULT 0 0 0 'Fail to create teststat.c'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='Fail to create teststat.c'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ gcc --shared -fpic -o haha.so haha.c
++ CHECK_RESULT 0 0 0 'Error,fail to create haha.so'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='Error,fail to create haha.so'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ gcc -o teststat teststat.c ./haha.so
+teststat.c: In function ‘main’:
+teststat.c:6:1: warning: implicit declaration of function ‘haha’ [-Wimplicit-function-declaration]
+    6 | haha(&fileinfo);
+      | ^~~~
++ CHECK_RESULT 0 0 0 'Error,fail to create teststat'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='Error,fail to create teststat'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ gcc -D_FILE_OFFSET_BITS=64 -o teststat64 teststat.c ./haha.so
+teststat.c: In function ‘main’:
+teststat.c:6:1: warning: implicit declaration of function ‘haha’ [-Wimplicit-function-declaration]
+    6 | haha(&fileinfo);
+      | ^~~~
++ CHECK_RESULT 0 0 0 'Error,fail to create teststat64'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='Error,fail to create teststat64'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
+++ ./teststat
++ result=st_size=145
++ CHECK_RESULT 0 0 0 'Error,check the file teststat'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='Error,check the file teststat'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ ./teststat64
++ grep st_size=145
+st_size=145
++ CHECK_RESULT 0 0 0 'Error,check the file teststat64'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='Error,check the file teststat64'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ LOG_INFO 'End to run test.'
++ message='End to run test.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End to run test.'
+Fri Jul 28 03:02:40 2023 - INFO  - End to run test.
++ CASE_RESULT 0
++ case_re=0
++ test -z ''
++ test 0 -eq 0
++ LOG_INFO 'succeed to execute the case.'
++ message='succeed to execute the case.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'succeed to execute the case.'
+Fri Jul 28 03:02:41 2023 - INFO  - succeed to execute the case.
++ exec_result=
++ exit 0
++ post_test
++ LOG_INFO 'Start to restore the test environment.'
++ message='Start to restore the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to restore the test environment.'
+Fri Jul 28 03:02:43 2023 - INFO  - Start to restore the test environment.
++ cd /root/mugen/testcases/system-test/system-integration/os-basic/oe_test_c_stat
++ rm -rf c_stat_test/
++ LOG_INFO 'End to restore the test environment.'
++ message='End to restore the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End to restore the test environment.'
+Fri Jul 28 03:02:44 2023 - INFO  - End to restore the test environment.

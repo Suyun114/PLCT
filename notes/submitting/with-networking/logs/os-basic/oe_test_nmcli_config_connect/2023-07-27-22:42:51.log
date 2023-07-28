@@ -1,0 +1,274 @@
++ source ../common/net_lib.sh
+++ source /root/mugen/libs/locallibs/common_lib.sh
++++ python3 --version
++++ '[' 0 -eq 0 ']'
++++ source /root/mugen/libs/locallibs/common_lib_python.sh
++ main
+++ type -t post_test
++ '[' -n function ']'
++ trap post_test EXIT INT HUP TERM
++ rpm -qa
++ grep expect
+++ type -t config_params
++ '[' -n function ']'
++ config_params
++ LOG_INFO 'Start to config params of the case.'
++ message='Start to config params of the case.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to config params of the case.'
+Thu Jul 27 22:42:57 2023 - INFO  - Start to config params of the case.
++ get_free_eth 1
++ local num_eth=1
++ echo 10.198.101.114
+10.198.101.114
+++ python3 /root/mugen/libs/locallibs/get_test_device.py --node 1 --device nic
+Thu Jul 27 22:43:14 2023 - INFO  - pkgs:(lshw) is already installed
++ NODE1_NIC='eth0 eth1 eth2 eth3'
++ LOCAL_ETH=(${NODE1_NIC[@]/$(ip route | grep ${NODE1_IPV4} | awk '{print$3}')/})
+++ ip route
+++ grep 10.198.101.1
+../common/net_lib.sh: line 26: ip: command not found
+++ awk '{print$3}'
++ '[' 4 -ge 1 ']'
++ test_eth=eth0
++ con_name=ethernet-eth0
++ LOG_INFO 'End to config params of the case.'
++ message='End to config params of the case.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End to config params of the case.'
+Thu Jul 27 22:43:29 2023 - INFO  - End to config params of the case.
+++ type -t pre_test
++ '[' -n '' ']'
+++ type -t run_test
++ '[' -n function ']'
++ run_test
++ LOG_INFO 'Start to run test.'
++ message='Start to run test.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to run test.'
+Thu Jul 27 22:43:31 2023 - INFO  - Start to run test.
++ nmcli con add type ethernet ifname eth0
++ grep successfully
+Connection 'ethernet-eth0' (fe067690-d40d-4799-ad74-c5d9bb35e8a9) successfully added.
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ nmcli con mod ethernet-eth0 ipv4.dns '8.8.8.8 8.8.4.4'
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ nmcli con mod ethernet-eth0 ipv6.dns '2001:4860:4860::8888 2001:4860:4860::8844'
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ nmcli con mod ethernet-eth0 +ipv4.dns '8.8.8.8 8.8.4.4'
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ nmcli con mod ethernet-eth0 +ipv6.dns '2001:4860:4860::8888 2001:4860:4860::8844'
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ nmcli con up ethernet-eth0 ifname eth0
+Error: Connection activation failed: IP configuration could not be reserved (no available address, timeout, etc.)
+Hint: use 'journalctl -xe NM_CONNECTION=fe067690-d40d-4799-ad74-c5d9bb35e8a9 + NM_DEVICE=eth0' to get more details.
++ CHECK_RESULT 4
++ actual_result=4
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 4 ']'
++ '[' 0 -eq 0 ']'
++ test 4x '!=' 0x
++ test -n ''
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_nmcli_config_connect.sh line 42'
++ message='oe_test_nmcli_config_connect.sh line 42'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_nmcli_config_connect.sh line 42'
+Thu Jul 27 22:44:26 2023 - ERROR - oe_test_nmcli_config_connect.sh line 42
++ '[' 0 -eq 1 ']'
++ return 0
++ nmcli device status
++ grep ethernet-eth0
++ grep eth0
++ CHECK_RESULT 1
++ actual_result=1
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 0 -eq 0 ']'
++ test 1x '!=' 0x
++ test -n ''
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_nmcli_config_connect.sh line 44'
++ message='oe_test_nmcli_config_connect.sh line 44'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_nmcli_config_connect.sh line 44'
+Thu Jul 27 22:44:28 2023 - ERROR - oe_test_nmcli_config_connect.sh line 44
++ '[' 0 -eq 1 ']'
++ return 0
++ nmcli -p con show ethernet-eth0
++ grep 8.8.8.8
+ipv4.dns:                               8.8.8.8,8.8.4.4
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ nmcli -p con show ethernet-eth0
++ grep 2001:4860:4860::8888
+ipv6.dns:                               2001:4860:4860::8888,2001:4860:4860::8844
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ echo -e 'quit\nyes\n'
++ nmcli con edit type ethernet con-name eth0
+
+===| nmcli interactive connection editor |===
+
+Adding a new '802-3-ethernet' connection
+
+Type 'help' or '?' for available commands.
+Type 'print' to show all the connection properties.
+Type 'describe [<setting>.<prop>]' for detailed property description.
+
+You may edit the following settings: connection, 802-3-ethernet (ethernet), 802-1x, dcb, sriov, ethtool, match, ipv4, ipv6, hostname, tc, proxy
+nmcli> quit
+The connection is not saved. Do you really want to quit? (yes/no) [no] yes
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ nmcli con modify ethernet-eth0 ipv4.dhcp-hostname host-name ipv6.dhcp-hostname host-name
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ nmcli con modify ethernet-eth0 ipv4.dhcp-client-id client-ID-string
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ nmcli con modify ethernet-eth0 ipv4.ignore-auto-dns yes ipv6.ignore-auto-dns yes
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ echo -e 'quit\nyes\n'
++ nmcli con edit type ethernet con-name eth0
+
+===| nmcli interactive connection editor |===
+
+Adding a new '802-3-ethernet' connection
+
+Type 'help' or '?' for available commands.
+Type 'print' to show all the connection properties.
+Type 'describe [<setting>.<prop>]' for detailed property description.
+
+You may edit the following settings: connection, 802-3-ethernet (ethernet), 802-1x, dcb, sriov, ethtool, match, ipv4, ipv6, hostname, tc, proxy
+nmcli> quit
+The connection is not saved. Do you really want to quit? (yes/no) [no] yes
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ LOG_INFO 'End to run test.'
++ message='End to run test.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End to run test.'
+Thu Jul 27 22:44:37 2023 - INFO  - End to run test.
++ CASE_RESULT 0
++ case_re=0
++ test -z 2
++ test 2 -gt 0
++ LOG_ERROR 'failed to execute the case.'
++ message='failed to execute the case.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'failed to execute the case.'
+Thu Jul 27 22:44:39 2023 - ERROR - failed to execute the case.
++ exit 2
++ post_test
++ LOG_INFO 'Start to restore the test environment.'
++ message='Start to restore the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to restore the test environment.'
+Thu Jul 27 22:44:40 2023 - INFO  - Start to restore the test environment.
++ nmcli con delete ethernet-eth0
+Connection 'ethernet-eth0' (fe067690-d40d-4799-ad74-c5d9bb35e8a9) successfully deleted.
++ LOG_INFO 'End to restore the test environment.'
++ message='End to restore the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End to restore the test environment.'
+Thu Jul 27 22:44:43 2023 - INFO  - End to restore the test environment.

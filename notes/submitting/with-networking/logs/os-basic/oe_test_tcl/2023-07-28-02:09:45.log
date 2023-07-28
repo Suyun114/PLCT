@@ -1,0 +1,81 @@
++ source /root/mugen/libs/locallibs/common_lib.sh
+++ python3 --version
+++ '[' 0 -eq 0 ']'
+++ source /root/mugen/libs/locallibs/common_lib_python.sh
++ main
+++ type -t post_test
++ '[' -n function ']'
++ trap post_test EXIT INT HUP TERM
++ rpm -qa
++ grep expect
+++ type -t config_params
++ '[' -n '' ']'
+++ type -t pre_test
++ '[' -n '' ']'
+++ type -t run_test
++ '[' -n function ']'
++ run_test
++ LOG_INFO 'Start to run test.'
++ message='Start to run test.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to run test.'
+Fri Jul 28 02:09:51 2023 - INFO  - Start to run test.
++ rpm -qa
++ grep tcl
+tcl-8.6.13-2.oe2303.riscv64
++ CHECK_RESULT 0 0 0 'please check TCL language'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='please check TCL language'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ cat
++ CHECK_RESULT 0 0 0 'Error, fail to create hello.c'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='Error, fail to create hello.c'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ tclsh hello.tcl
+Hello, World!
++ CHECK_RESULT 0 0 0 'Error, please check '\''hello.tcl'\'''
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='Error, please check '\''hello.tcl'\'''
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ LOG_INFO 'End to run test.'
++ message='End to run test.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End to run test.'
+Fri Jul 28 02:09:56 2023 - INFO  - End to run test.
++ CASE_RESULT 0
++ case_re=0
++ test -z ''
++ test 0 -eq 0
++ LOG_INFO 'succeed to execute the case.'
++ message='succeed to execute the case.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'succeed to execute the case.'
+Fri Jul 28 02:09:57 2023 - INFO  - succeed to execute the case.
++ exec_result=
++ exit 0
++ post_test
++ LOG_INFO 'Start to clean the test environment.'
++ message='Start to clean the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to clean the test environment.'
+Fri Jul 28 02:09:59 2023 - INFO  - Start to clean the test environment.
++ rm -rf hello.tcl
++ LOG_INFO 'End to clean the test environment.'
++ message='End to clean the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End to clean the test environment.'
+Fri Jul 28 02:10:00 2023 - INFO  - End to clean the test environment.

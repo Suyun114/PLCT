@@ -1,0 +1,146 @@
++ source /root/mugen/libs/locallibs/common_lib.sh
+++ python3 --version
+++ '[' 0 -eq 0 ']'
+++ source /root/mugen/libs/locallibs/common_lib_python.sh
++ main
+++ type -t post_test
++ '[' -n function ']'
++ trap post_test EXIT INT HUP TERM
++ rpm -qa
++ grep expect
+++ type -t config_params
++ '[' -n '' ']'
+++ type -t pre_test
++ '[' -n function ']'
++ pre_test
++ LOG_INFO 'Start environmental preparation.'
++ message='Start environmental preparation.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start environmental preparation.'
+Fri Jul 28 01:40:19 2023 - INFO  - Start environmental preparation.
++ DNF_INSTALL exiv2
++ pkgs=exiv2
++ node=1
++ '[' -z '' ']'
++ tmpfile=
+++ python3 /root/mugen/libs/locallibs/rpm_manage.py install --pkgs exiv2 --node 1 --tempfile ''
++ tmpfile2=/tmp/tmpsagy8ofv
++ '[' -z '' ']'
++ tmpfile=/tmp/tmpsagy8ofv
++ LOG_INFO 'End of environmental preparation!'
++ message='End of environmental preparation!'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End of environmental preparation!'
+Fri Jul 28 01:41:36 2023 - INFO  - End of environmental preparation!
+++ type -t run_test
++ '[' -n function ']'
++ run_test
++ LOG_INFO 'Start to run test.'
++ message='Start to run test.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to run test.'
+Fri Jul 28 01:41:37 2023 - INFO  - Start to run test.
++ exiv2 test.jpg
++ CHECK_RESULT 0 0 0 'view image info error'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='view image info error'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ exiv2 -pa test.jpg
++ CHECK_RESULT 0 0 0 'view image details info error before add'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='view image details info error before add'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ cat tmp.2
+Exif.Image.Artist                            Ascii       9  gaochong
+Exif.Image.ExifTag                           Long        1  2132
+Exif.Image.XPAuthor                          Byte       18  gaochong
+Xmp.dc.creator                               XmpSeq      1  gaochong
+Xmp.xmpMM.InstanceID                         XmpText    41  uuid:faf5bdd5-ba3d-11da-ad31-d33d75182f1b
++ grep 'Iptc.Application2.Credit                     String      9  Mr. Smith' tmp.2
++ CHECK_RESULT 1 1 0 'query image info before add'
++ actual_result=1
++ expect_result=1
++ mode=0
++ error_log='query image info before add'
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 0 -eq 0 ']'
++ test 1x '!=' 1x
++ return 0
++ cp test.jpg test1.jpg
++ exiv2 -M 'add Iptc.Application2.Credit String Mr. Smith' test1.jpg
++ CHECK_RESULT 0 0 0 'add image info error'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='add image info error'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ exiv2 -pa test1.jpg
++ CHECK_RESULT 0 0 0 'view image details info error after add'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='view image details info error after add'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ grep 'Iptc.Application2.Credit                     String      9  Mr. Smith' tmp.3
+Iptc.Application2.Credit                     String      9  Mr. Smith
++ CHECK_RESULT 0 0 0 'query image info error after add'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='query image info error after add'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ LOG_INFO 'End to run test.'
++ message='End to run test.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End to run test.'
+Fri Jul 28 01:41:40 2023 - INFO  - End to run test.
++ CASE_RESULT 0
++ case_re=0
++ test -z ''
++ test 0 -eq 0
++ LOG_INFO 'succeed to execute the case.'
++ message='succeed to execute the case.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'succeed to execute the case.'
+Fri Jul 28 01:41:41 2023 - INFO  - succeed to execute the case.
++ exec_result=
++ exit 0
++ post_test
++ LOG_INFO 'start environment cleanup.'
++ message='start environment cleanup.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'start environment cleanup.'
+Fri Jul 28 01:41:43 2023 - INFO  - start environment cleanup.
++ rm -f tmp.1 tmp.2 tmp.3 test1.jpg
++ DNF_REMOVE
++ node=1
++ pkg_list=
++ mode=0
++ [[ -z /tmp/tmpsagy8ofv ]]
++ '[' 0 -ne 0 ']'
++ '[' 1 == 0 ']'
++ python3 /root/mugen/libs/locallibs/rpm_manage.py remove --node 1 --pkgs '' --tempfile /tmp/tmpsagy8ofv
++ '[' 0 -ne 0 ']'
++ LOG_INFO 'Finish environment cleanup!'
++ message='Finish environment cleanup!'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Finish environment cleanup!'
+Fri Jul 28 01:42:03 2023 - INFO  - Finish environment cleanup!

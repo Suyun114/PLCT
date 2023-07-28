@@ -1,0 +1,165 @@
+测试套/软件包名,测试用例名,日志文件,原因,Broken testcase,pkg not found,preinstall absent,kernel module absent,file missing,systemd unit restart failure,systemd unit runtime error,systemd unit enable failure,timeout
+cmake,oe_test_ccmake,2023-07-27-18:02:37.log,"timeout
+",0,0,0,0,0,0,0,0,1
+cmake,oe_test_ccmake3,2023-07-27-18:07:38.log,"timeout
+",0,0,0,0,0,0,0,0,1
+os-basic,oe_test_power_measurement_internal,2023-07-27-22:23:59.log,,0,0,0,0,0,0,0,0,0
+os-basic,oe_test_ctags,2023-07-27-18:41:58.log,"preinstall absent
+",0,0,1,0,0,0,0,0,0
+os-basic,oe_test_disk_graphics_card,2023-07-28-01:35:10.log,"file missing
+",0,0,0,0,1,0,0,0,0
+os-basic,oe_test_net_IPVLAN,2023-07-28-01:14:35.log,"preinstall absent
+",0,0,1,0,0,0,0,0,0
+os-basic,oe_test_system_monitor_login,2023-07-27-19:10:26.log,"preinstall absent
+timeout
+",0,0,1,0,0,0,0,0,1
+os-basic,oe_test_xmlsec,2023-07-28-02:05:58.log,"file missing
+",0,0,0,0,1,0,0,0,0
+os-basic,oe_test_disk_io_sched,2023-07-28-02:10:13.log,"preinstall absent
+",0,0,1,0,0,0,0,0,0
+os-basic,oe_test_nmcli_set_bond,2023-07-28-01:33:03.log,"preinstall absent
+",0,0,1,0,0,0,0,0,0
+os-basic,oe_test_server_squid_blacklist,2023-07-27-19:35:27.log,,0,0,0,0,0,0,0,0,0
+os-basic,oe_test_catman,2023-07-27-18:46:09.log,"preinstall absent
+",0,0,1,0,0,0,0,0,0
+os-basic,oe_test_zlib,2023-07-28-01:45:21.log,"file missing
+",0,0,0,0,1,0,0,0,0
+os-basic,oe_test_libffi,2023-07-28-02:00:42.log,"file missing
+",0,0,0,0,1,0,0,0,0
+os-basic,oe_test_dmraid,2023-07-27-18:48:46.log,"file missing
+",0,0,0,0,1,0,0,0,0
+os-basic,oe_test_csplit,2023-07-27-18:40:54.log,"preinstall absent
+",0,0,1,0,0,0,0,0,0
+os-basic,oe_test_aureport,2023-07-28-02:13:18.log,"preinstall absent
+timeout
+",0,0,1,0,0,0,0,0,1
+os-basic,oe_test_net_ncat,2023-07-28-01:30:35.log,"file missing
+timeout
+",0,0,0,0,1,0,0,0,1
+os-basic,oe_test_net_cmd_ping,2023-07-28-01:25:39.log,,0,0,0,0,0,0,0,0,0
+os-basic,oe_test_server_mariadb_compatibilty,2023-07-27-20:32:54.log,"timeout
+",0,0,0,0,0,0,0,0,1
+os-basic,oe_test_basic_set_account_expiration_time,2023-07-28-01:38:24.log,,0,0,0,0,0,0,0,0,0
+os-basic,oe_test_kernel_module_operation,2023-07-28-01:12:43.log,"kernel module absent
+",0,0,0,1,0,0,0,0,0
+os-basic,oe_test_system_monitor_share_total,2023-07-28-01:34:44.log,,0,0,0,0,0,0,0,0,0
+os-basic,oe_test_nmcli_macsec,2023-07-27-22:38:36.log,"file missing
+",0,0,0,0,1,0,0,0,0
+os-basic,oe_test_kernel_kdump,2023-07-28-00:33:38.log,"preinstall absent
+",0,0,1,0,0,0,0,0,0
+os-basic,oe_test_reboot,2023-07-27-21:58:15.log,"timeout
+",0,0,0,0,0,0,0,0,1
+os-basic,oe_test_system_log_dmesg,2023-07-27-19:13:06.log,,0,0,0,0,0,0,0,0,0
+os-basic,oe_test_fuse,2023-07-27-19:00:05.log,,0,0,0,0,0,0,0,0,0
+os-basic,oe_test_count_gperftools_function,2023-07-28-02:48:21.log,"file missing
+",0,0,0,0,1,0,0,0,0
+os-basic,oe_test_power_powertop2tuned_optimize,2023-07-27-22:17:18.log,,0,0,0,0,0,0,0,0,0
+os-basic,oe_test_hostnamectl,2023-07-28-00:32:58.log,,0,0,0,0,0,0,0,0,0
+os-basic,oe_test_ethtool,2023-07-27-23:41:38.log,"file missing
+",0,0,0,0,1,0,0,0,0
+os-basic,oe_test_net_cmd_scp,2023-07-28-01:24:54.log,"timeout
+",0,0,0,0,0,0,0,0,1
+os-basic,oe_test_system_log_recorded,2023-07-27-19:12:10.log,"preinstall absent
+",0,0,1,0,0,0,0,0,0
+os-basic,oe_test_nmcli_con_reload,2023-07-27-22:44:56.log,"preinstall absent
+timeout
+",0,0,1,0,0,0,0,0,1
+os-basic,oe_test_ProcMgmt_crontab_cmd,2023-07-27-23:04:10.log,"preinstall absent
+",0,0,1,0,0,0,0,0,0
+os-basic,oe_test_uname,2023-07-27-19:08:11.log,,0,0,0,0,0,0,0,0,0
+os-basic,oe_test_lastb,2023-07-28-02:12:50.log,,0,0,0,0,0,0,0,0,0
+os-basic,oe_test_power_powertop_powerup,2023-07-27-22:12:30.log,,0,0,0,0,0,0,0,0,0
+os-basic,oe_test_net_config,2023-07-28-01:28:03.log,"timeout
+",0,0,0,0,0,0,0,0,1
+os-basic,oe_test_xzcmp,2023-07-28-03:11:26.log,,0,0,0,0,0,0,0,0,0
+os-basic,oe_test_who,2023-07-27-18:39:27.log,,0,0,0,0,0,0,0,0,0
+os-basic,oe_test_nmcli_config_connect,2023-07-27-22:42:51.log,"preinstall absent
+timeout
+",0,0,1,0,0,0,0,0,1
+os-basic,oe_test_gmp,2023-07-28-01:58:26.log,"file missing
+",0,0,0,0,1,0,0,0,0
+os-basic,oe_test_server_vsftpd_transfer,2023-07-27-19:14:22.log,"Broken testcase
+preinstall absent
+timeout
+",1,0,1,0,0,0,0,0,1
+os-basic,oe_test_server_openssh_verifykey,2023-07-27-19:43:55.log,"file missing
+timeout
+",0,0,0,0,1,0,0,0,1
+os-basic,oe_test_auditctl,2023-07-27-19:01:49.log,"preinstall absent
+",0,0,1,0,0,0,0,0,0
+os-basic,oe_test_libsecret,2023-07-28-03:17:24.log,,0,0,0,0,0,0,0,0,0
+os-basic,oe_test_net_VRF,2023-07-28-01:21:12.log,"preinstall absent
+",0,0,1,0,0,0,0,0,0
+os-basic,oe_test_system_monitor_reboot,2023-07-27-19:09:00.log,"preinstall absent
+timeout
+",0,0,1,0,0,0,0,0,1
+os-basic,oe_test_auditctl_02,2023-07-28-03:15:20.log,"preinstall absent
+",0,0,1,0,0,0,0,0,0
+os-basic,oe_test_server_vsftpd_NKdelay,2023-07-27-19:22:58.log,"file missing
+timeout
+",0,0,0,0,1,0,0,0,1
+os-basic,oe_test_sos,2023-07-27-21:27:57.log,"file missing
+timeout
+",0,0,0,0,1,0,0,0,1
+os-basic,oe_test_disk_schedule_udev,2023-07-27-23:18:35.log,"preinstall absent
+timeout
+",0,0,1,0,0,0,0,0,1
+os-basic,oe_test_whereis,2023-07-27-18:45:10.log,,0,0,0,0,0,0,0,0,0
+os-basic,oe_test_chsh,2023-07-28-02:43:36.log,,0,0,0,0,0,0,0,0,0
+os-basic,oe_test_bunzip2,2023-07-28-03:15:48.log,"preinstall absent
+",0,0,1,0,0,0,0,0,0
+os-basic,oe_test_system_log_view,2023-07-27-19:11:11.log,"preinstall absent
+",0,0,1,0,0,0,0,0,0
+os-basic,oe_test_c++,2023-07-27-18:51:05.log,"file missing
+",0,0,0,0,1,0,0,0,0
+os-basic,oe_test_envsubst,2023-07-27-18:42:42.log,"preinstall absent
+",0,0,1,0,0,0,0,0,0
+os-basic,oe_test_disk_schedule_specific,2023-07-27-23:15:48.log,"preinstall absent
+timeout
+",0,0,1,0,0,0,0,0,1
+os-basic,oe_test_awk,2023-07-27-18:57:54.log,,0,0,0,0,0,0,0,0,0
+os-basic,oe_test_expect,2023-07-28-02:05:05.log,,0,0,0,0,0,0,0,0,0
+os-basic,oe_test_nmcli_set_team,2023-07-28-01:37:38.log,,0,0,0,0,0,0,0,0,0
+os-basic,oe_test_IOaccess_1Gfile,2023-07-28-00:42:27.log,"preinstall absent
+timeout
+",0,0,1,0,0,0,0,0,1
+os-basic,oe_test_disk_tuned_set,2023-07-27-23:08:39.log,"file missing
+timeout
+",0,0,0,0,1,0,0,0,1
+os-basic,oe_test_IOaccess_500Mfile,2023-07-28-00:01:36.log,"preinstall absent
+timeout
+",0,0,1,0,0,0,0,0,1
+openssh,oe_test_openssh_ssh_command,2023-07-27-17:02:45.log,,0,0,0,0,0,0,0,0,0
+openssh,oe_test_openssh_ssh_user,2023-07-27-17:04:25.log,"timeout
+",0,0,0,0,0,0,0,0,1
+openssh,oe_test_openssh_no_password,2023-07-27-16:57:16.log,"timeout
+",0,0,0,0,0,0,0,0,1
+openssh,oe_test_openssh_ssh-copy-id,2023-07-27-17:03:14.log,"preinstall absent
+timeout
+",0,0,1,0,0,0,0,0,1
+openssh,oe_test_sec_ssh,2023-07-27-17:08:45.log,"file missing
+",0,0,0,0,1,0,0,0,0
+openssh,oe_test_openssh_port,2023-07-27-16:58:34.log,"timeout
+",0,0,0,0,0,0,0,0,1
+openssh,oe_test_openssh_scp_r,2023-07-27-17:00:12.log,"preinstall absent
+timeout
+",0,0,1,0,0,0,0,0,1
+openssh,oe_test_openssh_ssh_agent,2023-07-27-17:01:52.log,"timeout
+",0,0,0,0,0,0,0,0,1
+openssh,oe_test_openssh_sftp,2023-07-27-17:01:19.log,"preinstall absent
+timeout
+",0,0,1,0,0,0,0,0,1
+openssh,oe_test_openssh_scp_P,2023-07-27-16:59:01.log,"preinstall absent
+timeout
+",0,0,1,0,0,0,0,0,1
+openssh,oe_test_openssh_scp,2023-07-27-17:00:45.log,"preinstall absent
+timeout
+",0,0,1,0,0,0,0,0,1
+openssh,oe_test_openssh_keyscan,2023-07-27-16:56:02.log,,0,0,0,0,0,0,0,0,0
+openssh,oe_test_openssh_cipher,2023-07-27-16:54:30.log,,0,0,0,0,0,0,0,0,0
+openssh,oe_test_sec_jump_login,2023-07-27-17:11:54.log,,0,0,0,0,0,0,0,0,0
+openssh,oe_test_openssh_scp_q,2023-07-27-16:59:39.log,"preinstall absent
+timeout
+",0,0,1,0,0,0,0,0,1
+openssh,oe_test_openssh_locked,2023-07-27-16:56:34.log,"timeout
+",0,0,0,0,0,0,0,0,1

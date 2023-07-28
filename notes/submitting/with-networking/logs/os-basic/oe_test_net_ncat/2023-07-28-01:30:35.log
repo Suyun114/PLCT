@@ -1,0 +1,190 @@
++ source /root/mugen/libs/locallibs/common_lib.sh
+++ python3 --version
+++ '[' 0 -eq 0 ']'
+++ source /root/mugen/libs/locallibs/common_lib_python.sh
++ main
+++ type -t post_test
++ '[' -n function ']'
++ trap post_test EXIT INT HUP TERM
++ rpm -qa
++ grep expect
+++ type -t config_params
++ '[' -n '' ']'
+++ type -t pre_test
++ '[' -n function ']'
++ pre_test
++ LOG_INFO 'Start to prepare the test environment.'
++ message='Start to prepare the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to prepare the test environment.'
+Fri Jul 28 01:30:41 2023 - INFO  - Start to prepare the test environment.
++ DNF_INSTALL nmap
++ pkgs=nmap
++ node=1
++ '[' -z '' ']'
++ tmpfile=
+++ python3 /root/mugen/libs/locallibs/rpm_manage.py install --pkgs nmap --node 1 --tempfile ''
++ tmpfile2=/tmp/tmpa9ggbvv4
++ '[' -z '' ']'
++ tmpfile=/tmp/tmpa9ggbvv4
++ iptables -F
++ SSH_CMD '
+            yum install -y nmap iptables;
+            iptables -F;
+            systemctl stop firewalld' '' '' ''
++ cmd='
+            yum install -y nmap iptables;
+            iptables -F;
+            systemctl stop firewalld'
++ remoteip=
++ remotepasswd=
++ remoteuser=
++ timeout=300
++ connport=22
++ bash /root/mugen/libs/locallibs/sshcmd.sh -c '
+            yum install -y nmap iptables;
+            iptables -F;
+            systemctl stop firewalld' -i '' -u '' -p '' -t 300 -o 22
+Usage: sshcmd.sh -c "command" -i "remote machinet ip" [-u login_user] [-p login_password] [-o port] [-t timeout]+ ret=1
++ test 1 -ne 0
++ LOG_ERROR 'Failed in remote CMD operation:1'
++ message='Failed in remote CMD operation:1'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'Failed in remote CMD operation:1'
+Fri Jul 28 01:32:10 2023 - ERROR - Failed in remote CMD operation:1
++ return 1
++ LOG_INFO 'End to prepare the test environment.'
++ message='End to prepare the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End to prepare the test environment.'
+Fri Jul 28 01:32:11 2023 - INFO  - End to prepare the test environment.
+++ type -t run_test
++ '[' -n function ']'
++ run_test
++ echo 'Start executing testcase.'
+Start executing testcase.
++ SSH_CMD 'ncat -l 8080 >> ~/ncat_log 2>&1 &' '' '' ''
++ cmd='ncat -l 8080 >> ~/ncat_log 2>&1 &'
++ remoteip=
++ remotepasswd=
++ remoteuser=
++ timeout=300
++ connport=22
++ bash /root/mugen/libs/locallibs/sshcmd.sh -c 'ncat -l 8080 >> ~/ncat_log 2>&1 &' -i '' -u '' -p '' -t 300 -o 22
+Usage: sshcmd.sh -c "command" -i "remote machinet ip" [-u login_user] [-p login_password] [-o port] [-t timeout]+ ret=1
++ test 1 -ne 0
++ LOG_ERROR 'Failed in remote CMD operation:1'
++ message='Failed in remote CMD operation:1'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'Failed in remote CMD operation:1'
+Fri Jul 28 01:32:13 2023 - ERROR - Failed in remote CMD operation:1
++ return 1
++ CHECK_RESULT 1
++ actual_result=1
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 0 -eq 0 ']'
++ test 1x '!=' 0x
++ test -n ''
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_net_ncat.sh line 35'
++ message='oe_test_net_ncat.sh line 35'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_net_ncat.sh line 35'
+Fri Jul 28 01:32:14 2023 - ERROR - oe_test_net_ncat.sh line 35
++ '[' 0 -eq 1 ']'
++ return 0
++ echo -e '123\n456\n004\n'
++ ncat '' 8080
+Ncat: You must specify a host to connect to. QUITTING.
++ CHECK_RESULT 2
++ actual_result=2
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 2 ']'
++ '[' 0 -eq 0 ']'
++ test 2x '!=' 0x
++ test -n ''
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_net_ncat.sh line 37'
++ message='oe_test_net_ncat.sh line 37'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_net_ncat.sh line 37'
+Fri Jul 28 01:32:15 2023 - ERROR - oe_test_net_ncat.sh line 37
++ '[' 0 -eq 1 ']'
++ return 0
++ SSH_SCP root@:/root/ncat_log . ''
++ src=root@:/root/ncat_log
++ dest=.
++ remotepasswd=
++ connport=22
++ bash /root/mugen/libs/locallibs/sshscp.sh -p '' -o 22 -s root@:/root/ncat_log -d .
+Fri Jul 28 01:32:17 2023 - WARN  - the connect port using the default configuration
+spawn scp -P 22 -r root@:/root/ncat_log .
+ssh: Could not resolve hostname : Name or service not known
+scp: Connection closed
++ ret=255
++ test 255 -ne 0
++ LOG_ERROR 'Failed in remote SCP operation: 255'
++ message='Failed in remote SCP operation: 255'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'Failed in remote SCP operation: 255'
+Fri Jul 28 01:32:19 2023 - ERROR - Failed in remote SCP operation: 255
++ return 255
+++ grep -icE '123|456|004' ncat_log
+grep: ncat_log: No such file or directory
++ CHECK_RESULT '' 3
++ actual_result=
++ expect_result=3
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z '' ']'
++ LOG_ERROR 'Missing actual error code.'
++ message='Missing actual error code.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'Missing actual error code.'
+Fri Jul 28 01:32:20 2023 - ERROR - Missing actual error code.
++ return 1
++ echo 'End of testcase execution.'
+End of testcase execution.
++ CASE_RESULT 0
++ case_re=0
++ test -z 2
++ test 2 -gt 0
++ LOG_ERROR 'failed to execute the case.'
++ message='failed to execute the case.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'failed to execute the case.'
+Fri Jul 28 01:32:22 2023 - ERROR - failed to execute the case.
++ exit 2
++ post_test
++ LOG_INFO 'Start to restore the test environment.'
++ message='Start to restore the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to restore the test environment.'
+Fri Jul 28 01:32:23 2023 - INFO  - Start to restore the test environment.
++ rm -rf ncat_log
++ DNF_REMOVE
++ node=1
++ pkg_list=
++ mode=0
++ [[ -z /tmp/tmpa9ggbvv4 ]]
++ '[' 0 -ne 0 ']'
++ '[' 1 == 0 ']'
++ python3 /root/mugen/libs/locallibs/rpm_manage.py remove --node 1 --pkgs '' --tempfile /tmp/tmpa9ggbvv4
++ '[' 0 -ne 0 ']'
++ SSH_CMD 'yum remove -y nmap; rm -rf ~/ncat_log' '' '' ''
++ cmd='yum remove -y nmap; rm -rf ~/ncat_log'
++ remoteip=
++ remotepasswd=
++ remoteuser=
++ timeout=300
++ connport=22
++ bash /root/mugen/libs/locallibs/sshcmd.sh -c 'yum remove -y nmap; rm -rf ~/ncat_log' -i '' -u '' -p '' -t 300 -o 22
+Usage: sshcmd.sh -c "command" -i "remote machinet ip" [-u login_user] [-p login_password] [-o port] [-t timeout]+ ret=1
++ test 1 -ne 0
++ LOG_ERROR 'Failed in remote CMD operation:1'
++ message='Failed in remote CMD operation:1'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'Failed in remote CMD operation:1'
+Fri Jul 28 01:32:48 2023 - ERROR - Failed in remote CMD operation:1
++ return 1
++ LOG_INFO 'End to restore the test environment.'
++ message='End to restore the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End to restore the test environment.'
+Fri Jul 28 01:32:49 2023 - INFO  - End to restore the test environment.

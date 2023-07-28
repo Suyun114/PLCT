@@ -1,0 +1,171 @@
++ source /root/mugen/libs/locallibs/common_lib.sh
+++ python3 --version
+++ '[' 0 -eq 0 ']'
+++ source /root/mugen/libs/locallibs/common_lib_python.sh
++ main
+++ type -t post_test
++ '[' -n function ']'
++ trap post_test EXIT INT HUP TERM
++ rpm -qa
++ grep expect
+++ type -t config_params
++ '[' -n '' ']'
+++ type -t pre_test
++ '[' -n function ']'
++ pre_test
++ LOG_INFO 'Start environmental preparation.'
++ message='Start environmental preparation.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start environmental preparation.'
+Fri Jul 28 02:48:27 2023 - INFO  - Start environmental preparation.
++ DNF_INSTALL gperftools
++ pkgs=gperftools
++ node=1
++ '[' -z '' ']'
++ tmpfile=
+++ python3 /root/mugen/libs/locallibs/rpm_manage.py install --pkgs gperftools --node 1 --tempfile ''
++ tmpfile2=/tmp/tmpwrsohvmf
++ '[' -z '' ']'
++ tmpfile=/tmp/tmpwrsohvmf
++ LOG_INFO 'End of environmental preparation!'
++ message='End of environmental preparation!'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End of environmental preparation!'
+Fri Jul 28 02:49:40 2023 - INFO  - End of environmental preparation!
+++ type -t run_test
++ '[' -n function ']'
++ run_test
++ LOG_INFO 'Start to run test.'
++ message='Start to run test.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to run test.'
+Fri Jul 28 02:49:42 2023 - INFO  - Start to run test.
++ cat
++ test -f test.cpp
++ CHECK_RESULT 0 0 0 'File creation failed'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='File creation failed'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ g++ test.cpp -o main -lprofiler
+test.cpp:1:10: fatal error: gperftools/profiler.h: No such file or directory
+    1 | #include <gperftools/profiler.h>
+      |          ^~~~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
++ test -f main
++ CHECK_RESULT 1 0 0 'File creation failed'
++ actual_result=1
++ expect_result=0
++ mode=0
++ error_log='File creation failed'
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 0 -eq 0 ']'
++ test 1x '!=' 0x
++ test -n 'File creation failed'
++ LOG_ERROR 'File creation failed'
++ message='File creation failed'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'File creation failed'
+Fri Jul 28 02:49:44 2023 - ERROR - File creation failed
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_count_gperftools_function.sh line 61'
++ message='oe_test_count_gperftools_function.sh line 61'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_count_gperftools_function.sh line 61'
+Fri Jul 28 02:49:45 2023 - ERROR - oe_test_count_gperftools_function.sh line 61
++ '[' 0 -eq 1 ']'
++ return 0
++ CPUPROFILE=./main.prof
++ ./main
+oe_test_count_gperftools_function.sh: line 62: ./main: No such file or directory
++ test -f main.prof
++ CHECK_RESULT 1 0 0 'File creation failed'
++ actual_result=1
++ expect_result=0
++ mode=0
++ error_log='File creation failed'
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 0 -eq 0 ']'
++ test 1x '!=' 0x
++ test -n 'File creation failed'
++ LOG_ERROR 'File creation failed'
++ message='File creation failed'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'File creation failed'
+Fri Jul 28 02:49:46 2023 - ERROR - File creation failed
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_count_gperftools_function.sh line 64'
++ message='oe_test_count_gperftools_function.sh line 64'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_count_gperftools_function.sh line 64'
+Fri Jul 28 02:49:47 2023 - ERROR - oe_test_count_gperftools_function.sh line 64
++ '[' 0 -eq 1 ']'
++ return 0
++ pprof ./main main.prof --pdf
+oe_test_count_gperftools_function.sh: line 65: pprof: command not found
++ test -f main.pdf
++ CHECK_RESULT 0 0 0 'File creation failed'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='File creation failed'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ pprof ./main main.prof --text
+oe_test_count_gperftools_function.sh: line 68: pprof: command not found
++ CHECK_RESULT 127 0 0 'Output failed'
++ actual_result=127
++ expect_result=0
++ mode=0
++ error_log='Output failed'
++ exit_mode=0
++ '[' -z 127 ']'
++ '[' 0 -eq 0 ']'
++ test 127x '!=' 0x
++ test -n 'Output failed'
++ LOG_ERROR 'Output failed'
++ message='Output failed'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'Output failed'
+Fri Jul 28 02:49:49 2023 - ERROR - Output failed
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_count_gperftools_function.sh line 69'
++ message='oe_test_count_gperftools_function.sh line 69'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_count_gperftools_function.sh line 69'
+Fri Jul 28 02:49:50 2023 - ERROR - oe_test_count_gperftools_function.sh line 69
++ '[' 0 -eq 1 ']'
++ return 0
++ LOG_INFO 'End to run test.'
++ message='End to run test.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End to run test.'
+Fri Jul 28 02:49:51 2023 - INFO  - End to run test.
++ CASE_RESULT 0
++ case_re=0
++ test -z 3
++ test 3 -gt 0
++ LOG_ERROR 'failed to execute the case.'
++ message='failed to execute the case.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'failed to execute the case.'
+Fri Jul 28 02:49:53 2023 - ERROR - failed to execute the case.
++ exit 3
++ post_test
++ LOG_INFO 'start environment cleanup.'
++ message='start environment cleanup.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'start environment cleanup.'
+Fri Jul 28 02:49:54 2023 - INFO  - start environment cleanup.
++ rm -rf main.pdf test.cpp
++ DNF_REMOVE
++ node=1
++ pkg_list=
++ mode=0
++ [[ -z /tmp/tmpwrsohvmf ]]
++ '[' 0 -ne 0 ']'
++ '[' 1 == 0 ']'
++ python3 /root/mugen/libs/locallibs/rpm_manage.py remove --node 1 --pkgs '' --tempfile /tmp/tmpwrsohvmf
++ '[' 0 -ne 0 ']'
++ LOG_INFO 'Finish environment cleanup!'
++ message='Finish environment cleanup!'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Finish environment cleanup!'
+Fri Jul 28 02:50:14 2023 - INFO  - Finish environment cleanup!

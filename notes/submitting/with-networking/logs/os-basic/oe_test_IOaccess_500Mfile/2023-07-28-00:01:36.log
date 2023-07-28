@@ -1,0 +1,1652 @@
++ source /root/mugen/libs/locallibs/common_lib.sh
+++ python3 --version
+++ '[' 0 -eq 0 ']'
+++ source /root/mugen/libs/locallibs/common_lib_python.sh
++ main
+++ type -t post_test
++ '[' -n function ']'
++ trap post_test EXIT INT HUP TERM
++ rpm -qa
++ grep expect
+++ type -t config_params
++ '[' -n '' ']'
+++ type -t pre_test
++ '[' -n function ']'
++ pre_test
++ LOG_INFO 'Start to pre test.'
++ message='Start to pre test.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to pre test.'
+Fri Jul 28 00:01:43 2023 - INFO  - Start to pre test.
+++ date +%Y%m%d
++ testfile1=myfile20230728
+++ date +%Y%m%d
++ testfile2=mycpfile20230728
++ LOG_INFO 'Start to pre test.'
++ message='Start to pre test.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to pre test.'
+Fri Jul 28 00:01:45 2023 - INFO  - Start to pre test.
+++ type -t run_test
++ '[' -n function ']'
++ run_test
++ LOG_INFO 'Start to run test.'
++ message='Start to run test.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to run test.'
+Fri Jul 28 00:01:46 2023 - INFO  - Start to run test.
+++ seq 1 10
++ for i in $(seq 1 10)
++ dd if=/dev/urandom of=myfile20230728 bs=1M count=500
+500+0 records in
+500+0 records out
+524288000 bytes (524 MB, 500 MiB) copied, 121.707 s, 4.3 MB/s
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ grep -w 524288000
++ ls -l myfile20230728
++ awk '{print$5}'
+524288000
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ dd if=/dev/zero of=myfile20230728 bs=1M count=500
+500+0 records in
+500+0 records out
+524288000 bytes (524 MB, 500 MiB) copied, 29.1942 s, 18.0 MB/s
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ ls -l myfile20230728
++ awk '{print$5}'
++ grep -w 524288000
+524288000
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ for i in $(seq 1 10)
++ dd if=/dev/urandom of=myfile20230728 bs=1M count=500
+500+0 records in
+500+0 records out
+524288000 bytes (524 MB, 500 MiB) copied, 122.817 s, 4.3 MB/s
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ ls -l myfile20230728
++ awk '{print$5}'
++ grep -w 524288000
+524288000
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ dd if=/dev/zero of=myfile20230728 bs=1M count=500
+500+0 records in
+500+0 records out
+524288000 bytes (524 MB, 500 MiB) copied, 30.1716 s, 17.4 MB/s
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ ls -l myfile20230728
++ awk '{print$5}'
++ grep -w 524288000
+524288000
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ for i in $(seq 1 10)
++ dd if=/dev/urandom of=myfile20230728 bs=1M count=500
+500+0 records in
+500+0 records out
+524288000 bytes (524 MB, 500 MiB) copied, 120.265 s, 4.4 MB/s
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ awk '{print$5}'
++ ls -l myfile20230728
++ grep -w 524288000
+524288000
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ dd if=/dev/zero of=myfile20230728 bs=1M count=500
+500+0 records in
+500+0 records out
+524288000 bytes (524 MB, 500 MiB) copied, 28.9033 s, 18.1 MB/s
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ ls -l myfile20230728
++ awk '{print$5}'
++ grep -w 524288000
+524288000
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ for i in $(seq 1 10)
++ dd if=/dev/urandom of=myfile20230728 bs=1M count=500
+500+0 records in
+500+0 records out
+524288000 bytes (524 MB, 500 MiB) copied, 121.687 s, 4.3 MB/s
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ ls -l myfile20230728
++ awk '{print$5}'
++ grep -w 524288000
+524288000
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ dd if=/dev/zero of=myfile20230728 bs=1M count=500
+500+0 records in
+500+0 records out
+524288000 bytes (524 MB, 500 MiB) copied, 30.3504 s, 17.3 MB/s
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ ls -l myfile20230728
++ awk '{print$5}'
++ grep -w 524288000
+524288000
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ for i in $(seq 1 10)
++ dd if=/dev/urandom of=myfile20230728 bs=1M count=500
+500+0 records in
+500+0 records out
+524288000 bytes (524 MB, 500 MiB) copied, 120.654 s, 4.3 MB/s
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ ls -l myfile20230728
++ awk '{print$5}'
++ grep -w 524288000
+524288000
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ dd if=/dev/zero of=myfile20230728 bs=1M count=500
+500+0 records in
+500+0 records out
+524288000 bytes (524 MB, 500 MiB) copied, 30.4527 s, 17.2 MB/s
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ awk '{print$5}'
++ ls -l myfile20230728
++ grep -w 524288000
+524288000
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ for i in $(seq 1 10)
++ dd if=/dev/urandom of=myfile20230728 bs=1M count=500
+500+0 records in
+500+0 records out
+524288000 bytes (524 MB, 500 MiB) copied, 123.313 s, 4.3 MB/s
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ ls -l myfile20230728
++ awk '{print$5}'
++ grep -w 524288000
+524288000
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ dd if=/dev/zero of=myfile20230728 bs=1M count=500
+500+0 records in
+500+0 records out
+524288000 bytes (524 MB, 500 MiB) copied, 30.486 s, 17.2 MB/s
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ awk '{print$5}'
++ ls -l myfile20230728
++ grep -w 524288000
+524288000
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ for i in $(seq 1 10)
++ dd if=/dev/urandom of=myfile20230728 bs=1M count=500
+500+0 records in
+500+0 records out
+524288000 bytes (524 MB, 500 MiB) copied, 126.004 s, 4.2 MB/s
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ grep -w 524288000
++ ls -l myfile20230728
++ awk '{print$5}'
+524288000
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ dd if=/dev/zero of=myfile20230728 bs=1M count=500
+500+0 records in
+500+0 records out
+524288000 bytes (524 MB, 500 MiB) copied, 29.8264 s, 17.6 MB/s
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ ls -l myfile20230728
++ awk '{print$5}'
++ grep -w 524288000
+524288000
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ for i in $(seq 1 10)
++ dd if=/dev/urandom of=myfile20230728 bs=1M count=500
+500+0 records in
+500+0 records out
+524288000 bytes (524 MB, 500 MiB) copied, 123.946 s, 4.2 MB/s
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ ls -l myfile20230728
++ awk '{print$5}'
++ grep -w 524288000
+524288000
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ dd if=/dev/zero of=myfile20230728 bs=1M count=500
+500+0 records in
+500+0 records out
+524288000 bytes (524 MB, 500 MiB) copied, 28.5096 s, 18.4 MB/s
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ ls -l myfile20230728
++ awk '{print$5}'
++ grep -w 524288000
+524288000
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ for i in $(seq 1 10)
++ dd if=/dev/urandom of=myfile20230728 bs=1M count=500
+500+0 records in
+500+0 records out
+524288000 bytes (524 MB, 500 MiB) copied, 120.436 s, 4.4 MB/s
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ ls -l myfile20230728
++ awk '{print$5}'
++ grep -w 524288000
+524288000
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ dd if=/dev/zero of=myfile20230728 bs=1M count=500
+500+0 records in
+500+0 records out
+524288000 bytes (524 MB, 500 MiB) copied, 29.5023 s, 17.8 MB/s
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ ls -l myfile20230728
++ awk '{print$5}'
++ grep -w 524288000
+524288000
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ for i in $(seq 1 10)
++ dd if=/dev/urandom of=myfile20230728 bs=1M count=500
+500+0 records in
+500+0 records out
+524288000 bytes (524 MB, 500 MiB) copied, 120.207 s, 4.4 MB/s
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ awk '{print$5}'
++ ls -l myfile20230728
++ grep -w 524288000
+524288000
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ dd if=/dev/zero of=myfile20230728 bs=1M count=500
+500+0 records in
+500+0 records out
+524288000 bytes (524 MB, 500 MiB) copied, 30.3755 s, 17.3 MB/s
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ ls -l myfile20230728
++ awk '{print$5}'
++ grep -w 524288000
+524288000
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
+++ ls -l myfile20230728
+++ awk '{print$5}'
++ file_size=524288000
+++ seq 1 10
++ for i in $(seq 1 10)
++ rm -rf mycpfile20230728
++ cp myfile20230728 mycpfile20230728
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ ls -l mycpfile20230728
++ grep 524288000
+-rw-r--r-- 1 root root 524288000 Jul 28 00:27 mycpfile20230728
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ for i in $(seq 1 10)
++ rm -rf mycpfile20230728
++ cp myfile20230728 mycpfile20230728
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ ls -l mycpfile20230728
++ grep 524288000
+-rw-r--r-- 1 root root 524288000 Jul 28 00:28 mycpfile20230728
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ for i in $(seq 1 10)
++ rm -rf mycpfile20230728
++ cp myfile20230728 mycpfile20230728
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ ls -l mycpfile20230728
++ grep 524288000
+-rw-r--r-- 1 root root 524288000 Jul 28 00:28 mycpfile20230728
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ for i in $(seq 1 10)
++ rm -rf mycpfile20230728
++ cp myfile20230728 mycpfile20230728
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ ls -l mycpfile20230728
++ grep 524288000
+-rw-r--r-- 1 root root 524288000 Jul 28 00:28 mycpfile20230728
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ for i in $(seq 1 10)
++ rm -rf mycpfile20230728
++ cp myfile20230728 mycpfile20230728
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ ls -l mycpfile20230728
++ grep 524288000
+-rw-r--r-- 1 root root 524288000 Jul 28 00:28 mycpfile20230728
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ for i in $(seq 1 10)
++ rm -rf mycpfile20230728
++ cp myfile20230728 mycpfile20230728
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ ls -l mycpfile20230728
++ grep 524288000
+-rw-r--r-- 1 root root 524288000 Jul 28 00:29 mycpfile20230728
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ for i in $(seq 1 10)
++ rm -rf mycpfile20230728
++ cp myfile20230728 mycpfile20230728
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ ls -l mycpfile20230728
++ grep 524288000
+-rw-r--r-- 1 root root 524288000 Jul 28 00:29 mycpfile20230728
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ for i in $(seq 1 10)
++ rm -rf mycpfile20230728
++ cp myfile20230728 mycpfile20230728
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ ls -l mycpfile20230728
++ grep 524288000
+-rw-r--r-- 1 root root 524288000 Jul 28 00:29 mycpfile20230728
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ for i in $(seq 1 10)
++ rm -rf mycpfile20230728
++ cp myfile20230728 mycpfile20230728
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ ls -l mycpfile20230728
++ grep 524288000
+-rw-r--r-- 1 root root 524288000 Jul 28 00:29 mycpfile20230728
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ for i in $(seq 1 10)
++ rm -rf mycpfile20230728
++ cp myfile20230728 mycpfile20230728
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ ls -l mycpfile20230728
++ grep 524288000
+-rw-r--r-- 1 root root 524288000 Jul 28 00:29 mycpfile20230728
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
+++ seq 1 10
++ for i in $(seq 1 10)
++ rm -rf myfile20230728.zip
++ zip myfile20230728.zip myfile20230728
+  adding: myfile20230728 (deflated 100%)
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ test -f myfile20230728.zip
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ for i in $(seq 1 10)
++ rm -rf myfile20230728.zip
++ zip myfile20230728.zip myfile20230728
+  adding: myfile20230728 (deflated 100%)
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ test -f myfile20230728.zip
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ for i in $(seq 1 10)
++ rm -rf myfile20230728.zip
++ zip myfile20230728.zip myfile20230728
+  adding: myfile20230728 (deflated 100%)
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ test -f myfile20230728.zip
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ for i in $(seq 1 10)
++ rm -rf myfile20230728.zip
++ zip myfile20230728.zip myfile20230728
+  adding: myfile20230728 (deflated 100%)
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ test -f myfile20230728.zip
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ for i in $(seq 1 10)
++ rm -rf myfile20230728.zip
++ zip myfile20230728.zip myfile20230728
+  adding: myfile20230728Fri Jul 28 00:31:38 2023 - ERROR - Timeout : Command 'bash -x oe_test_IOaccess_500Mfile.sh' timed out after 1799.997915 seconds
+ (deflated 100%)
+++ post_test
+++ LOG_INFO 'Start to restore the test environment.'
+++ message='Start to restore the test environment.'
+++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to restore the test environment.'
+Fri Jul 28 00:31:40 2023 - INFO  - Start to restore the test environment.
+++ rm -rf myfile20230728 mycpfile20230728 myfile20230728.zip
+++ LOG_INFO 'End to restore the test environment.'
+++ message='End to restore the test environment.'
+++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End to restore the test environment.'
+Fri Jul 28 00:31:45 2023 - INFO  - End to restore the test environment.
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ test -f myfile20230728.zip
++ CHECK_RESULT 1
++ actual_result=1
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 0 -eq 0 ']'
++ test 1x '!=' 0x
++ test -n ''
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_IOaccess_500Mfile.sh line 56'
++ message='oe_test_IOaccess_500Mfile.sh line 56'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_IOaccess_500Mfile.sh line 56'
+Fri Jul 28 00:31:46 2023 - ERROR - oe_test_IOaccess_500Mfile.sh line 56
++ '[' 0 -eq 1 ']'
++ return 0
++ for i in $(seq 1 10)
++ rm -rf myfile20230728.zip
++ zip myfile20230728.zip myfile20230728
+	zip warning: name not matched: myfile20230728
+
+zip error: Nothing to do! (myfile20230728.zip)
++ CHECK_RESULT 12
++ actual_result=12
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 12 ']'
++ '[' 0 -eq 0 ']'
++ test 12x '!=' 0x
++ test -n ''
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_IOaccess_500Mfile.sh line 54'
++ message='oe_test_IOaccess_500Mfile.sh line 54'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_IOaccess_500Mfile.sh line 54'
+Fri Jul 28 00:31:48 2023 - ERROR - oe_test_IOaccess_500Mfile.sh line 54
++ '[' 0 -eq 1 ']'
++ return 0
++ test -f myfile20230728.zip
++ CHECK_RESULT 1
++ actual_result=1
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 0 -eq 0 ']'
++ test 1x '!=' 0x
++ test -n ''
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_IOaccess_500Mfile.sh line 56'
++ message='oe_test_IOaccess_500Mfile.sh line 56'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_IOaccess_500Mfile.sh line 56'
+Fri Jul 28 00:31:49 2023 - ERROR - oe_test_IOaccess_500Mfile.sh line 56
++ '[' 0 -eq 1 ']'
++ return 0
++ for i in $(seq 1 10)
++ rm -rf myfile20230728.zip
++ zip myfile20230728.zip myfile20230728
+	zip warning: name not matched: myfile20230728
+
+zip error: Nothing to do! (myfile20230728.zip)
++ CHECK_RESULT 12
++ actual_result=12
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 12 ']'
++ '[' 0 -eq 0 ']'
++ test 12x '!=' 0x
++ test -n ''
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_IOaccess_500Mfile.sh line 54'
++ message='oe_test_IOaccess_500Mfile.sh line 54'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_IOaccess_500Mfile.sh line 54'
+Fri Jul 28 00:31:51 2023 - ERROR - oe_test_IOaccess_500Mfile.sh line 54
++ '[' 0 -eq 1 ']'
++ return 0
++ test -f myfile20230728.zip
++ CHECK_RESULT 1
++ actual_result=1
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 0 -eq 0 ']'
++ test 1x '!=' 0x
++ test -n ''
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_IOaccess_500Mfile.sh line 56'
++ message='oe_test_IOaccess_500Mfile.sh line 56'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_IOaccess_500Mfile.sh line 56'
+Fri Jul 28 00:31:52 2023 - ERROR - oe_test_IOaccess_500Mfile.sh line 56
++ '[' 0 -eq 1 ']'
++ return 0
++ for i in $(seq 1 10)
++ rm -rf myfile20230728.zip
++ zip myfile20230728.zip myfile20230728
+	zip warning: name not matched: myfile20230728
+
+zip error: Nothing to do! (myfile20230728.zip)
++ CHECK_RESULT 12
++ actual_result=12
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 12 ']'
++ '[' 0 -eq 0 ']'
++ test 12x '!=' 0x
++ test -n ''
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_IOaccess_500Mfile.sh line 54'
++ message='oe_test_IOaccess_500Mfile.sh line 54'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_IOaccess_500Mfile.sh line 54'
+Fri Jul 28 00:31:53 2023 - ERROR - oe_test_IOaccess_500Mfile.sh line 54
++ '[' 0 -eq 1 ']'
++ return 0
++ test -f myfile20230728.zip
++ CHECK_RESULT 1
++ actual_result=1
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 0 -eq 0 ']'
++ test 1x '!=' 0x
++ test -n ''
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_IOaccess_500Mfile.sh line 56'
++ message='oe_test_IOaccess_500Mfile.sh line 56'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_IOaccess_500Mfile.sh line 56'
+Fri Jul 28 00:31:55 2023 - ERROR - oe_test_IOaccess_500Mfile.sh line 56
++ '[' 0 -eq 1 ']'
++ return 0
++ for i in $(seq 1 10)
++ rm -rf myfile20230728.zip
++ zip myfile20230728.zip myfile20230728
+	zip warning: name not matched: myfile20230728
+
+zip error: Nothing to do! (myfile20230728.zip)
++ CHECK_RESULT 12
++ actual_result=12
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 12 ']'
++ '[' 0 -eq 0 ']'
++ test 12x '!=' 0x
++ test -n ''
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_IOaccess_500Mfile.sh line 54'
++ message='oe_test_IOaccess_500Mfile.sh line 54'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_IOaccess_500Mfile.sh line 54'
+Fri Jul 28 00:31:56 2023 - ERROR - oe_test_IOaccess_500Mfile.sh line 54
++ '[' 0 -eq 1 ']'
++ return 0
++ test -f myfile20230728.zip
++ CHECK_RESULT 1
++ actual_result=1
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 0 -eq 0 ']'
++ test 1x '!=' 0x
++ test -n ''
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_IOaccess_500Mfile.sh line 56'
++ message='oe_test_IOaccess_500Mfile.sh line 56'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_IOaccess_500Mfile.sh line 56'
+Fri Jul 28 00:31:57 2023 - ERROR - oe_test_IOaccess_500Mfile.sh line 56
++ '[' 0 -eq 1 ']'
++ return 0
++ for i in $(seq 1 10)
++ rm -rf myfile20230728.zip
++ zip myfile20230728.zip myfile20230728
+	zip warning: name not matched: myfile20230728
+
+zip error: Nothing to do! (myfile20230728.zip)
++ CHECK_RESULT 12
++ actual_result=12
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 12 ']'
++ '[' 0 -eq 0 ']'
++ test 12x '!=' 0x
++ test -n ''
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_IOaccess_500Mfile.sh line 54'
++ message='oe_test_IOaccess_500Mfile.sh line 54'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_IOaccess_500Mfile.sh line 54'
+Fri Jul 28 00:31:59 2023 - ERROR - oe_test_IOaccess_500Mfile.sh line 54
++ '[' 0 -eq 1 ']'
++ return 0
++ test -f myfile20230728.zip
++ CHECK_RESULT 1
++ actual_result=1
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 0 -eq 0 ']'
++ test 1x '!=' 0x
++ test -n ''
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_IOaccess_500Mfile.sh line 56'
++ message='oe_test_IOaccess_500Mfile.sh line 56'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_IOaccess_500Mfile.sh line 56'
+Fri Jul 28 00:32:00 2023 - ERROR - oe_test_IOaccess_500Mfile.sh line 56
++ '[' 0 -eq 1 ']'
++ return 0
+++ seq 1 10
++ for i in $(seq 1 10)
++ rm -rf myfile20230728
++ unzip myfile20230728.zip
+unzip:  cannot find or open myfile20230728.zip, myfile20230728.zip.zip or myfile20230728.zip.ZIP.
++ CHECK_RESULT 9
++ actual_result=9
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 9 ']'
++ '[' 0 -eq 0 ']'
++ test 9x '!=' 0x
++ test -n ''
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_IOaccess_500Mfile.sh line 62'
++ message='oe_test_IOaccess_500Mfile.sh line 62'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_IOaccess_500Mfile.sh line 62'
+Fri Jul 28 00:32:02 2023 - ERROR - oe_test_IOaccess_500Mfile.sh line 62
++ '[' 0 -eq 1 ']'
++ return 0
++ ls -l myfile20230728
++ grep 524288000
+ls: cannot access 'myfile20230728': No such file or directory
++ CHECK_RESULT 1
++ actual_result=1
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 0 -eq 0 ']'
++ test 1x '!=' 0x
++ test -n ''
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_IOaccess_500Mfile.sh line 64'
++ message='oe_test_IOaccess_500Mfile.sh line 64'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_IOaccess_500Mfile.sh line 64'
+Fri Jul 28 00:32:03 2023 - ERROR - oe_test_IOaccess_500Mfile.sh line 64
++ '[' 0 -eq 1 ']'
++ return 0
++ for i in $(seq 1 10)
++ rm -rf myfile20230728
++ unzip myfile20230728.zip
+unzip:  cannot find or open myfile20230728.zip, myfile20230728.zip.zip or myfile20230728.zip.ZIP.
++ CHECK_RESULT 9
++ actual_result=9
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 9 ']'
++ '[' 0 -eq 0 ']'
++ test 9x '!=' 0x
++ test -n ''
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_IOaccess_500Mfile.sh line 62'
++ message='oe_test_IOaccess_500Mfile.sh line 62'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_IOaccess_500Mfile.sh line 62'
+Fri Jul 28 00:32:05 2023 - ERROR - oe_test_IOaccess_500Mfile.sh line 62
++ '[' 0 -eq 1 ']'
++ return 0
++ ls -l myfile20230728
++ grep 524288000
+ls: cannot access 'myfile20230728': No such file or directory
++ CHECK_RESULT 1
++ actual_result=1
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 0 -eq 0 ']'
++ test 1x '!=' 0x
++ test -n ''
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_IOaccess_500Mfile.sh line 64'
++ message='oe_test_IOaccess_500Mfile.sh line 64'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_IOaccess_500Mfile.sh line 64'
+Fri Jul 28 00:32:07 2023 - ERROR - oe_test_IOaccess_500Mfile.sh line 64
++ '[' 0 -eq 1 ']'
++ return 0
++ for i in $(seq 1 10)
++ rm -rf myfile20230728
++ unzip myfile20230728.zip
+unzip:  cannot find or open myfile20230728.zip, myfile20230728.zip.zip or myfile20230728.zip.ZIP.
++ CHECK_RESULT 9
++ actual_result=9
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 9 ']'
++ '[' 0 -eq 0 ']'
++ test 9x '!=' 0x
++ test -n ''
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_IOaccess_500Mfile.sh line 62'
++ message='oe_test_IOaccess_500Mfile.sh line 62'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_IOaccess_500Mfile.sh line 62'
+Fri Jul 28 00:32:08 2023 - ERROR - oe_test_IOaccess_500Mfile.sh line 62
++ '[' 0 -eq 1 ']'
++ return 0
++ ls -l myfile20230728
++ grep 524288000
+ls: cannot access 'myfile20230728': No such file or directory
++ CHECK_RESULT 1
++ actual_result=1
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 0 -eq 0 ']'
++ test 1x '!=' 0x
++ test -n ''
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_IOaccess_500Mfile.sh line 64'
++ message='oe_test_IOaccess_500Mfile.sh line 64'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_IOaccess_500Mfile.sh line 64'
+Fri Jul 28 00:32:10 2023 - ERROR - oe_test_IOaccess_500Mfile.sh line 64
++ '[' 0 -eq 1 ']'
++ return 0
++ for i in $(seq 1 10)
++ rm -rf myfile20230728
++ unzip myfile20230728.zip
+unzip:  cannot find or open myfile20230728.zip, myfile20230728.zip.zip or myfile20230728.zip.ZIP.
++ CHECK_RESULT 9
++ actual_result=9
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 9 ']'
++ '[' 0 -eq 0 ']'
++ test 9x '!=' 0x
++ test -n ''
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_IOaccess_500Mfile.sh line 62'
++ message='oe_test_IOaccess_500Mfile.sh line 62'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_IOaccess_500Mfile.sh line 62'
+Fri Jul 28 00:32:11 2023 - ERROR - oe_test_IOaccess_500Mfile.sh line 62
++ '[' 0 -eq 1 ']'
++ return 0
++ ls -l myfile20230728
++ grep 524288000
+ls: cannot access 'myfile20230728': No such file or directory
++ CHECK_RESULT 1
++ actual_result=1
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 0 -eq 0 ']'
++ test 1x '!=' 0x
++ test -n ''
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_IOaccess_500Mfile.sh line 64'
++ message='oe_test_IOaccess_500Mfile.sh line 64'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_IOaccess_500Mfile.sh line 64'
+Fri Jul 28 00:32:13 2023 - ERROR - oe_test_IOaccess_500Mfile.sh line 64
++ '[' 0 -eq 1 ']'
++ return 0
++ for i in $(seq 1 10)
++ rm -rf myfile20230728
++ unzip myfile20230728.zip
+unzip:  cannot find or open myfile20230728.zip, myfile20230728.zip.zip or myfile20230728.zip.ZIP.
++ CHECK_RESULT 9
++ actual_result=9
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 9 ']'
++ '[' 0 -eq 0 ']'
++ test 9x '!=' 0x
++ test -n ''
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_IOaccess_500Mfile.sh line 62'
++ message='oe_test_IOaccess_500Mfile.sh line 62'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_IOaccess_500Mfile.sh line 62'
+Fri Jul 28 00:32:14 2023 - ERROR - oe_test_IOaccess_500Mfile.sh line 62
++ '[' 0 -eq 1 ']'
++ return 0
++ ls -l myfile20230728
++ grep 524288000
+ls: cannot access 'myfile20230728': No such file or directory
++ CHECK_RESULT 1
++ actual_result=1
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 0 -eq 0 ']'
++ test 1x '!=' 0x
++ test -n ''
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_IOaccess_500Mfile.sh line 64'
++ message='oe_test_IOaccess_500Mfile.sh line 64'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_IOaccess_500Mfile.sh line 64'
+Fri Jul 28 00:32:16 2023 - ERROR - oe_test_IOaccess_500Mfile.sh line 64
++ '[' 0 -eq 1 ']'
++ return 0
++ for i in $(seq 1 10)
++ rm -rf myfile20230728
++ unzip myfile20230728.zip
+unzip:  cannot find or open myfile20230728.zip, myfile20230728.zip.zip or myfile20230728.zip.ZIP.
++ CHECK_RESULT 9
++ actual_result=9
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 9 ']'
++ '[' 0 -eq 0 ']'
++ test 9x '!=' 0x
++ test -n ''
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_IOaccess_500Mfile.sh line 62'
++ message='oe_test_IOaccess_500Mfile.sh line 62'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_IOaccess_500Mfile.sh line 62'
+Fri Jul 28 00:32:17 2023 - ERROR - oe_test_IOaccess_500Mfile.sh line 62
++ '[' 0 -eq 1 ']'
++ return 0
++ grep 524288000
++ ls -l myfile20230728
+ls: cannot access 'myfile20230728': No such file or directory
++ CHECK_RESULT 1
++ actual_result=1
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 0 -eq 0 ']'
++ test 1x '!=' 0x
++ test -n ''
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_IOaccess_500Mfile.sh line 64'
++ message='oe_test_IOaccess_500Mfile.sh line 64'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_IOaccess_500Mfile.sh line 64'
+Fri Jul 28 00:32:19 2023 - ERROR - oe_test_IOaccess_500Mfile.sh line 64
++ '[' 0 -eq 1 ']'
++ return 0
++ for i in $(seq 1 10)
++ rm -rf myfile20230728
++ unzip myfile20230728.zip
+unzip:  cannot find or open myfile20230728.zip, myfile20230728.zip.zip or myfile20230728.zip.ZIP.
++ CHECK_RESULT 9
++ actual_result=9
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 9 ']'
++ '[' 0 -eq 0 ']'
++ test 9x '!=' 0x
++ test -n ''
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_IOaccess_500Mfile.sh line 62'
++ message='oe_test_IOaccess_500Mfile.sh line 62'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_IOaccess_500Mfile.sh line 62'
+Fri Jul 28 00:32:20 2023 - ERROR - oe_test_IOaccess_500Mfile.sh line 62
++ '[' 0 -eq 1 ']'
++ return 0
++ ls -l myfile20230728
++ grep 524288000
+ls: cannot access 'myfile20230728': No such file or directory
++ CHECK_RESULT 1
++ actual_result=1
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 0 -eq 0 ']'
++ test 1x '!=' 0x
++ test -n ''
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_IOaccess_500Mfile.sh line 64'
++ message='oe_test_IOaccess_500Mfile.sh line 64'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_IOaccess_500Mfile.sh line 64'
+Fri Jul 28 00:32:22 2023 - ERROR - oe_test_IOaccess_500Mfile.sh line 64
++ '[' 0 -eq 1 ']'
++ return 0
++ for i in $(seq 1 10)
++ rm -rf myfile20230728
++ unzip myfile20230728.zip
+unzip:  cannot find or open myfile20230728.zip, myfile20230728.zip.zip or myfile20230728.zip.ZIP.
++ CHECK_RESULT 9
++ actual_result=9
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 9 ']'
++ '[' 0 -eq 0 ']'
++ test 9x '!=' 0x
++ test -n ''
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_IOaccess_500Mfile.sh line 62'
++ message='oe_test_IOaccess_500Mfile.sh line 62'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_IOaccess_500Mfile.sh line 62'
+Fri Jul 28 00:32:23 2023 - ERROR - oe_test_IOaccess_500Mfile.sh line 62
++ '[' 0 -eq 1 ']'
++ return 0
++ ls -l myfile20230728
++ grep 524288000
+ls: cannot access 'myfile20230728': No such file or directory
++ CHECK_RESULT 1
++ actual_result=1
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 0 -eq 0 ']'
++ test 1x '!=' 0x
++ test -n ''
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_IOaccess_500Mfile.sh line 64'
++ message='oe_test_IOaccess_500Mfile.sh line 64'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_IOaccess_500Mfile.sh line 64'
+Fri Jul 28 00:32:25 2023 - ERROR - oe_test_IOaccess_500Mfile.sh line 64
++ '[' 0 -eq 1 ']'
++ return 0
++ for i in $(seq 1 10)
++ rm -rf myfile20230728
++ unzip myfile20230728.zip
+unzip:  cannot find or open myfile20230728.zip, myfile20230728.zip.zip or myfile20230728.zip.ZIP.
++ CHECK_RESULT 9
++ actual_result=9
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 9 ']'
++ '[' 0 -eq 0 ']'
++ test 9x '!=' 0x
++ test -n ''
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_IOaccess_500Mfile.sh line 62'
++ message='oe_test_IOaccess_500Mfile.sh line 62'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_IOaccess_500Mfile.sh line 62'
+Fri Jul 28 00:32:26 2023 - ERROR - oe_test_IOaccess_500Mfile.sh line 62
++ '[' 0 -eq 1 ']'
++ return 0
++ ls -l myfile20230728
++ grep 524288000
+ls: cannot access 'myfile20230728': No such file or directory
++ CHECK_RESULT 1
++ actual_result=1
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 0 -eq 0 ']'
++ test 1x '!=' 0x
++ test -n ''
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_IOaccess_500Mfile.sh line 64'
++ message='oe_test_IOaccess_500Mfile.sh line 64'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_IOaccess_500Mfile.sh line 64'
+Fri Jul 28 00:32:28 2023 - ERROR - oe_test_IOaccess_500Mfile.sh line 64
++ '[' 0 -eq 1 ']'
++ return 0
++ for i in $(seq 1 10)
++ rm -rf myfile20230728
++ unzip myfile20230728.zip
+unzip:  cannot find or open myfile20230728.zip, myfile20230728.zip.zip or myfile20230728.zip.ZIP.
++ CHECK_RESULT 9
++ actual_result=9
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 9 ']'
++ '[' 0 -eq 0 ']'
++ test 9x '!=' 0x
++ test -n ''
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_IOaccess_500Mfile.sh line 62'
++ message='oe_test_IOaccess_500Mfile.sh line 62'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_IOaccess_500Mfile.sh line 62'
+Fri Jul 28 00:32:29 2023 - ERROR - oe_test_IOaccess_500Mfile.sh line 62
++ '[' 0 -eq 1 ']'
++ return 0
++ ls -l myfile20230728
++ grep 524288000
+ls: cannot access 'myfile20230728': No such file or directory
++ CHECK_RESULT 1
++ actual_result=1
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 0 -eq 0 ']'
++ test 1x '!=' 0x
++ test -n ''
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_IOaccess_500Mfile.sh line 64'
++ message='oe_test_IOaccess_500Mfile.sh line 64'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_IOaccess_500Mfile.sh line 64'
+Fri Jul 28 00:32:31 2023 - ERROR - oe_test_IOaccess_500Mfile.sh line 64
++ '[' 0 -eq 1 ']'
++ return 0
++ LOG_INFO 'End to run test.'
++ message='End to run test.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End to run test.'
+Fri Jul 28 00:32:32 2023 - INFO  - End to run test.
++ CASE_RESULT 0
++ case_re=0
++ test -z 31
++ test 31 -gt 0
++ LOG_ERROR 'failed to execute the case.'
++ message='failed to execute the case.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'failed to execute the case.'
+Fri Jul 28 00:32:34 2023 - ERROR - failed to execute the case.
++ exit 31
++ post_test
++ LOG_INFO 'Start to restore the test environment.'
++ message='Start to restore the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to restore the test environment.'
+Fri Jul 28 00:32:35 2023 - INFO  - Start to restore the test environment.
++ rm -rf myfile20230728 mycpfile20230728 myfile20230728.zip
++ LOG_INFO 'End to restore the test environment.'
++ message='End to restore the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End to restore the test environment.'
+Fri Jul 28 00:32:36 2023 - INFO  - End to restore the test environment.

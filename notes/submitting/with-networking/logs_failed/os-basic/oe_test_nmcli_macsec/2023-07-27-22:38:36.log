@@ -1,0 +1,131 @@
++ source ../common/net_lib.sh
+++ source /root/mugen/libs/locallibs/common_lib.sh
++++ python3 --version
++++ '[' 0 -eq 0 ']'
++++ source /root/mugen/libs/locallibs/common_lib_python.sh
++ main
+++ type -t post_test
++ '[' -n function ']'
++ trap post_test EXIT INT HUP TERM
++ rpm -qa
++ grep expect
+++ type -t config_params
++ '[' -n function ']'
++ config_params
++ LOG_INFO 'Start to config params of the case.'
++ message='Start to config params of the case.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to config params of the case.'
+Thu Jul 27 22:38:43 2023 - INFO  - Start to config params of the case.
++ get_free_eth 1
++ local num_eth=1
++ echo 10.198.101.114
+10.198.101.114
+++ python3 /root/mugen/libs/locallibs/get_test_device.py --node 1 --device nic
+Thu Jul 27 22:38:59 2023 - INFO  - pkgs:(lshw) is already installed
++ NODE1_NIC='eth0 eth1 eth2 eth3'
++ LOCAL_ETH=(${NODE1_NIC[@]/$(ip route | grep ${NODE1_IPV4} | awk '{print$3}')/})
+++ ip route
+../common/net_lib.sh: line 26: ip: command not found
+++ grep 10.198.101.1
+++ awk '{print$3}'
++ '[' 4 -ge 1 ']'
++ test_eth1=eth0
++ con_name=test-macsec+
++ LOG_INFO 'End to config params of the case.'
++ message='End to config params of the case.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End to config params of the case.'
+Thu Jul 27 22:39:15 2023 - INFO  - End to config params of the case.
+++ type -t pre_test
++ '[' -n function ']'
++ pre_test
++ LOG_INFO 'start to pre the test env'
++ message='start to pre the test env'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'start to pre the test env'
+Thu Jul 27 22:39:16 2023 - INFO  - start to pre the test env
++ DNF_INSTALL NetworkManager-wifi
++ pkgs=NetworkManager-wifi
++ node=1
++ '[' -z '' ']'
++ tmpfile=
+++ python3 /root/mugen/libs/locallibs/rpm_manage.py install --pkgs NetworkManager-wifi --node 1 --tempfile ''
+Thu Jul 27 22:39:33 2023 - INFO  - pkgs:(NetworkManager-wifi) is already installed
++ tmpfile2=
++ '[' -z '' ']'
++ tmpfile=
++ LOG_INFO 'end to pre the test'
++ message='end to pre the test'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'end to pre the test'
+Thu Jul 27 22:39:34 2023 - INFO  - end to pre the test
+++ type -t run_test
++ '[' -n function ']'
++ run_test
++ LOG_INFO 'Start to run test.'
++ message='Start to run test.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to run test.'
+Thu Jul 27 22:39:36 2023 - INFO  - Start to run test.
++ nmcli connection add type macsec con-name test-macsec+ ifname macsec0 connection.autoconnect no macsec.parent eth0 macsec.mode psk macsec.mka-cak 12345678901234567890123456789012 macsec.mka-ckn 1234567890123456789012345678901234567890123456789012345678901234 ip4 192.0.2.100/24
+Connection 'test-macsec+' (43c6ff97-6fcf-4340-83d0-87812038f05c) successfully added.
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ nmcli connection up test-macsec+
+Error: Connection activation failed: macsec0 failed to create resources: Failed to create macsec interface 'macsec0' for 'test-macsec+': Operation not supported
++ CHECK_RESULT 4
++ actual_result=4
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 4 ']'
++ '[' 0 -eq 0 ']'
++ test 4x '!=' 0x
++ test -n ''
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_nmcli_macsec.sh line 46'
++ message='oe_test_nmcli_macsec.sh line 46'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_nmcli_macsec.sh line 46'
+Thu Jul 27 22:39:40 2023 - ERROR - oe_test_nmcli_macsec.sh line 46
++ '[' 0 -eq 1 ']'
++ return 0
++ LOG_INFO 'End to run test.'
++ message='End to run test.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End to run test.'
+Thu Jul 27 22:39:41 2023 - INFO  - End to run test.
++ CASE_RESULT 0
++ case_re=0
++ test -z 1
++ test 1 -gt 0
++ LOG_ERROR 'failed to execute the case.'
++ message='failed to execute the case.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'failed to execute the case.'
+Thu Jul 27 22:39:42 2023 - ERROR - failed to execute the case.
++ exit 1
++ post_test
++ LOG_INFO 'Start to restore the test environment.'
++ message='Start to restore the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to restore the test environment.'
+Thu Jul 27 22:39:44 2023 - INFO  - Start to restore the test environment.
++ nmcli con delete test-macsec+
+Connection 'test-macsec+' (43c6ff97-6fcf-4340-83d0-87812038f05c) successfully deleted.
++ DNF_REMOVE
++ node=1
++ pkg_list=
++ mode=0
++ [[ -z '' ]]
++ [[ -z '' ]]
++ LOG_WARN 'no thing to do.'
++ message='no thing to do.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level warn --message 'no thing to do.'
+Thu Jul 27 22:39:46 2023 - WARN  - no thing to do.
++ return 0
++ LOG_INFO 'End to restore the test environment.'
++ message='End to restore the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End to restore the test environment.'
+Thu Jul 27 22:39:48 2023 - INFO  - End to restore the test environment.

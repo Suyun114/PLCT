@@ -1,0 +1,201 @@
++ source /root/mugen/libs/locallibs/common_lib.sh
+++ python3 --version
+++ '[' 0 -eq 0 ']'
+++ source /root/mugen/libs/locallibs/common_lib_python.sh
++ main
+++ type -t post_test
++ '[' -n function ']'
++ trap post_test EXIT INT HUP TERM
++ rpm -qa
++ grep expect
+++ type -t config_params
++ '[' -n '' ']'
+++ type -t pre_test
++ '[' -n function ']'
++ pre_test
++ LOG_INFO 'Start environment preparation.'
++ message='Start environment preparation.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start environment preparation.'
+Thu Jul 27 18:42:04 2023 - INFO  - Start environment preparation.
++ OLD_LANG=en_US.UTF-8
++ export LANG=en_US.UTF-8
++ LANG=en_US.UTF-8
++ LOG_INFO 'End of environmental preparation!'
++ message='End of environmental preparation!'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End of environmental preparation!'
+Thu Jul 27 18:42:06 2023 - INFO  - End of environmental preparation!
+++ type -t run_test
++ '[' -n function ']'
++ run_test
++ LOG_INFO 'Start to run test.'
++ message='Start to run test.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to run test.'
+Thu Jul 27 18:42:07 2023 - INFO  - Start to run test.
++ ctags --list-languages
++ grep -i ant
+oe_test_ctags.sh: line 31: ctags: command not found
++ CHECK_RESULT 1 0 0 'recognition language failure'
++ actual_result=1
++ expect_result=0
++ mode=0
++ error_log='recognition language failure'
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 0 -eq 0 ']'
++ test 1x '!=' 0x
++ test -n 'recognition language failure'
++ LOG_ERROR 'recognition language failure'
++ message='recognition language failure'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'recognition language failure'
+Thu Jul 27 18:42:08 2023 - ERROR - recognition language failure
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_ctags.sh line 32'
++ message='oe_test_ctags.sh line 32'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_ctags.sh line 32'
+Thu Jul 27 18:42:10 2023 - ERROR - oe_test_ctags.sh line 32
++ '[' 0 -eq 1 ']'
++ return 0
++ ctags --list-maps
++ grep build.xml
+oe_test_ctags.sh: line 33: ctags: command not found
++ CHECK_RESULT 1 0 0 'failed to view extended language'
++ actual_result=1
++ expect_result=0
++ mode=0
++ error_log='failed to view extended language'
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 0 -eq 0 ']'
++ test 1x '!=' 0x
++ test -n 'failed to view extended language'
++ LOG_ERROR 'failed to view extended language'
++ message='failed to view extended language'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'failed to view extended language'
+Thu Jul 27 18:42:11 2023 - ERROR - failed to view extended language
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_ctags.sh line 34'
++ message='oe_test_ctags.sh line 34'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_ctags.sh line 34'
+Thu Jul 27 18:42:12 2023 - ERROR - oe_test_ctags.sh line 34
++ '[' 0 -eq 1 ']'
++ return 0
++ ctags --list-kinds
++ grep projects
+oe_test_ctags.sh: line 35: ctags: command not found
++ CHECK_RESULT 1 0 0 'failed to view the syntax element'
++ actual_result=1
++ expect_result=0
++ mode=0
++ error_log='failed to view the syntax element'
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 0 -eq 0 ']'
++ test 1x '!=' 0x
++ test -n 'failed to view the syntax element'
++ LOG_ERROR 'failed to view the syntax element'
++ message='failed to view the syntax element'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'failed to view the syntax element'
+Thu Jul 27 18:42:14 2023 - ERROR - failed to view the syntax element
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_ctags.sh line 36'
++ message='oe_test_ctags.sh line 36'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_ctags.sh line 36'
+Thu Jul 27 18:42:15 2023 - ERROR - oe_test_ctags.sh line 36
++ '[' 0 -eq 1 ']'
++ return 0
++ ctags --list-kinds=c++
++ grep classes
+oe_test_ctags.sh: line 37: ctags: command not found
++ CHECK_RESULT 1 0 0 'failed to view c++ syntax elements'
++ actual_result=1
++ expect_result=0
++ mode=0
++ error_log='failed to view c++ syntax elements'
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 0 -eq 0 ']'
++ test 1x '!=' 0x
++ test -n 'failed to view c++ syntax elements'
++ LOG_ERROR 'failed to view c++ syntax elements'
++ message='failed to view c++ syntax elements'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'failed to view c++ syntax elements'
+Thu Jul 27 18:42:16 2023 - ERROR - failed to view c++ syntax elements
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_ctags.sh line 38'
++ message='oe_test_ctags.sh line 38'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_ctags.sh line 38'
+Thu Jul 27 18:42:18 2023 - ERROR - oe_test_ctags.sh line 38
++ '[' 0 -eq 1 ']'
++ return 0
++ ctags --version
++ grep Copyright
+oe_test_ctags.sh: line 39: ctags: command not found
++ CHECK_RESULT 1 0 0 'check command fail'
++ actual_result=1
++ expect_result=0
++ mode=0
++ error_log='check command fail'
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 0 -eq 0 ']'
++ test 1x '!=' 0x
++ test -n 'check command fail'
++ LOG_ERROR 'check command fail'
++ message='check command fail'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'check command fail'
+Thu Jul 27 18:42:19 2023 - ERROR - check command fail
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_ctags.sh line 40'
++ message='oe_test_ctags.sh line 40'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_ctags.sh line 40'
+Thu Jul 27 18:42:20 2023 - ERROR - oe_test_ctags.sh line 40
++ '[' 0 -eq 1 ']'
++ return 0
++ ctags --help
++ grep Usage
+oe_test_ctags.sh: line 41: ctags: command not found
++ CHECK_RESULT 1 0 0 'check version fail'
++ actual_result=1
++ expect_result=0
++ mode=0
++ error_log='check version fail'
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 0 -eq 0 ']'
++ test 1x '!=' 0x
++ test -n 'check version fail'
++ LOG_ERROR 'check version fail'
++ message='check version fail'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'check version fail'
+Thu Jul 27 18:42:22 2023 - ERROR - check version fail
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_ctags.sh line 42'
++ message='oe_test_ctags.sh line 42'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_ctags.sh line 42'
+Thu Jul 27 18:42:23 2023 - ERROR - oe_test_ctags.sh line 42
++ '[' 0 -eq 1 ']'
++ return 0
++ LOG_INFO 'End to run test.'
++ message='End to run test.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End to run test.'
+Thu Jul 27 18:42:24 2023 - INFO  - End to run test.
++ CASE_RESULT 0
++ case_re=0
++ test -z 6
++ test 6 -gt 0
++ LOG_ERROR 'failed to execute the case.'
++ message='failed to execute the case.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'failed to execute the case.'
+Thu Jul 27 18:42:26 2023 - ERROR - failed to execute the case.
++ exit 6
++ post_test
++ LOG_INFO 'Start to clean the test environment.'
++ message='Start to clean the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to clean the test environment.'
+Thu Jul 27 18:42:27 2023 - INFO  - Start to clean the test environment.
++ export LANG=en_US.UTF-8
++ LANG=en_US.UTF-8
++ LOG_INFO 'End to clean the test environment.'
++ message='End to clean the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End to clean the test environment.'
+Thu Jul 27 18:42:29 2023 - INFO  - End to clean the test environment.

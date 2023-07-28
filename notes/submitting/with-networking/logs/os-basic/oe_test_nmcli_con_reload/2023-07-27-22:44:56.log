@@ -1,0 +1,153 @@
++ source ../common/net_lib.sh
+++ source /root/mugen/libs/locallibs/common_lib.sh
++++ python3 --version
++++ '[' 0 -eq 0 ']'
++++ source /root/mugen/libs/locallibs/common_lib_python.sh
++ main
+++ type -t post_test
++ '[' -n function ']'
++ trap post_test EXIT INT HUP TERM
++ rpm -qa
++ grep expect
+++ type -t config_params
++ '[' -n function ']'
++ config_params
++ LOG_INFO 'Start to config params of the case.'
++ message='Start to config params of the case.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to config params of the case.'
+Thu Jul 27 22:45:03 2023 - INFO  - Start to config params of the case.
++ get_free_eth 1
++ local num_eth=1
++ echo 10.198.101.114
+10.198.101.114
+++ python3 /root/mugen/libs/locallibs/get_test_device.py --node 1 --device nic
+Thu Jul 27 22:45:20 2023 - INFO  - pkgs:(lshw) is already installed
++ NODE1_NIC='eth0 eth1 eth2 eth3'
++ LOCAL_ETH=(${NODE1_NIC[@]/$(ip route | grep ${NODE1_IPV4} | awk '{print$3}')/})
+++ ip route
+++ grep 10.198.101.1
+++ awk '{print$3}'
+../common/net_lib.sh: line 26: ip: command not found
++ '[' 4 -ge 1 ']'
++ test_eth=eth0
++ LOG_INFO 'End to config params of the case.'
++ message='End to config params of the case.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End to config params of the case.'
+Thu Jul 27 22:45:35 2023 - INFO  - End to config params of the case.
+++ type -t pre_test
++ '[' -n '' ']'
+++ type -t run_test
++ '[' -n function ']'
++ run_test
++ LOG_INFO 'Start to run test.'
++ message='Start to run test.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to run test.'
+Thu Jul 27 22:45:37 2023 - INFO  - Start to run test.
++ sed -i s/testintf/eth0/g ifcfg-test
++ cp ifcfg-test /etc/sysconfig/network-scripts/ifcfg-eth0 -rf
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ nmcli con reload
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ test -f /etc/sysconfig/network-scripts/ifcfg-eth0
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ sed -i s/dhcp/static/g /etc/sysconfig/network-scripts/ifcfg-eth0
++ echo IPADDR=192.0.2.100
++ echo NETMASK=255.255.255.0
++ echo GATEWAY=192.0.2.1
++ nmcli con reload
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ nmcli con up eth0
+Error: Connection activation failed: IP configuration could not be reserved (no available address, timeout, etc.)
+Hint: use 'journalctl -xe NM_CONNECTION=6ed3f71a-95db-4b96-8fe7-3061652a7c69 + NM_DEVICE=eth0' to get more details.
++ CHECK_RESULT 4
++ actual_result=4
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 4 ']'
++ '[' 0 -eq 0 ']'
++ test 4x '!=' 0x
++ test -n ''
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_nmcli_con_reload.sh line 47'
++ message='oe_test_nmcli_con_reload.sh line 47'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_nmcli_con_reload.sh line 47'
+Thu Jul 27 22:46:27 2023 - ERROR - oe_test_nmcli_con_reload.sh line 47
++ '[' 0 -eq 1 ']'
++ return 0
++ nmcli con show --active
++ grep eth0
+eth0                6ed3f71a-95db-4b96-8fe7-3061652a7c69  ethernet  eth0   
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ LOG_INFO 'End to run test.'
++ message='End to run test.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End to run test.'
+Thu Jul 27 22:46:29 2023 - INFO  - End to run test.
++ CASE_RESULT 0
++ case_re=0
++ test -z 1
++ test 1 -gt 0
++ LOG_ERROR 'failed to execute the case.'
++ message='failed to execute the case.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'failed to execute the case.'
+Thu Jul 27 22:46:31 2023 - ERROR - failed to execute the case.
++ exit 1
++ post_test
++ LOG_INFO 'Start to restore the test environment.'
++ message='Start to restore the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to restore the test environment.'
+Thu Jul 27 22:46:32 2023 - INFO  - Start to restore the test environment.
++ nmcli con delete eth0
+Connection 'eth0' (6ed3f71a-95db-4b96-8fe7-3061652a7c69) successfully deleted.
+Connection 'eth0' (e26f9175-fd9d-4cbc-8080-c771b3138b47) successfully deleted.
++ sed -i s/eth0/testintf/g ifcfg-test
++ LOG_INFO 'End to restore the test environment.'
++ message='End to restore the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End to restore the test environment.'
+Thu Jul 27 22:46:35 2023 - INFO  - End to restore the test environment.

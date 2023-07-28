@@ -1,0 +1,78 @@
++ source /root/mugen/libs/locallibs/common_lib.sh
+++ python3 --version
+++ '[' 0 -eq 0 ']'
+++ source /root/mugen/libs/locallibs/common_lib_python.sh
++ main
+++ type -t post_test
++ '[' -n '' ']'
++ trap POST_TEST_DEFAULT EXIT INT HUP TERM
++ rpm -qa
++ grep expect
+++ type -t config_params
++ '[' -n '' ']'
+++ type -t pre_test
++ '[' -n '' ']'
+++ type -t run_test
++ '[' -n function ']'
++ run_test
++ LOG_INFO 'Start to run test.'
++ message='Start to run test.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to run test.'
+Fri Jul 28 01:57:45 2023 - INFO  - Start to run test.
++ whatis '-?'
++ grep version
+  -V, --version              print program version
++ CHECK_RESULT 0 0 0 'check display failed after whatis -?'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='check display failed after whatis -?'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ whatis -V
+whatis 2.11.0
++ CHECK_RESULT 0 0 0 'check display failed after whatis -V'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='check display failed after whatis -V'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ whatis man
++ grep -E 'manuals|手册'
+man (1)              - an interface to the system reference manuals
++ CHECK_RESULT 0 0 0 'check display failed after whatis man'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='check display failed after whatis man'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ LOG_INFO 'End to run test.'
++ message='End to run test.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End to run test.'
+Fri Jul 28 01:57:47 2023 - INFO  - End to run test.
++ CASE_RESULT 0
++ case_re=0
++ test -z ''
++ test 0 -eq 0
++ LOG_INFO 'succeed to execute the case.'
++ message='succeed to execute the case.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'succeed to execute the case.'
+Fri Jul 28 01:57:48 2023 - INFO  - succeed to execute the case.
++ exec_result=
++ exit 0
++ POST_TEST_DEFAULT
++ LOG_INFO 'oe_test_whatis.sh post_test'
++ message='oe_test_whatis.sh post_test'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'oe_test_whatis.sh post_test'
+Fri Jul 28 01:57:49 2023 - INFO  - oe_test_whatis.sh post_test

@@ -1,0 +1,131 @@
++ source /root/mugen/libs/locallibs/common_lib.sh
+++ python3 --version
+++ '[' 0 -eq 0 ']'
+++ source /root/mugen/libs/locallibs/common_lib_python.sh
++ main
+++ type -t post_test
++ '[' -n function ']'
++ trap post_test EXIT INT HUP TERM
++ rpm -qa
++ grep expect
+++ type -t config_params
++ '[' -n '' ']'
+++ type -t pre_test
++ '[' -n function ']'
++ pre_test
++ LOG_INFO 'Start environment preparation.'
++ message='Start environment preparation.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start environment preparation.'
+Thu Jul 27 18:42:48 2023 - INFO  - Start environment preparation.
++ OLD_LANG=en_US.UTF-8
++ export LANG=en_US.UTF-8
++ LANG=en_US.UTF-8
++ LOG_INFO 'End of environmental preparation!'
++ message='End of environmental preparation!'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End of environmental preparation!'
+Thu Jul 27 18:42:50 2023 - INFO  - End of environmental preparation!
+++ type -t run_test
++ '[' -n function ']'
++ run_test
++ LOG_INFO 'Start to run test.'
++ message='Start to run test.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to run test.'
+Thu Jul 27 18:42:51 2023 - INFO  - Start to run test.
++ echo 'my name is root, directory is /root'
++ cat
++ envsubst
++ grep root
+oe_test_envsubst.sh: line 31: envsubst: command not found
++ CHECK_RESULT 1 0 0 'Variable resolution failure'
++ actual_result=1
++ expect_result=0
++ mode=0
++ error_log='Variable resolution failure'
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 0 -eq 0 ']'
++ test 1x '!=' 0x
++ test -n 'Variable resolution failure'
++ LOG_ERROR 'Variable resolution failure'
++ message='Variable resolution failure'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'Variable resolution failure'
+Thu Jul 27 18:42:52 2023 - ERROR - Variable resolution failure
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_envsubst.sh line 32'
++ message='oe_test_envsubst.sh line 32'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_envsubst.sh line 32'
+Thu Jul 27 18:42:54 2023 - ERROR - oe_test_envsubst.sh line 32
++ '[' 0 -eq 1 ']'
++ return 0
++ envsubst -h
++ grep envsubst
+oe_test_envsubst.sh: line 33: envsubst: command not found
++ CHECK_RESULT 1 0 0 'check command fail'
++ actual_result=1
++ expect_result=0
++ mode=0
++ error_log='check command fail'
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 0 -eq 0 ']'
++ test 1x '!=' 0x
++ test -n 'check command fail'
++ LOG_ERROR 'check command fail'
++ message='check command fail'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'check command fail'
+Thu Jul 27 18:42:55 2023 - ERROR - check command fail
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_envsubst.sh line 34'
++ message='oe_test_envsubst.sh line 34'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_envsubst.sh line 34'
+Thu Jul 27 18:42:56 2023 - ERROR - oe_test_envsubst.sh line 34
++ '[' 0 -eq 1 ']'
++ return 0
++ envsubst -V
++ grep 'GNU gettext-runtime'
+oe_test_envsubst.sh: line 35: envsubst: command not found
++ CHECK_RESULT 1 0 0 'check command fail'
++ actual_result=1
++ expect_result=0
++ mode=0
++ error_log='check command fail'
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 0 -eq 0 ']'
++ test 1x '!=' 0x
++ test -n 'check command fail'
++ LOG_ERROR 'check command fail'
++ message='check command fail'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'check command fail'
+Thu Jul 27 18:42:58 2023 - ERROR - check command fail
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_envsubst.sh line 36'
++ message='oe_test_envsubst.sh line 36'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_envsubst.sh line 36'
+Thu Jul 27 18:42:59 2023 - ERROR - oe_test_envsubst.sh line 36
++ '[' 0 -eq 1 ']'
++ return 0
++ LOG_INFO 'End to run test.'
++ message='End to run test.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End to run test.'
+Thu Jul 27 18:43:00 2023 - INFO  - End to run test.
++ CASE_RESULT 0
++ case_re=0
++ test -z 3
++ test 3 -gt 0
++ LOG_ERROR 'failed to execute the case.'
++ message='failed to execute the case.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'failed to execute the case.'
+Thu Jul 27 18:43:02 2023 - ERROR - failed to execute the case.
++ exit 3
++ post_test
++ LOG_INFO 'Start to clean the test environment.'
++ message='Start to clean the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to clean the test environment.'
+Thu Jul 27 18:43:03 2023 - INFO  - Start to clean the test environment.
++ export LANG=en_US.UTF-8
++ LANG=en_US.UTF-8
++ LOG_INFO 'End to clean the test environment.'
++ message='End to clean the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End to clean the test environment.'
+Thu Jul 27 18:43:04 2023 - INFO  - End to clean the test environment.

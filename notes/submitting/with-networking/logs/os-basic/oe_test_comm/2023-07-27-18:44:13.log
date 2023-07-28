@@ -1,0 +1,162 @@
++ source /root/mugen/libs/locallibs/common_lib.sh
+++ python3 --version
+++ '[' 0 -eq 0 ']'
+++ source /root/mugen/libs/locallibs/common_lib_python.sh
++ main
+++ type -t post_test
++ '[' -n function ']'
++ trap post_test EXIT INT HUP TERM
++ rpm -qa
++ grep expect
+++ type -t config_params
++ '[' -n '' ']'
+++ type -t pre_test
++ '[' -n function ']'
++ pre_test
++ LOG_INFO 'Start to prepare the test environment.'
++ message='Start to prepare the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to prepare the test environment.'
+Thu Jul 27 18:44:20 2023 - INFO  - Start to prepare the test environment.
++ OLD_LANG=en_US.UTF-8
++ export LANG=en_US.UTF-8
++ LANG=en_US.UTF-8
++ LOG_INFO 'End to prepare the test environment.'
++ message='End to prepare the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End to prepare the test environment.'
+Thu Jul 27 18:44:21 2023 - INFO  - End to prepare the test environment.
+++ type -t run_test
++ '[' -n function ']'
++ run_test
++ LOG_INFO 'Start to run test.'
++ message='Start to run test.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to run test.'
+Thu Jul 27 18:44:22 2023 - INFO  - Start to run test.
++ echo 123
++ CHECK_RESULT 0 0 0 'check create test1 fail'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='check create test1 fail'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ echo aaa
++ CHECK_RESULT 0 0 0 'check change test1 fail'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='check change test1 fail'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ echo 123
++ CHECK_RESULT 0 0 0 'check create test2 fail'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='check create test2 fail'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ comm -12 test1 test2
++ grep 123
+123
++ CHECK_RESULT 0 0 0 'failed to print the same line'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='failed to print the same line'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ comm -3 test1 test2
++ grep aaa
+aaa
++ CHECK_RESULT 0 0 0 'failed to output lines shared by two files'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='failed to output lines shared by two files'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ comm --total test1 test2
++ grep -w 1
+1	0	1	total
++ CHECK_RESULT 0 0 0 'description Failed to output the summary information'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='description Failed to output the summary information'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ comm --help
++ grep comm
+Usage: comm [OPTION]... FILE1 FILE2
+and column three contains lines common to both files.
+  comm -12 file1 file2  Print only lines present in both file1 and file2.
+  comm -3 file1 file2  Print lines in file1 not in file2, and vice versa.
+Full documentation <https://www.gnu.org/software/coreutils/comm>
+or available locally via: info '(coreutils) comm invocation'
++ CHECK_RESULT 0 0 0 'check command fail'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='check command fail'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ comm --version
++ grep Copyright
+Copyright (C) 2021 Free Software Foundation, Inc.
++ CHECK_RESULT 0 0 0 'check command fail'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='check command fail'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ LOG_INFO 'End to run test.'
++ message='End to run test.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End to run test.'
+Thu Jul 27 18:44:24 2023 - INFO  - End to run test.
++ CASE_RESULT 0
++ case_re=0
++ test -z ''
++ test 0 -eq 0
++ LOG_INFO 'succeed to execute the case.'
++ message='succeed to execute the case.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'succeed to execute the case.'
+Thu Jul 27 18:44:25 2023 - INFO  - succeed to execute the case.
++ exec_result=
++ exit 0
++ post_test
++ LOG_INFO 'start environment cleanup.'
++ message='start environment cleanup.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'start environment cleanup.'
+Thu Jul 27 18:44:27 2023 - INFO  - start environment cleanup.
++ rm -rf test1 test2
++ export LANG=en_US.UTF-8
++ LANG=en_US.UTF-8
++ LOG_INFO 'Finish environment cleanup!'
++ message='Finish environment cleanup!'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Finish environment cleanup!'
+Thu Jul 27 18:44:28 2023 - INFO  - Finish environment cleanup!

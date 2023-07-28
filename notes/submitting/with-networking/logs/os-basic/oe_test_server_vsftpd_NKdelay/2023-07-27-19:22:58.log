@@ -1,0 +1,233 @@
++ source /root/mugen/libs/locallibs/common_lib.sh
+++ python3 --version
+++ '[' 0 -eq 0 ']'
+++ source /root/mugen/libs/locallibs/common_lib_python.sh
++ main
+++ type -t post_test
++ '[' -n function ']'
++ trap post_test EXIT INT HUP TERM
++ rpm -qa
++ grep expect
+++ type -t config_params
++ '[' -n function ']'
++ config_params
++ LOG_INFO 'Start loading data!'
++ message='Start loading data!'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start loading data!'
+Thu Jul 27 19:23:05 2023 - INFO  - Start loading data!
+++ SSH_CMD 'ip route | grep  | awk '\''{print$3}'\'''
+++ tail -n 1
+++ tr '\r' ' '
+++ cmd='ip route | grep  | awk '\''{print$3}'\'''
+++ remoteip=
+++ remotepasswd='openEuler12#$'
+++ remoteuser=root
+++ timeout=300
+++ connport=22
+++ bash /root/mugen/libs/locallibs/sshcmd.sh -c 'ip route | grep  | awk '\''{print$3}'\''' -i '' -u root -p 'openEuler12#$' -t 300 -o 22
+++ ret=1
+++ test 1 -ne 0
+++ LOG_ERROR 'Failed in remote CMD operation:1'
+++ message='Failed in remote CMD operation:1'
+++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'Failed in remote CMD operation:1'
+Thu Jul 27 19:23:07 2023 - ERROR - Failed in remote CMD operation:1
+++ return 1
++ remote_eth1='Usage: sshcmd.sh -c "command" -i "remote machinet ip" [-u login_user] [-p login_password] [-o port] [-t timeout]'
++ LOG_INFO 'Loading data is complete!'
++ message='Loading data is complete!'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Loading data is complete!'
+Thu Jul 27 19:23:09 2023 - INFO  - Loading data is complete!
+++ type -t pre_test
++ '[' -n function ']'
++ pre_test
++ LOG_INFO 'Start to prepare the test environment.'
++ message='Start to prepare the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to prepare the test environment.'
+Thu Jul 27 19:23:10 2023 - INFO  - Start to prepare the test environment.
++ SSH_CMD 'yum install -y vsftpd;systemctl start vsftpd;chmod -R 777 /var/ftp/pub;
+    cd /var/ftp/pub;touch download_file1.txt download_file2.txt;
+    cp /etc/vsftpd/ftpusers /etc/vsftpd/ftpusers.bak;sed -i /root/d /etc/vsftpd/ftpusers;echo \"#root\" >> /etc/vsftpd/ftpusers;
+    cp /etc/vsftpd/user_list /etc/vsftpd/user_list.bak;sed -i /root/d /etc/vsftpd/user_list;echo \"#root\" >> /etc/vsftpd/user_list;
+    systemctl restart vsftpd;'
++ cmd='yum install -y vsftpd;systemctl start vsftpd;chmod -R 777 /var/ftp/pub;
+    cd /var/ftp/pub;touch download_file1.txt download_file2.txt;
+    cp /etc/vsftpd/ftpusers /etc/vsftpd/ftpusers.bak;sed -i /root/d /etc/vsftpd/ftpusers;echo \"#root\" >> /etc/vsftpd/ftpusers;
+    cp /etc/vsftpd/user_list /etc/vsftpd/user_list.bak;sed -i /root/d /etc/vsftpd/user_list;echo \"#root\" >> /etc/vsftpd/user_list;
+    systemctl restart vsftpd;'
++ remoteip=
++ remotepasswd='openEuler12#$'
++ remoteuser=root
++ timeout=300
++ connport=22
++ bash /root/mugen/libs/locallibs/sshcmd.sh -c 'yum install -y vsftpd;systemctl start vsftpd;chmod -R 777 /var/ftp/pub;
+    cd /var/ftp/pub;touch download_file1.txt download_file2.txt;
+    cp /etc/vsftpd/ftpusers /etc/vsftpd/ftpusers.bak;sed -i /root/d /etc/vsftpd/ftpusers;echo \"#root\" >> /etc/vsftpd/ftpusers;
+    cp /etc/vsftpd/user_list /etc/vsftpd/user_list.bak;sed -i /root/d /etc/vsftpd/user_list;echo \"#root\" >> /etc/vsftpd/user_list;
+    systemctl restart vsftpd;' -i '' -u root -p 'openEuler12#$' -t 300 -o 22
+Usage: sshcmd.sh -c "command" -i "remote machinet ip" [-u login_user] [-p login_password] [-o port] [-t timeout]+ ret=1
++ test 1 -ne 0
++ LOG_ERROR 'Failed in remote CMD operation:1'
++ message='Failed in remote CMD operation:1'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'Failed in remote CMD operation:1'
+Thu Jul 27 19:23:12 2023 - ERROR - Failed in remote CMD operation:1
++ return 1
++ DNF_INSTALL ftp
++ pkgs=ftp
++ node=1
++ '[' -z '' ']'
++ tmpfile=
+++ python3 /root/mugen/libs/locallibs/rpm_manage.py install --pkgs ftp --node 1 --tempfile ''
++ tmpfile2=/tmp/tmp3ooizf56
++ '[' -z '' ']'
++ tmpfile=/tmp/tmp3ooizf56
++ setsebool -P ftpd_full_access=on
+oe_test_server_vsftpd_NKdelay.sh: line 35: setsebool: command not found
++ SSH_CMD 'setsebool -P ftpd_full_access=on'
++ cmd='setsebool -P ftpd_full_access=on'
++ remoteip=
++ remotepasswd='openEuler12#$'
++ remoteuser=root
++ timeout=300
++ connport=22
++ bash /root/mugen/libs/locallibs/sshcmd.sh -c 'setsebool -P ftpd_full_access=on' -i '' -u root -p 'openEuler12#$' -t 300 -o 22
+Usage: sshcmd.sh -c "command" -i "remote machinet ip" [-u login_user] [-p login_password] [-o port] [-t timeout]+ ret=1
++ test 1 -ne 0
++ LOG_ERROR 'Failed in remote CMD operation:1'
++ message='Failed in remote CMD operation:1'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'Failed in remote CMD operation:1'
+Thu Jul 27 19:24:22 2023 - ERROR - Failed in remote CMD operation:1
++ return 1
++ LOG_INFO 'End to prepare the test environment.'
++ message='End to prepare the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End to prepare the test environment.'
+Thu Jul 27 19:24:23 2023 - INFO  - End to prepare the test environment.
+++ type -t run_test
++ '[' -n function ']'
++ run_test
++ LOG_INFO 'Start to run test.'
++ message='Start to run test.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to run test.'
+Thu Jul 27 19:24:24 2023 - INFO  - Start to run test.
++ SSH_CMD 'tc qdisc add dev Usage: sshcmd.sh -c "command" -i "remote machinet ip" [-u login_user] [-p login_password] [-o port] [-t timeout] root netem loss 20%'
++ cmd='tc qdisc add dev Usage: sshcmd.sh -c "command" -i "remote machinet ip" [-u login_user] [-p login_password] [-o port] [-t timeout] root netem loss 20%'
++ remoteip=
++ remotepasswd='openEuler12#$'
++ remoteuser=root
++ timeout=300
++ connport=22
++ bash /root/mugen/libs/locallibs/sshcmd.sh -c 'tc qdisc add dev Usage: sshcmd.sh -c "command" -i "remote machinet ip" [-u login_user] [-p login_password] [-o port] [-t timeout] root netem loss 20%' -i '' -u root -p 'openEuler12#$' -t 300 -o 22
+Usage: sshcmd.sh -c "command" -i "remote machinet ip" [-u login_user] [-p login_password] [-o port] [-t timeout]+ ret=1
++ test 1 -ne 0
++ LOG_ERROR 'Failed in remote CMD operation:1'
++ message='Failed in remote CMD operation:1'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'Failed in remote CMD operation:1'
+Thu Jul 27 19:24:26 2023 - ERROR - Failed in remote CMD operation:1
++ return 1
++ ftp -n
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ grep -iE 'error|fail' log
++ CHECK_RESULT 1 1
++ actual_result=1
++ expect_result=1
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 0 -eq 0 ']'
++ test 1x '!=' 1x
++ return 0
++ find download_file1.txt
+find: ‘download_file1.txt’: No such file or directory
++ CHECK_RESULT 1
++ actual_result=1
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 0 -eq 0 ']'
++ test 1x '!=' 0x
++ test -n ''
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_server_vsftpd_NKdelay.sh line 53'
++ message='oe_test_server_vsftpd_NKdelay.sh line 53'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_server_vsftpd_NKdelay.sh line 53'
+Thu Jul 27 19:24:28 2023 - ERROR - oe_test_server_vsftpd_NKdelay.sh line 53
++ '[' 0 -eq 1 ']'
++ return 0
++ SSH_CMD 'tc qdisc del dev Usage: sshcmd.sh -c "command" -i "remote machinet ip" [-u login_user] [-p login_password] [-o port] [-t timeout] root netem loss 20%'
++ cmd='tc qdisc del dev Usage: sshcmd.sh -c "command" -i "remote machinet ip" [-u login_user] [-p login_password] [-o port] [-t timeout] root netem loss 20%'
++ remoteip=
++ remotepasswd='openEuler12#$'
++ remoteuser=root
++ timeout=300
++ connport=22
++ bash /root/mugen/libs/locallibs/sshcmd.sh -c 'tc qdisc del dev Usage: sshcmd.sh -c "command" -i "remote machinet ip" [-u login_user] [-p login_password] [-o port] [-t timeout] root netem loss 20%' -i '' -u root -p 'openEuler12#$' -t 300 -o 22
+Usage: sshcmd.sh -c "command" -i "remote machinet ip" [-u login_user] [-p login_password] [-o port] [-t timeout]+ ret=1
++ test 1 -ne 0
++ LOG_ERROR 'Failed in remote CMD operation:1'
++ message='Failed in remote CMD operation:1'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'Failed in remote CMD operation:1'
+Thu Jul 27 19:24:30 2023 - ERROR - Failed in remote CMD operation:1
++ return 1
++ LOG_INFO 'End to run test.'
++ message='End to run test.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End to run test.'
+Thu Jul 27 19:24:31 2023 - INFO  - End to run test.
++ CASE_RESULT 0
++ case_re=0
++ test -z 1
++ test 1 -gt 0
++ LOG_ERROR 'failed to execute the case.'
++ message='failed to execute the case.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'failed to execute the case.'
+Thu Jul 27 19:24:33 2023 - ERROR - failed to execute the case.
++ exit 1
++ post_test
++ LOG_INFO 'Start to restore the test environment.'
++ message='Start to restore the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to restore the test environment.'
+Thu Jul 27 19:24:34 2023 - INFO  - Start to restore the test environment.
++ SSH_CMD 'mv /etc/vsftpd/ftpusers.bak /etc/vsftpd/ftpusers;mv /etc/vsftpd/user_list.bak /etc/vsftpd/user_list;
+    cd /var/ftp/pub;rm -rf download_file1.txt download_file2.txt;yum remove -y vsftpd'
++ cmd='mv /etc/vsftpd/ftpusers.bak /etc/vsftpd/ftpusers;mv /etc/vsftpd/user_list.bak /etc/vsftpd/user_list;
+    cd /var/ftp/pub;rm -rf download_file1.txt download_file2.txt;yum remove -y vsftpd'
++ remoteip=
++ remotepasswd='openEuler12#$'
++ remoteuser=root
++ timeout=300
++ connport=22
++ bash /root/mugen/libs/locallibs/sshcmd.sh -c 'mv /etc/vsftpd/ftpusers.bak /etc/vsftpd/ftpusers;mv /etc/vsftpd/user_list.bak /etc/vsftpd/user_list;
+    cd /var/ftp/pub;rm -rf download_file1.txt download_file2.txt;yum remove -y vsftpd' -i '' -u root -p 'openEuler12#$' -t 300 -o 22
+Usage: sshcmd.sh -c "command" -i "remote machinet ip" [-u login_user] [-p login_password] [-o port] [-t timeout]+ ret=1
++ test 1 -ne 0
++ LOG_ERROR 'Failed in remote CMD operation:1'
++ message='Failed in remote CMD operation:1'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'Failed in remote CMD operation:1'
+Thu Jul 27 19:24:36 2023 - ERROR - Failed in remote CMD operation:1
++ return 1
++ rm -rf 'download_file[1-2].txt' log
++ DNF_REMOVE ftp
++ node=ftp
++ pkg_list=
++ mode=0
++ [[ -z /tmp/tmp3ooizf56 ]]
++ '[' 0 -ne 0 ']'
++ '[' ftp == 0 ']'
++ python3 /root/mugen/libs/locallibs/rpm_manage.py remove --node ftp --pkgs '' --tempfile /tmp/tmp3ooizf56
+usage: rpm_manage.py install|remove [-h] [--node NODE] [--pkgs PKG] [--tempfile TEPMFILE]
+rpm_manage.py: error: argument --node: invalid int value: 'ftp'
++ '[' 0 -ne 0 ']'
++ LOG_INFO 'End to restore the test environment.'
++ message='End to restore the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End to restore the test environment.'
+Thu Jul 27 19:24:42 2023 - INFO  - End to restore the test environment.

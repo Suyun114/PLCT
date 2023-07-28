@@ -1,0 +1,110 @@
++ source /root/mugen/libs/locallibs/common_lib.sh
+++ python3 --version
+++ '[' 0 -eq 0 ']'
+++ source /root/mugen/libs/locallibs/common_lib_python.sh
++ main
+++ type -t post_test
++ '[' -n function ']'
++ trap post_test EXIT INT HUP TERM
++ rpm -qa
++ grep expect
+++ type -t config_params
++ '[' -n '' ']'
+++ type -t pre_test
++ '[' -n '' ']'
+++ type -t run_test
++ '[' -n function ']'
++ run_test
++ LOG_INFO 'Start testing...'
++ message='Start testing...'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start testing...'
+Fri Jul 28 02:50:58 2023 - INFO  - Start testing...
++ mkdir /home/test1
++ mkdir /home/test2
++ CHECK_RESULT 0 0 0 'create fail'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='create fail'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ cd /home/test2
++ pushd /home/test1
+/home/test1 /home/test2
++ CHECK_RESULT 0 0 0 'Failed to pushd the dirs'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='Failed to pushd the dirs'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ dirs
++ grep test1
+/home/test1 /home/test2
++ CHECK_RESULT 0 0 0 'Failed to find the dirs'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='Failed to find the dirs'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ dirs
++ grep test2
+/home/test1 /home/test2
++ CHECK_RESULT 0 0 0 'Failed to find the dirs'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='Failed to find the dirs'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ popd
+/home/test2
++ dirs
++ grep test1
++ CHECK_RESULT 1 0 1 'Command executed successfully'
++ actual_result=1
++ expect_result=0
++ mode=1
++ error_log='Command executed successfully'
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 1 -eq 0 ']'
++ test 1x == 0x
++ return 0
++ LOG_INFO 'Finish test!'
++ message='Finish test!'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Finish test!'
+Fri Jul 28 02:51:00 2023 - INFO  - Finish test!
++ CASE_RESULT 0
++ case_re=0
++ test -z ''
++ test 0 -eq 0
++ LOG_INFO 'succeed to execute the case.'
++ message='succeed to execute the case.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'succeed to execute the case.'
+Fri Jul 28 02:51:02 2023 - INFO  - succeed to execute the case.
++ exec_result=
++ exit 0
++ post_test
++ LOG_INFO 'Start to restore the test environment.'
++ message='Start to restore the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to restore the test environment.'
+Fri Jul 28 02:51:03 2023 - INFO  - Start to restore the test environment.
++ rm -rf /home/test1 /home/test2
++ LOG_INFO 'End to restore the test environment.'
++ message='End to restore the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End to restore the test environment.'
+Fri Jul 28 02:51:04 2023 - INFO  - End to restore the test environment.

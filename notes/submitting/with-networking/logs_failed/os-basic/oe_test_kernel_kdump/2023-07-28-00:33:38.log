@@ -1,0 +1,133 @@
++ source /root/mugen/libs/locallibs/common_lib.sh
+++ python3 --version
+++ '[' 0 -eq 0 ']'
+++ source /root/mugen/libs/locallibs/common_lib_python.sh
++ main
+++ type -t post_test
++ '[' -n function ']'
++ trap post_test EXIT INT HUP TERM
++ rpm -qa
++ grep expect
+++ type -t config_params
++ '[' -n '' ']'
+++ type -t pre_test
++ '[' -n '' ']'
+++ type -t run_test
++ '[' -n function ']'
++ run_test
++ LOG_INFO 'Start executing testcase.'
++ message='Start executing testcase.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start executing testcase.'
+Fri Jul 28 00:33:44 2023 - INFO  - Start executing testcase.
++ rpm -q kexec-tools
+package kexec-tools is not installed
++ CHECK_RESULT 1
++ actual_result=1
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 0 -eq 0 ']'
++ test 1x '!=' 0x
++ test -n ''
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_kernel_kdump.sh line 24'
++ message='oe_test_kernel_kdump.sh line 24'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_kernel_kdump.sh line 24'
+Fri Jul 28 00:33:46 2023 - ERROR - oe_test_kernel_kdump.sh line 24
++ '[' 0 -eq 1 ']'
++ return 0
++ grub2-mkconfig -o /boot/grub2/grub.cfg
+oe_test_kernel_kdump.sh: line 25: grub2-mkconfig: command not found
++ CHECK_RESULT 127
++ actual_result=127
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 127 ']'
++ '[' 0 -eq 0 ']'
++ test 127x '!=' 0x
++ test -n ''
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_kernel_kdump.sh line 26'
++ message='oe_test_kernel_kdump.sh line 26'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_kernel_kdump.sh line 26'
+Fri Jul 28 00:33:47 2023 - ERROR - oe_test_kernel_kdump.sh line 26
++ '[' 0 -eq 1 ']'
++ return 0
++ systemctl enable kdump.service
+Failed to enable unit: Unit file kdump.service does not exist.
++ systemctl start kdump.service
+Failed to start kdump.service: Unit kdump.service not found.
++ systemctl status kdump.service
++ grep active
+Unit kdump.service could not be found.
++ CHECK_RESULT 1
++ actual_result=1
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 0 -eq 0 ']'
++ test 1x '!=' 0x
++ test -n ''
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_kernel_kdump.sh line 30'
++ message='oe_test_kernel_kdump.sh line 30'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_kernel_kdump.sh line 30'
+Fri Jul 28 00:33:50 2023 - ERROR - oe_test_kernel_kdump.sh line 30
++ '[' 0 -eq 1 ']'
++ return 0
++ systemctl stop kdump.serviceactive
+Failed to stop kdump.serviceactive.service: Unit kdump.serviceactive.service not loaded.
++ systemctl disable kdump.service
+Failed to disable unit: Unit file kdump.service does not exist.
++ systemctl is-enabled kdump.service
++ grep disable
+Failed to get unit file state for kdump.service: No such file or directory
++ CHECK_RESULT 1
++ actual_result=1
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 0 -eq 0 ']'
++ test 1x '!=' 0x
++ test -n ''
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_kernel_kdump.sh line 34'
++ message='oe_test_kernel_kdump.sh line 34'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_kernel_kdump.sh line 34'
+Fri Jul 28 00:33:53 2023 - ERROR - oe_test_kernel_kdump.sh line 34
++ '[' 0 -eq 1 ']'
++ return 0
++ LOG_INFO 'End of testcase execution.'
++ message='End of testcase execution.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End of testcase execution.'
+Fri Jul 28 00:33:54 2023 - INFO  - End of testcase execution.
++ CASE_RESULT 0
++ case_re=0
++ test -z 4
++ test 4 -gt 0
++ LOG_ERROR 'failed to execute the case.'
++ message='failed to execute the case.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'failed to execute the case.'
+Fri Jul 28 00:33:55 2023 - ERROR - failed to execute the case.
++ exit 4
++ post_test
++ LOG_INFO 'start environment cleanup.'
++ message='start environment cleanup.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'start environment cleanup.'
+Fri Jul 28 00:33:57 2023 - INFO  - start environment cleanup.
++ systemctl enable kdump.service
+Failed to enable unit: Unit file kdump.service does not exist.
++ systemctl start kdump.service
+Failed to start kdump.service: Unit kdump.service not found.
++ LOG_INFO 'Finish environment cleanup.'
++ message='Finish environment cleanup.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Finish environment cleanup.'
+Fri Jul 28 00:33:58 2023 - INFO  - Finish environment cleanup.

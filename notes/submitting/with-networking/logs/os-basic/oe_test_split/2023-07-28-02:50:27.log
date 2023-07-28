@@ -1,0 +1,119 @@
++ source /root/mugen/libs/locallibs/common_lib.sh
+++ python3 --version
+++ '[' 0 -eq 0 ']'
+++ source /root/mugen/libs/locallibs/common_lib_python.sh
++ main
+++ type -t post_test
++ '[' -n function ']'
++ trap post_test EXIT INT HUP TERM
++ rpm -qa
++ grep expect
+++ type -t config_params
++ '[' -n '' ']'
+++ type -t pre_test
++ '[' -n '' ']'
+++ type -t run_test
++ '[' -n function ']'
++ run_test
++ LOG_INFO 'Start testing...'
++ message='Start testing...'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start testing...'
+Fri Jul 28 02:50:34 2023 - INFO  - Start testing...
++ cd /tmp
++ dd if=/dev/zero bs=100k count=2 of=big.tar.gz
+2+0 records in
+2+0 records out
+204800 bytes (205 kB, 200 KiB) copied, 0.0187924 s, 10.9 MB/s
++ md5sum big.tar.gz
++ awk '{print $1}'
++ CHECK_RESULT 0 0 0 'create fail'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='create fail'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ split -b 100K big.tar.gz
++ CHECK_RESULT 0 0 0 'split fail'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='split fail'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ test -e xaa
++ CHECK_RESULT 0 0 0 'Failed to find the file'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='Failed to find the file'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ test -e xab
++ CHECK_RESULT 0 0 0 'Failed to find the file'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='Failed to find the file'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ cat xaa xab
++ CHECK_RESULT 0 0 0 'merge fail'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='merge fail'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ md5sum big2.tar.gz
++ awk '{print $1}'
++ diff 1.txt 2.txt
++ CHECK_RESULT 0 0 0 'Command executed successfully'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='Command executed successfully'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ LOG_INFO 'Finish test!'
++ message='Finish test!'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Finish test!'
+Fri Jul 28 02:50:36 2023 - INFO  - Finish test!
++ CASE_RESULT 0
++ case_re=0
++ test -z ''
++ test 0 -eq 0
++ LOG_INFO 'succeed to execute the case.'
++ message='succeed to execute the case.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'succeed to execute the case.'
+Fri Jul 28 02:50:37 2023 - INFO  - succeed to execute the case.
++ exec_result=
++ exit 0
++ post_test
++ LOG_INFO 'Start to restore the test environment.'
++ message='Start to restore the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to restore the test environment.'
+Fri Jul 28 02:50:38 2023 - INFO  - Start to restore the test environment.
++ rm -rf big.tar.gz big2.tar.gz xaa xab
++ LOG_INFO 'End to restore the test environment.'
++ message='End to restore the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End to restore the test environment.'
+Fri Jul 28 02:50:39 2023 - INFO  - End to restore the test environment.

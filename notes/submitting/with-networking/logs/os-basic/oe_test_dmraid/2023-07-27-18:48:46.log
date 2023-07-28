@@ -1,0 +1,137 @@
++ source /root/mugen/libs/locallibs/common_lib.sh
+++ python3 --version
+++ '[' 0 -eq 0 ']'
+++ source /root/mugen/libs/locallibs/common_lib_python.sh
++ main
+++ type -t post_test
++ '[' -n function ']'
++ trap post_test EXIT INT HUP TERM
++ rpm -qa
++ grep expect
+++ type -t config_params
++ '[' -n '' ']'
+++ type -t pre_test
++ '[' -n function ']'
++ pre_test
++ LOG_INFO 'Start to prepare the test environment.'
++ message='Start to prepare the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to prepare the test environment.'
+Thu Jul 27 18:48:52 2023 - INFO  - Start to prepare the test environment.
++ DNF_INSTALL dmraid
++ pkgs=dmraid
++ node=1
++ '[' -z '' ']'
++ tmpfile=
+++ python3 /root/mugen/libs/locallibs/rpm_manage.py install --pkgs dmraid --node 1 --tempfile ''
++ tmpfile2=/tmp/tmpw04fn2am
++ '[' -z '' ']'
++ tmpfile=/tmp/tmpw04fn2am
++ LOG_INFO 'End to prepare the test environment.'
++ message='End to prepare the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End to prepare the test environment.'
+Thu Jul 27 18:50:12 2023 - INFO  - End to prepare the test environment.
+++ type -t run_test
++ '[' -n function ']'
++ run_test
++ LOG_INFO 'Start to run test.'
++ message='Start to run test.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to run test.'
+Thu Jul 27 18:50:14 2023 - INFO  - Start to run test.
++ dmraid -h
++ grep dmraid
++ CHECK_RESULT 1 0 0 'failed to dmraid help'
++ actual_result=1
++ expect_result=0
++ mode=0
++ error_log='failed to dmraid help'
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 0 -eq 0 ']'
++ test 1x '!=' 0x
++ test -n 'failed to dmraid help'
++ LOG_ERROR 'failed to dmraid help'
++ message='failed to dmraid help'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'failed to dmraid help'
+Thu Jul 27 18:50:18 2023 - ERROR - failed to dmraid help
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_dmraid.sh line 31'
++ message='oe_test_dmraid.sh line 31'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_dmraid.sh line 31'
+Thu Jul 27 18:50:20 2023 - ERROR - oe_test_dmraid.sh line 31
++ '[' 0 -eq 1 ']'
++ return 0
++ dmraid -V
++ grep 1.0.0.rc16
+dmraid version:		1.0.0.rc16 (2009.09.16) debug 
+dmraid library version:	1.0.0.rc16 (2009.09.16)
++ CHECK_RESULT 0 0 0 'Failed to version '
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='Failed to version '
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
+++ dmraid -s
++ num1='no block devices found'
++ num2=
++ 'no raid disks'
+oe_test_dmraid.sh: line 35: no raid disks: command not found
++ '[' no block devices found = ']'
+oe_test_dmraid.sh: line 36: [: too many arguments
++ dmraid -n
++ grep devs
++ CHECK_RESULT 1 0 0 'Failed to raid '
++ actual_result=1
++ expect_result=0
++ mode=0
++ error_log='Failed to raid '
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 0 -eq 0 ']'
++ test 1x '!=' 0x
++ test -n 'Failed to raid '
++ LOG_ERROR 'Failed to raid '
++ message='Failed to raid '
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'Failed to raid '
+Thu Jul 27 18:50:22 2023 - ERROR - Failed to raid 
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_dmraid.sh line 41'
++ message='oe_test_dmraid.sh line 41'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_dmraid.sh line 41'
+Thu Jul 27 18:50:23 2023 - ERROR - oe_test_dmraid.sh line 41
++ '[' 0 -eq 1 ']'
++ return 0
++ LOG_INFO 'End to run test.'
++ message='End to run test.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End to run test.'
+Thu Jul 27 18:50:24 2023 - INFO  - End to run test.
++ CASE_RESULT 0
++ case_re=0
++ test -z 2
++ test 2 -gt 0
++ LOG_ERROR 'failed to execute the case.'
++ message='failed to execute the case.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'failed to execute the case.'
+Thu Jul 27 18:50:26 2023 - ERROR - failed to execute the case.
++ exit 2
++ post_test
++ LOG_INFO 'Start to restore the test environment.'
++ message='Start to restore the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to restore the test environment.'
+Thu Jul 27 18:50:27 2023 - INFO  - Start to restore the test environment.
++ DNF_REMOVE
++ node=1
++ pkg_list=
++ mode=0
++ [[ -z /tmp/tmpw04fn2am ]]
++ '[' 0 -ne 0 ']'
++ '[' 1 == 0 ']'
++ python3 /root/mugen/libs/locallibs/rpm_manage.py remove --node 1 --pkgs '' --tempfile /tmp/tmpw04fn2am
++ '[' 0 -ne 0 ']'
++ LOG_INFO 'End to restore the test environment.'
++ message='End to restore the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End to restore the test environment.'
+Thu Jul 27 18:50:51 2023 - INFO  - End to restore the test environment.

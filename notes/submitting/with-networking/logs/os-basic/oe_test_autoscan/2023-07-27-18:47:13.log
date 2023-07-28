@@ -1,0 +1,234 @@
++ source /root/mugen/libs/locallibs/common_lib.sh
+++ python3 --version
+++ '[' 0 -eq 0 ']'
+++ source /root/mugen/libs/locallibs/common_lib_python.sh
++ main
+++ type -t post_test
++ '[' -n function ']'
++ trap post_test EXIT INT HUP TERM
++ rpm -qa
++ grep expect
+++ type -t config_params
++ '[' -n '' ']'
+++ type -t pre_test
++ '[' -n function ']'
++ pre_test
++ LOG_INFO 'Start to prepare the test environment.'
++ message='Start to prepare the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to prepare the test environment.'
+Thu Jul 27 18:47:20 2023 - INFO  - Start to prepare the test environment.
++ OLD_LANG=en_US.UTF-8
++ export LANG=en_US.UTF-8
++ LANG=en_US.UTF-8
++ LOG_INFO 'End to prepare the test environment.'
++ message='End to prepare the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End to prepare the test environment.'
+Thu Jul 27 18:47:21 2023 - INFO  - End to prepare the test environment.
+++ type -t run_test
++ '[' -n function ']'
++ run_test
++ LOG_INFO 'Start to run test.'
++ message='Start to run test.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to run test.'
+Thu Jul 27 18:47:22 2023 - INFO  - Start to run test.
++ autoscan -v
++ grep makefiles
+autoscan: srcdir = .
+makefiles: 
++ CHECK_RESULT 0 0 0 'processing report failure'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='processing report failure'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ autoscan -d
++ grep function
+function: __argz_count: AC_CHECK_FUNCS
+function: __argz_next: AC_CHECK_FUNCS
+function: __argz_stringify: AC_CHECK_FUNCS
+function: __fpending: AC_CHECK_FUNCS
+function: acl: AC_CHECK_FUNCS
+function: alarm: AC_CHECK_FUNCS
+function: alloca: AC_FUNC_ALLOCA
+function: atexit: AC_CHECK_FUNCS
+function: btowc: AC_CHECK_FUNCS
+function: bzero: AC_CHECK_FUNCS
+function: chown: AC_FUNC_CHOWN
+function: clock_gettime: AC_CHECK_FUNCS
+function: dcgettext: AM_GNU_GETTEXT
+function: doprnt: AC_CHECK_FUNCS
+function: dup2: AC_CHECK_FUNCS
+function: endgrent: AC_CHECK_FUNCS
+function: endpwent: AC_CHECK_FUNCS
+function: error: AC_FUNC_ERROR_AT_LINE
+function: error_at_line: AC_FUNC_ERROR_AT_LINE
+function: euidaccess: AC_CHECK_FUNCS
+function: fchdir: AC_CHECK_FUNCS
+function: fdatasync: AC_CHECK_FUNCS
+function: fesetround: AC_CHECK_FUNCS
+function: floor: AC_CHECK_FUNCS
+function: fork: AC_FUNC_FORK
+function: fs_stat_dev: AC_CHECK_FUNCS
+function: fseeko: AC_FUNC_FSEEKO
+function: ftello: AC_FUNC_FSEEKO
+function: ftime: AC_CHECK_FUNCS
+function: ftruncate: AC_CHECK_FUNCS
+function: getcwd: AC_CHECK_FUNCS
+function: getdelim: AC_CHECK_FUNCS
+function: getgroups: AC_FUNC_GETGROUPS
+function: gethostbyaddr: AC_CHECK_FUNCS
+function: gethostbyname: AC_CHECK_FUNCS
+function: gethostname: AC_CHECK_FUNCS
+function: gethrtime: AC_CHECK_FUNCS
+function: getmntent: AC_CHECK_FUNCS AC_FUNC_GETMNTENT
+function: getmntinfo: AC_CHECK_FUNCS
+function: getpagesize: AC_CHECK_FUNCS
+function: getpass: AC_CHECK_FUNCS
+function: getspnam: AC_CHECK_FUNCS
+function: gettimeofday: AC_CHECK_FUNCS
+function: getusershell: AC_CHECK_FUNCS
+function: getwd: warn: getwd is deprecated, use getcwd instead
+function: hasmntopt: AC_CHECK_FUNCS
+function: inet_ntoa: AC_CHECK_FUNCS
+function: isascii: AC_CHECK_FUNCS
+function: iswprint: AC_CHECK_FUNCS
+function: lchown: AC_CHECK_FUNCS
+function: listmntent: AC_CHECK_FUNCS
+function: localeconv: AC_CHECK_FUNCS
+function: localtime_r: AC_CHECK_FUNCS
+function: lstat: AC_FUNC_LSTAT_FOLLOWS_SLASHED_SYMLINK
+function: major: AC_HEADER_MAJOR
+function: makedev: AC_HEADER_MAJOR
+function: malloc: AC_FUNC_MALLOC
+function: mblen: AC_CHECK_FUNCS
+function: mbrlen: AC_CHECK_FUNCS
+function: mbrtowc: AC_FUNC_MBRTOWC
+function: memchr: AC_CHECK_FUNCS
+function: memmove: AC_CHECK_FUNCS
+function: mempcpy: AC_CHECK_FUNCS
+function: memset: AC_CHECK_FUNCS
+function: minor: AC_HEADER_MAJOR
+function: mkdir: AC_CHECK_FUNCS
+function: mkfifo: AC_CHECK_FUNCS
+function: mktime: AC_FUNC_MKTIME
+function: mmap: AC_FUNC_MMAP
+function: modf: AC_CHECK_FUNCS
+function: munmap: AC_CHECK_FUNCS
+function: next_dev: AC_CHECK_FUNCS
+function: nl_langinfo: AC_CHECK_FUNCS
+function: obstack_init: AC_FUNC_OBSTACK
+function: pathconf: AC_CHECK_FUNCS
+function: pow: AC_CHECK_FUNCS
+function: pstat_getdynamic: AC_CHECK_FUNCS
+function: putenv: AC_CHECK_FUNCS
+function: re_comp: AC_CHECK_FUNCS
+function: realloc: AC_FUNC_REALLOC
+function: realpath: AC_CHECK_FUNCS
+function: regcmp: AC_CHECK_FUNCS
+function: regcomp: AC_CHECK_FUNCS
+function: resolvepath: AC_CHECK_FUNCS
+function: rint: AC_CHECK_FUNCS
+function: rmdir: AC_CHECK_FUNCS
+function: rpmatch: AC_CHECK_FUNCS
+function: select: AC_CHECK_FUNCS
+function: setenv: AC_CHECK_FUNCS
+function: sethostname: AC_CHECK_FUNCS
+function: setlocale: AC_CHECK_FUNCS
+function: socket: AC_CHECK_FUNCS
+function: sqrt: AC_CHECK_FUNCS
+function: stime: AC_CHECK_FUNCS
+function: stpcpy: AC_CHECK_FUNCS
+function: strcasecmp: AC_CHECK_FUNCS
+function: strchr: AC_CHECK_FUNCS
+function: strcoll: AC_FUNC_STRCOLL
+function: strcspn: AC_CHECK_FUNCS
+function: strdup: AC_CHECK_FUNCS
+function: strerror: AC_CHECK_FUNCS
+function: strerror_r: AC_FUNC_STRERROR_R
+function: strncasecmp: AC_CHECK_FUNCS
+function: strndup: AC_CHECK_FUNCS
+function: strnlen: AC_FUNC_STRNLEN
+function: strpbrk: AC_CHECK_FUNCS
+function: strrchr: AC_CHECK_FUNCS
+function: strspn: AC_CHECK_FUNCS
+function: strstr: AC_CHECK_FUNCS
+function: strtod: AC_FUNC_STRTOD
+function: strtol: AC_CHECK_FUNCS
+function: strtoul: AC_CHECK_FUNCS
+function: strtoull: AC_CHECK_FUNCS
+function: strtoumax: AC_CHECK_FUNCS
+function: strverscmp: AC_CHECK_FUNCS
+function: sysinfo: AC_CHECK_FUNCS
+function: tzset: AC_CHECK_FUNCS
+function: uname: AC_CHECK_FUNCS
+function: utime: AC_CHECK_FUNCS
+function: utmpname: AC_CHECK_FUNCS
+function: utmpxname: AC_CHECK_FUNCS
+function: vfork: AC_FUNC_FORK
+function: wait3: AC_FUNC_WAIT3
+function: wcwidth: AC_CHECK_FUNCS
++ CHECK_RESULT 0 0 0 'Do not fail to delete temporary files'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='Do not fail to delete temporary files'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ autoscan -h
++ grep Usage
+Usage: /usr/bin/autoscan [OPTION]... [SRCDIR]
++ CHECK_RESULT 0 0 0 'check commmand usage fail'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='check commmand usage fail'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ autoscan -V
++ grep Copyright
+Copyright (C) 2021 Free Software Foundation, Inc.
++ CHECK_RESULT 0 0 0 'check version fail'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='check version fail'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ LOG_INFO 'End to run test.'
++ message='End to run test.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End to run test.'
+Thu Jul 27 18:47:33 2023 - INFO  - End to run test.
++ CASE_RESULT 0
++ case_re=0
++ test -z ''
++ test 0 -eq 0
++ LOG_INFO 'succeed to execute the case.'
++ message='succeed to execute the case.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'succeed to execute the case.'
+Thu Jul 27 18:47:34 2023 - INFO  - succeed to execute the case.
++ exec_result=
++ exit 0
++ post_test
++ LOG_INFO 'start environment cleanup.'
++ message='start environment cleanup.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'start environment cleanup.'
+Thu Jul 27 18:47:35 2023 - INFO  - start environment cleanup.
++ export LANG=en_US.UTF-8
++ LANG=en_US.UTF-8
++ LOG_INFO 'Finish environment cleanup!'
++ message='Finish environment cleanup!'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Finish environment cleanup!'
+Thu Jul 27 18:47:37 2023 - INFO  - Finish environment cleanup!

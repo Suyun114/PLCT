@@ -1,0 +1,215 @@
++ source /root/mugen/libs/locallibs/common_lib.sh
+++ python3 --version
+++ '[' 0 -eq 0 ']'
+++ source /root/mugen/libs/locallibs/common_lib_python.sh
++ main
+++ type -t post_test
++ '[' -n function ']'
++ trap post_test EXIT INT HUP TERM
++ rpm -qa
++ grep expect
+++ type -t config_params
++ '[' -n '' ']'
+++ type -t pre_test
++ '[' -n function ']'
++ pre_test
++ LOG_INFO 'Start to prepare the test environment.'
++ message='Start to prepare the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to prepare the test environment.'
+Thu Jul 27 19:10:32 2023 - INFO  - Start to prepare the test environment.
++ SSH_CMD 'useradd -m test1;echo |passwd --stdin test1;
+	useradd -m test2;echo |passwd --stdin test2'
++ cmd='useradd -m test1;echo |passwd --stdin test1;
+	useradd -m test2;echo |passwd --stdin test2'
++ remoteip=
++ remotepasswd='openEuler12#$'
++ remoteuser=root
++ timeout=300
++ connport=22
++ bash /root/mugen/libs/locallibs/sshcmd.sh -c 'useradd -m test1;echo |passwd --stdin test1;
+	useradd -m test2;echo |passwd --stdin test2' -i '' -u root -p 'openEuler12#$' -t 300 -o 22
+Usage: sshcmd.sh -c "command" -i "remote machinet ip" [-u login_user] [-p login_password] [-o port] [-t timeout]+ ret=1
++ test 1 -ne 0
++ LOG_ERROR 'Failed in remote CMD operation:1'
++ message='Failed in remote CMD operation:1'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'Failed in remote CMD operation:1'
+Thu Jul 27 19:10:34 2023 - ERROR - Failed in remote CMD operation:1
++ return 1
++ LOG_INFO 'End to prepare the test environment.'
++ message='End to prepare the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End to prepare the test environment.'
+Thu Jul 27 19:10:36 2023 - INFO  - End to prepare the test environment.
+++ type -t run_test
++ '[' -n function ']'
++ run_test
++ LOG_INFO 'Start to run test.'
++ message='Start to run test.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to run test.'
+Thu Jul 27 19:10:37 2023 - INFO  - Start to run test.
++ expect -c '
+	spawn ssh @
+  	expect {
+  		"*)?" {
+        send "yes\r"
+        exp_continue
+		}
+        "*assword*" {
+        send "\r"
+        expect "*localhost*" {send "exit\r"}
+        exp_continue
+		}
+	}
+'
+spawn ssh @
+usage: ssh [-46AaCfGgKkMNnqsTtVvXxYy] [-B bind_interface]
+           [-b bind_address] [-c cipher_spec] [-D [bind_address:]port]
+           [-E log_file] [-e escape_char] [-F configfile] [-I pkcs11]
+           [-i identity_file] [-J [user@]host[:port]] [-L address]
+           [-l login_name] [-m mac_spec] [-O ctl_cmd] [-o option] [-p port]
+           [-Q query_option] [-R address] [-S ctl_path] [-W host:port]
+           [-w local_tun[:remote_tun]] destination [command [argument ...]]
++ expect -c '
+	spawn ssh test1@
+  	expect {
+  		"*)?" {
+        send "yes\r"
+        exp_continue
+		}
+        "*assword*" {
+        send "\r"
+        expect "*localhost*" {send "exit\r"}
+        exp_continue
+		}
+	}
+'
+spawn ssh test1@
+ssh: Could not resolve hostname : Name or service not known
++ expect -c '
+	spawn ssh test2@
+  	expect {
+  		"*)?" {
+        send "yes\r"
+        exp_continue
+		}
+        "*assword*" {
+        send "\r"
+        expect "*localhost*" {send "exit\r"}
+        exp_continue
+		}
+	}
+'
+spawn ssh test2@
+ssh: Could not resolve hostname : Name or service not known
++ SSH_CMD 'last -f /var/log/wtmp>/tmp/rebootlog1'
++ cmd='last -f /var/log/wtmp>/tmp/rebootlog1'
++ remoteip=
++ remotepasswd='openEuler12#$'
++ remoteuser=root
++ timeout=300
++ connport=22
++ bash /root/mugen/libs/locallibs/sshcmd.sh -c 'last -f /var/log/wtmp>/tmp/rebootlog1' -i '' -u root -p 'openEuler12#$' -t 300 -o 22
+Usage: sshcmd.sh -c "command" -i "remote machinet ip" [-u login_user] [-p login_password] [-o port] [-t timeout]+ ret=1
++ test 1 -ne 0
++ LOG_ERROR 'Failed in remote CMD operation:1'
++ message='Failed in remote CMD operation:1'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'Failed in remote CMD operation:1'
+Thu Jul 27 19:10:42 2023 - ERROR - Failed in remote CMD operation:1
++ return 1
++ SSH_SCP @:/tmp/rebootlog1 .
++ src=@:/tmp/rebootlog1
++ dest=.
++ remotepasswd='openEuler12#$'
++ connport=22
++ bash /root/mugen/libs/locallibs/sshscp.sh -p 'openEuler12#$' -o 22 -s @:/tmp/rebootlog1 -d .
+Thu Jul 27 19:10:43 2023 - WARN  - the remote password uses the default configuration.
+Thu Jul 27 19:10:45 2023 - WARN  - the connect port using the default configuration
+spawn scp -P 22 -r @:/tmp/rebootlog1 .
+ssh: Could not resolve hostname : Name or service not known
+scp: Connection closed
++ ret=255
++ test 255 -ne 0
++ LOG_ERROR 'Failed in remote SCP operation: 255'
++ message='Failed in remote SCP operation: 255'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'Failed in remote SCP operation: 255'
+Thu Jul 27 19:10:47 2023 - ERROR - Failed in remote SCP operation: 255
++ return 255
++ CHECK_RESULT 255
++ actual_result=255
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 255 ']'
++ '[' 0 -eq 0 ']'
++ test 255x '!=' 0x
++ test -n ''
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_system_monitor_login.sh line 74'
++ message='oe_test_system_monitor_login.sh line 74'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_system_monitor_login.sh line 74'
+Thu Jul 27 19:10:48 2023 - ERROR - oe_test_system_monitor_login.sh line 74
++ '[' 0 -eq 1 ']'
++ return 0
+++ cat rebootlog1
+++ grep -iE 'test1|test2|'
+++ awk '{print$1}'
+++ sort -u
+++ wc -l
+cat: rebootlog1: No such file or directory
++ num_user=0
++ test 0 -eq 3
++ CHECK_RESULT 1
++ actual_result=1
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 0 -eq 0 ']'
++ test 1x '!=' 0x
++ test -n ''
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_system_monitor_login.sh line 77'
++ message='oe_test_system_monitor_login.sh line 77'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_system_monitor_login.sh line 77'
+Thu Jul 27 19:10:50 2023 - ERROR - oe_test_system_monitor_login.sh line 77
++ '[' 0 -eq 1 ']'
++ return 0
++ LOG_INFO 'End to run test.'
++ message='End to run test.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End to run test.'
+Thu Jul 27 19:10:51 2023 - INFO  - End to run test.
++ CASE_RESULT 0
++ case_re=0
++ test -z 2
++ test 2 -gt 0
++ LOG_ERROR 'failed to execute the case.'
++ message='failed to execute the case.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'failed to execute the case.'
+Thu Jul 27 19:10:52 2023 - ERROR - failed to execute the case.
++ exit 2
++ post_test
++ LOG_INFO 'Start to restore the test environment.'
++ message='Start to restore the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to restore the test environment.'
+Thu Jul 27 19:10:54 2023 - INFO  - Start to restore the test environment.
++ rm -rf rebootlog1
++ SSH_CMD 'userdel -r test1;userdel -r test2;rm -rf /tmp/rebootlog1'
++ cmd='userdel -r test1;userdel -r test2;rm -rf /tmp/rebootlog1'
++ remoteip=
++ remotepasswd='openEuler12#$'
++ remoteuser=root
++ timeout=300
++ connport=22
++ bash /root/mugen/libs/locallibs/sshcmd.sh -c 'userdel -r test1;userdel -r test2;rm -rf /tmp/rebootlog1' -i '' -u root -p 'openEuler12#$' -t 300 -o 22
+Usage: sshcmd.sh -c "command" -i "remote machinet ip" [-u login_user] [-p login_password] [-o port] [-t timeout]+ ret=1
++ test 1 -ne 0
++ LOG_ERROR 'Failed in remote CMD operation:1'
++ message='Failed in remote CMD operation:1'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'Failed in remote CMD operation:1'
+Thu Jul 27 19:10:55 2023 - ERROR - Failed in remote CMD operation:1
++ return 1
++ LOG_INFO 'End to restore the test environment.'
++ message='End to restore the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End to restore the test environment.'
+Thu Jul 27 19:10:57 2023 - INFO  - End to restore the test environment.

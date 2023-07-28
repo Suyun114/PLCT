@@ -1,0 +1,119 @@
++ source /root/mugen/libs/locallibs/common_lib.sh
+++ python3 --version
+++ '[' 0 -eq 0 ']'
+++ source /root/mugen/libs/locallibs/common_lib_python.sh
++ main
+++ type -t post_test
++ '[' -n '' ']'
++ trap POST_TEST_DEFAULT EXIT INT HUP TERM
++ rpm -qa
++ grep expect
+++ type -t config_params
++ '[' -n '' ']'
+++ type -t pre_test
++ '[' -n '' ']'
+++ type -t run_test
++ '[' -n function ']'
++ run_test
++ LOG_INFO 'Start to run test.'
++ message='Start to run test.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to run test.'
+Fri Jul 28 03:04:27 2023 - INFO  - Start to run test.
++ history
++ CHECK_RESULT 0 0 0 'check is in history failed'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='check is in history failed'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ ls ./
+oe_test_history.sh
++ history -c
++ history
++ grep ls
++ CHECK_RESULT 1 0 1 'clear history command record'
++ actual_result=1
++ expect_result=0
++ mode=1
++ error_log='clear history command record'
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 1 -eq 0 ']'
++ test 1x == 0x
++ return 0
++ history -w
++ CHECK_RESULT 0 0 0 'history write file failed'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='history write file failed'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ help history
+history: history [-c] [-d offset] [n] or history -anrw [filename] or history -ps arg [arg...]
+    Display or manipulate the history list.
+    
+    Display the history list with line numbers, prefixing each modified
+    entry with a `*'.  An argument of N lists only the last N entries.
+    
+    Options:
+      -c	clear the history list by deleting all of the entries
+      -d offset	delete the history entry at position OFFSET. Negative
+    		offsets count back from the end of the history list
+    
+      -a	append history lines from this session to the history file
+      -n	read all history lines not already read from the history file
+    		and append them to the history list
+      -r	read the history file and append the contents to the history
+    		list
+      -w	write the current history to the history file
+    
+      -p	perform history expansion on each ARG and display the result
+    		without storing it in the history list
+      -s	append the ARGs to the history list as a single entry
+    
+    If FILENAME is given, it is used as the history file.  Otherwise,
+    if HISTFILE has a value, that is used, else ~/.bash_history.
+    
+    If the HISTTIMEFORMAT variable is set and not null, its value is used
+    as a format string for strftime(3) to print the time stamp associated
+    with each displayed history entry.  No time stamps are printed otherwise.
+    
+    Exit Status:
+    Returns success unless an invalid option is given or an error occurs.
++ CHECK_RESULT 0 0 0 'history write file failed'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='history write file failed'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ LOG_INFO 'End to run test.'
++ message='End to run test.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End to run test.'
+Fri Jul 28 03:04:29 2023 - INFO  - End to run test.
++ CASE_RESULT 0
++ case_re=0
++ test -z ''
++ test 0 -eq 0
++ LOG_INFO 'succeed to execute the case.'
++ message='succeed to execute the case.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'succeed to execute the case.'
+Fri Jul 28 03:04:30 2023 - INFO  - succeed to execute the case.
++ exec_result=
++ exit 0
++ POST_TEST_DEFAULT
++ LOG_INFO 'oe_test_history.sh post_test'
++ message='oe_test_history.sh post_test'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'oe_test_history.sh post_test'
+Fri Jul 28 03:04:31 2023 - INFO  - oe_test_history.sh post_test

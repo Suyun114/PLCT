@@ -1,0 +1,142 @@
++ source /root/mugen/libs/locallibs/common_lib.sh
+++ python3 --version
+++ '[' 0 -eq 0 ']'
+++ source /root/mugen/libs/locallibs/common_lib_python.sh
++ main
+++ type -t post_test
++ '[' -n function ']'
++ trap post_test EXIT INT HUP TERM
++ rpm -qa
++ grep expect
+++ type -t config_params
++ '[' -n '' ']'
+++ type -t pre_test
++ '[' -n function ']'
++ pre_test
++ LOG_INFO 'Start environment preparation.'
++ message='Start environment preparation.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start environment preparation.'
+Thu Jul 27 18:51:11 2023 - INFO  - Start environment preparation.
++ DNF_INSTALL gcc-c++
++ pkgs=gcc-c++
++ node=1
++ '[' -z '' ']'
++ tmpfile=
+++ python3 /root/mugen/libs/locallibs/rpm_manage.py install --pkgs gcc-c++ --node 1 --tempfile ''
++ tmpfile2=/tmp/tmpq5y5cxj1
++ '[' -z '' ']'
++ tmpfile=/tmp/tmpq5y5cxj1
++ LOG_INFO 'End of environmental preparation!'
++ message='End of environmental preparation!'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End of environmental preparation!'
+Thu Jul 27 18:53:58 2023 - INFO  - End of environmental preparation!
+++ type -t run_test
++ '[' -n function ']'
++ run_test
++ LOG_INFO 'Start testing...'
++ message='Start testing...'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start testing...'
+Thu Jul 27 18:53:59 2023 - INFO  - Start testing...
++ cat
++ CHECK_RESULT 0 0 0 'Error, fail to create test.cpp'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='Error, fail to create test.cpp'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ g++ test.cpp -o test
+In file included from /usr/include/errno.h:28,
+                 from /usr/include/c++/10.3.1/cerrno:42,
+                 from /usr/include/c++/10.3.1/ext/string_conversions.h:44,
+                 from /usr/include/c++/10.3.1/bits/basic_string.h:6545,
+                 from /usr/include/c++/10.3.1/string:55,
+                 from /usr/include/c++/10.3.1/bits/locale_classes.h:40,
+                 from /usr/include/c++/10.3.1/bits/ios_base.h:41,
+                 from /usr/include/c++/10.3.1/ios:42,
+                 from /usr/include/c++/10.3.1/ostream:38,
+                 from /usr/include/c++/10.3.1/iostream:39,
+                 from test.cpp:1:
+/usr/include/bits/errno.h:26:11: fatal error: linux/errno.h: No such file or directory
+   26 | # include <linux/errno.h>
+      |           ^~~~~~~~~~~~~~~
+compilation terminated.
++ CHECK_RESULT 1 0 0 'Error, fail to create test'
++ actual_result=1
++ expect_result=0
++ mode=0
++ error_log='Error, fail to create test'
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 0 -eq 0 ']'
++ test 1x '!=' 0x
++ test -n 'Error, fail to create test'
++ LOG_ERROR 'Error, fail to create test'
++ message='Error, fail to create test'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'Error, fail to create test'
+Thu Jul 27 18:54:03 2023 - ERROR - Error, fail to create test
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_c++.sh line 41'
++ message='oe_test_c++.sh line 41'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_c++.sh line 41'
+Thu Jul 27 18:54:04 2023 - ERROR - oe_test_c++.sh line 41
++ '[' 0 -eq 1 ']'
++ return 0
++ ./test
+oe_test_c++.sh: line 42: ./test: No such file or directory
++ CHECK_RESULT 127 0 0 'Error, please check '\''hello C++'\'''
++ actual_result=127
++ expect_result=0
++ mode=0
++ error_log='Error, please check '\''hello C++'\'''
++ exit_mode=0
++ '[' -z 127 ']'
++ '[' 0 -eq 0 ']'
++ test 127x '!=' 0x
++ test -n 'Error, please check '\''hello C++'\'''
++ LOG_ERROR 'Error, please check '\''hello C++'\'''
++ message='Error, please check '\''hello C++'\'''
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'Error, please check '\''hello C++'\'''
+Thu Jul 27 18:54:06 2023 - ERROR - Error, please check 'hello C++'
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_c++.sh line 43'
++ message='oe_test_c++.sh line 43'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_c++.sh line 43'
+Thu Jul 27 18:54:07 2023 - ERROR - oe_test_c++.sh line 43
++ '[' 0 -eq 1 ']'
++ return 0
++ LOG_INFO 'Finish test!'
++ message='Finish test!'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Finish test!'
+Thu Jul 27 18:54:08 2023 - INFO  - Finish test!
++ CASE_RESULT 0
++ case_re=0
++ test -z 2
++ test 2 -gt 0
++ LOG_ERROR 'failed to execute the case.'
++ message='failed to execute the case.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'failed to execute the case.'
+Thu Jul 27 18:54:09 2023 - ERROR - failed to execute the case.
++ exit 2
++ post_test
++ LOG_INFO 'start environment cleanup.'
++ message='start environment cleanup.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'start environment cleanup.'
+Thu Jul 27 18:54:11 2023 - INFO  - start environment cleanup.
++ DNF_REMOVE
++ node=1
++ pkg_list=
++ mode=0
++ [[ -z /tmp/tmpq5y5cxj1 ]]
++ '[' 0 -ne 0 ']'
++ '[' 1 == 0 ']'
++ python3 /root/mugen/libs/locallibs/rpm_manage.py remove --node 1 --pkgs '' --tempfile /tmp/tmpq5y5cxj1
++ '[' 0 -ne 0 ']'
++ rm -rf test test.cpp
++ LOG_INFO 'Finish environment cleanup!'
++ message='Finish environment cleanup!'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Finish environment cleanup!'
+Thu Jul 27 18:54:28 2023 - INFO  - Finish environment cleanup!

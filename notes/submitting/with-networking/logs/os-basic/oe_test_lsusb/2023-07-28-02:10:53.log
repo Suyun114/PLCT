@@ -1,0 +1,159 @@
++ source /root/mugen/libs/locallibs/common_lib.sh
+++ python3 --version
+++ '[' 0 -eq 0 ']'
+++ source /root/mugen/libs/locallibs/common_lib_python.sh
++ main
+++ type -t post_test
++ '[' -n function ']'
++ trap post_test EXIT INT HUP TERM
++ rpm -qa
++ grep expect
+++ type -t config_params
++ '[' -n '' ']'
+++ type -t pre_test
++ '[' -n function ']'
++ pre_test
++ LOG_INFO 'Start to prepare the test environment.'
++ message='Start to prepare the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to prepare the test environment.'
+Fri Jul 28 02:11:00 2023 - INFO  - Start to prepare the test environment.
++ DNF_INSTALL usbutils
++ pkgs=usbutils
++ node=1
++ '[' -z '' ']'
++ tmpfile=
+++ python3 /root/mugen/libs/locallibs/rpm_manage.py install --pkgs usbutils --node 1 --tempfile ''
++ tmpfile2=/tmp/tmpo5n5c67n
++ '[' -z '' ']'
++ tmpfile=/tmp/tmpo5n5c67n
++ LOG_INFO 'End to prepare the test environment.'
++ message='End to prepare the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End to prepare the test environment.'
+Fri Jul 28 02:12:09 2023 - INFO  - End to prepare the test environment.
+++ type -t run_test
++ '[' -n function ']'
++ run_test
++ LOG_INFO 'Start to run test.'
++ message='Start to run test.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to run test.'
+Fri Jul 28 02:12:11 2023 - INFO  - Start to run test.
++ lsusb
++ grep Bus
+Bus 002 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub
+Bus 001 Device 004: ID 46f4:0002 QEMU QEMU USB Audio
+Bus 001 Device 003: ID 0627:0001 Adomax Technology Co., Ltd QEMU USB Tablet
+Bus 001 Device 002: ID 0627:0001 Adomax Technology Co., Ltd QEMU USB Keyboard
+Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
++ CHECK_RESULT 0 0 0 'error displaying USB device information'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='error displaying USB device information'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ lsusb -v
++ grep 'Device Descriptor'
+Device Descriptor:
+Device Descriptor:
+Device Descriptor:
+        HID Device Descriptor:
+Device Descriptor:
+        HID Device Descriptor:
+Device Descriptor:
++ CHECK_RESULT 0 0 0 'detailed display of USB device information'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='detailed display of USB device information'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ find /dev/bus/usb/001/001
+/dev/bus/usb/001/001
++ CHECK_RESULT 0 0 0 'the linked device does not exist'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='the linked device does not exist'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ lsusb -D /dev/bus/usb/001/001
++ grep 'Device Descriptor'
+Device Descriptor:
++ CHECK_RESULT 0 0 0 'detailed display of USB device information'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='detailed display of USB device information'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ lsusb -t
++ grep /:
+/:  Bus 02.Port 1: Dev 1, Class=root_hub, Driver=xhci_hcd/4p, 5000M
+/:  Bus 01.Port 1: Dev 1, Class=root_hub, Driver=xhci_hcd/4p, 480M
++ CHECK_RESULT 0 0 0 'display lsusb tree structure error'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='display lsusb tree structure error'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ lsusb -V
++ grep usbutils
+lsusb (usbutils) 015
++ CHECK_RESULT 0 0 0 'error displaying lsusb version information'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='error displaying lsusb version information'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ LOG_INFO 'End to run test.'
++ message='End to run test.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End to run test.'
+Fri Jul 28 02:12:14 2023 - INFO  - End to run test.
++ CASE_RESULT 0
++ case_re=0
++ test -z ''
++ test 0 -eq 0
++ LOG_INFO 'succeed to execute the case.'
++ message='succeed to execute the case.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'succeed to execute the case.'
+Fri Jul 28 02:12:16 2023 - INFO  - succeed to execute the case.
++ exec_result=
++ exit 0
++ post_test
++ LOG_INFO 'start environment cleanup.'
++ message='start environment cleanup.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'start environment cleanup.'
+Fri Jul 28 02:12:17 2023 - INFO  - start environment cleanup.
++ DNF_REMOVE
++ node=1
++ pkg_list=
++ mode=0
++ [[ -z /tmp/tmpo5n5c67n ]]
++ '[' 0 -ne 0 ']'
++ '[' 1 == 0 ']'
++ python3 /root/mugen/libs/locallibs/rpm_manage.py remove --node 1 --pkgs '' --tempfile /tmp/tmpo5n5c67n
++ '[' 0 -ne 0 ']'
++ LOG_INFO 'Finish environment cleanup!'
++ message='Finish environment cleanup!'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Finish environment cleanup!'
+Fri Jul 28 02:12:37 2023 - INFO  - Finish environment cleanup!

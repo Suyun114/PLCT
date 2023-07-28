@@ -1,0 +1,257 @@
++ source ../common/net_lib.sh
+++ source /root/mugen/libs/locallibs/common_lib.sh
++++ python3 --version
++++ '[' 0 -eq 0 ']'
++++ source /root/mugen/libs/locallibs/common_lib_python.sh
++ main
+++ type -t post_test
++ '[' -n function ']'
++ trap post_test EXIT INT HUP TERM
++ rpm -qa
++ grep expect
+++ type -t config_params
++ '[' -n function ']'
++ config_params
++ LOG_INFO 'Start to config params of the case.'
++ message='Start to config params of the case.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to config params of the case.'
+Fri Jul 28 01:21:18 2023 - INFO  - Start to config params of the case.
++ get_free_eth 2
++ local num_eth=2
++ echo 10.198.101.114
+10.198.101.114
+++ python3 /root/mugen/libs/locallibs/get_test_device.py --node 1 --device nic
+Fri Jul 28 01:21:35 2023 - INFO  - pkgs:(lshw) is already installed
++ NODE1_NIC='eth0 eth1 eth2 eth3'
++ LOCAL_ETH=(${NODE1_NIC[@]/$(ip route | grep ${NODE1_IPV4} | awk '{print$3}')/})
+++ ip route
+../common/net_lib.sh: line 26: ip: command not found
+++ grep 10.198.101.1
+++ awk '{print$3}'
++ '[' 4 -ge 2 ']'
++ test_eth1=eth0
++ test_eth2=eth1
++ LOG_INFO 'End to config params of the case.'
++ message='End to config params of the case.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End to config params of the case.'
+Fri Jul 28 01:21:51 2023 - INFO  - End to config params of the case.
+++ type -t pre_test
++ '[' -n '' ']'
+++ type -t run_test
++ '[' -n function ']'
++ run_test
++ LOG_INFO 'Start to run test.'
++ message='Start to run test.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to run test.'
+Fri Jul 28 01:21:53 2023 - INFO  - Start to run test.
++ ip link add dev blue type vrf table 1001
+oe_test_net_VRF.sh: line 31: ip: command not found
++ CHECK_RESULT 127
++ actual_result=127
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 127 ']'
++ '[' 0 -eq 0 ']'
++ test 127x '!=' 0x
++ test -n ''
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_net_VRF.sh line 32'
++ message='oe_test_net_VRF.sh line 32'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_net_VRF.sh line 32'
+Fri Jul 28 01:21:54 2023 - ERROR - oe_test_net_VRF.sh line 32
++ '[' 0 -eq 1 ']'
++ return 0
++ find /sys/class/net/
++ grep blue
++ CHECK_RESULT 1
++ actual_result=1
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 0 -eq 0 ']'
++ test 1x '!=' 0x
++ test -n ''
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_net_VRF.sh line 34'
++ message='oe_test_net_VRF.sh line 34'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_net_VRF.sh line 34'
+Fri Jul 28 01:21:56 2023 - ERROR - oe_test_net_VRF.sh line 34
++ '[' 0 -eq 1 ']'
++ return 0
++ ip link set dev blue up
+oe_test_net_VRF.sh: line 35: ip: command not found
++ CHECK_RESULT 127
++ actual_result=127
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 127 ']'
++ '[' 0 -eq 0 ']'
++ test 127x '!=' 0x
++ test -n ''
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_net_VRF.sh line 36'
++ message='oe_test_net_VRF.sh line 36'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_net_VRF.sh line 36'
+Fri Jul 28 01:21:57 2023 - ERROR - oe_test_net_VRF.sh line 36
++ '[' 0 -eq 1 ']'
++ return 0
++ ip link set dev eth0 master blue
+oe_test_net_VRF.sh: line 37: ip: command not found
++ ip link set dev eth0 up
+oe_test_net_VRF.sh: line 38: ip: command not found
++ CHECK_RESULT 127
++ actual_result=127
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 127 ']'
++ '[' 0 -eq 0 ']'
++ test 127x '!=' 0x
++ test -n ''
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_net_VRF.sh line 39'
++ message='oe_test_net_VRF.sh line 39'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_net_VRF.sh line 39'
+Fri Jul 28 01:21:59 2023 - ERROR - oe_test_net_VRF.sh line 39
++ '[' 0 -eq 1 ']'
++ return 0
++ ip addr add dev eth0 192.0.2.1/24
+oe_test_net_VRF.sh: line 40: ip: command not found
++ ip addr show
++ grep blue
+oe_test_net_VRF.sh: line 41: ip: command not found
++ CHECK_RESULT 1
++ actual_result=1
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 0 -eq 0 ']'
++ test 1x '!=' 0x
++ test -n ''
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_net_VRF.sh line 42'
++ message='oe_test_net_VRF.sh line 42'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_net_VRF.sh line 42'
+Fri Jul 28 01:22:01 2023 - ERROR - oe_test_net_VRF.sh line 42
++ '[' 0 -eq 1 ']'
++ return 0
++ ip link add dev red type vrf table 1002
+oe_test_net_VRF.sh: line 44: ip: command not found
++ CHECK_RESULT 127
++ actual_result=127
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 127 ']'
++ '[' 0 -eq 0 ']'
++ test 127x '!=' 0x
++ test -n ''
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_net_VRF.sh line 45'
++ message='oe_test_net_VRF.sh line 45'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_net_VRF.sh line 45'
+Fri Jul 28 01:22:02 2023 - ERROR - oe_test_net_VRF.sh line 45
++ '[' 0 -eq 1 ']'
++ return 0
++ ip link set dev red up
+oe_test_net_VRF.sh: line 46: ip: command not found
++ CHECK_RESULT 127
++ actual_result=127
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 127 ']'
++ '[' 0 -eq 0 ']'
++ test 127x '!=' 0x
++ test -n ''
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_net_VRF.sh line 47'
++ message='oe_test_net_VRF.sh line 47'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_net_VRF.sh line 47'
+Fri Jul 28 01:22:04 2023 - ERROR - oe_test_net_VRF.sh line 47
++ '[' 0 -eq 1 ']'
++ return 0
++ ip link set dev eth1 master red
+oe_test_net_VRF.sh: line 48: ip: command not found
++ ip link set dev eth1 up
+oe_test_net_VRF.sh: line 49: ip: command not found
++ CHECK_RESULT 127
++ actual_result=127
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 127 ']'
++ '[' 0 -eq 0 ']'
++ test 127x '!=' 0x
++ test -n ''
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_net_VRF.sh line 50'
++ message='oe_test_net_VRF.sh line 50'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_net_VRF.sh line 50'
+Fri Jul 28 01:22:06 2023 - ERROR - oe_test_net_VRF.sh line 50
++ '[' 0 -eq 1 ']'
++ return 0
++ ip addr add dev eth1 192.0.2.1/24
+oe_test_net_VRF.sh: line 51: ip: command not found
++ ip addr show
++ grep ' red'
+oe_test_net_VRF.sh: line 52: ip: command not found
++ CHECK_RESULT 1
++ actual_result=1
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 0 -eq 0 ']'
++ test 1x '!=' 0x
++ test -n ''
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_net_VRF.sh line 53'
++ message='oe_test_net_VRF.sh line 53'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_net_VRF.sh line 53'
+Fri Jul 28 01:22:07 2023 - ERROR - oe_test_net_VRF.sh line 53
++ '[' 0 -eq 1 ']'
++ return 0
++ LOG_INFO 'End to run test.'
++ message='End to run test.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End to run test.'
+Fri Jul 28 01:22:09 2023 - INFO  - End to run test.
++ CASE_RESULT 0
++ case_re=0
++ test -z 9
++ test 9 -gt 0
++ LOG_ERROR 'failed to execute the case.'
++ message='failed to execute the case.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'failed to execute the case.'
+Fri Jul 28 01:22:10 2023 - ERROR - failed to execute the case.
++ exit 9
++ post_test
++ LOG_INFO 'Start to restore the test environment.'
++ message='Start to restore the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to restore the test environment.'
+Fri Jul 28 01:22:12 2023 - INFO  - Start to restore the test environment.
++ ip link del blue
+oe_test_net_VRF.sh: line 59: ip: command not found
++ ip link del red
+oe_test_net_VRF.sh: line 60: ip: command not found
++ nmcli con delete eth0 eth1
+Error: unknown connection 'eth0'.
+Error: unknown connection 'eth1'.
+Error: cannot delete unknown connection(s): 'eth0', 'eth1'.
++ LOG_INFO 'End to restore the test environment.'
++ message='End to restore the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End to restore the test environment.'
+Fri Jul 28 01:22:14 2023 - INFO  - End to restore the test environment.

@@ -1,0 +1,149 @@
++ source ../common/net_lib.sh
+++ source /root/mugen/libs/locallibs/common_lib.sh
++++ python3 --version
++++ '[' 0 -eq 0 ']'
++++ source /root/mugen/libs/locallibs/common_lib_python.sh
++ main
+++ type -t post_test
++ '[' -n function ']'
++ trap post_test EXIT INT HUP TERM
++ rpm -qa
++ grep expect
+++ type -t config_params
++ '[' -n function ']'
++ config_params
++ LOG_INFO 'Start to config params of the case.'
++ message='Start to config params of the case.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to config params of the case.'
+Fri Jul 28 01:14:41 2023 - INFO  - Start to config params of the case.
++ link_name=my_ipvlan
++ get_free_eth 1
++ local num_eth=1
++ echo 10.198.101.114
+10.198.101.114
+++ python3 /root/mugen/libs/locallibs/get_test_device.py --node 1 --device nic
+Fri Jul 28 01:14:58 2023 - INFO  - pkgs:(lshw) is already installed
++ NODE1_NIC='eth0 eth1 eth2 eth3'
++ LOCAL_ETH=(${NODE1_NIC[@]/$(ip route | grep ${NODE1_IPV4} | awk '{print$3}')/})
+++ ip route
+++ grep 10.198.101.1
+++ awk '{print$3}'
+../common/net_lib.sh: line 26: ip: command not found
++ '[' 4 -ge 1 ']'
++ LOG_INFO 'End to config params of the case.'
++ message='End to config params of the case.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End to config params of the case.'
+Fri Jul 28 01:15:13 2023 - INFO  - End to config params of the case.
+++ type -t pre_test
++ '[' -n '' ']'
+++ type -t run_test
++ '[' -n function ']'
++ run_test
++ LOG_INFO 'Start to run test.'
++ message='Start to run test.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to run test.'
+Fri Jul 28 01:15:15 2023 - INFO  - Start to run test.
++ ip link add link eth0 name my_ipvlan type ipvlan mode l2
+oe_test_net_IPVLAN.sh: line 30: ip: command not found
++ CHECK_RESULT 127
++ actual_result=127
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 127 ']'
++ '[' 0 -eq 0 ']'
++ test 127x '!=' 0x
++ test -n ''
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_net_IPVLAN.sh line 31'
++ message='oe_test_net_IPVLAN.sh line 31'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_net_IPVLAN.sh line 31'
+Fri Jul 28 01:15:16 2023 - ERROR - oe_test_net_IPVLAN.sh line 31
++ '[' 0 -eq 1 ']'
++ return 0
++ ip addr add dev eth0 192.0.1.1/16
+oe_test_net_IPVLAN.sh: line 32: ip: command not found
++ CHECK_RESULT 127
++ actual_result=127
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 127 ']'
++ '[' 0 -eq 0 ']'
++ test 127x '!=' 0x
++ test -n ''
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_net_IPVLAN.sh line 33'
++ message='oe_test_net_IPVLAN.sh line 33'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_net_IPVLAN.sh line 33'
+Fri Jul 28 01:15:17 2023 - ERROR - oe_test_net_IPVLAN.sh line 33
++ '[' 0 -eq 1 ']'
++ return 0
++ ip link set dev eth0 up
+oe_test_net_IPVLAN.sh: line 34: ip: command not found
++ CHECK_RESULT 127
++ actual_result=127
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 127 ']'
++ '[' 0 -eq 0 ']'
++ test 127x '!=' 0x
++ test -n ''
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_net_IPVLAN.sh line 35'
++ message='oe_test_net_IPVLAN.sh line 35'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_net_IPVLAN.sh line 35'
+Fri Jul 28 01:15:18 2023 - ERROR - oe_test_net_IPVLAN.sh line 35
++ '[' 0 -eq 1 ']'
++ return 0
++ ip a
++ grep my_ipvlan
+oe_test_net_IPVLAN.sh: line 36: ip: command not found
++ CHECK_RESULT 1
++ actual_result=1
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 0 -eq 0 ']'
++ test 1x '!=' 0x
++ test -n ''
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_net_IPVLAN.sh line 37'
++ message='oe_test_net_IPVLAN.sh line 37'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_net_IPVLAN.sh line 37'
+Fri Jul 28 01:15:20 2023 - ERROR - oe_test_net_IPVLAN.sh line 37
++ '[' 0 -eq 1 ']'
++ return 0
++ LOG_INFO 'End to run test.'
++ message='End to run test.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End to run test.'
+Fri Jul 28 01:15:21 2023 - INFO  - End to run test.
++ CASE_RESULT 0
++ case_re=0
++ test -z 4
++ test 4 -gt 0
++ LOG_ERROR 'failed to execute the case.'
++ message='failed to execute the case.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'failed to execute the case.'
+Fri Jul 28 01:15:22 2023 - ERROR - failed to execute the case.
++ exit 4
++ post_test
++ LOG_INFO 'Start to restore the test environment.'
++ message='Start to restore the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to restore the test environment.'
+Fri Jul 28 01:15:24 2023 - INFO  - Start to restore the test environment.
++ ip link del my_ipvlan
+oe_test_net_IPVLAN.sh: line 43: ip: command not found
++ nmcli con delete eth0
+Error: unknown connection 'eth0'.
+Error: cannot delete unknown connection(s): 'eth0'.
++ LOG_INFO 'End to restore the test environment.'
++ message='End to restore the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End to restore the test environment.'
+Fri Jul 28 01:15:26 2023 - INFO  - End to restore the test environment.

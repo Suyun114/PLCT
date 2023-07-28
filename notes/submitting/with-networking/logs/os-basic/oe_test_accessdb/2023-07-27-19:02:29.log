@@ -1,0 +1,311 @@
++ source /root/mugen/libs/locallibs/common_lib.sh
+++ python3 --version
+++ '[' 0 -eq 0 ']'
+++ source /root/mugen/libs/locallibs/common_lib_python.sh
++ main
+++ type -t post_test
++ '[' -n function ']'
++ trap post_test EXIT INT HUP TERM
++ rpm -qa
++ grep expect
+++ type -t config_params
++ '[' -n '' ']'
+++ type -t pre_test
++ '[' -n function ']'
++ pre_test
++ LOG_INFO 'Start to prepare the test environment.'
++ message='Start to prepare the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to prepare the test environment.'
+Thu Jul 27 19:02:35 2023 - INFO  - Start to prepare the test environment.
++ OLD_LANG=en_US.UTF-8
++ export LANG=en_US.UTF-8
++ LANG=en_US.UTF-8
++ LOG_INFO 'End to prepare the test environment.'
++ message='End to prepare the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End to prepare the test environment.'
+Thu Jul 27 19:02:36 2023 - INFO  - End to prepare the test environment.
+++ type -t run_test
++ '[' -n function ']'
++ run_test
++ LOG_INFO 'Start to run test.'
++ message='Start to run test.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to run test.'
+Thu Jul 27 19:02:38 2023 - INFO  - Start to run test.
++ accessdb --debug
+$version$ -> "2.5.0"
+accessdb -> "- 8 8 1679257181 0 A - - gz dumps the content of a man-db database in a human readable format"
+apropos -> "- 1 1 1679257180 0 A - - gz search the manual page names and descriptions"
+badblocks -> "- 8 8 1679236251 0 A - - gz search a device for bad blocks"
+blkdeactivate -> "- 8 8 1679262072 0 A - - gz utility to deactivate block devices"
+ca-legacy -> "- 8 8 1679235881 0 A - - gz Manage the system configuration for legacy CA certificates"
+cache_check -> "- 8 8 1679268671 0 A - - gz validates cache metadata on a device or file."
+cache_dump -> "- 8 8 1679268672 0 A - - gz dump cache metadata from device or file to standard output."
+cache_metadata_size -> "- 8 8 1679268673 0 A - - gz Estimate the size of the metadata device needed for a given configuration."
+cache_repair -> "- 8 8 1679268674 0 A - - gz repair cache binary metadata from device/file to device/file."
+cache_restore -> "- 8 8 1679268674 0 A - - gz restore cache metadata file to device or file."
+cache_writeback -> "- 8 8 1679268675 0 A - - gz writeback dirty blocks to the origin device."
+catman -> "- 8 8 1679257182 0 A - - gz create or update the pre-formatted manual pages"
+chattr -> "- 1 1 1679236252 0 A - - gz change file attributes on a Linux file system"
+com_err -> "- 3 3 1640843673 0 A - - gz common error display routine"
+compile_et -> "- 1 1 1640843673 0 A - - gz error table compiler"
+cpp -> "- 1 1 1680698379 0 A - - gz The C Preprocessor"
+crypto-policies -> "- 7 7 1679235150 0 A - - gz system-wide crypto policies overview"
+debugedit -> "- 1 1 1679267204 0 A - - gz debug source path manipulation tool"
+debugfs -> "- 8 8 1679236125 0 A - - gz ext2/ext3/ext4 file system debugger"
+dmeventd -> "- 8 8 1679262072 0 A - - gz Device-mapper event daemon"
+dmfilemapd -> "- 8 8 1679262073 0 A - - gz device-mapper filemap monitoring daemon"
+dmsetup -> "- 8 8 1679262071 0 A - - gz low level logical volume management"
+dmstats -> "- 8 8 1679262071 0 A - - gz device-mapper statistics management"
+dnsdomainname -> "- 1 1 1679270481 0 B - - gz show the system's DNS domain name"
+domainname -> "- 1 1 1679270481 0 B - - gz show or set the system's NIS/YP domain name"
+dumpe2fs -> "- 8 8 1679236251 0 A - - gz dump ext2/ext3/ext4 file system information"
+e2freefrag -> "- 8 8 1679236251 0 A - - gz report free space fragmentation information"
+e2fsck -> "- 8 8 1679236036 0 A - - gz check a Linux ext2/ext3/ext4 file system"
+e2fsck.conf -> "- 5 5 1679236036 0 A - - gz Configuration file for e2fsck"
+e2image -> "- 8 8 1679236251 0 A - - gz Save critical ext2/ext3/ext4 file system metadata to a file"
+e2label -> "- 8 8 1679236251 0 A - - gz Change the label on an ext2/ext3/ext4 file system"
+e2mmpstatus -> "- 8 8 1679236252 0 A - - gz Check MMP status of an ext4 file system"
+e2scrub -> "- 8 8 1679236296 0 A - - gz check the contents of a mounted ext[234] file system"
+e2scrub_all -> "- 8 8 1679236296 0 A - - gz check all mounted ext[234] file systems for errors."
+e2undo -> "- 8 8 1679236252 0 A - - gz Replay an undo log for an ext2/ext3/ext4 file system"
+e4crypt -> "- 8 8 1679236252 0 A - - gz ext4 file system encryption utility"
+e4defrag -> "- 8 8 1679236252 0 A - - gz online defragmenter for ext4 file system"
+era_check -> "- 8 8 1679268684 0 A - - gz validate era metadata on device or file."
+era_dump -> "- 8 8 1679268685 0 A - - gz dump era metadata from device or file to standard output."
+era_invalidate -> "- 8 8 1679268685 0 A - - gz Provide a list of blocks that have changed since a particular era."
+era_restore -> "- 8 8 1679268686 0 A - - gz restore era metadata file to device or file."
+ex -> "- 1 1 1679647233 0 B - - gz Vi IMproved, a programmer's text editor"
+ext2 -> "- 5 5 1679236252 0 A - t gz the second extended file system"
+ext3 -> "- 5 5 1679236252 0 B - t gz the third extended file system"
+ext4 -> "- 5 5 1679236252 0 B - t gz the fourth extended file system"
+file::compare -> "File::Compare 3pm 3 1679261795 0 A - - gz Compare files or filehandles"
+file::find -> "File::Find 3pm 3 1679261795 0 A - - gz Traverse a directory tree."
+filefrag -> "- 8 8 1679236251 0 A - - gz report on file fragmentation"
+find-debuginfo -> "- 1 1 1679267207 0 A - - gz finds debuginfo and processes it"
+fsadm -> "- 8 8 1679263077 0 A - - gz utility to resize or check filesystem on a device"
+fsck.ext2 -> "- 8 8 1679236036 0 B - - gz check a Linux ext2/ext3/ext4 file system"
+fsck.ext3 -> "- 8 8 1679236036 0 B - - gz check a Linux ext2/ext3/ext4 file system"
+fsck.ext4 -> "- 8 8 1679236036 0 B - - gz check a Linux ext2/ext3/ext4 file system"
+fuse -> "- 8 8 1546608813 0 C mount.fuse - gz "
+fuse2fs -> "- 1 1 1679236252 0 A - - gz FUSE file system client for ext2/ext3/ext4 file systems"
+fuser -> "- 1 1 1670586473 0 A - - gz identify processes using files or sockets"
+fusermount -> "- 1 1 1546608813 0 A - - gz mount and unmount FUSE filesystems"
+g++ -> "- 1 1 1680698378 0 A - - gz GNU project C and C++ compiler"
+gcc -> "- 1 1 1680698379 0 A - - gz GNU project C and C++ compiler"
+gcov -> "- 1 1 1680698379 0 A - - gz coverage testing tool"
+gcov-dump -> "- 1 1 1680698379 0 A - - gz offline gcda and gcno profile dump tool"
+gcov-tool -> "- 1 1 1680698379 0 A - - gz offline gcda profile processing tool"
+gendiff -> "- 1 1 1656400587 0 A - - gz utility to aid in error-free diff file generation"
+gex -> "- 1 1 1679647226 0 B - - gz Vi IMproved, a programmer's text editor"
+grep -> "- 1 1 1679237240 0 A - - gz print lines that match patterns"
+gview -> "- 1 1 1679647226 0 B - - gz Vi IMproved, a programmer's text editor"
+gvim -> "- 1 1 1679647226 0 B - - gz Vi IMproved, a programmer's text editor"
+gvimdiff -> "- 1 1 1679647226 0 B - - gz edit between two and eight versions of a file with Vim and show differences"
+gvimtutor -> "- 1 1 1679647226 0 B - - gz the Vim tutor"
+hostname -> "- 1 1 1679270476 0 A - - gz show or set the system's host name"
+killall -> "- 1 1 1670586473 0 A - - gz kill processes by name"
+lexgrog -> "- 1 1 1679257180 0 A - - gz parse header information in man pages"
+logsave -> "- 8 8 1679236251 0 A - - gz save the output of a command in a logfile"
+lsattr -> "- 1 1 1679236252 0 A - - gz list file attributes on a Linux second extended file system"
+lto-dump -> "- 1 1 1680698379 0 A - - gz Tool for dumping LTO object files"
+lvchange -> "- 8 8 1679263041 0 A - - gz Change the attributes of logical volume(s)"
+lvconvert -> "- 8 8 1679263043 0 A - - gz Change logical volume layout"
+lvcreate -> "- 8 8 1679263040 0 A - - gz Create a logical volume"
+lvdisplay -> "- 8 8 1679263044 0 A - - gz Display information about a logical volume"
+lvextend -> "- 8 8 1679263045 0 A - - gz Add space to a logical volume"
+lvm -> "- 8 8 1679263037 0 A - - gz LVM2 tools"
+lvm-config -> "- 8 8 1679263079 0 B - - gz Display and manipulate configuration information"
+lvm-dumpconfig -> "- 8 8 1679263079 0 B - - gz Display and manipulate configuration information"
+lvm-fullreport -> "- 8 8 1679263039 0 A - - gz "
+lvm-lvpoll -> "- 8 8 1679263039 0 A - - gz "
+lvm.conf -> "- 5 5 1679263035 0 A - - gz Configuration file for LVM2"
+lvm_import_vdo -> "- 8 8 1679263079 0 A - - gz utility to import VDO volumes into a new volume group."
+lvmautoactivation -> "- 7 7 1679263036 0 A - - gz LVM autoactivation"
+lvmcache -> "- 7 7 1679263036 0 A - - gz LVM caching"
+lvmconfig -> "- 8 8 1679263042 0 A - - gz Display and manipulate configuration information"
+lvmdbusd -> "- 8 8 1679263078 0 A - - gz LVM D-Bus daemon"
+lvmdevices -> "- 8 8 1679263076 0 A - - gz Manage the devices file"
+lvmdiskscan -> "- 8 8 1679263075 0 A - - gz List devices that may be used as physical volumes"
+lvmdump -> "- 8 8 1679263037 0 A - - gz create lvm2 information dumps for diagnostic purposes"
+lvmpolld -> "- 8 8 1679263078 0 A - - gz LVM poll daemon"
+lvmraid -> "- 7 7 1679263036 0 A - - gz LVM RAID"
+lvmreport -> "- 7 7 1679263035 0 A - - gz LVM reporting and related features"
+lvmsadc -> "- 8 8 1679263074 0 A - - gz LVM system activity data collector"
+lvmsar -> "- 8 8 1679263074 0 A - - gz LVM system activity reporter"
+lvmsystemid -> "- 7 7 1679263035 0 A - - gz LVM system ID"
+lvmthin -> "- 7 7 1679263037 0 A - - gz LVM thin provisioning"
+lvmvdo -> "- 7 7 1679263037 0 A - - gz Support for Virtual Data Optimizer in LVM"
+lvreduce -> "- 8 8 1679263046 0 A - - gz Reduce the size of a logical volume"
+lvremove -> "- 8 8 1679263047 0 A - - gz Remove logical volume(s) from the system"
+lvrename -> "- 8 8 1679263047 0 A - - gz Rename a logical volume"
+lvresize -> "- 8 8 1679263048 0 A - - gz Resize a logical volume"
+lvs -> "- 8 8 1679263049 0 A - - gz Display information about logical volumes"
+lvscan -> "- 8 8 1679263050 0 A - - gz List all logical volumes in all volume groups"
+man -> "- 1 1 1679257180 0 A - t gz an interface to the system reference manuals"
+man-recode -> "- 1 1 1679257180 0 A - - gz convert manual pages to another encoding"
+manconv -> "- 1 1 1679257181 0 A - - gz convert manual page from one encoding to another"
+mandb -> "- 8 8 1679257182 0 A - t gz create or update the manual page index caches"
+manpath -> " manpath 1 manpath 5"
+manpath~1 -> "- 1 1 1679257181 0 A - - gz determine search path for manual pages"
+manpath~5 -> "- 5 5 1679257181 0 A - - gz format of the /etc/man_db.conf file"
+mk_cmds -> "- 1 1 1640843673 0 A - - gz error table compiler"
+mke2fs -> "- 8 8 1679236251 0 A - - gz create an ext2/ext3/ext4 file system"
+mke2fs.conf -> "- 5 5 1679236252 0 A - - gz Configuration file for mke2fs"
+mkfs.ext2 -> "- 8 8 1679236251 0 B - - gz create an ext2/ext3/ext4 file system"
+mkfs.ext3 -> "- 8 8 1679236251 0 B - - gz create an ext2/ext3/ext4 file system"
+mkfs.ext4 -> "- 8 8 1679236251 0 B - - gz create an ext2/ext3/ext4 file system"
+mklost+found -> "- 8 8 1679236251 0 A - - gz create a lost+found directory on a mounted Linux second extended file system"
+modulemd-validator -> "- 1 1 1643980185 0 A - - gz validate modulemd documents"
+mount.fuse -> "- 8 8 1546608813 0 A - - gz format and options for the fuse file systems"
+nisdomainname -> "- 1 1 1679270481 0 B - - gz show or set the system's NIS/YP domain name"
+parted -> "- 8 8 1679272631 0 A - - gz a partition manipulation program"
+partprobe -> "- 8 8 1679272631 0 A - - gz inform the OS of partition table changes"
+peekfd -> "- 1 1 1670586473 0 A - - gz peek at file descriptors of running processes"
+prtstat -> "- 1 1 1670586473 0 A - - gz print statistics of a process"
+pslog -> "- 1 1 1670586473 0 A - - gz report current logs path of a process"
+pstree -> "- 1 1 1670586473 0 A - - gz display a tree of processes"
+pvchange -> "- 8 8 1679263051 0 A - - gz Change attributes of physical volume(s)"
+pvck -> "- 8 8 1679263052 0 A - - gz Check metadata on physical volumes"
+pvcreate -> "- 8 8 1679263053 0 A - - gz Initialize physical volume(s) for use by LVM"
+pvdisplay -> "- 8 8 1679263054 0 A - - gz Display various attributes of physical volume(s)"
+pvmove -> "- 8 8 1679263054 0 A - - gz Move extents from one physical volume to another"
+pvremove -> "- 8 8 1679263055 0 A - - gz Remove LVM label(s) from physical volume(s)"
+pvresize -> "- 8 8 1679263056 0 A - - gz Resize physical volume(s)"
+pvs -> "- 8 8 1679263057 0 A - - gz Display information about physical volumes"
+pvscan -> "- 8 8 1679263058 0 A - - gz List all physical volumes"
+rb -> "- 1 1 1679334566 0 C rz - gz "
+resize2fs -> "- 8 8 1679236287 0 A - - gz ext2/ext3/ext4 file system resizer"
+rpmbuild -> "- 8 8 1662037657 0 A - - gz Build RPM Package(s)"
+rpmdeps -> "- 8 8 1656400587 0 A - - gz Generate RPM Package Dependencies"
+rpmspec -> "- 8 8 1656400587 0 A - - gz RPM Spec Tool"
+rvi -> "- 1 1 1679647233 0 B - - gz Vi IMproved, a programmer's text editor"
+rview -> "- 1 1 1679647233 0 B - - gz Vi IMproved, a programmer's text editor"
+rvim -> "- 1 1 1679647226 0 B - - gz Vi IMproved, a programmer's text editor"
+rx -> "- 1 1 1679334566 0 C rz - gz "
+rz -> "- 1 1 1679334566 0 A - - gz XMODEM, YMODEM, ZMODEM (Batch) file receive"
+sb -> "- 1 1 1679334567 0 C sz - gz "
+sepdebugcrcfix -> "- 1 1 1679267205 0 A - - gz fixes CRC for separate .debug files"
+sx -> "- 1 1 1679334567 0 C sz - gz "
+sz -> "- 1 1 1679334567 0 A - - gz XMODEM, YMODEM, ZMODEM file send"
+thin_check -> "- 8 8 1679268676 0 A - - gz validates thin provisioning metadata on a device or file"
+thin_delta -> "- 8 8 1679268677 0 A - - gz Print the differences in the mappings between two thin devices."
+thin_dump -> "- 8 8 1679268678 0 A - - gz dump thin provisioning metadata from device or file to standard output."
+thin_ls -> "- 8 8 1679268679 0 A - - gz List thin volumes within a pool."
+thin_metadata_size -> "- 8 8 1679268682 0 A - - gz thin provisioning metadata device/file size calculator."
+thin_repair -> "- 8 8 1679268680 0 A - - gz repair thin provisioning binary metadata."
+thin_restore -> "- 8 8 1679268681 0 A - - gz restore thin provisioning metadata file to device or file."
+thin_rmap -> "- 8 8 1679268682 0 A - - gz output reverse map of a thin provisioned region of blocks frommetadata device or file."
+thin_trim -> "- 8 8 1679268683 0 A - - gz Issue discard requests for free pool space (offline tool)."
+tune2fs -> "- 8 8 1679236251 0 A - - gz adjust tunable file system parameters on ext2/ext3/ext4 file systems"
+ulockmgr_server -> "- 1 1 1546608813 0 A - - gz Lock Manager Server for FUSE filesystems"
+unicode::eastasianwidth -> "Unicode::EastAsianWidth 3pm 3 1679261021 0 A - - gz East Asian Width properties"
+update-ca-trust -> "- 8 8 1679235875 0 A - - gz manage consolidated and dynamic configuration of CA certificates and associated trust"
+update-crypto-policies -> "- 8 8 1679235156 0 A - - gz manage the policies available to the various cryptographic back-ends."
+vgcfgbackup -> "- 8 8 1679263059 0 A - - gz Backup volume group configuration(s)"
+vgcfgrestore -> "- 8 8 1679263059 0 A - - gz Restore volume group configuration"
+vgchange -> "- 8 8 1679263060 0 A - - gz Change volume group attributes"
+vgck -> "- 8 8 1679263061 0 A - - gz Check the consistency of volume group(s)"
+vgconvert -> "- 8 8 1679263063 0 A - - gz Change volume group metadata format"
+vgcreate -> "- 8 8 1679263062 0 A - - gz Create a volume group"
+vgdisplay -> "- 8 8 1679263064 0 A - - gz Display volume group information"
+vgexport -> "- 8 8 1679263064 0 A - - gz Unregister volume group(s) from the system"
+vgextend -> "- 8 8 1679263065 0 A - - gz Add physical volumes to a volume group"
+vgimport -> "- 8 8 1679263066 0 A - - gz Register exported volume group with system"
+vgimportclone -> "- 8 8 1679263067 0 A - - gz Import a VG from cloned PVs"
+vgimportdevices -> "- 8 8 1679263077 0 A - - gz Add devices for a VG to the devices file."
+vgmerge -> "- 8 8 1679263068 0 A - - gz Merge volume groups"
+vgmknodes -> "- 8 8 1679263069 0 A - - gz Create the special files for volume group devices in /dev"
+vgreduce -> "- 8 8 1679263069 0 A - - gz Remove physical volume(s) from a volume group"
+vgremove -> "- 8 8 1679263070 0 A - - gz Remove volume group(s)"
+vgrename -> "- 8 8 1679263071 0 A - - gz Rename a volume group"
+vgs -> "- 8 8 1679263072 0 A - - gz Display information about volume groups"
+vgscan -> "- 8 8 1679263073 0 A - - gz Search for all volume groups"
+vgsplit -> "- 8 8 1679263074 0 A - - gz Move physical volumes into a new or existing volume group"
+vi -> "- 1 1 1679647222 0 A - - gz Vi IMproved, a programmer's text editor"
+view -> "- 1 1 1679647233 0 B - - gz Vi IMproved, a programmer's text editor"
+vim -> " vim 1 vim 5"
+vim~1 -> "- 1 1 1679647222 0 A - - gz Vi IMproved, a programmer's text editor"
+vim~5 -> "- 5 5 1679647226 0 C virc - gz "
+vimdiff -> "- 1 1 1679647195 0 A - - gz edit between two and eight versions of a file with Vim and show differences"
+vimrc -> "- 5 5 1679647226 0 B - - gz Vi IMproved, a programmer's text editor"
+vimtutor -> "- 1 1 1679647222 0 A - - gz the Vim tutor"
+vimx -> "- 1 1 1679647226 0 B - - gz Vi IMproved, a programmer's text editor"
+virc -> "- 5 5 1679647226 0 B - - gz Vi IMproved, a programmer's text editor"
+whatis -> "- 1 1 1679257181 0 A - - gz display one-line manual page descriptions"
+xsltproc -> "- 1 1 1661783374 0 A - - gz command line XSLT processor"
+xxd -> "- 1 1 1679647207 0 A - - gz make a hexdump or do the reverse."
+ypdomainname -> "- 1 1 1679270481 0 B - - gz show or set the system's NIS/YP domain name"
++ CHECK_RESULT 0 0 0 'check command debug fail'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='check command debug fail'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ accessdb --help
++ grep accessdb
+Usage: accessdb [OPTION...] [MAN DATABASE]
++ CHECK_RESULT 0 0 0 'check command help fail'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='check command help fail'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ accessdb --usage
++ grep accessdb
+Usage: accessdb [-d?V] [--debug] [--help] [--usage] [--version] [MAN DATABASE]
++ CHECK_RESULT 0 0 0 'check commmand usage fail'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='check commmand usage fail'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ accessdb --version
++ grep accessdb
+accessdb 2.11.0
++ CHECK_RESULT 0 0 0 'check version fail'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='check version fail'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ LOG_INFO 'End to run test.'
++ message='End to run test.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End to run test.'
+Thu Jul 27 19:02:39 2023 - INFO  - End to run test.
++ CASE_RESULT 0
++ case_re=0
++ test -z ''
++ test 0 -eq 0
++ LOG_INFO 'succeed to execute the case.'
++ message='succeed to execute the case.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'succeed to execute the case.'
+Thu Jul 27 19:02:41 2023 - INFO  - succeed to execute the case.
++ exec_result=
++ exit 0
++ post_test
++ LOG_INFO 'start environment cleanup.'
++ message='start environment cleanup.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'start environment cleanup.'
+Thu Jul 27 19:02:42 2023 - INFO  - start environment cleanup.
++ export LANG=en_US.UTF-8
++ LANG=en_US.UTF-8
++ LOG_INFO 'Finish environment cleanup!'
++ message='Finish environment cleanup!'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Finish environment cleanup!'
+Thu Jul 27 19:02:44 2023 - INFO  - Finish environment cleanup!

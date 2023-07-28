@@ -1,0 +1,131 @@
++ source /root/mugen/libs/locallibs/common_lib.sh
+++ python3 --version
+++ '[' 0 -eq 0 ']'
+++ source /root/mugen/libs/locallibs/common_lib_python.sh
++ main
+++ type -t post_test
++ '[' -n function ']'
++ trap post_test EXIT INT HUP TERM
++ rpm -qa
++ grep expect
+++ type -t config_params
++ '[' -n '' ']'
+++ type -t pre_test
++ '[' -n function ']'
++ pre_test
++ LOG_INFO 'Start environment preparation.'
++ message='Start environment preparation.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start environment preparation.'
+Thu Jul 27 18:41:01 2023 - INFO  - Start environment preparation.
++ OLD_LANG=en_US.UTF-8
++ export LANG=en_US.UTF-8
++ LANG=en_US.UTF-8
++ LOG_INFO 'End of environmental preparation!'
++ message='End of environmental preparation!'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End of environmental preparation!'
+Thu Jul 27 18:41:02 2023 - INFO  - End of environmental preparation!
+++ type -t run_test
++ '[' -n function ']'
++ run_test
++ LOG_INFO 'Start to run test.'
++ message='Start to run test.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to run test.'
+Thu Jul 27 18:41:03 2023 - INFO  - Start to run test.
++ cat
++ csplit --help
++ grep 'Usage: csplit'
+Usage: csplit [OPTION]... FILE PATTERN...
++ CHECK_RESULT 0 0 0 'please check csplit language'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='please check csplit language'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ csplit /tmp/testfile 2
+15
+80
++ CHECK_RESULT 0 0 0 'Error, please check '\''csplit test'\'''
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='Error, please check '\''csplit test'\'''
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ grep 'hello Linux!' /tmp/xx00
+grep: /tmp/xx00: No such file or directory
++ CHECK_RESULT 2 0 0 'Error, please check '\''csplit test'\'''
++ actual_result=2
++ expect_result=0
++ mode=0
++ error_log='Error, please check '\''csplit test'\'''
++ exit_mode=0
++ '[' -z 2 ']'
++ '[' 0 -eq 0 ']'
++ test 2x '!=' 0x
++ test -n 'Error, please check '\''csplit test'\'''
++ LOG_ERROR 'Error, please check '\''csplit test'\'''
++ message='Error, please check '\''csplit test'\'''
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'Error, please check '\''csplit test'\'''
+Thu Jul 27 18:41:05 2023 - ERROR - Error, please check 'csplit test'
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_csplit.sh line 42'
++ message='oe_test_csplit.sh line 42'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_csplit.sh line 42'
+Thu Jul 27 18:41:07 2023 - ERROR - oe_test_csplit.sh line 42
++ '[' 0 -eq 1 ']'
++ return 0
++ grep 'Linux is a free' /tmp/xx01
+grep: /tmp/xx01: No such file or directory
++ CHECK_RESULT 2 0 0 'Error, please check '\''csplit test'\'''
++ actual_result=2
++ expect_result=0
++ mode=0
++ error_log='Error, please check '\''csplit test'\'''
++ exit_mode=0
++ '[' -z 2 ']'
++ '[' 0 -eq 0 ']'
++ test 2x '!=' 0x
++ test -n 'Error, please check '\''csplit test'\'''
++ LOG_ERROR 'Error, please check '\''csplit test'\'''
++ message='Error, please check '\''csplit test'\'''
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'Error, please check '\''csplit test'\'''
+Thu Jul 27 18:41:08 2023 - ERROR - Error, please check 'csplit test'
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_csplit.sh line 44'
++ message='oe_test_csplit.sh line 44'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_csplit.sh line 44'
+Thu Jul 27 18:41:09 2023 - ERROR - oe_test_csplit.sh line 44
++ '[' 0 -eq 1 ']'
++ return 0
++ LOG_INFO 'End to run test.'
++ message='End to run test.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End to run test.'
+Thu Jul 27 18:41:11 2023 - INFO  - End to run test.
++ CASE_RESULT 0
++ case_re=0
++ test -z 2
++ test 2 -gt 0
++ LOG_ERROR 'failed to execute the case.'
++ message='failed to execute the case.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'failed to execute the case.'
+Thu Jul 27 18:41:12 2023 - ERROR - failed to execute the case.
++ exit 2
++ post_test
++ LOG_INFO 'Start to clean the test environment.'
++ message='Start to clean the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to clean the test environment.'
+Thu Jul 27 18:41:13 2023 - INFO  - Start to clean the test environment.
++ export LANG=en_US.UTF-8
++ LANG=en_US.UTF-8
++ rm -rf /tmp/testfile /tmp/xx00 /tmp/xx01
++ LOG_INFO 'End to clean the test environment.'
++ message='End to clean the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End to clean the test environment.'
+Thu Jul 27 18:41:15 2023 - INFO  - End to clean the test environment.

@@ -1,0 +1,152 @@
++ source /root/mugen/libs/locallibs/common_lib.sh
+++ python3 --version
+++ '[' 0 -eq 0 ']'
+++ source /root/mugen/libs/locallibs/common_lib_python.sh
++ main
+++ type -t post_test
++ '[' -n function ']'
++ trap post_test EXIT INT HUP TERM
++ rpm -qa
++ grep expect
+++ type -t config_params
++ '[' -n '' ']'
+++ type -t pre_test
++ '[' -n function ']'
++ pre_test
++ LOG_INFO 'Start to prepare the test environment.'
++ message='Start to prepare the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to prepare the test environment.'
+Thu Jul 27 19:01:55 2023 - INFO  - Start to prepare the test environment.
++ OLD_LANG=en_US.UTF-8
++ export LANG=en_US.UTF-8
++ LANG=en_US.UTF-8
++ LOG_INFO 'End to prepare the test environment.'
++ message='End to prepare the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End to prepare the test environment.'
+Thu Jul 27 19:01:56 2023 - INFO  - End to prepare the test environment.
+++ type -t run_test
++ '[' -n function ']'
++ run_test
++ LOG_INFO 'Start to run test.'
++ message='Start to run test.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to run test.'
+Thu Jul 27 19:01:58 2023 - INFO  - Start to run test.
++ auditctl -w /etc/passwd -p rwxa
+oe_test_auditctl.sh: line 31: auditctl: command not found
++ CHECK_RESULT 127 0 0 'check auditctl fail'
++ actual_result=127
++ expect_result=0
++ mode=0
++ error_log='check auditctl fail'
++ exit_mode=0
++ '[' -z 127 ']'
++ '[' 0 -eq 0 ']'
++ test 127x '!=' 0x
++ test -n 'check auditctl fail'
++ LOG_ERROR 'check auditctl fail'
++ message='check auditctl fail'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'check auditctl fail'
+Thu Jul 27 19:01:59 2023 - ERROR - check auditctl fail
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_auditctl.sh line 32'
++ message='oe_test_auditctl.sh line 32'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_auditctl.sh line 32'
+Thu Jul 27 19:02:01 2023 - ERROR - oe_test_auditctl.sh line 32
++ '[' 0 -eq 1 ']'
++ return 0
++ auditctl -l
++ grep rwxa
+oe_test_auditctl.sh: line 33: auditctl: command not found
++ CHECK_RESULT 1 0 0 'check auditctl rule fail'
++ actual_result=1
++ expect_result=0
++ mode=0
++ error_log='check auditctl rule fail'
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 0 -eq 0 ']'
++ test 1x '!=' 0x
++ test -n 'check auditctl rule fail'
++ LOG_ERROR 'check auditctl rule fail'
++ message='check auditctl rule fail'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'check auditctl rule fail'
+Thu Jul 27 19:02:02 2023 - ERROR - check auditctl rule fail
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_auditctl.sh line 34'
++ message='oe_test_auditctl.sh line 34'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_auditctl.sh line 34'
+Thu Jul 27 19:02:04 2023 - ERROR - oe_test_auditctl.sh line 34
++ '[' 0 -eq 1 ']'
++ return 0
++ auditctl -D
++ grep rule
+oe_test_auditctl.sh: line 35: auditctl: command not found
++ CHECK_RESULT 1 0 0 'check remove rule fail'
++ actual_result=1
++ expect_result=0
++ mode=0
++ error_log='check remove rule fail'
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 0 -eq 0 ']'
++ test 1x '!=' 0x
++ test -n 'check remove rule fail'
++ LOG_ERROR 'check remove rule fail'
++ message='check remove rule fail'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'check remove rule fail'
+Thu Jul 27 19:02:05 2023 - ERROR - check remove rule fail
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_auditctl.sh line 36'
++ message='oe_test_auditctl.sh line 36'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_auditctl.sh line 36'
+Thu Jul 27 19:02:07 2023 - ERROR - oe_test_auditctl.sh line 36
++ '[' 0 -eq 1 ']'
++ return 0
++ auditctl -s
++ grep enabled
+oe_test_auditctl.sh: line 37: auditctl: command not found
++ CHECK_RESULT 1 0 0 'check auditctl result fail'
++ actual_result=1
++ expect_result=0
++ mode=0
++ error_log='check auditctl result fail'
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 0 -eq 0 ']'
++ test 1x '!=' 0x
++ test -n 'check auditctl result fail'
++ LOG_ERROR 'check auditctl result fail'
++ message='check auditctl result fail'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'check auditctl result fail'
+Thu Jul 27 19:02:08 2023 - ERROR - check auditctl result fail
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_auditctl.sh line 38'
++ message='oe_test_auditctl.sh line 38'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_auditctl.sh line 38'
+Thu Jul 27 19:02:09 2023 - ERROR - oe_test_auditctl.sh line 38
++ '[' 0 -eq 1 ']'
++ return 0
++ LOG_INFO 'End to run test.'
++ message='End to run test.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End to run test.'
+Thu Jul 27 19:02:11 2023 - INFO  - End to run test.
++ CASE_RESULT 0
++ case_re=0
++ test -z 4
++ test 4 -gt 0
++ LOG_ERROR 'failed to execute the case.'
++ message='failed to execute the case.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'failed to execute the case.'
+Thu Jul 27 19:02:12 2023 - ERROR - failed to execute the case.
++ exit 4
++ post_test
++ LOG_INFO 'start environment cleanup.'
++ message='start environment cleanup.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'start environment cleanup.'
+Thu Jul 27 19:02:13 2023 - INFO  - start environment cleanup.
++ export LANG=en_US.UTF-8
++ LANG=en_US.UTF-8
++ LOG_INFO 'Finish environment cleanup!'
++ message='Finish environment cleanup!'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Finish environment cleanup!'
+Thu Jul 27 19:02:15 2023 - INFO  - Finish environment cleanup!

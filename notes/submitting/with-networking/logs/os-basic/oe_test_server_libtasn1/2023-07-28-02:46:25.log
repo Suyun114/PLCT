@@ -1,0 +1,170 @@
++ source /root/mugen/libs/locallibs/common_lib.sh
+++ python3 --version
+++ '[' 0 -eq 0 ']'
+++ source /root/mugen/libs/locallibs/common_lib_python.sh
++ main
+++ type -t post_test
++ '[' -n function ']'
++ trap post_test EXIT INT HUP TERM
++ rpm -qa
++ grep expect
+++ type -t config_params
++ '[' -n '' ']'
+++ type -t pre_test
++ '[' -n function ']'
++ pre_test
++ LOG_INFO 'Start to prepare the test environment.'
++ message='Start to prepare the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to prepare the test environment.'
+Fri Jul 28 02:46:31 2023 - INFO  - Start to prepare the test environment.
++ DNF_INSTALL 'libtasn1-devel libtasn1-tools'
++ pkgs='libtasn1-devel libtasn1-tools'
++ node=1
++ '[' -z '' ']'
++ tmpfile=
+++ python3 /root/mugen/libs/locallibs/rpm_manage.py install --pkgs 'libtasn1-devel libtasn1-tools' --node 1 --tempfile ''
++ tmpfile2=/tmp/tmpbgnw8iiv
++ '[' -z '' ']'
++ tmpfile=/tmp/tmpbgnw8iiv
++ LOG_INFO 'End to prepare the test environment.'
++ message='End to prepare the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End to prepare the test environment.'
+Fri Jul 28 02:47:41 2023 - INFO  - End to prepare the test environment.
+++ type -t run_test
++ '[' -n function ']'
++ run_test
++ LOG_INFO 'Start testing...'
++ message='Start testing...'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start testing...'
+Fri Jul 28 02:47:43 2023 - INFO  - Start testing...
++ cat
++ CHECK_RESULT 0 0 0 'File creation failed'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='File creation failed'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ asn1Parser example.asn
+Done.
++ test -f example_asn1_tab.c
++ CHECK_RESULT 0 0 0 'File generation failed'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='File generation failed'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ cat
++ CHECK_RESULT 0 0 0 'File creation failed'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='File creation failed'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ asn1Coding example.asn example.asg
+Parse: done.
+
+var=dp, value=MYPKIX1.Dss-Sig-Value
+var=r, value=42
+var=s, value=47
+var=other.x, value=66
+var=other.y, value=y1
+var=other.y.y1, value=15
+var=z, value=(NULL)
+
+name:NULL  type:SEQUENCE
+  name:r  type:INTEGER  value:0x2a
+  name:s  type:INTEGER  value:0x2f
+  name:other  type:SEQUENCE
+    name:x  type:INTEGER  value:0x42
+    name:y  type:CHOICE
+      name:y1  type:INTEGER  value:0x0f
+
+Coding: SUCCESS
+
+-----------------
+Number of bytes=16
+30 0e 02 01 2a 02 01 2f 30 06 02 01 42 02 01 0f 
+-----------------
+
+OutputFile=example.out
+
+Writing: done.
++ test -f example.out
++ CHECK_RESULT 0 0 0 'File creation failed'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='File creation failed'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ asn1Decoding example.asn example.out MYPKIX1.Dss-Sig-Value
+Parse: done.
+
+Decoding: SUCCESS
+
+DECODING RESULT:
+name:NULL  type:SEQUENCE
+  name:r  type:INTEGER  value:0x2a
+  name:s  type:INTEGER  value:0x2f
+  name:other  type:SEQUENCE
+    name:x  type:INTEGER  value:0x42
+    name:y  type:CHOICE
+      name:y1  type:INTEGER  value:0x0f
++ CHECK_RESULT 0 0 0 'Failed to return the result'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='Failed to return the result'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ LOG_INFO 'Finish test!'
++ message='Finish test!'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Finish test!'
+Fri Jul 28 02:47:45 2023 - INFO  - Finish test!
++ CASE_RESULT 0
++ case_re=0
++ test -z ''
++ test 0 -eq 0
++ LOG_INFO 'succeed to execute the case.'
++ message='succeed to execute the case.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'succeed to execute the case.'
+Fri Jul 28 02:47:46 2023 - INFO  - succeed to execute the case.
++ exec_result=
++ exit 0
++ post_test
++ LOG_INFO 'Start to restore the tet environment.'
++ message='Start to restore the tet environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to restore the tet environment.'
+Fri Jul 28 02:47:47 2023 - INFO  - Start to restore the tet environment.
++ rm -rf example.asg example.asn example_asn1_tab.c example.out
++ DNF_REMOVE
++ node=1
++ pkg_list=
++ mode=0
++ [[ -z /tmp/tmpbgnw8iiv ]]
++ '[' 0 -ne 0 ']'
++ '[' 1 == 0 ']'
++ python3 /root/mugen/libs/locallibs/rpm_manage.py remove --node 1 --pkgs '' --tempfile /tmp/tmpbgnw8iiv
++ '[' 0 -ne 0 ']'
++ LOG_INFO 'Finish to restore the tet environment.'
++ message='Finish to restore the tet environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Finish to restore the tet environment.'
+Fri Jul 28 02:48:07 2023 - INFO  - Finish to restore the tet environment.

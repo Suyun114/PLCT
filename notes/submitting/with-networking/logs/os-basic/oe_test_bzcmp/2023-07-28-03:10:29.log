@@ -1,0 +1,97 @@
++ source /root/mugen/libs/locallibs/common_lib.sh
+++ python3 --version
+++ '[' 0 -eq 0 ']'
+++ source /root/mugen/libs/locallibs/common_lib_python.sh
++ main
+++ type -t post_test
++ '[' -n function ']'
++ trap post_test EXIT INT HUP TERM
++ rpm -qa
++ grep expect
+++ type -t config_params
++ '[' -n '' ']'
+++ type -t pre_test
++ '[' -n function ']'
++ pre_test
++ LOG_INFO 'Start to prepare the test environment.'
++ message='Start to prepare the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to prepare the test environment.'
+Fri Jul 28 03:10:35 2023 - INFO  - Start to prepare the test environment.
++ cd /home
++ echo sdfasd1223123
++ bzip2 1.txt
++ echo 223424435rrte
++ bzip2 2.txt
++ LOG_INFO 'End to prepare the test environment.'
++ message='End to prepare the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End to prepare the test environment.'
+Fri Jul 28 03:10:36 2023 - INFO  - End to prepare the test environment.
+++ type -t run_test
++ '[' -n function ']'
++ run_test
++ LOG_INFO 'Start testing...'
++ message='Start testing...'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start testing...'
+Fri Jul 28 03:10:37 2023 - INFO  - Start testing...
++ cd /home
++ bzcmp 1.txt.bz2 2.txt.bz2
++ grep /tmp
+- /tmp/bzdiff.NTklZE1a9L differ: byte 1, line 1
++ CHECK_RESULT 0 0 0 'bzcmp function error'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='bzcmp function error'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ bzcmp -l 1.txt.bz2 2.txt.bz2
++ grep 1
+ 1 163  62
+ 2 144  62
+ 3 146  63
+ 4 141  64
+ 5 163  62
+ 6 144  64
+ 7  61  64
+10  63 162
+11  61 162
+12  62 164
+13  63 145
++ CHECK_RESULT 0 0 0 'bzcmp function error'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='bzcmp function error'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ LOG_INFO 'Finish test!'
++ message='Finish test!'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Finish test!'
+Fri Jul 28 03:10:41 2023 - INFO  - Finish test!
++ CASE_RESULT 0
++ case_re=0
++ test -z ''
++ test 0 -eq 0
++ LOG_INFO 'succeed to execute the case.'
++ message='succeed to execute the case.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'succeed to execute the case.'
+Fri Jul 28 03:10:42 2023 - INFO  - succeed to execute the case.
++ exec_result=
++ exit 0
++ post_test
++ LOG_INFO 'start environment cleanup.'
++ message='start environment cleanup.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'start environment cleanup.'
+Fri Jul 28 03:10:43 2023 - INFO  - start environment cleanup.
++ rm -rf /home/1.txt.bz2
++ rm -rf /home/2.txt.bz2
++ LOG_INFO 'Finish environment cleanup!'
++ message='Finish environment cleanup!'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Finish environment cleanup!'
+Fri Jul 28 03:10:45 2023 - INFO  - Finish environment cleanup!

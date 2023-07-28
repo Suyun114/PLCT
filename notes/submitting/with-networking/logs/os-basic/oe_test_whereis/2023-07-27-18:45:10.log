@@ -1,0 +1,106 @@
++ source /root/mugen/libs/locallibs/common_lib.sh
+++ python3 --version
+++ '[' 0 -eq 0 ']'
+++ source /root/mugen/libs/locallibs/common_lib_python.sh
++ main
+++ type -t post_test
++ '[' -n function ']'
++ trap post_test EXIT INT HUP TERM
++ rpm -qa
++ grep expect
+++ type -t config_params
++ '[' -n '' ']'
+++ type -t pre_test
++ '[' -n function ']'
++ pre_test
++ LOG_INFO 'Start to prepare the test environment.'
++ message='Start to prepare the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to prepare the test environment.'
+Thu Jul 27 18:45:16 2023 - INFO  - Start to prepare the test environment.
++ OLD_LANG=en_US.UTF-8
++ export LANG=en_US.UTF-8
++ LANG=en_US.UTF-8
++ LOG_INFO 'End to prepare the test environment.'
++ message='End to prepare the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End to prepare the test environment.'
+Thu Jul 27 18:45:17 2023 - INFO  - End to prepare the test environment.
+++ type -t run_test
++ '[' -n function ']'
++ run_test
++ LOG_INFO 'Start to run test.'
++ message='Start to run test.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to run test.'
+Thu Jul 27 18:45:19 2023 - INFO  - Start to run test.
++ whereis --help
++ grep 'Usage: whereis'
++ CHECK_RESULT 1 0 0 'The file content is abnormal'
++ actual_result=1
++ expect_result=0
++ mode=0
++ error_log='The file content is abnormal'
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 0 -eq 0 ']'
++ test 1x '!=' 0x
++ test -n 'The file content is abnormal'
++ LOG_ERROR 'The file content is abnormal'
++ message='The file content is abnormal'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'The file content is abnormal'
+Thu Jul 27 18:45:20 2023 - ERROR - The file content is abnormal
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_whereis.sh line 32'
++ message='oe_test_whereis.sh line 32'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_whereis.sh line 32'
+Thu Jul 27 18:45:21 2023 - ERROR - oe_test_whereis.sh line 32
++ '[' 0 -eq 1 ']'
++ return 0
++ whereis -V
++ awk '{print $3}'
+util-linux
++ CHECK_RESULT 0 0 0 'check version display failed'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='check version display failed'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ whereis -b pwd
++ grep pwd
+pwd: /usr/bin/pwd
++ CHECK_RESULT 0 0 0 'check pwd display failed'
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log='check pwd display failed'
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ LOG_INFO 'End to run test.'
++ message='End to run test.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End to run test.'
+Thu Jul 27 18:45:23 2023 - INFO  - End to run test.
++ CASE_RESULT 0
++ case_re=0
++ test -z 1
++ test 1 -gt 0
++ LOG_ERROR 'failed to execute the case.'
++ message='failed to execute the case.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'failed to execute the case.'
+Thu Jul 27 18:45:24 2023 - ERROR - failed to execute the case.
++ exit 1
++ post_test
++ LOG_INFO 'Start to restore the test environment.'
++ message='Start to restore the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to restore the test environment.'
+Thu Jul 27 18:45:25 2023 - INFO  - Start to restore the test environment.
++ export LANG=en_US.UTF-8
++ LANG=en_US.UTF-8
++ LOG_INFO 'End to restore the test environment.'
++ message='End to restore the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End to restore the test environment.'
+Thu Jul 27 18:45:27 2023 - INFO  - End to restore the test environment.

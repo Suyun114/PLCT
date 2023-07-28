@@ -1,0 +1,199 @@
++ source ../common/disk_lib.sh
+++ source /root/mugen/libs/locallibs/common_lib.sh
++++ python3 --version
++++ '[' 0 -eq 0 ']'
++++ source /root/mugen/libs/locallibs/common_lib_python.sh
++ main
+++ type -t post_test
++ '[' -n function ']'
++ trap post_test EXIT INT HUP TERM
++ rpm -qa
++ grep expect
+++ type -t config_params
++ '[' -n function ']'
++ config_params
++ LOG_INFO 'Start to config the test environment.'
++ message='Start to config the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to config the test environment.'
+Thu Jul 27 23:08:46 2023 - INFO  - Start to config the test environment.
++ check_free_disk
+++ TEST_DISK
+++ id=1
+++ python3 /root/mugen/libs/locallibs/get_test_device.py --device disk --node 1
+Traceback (most recent call last):
+  File "/root/mugen/libs/locallibs/get_test_device.py", line 127, in <module>
+    print(get_test_disk(args.node))
+  File "/root/mugen/libs/locallibs/get_test_device.py", line 98, in get_test_disk
+    conn = ssh_cmd.pssh_conn(
+  File "/root/mugen/libs/locallibs/ssh_cmd.py", line 53, in pssh_conn
+    conn.connect(ip, port, user, password, timeout=timeout)
+  File "/usr/lib/python3.10/site-packages/paramiko/client.py", line 349, in connect
+    retry_on_signal(lambda: sock.connect(addr))
+  File "/usr/lib/python3.10/site-packages/paramiko/util.py", line 279, in retry_on_signal
+    return function()
+  File "/usr/lib/python3.10/site-packages/paramiko/client.py", line 349, in <lambda>
+    retry_on_signal(lambda: sock.connect(addr))
+TimeoutError: [Errno 110] Connection timed out
++ disks=
++ disk_list=($disks)
++ local_disk=
++ local_disk1=
++ local_disk2=
++ local_disk3=
++ LOG_INFO 'Start to config the test environment.'
++ message='Start to config the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to config the test environment.'
+Thu Jul 27 23:11:04 2023 - INFO  - Start to config the test environment.
+++ type -t pre_test
++ '[' -n function ']'
++ pre_test
++ LOG_INFO 'Start to prepare the test environment.'
++ message='Start to prepare the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to prepare the test environment.'
+Thu Jul 27 23:11:06 2023 - INFO  - Start to prepare the test environment.
++ DNF_INSTALL 'tuned dmidecode'
++ pkgs='tuned dmidecode'
++ node=1
++ '[' -z '' ']'
++ tmpfile=
+++ python3 /root/mugen/libs/locallibs/rpm_manage.py install --pkgs 'tuned dmidecode' --node 1 --tempfile ''
++ tmpfile2=/tmp/tmpzcgetd6q
++ '[' -z '' ']'
++ tmpfile=/tmp/tmpzcgetd6q
++ [[ physicalx == \k\v\mx ]]
++ systemctl enable --now tuned
++ mkdir /etc/tuned/my-profile_new
++ echo '[main]
+summary=General non-specialized tuned profile
+[cpu]
+governor=conservative
+energy_perf_bias=normal
+[audio]
+timeout=10
+[video]
+radeon_powersave=dpm-balanced, auto'
+++ tuned-adm active
+++ awk '{print $4}'
++ old_profile=throughput-performance
++ mkdir /etc/tuned/my-profile
+++ udevadm info --query=property --name=/dev/
+++ grep WWN=
+Unknown device "/dev/": Inappropriate ioctl for device
++ ID_WWN=
++ echo '[main]
+include=my-profile_new
+[disk]
+devices_udev_regex=
+elevator=mq-deadline'
++ LOG_INFO 'End to prepare the test environment.'
++ message='End to prepare the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End to prepare the test environment.'
+Thu Jul 27 23:13:55 2023 - INFO  - End to prepare the test environment.
+++ type -t run_test
++ '[' -n function ']'
++ run_test
++ LOG_INFO 'Start to run test.'
++ message='Start to run test.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to run test.'
+Thu Jul 27 23:13:56 2023 - INFO  - Start to run test.
++ tuned-adm profile my-profile
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ tuned-adm active
++ grep my-profile
+Current active profile: my-profile
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ tuned-adm verify
++ grep succeeded
+Verfication succeeded, current system settings match the preset profile.
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ awk -F '[' '{print$2}' /sys/block//queue/scheduler
++ awk -F ']' '{print$1}'
++ grep mq-deadline
+awk: fatal: cannot open file `/sys/block//queue/scheduler' for reading: No such file or directory
++ CHECK_RESULT 1
++ actual_result=1
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 0 -eq 0 ']'
++ test 1x '!=' 0x
++ test -n ''
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_disk_tuned_set.sh line 64'
++ message='oe_test_disk_tuned_set.sh line 64'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_disk_tuned_set.sh line 64'
+Thu Jul 27 23:14:17 2023 - ERROR - oe_test_disk_tuned_set.sh line 64
++ '[' 0 -eq 1 ']'
++ return 0
++ tuned-adm profile throughput-performance
++ CHECK_RESULT 0
++ actual_result=0
++ expect_result=0
++ mode=0
++ error_log=
++ exit_mode=0
++ '[' -z 0 ']'
++ '[' 0 -eq 0 ']'
++ test 0x '!=' 0x
++ return 0
++ LOG_INFO 'End to run test.'
++ message='End to run test.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End to run test.'
+Thu Jul 27 23:14:27 2023 - INFO  - End to run test.
++ CASE_RESULT 0
++ case_re=0
++ test -z 1
++ test 1 -gt 0
++ LOG_ERROR 'failed to execute the case.'
++ message='failed to execute the case.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'failed to execute the case.'
+Thu Jul 27 23:14:28 2023 - ERROR - failed to execute the case.
++ exit 1
++ post_test
++ LOG_INFO 'Start to restore the test environment.'
++ message='Start to restore the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to restore the test environment.'
+Thu Jul 27 23:14:30 2023 - INFO  - Start to restore the test environment.
++ rm -rf /etc/tuned/my-profile /etc/tuned/my-profile_new
++ DNF_REMOVE
++ node=1
++ pkg_list=
++ mode=0
++ [[ -z /tmp/tmpzcgetd6q ]]
++ '[' 0 -ne 0 ']'
++ '[' 1 == 0 ']'
++ python3 /root/mugen/libs/locallibs/rpm_manage.py remove --node 1 --pkgs '' --tempfile /tmp/tmpzcgetd6q
++ '[' 0 -ne 0 ']'
++ LOG_INFO 'End to restore the test environment.'
++ message='End to restore the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End to restore the test environment.'
+Thu Jul 27 23:15:35 2023 - INFO  - End to restore the test environment.

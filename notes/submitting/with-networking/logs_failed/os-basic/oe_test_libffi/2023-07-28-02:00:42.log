@@ -1,0 +1,153 @@
++ source /root/mugen/libs/locallibs/common_lib.sh
+++ python3 --version
+++ '[' 0 -eq 0 ']'
+++ source /root/mugen/libs/locallibs/common_lib_python.sh
++ main
+++ type -t post_test
++ '[' -n function ']'
++ trap post_test EXIT INT HUP TERM
++ rpm -qa
++ grep expect
+++ type -t config_params
++ '[' -n '' ']'
+++ type -t pre_test
++ '[' -n function ']'
++ pre_test
++ LOG_INFO 'Start to prepare the test environment.'
++ message='Start to prepare the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to prepare the test environment.'
+Fri Jul 28 02:00:48 2023 - INFO  - Start to prepare the test environment.
++ DNF_INSTALL 'libffi libffi-devel gcc'
++ pkgs='libffi libffi-devel gcc'
++ node=1
++ '[' -z '' ']'
++ tmpfile=
+++ python3 /root/mugen/libs/locallibs/rpm_manage.py install --pkgs 'libffi libffi-devel gcc' --node 1 --tempfile ''
++ tmpfile2=/tmp/tmpvpvuwxzx
++ '[' -z '' ']'
++ tmpfile=/tmp/tmpvpvuwxzx
++ ls ./a.out
+ls: cannot access './a.out': No such file or directory
++ LOG_INFO 'End to prepare the test environment.'
++ message='End to prepare the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End to prepare the test environment.'
+Fri Jul 28 02:01:58 2023 - INFO  - End to prepare the test environment.
+++ type -t run_test
++ '[' -n function ']'
++ run_test
++ LOG_INFO 'Start to run test.'
++ message='Start to run test.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to run test.'
+Fri Jul 28 02:02:00 2023 - INFO  - Start to run test.
++ gcc -w ./libffi_test.c -lffi
+In file included from /usr/include/bits/posix1_lim.h:161,
+                 from /usr/include/limits.h:195,
+                 from /usr/lib/gcc/riscv64-linux-gnu/10.3.1/include/limits.h:195,
+                 from /usr/lib/gcc/riscv64-linux-gnu/10.3.1/include/syslimits.h:7,
+                 from /usr/lib/gcc/riscv64-linux-gnu/10.3.1/include/limits.h:34,
+                 from /usr/include/ffi.h:93,
+                 from ./libffi_test.c:2:
+/usr/include/bits/local_lim.h:38:10: fatal error: linux/limits.h: No such file or directory
+   38 | #include <linux/limits.h>
+      |          ^~~~~~~~~~~~~~~~
+compilation terminated.
++ CHECK_RESULT 1 0 0 'compilation of libffi_test.c is failed'
++ actual_result=1
++ expect_result=0
++ mode=0
++ error_log='compilation of libffi_test.c is failed'
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 0 -eq 0 ']'
++ test 1x '!=' 0x
++ test -n 'compilation of libffi_test.c is failed'
++ LOG_ERROR 'compilation of libffi_test.c is failed'
++ message='compilation of libffi_test.c is failed'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'compilation of libffi_test.c is failed'
+Fri Jul 28 02:02:02 2023 - ERROR - compilation of libffi_test.c is failed
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_libffi.sh line 31'
++ message='oe_test_libffi.sh line 31'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_libffi.sh line 31'
+Fri Jul 28 02:02:03 2023 - ERROR - oe_test_libffi.sh line 31
++ '[' 0 -eq 1 ']'
++ return 0
++ ls ./a.out
+ls: cannot access './a.out': No such file or directory
++ CHECK_RESULT 2 0 0 'file a.out is not created'
++ actual_result=2
++ expect_result=0
++ mode=0
++ error_log='file a.out is not created'
++ exit_mode=0
++ '[' -z 2 ']'
++ '[' 0 -eq 0 ']'
++ test 2x '!=' 0x
++ test -n 'file a.out is not created'
++ LOG_ERROR 'file a.out is not created'
++ message='file a.out is not created'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'file a.out is not created'
+Fri Jul 28 02:02:05 2023 - ERROR - file a.out is not created
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_libffi.sh line 33'
++ message='oe_test_libffi.sh line 33'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_libffi.sh line 33'
+Fri Jul 28 02:02:06 2023 - ERROR - oe_test_libffi.sh line 33
++ '[' 0 -eq 1 ']'
++ return 0
++ ./a.out
+oe_test_libffi.sh: line 34: ./a.out: No such file or directory
++ CHECK_RESULT 127 0 0 'The executable program a.out execution has failed'
++ actual_result=127
++ expect_result=0
++ mode=0
++ error_log='The executable program a.out execution has failed'
++ exit_mode=0
++ '[' -z 127 ']'
++ '[' 0 -eq 0 ']'
++ test 127x '!=' 0x
++ test -n 'The executable program a.out execution has failed'
++ LOG_ERROR 'The executable program a.out execution has failed'
++ message='The executable program a.out execution has failed'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'The executable program a.out execution has failed'
+Fri Jul 28 02:02:07 2023 - ERROR - The executable program a.out execution has failed
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_libffi.sh line 35'
++ message='oe_test_libffi.sh line 35'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_libffi.sh line 35'
+Fri Jul 28 02:02:09 2023 - ERROR - oe_test_libffi.sh line 35
++ '[' 0 -eq 1 ']'
++ return 0
++ LOG_INFO 'End to run test.'
++ message='End to run test.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End to run test.'
+Fri Jul 28 02:02:10 2023 - INFO  - End to run test.
++ CASE_RESULT 0
++ case_re=0
++ test -z 3
++ test 3 -gt 0
++ LOG_ERROR 'failed to execute the case.'
++ message='failed to execute the case.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'failed to execute the case.'
+Fri Jul 28 02:02:11 2023 - ERROR - failed to execute the case.
++ exit 3
++ post_test
++ LOG_INFO 'Start to restore the test environment.'
++ message='Start to restore the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to restore the test environment.'
+Fri Jul 28 02:02:12 2023 - INFO  - Start to restore the test environment.
++ ls ./a.out
+ls: cannot access './a.out': No such file or directory
++ DNF_REMOVE
++ node=1
++ pkg_list=
++ mode=0
++ [[ -z /tmp/tmpvpvuwxzx ]]
++ '[' 0 -ne 0 ']'
++ '[' 1 == 0 ']'
++ python3 /root/mugen/libs/locallibs/rpm_manage.py remove --node 1 --pkgs '' --tempfile /tmp/tmpvpvuwxzx
++ '[' 0 -ne 0 ']'
++ LOG_INFO 'End to restore the test environment.'
++ message='End to restore the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End to restore the test environment.'
+Fri Jul 28 02:02:28 2023 - INFO  - End to restore the test environment.

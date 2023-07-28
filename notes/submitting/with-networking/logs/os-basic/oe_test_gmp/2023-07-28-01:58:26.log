@@ -1,0 +1,157 @@
++ source /root/mugen/libs/locallibs/common_lib.sh
+++ python3 --version
+++ '[' 0 -eq 0 ']'
+++ source /root/mugen/libs/locallibs/common_lib_python.sh
++ main
+++ type -t post_test
++ '[' -n function ']'
++ trap post_test EXIT INT HUP TERM
++ rpm -qa
++ grep expect
+++ type -t config_params
++ '[' -n '' ']'
+++ type -t pre_test
++ '[' -n function ']'
++ pre_test
++ LOG_INFO 'Start to prepare the test environment.'
++ message='Start to prepare the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to prepare the test environment.'
+Fri Jul 28 01:58:32 2023 - INFO  - Start to prepare the test environment.
++ DNF_INSTALL 'gmp gmp-devel gcc-c++'
++ pkgs='gmp gmp-devel gcc-c++'
++ node=1
++ '[' -z '' ']'
++ tmpfile=
+++ python3 /root/mugen/libs/locallibs/rpm_manage.py install --pkgs 'gmp gmp-devel gcc-c++' --node 1 --tempfile ''
++ tmpfile2=/tmp/tmpsdkhnjmw
++ '[' -z '' ']'
++ tmpfile=/tmp/tmpsdkhnjmw
++ ls ./main.o
+ls: cannot access './main.o': No such file or directory
++ LOG_INFO 'End to prepare the test environment.'
++ message='End to prepare the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End to prepare the test environment.'
+Fri Jul 28 01:59:49 2023 - INFO  - End to prepare the test environment.
+++ type -t run_test
++ '[' -n function ']'
++ run_test
++ LOG_INFO 'Start to run test.'
++ message='Start to run test.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to run test.'
+Fri Jul 28 01:59:50 2023 - INFO  - Start to run test.
++ g++ ./main.cpp -o main.o -lgmpxx -lgmp
+In file included from /usr/include/errno.h:28,
+                 from /usr/include/c++/10.3.1/cerrno:42,
+                 from /usr/include/c++/10.3.1/ext/string_conversions.h:44,
+                 from /usr/include/c++/10.3.1/bits/basic_string.h:6545,
+                 from /usr/include/c++/10.3.1/string:55,
+                 from /usr/include/c++/10.3.1/bits/locale_classes.h:40,
+                 from /usr/include/c++/10.3.1/bits/ios_base.h:41,
+                 from /usr/include/c++/10.3.1/ios:42,
+                 from /usr/include/c++/10.3.1/ostream:38,
+                 from /usr/include/c++/10.3.1/iostream:39,
+                 from ./main.cpp:1:
+/usr/include/bits/errno.h:26:11: fatal error: linux/errno.h: No such file or directory
+   26 | # include <linux/errno.h>
+      |           ^~~~~~~~~~~~~~~
+compilation terminated.
++ CHECK_RESULT 1 0 0 'compilation of main.cpp is failed'
++ actual_result=1
++ expect_result=0
++ mode=0
++ error_log='compilation of main.cpp is failed'
++ exit_mode=0
++ '[' -z 1 ']'
++ '[' 0 -eq 0 ']'
++ test 1x '!=' 0x
++ test -n 'compilation of main.cpp is failed'
++ LOG_ERROR 'compilation of main.cpp is failed'
++ message='compilation of main.cpp is failed'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'compilation of main.cpp is failed'
+Fri Jul 28 01:59:54 2023 - ERROR - compilation of main.cpp is failed
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_gmp.sh line 31'
++ message='oe_test_gmp.sh line 31'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_gmp.sh line 31'
+Fri Jul 28 01:59:55 2023 - ERROR - oe_test_gmp.sh line 31
++ '[' 0 -eq 1 ']'
++ return 0
++ ls ./main.o
+ls: cannot access './main.o': No such file or directory
++ CHECK_RESULT 2 0 0 'file main.o is not created'
++ actual_result=2
++ expect_result=0
++ mode=0
++ error_log='file main.o is not created'
++ exit_mode=0
++ '[' -z 2 ']'
++ '[' 0 -eq 0 ']'
++ test 2x '!=' 0x
++ test -n 'file main.o is not created'
++ LOG_ERROR 'file main.o is not created'
++ message='file main.o is not created'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'file main.o is not created'
+Fri Jul 28 01:59:57 2023 - ERROR - file main.o is not created
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_gmp.sh line 33'
++ message='oe_test_gmp.sh line 33'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_gmp.sh line 33'
+Fri Jul 28 01:59:58 2023 - ERROR - oe_test_gmp.sh line 33
++ '[' 0 -eq 1 ']'
++ return 0
++ ./main.o
+oe_test_gmp.sh: line 34: ./main.o: No such file or directory
++ CHECK_RESULT 127 0 0 'The executable program main.o execution has failed'
++ actual_result=127
++ expect_result=0
++ mode=0
++ error_log='The executable program main.o execution has failed'
++ exit_mode=0
++ '[' -z 127 ']'
++ '[' 0 -eq 0 ']'
++ test 127x '!=' 0x
++ test -n 'The executable program main.o execution has failed'
++ LOG_ERROR 'The executable program main.o execution has failed'
++ message='The executable program main.o execution has failed'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'The executable program main.o execution has failed'
+Fri Jul 28 02:00:00 2023 - ERROR - The executable program main.o execution has failed
++ (( exec_result++ ))
++ LOG_ERROR 'oe_test_gmp.sh line 35'
++ message='oe_test_gmp.sh line 35'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'oe_test_gmp.sh line 35'
+Fri Jul 28 02:00:01 2023 - ERROR - oe_test_gmp.sh line 35
++ '[' 0 -eq 1 ']'
++ return 0
++ LOG_INFO 'End to run test.'
++ message='End to run test.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End to run test.'
+Fri Jul 28 02:00:02 2023 - INFO  - End to run test.
++ CASE_RESULT 0
++ case_re=0
++ test -z 3
++ test 3 -gt 0
++ LOG_ERROR 'failed to execute the case.'
++ message='failed to execute the case.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level error --message 'failed to execute the case.'
+Fri Jul 28 02:00:04 2023 - ERROR - failed to execute the case.
++ exit 3
++ post_test
++ LOG_INFO 'Start to restore the test environment.'
++ message='Start to restore the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'Start to restore the test environment.'
+Fri Jul 28 02:00:05 2023 - INFO  - Start to restore the test environment.
++ ls ./main.o
+ls: cannot access './main.o': No such file or directory
++ DNF_REMOVE
++ node=1
++ pkg_list=
++ mode=0
++ [[ -z /tmp/tmpsdkhnjmw ]]
++ '[' 0 -ne 0 ']'
++ '[' 1 == 0 ']'
++ python3 /root/mugen/libs/locallibs/rpm_manage.py remove --node 1 --pkgs '' --tempfile /tmp/tmpsdkhnjmw
++ '[' 0 -ne 0 ']'
++ LOG_INFO 'End to restore the test environment.'
++ message='End to restore the test environment.'
++ python3 /root/mugen/libs/locallibs/mugen_log.py --level info --message 'End to restore the test environment.'
+Fri Jul 28 02:00:28 2023 - INFO  - End to restore the test environment.
